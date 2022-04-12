@@ -13,7 +13,7 @@ gulp.task('default', function() {
 	console.log('gulp compile-css    to compile the custom.scss to custom.css');
 	console.log('gulp compile-js     to compile the custom.js to custom.min.js');
 	console.log('gulp watch          to continue watching the files for changes.');
-	console.log('gulp wordpress-lang to compile the lsx-starter-child-theme.pot, en_EN.po and en_EN.mo');
+	console.log('gulp wordpress-lang to compile the tsp-child.pot, en_EN.po and en_EN.mo');
 });
 
 gulp.task('sass', function(done) {
@@ -59,11 +59,11 @@ gulp.task('wordpress-pot', function(done) {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
-			domain: 'lsx-starter-child-theme',
-			package: 'lsx-starter-child-theme',
+			domain: 'tsp-child',
+			package: 'tsp-child',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/lsx-starter-child-theme.pot')),
+		.pipe(gulp.dest('languages/tsp-child.pot')),
 		done();
 });
 
@@ -71,8 +71,8 @@ gulp.task('wordpress-po', function(done) {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
-			domain: 'lsx-starter-child-theme',
-			package: 'lsx-starter-child-theme',
+			domain: 'tsp-child',
+			package: 'tsp-child',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
 		.pipe(gulp.dest('languages/en_EN.po')),

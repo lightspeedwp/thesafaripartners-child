@@ -56,7 +56,7 @@ class Frontend {
 	/**
 	 * Enqueues the parent and the child theme styles.
 	 *
-	 * @package    lsx-starter-child-theme
+	 * @package    tsp-child
 	 * @subpackage setup
 	 */
 	public function scripts() {
@@ -67,15 +67,15 @@ class Frontend {
 			$prefix = '';
 			$suffix = '.min';
 		}
-		//https://github.com/lightspeeddevelopment/lsx-starter-child-theme.git
+		//https://github.com/lightspeeddevelopment/tsp-child.git
 		// Fonts from LSX Theme. Add these lines if your website will use a different font.
 		//wp_dequeue_style( 'lsx-header-font' );
 		//wp_dequeue_style( 'lsx-body-font' );
 		//wp_dequeue_style( 'lsx_font_scheme' );
 
 		// Google Fonts. Add these lines if your website will use a different font.
-		//wp_enqueue_style( 'lsx-starter-child-theme-quattrocento-sans', 'https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i' );
+		//wp_enqueue_style( 'tsp-child-quattrocento-sans', 'https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i' );
 
-		wp_enqueue_script( 'lsx-starter-child-theme-scripts', get_stylesheet_directory_uri() . '/assets/js/' . $prefix . 'custom' . $suffix . '.js', array( 'jquery' ) );
+		wp_enqueue_script( 'tsp-child-scripts', get_stylesheet_directory_uri() . '/assets/js/' . $prefix . 'custom' . $suffix . '.js', array( 'jquery' ) );
 	}
 }

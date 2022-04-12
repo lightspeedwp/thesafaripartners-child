@@ -1,4 +1,4 @@
-# lsx-starter-child-theme
+# tsp-child
 
 ## Install NPM
 https://nodejs.org/en/

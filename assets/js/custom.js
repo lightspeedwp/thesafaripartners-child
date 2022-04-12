@@ -1,7 +1,7 @@
 /**
  * LSX Starter Child scripts
  *
- * @package 	lsx-starter-child-theme
+ * @package 	tsp-child
  */
 
 ;(function($, window, document, undefined) {

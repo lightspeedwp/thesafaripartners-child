@@ -59,6 +59,6 @@ class Setup {
 	 * @return void
 	 */
 	public function language_setup() {
-		load_child_theme_textdomain( 'lsx-starter-child-theme', get_stylesheet_directory() . '/languages' );
+		load_child_theme_textdomain( 'tsp-child', get_stylesheet_directory() . '/languages' );
 	}
 }

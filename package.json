@@ -1,11 +1,11 @@
 {
-  "name": "lsx-starter-child-theme",
+  "name": "tsp-child",
   "version": "1.0.0",
   "description": "A Starter LSX Child Theme",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lightspeeddevelopment/lsx-starter-child-theme.git"
+    "url": "git+https://github.com/lightspeeddevelopment/tsp-child.git"
   },
   "keywords": [
     "lsx",
@@ -16,9 +16,9 @@
   "author": "LightSpeed",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lightspeeddevelopment/lsx-starter-child-theme/issues"
+    "url": "https://github.com/lightspeeddevelopment/tsp-child/issues"
   },
-  "homepage": "https://github.com/lightspeeddevelopment/lsx-starter-child-theme#readme",
+  "homepage": "https://github.com/lightspeeddevelopment/tsp-child#readme",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
