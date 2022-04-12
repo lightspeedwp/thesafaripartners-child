@@ -2,19 +2,19 @@
 /**
  * Class Admin
  *
- * @package   lsx_starter_child_theme\classes
+ * @package   tsp_child\classes
  * @author    LightSpeed
  * @license   GPL-2.0+
  * @link
  * @copyright 2020 LightSpeed
  */
 
-namespace lsx_starter_child_theme\classes;
+namespace tsp_child\classes;
 
 /**
  * Class Admin
  *
- * @package lsx_starter_child_theme\classes
+ * @package tsp_child\classes
  */
 class Admin {
 
@@ -23,7 +23,7 @@ class Admin {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var      object lsx_starter_child_theme\classes\Admin()
+	 * @var      object tsp_child\classes\Admin()
 	 */
 	protected static $instance = null;
 
@@ -42,7 +42,7 @@ class Admin {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return    object \lsx_starter_child_theme\classes\Admin()    A single instance of this class.
+	 * @return    object \tsp_child\classes\Admin()    A single instance of this class.
 	 */
 	public static function get_instance() {
 		// If the single instance hasn't been set, set it now.

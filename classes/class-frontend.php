@@ -2,19 +2,19 @@
 /**
  * Class FrontEnd
  *
- * @package   lsx_starter_child_theme\classes
+ * @package   tsp_child\classes
  * @author    LightSpeed
  * @license   GPL-2.0+
  * @link
  * @copyright 2020 LightSpeed
  */
 
-namespace lsx_starter_child_theme\classes;
+namespace tsp_child\classes;
 
 /**
  * Class Frontend
  *
- * @package lsx_starter_child_theme\classes
+ * @package tsp_child\classes
  */
 class Frontend {
 
@@ -23,7 +23,7 @@ class Frontend {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var      object lsx_starter_child_theme\classes\Frontend()
+	 * @var      object tsp_child\classes\Frontend()
 	 */
 	protected static $instance = null;
 
@@ -43,7 +43,7 @@ class Frontend {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return    object \lsx_starter_child_theme\classes\Frontend()    A single instance of this class.
+	 * @return    object \tsp_child\classes\Frontend()    A single instance of this class.
 	 */
 	public static function get_instance() {
 		// If the single instance hasn't been set, set it now.
