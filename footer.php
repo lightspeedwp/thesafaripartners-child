@@ -12,19 +12,24 @@
 			</div><!-- .content -->
 		</div><!-- .wrap -->
 
+		<div class="container">
+			<div class="row">
+		<div id="footer-sub">
+			<?php if ( is_active_sidebar( 'footer_sub' ) ) : ?>
+
+
+<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+<?php dynamic_sidebar( 'footer_sub' ); ?>
+</div><!-- #primary-sidebar -->
+<?php endif; ?>
+</div></div></div>
+
 		<?php lsx_footer_before(); ?>
 
 		<footer id="colophon" class="content-info" role="contentinfo">
 			<div class="container">
 				<div class="row">
-					<div id="footer-sub">
-						<?php if ( is_active_sidebar( 'footer_sub' ) ) : ?>
 
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'footer_sub' ); ?>
-	</div><!-- #primary-sidebar -->
-<?php endif; ?>
-</div>
 					<div class="col-sm-12">
 						<?php lsx_footer_top(); ?>
 
