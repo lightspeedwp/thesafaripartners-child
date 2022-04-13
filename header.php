@@ -23,7 +23,7 @@
 		<?php lsx_body_top(); ?>
 
 		<div class="header-wrap">
-			<div class="intro-wrap"><p>Chat to an expert on 1.888.71SAFARI (72327)<p></div>
+			<div class="intro-wrap"><p>Chat to an expert on 1.888.71SAFARI (72327)</p></div>
 			<?php lsx_header_before(); ?>
 			<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">
 				<?php lsx_header_top(); ?>
