@@ -12,8 +12,7 @@
 			</div><!-- .content -->
 		</div><!-- .wrap -->
 
-		<div class="container">
-		<div id="footer-sub">
+		<div id="footer-sub" class="container">
 			<?php if ( is_active_sidebar( 'footer_sub' ) ) : ?>
 
 
@@ -21,7 +20,7 @@
 <?php dynamic_sidebar( 'footer_sub' ); ?>
 </div><!-- #primary-sidebar -->
 <?php endif; ?>
-</div></div>
+</div>
 
 		<?php lsx_footer_before(); ?>
 
