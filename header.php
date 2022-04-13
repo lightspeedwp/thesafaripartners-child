@@ -21,7 +21,7 @@
 	<body <?php body_class( 'lsx' ); ?>>
 		<?php wp_body_open(); ?>
 		<?php lsx_body_top(); ?>
-
+<div class="body-wrap">
 		<div class="header-wrap">
 			<div class="intro-wrap"><p>Chat to an expert on 1.888.71SAFARI (72327)</p></div>
 			<?php lsx_header_before(); ?>

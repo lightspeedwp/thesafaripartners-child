@@ -13,7 +13,6 @@
 		</div><!-- .wrap -->
 
 		<div class="container">
-			<div class="row">
 		<div id="footer-sub">
 			<?php if ( is_active_sidebar( 'footer_sub' ) ) : ?>
 
@@ -22,7 +21,7 @@
 <?php dynamic_sidebar( 'footer_sub' ); ?>
 </div><!-- #primary-sidebar -->
 <?php endif; ?>
-</div></div></div>
+</div></div>
 
 		<?php lsx_footer_before(); ?>
 
@@ -90,5 +89,6 @@
 		<?php lsx_footer_after(); ?>
 		<?php lsx_body_bottom(); ?>
 		<?php wp_footer(); ?>
+	</div>
 	</body>
 </html>
