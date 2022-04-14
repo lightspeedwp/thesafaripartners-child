@@ -7,27 +7,27 @@
  * @subpackage  widget
  */
 
-function lsx_to_register_widget() {
-register_widget( 'lsxto_widget' );
-}
-add_action( 'widgets_init', 'lsx_to_register_widget' );
-class lsxto_widget extends WP_Widget {
-function __construct() {
-parent::__construct(
-// widget ID
-'lsxto_widget',
-// widget name
-__('Home Page Experiences', ' lsx_widget'),
-// widget description
-array( 'description' => __( 'Home Page Experiences', 'lsx_widget' ), )
-);
-}
-public function widget( $args, $instance ) {
-$title = apply_filters( 'widget_title', $instance['title'] );
-echo $args['before_widget'];
-//if title is present
-if ( ! empty( $title ) )
-echo $args['before_title'] . $title . $args['after_title'];
+ function hstngr_register_widget() {
+ register_widget( 'hstngr_widget' );
+ }
+ add_action( 'widgets_init', 'hstngr_register_widget' );
+ class hstngr_widget extends WP_Widget {
+ function __construct() {
+ parent::__construct(
+ // widget ID
+ 'hstngr_widget',
+ // widget name
+ __('Hostinger Sample Widget', ' hstngr_widget_domain'),
+ // widget description
+ array( 'description' => __( 'Hostinger Widget Tutorial', 'hstngr_widget_domain' ), )
+ );
+ }
+ public function widget( $args, $instance ) {
+ $title = apply_filters( 'widget_title', $instance['title'] );
+ echo $args['before_widget'];
+ //if title is present
+ if ( ! empty( $title ) )
+ echo $args['before_title'] . $title . $args['after_title'];
 
 //output
 global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link;
@@ -126,12 +126,11 @@ if ( empty( $disable_single_link ) ) {
 <?php
 echo $args['after_widget'];
 }
-
 public function form( $instance ) {
 if ( isset( $instance[ 'title' ] ) )
 $title = $instance[ 'title' ];
 else
-$title = __( 'Default Title', 'lsxto_widget' );
+$title = __( 'Default Title', 'hstngr_widget_domain' );
 ?>
 <p>
 <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
