@@ -42,17 +42,17 @@ get_header(); ?>
 	}
 	?>
 
+	<?php get_sidebar(); ?>
+
+	<?php if ( is_active_sidebar( 'why-us' ) ) : ?>
+	<div class="home-widget" role="complementary">
+	<?php dynamic_sidebar( 'why-us' ); ?>
+	</div><!-- #primary-sidebar -->
+	<?php endif; ?>
+	
 </div><!-- #primary -->
 
 <?php lsx_content_wrap_after(); ?>
-
-<?php get_sidebar(); ?>
-
-<?php if ( is_active_sidebar( 'why-us' ) ) : ?>
-<div class="home-widget" role="complementary">
-<?php dynamic_sidebar( 'why-us' ); ?>
-</div><!-- #primary-sidebar -->
-<?php endif; ?>
 
 <?php
 get_footer();
