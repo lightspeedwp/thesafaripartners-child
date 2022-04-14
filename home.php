@@ -47,12 +47,12 @@ get_header(); ?>
 <?php lsx_content_wrap_after(); ?>
 
 <?php get_sidebar(); ?>
+
 <?php if ( is_active_sidebar( 'why-us' ) ) : ?>
 <div class="home-widget" role="complementary">
 <?php dynamic_sidebar( 'why-us' ); ?>
 </div><!-- #primary-sidebar -->
 <?php endif; ?>
-</div>
 
 <?php
 get_footer();
