@@ -6,6 +6,7 @@
  */
 
 require get_stylesheet_directory() . '/classes/class-core.php';
+require get_stylesheet_directory() . '/widgets/content-widget-travel-style.php';
 $theme_instance = \tsp_child\classes\Core::get_instance();
 
 /**
