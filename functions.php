@@ -40,3 +40,17 @@ function home_widgets_init() {
 
 }
 add_action( 'widgets_init', 'home_widgets_init' );
+
+function homeex_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Home Experience',
+		'id'            => 'home_experience',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'homeex_widgets_init' );
