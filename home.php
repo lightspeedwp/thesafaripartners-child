@@ -32,12 +32,6 @@ get_header(); ?>
 
 		<?php lsx_content_bottom(); ?>
 
-		<?php if ( is_active_sidebar( 'home_experience' ) ) : ?>
-		<div class="col-md-12">
-		<?php dynamic_sidebar( 'home_experience' ); ?>
-		</div><!-- #primary-sidebar -->
-		<?php endif; ?>
-
 	</main><!-- #main -->
 
 	<?php lsx_content_after(); ?>
@@ -55,7 +49,7 @@ get_header(); ?>
 	<?php dynamic_sidebar( 'why-us' ); ?>
 	</div><!-- #primary-sidebar -->
 	<?php endif; ?>
-
+	
 </div><!-- #primary -->
 
 <?php lsx_content_wrap_after(); ?>
