@@ -29,7 +29,7 @@ if ( empty( $disable_single_link ) ) {
 </a><?php } ?>
 </h3>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-6 lsx-to-widget">
 		<h4 class="lsx-to-widget-title text-right">
 			<?php
             if ( ! empty( $title_link ) ) {
@@ -70,8 +70,8 @@ if ( empty( $disable_single_link ) ) {
 		<?php endif; ?>
 	<?php } ?>
 
-	<div class="lsx-to-widget-content">
-		<h3 class="lsx-to-widget-title text-left">
+	<div class="lsx-to-widget-content bottom">
+		<h4 class="lsx-to-widget-title text-left">
 			<?php
 						if ( ! empty( $title_link ) ) {
 ?>
@@ -81,7 +81,7 @@ if ( empty( $disable_single_link ) ) {
 						if ( ! empty( $title_link ) ) {
 ?>
 </a><?php } ?>
-</h3>
+</h4>
 		<?php
 			// if ( empty( $disable_text ) ) {
 			// 	lsx_to_term_tagline( $term->term_id, '<p class="lsx-to-widget-tagline text-center">', '</p>' );
