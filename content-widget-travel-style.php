@@ -71,6 +71,17 @@ if ( empty( $disable_single_link ) ) {
 	<?php } ?>
 
 	<div class="lsx-to-widget-content">
+		<h3 class="lsx-to-widget-title text-left">
+			<?php
+						if ( ! empty( $title_link ) ) {
+?>
+<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+			<?php
+						if ( ! empty( $title_link ) ) {
+?>
+</a><?php } ?>
+</h3>
 		<?php
 			// if ( empty( $disable_text ) ) {
 			// 	lsx_to_term_tagline( $term->term_id, '<p class="lsx-to-widget-tagline text-center">', '</p>' );
