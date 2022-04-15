@@ -16,6 +16,32 @@ if ( empty( $disable_single_link ) ) {
 }
 ?>
 <article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+	<div class="col-md-6">
+		<h3 class="lsx-to-widget-title text-left">
+			<?php
+            if ( ! empty( $title_link ) ) {
+?>
+<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+			<?php
+            if ( ! empty( $title_link ) ) {
+?>
+</a><?php } ?>
+</h3>
+	</div>
+	<div class="col-md-6">
+		<h4 class="lsx-to-widget-title text-right">
+			<?php
+            if ( ! empty( $title_link ) ) {
+?>
+<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+			SEE ALL	<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+			<?php
+            if ( ! empty( $title_link ) ) {
+?>
+</a><?php } ?>
+		</h4>
+	</div>
 	<?php if ( empty( $disable_placeholder ) ) { ?>
 		<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 			<div class="lsx-to-widget-thumb">
@@ -45,18 +71,6 @@ if ( empty( $disable_single_link ) ) {
 	<?php } ?>
 
 	<div class="lsx-to-widget-content">
-		<h4 class="lsx-to-widget-title text-center">
-			<?php
-            if ( ! empty( $title_link ) ) {
-?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-			<?php
-            if ( ! empty( $title_link ) ) {
-?>
-</a><?php } ?>
-		</h4>
-
 		<?php
 			// if ( empty( $disable_text ) ) {
 			// 	lsx_to_term_tagline( $term->term_id, '<p class="lsx-to-widget-tagline text-center">', '</p>' );
