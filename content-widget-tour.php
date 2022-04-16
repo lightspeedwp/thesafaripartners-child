@@ -69,10 +69,9 @@ if ( $has_single ) {
 
 			echo wp_kses_post( $excerpt );
 			?>
-			<div class="lsx-to-widget-meta-data">
-				<span class="lsx-to-meta-data">
+			<div class="lsx-to-widget-meta-data">	
 				<?php
-				$meta_class = 'lsx-to-meta-data-';
+				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
 				lsx_to_price( '<span class="' . $meta_class . 'price"><span class="lsx-to-meta-data-key">' . esc_html__( 'from', 'tour-operator' ) . ':</span> ', '</span>' );
 				lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key">' . esc_html__( 'Duration', 'tour-operator' ) . ':</span> ', '</span>' );
@@ -83,7 +82,6 @@ if ( $has_single ) {
 					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 				}
 				?>
-				</span>
 				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 			</div>
 
