@@ -1,6 +1,6 @@
 /*
 Theme Name:   TSP Child Theme
-Description:  The Safari Partners child theme based on 
+Description:  The Safari Partners child theme based on
 Author:       LightSpeed
 Author URI:   https://www.lsdev.biz/
 Template:     lsx
@@ -9,3 +9,15 @@ License:      GNU General Public License v2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  tsp-child
 */
+
+@font-face {
+    font-family: 'argesta_displayregular';
+    src: url('fonts/argestadisplay-regular-webfont.eot');
+    src: url('fonts/argestadisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/argestadisplay-regular-webfont.woff2') format('woff2'),
+         url('fonts/argestadisplay-regular-webfont.woff') format('woff'),
+         url('fonts/argestadisplay-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
