@@ -64,7 +64,7 @@ if ( $has_single ) {
 		ob_start();
 		lsx_to_widget_entry_content_top();
 		the_excerpt();
-		lsx_to_widget_entry_content_bottom();
+
 		$excerpt = ob_get_clean();
 
 			echo wp_kses_post( $excerpt );
@@ -83,8 +83,8 @@ if ( $has_single ) {
 				}
 				?>
 			</div>
-			
-		<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
+
+		<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 
 
 		<?php lsx_widget_entry_content_bottom(); ?>
