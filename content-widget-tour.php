@@ -84,11 +84,9 @@ if ( $has_single ) {
 				?>
 			</div>
 
-		<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
-
-
 		<?php lsx_widget_entry_content_bottom(); ?>
 	</div>
+	<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 
 	<?php lsx_widget_entry_bottom(); ?>
 
