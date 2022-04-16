@@ -82,11 +82,13 @@ if ( $has_single ) {
 					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 				}
 				?>
+				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 			</div>
+
+
 
 		<?php lsx_widget_entry_content_bottom(); ?>
 	</div>
-	<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 
 	<?php lsx_widget_entry_bottom(); ?>
 
