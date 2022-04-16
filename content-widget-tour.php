@@ -60,17 +60,10 @@ if ( $has_single ) {
 		?>
 		<?php
 		ob_start();
-		lsx_to_widget_entry_content_top();
 		the_excerpt();
-		lsx_to_widget_entry_content_bottom();
 		$excerpt = ob_get_clean();
-
-		if ( empty( $disable_text ) && ! empty( $excerpt ) ) {
 			echo wp_kses_post( $excerpt );
-		} elseif ( $has_single && true !== $disable_view_more && '1' !== $disable_view_more ) {
-			?><?php
-		}
-		?>
+			?>
 
 		<div class="lsx-to-widget-meta-data">
 			<?php
@@ -90,9 +83,7 @@ if ( $has_single ) {
 		<?php
 		ob_start();
 		lsx_to_widget_entry_content_top();
-		the_excerpt();
 		lsx_to_widget_entry_content_bottom();
-		$excerpt = ob_get_clean();
 
 		if ( empty( $disable_text ) && ! empty( $excerpt ) ) {
 		} elseif ( $has_single && true !== $disable_view_more && '1' !== $disable_view_more ) {
