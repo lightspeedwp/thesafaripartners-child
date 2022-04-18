@@ -22,7 +22,7 @@
 		<?php wp_body_open(); ?>
 		<?php lsx_body_top(); ?>
 <div class="body-wrap">
-		<div class="header-wrap sticky">
+		<div class="header-wrap mega-stuck mega-sticky">
 			<div class="intro-wrap"><p>Chat to an expert on 1.888.71SAFARI (72327)</p></div>
 			<?php lsx_header_before(); ?>
 			<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">
