@@ -18,7 +18,10 @@
  @import "https://use.typekit.net/unm0iha.css";
 
  @media screen and (min-width: 1000px) {
-	body,p, h1, h2,h3,h4,h5{font-family: argesta_displayregular, serif!important;}
+
+   h1,h2,h3,h4,h5 {font-family: moret, serif!important;
+font-weight: 300;}
+	body,p{font-family: argesta_displayregular, serif!important;}
 
 	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu{background-color:#fff;border:1px solid #000;margin-top:12px}
