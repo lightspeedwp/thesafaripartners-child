@@ -20,7 +20,7 @@
  @media screen and (min-width: 1000px) {
 
    h1,h2,h3,h4,h5 {font-family:argesta_displayregular, serif!important;
-font-weight: 300;}
+font-weight: bold;}
 	body,p{font-family:moret, serif!important;}
 
 	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;}
