@@ -116,10 +116,10 @@ outline-color: #fff;}
 .lsx-banner-column{padding:130px 20px;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
-.home .lsx-banner-column{padding:130px 20px;}
-.home .wp-block-tour-operator-block-taxonomy{}
-.home .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index;10;background:none;}
-.home .wp-block-tour-operator-block-post-types{padding:10px;}
+ .lsx-banner-column{padding:130px 20px;}
+ .wp-block-tour-operator-block-taxonomy{}
+ .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index;10;background:none;}
+ .wp-block-tour-operator-block-post-types{padding:10px;}
 
 .ot-list .lsx-to-widget-content{position:absolute;top:-140px;right:-100px;}
 .ot-list .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag, .ot-list .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;width:270px;float:right;padding:18px;}
@@ -134,12 +134,12 @@ outline-color: #fff;}
 	.wp-block-tour-operator-block-post-types h2.lsx-title{display:none;}
 	.toptours-posts .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow{top:14rem;}
 
-	.home	.lsx-to-widget-item-wrap{margin-top:0px;}
+		.lsx-to-widget-item-wrap{margin-top:0px;}
 
 	.ot-list{margin-top:90px;}
 	.toptours-posts{margin-top:60px;}
 
-.home .tours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:5px 60px!important;}
+ .tours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:5px 60px!important;}
 .col-md-6 h4.text-right:after{
     color: inherit;
     content: "";
@@ -155,7 +155,7 @@ outline-color: #fff;}
 .tours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
 .tours-posts .lsx-to-widget-title{text-align:left;}
 
-.home .toptours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
+ .toptours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
 
 .toptours-posts .lsx-to-widget-thumb img{overflow:hidden;height:auto;}
 .toptours-posts .lsx-to-widget-item-wrap a.moretag, .toptours-posts .lsx-to-widget-item-wrap  a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;padding:10px;}
