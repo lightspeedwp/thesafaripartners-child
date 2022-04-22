@@ -129,16 +129,19 @@ outline-color: #fff;}
 .wp-block-tour-operator-block-post-types .lsx-to-widget-content .tourslink .moretag{display:block!important;padding:6px;margin:10px 0;}
 	.toptours-posts .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {overflow:hidden;height:200px;}
 	.toptours-posts .lsx-to-widget-content{padding:10px;}
+  .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {overflow:hidden;height:500px;}
+	.safari-styles .lsx-to-widget-content{padding:10px;}
 .wp-block-tour-operator-block-post-types .lsx-to-widget-content .moretag{display:none!important;}
 	.single-tour-operator .lsx-to-widget-content .moretag{display:none!important;}
 	.single-tour-operator .lsx-to-widget-content .tourslink .moretag{display:block!important;padding:6px;margin:10px 0;}
 	.wp-block-tour-operator-block-post-types h2.lsx-title{display:none;}
 	.toptours-posts .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow{top:14rem;}
-
+.safari-styles .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow{top:14rem;}
 		.lsx-to-widget-item-wrap{margin-top:0px;}
 
 	.ot-list{margin-top:90px;}
 	.toptours-posts{margin-top:60px;}
+  .safari-styles{margin-top:60px;}
 
  .tours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:5px 60px!important;}
 .col-md-6 h4.text-right:after{
@@ -163,6 +166,15 @@ outline-color: #fff;}
 .toptours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
 .toptours-posts .lsx-to-widget-title{text-align:left;}
 	.toptours-posts .lsx-to-widget-item-wrap{padding: 1px;}
+
+
+  .safari-styles .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
+
+ .safari-styles .lsx-to-widget-thumb img{overflow:hidden;height:auto;}
+ .safari-styles .lsx-to-widget-item-wrap a.moretag, .toptours-posts .lsx-to-widget-item-wrap  a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;padding:10px;}
+ .safari-styles .lsx-to-slider-inner .slick-dots{display:none!important;}
+ .safari-styles .lsx-to-widget-title{text-align:left;}
+ 	.safari-styles .lsx-to-widget-item-wrap{padding: 1px;}
 
 .lsx-to-slider-inner .slick-arrow.slick-prev{left: -30px;width: 60px!important;
     height: 60px!important;}
