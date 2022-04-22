@@ -116,10 +116,9 @@ outline-color: #fff;}
 .lsx-banner-column{padding:130px 20px;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
- .lsx-banner-column{padding:130px 20px;}
- .wp-block-tour-operator-block-taxonomy{}
- .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index;10;background:none;}
- .wp-block-tour-operator-block-post-types{padding:10px;}
+.home .lsx-banner-column{padding:130px 20px;}
+.home .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index;10;background:none;}
+.home .wp-block-tour-operator-block-post-types{padding:10px;}
 
 .ot-list .lsx-to-widget-content{position:absolute;top:-140px;right:-100px;}
 .ot-list .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag, .ot-list .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;width:270px;float:right;padding:18px;}
