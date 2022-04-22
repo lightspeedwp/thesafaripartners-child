@@ -222,6 +222,66 @@ border:1px solid #000;}
 
 	#secondary{display:none;}
 
+
+  #whostraveling{
+    text-align: justify;
+    position: relative;
+    overflow: hidden;
+  }
+  #whostraveling:before, #whostraveling .active:after {
+    content: '';
+    width: 100%;
+    border: 2px solid #21a2d1;
+    position: absolute;
+    top: 1em;
+    margin-top: -6px;
+    z-index: -1;
+  }
+  #whostraveling .active:after {
+    border-color: #b7b7b7;
+  }
+  #whostraveling:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+  #whostraveling li {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.7em;
+    border-radius: 50%;
+    background: #21a2d1;
+    margin: 0 1em;
+    display: inline-block;
+    color: white;
+    font-size: 1em;
+  }
+
+  #whostraveling .marker-number {
+    font-size: 14px;
+  }
+
+  #whostraveling li.active {
+    background: #04497b;
+  }
+
+  #whostraveling .active ~ li {
+    background: #b7b7b7;
+  }
+
+  #whostraveling span.marker-text {
+    color: #7d7d7d;
+    font-size: 12px;
+    line-height: 16px;
+    width: 70px;
+    display: block;
+    margin-left: -21px;
+    margin-top: 2px;
+    font-style: italic;
+    font-family: Arial;
+  }
+
 /*About */
 .lsx-to-widget-item-wrap.lsx-team{margin:0;padding:1px;}
 .lsx-to-widget-item-wrap.lsx-team h4{text-align:left; margin-top: 1.5rem;margin-bottom: 1.5rem;margin-left:10px!important;}
