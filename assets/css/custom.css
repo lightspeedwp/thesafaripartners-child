@@ -66,8 +66,6 @@ font-weight: bold;}
 .archive.category .post{width:32%;float:left;margin:8px;}
 .intro-wrap p{font-size:12px;padding:2px;font-family: argesta_displayregular, serif;}
 
-	.wp-block-tour-operator-block-post-types .lsx-destination .lsx-to-widget-content p{display:none;}
-
 /*Pop-ups */
 	.pum-overlay{top:100px;}
 	.pum.pum-theme-default-theme .pum-container, .pum.pum-theme-lightbox .pum-container, .pum.pum-theme-enterprise-blue .pum-container, .pum.pum-theme-hello-box .pum-container, .pum.pum-theme-cutting-edge .pum-container, .pum.pum-theme-framed-border .pum-container, .pum.pum-overlay .pum-container{background-color:transparent;}
@@ -279,8 +277,9 @@ border:1px solid #000;}
     margin-left: -21px;
     margin-top: 2px;
     font-style: italic;
-    font-family: Arial;
-  }
+    font-family: Arial;}
+
+  .lsx-title {max-width: 90%!important;text-align: left;}
 
 /*About */
 .lsx-to-widget-item-wrap.lsx-team{margin:0;padding:1px;}
