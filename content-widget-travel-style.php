@@ -49,10 +49,21 @@ if ( empty( $disable_single_link ) ) {
 				<?php
                 if ( ! empty( $title_link ) ) {
 ?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-	<?php	echo '<div class="cover-box" style="background-size: cover;background-image: url(' . $post_thumbnail_img[0] .')'; ?>"></div>
+<a href="<?php echo esc_url( $title_link ); ?>"><?php }
 
-					
+function se_40495669($post_id){
+        $term_thumbnail = get_term_thumbnail($post_id);
+        $size = 'large';// choose the image size to get
+        $attachment_img_atts = wp_get_attachment_image_src( $term_thumbnail, $size);
+
+        if ( $attachment_img_atts ) {
+              $url = $attachment_img_atts[0];
+        }
+        return $url;
+    }  ?>
+	<div class="cover-box" style="background-image: url(<?php echo se_40495669($wp_query->get_queried_object_id()); ?>)"></div>
+
+
 
 				<?php
                 if ( ! empty( $title_link ) ) {
