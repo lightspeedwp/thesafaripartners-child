@@ -54,13 +54,12 @@ if ( empty( $disable_single_link ) ) {
 	<?php
 	​
 	// get the current taxonomy term
-	$term = get_queried_object();
-	​
-	// vars
-	$image = get_field($term->term_id);
+	$queried_object = get_queried_object();
+	  $term_id = $queried_object->term_id; // for get term id
+	  $taxonomy_image_url = get_option('z_taxonomy_image'.$term_id); // get image url
 	​
 	?>
-	​	<div class="cover-box" style="background-image: url(<?php echo $image['url']; ?>)"></div>
+	​	<div class="cover-box" style="background-image: url(<?php echo $taxonomy_image_url; ?>)"></div>
 
 
 
