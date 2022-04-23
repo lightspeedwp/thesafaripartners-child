@@ -50,8 +50,11 @@ if ( empty( $disable_single_link ) ) {
                 if ( ! empty( $title_link ) ) {
 ?>
 <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-				<div class="cover-box" style="background-image: url(<?php get_the_post_thumbnail_url( $term->term_id, 'lsx-thumbnail-wide' ); ?>);
-    background-size: cover;">
+<?php	$image_id           = get_term_meta( $term->term_id, 'thumbnail_id', true );
+$post_thumbnail_img = wp_get_attachment_image_src( $image_id, 'large' ); ?>
+
+
+	<?php	echo '<div class="cover-box" style="background-size: cover;background-image: url(' . $post_thumbnail_img[0] .' '; ?>" >
 	</div>
 
 				<?php
