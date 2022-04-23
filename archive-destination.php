@@ -22,86 +22,31 @@ get_header(); ?>
 $loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
 
 while ( $loop->have_posts() ) : $loop->the_post();
-
-the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' );
 ?>
 
     <div class="entry-content">
 			<article <?php post_class(); ?>>
-				<div class="col-md-6">
-					<h3 class="lsx-to-widget-title text-left">
-						<?php
-			            if ( ! empty( $title_link ) ) {
-			?>
-			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-							<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-						<?php
-			            if ( ! empty( $title_link ) ) {
-			?>
-			</a><?php } ?>
-			</h3>
-				</div>
 
-				<?php if ( empty( $disable_placeholder ) ) { ?>
-					<div class="col-md-6">
-						<h4 class="lsx-to-widget-title text-left">
-							<?php
-				            if ( ! empty( $title_link ) ) {
-				?>
-				<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-								<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-							<?php
-				            if ( ! empty( $title_link ) ) {
-				?>
-				</a><?php } ?>
-			</h4>
-					</div>
 					<div class="lsx-to-widget-thumb">
-						<?php
-			            if ( $has_single ) {
-			?>
-			<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+
+			<a href="<?php echo esc_url( $permalink ); ?>">
 							<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
-						<?php
-			            if ( $has_single ) {
-			?>
-			</a><?php } ?>
+
+			</a>
 					</div>
-				<?php } ?>
+
 
 				<div class="lsx-to-widget-content">
 					<h4 class="lsx-to-widget-title text-center">
-						<?php
-			            if ( $has_single ) {
-			?>
-			<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+
+			<a href="<?php echo esc_url( $permalink ); ?>">
 							<?php the_title(); ?>
-						<?php
-			            if ( $has_single ) {
-			?>
-			</a><?php } ?>
+
+			</a>
 					</h4>
 
-					<?php
-						// if ( empty( $disable_text ) ) {
-						// 	lsx_to_tagline( '<p class="lsx-to-widget-tagline text-center">', '</p>' );
-						// }
-					?>
-
-					<?php
-						ob_start();
-						lsx_to_widget_entry_content_top();
-						the_excerpt();
-						lsx_to_widget_entry_content_bottom();
-						$excerpt = ob_get_clean();
-						if ( empty( $disable_text ) && ! empty( $excerpt ) ) {
-							echo wp_kses_post( $excerpt );
-						} elseif ( $has_single && true !== $disable_view_more && '1' !== $disable_view_more ) {
-							?>
 							<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
-							<?php
-						}
-					?>
+
 				</div>
 			</article>
     </div>
