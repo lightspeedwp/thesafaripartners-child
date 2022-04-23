@@ -50,9 +50,8 @@ if ( empty( $disable_single_link ) ) {
                 if ( ! empty( $title_link ) ) {
 ?>
 <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-				
-				<?php	$thumb_id = lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide', true );
-$term_img = wp_get_attachment_url(  $thumb_id ); ?>
+					<?php get_the_post_thumbnail_url( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+
 				<?php
                 if ( ! empty( $title_link ) ) {
 ?>
