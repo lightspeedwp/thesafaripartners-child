@@ -14,8 +14,8 @@
      font-style: normal;
 
  }
-
  @import "https://use.typekit.net/unm0iha.css";
+ @import "custom.scss";
 
  @media screen and (min-width: 1000px) {
 
