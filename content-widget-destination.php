@@ -76,7 +76,7 @@ if ( $has_single ) {
 			// 	lsx_to_tagline( '<p class="lsx-to-widget-tagline text-center">', '</p>' );
 			// }
 		?>
-
+<div class="item__body">
 		<?php
 			ob_start();
 			lsx_to_widget_entry_content_top();
@@ -90,6 +90,6 @@ if ( $has_single ) {
 				<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
 				<?php
 			}
-		?>
+		?></div>
 	</div>
 </article>
