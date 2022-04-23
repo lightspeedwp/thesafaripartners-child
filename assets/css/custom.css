@@ -333,7 +333,7 @@ width: 100%;}
 
 .desinations-landing-style .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
 
-.wp-block-tour-operator-block-post-types..desinations-landing-style .lsx-to-widget-content .moretag{display:block!important;}
+.wp-block-tour-operator-block-post-types.desinations-landing-style .lsx-to-widget-content .moretag{display:block!important;}
 .desinations-landing-style .type-lsx-to-destination{ overflow: hidden;
   position: relative;margin-top:50px;margin-bottom:50px;
 }
