@@ -50,8 +50,10 @@ if ( empty( $disable_single_link ) ) {
                 if ( ! empty( $title_link ) ) {
 ?>
 <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-	<?php	echo '<div class="cover-box" style="background-size: cover;background-image: url(' . $post_thumbnail_url( $term->term_id) .')'; ?>"></div>
-				
+	<?php	echo '<div class="cover-box" style="background-size: cover;background-image: url(' . $post_thumbnail_img[0] .')'; ?>"></div>
+
+					
+
 				<?php
                 if ( ! empty( $title_link ) ) {
 ?>
