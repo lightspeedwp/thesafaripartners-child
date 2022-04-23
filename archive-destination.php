@@ -67,7 +67,7 @@ the_post();
 <div class="wp-block-tour-operator-block-post-types tours-posts"><h2 class="lsx-title"><small></small></h2><div class="lsx-testimonial-body"><div class=" widget lsx-widget"><div class="slider-container lsx-to-widget-items"><div id="slider-11550" class="lsx-to-slider"><div class="lsx-to-slider-wrap"><div class="lsx-to-slider-inner slick-initialized slick-slider slick-dotted slick-has-arrows" data-interval="" data-slick="{ &quot;slidesToShow&quot;: 2, &quot;slidesToScroll&quot;: 2 }" role="toolbar"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button><div aria-live="polite" class="slick-list"><div class="slick-track" role="listbox">
 					<?php } ?>
 
-					<div class="lsx-destination slick-slide slick-current slick-active">
+					<div class="lsx-to-widget-item-wrap lsx-destination slick-slide">
 						<?php lsx_to_content( 'content', 'destination' ); ?>
 					</div>
 
