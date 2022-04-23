@@ -311,16 +311,17 @@ width: 100%;}
 }
 .destination-landing .lsx-to-widget-content h4{margin-bottom:8px;font-size:20px;}
 .destination-landing .lsx-to-widget-content p{font-size:14px;}
-.destination-landing .lsx-to-widget-content{padding:10px;
-  background: rgba( 255, 255, 255, 1 );
-  bottom: -26%;
-  color: #000;
-  height:34%;
-  left: 0%;
-  text-align: left;
-  position: absolute;
-  transition: bottom 0.5s ease;
-  width: 100%;
+.destination-landing .lsx-to-widget-content{
+  padding: 10px;
+    background: rgba( 255, 255, 255, 1 );
+    bottom: -35%;
+    color: #000;
+    height: 43%;
+    left: 0%;
+    text-align: left;
+    position: absolute;
+    transition: bottom 0.5s ease;
+    width: 100%;
 }
 .destination-landing .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%;}
 
