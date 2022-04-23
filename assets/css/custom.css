@@ -340,7 +340,7 @@ width: 100%;}
 }
 .desinations-landing-style .lsx-to-widget-content h4{margin-bottom:8px;font-size:20px;}
 .desinations-landing-style .lsx-to-widget-content p{font-size:14px;}
-.desinations-landing-style .lsx-to-widget-content{padding:10px;
+.desinations-landing-style .lsx-to-widget-content, .ot-list .lsx-to-widget-thumb{padding:10px;
   background: rgba( 255, 255, 255, 1 );
   bottom: -26%;
   color: #000;
@@ -351,9 +351,9 @@ width: 100%;}
   transition: bottom 0.5s ease;
   width: 100%;
 }
-.desinations-landing-style .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%;}
+.desinations-landing-style .type-lsx-to-destination:hover .lsx-to-widget-content, .ot-list .lsx-travel-style:hover .lsx-to-widget-content{bottom: 0%;}
 
-.desinations-landing-style .lsx-to-widget-thumb{
+.desinations-landing-style .lsx-to-widget-thumb, .ot-list .lsx-to-widget-thumb{
 	display: flex;
     justify-content: center;
     align-items: center;
