@@ -305,13 +305,13 @@ width: 100%;}
 	.social-about h2,	.financial-about h2{font-size:34px!important;margin-bottom:14px!important;}
 .social-about .lsx-button,	.financial-about .lsx-button{-webkit-box-shadow: none;box-shadow: none;border:1px solid #000!important;background:transparent!important;}
 
-.wp-block-tour-operator-block-post-types.destinations-landing .lsx-to-widget-content .moretag{display:block!important;}
-.destinations-landing .type-lsx-to-destination{ overflow: hidden;
+.wp-block-tour-operator-block-post-types.destination-landing .lsx-to-widget-content .moretag{display:block!important;}
+.destination-landing .type-lsx-to-destination{ overflow: hidden;
   position: relative;margin-top:50px;margin-bottom:50px;
 }
-.destinations-landing .lsx-to-widget-content h4{margin-bottom:8px;font-size:20px;}
-.destinations-landing .lsx-to-widget-content p{font-size:14px;}
-.destinations-landing .lsx-to-widget-content{padding:10px;
+.destination-landing .lsx-to-widget-content h4{margin-bottom:8px;font-size:20px;}
+.destination-landing .lsx-to-widget-content p{font-size:14px;}
+.destination-landing .lsx-to-widget-content{padding:10px;
   background: rgba( 255, 255, 255, 1 );
   bottom: -26%;
   color: #000;
@@ -322,7 +322,7 @@ width: 100%;}
   transition: bottom 0.5s ease;
   width: 100%;
 }
-.destinations-landing .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%;}
+.destination-landing .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%;}
 
 .desinations-landing-style .lsx-to-widget-thumb{
 	display: flex;
