@@ -50,17 +50,18 @@ if ( empty( $disable_single_link ) ) {
                 if ( ! empty( $title_link ) ) {
 ?>
 <a href="<?php echo esc_url( $title_link ); ?>"><?php }?>
-<?php	function se_40495669($post_id){
-	        $term_thumbnail = post_thumbnail_url($post_id);
-	        $size = 'large';// choose the image size to get
-	        $attachment_img_atts = wp_get_attachment_image_src( $term_thumbnail, $size);
 
-	        if ( $attachment_img_atts ) {
-	              $url = $attachment_img_atts[0];
-	        }
-	        return $url;
-	    } ?>
-	<div class="cover-box" style="background-image: url(<?php echo se_40495669($wp_query->get_queried_object_id()); ?>)"></div>
+	<?php
+	​
+	// get the current taxonomy term
+	$term = get_queried_object();
+	​
+	// vars
+	$image = get_field($term->term_id);
+	​
+	?>
+	​	<div class="cover-box" style="background-image: url(<?php echo $image['url']; ?>)"></div>
+
 
 
 
