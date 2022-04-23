@@ -50,7 +50,9 @@ if ( empty( $disable_single_link ) ) {
                 if ( ! empty( $title_link ) ) {
 ?>
 <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-					<?php get_the_post_thumbnail_url( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+				<div class="cover-box" style="background-image: url(<?php post_thumbnail_url( $term->term_id, '' ); ?>);
+    background-size: cover;">
+	</div>
 
 				<?php
                 if ( ! empty( $title_link ) ) {
