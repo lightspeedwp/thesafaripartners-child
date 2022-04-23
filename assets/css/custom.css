@@ -331,8 +331,21 @@ width: 100%;}
     align-items: center;
     overflow: hidden;}
 
+    .destination-landing .lsx-to-widget-thumb{
+    	display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;}
+
+        .ot-list .lsx-to-widget-thumb{
+        	display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;}
 
 .desinations-landing-style .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
+.desinations-landing-style .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
+.ot-list .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
 
 .wp-block-tour-operator-block-post-types.desinations-landing-style .lsx-to-widget-content .moretag{display:block!important;}
 .desinations-landing-style .type-travel-style{ overflow: hidden;
