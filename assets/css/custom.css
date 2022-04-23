@@ -352,6 +352,7 @@ width: 100%;}
   width: 100%;
 }
 .desinations-landing-style .type-lsx-to-destination:hover .lsx-to-widget-content, .ot-list .lsx-travel-style:hover .lsx-to-widget-content{bottom: 0%;}
+.home .ot-list .lsx-to-widget-thumb img {object-fit: cover ;height:350px!important;}
 
 .desinations-landing-style .lsx-to-widget-thumb, .ot-list .lsx-to-widget-thumb{
 	display: flex;
