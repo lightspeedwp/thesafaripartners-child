@@ -4,23 +4,9 @@
  *
  * @package  tour-operator
  * @category destination
- */
- /**
-  * Activity Widget Content Part
-  *
-  * @package     tour-operator
-  * @category    activity
-  * @subpackage  widget
   */
 
  global $disable_placeholder, $disable_text, $disable_view_more, $post;
-
- $has_single = ! lsx_to_is_single_disabled();
- $permalink = '';
-
- if ( $has_single ) {
- 	$permalink = get_the_permalink();
- }
 
 get_header(); ?>
 
