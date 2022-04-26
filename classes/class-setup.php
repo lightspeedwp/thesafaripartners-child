@@ -38,7 +38,7 @@ class Setup {
 		add_action( 'after_setup_theme', array( $this, 'language_setup' ), 11 );
 		add_action( 'init', array( $this, 'who_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
-		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
+		//add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 	}
 
 	/**
