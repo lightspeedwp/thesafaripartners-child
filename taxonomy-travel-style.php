@@ -33,6 +33,18 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
+					<?php
+$loop = new WP_Query( array( 'post_type' => 'deestination', 'posts_per_page' => 10 ) ); 
+
+while ( $loop->have_posts() ) : $loop->the_post();
+?>
+
+<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+	<?php lsx_to_content( 'content', 'destination' ); ?>
+</div>
+
+<?php endwhile; ?>
+
 				</div>
 
 			<?php else : ?>
