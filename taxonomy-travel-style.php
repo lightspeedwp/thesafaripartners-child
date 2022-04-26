@@ -34,7 +34,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( array( 'post_type' => 'deestination', 'posts_per_page' => 10 ) ); 
+$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) ); 
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
