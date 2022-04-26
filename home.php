@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Home
+ * Template Name: Home
  *
  * @package lsx
  */
@@ -22,7 +22,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) :
 				the_post();
-			?>
+				?>
 
 				<?php get_template_part( 'partials/content', 'page' ); ?>
 
@@ -46,7 +46,7 @@ get_header(); ?>
 
 	<?php if ( is_active_sidebar( 'why-us' ) ) : ?>
 	<div class="home-widget" role="complementary">
-	<?php dynamic_sidebar( 'why-us' ); ?>
+		<?php dynamic_sidebar( 'why-us' ); ?>
 	</div><!-- #primary-sidebar -->
 	<?php endif; ?>
 	

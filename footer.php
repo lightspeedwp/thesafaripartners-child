@@ -17,7 +17,7 @@
 
 
 <div class="footer-sub-area" role="complementary">
-<?php dynamic_sidebar( 'footer_sub' ); ?>
+				<?php dynamic_sidebar( 'footer_sub' ); ?>
 </div><!-- #primary-sidebar -->
 <?php endif; ?>
 </div>
@@ -31,7 +31,12 @@
 					<div class="col-sm-12">
 						<?php lsx_footer_top(); ?>
 
-						<p class="credit <?php if ( has_nav_menu( 'social' ) || has_nav_menu( 'footer' ) ) echo 'credit-float'; ?>">
+						<p class="credit 
+						<?php
+						if ( has_nav_menu( 'social' ) || has_nav_menu( 'footer' ) ) {
+							echo 'credit-float';}
+						?>
+						">
 							<?php
 								printf(
 									/* Translators: 1: current year, 2: blog name */
