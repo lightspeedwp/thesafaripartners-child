@@ -28,7 +28,7 @@ get_header(); ?>
 						?>
 
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-							<?php lsx_to_content( 'content', 'tour ); ?>
+							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
 
 					<?php endwhile; ?>
