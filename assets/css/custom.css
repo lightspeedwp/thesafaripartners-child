@@ -32,8 +32,7 @@ font-weight: bold;}
     align-items: center;}
 #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search .search-icon {right: 18px;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
-   overflow: hidden;
-   height: auto!important;}
+   overflow: hidden;height: auto!important;min-height: 100px;}
   #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-thumb{
    	display: flex;
        justify-content: center;
