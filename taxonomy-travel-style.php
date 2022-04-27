@@ -34,7 +34,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( array( $settings = wp_parse_args( $args, $defaults );
+$loop = new WP_Query( array( $settings = wp_parse_args( $args, $defaults )
 
 	if ( is_singular( 'destination' ) && ( lsx_to_item_has_children( get_the_ID(), 'destination' ) || isset( $args['parent'] ) ) ) {
 
