@@ -107,7 +107,7 @@ outline-color: #fff;}
 .gutenberg-compatible-template.using-gutenberg.has-block-banner .breadcrumbs-container {position: relative;}
 
 	.lsx-to-slider-inner .slick-arrow.slick-prev:before, .gallery .slick-arrow.slick-prev:before, .slick-lightbox-inner .slick-arrow.slick-prev:before {
-		left: 1.5rem;}
+		left: 2rem;}
 	.lsx-to-slider-inner .slick-arrow.slick-next:before, .gallery .slick-arrow.slick-next:before, .slick-lightbox-inner .slick-arrow.slick-next:before {
 		right: 1.5rem;}
 
