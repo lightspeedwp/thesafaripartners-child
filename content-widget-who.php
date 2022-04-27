@@ -15,34 +15,8 @@ if ( empty( $disable_single_link ) ) {
 	$title_link = '';
 }
 ?>
-<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
-	<div class="tour-styles-top-info">
-	<div class="col-md-6">
-		<h3 class="lsx-to-widget-title text-left">
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-</a><?php } ?>
-</h3>
-	</div>
-	<div class="col-md-6 lsx-to-widget">
-		<h4 class="lsx-to-widget-title text-right">
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-			SEE ALL	<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-</a><?php } ?>
-		</h4>
-	</div></div>
+<article class="who-specials">
+
 	<?php if ( empty( $disable_placeholder ) ) { ?>
 		<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 			<div class="lsx-to-widget-thumb">
@@ -106,33 +80,7 @@ if ( empty( $disable_single_link ) ) {
 
 
 <article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
-	<div class="tour-styles-top-info">
-	<div class="col-md-6">
-		<h3 class="lsx-to-widget-title text-left">
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-</a><?php } ?>
-</h3>
-	</div>
-	<div class="col-md-6 lsx-to-widget">
-		<h4 class="lsx-to-widget-title text-right">
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-			SEE ALL	<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-</a><?php } ?>
-		</h4>
-	</div></div>
+
 	<?php if ( empty( $disable_placeholder ) ) { ?>
 		<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 			<div class="lsx-to-widget-thumb">
