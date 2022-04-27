@@ -34,24 +34,17 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( array( $settings = wp_parse_args( $args, $defaults )
-
-	if ( is_singular( 'destination' ) && ( lsx_to_item_has_children( get_the_ID(), 'destination' ) || isset( $args['parent'] ) ) ) {
-
-		$region_args = array(
+$loop = new WP_Query( $region_args = array(
 			'post_type'      => 'destination',
 			'post_status'    => 'publish',
 			'nopagin'        => true,
-			'posts_per_page' => '-1',
-			'post_parent'    => $settings['parent'],
-			'orderby'        => $settings['orderby'],
+			'posts_per_page' => '9',
+			'post_parent'    => ['parent'],
+			'orderby'        => ['orderby'],
 			'order'          => 'ASC',
-		); ) );
+		);
 
 while ( $loop->have_posts() ) : $loop->the_post();
-
-wp_reset_postdata();
-		endif;
 ?>
 
 <div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
