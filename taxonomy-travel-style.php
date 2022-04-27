@@ -49,6 +49,9 @@ $loop = new WP_Query( array( $settings = wp_parse_args( $args, $defaults );
 		); ) );
 
 while ( $loop->have_posts() ) : $loop->the_post();
+
+wp_reset_postdata();
+		endif;
 ?>
 
 <div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
