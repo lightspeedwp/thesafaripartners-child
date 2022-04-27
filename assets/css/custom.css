@@ -363,9 +363,9 @@ width: 100%;}
 .desinations-landing-style .lsx-to-widget-content p{font-size:14px;}
 .desinations-landing-style .lsx-to-widget-content{padding:10px;
   background: rgba( 255, 255, 255, 1 );
-  bottom: -26%;
+  bottom: -34%;
   color: #000;
-  height:34%;
+  height:44%;
   left: 0%;
   text-align: left;
   position: absolute;
@@ -373,6 +373,7 @@ width: 100%;}
   width: 100%;
 }
 .desinations-landing-style .lsx-travel-style:hover .lsx-to-widget-content{bottom: 0%!important;}
+.desinations-landing-style .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag{margin:-6px 10px 0;}
 
 .desinations-landing-style .lsx-to-widget-thumb{
 	display: flex;
