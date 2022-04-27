@@ -38,11 +38,11 @@ $loop = new WP_Query( $region_args = array(
 			'post_type'      => 'destination',
 			'post_status'    => 'publish',
 			'nopagin'        => true,
-			'posts_per_page' => '9',
-			'post_parent'    => ['parent'],
-			'orderby'        => ['orderby'],
+			'posts_per_page' => '-1',
+			'post_parent'    => $settings['parent'],
+			'orderby'        => $settings['orderby'],
 			'order'          => 'ASC',
-		);
+		); ); 
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
