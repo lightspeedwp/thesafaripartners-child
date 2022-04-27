@@ -291,7 +291,7 @@ border:1px solid #000;}
 .page.safari-styles {margin-top: 0px;}
 
 .page.safari-styles .who-image-display{padding:0 70px}
-.page.safari-styles .entry-content .lsx-title{max-width: 90%!important;}
+.page.safari-styles .entry-content .who-image-display .lsx-title{max-width: 90%!important;}
 .who-image-display{padding:0 70px}
 .who-image-display .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{border-radius: 50%;height:100px;width:100px;margin-left:5px;}
 .who-image-display .lsx-to-widget-content a.moretag{display:none;}
