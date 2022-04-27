@@ -1,9 +1,9 @@
 <?php
 /**
- * Tour Archive
+ * Travel Style Archive.
  *
  * @package  tour-operator
- * @category tour
+ * @category travel-style
  */
 
 get_header(); ?>
@@ -32,6 +32,18 @@ get_header(); ?>
 						</div>
 
 					<?php endwhile; ?>
+
+					<?php
+$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
+
+while ( $loop->have_posts() ) : $loop->the_post();
+?>
+
+<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+	<?php lsx_to_content( 'content', 'destination' ); ?>
+</div>
+
+<?php endwhile; ?>
 
 				</div>
 
