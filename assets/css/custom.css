@@ -372,7 +372,7 @@ width: 100%;}
   transition: bottom 0.5s ease;
   width: 100%;
 }
-.desinations-landing-style .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%!important;}
+.desinations-landing-style .lsx-travel-style:hover .lsx-to-widget-content{bottom: 0%!important;}
 
 .desinations-landing-style .lsx-to-widget-thumb{
 	display: flex;
