@@ -90,11 +90,11 @@ if ( empty( $disable_single_link ) ) {
 			// }
 		?>
 
-	
+		<?php if ( empty( $disable_text ) && ! empty( $term->description ) ) { ?>
 			<p class="lsx-to-widget-description">
 				<?php echo wp_kses_post( $term->description ); ?>
 			</p>
-
+		<?php } ?>
 
 		<?php if ( ! empty( $title_link ) ) { ?>
 			<p>
