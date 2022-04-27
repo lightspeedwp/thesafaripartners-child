@@ -34,15 +34,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( $region_args = array(
-			'post_type'      => 'destination',
-			'post_status'    => 'publish',
-			'nopagin'        => true,
-			'posts_per_page' => '-1',
-			'post_parent'    => $settings['parent'],
-			'orderby'        => $settings['orderby'],
-			'order'          => 'ASC',
-		); ); 
+$loop = new WP_Query( array( 'post_type' => 'destination', 'post_parent' => 'parent', 'posts_per_page' => 10 ) ); 
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
