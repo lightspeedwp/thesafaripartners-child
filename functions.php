@@ -43,7 +43,4 @@ function home_widgets_init() {
 }
 add_action( 'widgets_init', 'home_widgets_init' );
 
-// Allow 3rd party plugins and themes to disable the page links.
-	if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
-		return true;
-	}
+apply_filters( 'lsx_to_page_navigation_disable', true, get_post_type() ); 
