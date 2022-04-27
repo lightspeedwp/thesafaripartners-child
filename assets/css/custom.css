@@ -296,7 +296,7 @@ border:1px solid #000;}
 .who-image-display .lsx-to-widget-item-wrap{width:150px;padding:0px 20px}
 .who-image-display h4{font-size:14px;text-align:center;}
 .who-image-display .lsx-to-widget-content{padding:8px 0;}
-.entry-content .lsx-title{font-size:20px; margin-bottom:10px;text-align: left;}
+.entry-content .lsx-title{font-size:20px; margin-bottom:10px;text-align: left;max-width: 100%;}
 .lsx-title:after, #home-widgets h3:after, #home-widgets .widget-title:after{display:none;}
 .entry-content .who-slide .lsx-title{padding-bottom:50px!important;}
 
