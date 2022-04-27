@@ -7,6 +7,40 @@
  * @subpackage  widget
  */
 
+ $the_query = new WP_Query( array(
+     'post_type' => 'tours',
+     'tax_query' => array(
+         array (
+             'taxonomy' => 'who',
+             'field' => 'slug',
+         )
+     ),
+ ) );
+
+ while ( $the_query->have_posts() ) :
+     $the_query->the_post();
+		 ?>
+ 			<div class="lsx-to-widget-thumb">
+
+ <a href="<?php echo esc_url( $title_link ); ?>">
+ 					<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+
+ </a>
+ 			</div>
+
+
+ 	<div class="lsx-to-widget-content bottom">
+ 		<h4 class="lsx-to-widget-title text-left">
+
+ <a href="<?php echo esc_url( $title_link ); ?>">
+ 				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+
+ </a>
+ </h4>	<?php
+ endwhile;
+
+ wp_reset_postdata();
+
 global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link;
 
 if ( empty( $disable_single_link ) ) {
