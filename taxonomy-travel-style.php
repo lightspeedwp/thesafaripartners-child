@@ -34,7 +34,9 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( array( if ( is_singular( 'destination' ) && ( lsx_to_item_has_children( get_the_ID(), 'destination' ) || isset( $args['parent'] ) ) ) {
+$loop = new WP_Query( array( $settings = wp_parse_args( $args, $defaults );
+
+	if ( is_singular( 'destination' ) && ( lsx_to_item_has_children( get_the_ID(), 'destination' ) || isset( $args['parent'] ) ) ) {
 
 		$region_args = array(
 			'post_type'      => 'destination',
@@ -44,7 +46,7 @@ $loop = new WP_Query( array( if ( is_singular( 'destination' ) && ( lsx_to_item_
 			'post_parent'    => $settings['parent'],
 			'orderby'        => $settings['orderby'],
 			'order'          => 'ASC',
-		); ) ); 
+		); ) );
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
