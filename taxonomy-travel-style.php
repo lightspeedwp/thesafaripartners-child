@@ -63,20 +63,9 @@ get_header(); ?>
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
 					<?php
-					global $post;
-					$args = array(
-					'post_type'=>'destination',
-					'showposts'=>'1',
-					'orderby'=>'rand',
-					'tax_query'=> array( array(
-						'taxonomy' =>  $term->term_id,
-						'field' => 'slug',
-						'terms' => $position,
-						'operator' => 'IN',
-						), ),
-					);
-					$my_query = new WP_Query($args);
-					while ($my_query->have_posts()) : $my_query->the_post();
+$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
+
+while ( $loop->have_posts() ) : $loop->the_post();
 ?>
 
 <div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
