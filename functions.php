@@ -42,5 +42,3 @@ function home_widgets_init() {
 
 }
 add_action( 'widgets_init', 'home_widgets_init' );
-
-apply_filters( 'lsx_to_page_navigation_disable', true, get_post_type() ); 

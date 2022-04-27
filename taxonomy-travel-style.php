@@ -15,8 +15,43 @@ get_header(); ?>
 		<?php lsx_content_before(); ?>
 
 		<main id="main" class="site-main" role="main">
+<div class="archive-intro col-sm-12">
+	<div class="col-sm-9">
+	<p class="lsx-to-widget-description">
+		<?php echo wp_kses_post( $term->description ); ?>
+	</p>
+</div>
+<div class="col-sm-3">
+			<?php if ( empty( $disable_placeholder ) ) { ?>
+				<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+					<div class="lsx-to-widget-thumb">
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
 
-			<?php lsx_content_top(); ?>
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		</a><?php } ?>
+					</div>
+				<?php else : ?>
+					<div class="lsx-to-widget-thumb">
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+							<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		</a><?php } ?>
+					</div>
+				<?php endif; ?>
+			<?php } ?>
+			</div>
+		</div>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -34,7 +69,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) ); 
+$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
