@@ -8,11 +8,10 @@
  */
 
  $the_query = new WP_Query( array(
-     'post_type' => 'tours',
+     'post_type' => 'tour',
      'tax_query' => array(
          array (
              'taxonomy' => 'who',
-             'field' => 'slug',
          )
      ),
  ) );
