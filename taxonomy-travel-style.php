@@ -22,34 +22,20 @@ get_header(); ?>
 	</p>
 </div>
 <div class="col-sm-3">
-			<?php if ( empty( $disable_placeholder ) ) { ?>
 				<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 					<div class="lsx-to-widget-thumb">
-						<?php
-						if ( ! empty( $title_link ) ) {
-							?>
-		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+					
 							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
 
-						<?php
-						if ( ! empty( $title_link ) ) {
-							?>
-		</a><?php } ?>
 					</div>
 				<?php else : ?>
 					<div class="lsx-to-widget-thumb">
-						<?php
-						if ( ! empty( $title_link ) ) {
-							?>
-		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+
 							<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-						<?php
-						if ( ! empty( $title_link ) ) {
-							?>
-		</a><?php } ?>
+
 					</div>
 				<?php endif; ?>
-			<?php } ?>
+
 			</div>
 		</div>
 
