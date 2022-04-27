@@ -60,15 +60,20 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					</div>
+					<div class="row col-sm-12 lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
-<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+					<?php
+$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
 
+while ( $loop->have_posts() ) : $loop->the_post();
+?>
 
 <div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 
 <?php  echo do_shortcode('[lsx_to_post_type_widget post_type="destination" columns="4" limit="9" disable_placeholder="0" disable_text="1" order="ASC" orderby="none" carousel="0" include="" ]'); ?>
 </div>
 
+<?php endwhile; ?>
 
 				</div>
 
