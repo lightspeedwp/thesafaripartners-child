@@ -18,13 +18,17 @@ get_header(); ?>
 <div class="archive-intro col-sm-12">
 	<div class="col-sm-9">
 	<p class="lsx-to-widget-description">
-		<?php echo wp_kses_post( $term->description ); ?>
+		<?php $term = get_queried_object();  ?>
+
+	<h1 class="category-title"><?php echo $term->name; ?><span class="taxonomy-label"><?php echo $term->taxonomy; ?> (<?php echo $term->count; ?> articles)</span></h1>
+
+	<p class="category-description"><?php echo $term->description; ?></p>
 	</p>
 </div>
 <div class="col-sm-3">
 				<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 					<div class="lsx-to-widget-thumb">
-					
+
 							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
 
 					</div>
