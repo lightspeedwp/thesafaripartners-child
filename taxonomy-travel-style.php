@@ -63,7 +63,13 @@ get_header(); ?>
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
 					<?php
-$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
+$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 'tax_query'=> array( array(
+	'taxonomy' => $term->term_id,
+	'field' => 'slug',
+	'terms' => $position,
+	'operator' => 'IN',
+	), ),
+);) );
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
