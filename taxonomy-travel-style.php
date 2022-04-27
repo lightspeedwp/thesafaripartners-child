@@ -20,7 +20,7 @@ get_header(); ?>
 	<p class="lsx-to-widget-description">
 		<?php $term = get_queried_object();  ?>
 
-	<h1 class="category-title"><?php echo $term->name; ?><span class="taxonomy-label"><?php echo $term->taxonomy; ?> (<?php echo $term->count; ?> articles)</span></h1>
+	<h2 class="category-title"><?php echo $term->name; ?></h2>
 
 	<p class="category-description"><?php echo $term->description; ?></p>
 	</p>
@@ -39,6 +39,7 @@ get_header(); ?>
 
 					</div>
 				<?php endif; ?>
+				<?php	wp_reset_query(); ?>
 
 			</div>
 		</div>
@@ -58,6 +59,9 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
+					</div>
+					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+
 					<?php
 $loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
 
@@ -65,7 +69,55 @@ while ( $loop->have_posts() ) : $loop->the_post();
 ?>
 
 <div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-	<?php lsx_to_content( 'content', 'destination' ); ?>
+	<article <?php post_class(); ?>>
+	
+		<?php if ( empty( $disable_placeholder ) ) { ?>
+			<div class="lsx-to-widget-thumb">
+				<?php
+				if ( $has_single ) {
+					?>
+	<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+					<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+				<?php
+				if ( $has_single ) {
+					?>
+	</a><?php } ?>
+			</div>
+		<?php } ?>
+
+		<div class="lsx-to-widget-content">
+			<h4 class="lsx-to-widget-title text-center">
+				<?php
+				if ( $has_single ) {
+					?>
+	<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+					<?php the_title(); ?>
+				<?php
+				if ( $has_single ) {
+					?>
+	</a><?php } ?>
+			</h4>
+
+			<?php
+				// if ( empty( $disable_text ) ) {
+				// lsx_to_tagline( '<p class="lsx-to-widget-tagline text-center">', '</p>' );
+				// }
+			?>
+
+			<?php
+				ob_start();
+				lsx_to_widget_entry_content_top();
+				the_excerpt();
+				lsx_to_widget_entry_content_bottom();
+				$excerpt = ob_get_clean();
+
+				echo wp_kses_post( $excerpt );
+
+				?>
+					<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
+
+		</div>
+	</article>
 </div>
 
 <?php endwhile; ?>
