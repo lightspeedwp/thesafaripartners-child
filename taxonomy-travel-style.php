@@ -34,7 +34,17 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					<?php
-$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) ); 
+$loop = new WP_Query( array( if ( is_singular( 'destination' ) && ( lsx_to_item_has_children( get_the_ID(), 'destination' ) || isset( $args['parent'] ) ) ) {
+
+		$region_args = array(
+			'post_type'      => 'destination',
+			'post_status'    => 'publish',
+			'nopagin'        => true,
+			'posts_per_page' => '-1',
+			'post_parent'    => $settings['parent'],
+			'orderby'        => $settings['orderby'],
+			'order'          => 'ASC',
+		); ) ); 
 
 while ( $loop->have_posts() ) : $loop->the_post();
 ?>
