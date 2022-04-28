@@ -69,7 +69,6 @@ get_header(); ?>
 					    'post_type' => 'destination',
 					    'tax_query' => array(
 					        array (
-					            'taxonomy' => 'travel-style',
 					            'field' => 'slug',
 					            'terms' => $term,
 					        )
