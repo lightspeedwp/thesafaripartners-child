@@ -57,37 +57,25 @@ get_header(); ?>
 							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
 
-
-
 					<?php endwhile; ?>
 
 					</div>
 
-			<?php else : ?>
+					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
-				<?php get_template_part( 'partials/content', 'none' ); ?>
+						<?php
+						while ( have_posts() ) :
+							the_post();
+							?>
 
-			<?php endif; ?>
-				<?php	wp_reset_query(); ?>
+							<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+								<?php lsx_to_content( 'content', 'destination' ); ?>
+							</div>
 
-			<?php if ( have_posts() ) : ?>
+						<?php endwhile; ?>
 
-				<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-
-					<?php
-					while ( have_posts() ) :
-						the_post();
-						?>
-
-						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-							<?php lsx_to_content( 'content', 'destination' ); ?>
 						</div>
 
-
-
-					<?php endwhile; ?>
-
-					</div>
 
 			<?php else : ?>
 
