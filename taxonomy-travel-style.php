@@ -56,17 +56,32 @@ get_header(); ?>
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
-						<?php wp_reset_query(); ?>
-						<div class="clear"></div>
 
-						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-							<?php lsx_to_content( 'content', 'destination' ); ?>
-						</div>
+
 
 					<?php endwhile; ?>
 
 					</div>
+						<?php	wp_reset_query(); ?>
 
+					<?php if ( have_posts() ) : ?>
+
+						<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+
+							<?php
+							while ( have_posts() ) :
+								the_post();
+								?>
+
+								<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+									<?php lsx_to_content( 'content', 'destination' ); ?>
+								</div>
+
+
+
+							<?php endwhile; ?>
+
+							</div>
 
 			<?php else : ?>
 
