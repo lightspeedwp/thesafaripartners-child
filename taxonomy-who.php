@@ -1,9 +1,9 @@
 <?php
 /**
- * Travel Style Archive.
+ * Who Archive.
  *
  * @package  tour-operator
- * @category travel-style
+ * @category who
  */
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 						?>
 
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-							<?php lsx_to_content( 'content', 'tour' ); ?>
+							<?php lsx_to_content( 'content', 'who' ); ?>
 						</div>
 
 					<?php endwhile; ?>
