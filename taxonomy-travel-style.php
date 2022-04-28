@@ -56,6 +56,7 @@ get_header(); ?>
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
+						<?php wp_reset_query(); ?>
 						<div class="clear"></div>
 
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
@@ -65,7 +66,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 
 					</div>
-				
+
 
 			<?php else : ?>
 
