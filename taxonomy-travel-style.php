@@ -56,11 +56,7 @@ get_header(); ?>
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
-						<div class="clear"></div>
 
-						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-							<?php lsx_to_content( 'content', 'destination' ); ?>
-						</div>
 
 					<?php endwhile; ?>
 
