@@ -56,25 +56,16 @@ get_header(); ?>
 						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
+						<div class="clear"></div>
+
+						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+							<?php lsx_to_content( 'content', 'destination' ); ?>
+						</div>
 
 					<?php endwhile; ?>
 
 					</div>
-					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-
-					<?php
-$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
-
-while ( $loop->have_posts() ) : $loop->the_post();
-?>
-
-<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-	<?php lsx_to_content( 'content', 'destination' ); ?>
-</div>
-
-<?php endwhile; ?>
-
-				</div>
+				
 
 			<?php else : ?>
 
