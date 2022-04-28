@@ -64,9 +64,20 @@ get_header(); ?>
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
 					<?php
-$loop = new WP_Query( array( 'post_type' => 'destination', 'posts_per_page' => 10 ) );
+					$term = get_queried_object();
+					$the_query = new WP_Query( array(
+					    'post_type' => 'destination',
+					    'tax_query' => array(
+					        array (
+					            'taxonomy' => 'travel-style',
+					            'field' => 'slug',
+					            'terms' => $term,
+					        )
+					    ),
+					) );
 
-while ( $loop->have_posts() ) : $loop->the_post();
+					while ( $the_query->have_posts() ) :
+					    $the_query->the_post();
 ?>
 
 <div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
