@@ -80,11 +80,8 @@ get_header(); ?>
 					    $the_query->the_post();
 ?>
 
-<div class="lsx-to-widget-item-wrap lsx-tour slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" tabindex="-1">
-
-	<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-		<?php lsx_to_content( 'content', 'destination' ); ?>
-	</div>
+<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+	<?php lsx_to_content( 'content', 'destination' ); ?>
 </div>
 
 <?php endwhile; ?>
