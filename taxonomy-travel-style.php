@@ -62,8 +62,7 @@ get_header(); ?>
 
 					</div>
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-						<div id="collapse-travel-info" class="collapse in">
-										<div class="collapse-inner">
+
 											<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
 												<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 													<div class="lsx-to-slider-wrap">
@@ -94,8 +93,7 @@ get_header(); ?>
 </div>
 </div>
 </div>
-</div>
-</div>
+
 				</div>
 
 			<?php else : ?>
