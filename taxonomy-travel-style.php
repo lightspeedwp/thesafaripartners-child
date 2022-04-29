@@ -46,8 +46,11 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-
+				<div class="row lsx-to-archive-items wp-block-tour-operator-block-post-types toptours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+					<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
+						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+							<div class="lsx-to-slider-wrap">
+								<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 					<?php
 					while ( have_posts() ) :
 						the_post();
@@ -59,14 +62,14 @@ get_header(); ?>
 
 
 					<?php endwhile; ?>
+				</div>
+				</div>
+				</div>
+			</div></div>
 
-					</div>
-					<div class="row lsx-to-archive-items wp-block-tour-operator-block-post-types toptours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
-											<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
-												<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
-													<div class="lsx-to-slider-wrap">
-														<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
+
 					<?php
 					$term = get_queried_object();
 					$the_query = new WP_Query( array(
@@ -89,9 +92,7 @@ get_header(); ?>
 </div>
 
 <?php endwhile; ?>
-</div>
-</div>
-</div>
+
 </div>
 
 				</div>
