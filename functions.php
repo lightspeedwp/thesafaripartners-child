@@ -8,14 +8,9 @@
 require get_stylesheet_directory() . '/classes/class-core.php';
 $theme_instance = \tsp_child\classes\Core::get_instance();
 
-function lsx_to_page_navigation( $echo = false ){
-	$page_links = array();
-
-	// Allow 3rd party plugins and themes to disable the page links.
-	if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
+if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
 		return false;
-	}}
-
+	}
 
 /**
  * Register our sidebars and widgetized areas.
