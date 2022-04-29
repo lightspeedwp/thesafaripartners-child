@@ -62,7 +62,7 @@ get_header(); ?>
 
 					</div>
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-
+<div class="wp-block-tour-operator-block-post-types toptours-posts"><h2 class="lsx-title"><small></small></h2><div class="lsx-testimonial-body"><div class=" widget lsx-widget"><div class="slider-container lsx-to-widget-items"><div id="slider-16942" class="lsx-to-slider"><div class="lsx-to-slider-wrap"><div class="lsx-to-slider-inner slick-initialized slick-slider slick-dotted slick-has-arrows" data-interval="" data-slick="{ &quot;slidesToShow&quot;: 4, &quot;slidesToScroll&quot;: 4 }" role="toolbar"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button><div aria-live="polite" class="slick-list"><div class="slick-track" role="listbox" style="opacity: 1; width: 5185px; transform: translate3d(-1220px, 0px, 0px);">
 					<?php
 					$term = get_queried_object();
 					$the_query = new WP_Query( array(
@@ -80,12 +80,15 @@ get_header(); ?>
 					    $the_query->the_post();
 ?>
 
-<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-	<?php lsx_to_content( 'content', 'destination' ); ?>
+<div class="lsx-to-widget-item-wrap lsx-tour slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" tabindex="-1">
+
+	<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+		<?php lsx_to_content( 'content', 'destination' ); ?>
+	</div>
 </div>
 
 <?php endwhile; ?>
-
+</div></div></div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button><ul class="slick-dots" style="display: block;" role="tablist"><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation10" id="slick-slide10"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation11" id="slick-slide11"><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation12" id="slick-slide12"><button type="button" data-role="none" role="button" tabindex="0">3</button></li></ul></div></div></div></div></div></div></div>
 				</div>
 
 			<?php else : ?>
