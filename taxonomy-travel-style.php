@@ -62,7 +62,12 @@ get_header(); ?>
 
 					</div>
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-
+						<div id="collapse-travel-info" class="collapse in">
+										<div class="collapse-inner">
+											<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
+												<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+													<div class="lsx-to-slider-wrap">
+														<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 					<?php
 					$term = get_queried_object();
 					$the_query = new WP_Query( array(
@@ -80,12 +85,71 @@ get_header(); ?>
 					    $the_query->the_post();
 ?>
 
-<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-	<?php lsx_to_content( 'content', 'destination' ); ?>
-</div>
+
+
+									<?php foreach ( $items as $key => $value ) : ?>
+										<?php if ( ! empty( $value ) ) : ?>
+											<div class="lsx-to-widget-item-wrap lsx-travel-info">
+												<article <?php post_class(); ?>>
+													<div class="travel-info-entry-content hidden">
+														<?php echo wp_kses_post( apply_filters( 'the_content', $value ) ); ?>
+													</div>
+
+													<div class="lsx-to-widget-content">
+														<h4 class="lsx-to-widget-title text-center"><?php echo esc_html( $key ); ?></h4>
+
+														<?php
+															$value = str_replace( '</p><p>', ' - ', $value );
+															$value = str_replace( array( '</p>', '<p>' ), '', $value );
+															$value = str_replace( '<br>', ' - ', $value );
+
+															// if ( str_word_count( $value, 0 ) > $limit_chars ) {
+															// 	$tokens       = array();
+															// 	$value_output = '';
+															// 	$has_more     = false;
+															// 	$count        = 0;
+
+															// 	preg_match_all( '/(<[^>]+>|[^<>\s]+)\s*/u', $value, $tokens );
+
+															// 	foreach ( $tokens[0] as $token ) {
+															// 		if ( $count >= $limit_words ) {
+															// 			$value_output .= trim( $token );
+															// 			$has_more = true;
+															// 			break;
+															// 		}
+
+															// 		$count++;
+															// 		$value_output .= $token;
+															// 	}
+
+															// 	$value = trim( force_balance_tags( $value_output . '...' ) );
+															// }
+
+															if ( strlen( $value ) > $limit_chars ) {
+																$position = strpos( $value, ' ', $limit_chars );
+																$value_output = substr( $value, 0, $position );
+
+																$value = trim( force_balance_tags( $value_output . '...' ) );
+															}
+
+															$value = trim( force_balance_tags( $value . $more_button ) );
+
+															echo wp_kses_post( apply_filters( 'the_content', $value ) );
+														?>
+													</div>
+												</article>
+											</div>
+										<?php endif; ?>
+									<?php endforeach; ?>
+
 
 <?php endwhile; ?>
-
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 				</div>
 
 			<?php else : ?>
