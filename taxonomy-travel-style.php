@@ -103,7 +103,7 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			<?php lsx_content_bottom(); ?>
+
 
 		</main><!-- #main -->
 
