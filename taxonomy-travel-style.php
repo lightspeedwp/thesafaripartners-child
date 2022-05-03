@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php lsx_content_before(); ?>
 
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main entry-content" role="main">
 <div class="archive-intro col-sm-12">
 	<div class="col-sm-9">
 	<p class="lsx-to-widget-description">
