@@ -140,7 +140,7 @@ get_header(); ?>
 			</div></div></div>
 
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-
+<div class=" safari-styles desinations-landing-style">
 
 					<?php
 					$term = get_queried_object();
@@ -159,13 +159,13 @@ get_header(); ?>
 					    $the_query->the_post();
 ?>
 
-<div class="safari-styles desinations-landing-style <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+<div class="lsx-to-widget-item-wrap <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 	<?php lsx_to_content( 'content', 'destination' ); ?>
 </div>
 
 <?php endwhile; ?>
 
-</div>
+</div></div>
 
 				</div>
 
