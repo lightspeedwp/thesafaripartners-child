@@ -137,7 +137,9 @@ get_header(); ?>
 				</div>
 				</div>
 				</div>
-			</div></div></div>
+			</div>
+		</div>
+	</div>
 
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 <div class="safari-styles-destinations">
@@ -160,7 +162,36 @@ get_header(); ?>
 ?>
 
 <div class="lsx-to-widget-item-wrap <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-	<?php lsx_to_content( 'content', 'destination' ); ?>
+	<div class="lsx-to-widget-thumb">
+
+<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+			<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+
+</a>
+	</div>
+</div>
+
+<div class="lsx-to-widget-content">
+	<h4 class="lsx-to-widget-title text-center">
+
+<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+			<?php the_title(); ?>
+
+</a>
+	</h4>
+
+
+
+	<?php
+		ob_start();
+		lsx_to_widget_entry_content_top();
+		the_excerpt();
+		lsx_to_widget_entry_content_bottom();
+		$excerpt = ob_get_clean();
+		echo wp_kses_post( $excerpt );
+		?>
+			<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
+		
 </div>
 
 <?php endwhile; ?>
