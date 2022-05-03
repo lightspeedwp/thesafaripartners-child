@@ -140,7 +140,7 @@ get_header(); ?>
 			</div></div></div>
 
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-<div class=" safari-styles desinations-landing-style">
+<div class="safari-styles desinations-landing-style">
 
 					<?php
 					$term = get_queried_object();
@@ -160,7 +160,83 @@ get_header(); ?>
 ?>
 
 <div class="lsx-to-widget-item-wrap <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-	<?php lsx_to_content( 'content', 'destination' ); ?>
+	<article <?php post_class(); ?>>
+		<div class="col-md-6">
+			<h3 class="lsx-to-widget-title text-left">
+				<?php
+				if ( ! empty( $title_link ) ) {
+					?>
+	<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+					<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+				<?php
+				if ( ! empty( $title_link ) ) {
+					?>
+	</a><?php } ?>
+	</h3>
+		</div>
+
+		<?php if ( empty( $disable_placeholder ) ) { ?>
+			<div class="col-md-6">
+				<h4 class="lsx-to-widget-title text-left">
+					<?php
+					if ( ! empty( $title_link ) ) {
+						?>
+		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+					<?php
+					if ( ! empty( $title_link ) ) {
+						?>
+		</a><?php } ?>
+	</h4>
+			</div>
+			<div class="lsx-to-widget-thumb">
+				<?php
+				if ( $has_single ) {
+					?>
+	<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+					<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+				<?php
+				if ( $has_single ) {
+					?>
+	</a><?php } ?>
+			</div>
+		<?php } ?>
+
+		<div class="lsx-to-widget-content">
+			<h4 class="lsx-to-widget-title text-center">
+				<?php
+				if ( $has_single ) {
+					?>
+	<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+					<?php the_title(); ?>
+				<?php
+				if ( $has_single ) {
+					?>
+	</a><?php } ?>
+			</h4>
+
+			<?php
+				// if ( empty( $disable_text ) ) {
+				// lsx_to_tagline( '<p class="lsx-to-widget-tagline text-center">', '</p>' );
+				// }
+			?>
+
+			<?php
+				ob_start();
+				lsx_to_widget_entry_content_top();
+				the_excerpt();
+				lsx_to_widget_entry_content_bottom();
+				$excerpt = ob_get_clean();
+			if ( empty( $disable_text ) && ! empty( $excerpt ) ) {
+				echo wp_kses_post( $excerpt );
+			} elseif ( $has_single && true !== $disable_view_more && '1' !== $disable_view_more ) {
+				?>
+					<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
+					<?php
+			}
+			?>
+		</div>
+	</article>
 </div>
 
 <?php endwhile; ?>
