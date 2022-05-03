@@ -164,7 +164,7 @@ get_header(); ?>
 <div class="lsx-to-widget-item-wrap <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 	<div class="lsx-to-widget-thumb">
 
-<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+<a href="<?php echo esc_url( $permalink ); ?>">
 			<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
 
 </a>
@@ -191,7 +191,7 @@ get_header(); ?>
 		echo wp_kses_post( $excerpt );
 		?>
 			<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
-		
+
 </div>
 
 <?php endwhile; ?>
