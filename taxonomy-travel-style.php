@@ -45,8 +45,8 @@ get_header(); ?>
 		</div>
 
 			<?php if ( have_posts() ) : ?>
-
-				<div class="row lsx-to-archive-items wp-block-tour-operator-block-post-types toptours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+<div class="row lsx-to-archive-items">
+				<div class="wp-block-tour-operator-block-post-types toptours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 					<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
 						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 							<div class="lsx-to-slider-wrap">
@@ -65,7 +65,7 @@ get_header(); ?>
 				</div>
 				</div>
 				</div>
-			</div></div>
+			</div></div></div>
 
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
 
