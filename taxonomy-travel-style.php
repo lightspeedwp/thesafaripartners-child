@@ -174,7 +174,7 @@ get_header(); ?>
 <div class="lsx-to-widget-content">
 	<h4 class="lsx-to-widget-title text-center">
 
-<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+<a href="<?php echo esc_url( $permalink ); ?>">
 			<?php the_title(); ?>
 
 </a>
