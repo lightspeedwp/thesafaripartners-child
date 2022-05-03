@@ -161,7 +161,7 @@ get_header(); ?>
 					    $the_query->the_post();
 ?>
 
-<div class="lsx-to-widget-item-wrap <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+<div class="lsx-to-widget-item-wrap lsx-travel-style<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 	<div class="lsx-to-widget-thumb">
 
 <a href="<?php echo esc_url( $permalink ); ?>">
