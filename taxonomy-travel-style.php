@@ -142,7 +142,7 @@ get_header(); ?>
 	</div>
 
 					<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-<div class="safari-styles-destinations">
+<div class="safari-styles desinations-landing-style">
 
 					<?php
 					$term = get_queried_object();
