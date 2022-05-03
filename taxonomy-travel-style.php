@@ -169,7 +169,7 @@ get_header(); ?>
 
 </a>
 	</div>
-</div>
+
 
 <div class="lsx-to-widget-content">
 	<h4 class="lsx-to-widget-title text-center">
@@ -192,7 +192,7 @@ get_header(); ?>
 		?>
 			<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
 
-</div>
+</div></div>
 
 <?php endwhile; ?>
 
