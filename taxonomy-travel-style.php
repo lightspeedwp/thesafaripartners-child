@@ -56,7 +56,7 @@ get_header(); ?>
 						the_post();
 						?>
 
-						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+						<div class="lsx-to-widget-item-wrap <?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 							<?php lsx_to_content( 'content', 'tour' ); ?>
 						</div>
 
