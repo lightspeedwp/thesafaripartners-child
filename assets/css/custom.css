@@ -365,6 +365,9 @@ width: 100%;}
 .desinations-landing-style .type-travel-style{ overflow: hidden;
   position: relative;margin-top:50px;margin-bottom:50px;}
 
+  .lsx-to-archive-template-grid .desinations-landing-style .lsx-travel-style{ overflow: hidden;
+    position: relative;margin-top:50px;margin-bottom:50px;}
+
 .desinations-landing-style .lsx-to-widget-content h4{margin-bottom:8px;font-size:20px;}
 .desinations-landing-style .lsx-to-widget-content p{font-size:14px;}
 .desinations-landing-style .lsx-to-widget-content{padding:10px;
