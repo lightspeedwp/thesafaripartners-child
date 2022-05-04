@@ -145,12 +145,8 @@ get_header(); ?>
 <div class="safari-styles desinations-landing-style">
 
 					<?php
-					ob_start();
-					lsx_to_widget_entry_content_top();
-					the_excerpt();
-					lsx_to_widget_entry_content_bottom();
-
 					$term = get_queried_object();
+					$permalink = get_the_permalink();
 					$the_query = new WP_Query( array(
 					    'post_type' => 'destination',
 					    'tax_query' => array(
@@ -188,7 +184,10 @@ get_header(); ?>
 
 
 	<?php
-
+		ob_start();
+		lsx_to_widget_entry_content_top();
+		the_excerpt();
+		lsx_to_widget_entry_content_bottom();
 		$excerpt = ob_get_clean();
 		echo wp_kses_post( $excerpt );
 		?>
