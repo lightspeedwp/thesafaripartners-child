@@ -145,9 +145,10 @@ get_header(); ?>
 <div class="safari-styles desinations-landing-style">
 
 					<?php
-					if ( $has_single ) {
-						$permalink = get_the_permalink();
-					}
+					ob_start();
+					lsx_to_widget_entry_content_top();
+					the_excerpt();
+					lsx_to_widget_entry_content_bottom();
 
 					$term = get_queried_object();
 					$the_query = new WP_Query( array(
@@ -178,24 +179,16 @@ get_header(); ?>
 <div class="lsx-to-widget-content">
 	<h4 class="lsx-to-widget-title text-center">
 
-		<?php
-		if ( false !== $has_single ) {
-			?>
-		<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+<a href="<?php echo esc_url( $permalink ); ?>">
 			<?php the_title(); ?>
-		<?php
-		if ( false !== $has_single ) {
-			?>
-		</a><?php } ?>
+
+</a>
 	</h4>
 
 
 
 	<?php
-		ob_start();
-		lsx_to_widget_entry_content_top();
-		the_excerpt();
-		lsx_to_widget_entry_content_bottom();
+
 		$excerpt = ob_get_clean();
 		echo wp_kses_post( $excerpt );
 		?>
