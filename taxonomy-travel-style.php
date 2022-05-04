@@ -61,50 +61,30 @@ get_header(); ?>
 
 								<?php lsx_widget_entry_top(); ?>
 
-								<?php if ( empty( $disable_placeholder ) ) { ?>
 									<div class="lsx-to-widget-thumb">
-										<?php
-										if ( false !== $has_single ) {
-											?>
-							<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+
+							<a href="<?php the_permalink() ?>">
 											<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
-										<?php
-										if ( false !== $has_single ) {
-											?>
-							</a><?php } ?>
+
+							</a>
 									</div>
-								<?php } ?>
+
 
 								<div class="lsx-to-widget-content">
 
 									<?php lsx_widget_entry_content_top(); ?>
 
 									<h4 class="lsx-to-widget-title text-center">
-										<?php
-										if ( false !== $has_single ) {
-											?>
-							<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
-											<?php the_title(); ?>
-										<?php
-										if ( false !== $has_single ) {
-											?>
-							</a><?php } ?>
+
+							<a href="<?php the_permalink() ?>">
+											<?php the_title(); ?></a>
 									</h4>
-
-									<?php
-										// if ( empty( $disable_text ) ) {
-										// lsx_to_tagline( '<p class="lsx-to-widget-tagline text-center">', '</p>' );
-										// }
-									?>
-
 
 									<?php
 									ob_start();
 									lsx_to_widget_entry_content_top();
 									the_excerpt();
-
 									$excerpt = ob_get_clean();
-
 										echo wp_kses_post( $excerpt );
 									?>
 										<div class="lsx-to-widget-meta-data">
@@ -119,7 +99,7 @@ get_header(); ?>
 												lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 											}
 											?>
-											<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
+											<p class="moretag-wrapper tourslink"><a href="<?php the_permalink() ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 										</div>
 
 
