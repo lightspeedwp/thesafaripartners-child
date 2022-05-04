@@ -221,7 +221,7 @@ outline-color: #fff;}
 .page .entry-content > div:first-of-type{width:100%!important;}
 
 .archive .wrap.container{width:1366px!important;margin: 0 auto;}
-.page .entry-content > div:not(:first-of-type){width:1366px!important;}
+.page .entry-content > div:not(:first-of-type){width:1366px;}
 #masthead .navbar-header .custom-logo-link>img{margin:1px 0;}
 .intro-wrap p{text-align:center;margin-bottom:0;font-size:14px;}
 .intro-wrap{text-align:center;padding:5px;border-top:1px solid #000;}
