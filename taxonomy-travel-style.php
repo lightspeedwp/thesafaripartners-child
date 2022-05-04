@@ -174,10 +174,15 @@ get_header(); ?>
 <div class="lsx-to-widget-content">
 	<h4 class="lsx-to-widget-title text-center">
 
-<a href="<?php echo esc_url( $permalink ); ?>">
+		<?php
+		if ( false !== $has_single ) {
+			?>
+	<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
 			<?php the_title(); ?>
-
-</a>
+		<?php
+		if ( false !== $has_single ) {
+			?>
+	</a><?php } ?>
 	</h4>
 
 
