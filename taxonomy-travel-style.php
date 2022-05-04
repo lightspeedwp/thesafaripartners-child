@@ -145,6 +145,11 @@ get_header(); ?>
 <div class="safari-styles desinations-landing-style">
 
 					<?php
+					if ( $has_single ) {
+						$permalink = get_the_permalink();
+					}
+
+					$term = get_queried_object();
 					$the_query = new WP_Query( array(
 					    'post_type' => 'destination',
 					    'tax_query' => array(
@@ -173,10 +178,15 @@ get_header(); ?>
 <div class="lsx-to-widget-content">
 	<h4 class="lsx-to-widget-title text-center">
 
-<a href="<?php echo esc_url( $permalink ); ?>">
+		<?php
+		if ( false !== $has_single ) {
+			?>
+		<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
 			<?php the_title(); ?>
-
-</a>
+		<?php
+		if ( false !== $has_single ) {
+			?>
+		</a><?php } ?>
 	</h4>
 
 
