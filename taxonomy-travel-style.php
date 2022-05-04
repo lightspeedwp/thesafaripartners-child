@@ -146,7 +146,6 @@ get_header(); ?>
 
 					<?php
 					$term = get_queried_object();
-					$permalink = get_the_permalink();
 					$the_query = new WP_Query( array(
 					    'post_type' => 'destination',
 					    'tax_query' => array(
@@ -165,7 +164,7 @@ get_header(); ?>
 <div class="lsx-to-widget-item-wrap col-xs-12 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
 	<div class="lsx-to-widget-thumb">
 
-<a href="<?php echo esc_url( $permalink ); ?>">
+<a href="<?php the_permalink() ?>">
 			<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
 
 </a>
@@ -175,7 +174,7 @@ get_header(); ?>
 <div class="lsx-to-widget-content">
 	<h4 class="lsx-to-widget-title text-center">
 
-<a href="<?php echo esc_url( $permalink ); ?>">
+<a href="<?php the_permalink() ?>">
 			<?php the_title(); ?>
 
 </a>
@@ -191,7 +190,7 @@ get_header(); ?>
 		$excerpt = ob_get_clean();
 		echo wp_kses_post( $excerpt );
 		?>
-			<p class="moretag-wrapper"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
+			<p class="moretag-wrapper"><a href="<?php the_permalink() ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
 
 </div></div>
 
