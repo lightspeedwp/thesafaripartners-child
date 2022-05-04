@@ -189,7 +189,7 @@ outline-color: #fff;}
 .lsx-to-slider-inner .slick-arrow.slick-next{right: -30px;width: 60px!important;
     height: 60px!important;}
 .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow{border:1px solid #000!important;background:#fff; border-radius:0; color:#000;padding:20px;}
-.archive .entry-content > div:first-of-type{width:100%!important;}
+.page .entry-content > div:first-of-type{width:100%!important;}
 .archive .wrap.container{width:1366px!important;margin: 0 auto;}
 .page .entry-content > div:not(:first-of-type){width:1366px!important;}
 #masthead .navbar-header .custom-logo-link>img{margin:1px 0;}
@@ -364,6 +364,7 @@ width: 100%;}
 .wp-block-tour-operator-block-post-types.desinations-landing-style .lsx-to-widget-content .moretag{display:block!important;}
 .desinations-landing-style .type-travel-style{ overflow: hidden;
   position: relative;margin-top:50px;margin-bottom:50px;}
+
 
   .lsx-to-archive-template-grid .desinations-landing-style .lsx-travel-style{ overflow: hidden;
     position: relative;margin-top:20px;margin-bottom:20px;}
