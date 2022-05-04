@@ -24,7 +24,7 @@ font-weight: bold;}
 	body,p{font-family:moret, serif!important;}
   .page.safari-styles {margin-top: 0px;}
 
-	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;}
+	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;font-family:argesta_displayregular, serif!important;}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu{background-color:#fff;border:1px solid #000;margin-top:12px}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link{background-color:#fff;}
 .mega-search.expand-to-left{padding: 18px;
@@ -193,14 +193,15 @@ outline-color: #fff;}
 #masthead .navbar-header .custom-logo-link>img{margin:1px 0;}
 .intro-wrap p{text-align:center;margin-bottom:0;}
 .intro-wrap{text-align:center;padding:5px;border-top:1px solid #000;border-right:1px solid #000;border-left:1px solid #000;}
-#masthead {box-shadow:none!important;border:1px solid #000;padding:0px;}
+#masthead {box-shadow:none!important;border-top:1px solid #000;padding:0px;border-bottom:1px solid #000;}
 .body-wrap, .container{width:100%;margin:auto;}
+#colophon .container, #footer-widgets .container, #footer-sub .container{width:1366px;}
 #footer-widgets{
 background-color: #f0f0f0;
 	color: #000;padding: 4% 2% 5% 4%}
 
 #footer-widgets .widget .fa{font-size:18px;padding:5px; background: #cecece;margin-right:3px;border-radius:5px;float:left;width:28px;text-align:center}
-#footer-widgets #menu-community a {width:30px;display:block;margin-right:5px;}
+#footer-widgets #menu-community a {width:30px;display:block;margin-right:5px;font-family:argesta_displayregular, serif!important;}
 
 #menu-community a {float:left;width:28px;
 	color:#000;}
@@ -358,6 +359,41 @@ width: 100%;}
 .desinations-landing-style .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
 .ot-list .lsx-to-widget-thumb img {object-fit: cover ;height:520px!important;}
 
+.wp-block-tour-operator-block-post-types.desinations-landing-style .lsx-to-widget-content .moretag{display:block!important;}
+.desinations-landing-style .type-travel-style{ overflow: hidden;
+  position: relative;margin-top:50px;margin-bottom:50px;}
+}
+.desinations-landing-style .lsx-to-widget-content h4{margin-bottom:8px;font-size:20px;}
+.desinations-landing-style .lsx-to-widget-content p{font-size:14px;}
+.desinations-landing-style .lsx-to-widget-content{padding:10px;
+  background: rgba( 255, 255, 255, 1 );
+  bottom: -34%;
+  color: #000;
+  height:44%;
+  left: 0%;
+  text-align: left;
+  position: absolute;
+  transition: bottom 0.5s ease;
+  width: 100%;
+}
+.desinations-landing-style .lsx-travel-style:hover .lsx-to-widget-content{bottom: 0%!important;}
+.desinations-landing-style .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag{margin:-6px 10px 0  0;}
+
+.desinations-landing-style .lsx-to-widget-thumb{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;}
+
+}
+
+
+
+
+
+
+
+.safari-styles-destinations .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
 .wp-block-tour-operator-block-post-types.desinations-landing-style .lsx-to-widget-content .moretag{display:block!important;}
 .desinations-landing-style .type-travel-style{ overflow: hidden;
   position: relative;margin-top:50px;margin-bottom:50px;}
