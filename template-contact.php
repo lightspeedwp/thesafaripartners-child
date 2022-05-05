@@ -48,7 +48,6 @@ $content = apply_filters( 'the_content', $content );
 ?>
 
 			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
-			  <h3><?php echo $page->post_title; ?></h3>
 			  <?php echo $content; ?>
 			</div>
 
