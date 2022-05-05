@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact
+ * Template Name: Con
  *
  * @package lsx
  */
@@ -17,7 +17,6 @@ get_header(); ?>
 
 		<?php lsx_content_top(); ?>
 
-		<?php if ( have_posts() ) : ?>
 
 			<?php
 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
@@ -37,9 +36,6 @@ foreach( $mypages as $page ) {
 
 				<?php get_template_part( 'partials/content', 'page' ); ?>
 
-			<?php endwhile; ?>
-
-		<?php endif; ?>
 
 		<?php lsx_content_bottom(); ?>
 
