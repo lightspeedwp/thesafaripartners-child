@@ -36,6 +36,7 @@ class Frontend {
 	 */
 	private function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 11 );
+		add_action( 'wp_head', array( $this, 'wp_head' ), 200 );
 	}
 
 	/**
@@ -77,5 +78,9 @@ class Frontend {
 		// wp_enqueue_style( 'tsp-child-quattrocento-sans', 'https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i' );
 
 		wp_enqueue_script( 'tsp-child-scripts', get_stylesheet_directory_uri() . '/assets/js/' . $prefix . 'custom' . $suffix . '.js', array( 'jquery' ) );
+	}
+
+	public function wp_head() {
+		remove_action( 'lsx_content_wrap_before', 'lsx_to_single_content_top', 110 );
 	}
 }
