@@ -8,6 +8,10 @@
 require get_stylesheet_directory() . '/classes/class-core.php';
 $theme_instance = \tsp_child\classes\Core::get_instance();
 
+if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
+		return false;
+	}
+
 /**
  * Register our sidebars and widgetized areas.
  */

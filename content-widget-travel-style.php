@@ -98,7 +98,7 @@ if ( empty( $disable_single_link ) ) {
 
 		<?php if ( ! empty( $title_link ) ) { ?>
 			<p>
-				<a href="<?php echo esc_url( $title_link ); ?>" class="moretag"><?php esc_html_e( 'MAKE AN INQUIRY', 'tour-operator' ); ?></a>
+				<a href="<?php echo esc_url( $title_link ); ?>" class="moretag"><?php esc_html_e( 'SEE MORE', 'tour-operator' ); ?></a>
 			</p>
 		<?php } ?>
 	</div>
