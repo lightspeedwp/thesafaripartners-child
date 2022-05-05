@@ -17,8 +17,8 @@ get_header(); ?>
 
 		<?php lsx_content_top(); ?>
 
-
-
+<div class="entry">
+<div class="tab">
 			<?php
 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
 
@@ -29,20 +29,33 @@ foreach( $mypages as $page ) {
 
     $content = apply_filters( 'the_content', $content );
 ?>
-<div class="tab">
-<button class="tablinks" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
-</div>
 
-    <div class="entry">
+<button class="tablinks" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
+<?php
+    }
+?>
+<?php	wp_reset_query(); ?>
+</div>
+<?php
+$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+
+foreach( $mypages as $page ) {
+$content = $page->post_content;
+if ( ! $content ) // Check for empty page
+	continue;
+
+$content = apply_filters( 'the_content', $content );
+?>
+
 			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
 			  <h3><?php echo $page->post_title; ?></h3>
 			  <?php echo $content; ?>
 			</div>
-			</div>
+
 <?php
     }
 ?>
-
+</div>
 				<?php get_template_part( 'partials/content', 'page' ); ?>
 
 
