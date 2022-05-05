@@ -76,6 +76,7 @@ font-weight: bold;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6{display:none;}
 	#mega-menu-wrap-primary .lsx-to-widget-items{margin-top:0px!important;}
 
+
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu > ul.mega-sub-menu {padding:40px 60px;}
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu{padding:20px;}
 
@@ -129,6 +130,44 @@ outline-color: #fff;}
     -webkit-box-shadow: none;
     box-shadow: none;
     color: #fff;border-radius:0; padding:14px 50px;left: 40% !important; }
+
+
+/*Tabber */
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
 
 /*Gutenberg */
 .gutenberg-compatible-template.using-gutenberg .entry-content{padding:0;}
