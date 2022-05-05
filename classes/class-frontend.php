@@ -82,6 +82,6 @@ class Frontend {
 
 	public function wp_head() {
 		remove_action( 'lsx_content_wrap_before', 'lsx_to_single_content_top', 110 );
-		remove_action( 'lsx_to_destination_travel_info', 'lsx_to_single_content_top', 110 );
+		remove_action( 'lsx_to_destination_travel_info', 'lsx_to_single_content', 110 );
 	}
 }
