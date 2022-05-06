@@ -140,7 +140,8 @@ outline-color: #fff;}
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
+  background-color: inherit;font-family:argesta_displayregular, serif!important;
+font-weight: bold;
   float: left;
   border: none;
   outline: none;
