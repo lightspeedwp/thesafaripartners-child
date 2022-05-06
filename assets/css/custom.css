@@ -169,6 +169,16 @@ outline-color: #fff;}
   border-top: none;
 }
 
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 /*Gutenberg */
 .gutenberg-compatible-template.using-gutenberg .entry-content{padding:0;}
 .gutenberg-compatible-template.using-gutenberg .entry-content>div, .gutenberg-compatible-template.using-gutenberg .entry-content>p, .gutenberg-compatible-template.using-gutenberg .entry-content>h1, .gutenberg-compatible-template.using-gutenberg .entry-content>h2, .gutenberg-compatible-template.using-gutenberg .entry-content>h3, .gutenberg-compatible-template.using-gutenberg .entry-content>h4, .gutenberg-compatible-template.using-gutenberg .entry-content>h5, .gutenberg-compatible-template.using-gutenberg .entry-content>h6, .gutenberg-compatible-template.using-gutenberg .entry-content>ul, .gutenberg-compatible-template.using-gutenberg .entry-content>ol, .gutenberg-compatible-template.using-gutenberg .entry-content>blockquote, .gutenberg-compatible-template.using-gutenberg .entry-content>pre, .gutenberg-compatible-template.using-gutenberg .entry-content>figure, .gutenberg-compatible-template.using-gutenberg .entry-content>strong, .gutenberg-compatible-template.using-gutenberg .entry-content>span, .gutenberg-compatible-template.using-gutenberg .entry-content>table{width:100%;max-width:100%;}

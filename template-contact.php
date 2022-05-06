@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="entry">
 <div class="tab">
 			<?php
-$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
 
 foreach( $mypages as $page ) {
     $content = $page->post_content;
@@ -30,7 +30,7 @@ foreach( $mypages as $page ) {
     $content = apply_filters( 'the_content', $content );
 ?>
 
-<button class="tablinks" id="<?php echo $page->post_title; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
+<button class="tablinks" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 <?php
     }
 ?>
@@ -95,7 +95,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-document.getElementById("Give us a call").click();
 </script>
 <?php
 get_footer();
