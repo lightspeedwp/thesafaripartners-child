@@ -98,7 +98,7 @@ function openCity(evt, cityName) {
 </script>
 <script>
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementById("1454").click();
 </script>
 <?php
 get_footer();
