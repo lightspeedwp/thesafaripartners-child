@@ -30,7 +30,7 @@ foreach( $mypages as $page ) {
     $content = apply_filters( 'the_content', $content );
 ?>
 
-<button class="tablinks" id="<?php echo $page->id; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
+<button class="tablinks" id="<?php echo $post->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 <?php
     }
 ?>
