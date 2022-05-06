@@ -30,7 +30,7 @@ foreach( $mypages as $page ) {
     $content = apply_filters( 'the_content', $content );
 ?>
 
-<button class="tablinks" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
+<button class="tablinks" id="<?php echo $page->id; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 <?php
     }
 ?>
@@ -95,6 +95,10 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+</script>
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
 <?php
 get_footer();
