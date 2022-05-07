@@ -36,32 +36,30 @@ get_header(); ?>
 				</section>
 				
 
-				<section id="wizard-template" class="lsx-to-section">
-					<div class="row">
-						<div class="wizard-text col-md-6 col-sm-12">
-
-							<div class="header-headings center" ><div class="lsx-banner-logo"></div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:26px">Let us inspire you!</h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(26px /1.5)">We would like to get to know you better. </p>
-							<div style="text-align:center" class="lsx-block-button lsx-block-banner-button">
-								<a target="_self" class="lsx-button lsx-button-shape-square lsx-button-size-medium lsx-button-flat lsx-button-border-btn" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); box-shadow: rgb(39, 99, 158) 2px 2px 0px 0px; border-color: rgb(255, 255, 255);" data-onhover="#797979" data-offhover="#ffffff" onmouseenter="this.style.backgroundColor=this.getAttribute('data-onhover');" onmouseleave="this.style.backgroundColor=this.getAttribute('data-offhover');" rel="noopener noreferrer">GET STARTED</a>
-							</div></div>
-						</div>
-						<div class="wizard-cover col-md-6 col-sm-12">
-							<div style="color:#32373c;background-color:#ffffff" class="wp-block-lsx-blocks-lsx-banner-box lsx-has-image center title-centered lsx-has-image lsx-font-size-40 lsx-block-banner lsx-banner-columns alignfull lsx-container-initial"><div class="lsx-banner-column" style="background-color:#ffffff">
-								<div class="lsx-banner-image-wrap"><picture>
-								<source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*" media="(min-width: 100rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*"><source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*" media="(min-width: 61.25rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*">
-									<source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=768:*" media="(max-width: 400px)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=768:*"><img id="bg-image" data-src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=640:*" src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png"></picture></div></div><div class="lsx-banner-content-wrap"><div class="header-headings center" style="background-color:rgba(255, 255, 255, 0)"><div class="lsx-banner-logo">
-									</div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:40px"></h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(40px /1.5)">Use the Inspiration Wizar to build your Dream Holiday</p>
-									<div style="text-align:center" class="lsx-block-button lsx-block-banner-button"></div>
-								</div></div></div>
-						</div>
-					</div>
-				</section>
-
-
 			<?php endwhile; ?>
 
 			<?php lsx_content_bottom(); ?>
 
+							<section id="wizard-template" class="lsx-to-section">
+								<div class="row">
+									<div class="wizard-text col-md-6 col-sm-12">
+
+										<div class="header-headings center" ><div class="lsx-banner-logo"></div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:26px">Let us inspire you!</h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(26px /1.5)">We would like to get to know you better. </p>
+										<div style="text-align:center" class="lsx-block-button lsx-block-banner-button">
+											<a target="_self" class="lsx-button lsx-button-shape-square lsx-button-size-medium lsx-button-flat lsx-button-border-btn" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); box-shadow: rgb(39, 99, 158) 2px 2px 0px 0px; border-color: rgb(255, 255, 255);" data-onhover="#797979" data-offhover="#ffffff" onmouseenter="this.style.backgroundColor=this.getAttribute('data-onhover');" onmouseleave="this.style.backgroundColor=this.getAttribute('data-offhover');" rel="noopener noreferrer">GET STARTED</a>
+										</div></div>
+									</div>
+									<div class="wizard-cover col-md-6 col-sm-12">
+										<div style="color:#32373c;background-color:#ffffff" class="wp-block-lsx-blocks-lsx-banner-box lsx-has-image center title-centered lsx-has-image lsx-font-size-40 lsx-block-banner lsx-banner-columns alignfull lsx-container-initial"><div class="lsx-banner-column" style="background-color:#ffffff">
+											<div class="lsx-banner-image-wrap"><picture>
+											<source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*" media="(min-width: 100rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*"><source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*" media="(min-width: 61.25rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*">
+												<source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=768:*" media="(max-width: 400px)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=768:*"><img id="bg-image" data-src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=640:*" src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png"></picture></div></div><div class="lsx-banner-content-wrap"><div class="header-headings center" style="background-color:rgba(255, 255, 255, 0)"><div class="lsx-banner-logo">
+												</div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:40px"></h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(40px /1.5)">Use the Inspiration Wizar to build your Dream Holiday</p>
+												<div style="text-align:center" class="lsx-block-button lsx-block-banner-button"></div>
+											</div></div></div>
+									</div>
+								</div>
+							</section>
 		</main><!-- #main -->
 
 		<?php lsx_content_after(); ?>
