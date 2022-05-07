@@ -17,6 +17,31 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php lsx_content_top(); ?>
+
+
+
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
+
+				<section id="summary" class="lsx-to-section <?php lsx_to_collapsible_class( 'destination', false ); ?>">
+					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
+
+					<div id="collapse-summary" class="collapse in">
+						<div class="collapse-inner">
+							<div class="row">
+								<?php lsx_to_content( 'content', 'destination' ); ?>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+			<?php endwhile; ?>
+
+			<?php lsx_content_bottom(); ?>
+
 			<?php
 	   get_terms( "who", array( "hide_empty" => 0 ) );
 	?>
@@ -68,30 +93,58 @@ get_header(); ?>
 				</div>
 			</article>
 <?php endwhile; ?>
-		<?php	wp_reset_query(); ?>
+		<?php	wp_reset_query(); ?><?php
+	 get_terms( "who", array( "hide_empty" => 0 ) );
+?>
+				<!-- post -->
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					?>
+		<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				?>
+				<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+					<div class="lsx-to-widget-thumb">
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
 
-				<section id="summary" class="lsx-to-section <?php lsx_to_collapsible_class( 'destination', false ); ?>">
-					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
-
-					<div id="collapse-summary" class="collapse in">
-						<div class="collapse-inner">
-							<div class="row">
-								<?php lsx_to_content( 'content', 'destination' ); ?>
-							</div>
-						</div>
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		</a><?php } ?>
 					</div>
-				</section>
+				<?php else : ?>
+					<div class="lsx-to-widget-thumb">
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+							<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+						<?php
+						if ( ! empty( $title_link ) ) {
+							?>
+		</a><?php } ?>
+					</div>
+				<?php endif; ?>
 
 
-			<?php endwhile; ?>
+			<div class="lsx-to-widget-content bottom">
+				<h4 class="lsx-to-widget-title text-left">
 
-			<?php lsx_content_bottom(); ?>
+		<a href="<?php echo esc_url( $title_link ); ?>">
+						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+
+		</a>
+		</h4>
+
+			</div>
+		</article>
+<?php endwhile; ?>
+	<?php	wp_reset_query(); ?>
 
 							<section id="wizard-template" class="lsx-to-section">
 								<div class="row">
