@@ -21,7 +21,7 @@ get_header(); ?>
 		<?php 	$args = array(
 			'tax_query' => array(
 			    array(
-			        'taxonomy' => 'who'
+			        'taxonomy' => 'who',
 			        )
 			    )
 			);
