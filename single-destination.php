@@ -19,7 +19,6 @@ get_header(); ?>
 			<?php lsx_content_top(); ?>
 <div class="wp-block-tour-operator-block-taxonomy who-slide">
 	<h2 class="lsx-title">Tell us what type of traveler are you?</h2>
-	<div class="who-image-display">
 			<?php
 			$terms = get_terms('who');
 			$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
@@ -27,18 +26,18 @@ get_header(); ?>
 <?php foreach( $terms as $term ): ?>
 					<!-- post -->
 
-			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+			<div class="who-image-display term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 						<div class="checkbox-wrapper">
 							<input type="checkbox" />
 							<span aria-hidden="true"></span>
 						</div>
 
 			<?php lsx_to_content( 'content-widget', 'who' ); ?>
-			</article>
+		</div>
 <?php endforeach; ?>
 
 		<?php	wp_reset_query(); ?>
-		</div></div>
+		</div>
 
 			<?php
 			while ( have_posts() ) :
