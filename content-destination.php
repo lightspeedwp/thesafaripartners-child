@@ -27,10 +27,11 @@ if ( 1 !== $lsx_to_archive ) {
 
 			<?php the_content(); ?>
 			<?php lsx_to_sharing(); ?>
-			<div class="col-xs-12 col-sm-12 col-md-5 to-facts-wrapper">
-			<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
-					</div>
+
 		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5 to-facts-wrapper">
+		<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+				</div>
 
 	<?php } elseif ( is_search() || empty( tour_operator()->options[ get_post_type() ]['disable_entry_text'] ) ) { ?>
 
