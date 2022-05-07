@@ -85,5 +85,6 @@ class Frontend {
 		remove_action( 'lsx_content_bottom', 'lsx_to_destination_single_content_bottom' );
 		remove_action( 'lsx_to_fast_facts', 'lsx_to_destination_single_fast_facts' );
 		add_action( 'lsx_content_bottom', 'lsx_to_destination_tours' );
+		add_action( 'lsx_thumbnail', 'lsx_to_destination_single_fast_facts' );
 	}
 }
