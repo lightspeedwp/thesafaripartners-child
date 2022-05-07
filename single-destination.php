@@ -53,7 +53,10 @@ get_header(); ?>
 						    <!-- post -->
 
 						<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
-
+									<div class="checkbox-wrapper">
+	    							<input type="checkbox" />
+    								<span aria-hidden="true"></span>
+									</div>
 
 								<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 									<div class="lsx-to-widget-thumb">
