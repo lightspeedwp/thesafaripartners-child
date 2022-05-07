@@ -17,12 +17,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php lsx_content_top(); ?>
-<?php $term = get_queried_object();  ?>
 			<?php
 	    $tags = get_terms('who');
 	    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
 	?>
-<?php foreach( $tags as $tag ): ?>
 			    <!-- post -->
 
 			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
@@ -67,7 +65,6 @@ get_header(); ?>
 
 				</div>
 			</article>
-<?php endforeach; ?>
 
 		<?php	wp_reset_query(); ?>
 
