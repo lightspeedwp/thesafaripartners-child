@@ -72,7 +72,6 @@ get_header(); ?>
 										<div class="lsx-to-slider-wrap">
 											<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 			<?php
-			$term = get_queried_object();
 			$the_query = new WP_Query( array(
 					'post_type' => 'tour',
 					'tax_query' => array(
