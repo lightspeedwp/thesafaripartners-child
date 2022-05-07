@@ -33,44 +33,7 @@ get_header(); ?>
 							<span aria-hidden="true"></span>
 						</div>
 
-					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
-						<div class="lsx-to-widget-thumb">
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-								<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
-
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			</a><?php } ?>
-						</div>
-					<?php else : ?>
-						<div class="lsx-to-widget-thumb">
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-								<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			</a><?php } ?>
-						</div>
-					<?php endif; ?>
-
-
-				<div class="lsx-to-widget-content bottom">
-					<h4 class="lsx-to-widget-title text-left">
-
-			<a href="<?php echo esc_url( $title_link ); ?>">
-							<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-
-			</a>
-			</h4>
-
-				</div>
+			<?php lsx_to_content( 'content-widget', 'who' ); ?>
 			</article>
 <?php endforeach; ?>
 
