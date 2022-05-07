@@ -470,6 +470,7 @@ width: 100%;}
 }
 
 .single .travel-style-destinations .slick-initialized .slick-slide{position:relative;}
+.single .lsx-to-section {padding-top:10px!important;padding-bottom:10px!important;}
 
 .checkbox-wrapper {
   position: absolute;

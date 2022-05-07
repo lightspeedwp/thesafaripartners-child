@@ -18,7 +18,6 @@ get_header(); ?>
 
 			<?php lsx_content_top(); ?>
 
-
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -40,6 +39,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 		<section id="who-single" class="lsx-to-section">
+			<div class="row">
 			<div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
 				<h2 class="lsx-title">Tell us what type of traveler are you?</h2>
 						<?php
@@ -60,7 +60,7 @@ get_header(); ?>
 			<?php endforeach; ?>
 
 					<?php	wp_reset_query(); ?>
-					</div>
+					</div></div>
 			</section>
 
 			<?php lsx_content_bottom(); ?>
