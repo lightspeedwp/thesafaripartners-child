@@ -34,6 +34,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</section>
+				
 
 				<section id="wizard-template" class="lsx-to-section">
 					<div class="row">
@@ -46,7 +47,8 @@ get_header(); ?>
 						</div>
 						<div class="wizard-cover col-md-6 col-sm-12">
 							<div style="color:#32373c;background-color:#ffffff" class="wp-block-lsx-blocks-lsx-banner-box lsx-has-image center title-centered lsx-has-image lsx-font-size-40 lsx-block-banner lsx-banner-columns alignfull lsx-container-initial"><div class="lsx-banner-column" style="background-color:#ffffff">
-								<div class="lsx-banner-image-wrap"><picture><source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*" media="(min-width: 100rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*"><source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*" media="(min-width: 61.25rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*">
+								<div class="lsx-banner-image-wrap"><picture>
+								<source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*" media="(min-width: 100rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=2048:*"><source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*" media="(min-width: 61.25rem)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=1.00xw:0.887xh;0,0.108xh&amp;resize=1200:*">
 									<source data-srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=768:*" media="(max-width: 400px)" srcset="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=768:*"><img id="bg-image" data-src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png?crop=0.851xw:1.00xh;0.0753xw,0&amp;resize=640:*" src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/04/Screen-Shot-2022-04-21-at-2.03.44-PM.png"></picture></div></div><div class="lsx-banner-content-wrap"><div class="header-headings center" style="background-color:rgba(255, 255, 255, 0)"><div class="lsx-banner-logo">
 									</div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:40px"></h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(40px /1.5)">Use the Inspiration Wizar to build your Dream Holiday</p>
 									<div style="text-align:center" class="lsx-block-button lsx-block-banner-button"></div>
