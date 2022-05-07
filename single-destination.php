@@ -94,7 +94,7 @@ get_header(); ?>
 			</article>
 <?php endwhile; ?>
 		<?php	wp_reset_query(); ?><?php
-	 get_terms( "who", array( "hide_empty" => 0 ) );
+	 get_terms( "travel-style", array( "hide_empty" => 0 ) );
 ?>
 				<!-- post -->
 				<?php
