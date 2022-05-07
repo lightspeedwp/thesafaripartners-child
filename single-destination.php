@@ -41,7 +41,7 @@ get_header(); ?>
 		<section id="who-single" class="lsx-to-section">
 			<div class="row">
 			<div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
-				<h2 class="lsx-title">Tell us what type of traveler are you?</h2>
+				<h2 class="lsx-title left">Tell us what type of traveler are you?</h2>
 						<?php
 						$terms = get_terms('who');
 						$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
