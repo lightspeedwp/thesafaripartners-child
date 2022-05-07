@@ -136,7 +136,7 @@ get_header(); ?>
 				<h4 class="lsx-to-widget-title text-left">
 
 		<a href="<?php echo esc_url( $title_link ); ?>">
-						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+					<?php the_title(); ?>
 
 		</a>
 		</h4>
