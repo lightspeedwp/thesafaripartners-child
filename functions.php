@@ -64,7 +64,7 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 		'from'      => 'tour',
 		'to'        => 'destination',
 		'column'    => '4',
-		'before'    => '<section id="tours" class="lsx-to-section col-md-12 col-sm-12"><div id="collapse-tours" class="collapse in"><div class="collapse-inner">',
+		'before'    => '<section id="tours" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-tours' ) . '>' . lsx_to_get_post_type_section_title( 'tour', '', esc_html__( 'Featured Tours', 'tour-operator' ) ) . '</h2><div id="collapse-tours" class="collapse in"><div class="collapse-inner">',
 		'after'     => '</div></div></section>',
 	);
 
