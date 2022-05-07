@@ -29,12 +29,12 @@ get_header(); ?>
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
 							<div class="row">
-								<?php lsx_to_content( 'content', 'destination' ); ?>
+								<?php lsx_to_content( 'content-widget', 'destination' ); ?>
 							</div>
 						</div>
 					</div>
 				</section>
-				
+
 
 			<?php endwhile; ?>
 
