@@ -20,7 +20,7 @@ if ( 1 !== $lsx_to_archive ) {
 
 	<?php if ( is_single() && false === $lsx_to_archive ) { ?>
 
-		<div class="entry-content">
+		<div class="entry-content col-xs-12 col-sm-12 col-md-7">
 			<div class="lsx-to-summary">
 				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 			</div>
