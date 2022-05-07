@@ -56,7 +56,7 @@ add_action( 'widgets_init', 'home_widgets_init' );
 * @subpackage  template-tags
 * @category    destination
 */
-function lsx_to_destination_tours_tsp() {
+function lsx_to_destination_tours() {
 global $lsx_to_archive, $wp_query;
 
 if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
