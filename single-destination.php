@@ -77,12 +77,6 @@ $your_query = get_posts( $args ); ?>
 			</article>
 
 
-		<?php endwhile; ?>
-		    <!-- post navigation -->
-		<?php else: ?>
-		    <!-- no posts found -->
-		<?php endif; ?>
-
 		<?php	wp_reset_query(); ?>
 
 
