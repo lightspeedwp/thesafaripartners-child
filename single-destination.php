@@ -23,7 +23,7 @@ get_header(); ?>
     'hide_empty' => false,
 ]);
 
-$your_query = get_posts( $terms ); ?>
+ get_posts( $terms ); ?>
 			    <!-- post -->
 
 			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
