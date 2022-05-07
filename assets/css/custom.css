@@ -239,21 +239,21 @@ font-weight: bold;
 
 .tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap{padding:1px;width:610px!important;}
 .tours-posts .type-travel-style{padding:1px;width:610px!important;}
-.tours-posts .lsx-to-widget-thumb img{overflow:hidden;height:400px;}
+.tours-posts .lsx-to-widget-thumb img{object-fit: cover ;height:410px!important;}
 .tours-posts .moretag-wrapper{display:none;}
 .tours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
 .tours-posts .lsx-to-widget-title{text-align:left;}
 
  .toptours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
 
-.toptours-posts .lsx-to-widget-thumb {
+.toptours-posts .lsx-to-widget-thumb, .tours-posts .lsx-to-widget-thumb {
 display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;}
 
 .single .toptours-posts .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
-.toptours-posts .lsx-to-widget-thumb img {object-fit: cover ;height:200px!important;}
+.toptours-posts .lsx-to-widget-thumb img {object-fit: cover ;height:206px!important;}
 .toptours-posts .lsx-to-widget-item-wrap a.moretag, .toptours-posts .lsx-to-widget-item-wrap  a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;padding:10px;}
 .toptours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
 .toptours-posts .lsx-to-widget-title{text-align:left;}
