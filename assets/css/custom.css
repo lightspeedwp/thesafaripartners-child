@@ -252,7 +252,7 @@ display: flex;
   align-items: center;
   overflow: hidden;}
 
-.single .toptours-posts .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
+.single .toptours-posts .lsx-to-widget-thumb img {object-fit: cover ;height:206px!important;}
 .toptours-posts .lsx-to-widget-thumb img {object-fit: cover ;height:206px!important;}
 .toptours-posts .lsx-to-widget-item-wrap a.moretag, .toptours-posts .lsx-to-widget-item-wrap  a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;padding:10px;}
 .toptours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
