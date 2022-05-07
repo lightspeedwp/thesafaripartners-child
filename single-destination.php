@@ -18,12 +18,11 @@ get_header(); ?>
 
 			<?php lsx_content_top(); ?>
 
-		<?php 	$terms = get_terms([
-    'taxonomy' => who,
-    'hide_empty' => false,
-]);
-
- get_posts( $terms ); ?>
+			<?php
+	    $tags = get_terms('who');
+	    $post_tags = wp_get_post_terms($post->ID,'some_taxonomy',array('fields' => 'slugs'));
+	?>
+<?php foreach( $tags as $tag ): ?>
 			    <!-- post -->
 
 			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
@@ -68,7 +67,7 @@ get_header(); ?>
 
 				</div>
 			</article>
-
+<?php endforeach; ?>   
 
 		<?php	wp_reset_query(); ?>
 
