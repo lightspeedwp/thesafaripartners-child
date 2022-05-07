@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php lsx_content_top(); ?>
-<div class="wp-block-tour-operator-block-taxonomy who-slide">
+<div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
 	<h2 class="lsx-title">Tell us what type of traveler are you?</h2>
 			<?php
 			$terms = get_terms('who');
@@ -26,7 +26,7 @@ get_header(); ?>
 <?php foreach( $terms as $term ): ?>
 					<!-- post -->
 
-			<div class="who-image-display term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+			<div class="lsx-to-widget-item-wrap lsx-who col-xs-12 col-sm-2 term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 						<div class="checkbox-wrapper">
 							<input type="checkbox" />
 							<span aria-hidden="true"></span>
