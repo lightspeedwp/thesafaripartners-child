@@ -20,13 +20,16 @@ if ( 1 !== $lsx_to_archive ) {
 
 	<?php if ( is_single() && false === $lsx_to_archive ) { ?>
 
-		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
+		<div class="entry-content">
 			<div class="lsx-to-summary">
 				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 			</div>
 
 			<?php the_content(); ?>
 			<?php lsx_to_sharing(); ?>
+			<div class="col-xs-12 col-sm-12 col-md-5 to-facts-wrapper">
+			<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+					</div>
 		</div>
 
 	<?php } elseif ( is_search() || empty( tour_operator()->options[ get_post_type() ]['disable_entry_text'] ) ) { ?>
@@ -45,5 +48,5 @@ if ( 1 !== $lsx_to_archive ) {
 
 </article>
 
-<?php 
+<?php
 lsx_entry_after();
