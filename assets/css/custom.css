@@ -506,10 +506,10 @@ width: 100%;}
 	content: "\2713";
 	top: -0.2em;
 	left: 0.2em;
-	color: #00ca4c;
+	color: #9d9d9d;
 	font-size: 3em;
 	position: absolute;
 }
 .checkbox-wrapper > [type="checkbox"]:focus + span {
-	box-shadow: 1px 1px 1px 1px #353535;
+	box-shadow: 1px 1px 1px 1px #6b6b6b;
 }
