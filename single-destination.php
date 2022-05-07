@@ -20,7 +20,7 @@ get_header(); ?>
 
 			<?php
 	    $tags = get_terms('who');
-	    $post_tags = wp_get_post_terms($post->ID,'some_taxonomy',array('fields' => 'slugs'));
+	    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
 	?>
 <?php foreach( $tags as $tag ): ?>
 			    <!-- post -->
@@ -67,7 +67,7 @@ get_header(); ?>
 
 				</div>
 			</article>
-<?php endforeach; ?>   
+<?php endforeach; ?>
 
 		<?php	wp_reset_query(); ?>
 
