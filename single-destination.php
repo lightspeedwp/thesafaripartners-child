@@ -17,59 +17,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php lsx_content_top(); ?>
-			<?php
-	    $terms = get_terms('travel-style');
-	    $post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));
-	?>
-<?php foreach( $terms as $term ): ?>
-			    <!-- post -->
-
-			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
-
-
-					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
-						<div class="lsx-to-widget-thumb">
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-								<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
-
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			</a><?php } ?>
-						</div>
-					<?php else : ?>
-						<div class="lsx-to-widget-thumb">
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-								<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-							<?php
-							if ( ! empty( $title_link ) ) {
-								?>
-			</a><?php } ?>
-						</div>
-					<?php endif; ?>
-
-
-				<div class="lsx-to-widget-content bottom">
-					<h4 class="lsx-to-widget-title text-left">
-
-			<a href="<?php echo esc_url( $title_link ); ?>">
-							<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-
-			</a>
-			</h4>
-
-				</div>
-			</article>
-<?php endforeach; ?>
-
-		<?php	wp_reset_query(); ?>
-
 
 			<?php
 			while ( have_posts() ) :
@@ -90,6 +37,72 @@ get_header(); ?>
 
 
 			<?php endwhile; ?>
+
+			<div class="row lsx-to-archive-items travel-style-destinations">
+						<div class="wp-block-tour-operator-block-post-types toptours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+							<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
+								<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+									<div class="lsx-to-slider-wrap">
+										<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 2, "slidesToScroll": 2 }'>
+
+						<?php
+				    $terms = get_terms('travel-style');
+				    $post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));
+				?>
+			<?php foreach( $terms as $term ): ?>
+						    <!-- post -->
+
+						<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+
+
+								<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+									<div class="lsx-to-widget-thumb">
+										<?php
+										if ( ! empty( $title_link ) ) {
+											?>
+						<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+											<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+
+										<?php
+										if ( ! empty( $title_link ) ) {
+											?>
+						</a><?php } ?>
+									</div>
+								<?php else : ?>
+									<div class="lsx-to-widget-thumb">
+										<?php
+										if ( ! empty( $title_link ) ) {
+											?>
+						<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+											<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+										<?php
+										if ( ! empty( $title_link ) ) {
+											?>
+						</a><?php } ?>
+									</div>
+								<?php endif; ?>
+
+
+							<div class="lsx-to-widget-content bottom">
+								<h4 class="lsx-to-widget-title text-left">
+
+						<a href="<?php echo esc_url( $title_link ); ?>">
+										<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+
+						</a>
+						</h4>
+
+							</div>
+						</article>
+			<?php endforeach; ?>
+
+					<?php	wp_reset_query(); ?>
+				</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
 
 			<?php lsx_content_bottom(); ?>
 
