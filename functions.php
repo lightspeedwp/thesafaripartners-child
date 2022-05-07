@@ -47,25 +47,20 @@ function home_widgets_init() {
 }
 add_action( 'widgets_init', 'home_widgets_init' );
 
-/**
-* Outputs the destinations attached tours
-*
-* @package     tour-operator
-* @subpackage  template-tags
-* @category    destination
-*/
-function lsx_to_destination_tours_tsp() {
-global $lsx_to_archive, $wp_query;
+if ( ! function_exists ( 'lsx_to_destination_tours' ) ) {
+    function lsx_to_destination_tours() {
+			global $lsx_to_archive, $wp_query;
 
-if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
-	$args = array(
-		'from'      => 'tour',
-		'to'        => 'destination',
-		'column'    => '4',
-		'before'    => '<section id="tours" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-tours' ) . '>' . lsx_to_get_post_type_section_title( 'tour', '', esc_html__( 'Featured Tours', 'tour-operator' ) ) . '</h2><div id="collapse-tours" class="collapse in"><div class="collapse-inner">',
-		'after'     => '</div></div></section>',
-	);
+			if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
+				$args = array(
+					'from'      => 'tour',
+					'to'        => 'destination',
+					'column'    => '4',
+					'before'    => '<section id="tours" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-tours' ) . '>' . lsx_to_get_post_type_section_title( 'tour', '', esc_html__( 'Featured Tours', 'tour-operator' ) ) . '</h2><div id="collapse-tours" class="collapse in"><div class="collapse-inner">',
+					'after'     => '</div></div></section>',
+				);
 
-	lsx_to_connected_panel_query( $args );
-}
+				lsx_to_connected_panel_query( $args );
+			}
+    }
 }
