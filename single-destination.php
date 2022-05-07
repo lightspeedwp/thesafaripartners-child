@@ -17,7 +17,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php lsx_content_top(); ?>
-
+<div class="wp-block-tour-operator-block-taxonomy who-slide">
+	<h2 class="lsx-title">Tell us what type of traveler are you?</h2>
+	<div class="who-image-display">
 			<?php
 			$terms = get_terms('who');
 			$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
@@ -73,6 +75,7 @@ get_header(); ?>
 <?php endforeach; ?>
 
 		<?php	wp_reset_query(); ?>
+		</div></div>
 
 			<?php
 			while ( have_posts() ) :
