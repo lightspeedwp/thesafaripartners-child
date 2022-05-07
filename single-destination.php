@@ -19,6 +19,62 @@ get_header(); ?>
 			<?php lsx_content_top(); ?>
 
 			<?php
+			$terms = get_terms('who');
+			$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
+	?>
+<?php foreach( $terms as $term ): ?>
+					<!-- post -->
+
+			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+						<div class="checkbox-wrapper">
+							<input type="checkbox" />
+							<span aria-hidden="true"></span>
+						</div>
+
+					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+						<div class="lsx-to-widget-thumb">
+							<?php
+							if ( ! empty( $title_link ) ) {
+								?>
+			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+								<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+
+							<?php
+							if ( ! empty( $title_link ) ) {
+								?>
+			</a><?php } ?>
+						</div>
+					<?php else : ?>
+						<div class="lsx-to-widget-thumb">
+							<?php
+							if ( ! empty( $title_link ) ) {
+								?>
+			<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+								<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+							<?php
+							if ( ! empty( $title_link ) ) {
+								?>
+			</a><?php } ?>
+						</div>
+					<?php endif; ?>
+
+
+				<div class="lsx-to-widget-content bottom">
+					<h4 class="lsx-to-widget-title text-left">
+
+			<a href="<?php echo esc_url( $title_link ); ?>">
+							<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+
+			</a>
+			</h4>
+
+				</div>
+			</article>
+<?php endforeach; ?>
+
+		<?php	wp_reset_query(); ?>
+
+			<?php
 			while ( have_posts() ) :
 				the_post();
 				?>
@@ -37,6 +93,8 @@ get_header(); ?>
 
 
 			<?php endwhile; ?>
+
+			<?php lsx_content_bottom(); ?>
 
 			<div class="row lsx-to-archive-items travel-style-destinations">
 						<div class="wp-block-tour-operator-block-post-types toptours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
@@ -106,8 +164,6 @@ get_header(); ?>
 			</div>
 			</div>
 			</div>
-
-			<?php lsx_content_bottom(); ?>
 
 							<section id="wizard-template" class="lsx-to-section">
 								<div class="row">
