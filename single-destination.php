@@ -19,15 +19,18 @@ get_header(); ?>
 			<?php lsx_content_top(); ?>
 
 		<?php 	$args = array(
-			'tax_query' => array(
-			    array(
-			        'taxonomy' => 'who',
-			        )
-			    )
-			);
+    'post_type' => 'tour',
+    'post_status' => 'publish',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'who',
+            'field' => 'slug',
+        ),
+    ),
+);
 
-			$query = new WP_Query($args);
-			if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post(); ?>
+
+$your_query = get_posts( $args ); ?>
 			    <!-- post -->
 
 			<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
