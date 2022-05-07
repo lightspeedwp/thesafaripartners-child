@@ -100,7 +100,7 @@ class Setup {
 			'rewrite'                    => false,
 			'show_in_rest'               => true,
 		);
-		register_taxonomy( 'who', array( 'tour' ), $args );
+		register_taxonomy( 'who', array( 'tour', 'destination' ), $args );
 	}
 
 	public function when_taxonomy_setup() {
@@ -147,7 +147,7 @@ class Setup {
 	 * @return void
 	 */
 	public function register_sub_menus() {
-		add_submenu_page( 'tour-operator', __( 'Who', 'tsp-child' ), __( 'Who', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );		
-		add_submenu_page( 'tour-operator', __( 'When', 'tsp-child' ), __( 'When', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );		
+		add_submenu_page( 'tour-operator', __( 'Who', 'tsp-child' ), __( 'Who', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );
+		add_submenu_page( 'tour-operator', __( 'When', 'tsp-child' ), __( 'When', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );
 	}
 }
