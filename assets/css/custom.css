@@ -482,7 +482,7 @@ width: 100%;}
 }
 
 .checkbox-wrapper > [type="checkbox"] {
-      cursor: pointer;
+      cursor: pointer;border-radius: 50%;
       height: 100%;
  	left: 0;
   	margin: 0;
