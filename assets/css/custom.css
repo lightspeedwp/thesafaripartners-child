@@ -510,11 +510,11 @@ width: 100%;}
     z-index: -1;
     height: 100%;
     width: 100%;
-    border: 0.2rem solid #9d9d9d;
+    border: 2px solid #9d9d9d;
   }
 
   .checkbox-wrapper > [type="checkbox"]:checked + span::after {
-	content: "\2713";
+	content: "&#xf00c;";
 	top: -0.2em;
 	left: 0.2em;
 	color: #9d9d9d;
