@@ -55,12 +55,12 @@ if ( empty( $disable_single_link ) ) {
 			<?php
 			if ( ! empty( $title_link ) ) {
 				?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+
 				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
 			<?php
 			if ( ! empty( $title_link ) ) {
 				?>
-</a><?php } ?>
+<?php } ?>
 </h4>
 		<?php
 			// if ( empty( $disable_text ) ) {
@@ -74,10 +74,5 @@ if ( empty( $disable_single_link ) ) {
 			</p>
 		<?php } ?>
 
-		<?php if ( ! empty( $title_link ) ) { ?>
-			<p>
-				<a href="<?php echo esc_url( $title_link ); ?>" class="moretag"><?php esc_html_e( 'MAKE AN INQUIRY', 'tour-operator' ); ?></a>
-			</p>
-		<?php } ?>
 	</div>
 </article>
