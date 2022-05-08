@@ -27,25 +27,25 @@ if ( empty( $disable_single_link ) ) {
 				<?php
 				if ( ! empty( $title_link ) ) {
 					?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+
 					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
 
 				<?php
 				if ( ! empty( $title_link ) ) {
 					?>
-</a><?php } ?>
+<?php } ?>
 			</div>
 		<?php else : ?>
 			<div class="lsx-to-widget-thumb">
 				<?php
 				if ( ! empty( $title_link ) ) {
 					?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+<?php } ?>
 					<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
 				<?php
 				if ( ! empty( $title_link ) ) {
 					?>
-</a><?php } ?>
+<?php } ?>
 			</div>
 		<?php endif; ?>
 	<?php } ?>
@@ -55,7 +55,7 @@ if ( empty( $disable_single_link ) ) {
 			<?php
 			if ( ! empty( $title_link ) ) {
 				?>
-
+<?php } ?>
 				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
 			<?php
 			if ( ! empty( $title_link ) ) {
@@ -74,5 +74,10 @@ if ( empty( $disable_single_link ) ) {
 			</p>
 		<?php } ?>
 
+		<?php if ( ! empty( $title_link ) ) { ?>
+			<p>
+				<a href="<?php echo esc_url( $title_link ); ?>" class="moretag"><?php esc_html_e( 'MAKE AN INQUIRY', 'tour-operator' ); ?></a>
+			</p>
+		<?php } ?>
 	</div>
 </article>
