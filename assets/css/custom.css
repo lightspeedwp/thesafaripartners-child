@@ -545,5 +545,5 @@ position: absolute;
 	box-shadow: 1px 1px 1px 1px #6b6b6b;
 }
 
-.desinations-landing-style .filterDiv{  display: none; /* Hidden by default */}
-.desinations-landing-style .show {  display: block!important;}
+.single-lsx-to-destination .filterDiv{  display: none!important; /* Hidden by default */}
+.single-lsx-to-destination .show {  display: block!important;}
