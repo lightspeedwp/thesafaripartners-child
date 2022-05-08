@@ -71,3 +71,8 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 	lsx_to_connected_panel_query( $args );
 }
 }
+
+function my_excerpt_length($length){
+return 40;
+}
+add_filter(‘excerpt_length’, ‘my_excerpt_length’);
