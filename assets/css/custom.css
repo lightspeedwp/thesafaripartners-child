@@ -544,3 +544,6 @@ position: absolute;
 .checkbox-wrapper > [type="checkbox"]:focus + span {
 	box-shadow: 1px 1px 1px 1px #6b6b6b;
 }
+
+.desinations-landing-style .filterDiv{  display: none; /* Hidden by default */}
+.desinations-landing-style .show {  display: block!important;}

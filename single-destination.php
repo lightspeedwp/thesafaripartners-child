@@ -42,6 +42,8 @@ get_header(); ?>
 			<div class="row">
 			<div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
 				<h2 class="lsx-title left">Tell us what type of traveler are you?</h2>
+				<div id="myBtnContainer">
+  <button style="display:none;" class="btn-check active" onclick="filterSelection('all')"> Show all</button>
 						<?php
 						$terms = get_terms('who');
 						$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
@@ -51,7 +53,7 @@ get_header(); ?>
 
 						<div class="lsx-to-widget-item-wrap lsx-who col-xs-12 col-sm-2 term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 									<div class="checkbox-wrapper">
-										<input type="checkbox" />
+										<input class="btn-check" type="checkbox" onclick="filterSelection('<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>')" />
 										<span aria-hidden="true"></span>
 									</div>
 
@@ -59,7 +61,7 @@ get_header(); ?>
 					</div>
 			<?php endforeach; ?>
 
-					</div></div>
+					</div></div></div>
 			</section>
 
 			<?php lsx_content_bottom(); ?>
@@ -163,5 +165,54 @@ get_header(); ?>
 
 <?php // get_sidebar(); ?>
 <?php // get_sidebar( 'alt' ); ?>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn-check");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 <?php
 get_footer();
