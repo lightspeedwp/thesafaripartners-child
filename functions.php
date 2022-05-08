@@ -73,6 +73,6 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 }
 
 function my_excerpt_length($length){
-return 40;
+return 20;
 }
 add_filter(‘excerpt_length’, ‘my_excerpt_length’);
