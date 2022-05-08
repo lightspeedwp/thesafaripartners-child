@@ -19,7 +19,7 @@ if ( $has_single ) {
 
 <?php lsx_widget_entry_before(); ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class( 'filterDiv' ); ?>>
 
 	<?php lsx_widget_entry_top(); ?>
 
