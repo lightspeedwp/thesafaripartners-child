@@ -482,7 +482,7 @@ width: 100%;}
 .single .travel-style-destinations .slick-initialized .slick-slide{position:relative;}
 .single .lsx-to-section {padding-top:10px!important;padding-bottom:10px!important;}
 
-#who .checkbox-wrapper {
+#who-single .checkbox-wrapper {
   position: absolute;
     font-size: 1rem;border-radius: 50%;
     top: 4px;
@@ -492,7 +492,7 @@ width: 100%;}
     z-index: 9;background:#fff;
 }
 
-#who .checkbox-wrapper > [type="checkbox"]:checked + span::after {
+#who-single .checkbox-wrapper > [type="checkbox"]:checked + span::after {
 content: "\f00c";font-family: FontAwesome;
 top: -0.3px;
 left: 1px;font-weight:100;
