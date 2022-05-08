@@ -27,7 +27,7 @@ if ( empty( $disable_single_link ) ) {
 				<?php
 				if ( ! empty( $title_link ) ) {
 					?>
-
+<?php } ?>
 					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
 
 				<?php
