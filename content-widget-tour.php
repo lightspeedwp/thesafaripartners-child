@@ -69,7 +69,7 @@ if ( $has_single ) {
 
 			echo wp_kses_post( $excerpt );
 		?>
-			<div class="lsx-to-widget-meta-data">	
+			<div class="lsx-to-widget-meta-data">
 				<?php
 				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
