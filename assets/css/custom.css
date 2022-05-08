@@ -479,14 +479,6 @@ width: 100%;}
     overflow: hidden;}
 }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .single .travel-style-destinations .slick-initialized .slick-slide{position:relative;}
 .single .lsx-to-section {padding-top:10px!important;padding-bottom:10px!important;}
 
