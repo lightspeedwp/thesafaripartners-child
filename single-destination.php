@@ -138,7 +138,7 @@ get_header(); ?>
 								<div class="row">
 									<div class="wizard-text col-md-6 col-sm-12">
 
-										<div class="header-headings center" ><div class="lsx-banner-logo"></div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:26px">Let us inspire you!</h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(26px /1.5)">We would like to get to know you better. </p>
+										<div class="header-headings vertical-center center" ><div class="lsx-banner-logo"></div><header class="page-header"><h2 class="lsx-banner-name" style="color:#32373c;font-size:26px">Let us inspire you!</h2></header><p class="lsx-banner-title" style="color:#32373c;font-size:calc(26px /1.5)">We would like to get to know you better. </p>
 										<div style="text-align:center" class="lsx-block-button lsx-block-banner-button">
 											<a target="_self" class="lsx-button lsx-button-shape-square lsx-button-size-medium lsx-button-flat lsx-button-border-btn" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); box-shadow: rgb(39, 99, 158) 2px 2px 0px 0px; border-color: rgb(255, 255, 255);" data-onhover="#797979" data-offhover="#ffffff" onmouseenter="this.style.backgroundColor=this.getAttribute('data-onhover');" onmouseleave="this.style.backgroundColor=this.getAttribute('data-offhover');" rel="noopener noreferrer">GET STARTED</a>
 										</div></div>
