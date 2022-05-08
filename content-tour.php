@@ -15,7 +15,7 @@ if ( 1 !== $lsx_to_archive ) {
 
 <?php lsx_entry_before(); ?>
 
-<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container filterDiv' ); ?>>
+<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 	<?php lsx_entry_top(); ?>
 
 	<?php if ( is_single() && false === $lsx_to_archive ) { ?>

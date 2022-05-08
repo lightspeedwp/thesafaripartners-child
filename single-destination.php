@@ -51,7 +51,7 @@ get_header(); ?>
 			<?php foreach( $terms as $term ): ?>
 								<!-- post -->
 
-						<div class="lsx-to-widget-item-wrap lsx-who col-xs-12 col-sm-2 term-<?php echo esc_attr( $term->term_slug ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+						<div class="lsx-to-widget-item-wrap lsx-who col-xs-12 col-sm-2 term-<?php echo esc_attr( $term->term_taxonomy ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 									<div class="checkbox-wrapper">
 										<input class="btn-check" type="checkbox" onclick="filterSelection('<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>')" />
 										<span aria-hidden="true"></span>
