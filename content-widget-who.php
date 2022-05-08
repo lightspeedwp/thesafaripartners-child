@@ -16,7 +16,7 @@ if ( empty( $disable_single_link ) ) {
 }
 ?>
 
-<article id="who-single" class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+<article id="who-single" class="term-<?php echo esc_attr( $term->term_slug ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 	<?php if ( empty( $disable_placeholder ) ) { ?>
 		<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 			<div class="lsx-to-widget-thumb">
