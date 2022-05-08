@@ -247,7 +247,7 @@ font-weight: bold;
  .toptours-posts .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
 
 .toptours-posts .lsx-to-widget-thumb, .tours-posts .lsx-to-widget-thumb {
-display: flex;
+display: contents;
   justify-content: center;
   align-items: center;
   overflow: hidden;}
