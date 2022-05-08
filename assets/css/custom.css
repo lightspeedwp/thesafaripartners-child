@@ -516,7 +516,7 @@ width: 100%;}
   .checkbox-wrapper > [type="checkbox"]:checked + span::after {
 	content: "\f00c";font-family: FontAwesome;
 	top: -0.2em;
-	left: 0.2em;
+	left: 0.1em;font-weight:100;
 	color: #9d9d9d;
 	font-size: 3em;
 	position: absolute;
