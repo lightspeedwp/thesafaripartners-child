@@ -439,13 +439,6 @@ width: 100%;}
 }
 .destination-landing .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%;}
 
-.desinations-landing-style .lsx-to-widget-thumb{
-	display: contents;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;}
-
-
 .desinations-landing-style .lsx-to-widget-thumb img {object-fit: cover ;height:400px!important;}
 .ot-list .lsx-to-widget-thumb img {object-fit: cover ;height:520px!important;}
 
@@ -474,7 +467,7 @@ width: 100%;}
 .desinations-landing-style .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag{margin:-6px 10px 0  0;}
 
 .desinations-landing-style .lsx-to-widget-thumb{
-	display: flex;
+	display: contents;
     justify-content: center;
     align-items: center;
     overflow: hidden;}
