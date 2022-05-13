@@ -82,7 +82,7 @@ get_header(); ?>
 
 						<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 									<div class="checkbox-wrapper">
-	    							<input class="btn-check"  type="checkbox" onclick="filterSelection('who-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+	    							<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
     								<span aria-hidden="true"></span>
 									</div>
 
