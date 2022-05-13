@@ -440,7 +440,7 @@ width: 100%;}
 .destination-landing .type-lsx-to-destination:hover .lsx-to-widget-content{bottom: 0%;}
 
 .desinations-landing-style .lsx-to-widget-thumb{
-	display: flex;
+	display: contents;
     justify-content: center;
     align-items: center;
     overflow: hidden;}
