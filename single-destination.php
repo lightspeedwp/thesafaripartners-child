@@ -82,7 +82,7 @@ get_header(); ?>
 
 						<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
 									<div class="checkbox-wrapper">
-	    							<input type="checkbox" />
+	    							<input class="btn-check"  type="checkbox" onclick="filterSelection('who-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
     								<span aria-hidden="true"></span>
 									</div>
 
@@ -137,7 +137,7 @@ get_header(); ?>
 
 							<section id="wizard-template" class="lsx-to-section-new">
 								<div class="row">
-								<?php	$id=134126; 
+								<?php	$id=134126;
 	$post = get_post($id);
 	$content = apply_filters('the_content', $post->post_content);
 	echo $content; ?>
