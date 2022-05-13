@@ -90,7 +90,7 @@ font-weight: bold;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right > ul.mega-sub-menu .nav-contact-email{padding:0px 0;border-bottom:1px solid #ccc;margin-top:-8px;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right > ul.mega-sub-menu .nav-contact-bottom{padding:8px 0;border-top:1px solid #ccc;}
 
-	#masthead>.container{width: 1364px;border-right: 1px solid #000;}
+	#masthead>.container{width: 1260px;margin:0 auto;border-right: 1px solid #000;}
 
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
