@@ -185,6 +185,7 @@ get_header(); ?>
 				<?php get_template_part( 'partials/content', 'none' ); ?>
 
 			<?php endif; ?>
+<?php	wp_reset_query(); ?>
 
 			<section id="wizard-template" class="lsx-to-section-new">
 				<div class="row">
