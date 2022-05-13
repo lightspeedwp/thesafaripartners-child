@@ -180,13 +180,7 @@ get_header(); ?>
 		</main><!-- #main -->
 
 		<?php lsx_content_after(); ?>
-		<section id="wizard-template" class="lsx-to-section-new">
-			<div class="row">
-			<?php	$id=134126;
-		$post = get_post($id);
-		$content = apply_filters('the_content', $post->post_content);
-		echo $content; ?>
-		</section>
+
 	</div><!-- #primary -->
 
 	<?php lsx_content_wrap_after(); ?>
