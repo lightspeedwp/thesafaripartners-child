@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<main id="main" class="site-main entry-content" role="main">
 <div class="archive-intro col-sm-12">
-	<div class="col-sm-7">
+	<div class="col-sm-8">
 	<p class="lsx-to-widget-description">
 		<?php $term = get_queried_object();  ?>
 
@@ -25,7 +25,7 @@ get_header(); ?>
 	<p class="category-description"><?php echo $term->description; ?></p>
 	</p>
 </div>
-<div class="col-sm-5">
+<div class="col-sm-4">
 				<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 					<div class="lsx-to-widget-thumb">
 
