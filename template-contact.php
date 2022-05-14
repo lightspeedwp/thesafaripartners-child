@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<script type="text/javascript" src="<?php get_stylesheet_directory() ; ?>/assets/js/jquery-ui-1.7.custom.min.js"></script>
+<script type="text/javascript" src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/assets/js/jquery-ui-1.7.custom.min.js"></script>
 <?php lsx_content_wrap_before(); ?>
 
 <div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
