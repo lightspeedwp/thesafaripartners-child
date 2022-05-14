@@ -18,6 +18,7 @@ get_header(); ?>
 		<?php lsx_content_top(); ?>
 
 		<div class="entry">
+			<div class="lsx-container-content">
 
 	<div class="tab">
 				<?php
@@ -54,7 +55,7 @@ get_header(); ?>
 
 		</div>
 
-	</div>
+	</div></div>
 			<?php } ?>
 
 
