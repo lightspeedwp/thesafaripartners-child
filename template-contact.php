@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php lsx_content_top(); ?>
 
 <div class="entry">
-	<div class="col-md-6 lsx-contact-module">
+
 <div class="tab">
 			<?php
 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
@@ -49,15 +49,18 @@ $content = apply_filters( 'the_content', $content );
 ?>
 
 			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
+				<div class="col-md-6 lsx-contact-module">
 			  <?php echo $content; ?>
 
 			</div>
+			<div class="col-md-6 lsx-contact-module">
+	<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+
+			</div>
+
 		</div>
 
-		<div class="col-md-6 lsx-contact-module">
-<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 
-		</div>
 				</div>
 <?php
     }
