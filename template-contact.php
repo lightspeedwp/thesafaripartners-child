@@ -18,6 +18,7 @@ get_header(); ?>
 		<?php lsx_content_top(); ?>
 
 <div class="entry">
+	<div class="col-md-6 lsx-contact-module">
 <div class="tab">
 			<?php
 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
@@ -55,8 +56,10 @@ $content = apply_filters( 'the_content', $content );
     }
 ?>
 </div>
-				<?php get_template_part( 'partials/content', 'page' ); ?>
-
+</div>
+<div class="col-md-6 lsx-contact-module">
+<?php the_post_thumbnail(); ?>
+</div>
 
 		<?php lsx_content_bottom(); ?>
 
@@ -95,13 +98,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-$('.btnNext').click(function(){
- $('.tab > .active').next('button').find('button').trigger('click');
-});
-
- $('.btnPrevious').click(function(){
- $('.tab > .active').prev('button').find('button').trigger('click');
-});
 </script>
 <script>
 // Get the element with id="defaultOpen" and click on it
