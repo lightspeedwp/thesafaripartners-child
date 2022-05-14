@@ -95,6 +95,13 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+$('.btnNext').click(function(){
+ $('.tab > .active').next('button').find('button').trigger('click');
+});
+
+ $('.btnPrevious').click(function(){
+ $('.tab > .active').prev('button').find('button').trigger('click');
+});
 </script>
 <script>
 // Get the element with id="defaultOpen" and click on it
