@@ -55,9 +55,9 @@ get_header(); ?>
 
 		</div>
 
-	</div></div>
-			<?php } ?>
 
+			<?php } ?>
+	</div></div>
 
 		<?php lsx_content_bottom(); ?>
 
