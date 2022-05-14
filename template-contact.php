@@ -57,27 +57,16 @@ get_header(); ?>
 
 
 			<?php } ?>
-	</div></div>
+
 
 		<?php lsx_content_bottom(); ?>
-
+</div></div>
 	</main><!-- #main -->
 
 	<?php lsx_content_after(); ?>
 
-	<?php
-	if ( comments_open() ) {
-		comments_template();
-	}
-	?>
-
 	<?php get_sidebar(); ?>
 
-	<?php if ( is_active_sidebar( 'why-us' ) ) : ?>
-	<div class="home-widget" role="complementary">
-		<?php dynamic_sidebar( 'why-us' ); ?>
-	</div><!-- #primary-sidebar -->
-	<?php endif; ?>
 
 </div><!-- #primary -->
 
@@ -96,8 +85,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-</script>
-<script>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("1454").click();
 </script>
