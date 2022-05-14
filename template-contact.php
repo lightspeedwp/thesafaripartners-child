@@ -55,7 +55,7 @@ $content = apply_filters( 'the_content', $content );
 		</div>
 
 		<div class="col-md-6 lsx-contact-module">
-<?php echo get_the_post_thumbnail($page_item->ID,'full'); ?>
+<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 
 		</div>
 				</div>
