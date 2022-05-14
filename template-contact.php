@@ -51,26 +51,20 @@ $content = apply_filters( 'the_content', $content );
 			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
 			  <?php echo $content; ?>
 			</div>
+		</div>
 
+		<div class="col-md-6 lsx-contact-module">
+
+
+		<?php the_post_thumbnail(); ?>
+
+
+		</div>
+				</div>
 <?php
     }
 ?>
-</div>
-</div>
-<div class="col-md-6 lsx-contact-module">
-	<?php if ( have_posts() ) : ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
-
-<?php the_post_thumbnail(); ?>
-		<?php endwhile; ?>
-
-	<?php endif; ?>
-
-</div>
 
 		<?php lsx_content_bottom(); ?>
 
