@@ -56,7 +56,7 @@ $content = apply_filters( 'the_content', $content );
 		<div class="col-md-6 lsx-contact-module">
 
 
-		<?php the_post_thumbnail(); ?>
+		<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
 
 
 		</div>
