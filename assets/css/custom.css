@@ -260,8 +260,10 @@ display: contents;
 .toptours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
 .toptours-posts .lsx-to-widget-title{text-align:left;}
 	.toptours-posts .lsx-to-widget-item-wrap{padding: 1px;}
-  
+
 .page-template-template-contact .lsx-contact-module-image{
+    width: 100%;
+    height: 100%;
   display: contents;
     justify-content: center;
     align-items: center;
