@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php lsx_content_top(); ?>
 
 <div class="entry">
-<div class="tab">
+<div id="tabs" class="tab">
 			<?php
 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
 
@@ -47,7 +47,7 @@ if ( ! $content ) // Check for empty page
 $content = apply_filters( 'the_content', $content );
 ?>
 
-			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
+			<div id="<?php echo $page->post_title; ?>" class="tabcontent ui-tabs-panel">
 			  <?php echo $content; ?>
 			</div>
 
@@ -99,6 +99,35 @@ function openCity(evt, cityName) {
 <script>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("1454").click();
+</script>
+<script type="text/javascript">
+$(function() {
+
+	var $tabs = $('#tabs').tabs();
+
+	$(".ui-tabs-panel").each(function(i){
+
+		var totalSize = $(".ui-tabs-panel").size() - 1;
+
+		if (i != totalSize) {
+				next = i + 2;
+				$(this).append("<a href='#' class='next-tab mover' rel='" + next + "'>Next Page &#187;</a>");
+		}
+
+		if (i != 0) {
+				prev = i;
+				$(this).append("<a href='#' class='prev-tab mover' rel='" + prev + "'>&#171; Prev Page</a>");
+		}
+
+	});
+
+	$('.next-tab, .prev-tab').click(function() {
+					 $tabs.tabs('select', $(this).attr("rel"));
+					 return false;
+			 });
+
+
+});
 </script>
 <?php
 get_footer();
