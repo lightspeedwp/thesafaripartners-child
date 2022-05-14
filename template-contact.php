@@ -50,6 +50,7 @@ $content = apply_filters( 'the_content', $content );
 
 			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
 			  <?php echo $content; ?>
+				<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
 			</div>
 		</div>
 
