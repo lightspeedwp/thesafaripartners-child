@@ -51,7 +51,7 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<div class="col-md-6 lsx-contact-module-image">
+			<div class="lsx-contact-module-image">
 				<div class="col-md-6">
 				<div class="lsx-banner-image-wrap">
 				<picture>
