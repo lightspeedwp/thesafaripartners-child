@@ -325,10 +325,12 @@ display: contents;
 .archive .wrap.container{width:1366px!important;margin: 0 auto;}
 .page .entry-content > div:not(:first-of-type){width:1366px;}
 #masthead .navbar-header .custom-logo-link>img{margin:1px 0;}
+	.page-template-template-contact #masthead>.container{padding-right:15px!important;padding-left:15px!important;}
 .intro-wrap p{text-align:center;margin-bottom:0;font-size:14px;}
 .intro-wrap{text-align:center;padding:5px;border-top:1px solid #000;}
 #masthead {box-shadow:none!important;border-top:1px solid #000;padding:0px;border-bottom:1px solid #000;}
 .body-wrap, .container{width:100%;margin:auto;}
+.page-template-template-contact #footer-widgets .container{padding-right:15px!important;padding-left:15px!important;}
 #colophon .container, #footer-widgets .container, #footer-sub .footer-sub-area{width:1366px;margin:auto;}
 #footer-widgets{
 background-color: #f0f0f0;
