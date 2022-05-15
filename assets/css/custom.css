@@ -281,7 +281,7 @@ display: contents;
     justify-content: center;position: relative;
     align-items: center;
     overflow: hidden;}
-      .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:80vh!important;}
+      .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:70vh!important;}
 
       .page-template-template-contact #primary {
     margin-top: 0!important;position: relative;
@@ -297,13 +297,13 @@ display: contents;
     margin: auto;
     padding: 0!important;}
 
-  .page-template-template-contact .lsx-contact-module{ width: 100%;max-width:600px!important;
+  .page-template-template-contact .lsx-contact-module{ width: 100%;max-width:564px!important;
     position: absolute;
     right: 4%;
     z-index: 4;
-    padding-top: 20%;}
+    padding-top: 18%;}
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
-    height: 50vh;}
+    height: 40vh;}
 
     .page-template-template-contact #page-134234{display:none;}
 
