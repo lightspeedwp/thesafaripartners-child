@@ -7,7 +7,6 @@
 
 get_header(); ?>
 <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/minty/bootstrap.min.css">
 <?php lsx_content_wrap_before(); ?>
 
 <div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
