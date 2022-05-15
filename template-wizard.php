@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'partials/content', 'page' ); ?>
 
-				div id="myWizard">
+				<div id="myWizard">
 		            <ul class="nav nav-tabs" id="myTab" role="tablist">
 		                <li class="nav-item">
 		                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
