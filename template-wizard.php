@@ -76,6 +76,7 @@ get_header(); ?>
 <?php lsx_content_wrap_after(); ?>
 
 <?php get_sidebar(); ?>
+<script src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/assets/js/jquery-bootstrap-tab-wizard.min.js"></script>
 <script>
   $('#myWizard').TabWizard({
         additionalButtons: [
