@@ -20,53 +20,57 @@ get_header(); ?>
 		<div class="entry">
 			<div class="lsx-container-content">
 
-	<div class="tab">
-				<?php
-				$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
+				<div class="tab">
+					<?php
+					$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
 
-					foreach( $mypages as $page ) {
-    			$content = $page->post_content;
-    			if ( ! $content ) // Check for empty page
-        	continue;
-    			$content = apply_filters( 'the_content', $content );?>
+						foreach( $mypages as $page ) {
+    				$content = $page->post_content;
+    				if ( ! $content ) // Check for empty page
+        		continue;
+    				$content = apply_filters( 'the_content', $content );?>
 
 							<button class="tablinks" id="page-<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 								<?php } ?>
 								<?php	wp_reset_query(); ?>
-		</div>
-		<?php
-			$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
+							</div>
 
-				foreach( $mypages as $page ) {
-					$content = $page->post_content;
-					if ( ! $content ) // Check for empty page
-					continue;
+							<?php
+							$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
 
-					$content = apply_filters( 'the_content', $content );?>
+								foreach( $mypages as $page ) {
+									$content = $page->post_content;
+									if ( ! $content ) // Check for empty page
+									continue;
 
-			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
-				<div class="col-md-6">
-					<div class="lsx-contact-module">
-			  <?php echo $content; ?>
-				</div>
-			</div>
+									$content = apply_filters( 'the_content', $content );?>
 
+							<div id="<?php echo $page->post_title; ?>" class="tabcontent">
+								<div class="col-md-6">
+									<div class="lsx-contact-module">
+			  					<?php echo $content; ?>
+								</div>
+							</div>
 
 				<div class="col-md-6 lsx-contact-module-image">
-				<div class="lsx-banner-image-wrap">
-				<picture>
-				<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
-				<picture>
-			</div>	</div>
+					<div class="lsx-banner-image-wrap">
+						<picture>
+							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+							<picture>
+							</div>
+						</div>
 
-		</div>
+				</div>
 
 
 			<?php } ?>
 
 
 		<?php lsx_content_bottom(); ?>
-</div></div>
+
+	</div>
+	</div>
+
 	</main><!-- #main -->
 
 	<?php lsx_content_after(); ?>

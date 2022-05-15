@@ -134,9 +134,7 @@ outline-color: #fff;}
 /*Tabber */
     /* Style the tab */
 .tab {
-  overflow: hidden;position: fixed;
-  right: 50%;
-  left: 50%;
+  overflow: hidden;left: 20%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -163,7 +161,7 @@ font-weight: bold;
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
+  display: none; position:relative;
   border-top: none;
 }
 
