@@ -45,12 +45,12 @@ get_header(); ?>
 					$content = apply_filters( 'the_content', $content );?>
 
 			<div id="<?php echo $page->post_title; ?>" class="tabcontent">
-				<div class="col-md-6 lsx-contact-module">
+				<div class="lsx-contact-module">
 			  <?php echo $content; ?>
 
 			</div>
-			
-			<div class="col-md-6 lsx-contact-module-image">
+
+			<div class="lsx-contact-module module-image">
 				<div class="lsx-banner-image-wrap">
 				<picture>
 				<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
