@@ -130,10 +130,21 @@ outline-color: #fff;}
     box-shadow: none;
     color: #fff;border-radius:0; padding:14px 50px;left: 40% !important; }
 
-.bottom-contact{position: absolute;font-family:argesta_displayregular, serif!important;
-font-weight: bold;
+
+.bottom-contact{position: absolute;
   bottom: 0;
   left: 0;}
+.bottom-contact a{  font-family:argesta_displayregular, serif!important;
+  font-weight: bold;font-size:18px;}
+
+.bottom-contact a:after {
+    color: inherit;
+    content: "";
+    display: inline-block;
+    font-family: "FontAwesome";
+    font-size: inherit;
+    margin-left: 5px;
+    text-rendering: auto;}
 /*Tabber */
     /* Style the tab */
 .tab {
@@ -288,7 +299,9 @@ display: contents;
     position: absolute;
     right: 4%;
     z-index: 4;
-    padding-top: 25%;}
+    padding-top: 20%;}
+    .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
+    height: 50vh;}
 
     .page-template-template-contact #page-134234{display:none;}
 
