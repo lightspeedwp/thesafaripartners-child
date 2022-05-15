@@ -290,7 +290,7 @@ display: contents;
     width: 100%!important;position: relative;
     margin: 0px auto!important;
     padding: 0!important;}
-    .page-template-template-contact .body-wrap, .page-template-template-contact .container{
+    .page-template-template-contact .body-wrap, .page-template-template-contact .body-wrap .container{
     width: 100%;position: relative;
     margin: auto;
     padding: 0!important;}
