@@ -134,7 +134,7 @@ outline-color: #fff;}
 /*Tabber */
     /* Style the tab */
 .tab {
-  overflow: hidden;left: 15%;z-index:9;
+  overflow: hidden;right: 52%;z-index:9;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -161,7 +161,7 @@ font-weight: bold;
 
 /* Style the tab content */
 .tabcontent {
-  display: none; 
+  display: none;
   border-top: none;
 }
 
@@ -284,7 +284,7 @@ display: contents;
 
   .page-template-template-contact .lsx-contact-module{ width: 100%;max-width:600px!important;
     position: absolute;
-    left: 21%;
+    right: 4%;
     z-index: 4;
     padding-top: 25%;}
 
