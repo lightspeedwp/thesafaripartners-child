@@ -148,13 +148,13 @@ outline-color: #fff;}
 /*Tabber */
     /* Style the tab */
 .tab {
-  overflow: hidden;right: 52%;z-index:9;top:1%;
+  overflow: hidden;right: 60%;z-index:9;margin-top:1%;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;font-family:argesta_displayregular, serif!important;
-font-weight: bold;font-size:13px;
+font-weight: bold;font-size:14px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -180,6 +180,8 @@ font-weight: bold;font-size:13px;
 
 .tabcontent {
   animation: fadeEffect 2s; /* Fading effect takes 1 second */
+  transition-timing-function: ease-in;
+ transition: 1s;
 }
 
 /* Go from zero to full opacity */
