@@ -17,7 +17,9 @@ get_header(); ?>
 
 		<?php lsx_content_top(); ?>
 
-		<div class="entry">
+		<div class="entry-content">
+		<div class="wp-block-lsx-blocks-lsx-container wizard-landing aligncenter lsx-block-container">
+		<div class="lsx-container-inside">
 			<div class="lsx-container-content">
 
 	<div class="tab">
@@ -49,9 +51,14 @@ get_header(); ?>
 			  <?php echo $content; ?>
 
 			</div>
+			<div class="wp-block-lsx-blocks-lsx-banner-box lsx-has-image center title-centered lsx-has-image lsx-font-size-40 lsx-block-banner lsx-banner-columns alignfull lsx-container-initial">
+			<div class="lsx-banner-column">
+		<div class="lsx-banner-image-wrap">
 			<div class="col-md-6 lsx-contact-module-image">
+				<picture>
 				<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
-			</div>
+			</picture>
+			</div></div></div></div>
 
 		</div>
 
@@ -60,7 +67,7 @@ get_header(); ?>
 
 
 		<?php lsx_content_bottom(); ?>
-</div></div>
+</div></div></div></div>
 	</main><!-- #main -->
 
 	<?php lsx_content_after(); ?>
