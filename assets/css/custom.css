@@ -262,6 +262,7 @@ display: contents;
 	.toptours-posts .lsx-to-widget-item-wrap{padding: 1px;}
 
 .page-template-template-contact .lsx-contact-module-image{
+    position: relative;
   display: flex;
     justify-content: center;
     align-items: center;
