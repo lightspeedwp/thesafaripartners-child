@@ -130,7 +130,8 @@ outline-color: #fff;}
     box-shadow: none;
     color: #fff;border-radius:0; padding:14px 50px;left: 40% !important; }
 
-.bottom-contact{position: absolute;
+.bottom-contact{position: absolute;font-family:argesta_displayregular, serif!important;
+font-weight: bold;
   bottom: 0;
   left: 0;}
 /*Tabber */
@@ -143,7 +144,6 @@ outline-color: #fff;}
 .tab button {
   background-color: inherit;font-family:argesta_displayregular, serif!important;
 font-weight: bold;
-  float: left;font-size:14px;
   border: none;
   outline: none;
   cursor: pointer;
