@@ -283,12 +283,11 @@ display: contents;
     margin: auto;
     padding: 0!important;}
 
-  .page-template-template-contact .lsx-contact-module{ width: 100%;position: fixed; /* or absolute */
-  top: 50%;
-  left: 20%;
+  .page-template-template-contact .lsx-contact-module{ width: 350px;
+    position: absolute;
+    left: 21%;
     z-index: 4;
-    padding-right: 50px;
-    }
+    padding-top: 25%;}
 
     .page-template-template-contact #page-134234{display:none;}
 
