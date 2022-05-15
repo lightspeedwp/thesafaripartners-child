@@ -148,13 +148,13 @@ outline-color: #fff;}
 /*Tabber */
     /* Style the tab */
 .tab {
-  overflow: hidden;right: 52%;z-index:9;
+  overflow: hidden;right: 52%;z-index:9;top:1%;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;font-family:argesta_displayregular, serif!important;
-font-weight: bold;
+font-weight: bold;font-size:13px;
   border: none;
   outline: none;
   cursor: pointer;
