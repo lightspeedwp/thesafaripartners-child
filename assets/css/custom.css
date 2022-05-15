@@ -130,7 +130,9 @@ outline-color: #fff;}
     box-shadow: none;
     color: #fff;border-radius:0; padding:14px 50px;left: 40% !important; }
 
-
+.bottom-contact{position: absolute;
+  bottom: 0;
+  left: 0;}
 /*Tabber */
     /* Style the tab */
 .tab {
@@ -141,11 +143,11 @@ outline-color: #fff;}
 .tab button {
   background-color: inherit;font-family:argesta_displayregular, serif!important;
 font-weight: bold;
-  float: left;
+  float: left;font-size:14px;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 0px 16px 2px;
+  padding: 0px 10px 2px;
   transition: 0.5s;
 }
 
