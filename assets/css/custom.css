@@ -262,13 +262,26 @@ display: contents;
 	.toptours-posts .lsx-to-widget-item-wrap{padding: 1px;}
 
 .page-template-template-contact .lsx-contact-module-image{
-    position: relative;
+    position: relative;padding:0!important;
   display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;}
       .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:80vh!important;}
 
+      .page-template-template-contact #primary {
+    margin-top: 0!important;
+    width: 100%;
+    max-width: 100%;
+    padding: 0!important;}
+    .page-template-template-contact .content {
+    width: 100%!important;
+    margin: 0px auto!important;
+    padding: 0!important;}
+    .page-template-template-contact .body-wrap, .page-template-template-contact .container{
+    width: 100%;
+    margin: auto;
+    padding: 0!important;}
 
   .safari-styles .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
 
