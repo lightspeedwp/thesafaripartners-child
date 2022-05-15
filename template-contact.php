@@ -30,7 +30,7 @@ get_header(); ?>
         	continue;
     			$content = apply_filters( 'the_content', $content );?>
 
-							<button class="tablinks" id="<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
+							<button class="tablinks" id="page-<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 								<?php } ?>
 								<?php	wp_reset_query(); ?>
 		</div>
@@ -92,7 +92,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("1454").click();
+document.getElementById("page-133993").click();
 </script>
 <?php
 get_footer();
