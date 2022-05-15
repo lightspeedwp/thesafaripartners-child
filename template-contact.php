@@ -51,10 +51,11 @@ get_header(); ?>
 			  <?php echo $content; ?>
 
 			</div>
-			<div class="wp-block-lsx-blocks-lsx-banner-box lsx-has-image center title-centered lsx-has-image lsx-font-size-40 lsx-block-banner lsx-banner-columns alignfull lsx-container-initial">
-			<div class="lsx-banner-column">
-		<div class="lsx-banner-image-wrap">
+		
 			<div class="col-md-6 lsx-contact-module-image">
+				<div class="wp-block-lsx-blocks-lsx-banner-box lsx-has-image center title-centered lsx-has-image lsx-font-size-40 lsx-block-banner lsx-banner-columns alignfull lsx-container-initial">
+				<div class="lsx-banner-column">
+				<div class="lsx-banner-image-wrap">
 				<picture>
 				<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 			</picture>
