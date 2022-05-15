@@ -146,7 +146,7 @@ font-weight: bold;
   outline: none;
   cursor: pointer;
   padding: 0px 16px 2px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 /* Change background color of buttons on hover */
@@ -161,13 +161,13 @@ font-weight: bold;
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
+  display: none; position:relative;
   padding: 6px 0px;
   border-top: none;
 }
 
 .tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  animation: fadeEffect 2s; /* Fading effect takes 1 second */
 }
 
 /* Go from zero to full opacity */
