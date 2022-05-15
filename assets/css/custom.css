@@ -281,7 +281,7 @@ display: contents;
     justify-content: center;position: relative;
     align-items: center;
     overflow: hidden;}
-      .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:100vh!important;}
+      .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:80vh!important;}
 
       .page-template-template-contact #primary {
     margin-top: 0!important;position: relative;
