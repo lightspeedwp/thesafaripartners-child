@@ -283,7 +283,7 @@ display: contents;
     margin: auto;
     padding: 0!important;}
 
-  .page-template-template-contact .lsx-contact-module{ width: 350px;
+  .page-template-template-contact .lsx-contact-module{ width: 100%;
     position: absolute;
     left: 21%;
     z-index: 4;
