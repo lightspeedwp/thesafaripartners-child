@@ -566,6 +566,10 @@ $(document).ready(function () {
 		var $stepText = $("<span>" + stepTitleText + "</span>")
 		$stepTitle.remove();
 
+		var $newStepTitle = $("" +
+			"" +
+		"");
+
 		$newStepTitle.find(".aiia-wizard-step-title-number").css(settings.lsxWizard.steps.title.number.css);
 		$newStepTitle.find(".aiia-wizard-step-title-text").css(settings.lsxWizard.steps.title.text.css);
 
