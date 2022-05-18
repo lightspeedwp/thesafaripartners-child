@@ -556,32 +556,6 @@ $(document).ready(function () {
 
 	}
 
-	function getStepTitleTemplate(i, $step, settings) {
-
-		var stepNumber = i + 1;
-		var $stepTitle = $step.find("h4");
-		var stepTitleText = $stepTitle.html();
-
-		var $stepNumber = $("<h4 class='pull-left'>" + stepNumber + "</h4>");
-		var $stepText = $("<span>" + stepTitleText + "</span>")
-		$stepTitle.remove();
-
-		var $newStepTitle = $("" +
-			"<div class='row aiia-wizard-step-title'>" +
-				"<div class='col-md-12'>" +
-					"<span class='aiia-wizard-step-title-number'>" + stepNumber + "</span>" +
-					"<span class='aiia-wizard-step-title-text'>" + stepTitleText + "</span>" +
-				"</div>" +
-			"</div>" +
-			"" +
-		"");
-
-		$newStepTitle.find(".aiia-wizard-step-title-number").css(settings.lsxWizard.steps.title.number.css);
-		$newStepTitle.find(".aiia-wizard-step-title-text").css(settings.lsxWizard.steps.title.text.css);
-
-		return $newStepTitle;
-	}
-
 	function moveStepLeft($s) {
 		$s.css({
 			'margin-left': '-100%'  // move all lower steps to the left
@@ -737,39 +711,6 @@ $(document).ready(function () {
 					}
 				}
 
-			},
-			steps: {
-				title: {
-					number: {
-						css: {
-							'background-color': '#E6E6E6',
-							'-webkit-border-radius': '300px',
-							'-moz-border-radius': '300px',
-							'border-radius': '300px',
-							'color': '#FFFFFF',
-							'float': 'left',
-							'font-size': '36px',
-							'height': '70px',
-							'margin-right': '10px',
-							'text-align': 'center',
-							'width': '70px',
-							'font-weight': 'bold',
-							'padding-top': '8px'
-						}
-					},
-					text: {
-						css: {
-							'color': '#158CBA',
-							'font-size': '36px',
-							'float': 'left',
-							'font-size': '36px',
-							'margin-top': '8px'
-						}
-					}
-				},
-				content: {
-
-				}
 			},
 			buttons: {
 				previous: {
