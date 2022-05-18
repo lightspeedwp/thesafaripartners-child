@@ -49,14 +49,12 @@ get_header(); ?>
                     <div class="safari-styles desinations-landing-style">
 
                       <?php
-                      $term = get_queried_object();
                       $the_query = new WP_Query( array(
                       'post_type' => 'destination',
                       'tax_query' => array(
                           array (
                               'taxonomy' => 'travel-style',
                               'field' => 'slug',
-                              'terms' => $term,
                             )
                         ),
                     ) );
