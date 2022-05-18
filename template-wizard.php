@@ -4,7 +4,13 @@
  *
  * @package lsx
  */
+ global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link;
 
+ if ( empty( $disable_single_link ) ) {
+ 	$title_link = esc_url( get_term_link( $term, $taxonomy ) );
+ } else {
+ 	$title_link = '';
+ }
 get_header(); ?>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
