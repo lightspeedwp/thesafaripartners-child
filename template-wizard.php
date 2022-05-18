@@ -50,12 +50,13 @@ get_header(); ?>
                     <div class="col-md-3">
                       <h2>Who is Traveling?</h2>
                       <p>Let us know alittle more about who is traveling</p>
-</div><div class="col-md-9">
+                      </div>
+
+                      <div class="col-md-9">
             						<?php
             				    $terms = get_terms('who');
-            				    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
-            				?>
-            			<?php foreach( $terms as $term ): ?>
+            				    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));?>
+            			      <?php foreach( $terms as $term ): ?>
             						    <!-- post -->
 
             						<article class="col-md-4 status-publish hentry">
@@ -94,11 +95,7 @@ get_header(); ?>
 
             							<div class="lsx-to-widget-content bottom">
             								<h4 class="lsx-to-widget-title text-left">
-
-            						<a href="<?php echo esc_url( $title_link ); ?>">
-            										<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-
-            						</a>
+            										<?php the_title(); ?>
             						</h4>
 
             							</div>
