@@ -46,7 +46,7 @@ get_header(); ?>
             <div class="aiia-wizard-step">
                 <h4>Responsive</h4>
                 <div class="step-content">
-                    The aiiaWizard plugin is Twitter Bootstrap 3.x oriented, thus responsive. It takes your input form elements (or any other HTML element for that matter) and breaks them down into as many steps as you set them to. In fact, in some way the result is very similar to the "Twitter Bootstrap tab plugin, but instead of tabs and corresponding content panels, you have progress buttons and steps. Steps are the elements that hold your form / HTML content.
+                    The lsxWizard plugin is Twitter Bootstrap 3.x oriented, thus responsive. It takes your input form elements (or any other HTML element for that matter) and breaks them down into as many steps as you set them to. In fact, in some way the result is very similar to the "Twitter Bootstrap tab plugin, but instead of tabs and corresponding content panels, you have progress buttons and steps. Steps are the elements that hold your form / HTML content.
                 </div>
             </div>
 
@@ -78,7 +78,7 @@ get_header(); ?>
 
 
                   <script type="text/javascript">
-    $("#wizard").aiiaWizard({
+    $("#wizard").lsxWizard({
         onInitSuccess: function () {
             //alert("init success");
         },
@@ -98,13 +98,13 @@ get_header(); ?>
             // Instead of just sliding to the previous step when clicking the "previous" button, you can override this functionality instead.
             // By doing that you must then explixitly call the "previous" plugin method as shown below if you want to slide to the previous step.
             alert("onButtonPreviousClick");
-            $("#wizard").aiiaWizard('previous');
+            $("#wizard").lsxWizard('previous');
         },
         onButtonNextClick: function () {
             // Instead of just sliding to the next step when clicking the "next" button, you can override this functionality instead.
             // By doing that you must then explixitly call the "next" plugin method as shown below if you want to slide to the next step.
             alert("onButtonNextClick");
-            $("#wizard").aiiaWizard('next');
+            $("#wizard").lsxWizard('next');
         }
     });
                     </script>
@@ -134,7 +134,7 @@ get_header(); ?>
 <?php get_sidebar(); ?>
 <script type="text/javascript">
 $(document).ready(function () {
-    $("#wizard").aiiaWizard();
+    $("#wizard").lsxWizard();
 });
 
 ;(function ($, window, document, undefined) {
@@ -150,27 +150,27 @@ $(document).ready(function () {
 			return this.each(function () {
 
 				var $this = $(this),
-					data = $this.data('aiiaWizard'),
-					aiiaWizard = $('<div />', {
+					data = $this.data('lsxWizard'),
+					lsxWizard = $('<div />', {
 						text: $this.attr('title')
 					});
 
 				//#region If the plugin hasn't been initialized yet
 				if (!data) {
 
-					$(this).data('aiiaWizard', {});
+					$(this).data('lsxWizard', {});
 
 					$this.hide();
 
 					///////////////////////// Main configurable options object
 
-					settings = $.extend(true, $.fn.aiiaWizard.defaults, options);
-					var globalMinHeight = settings.aiiaWizard.minHeight;
-					var buttonFinishText = settings.aiiaWizard.localization.buttons.finish;
-					var buttonLoadingText = settings.aiiaWizard.localization.buttons.loading;
-					var activeStep = settings.aiiaWizard.activeStep;
+					settings = $.extend(true, $.fn.lsxWizard.defaults, options);
+					var globalMinHeight = settings.lsxWizard.minHeight;
+					var buttonFinishText = settings.lsxWizard.localization.buttons.finish;
+					var buttonLoadingText = settings.lsxWizard.localization.buttons.loading;
+					var activeStep = settings.lsxWizard.activeStep;
 
-					$(this).data('aiiaWizard').settings = settings;
+					$(this).data('lsxWizard').settings = settings;
 
 					///////////////////////// Prepare Wizard components
 
@@ -258,7 +258,7 @@ $(document).ready(function () {
 					$this.find('.aiia-wizard-button-previous').click(function (e) {
 						e.preventDefault();
 						var $elementToSlide = $this.find(".aiia-wizard-steps-wrapper .active");
-						$this.trigger("onButtonPreviousClick.aiiaWizard", this);
+						$this.trigger("onButtonPreviousClick.lsxWizard", this);
 
 						if ($.isFunction(settings.onButtonPreviousClick)) {
 							// Trigger the override callback it the callback is set at the plugin initialization...
@@ -269,11 +269,11 @@ $(document).ready(function () {
 						}
 					});
 
-					$this.on("slideRightSuccess.aiiaWizard", function () {
+					$this.on("slideRightSuccess.lsxWizard", function () {
 						resizeWizardStepsWrapper($this);
 					});
 
-					$this.on("slideLeftSuccess.aiiaWizard", function () {
+					$this.on("slideLeftSuccess.lsxWizard", function () {
 						resizeWizardStepsWrapper($this);
 					});
 
@@ -293,19 +293,19 @@ $(document).ready(function () {
 
 					/////////////////////////// Testing Success Icon
 
-					var $progressButtonsPlaceholder = $progressButtonsTemplate.find(".aiia-wizard-progress-buttons-placeholder");
+					var $progressButtonsPlaceholder = $progressButtonsTemplate.find(".lsx-wizard-progress-buttons");
 					var $progressButtons = $progressButtonsPlaceholder.children();
 
 					/////////////////////////// Store plugin data
 
-					$this.data('aiiaWizard').target = $this;
-					$this.data('aiiaWizard').aiiaWizard = aiiaWizard;
-					$this.data('aiiaWizard').settings = settings;
+					$this.data('lsxWizard').target = $this;
+					$this.data('lsxWizard').lsxWizard = lsxWizard;
+					$this.data('lsxWizard').settings = settings;
 
 					resizeWizardStepsWrapper($this);
 
 					$.isFunction(settings.onInitSuccess) && settings.onInitSuccess.call(this);
-					$this.trigger("initSuccess.aiiaWizard", this);
+					$this.trigger("initSuccess.lsxWizard", this);
 				}
 				//#endregion
 			});
@@ -329,13 +329,13 @@ $(document).ready(function () {
 		},
 		next: function () {
 			$plugin = $(this);
-			var settings = $plugin.data('aiiaWizard').settings;
+			var settings = $plugin.data('lsxWizard').settings;
 			var $elementToSlide = $plugin.find(".aiia-wizard-steps-wrapper .active");
 			slideLeft($elementToSlide, settings, $plugin);
 		},
 		first: function (a) {
 			previous(a, true);
-			$plugin.on("slideRightSuccess.aiiaWizard", function (event, goToFirst) {
+			$plugin.on("slideRightSuccess.lsxWizard", function (event, goToFirst) {
 				if (goToFirst == true)
 					previous(a, true);
 			});
@@ -395,15 +395,15 @@ $(document).ready(function () {
 				if (activeElementPosition === stepsCount) {
 					setFinishButton($plugin);
 					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
-					$plugin.trigger("slideLeftLimitReached.aiiaWizard", this);
+					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
 				} else {
 					$plugin.find('.aiia-wizard-button-previous').show();
 				}
 
-				var $progressButtons = $plugin.find(".aiia-wizard-progress-buttons-placeholder").children();
+				var $progressButtons = $plugin.find(".lsx-wizard-progress-buttons").children();
 
 				$.isFunction(settings.onSlideLeftFinished) && settings.onSlideLeftFinished.call($plugin);
-				$plugin.trigger("slideLeftSuccess.aiiaWizard", this);
+				$plugin.trigger("slideLeftSuccess.lsxWizard", this);
 			});
 
 		}
@@ -437,7 +437,7 @@ $(document).ready(function () {
 					$plugin.find('.aiia-wizard-button-previous').hide();
 
 					$.isFunction(settings.onSlideRightLimitReached) && settings.onSlideRightLimitReached.call($plugin);
-					$plugin.trigger("slideRightLimitReached.aiiaWizard", this);
+					$plugin.trigger("slideRightLimitReached.lsxWizard", this);
 				} else {
 					if ($plugin.find('.aiia-wizard-button-next').hasClass('btn-success')) {
 						unsetFinishButton($plugin, settings);
@@ -445,7 +445,7 @@ $(document).ready(function () {
 				}
 
 				$.isFunction(settings.onSlideRightFinished) && settings.onSlideRightFinished.call($plugin);
-				$plugin.trigger("slideRightSuccess.aiiaWizard", goToFirst);
+				$plugin.trigger("slideRightSuccess.lsxWizard", goToFirst);
 
 			});
 
@@ -457,7 +457,7 @@ $(document).ready(function () {
 			"<div class='aiia-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
 					"<button class='btn btn-primary pull-left aiia-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right aiia-wizard-button-next' data-loading-text='" + settings.aiiaWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
@@ -465,16 +465,16 @@ $(document).ready(function () {
 		});
 
 		var $iconPrevious = $("<span class='glyphicon glyphicon-chevron-left pull-left'></span>");
-		var $iconPreviousText = $("<span>" + settings.aiiaWizard.localization.buttons.previous + "</span>");
-		$iconPrevious.css(settings.aiiaWizard.buttons.previous.icon.css);
-		$iconPreviousText.css(settings.aiiaWizard.buttons.previous.text.css);
+		var $iconPreviousText = $("<span>" + settings.lsxWizard.localization.buttons.previous + "</span>");
+		$iconPrevious.css(settings.lsxWizard.buttons.previous.icon.css);
+		$iconPreviousText.css(settings.lsxWizard.buttons.previous.text.css);
 
 		var $iconNext = $("<span class='glyphicon glyphicon-chevron-right pull-right'></span>");
-		var $iconNextText = $("<span>" + settings.aiiaWizard.localization.buttons.next + "</span>");
-		$iconNext.css(settings.aiiaWizard.buttons.next.icon.css);
-		$iconNextText.css(settings.aiiaWizard.buttons.next.text.css);
+		var $iconNextText = $("<span>" + settings.lsxWizard.localization.buttons.next + "</span>");
+		$iconNext.css(settings.lsxWizard.buttons.next.icon.css);
+		$iconNextText.css(settings.lsxWizard.buttons.next.text.css);
 
-		$buttons.find(".btn").css(settings.aiiaWizard.buttons.css);
+		$buttons.find(".btn").css(settings.lsxWizard.buttons.css);
 
 		$buttons.find(".aiia-wizard-button-previous")
 			//.append($iconPrevious)
@@ -494,7 +494,7 @@ $(document).ready(function () {
 		var $activeElement = $stepsWrapper.find(".active");
 		var activeElementPosition = parseInt($activeElement.data('position'), 10);
 
-		var $progressButtons = $plugin.find(".aiia-wizard-progress-buttons-placeholder");
+		var $progressButtons = $plugin.find(".lsx-wizard-progress-buttons");
 		$progressButtons.find(".active").removeClass("active");
 		$progressButtons.find("li[data-position='" + activeElementPosition + "']").addClass("active");
 
@@ -516,10 +516,8 @@ $(document).ready(function () {
 
 		var $progessButtonsWrapper = $("" +
 			"<div class='aiia-wizard-progress-buttons-wrapper row'>" +
-				"<div class='col-md-12'>" +
-					"<ul class='nav nav-pills nav-justified aiia-wizard-progress-buttons-placeholder'>" +
+					"<ul class='nav nav-pills nav-justified lsx-wizard-progress-buttons'>" +
 					"</ul>" +
-				"</div>" +
 			"</div>" +
 		"").css({
 			'display': 'block'
@@ -534,14 +532,14 @@ $(document).ready(function () {
 				"<li data-position='" + $step.attr('data-position') + "'><a href='#'><h4>" + $step.data('position') + ". </h4>" + $step.find('h4').html() + "</a></li>" +
 			"");
 
-			if ($step.hasClass("active") && settings.aiiaWizard.progressButtons.markActive) {
+			if ($step.hasClass("active") && settings.lsxWizard.progressButtons.markActive) {
 				$progressButton.removeClass('default');
 				$progressButton.addClass('active');
 			}
 
-			$progressButton.css(settings.aiiaWizard.progressButtons.css);
+			$progressButton.css(settings.lsxWizard.progressButtons.css);
 
-			$progessButtonsWrapper.find(".aiia-wizard-progress-buttons-placeholder").append($progressButton);
+			$progessButtonsWrapper.find(".lsx-wizard-progress-buttons").append($progressButton);
 
 		});
 
@@ -552,7 +550,7 @@ $(document).ready(function () {
 
 		var $hr = $("<hr/>");
 
-		$hr.css(settings.aiiaWizard.progressButtons.borderBottom.css);
+		$hr.css(settings.lsxWizard.progressButtons.borderBottom.css);
 
 		return $hr;
 
@@ -578,8 +576,8 @@ $(document).ready(function () {
 			"" +
 		"");
 
-		$newStepTitle.find(".aiia-wizard-step-title-number").css(settings.aiiaWizard.steps.title.number.css);
-		$newStepTitle.find(".aiia-wizard-step-title-text").css(settings.aiiaWizard.steps.title.text.css);
+		$newStepTitle.find(".aiia-wizard-step-title-number").css(settings.lsxWizard.steps.title.number.css);
+		$newStepTitle.find(".aiia-wizard-step-title-text").css(settings.lsxWizard.steps.title.text.css);
 
 		return $newStepTitle;
 	}
@@ -617,11 +615,11 @@ $(document).ready(function () {
 	function setFinishButton($pluginElement, text) {
 		var $finishButton = $pluginElement.find(".aiia-wizard-button-next");
 
-		var txt = $pluginElement.data('aiiaWizard').settings.aiiaWizard.localization.buttons.finish;
+		var txt = $pluginElement.data('lsxWizard').settings.lsxWizard.localization.buttons.finish;
 		if (text)
 			txt = text;
 
-		$finishButton.css(settings.aiiaWizard.buttons.finish.text.css);
+		$finishButton.css(settings.lsxWizard.buttons.finish.text.css);
 
 		$finishButton
 			.removeClass('btn-primary')
@@ -631,12 +629,12 @@ $(document).ready(function () {
 
 	function unsetFinishButton($pluginElement, settings) {
 		var $finishButton = $pluginElement.find(".aiia-wizard-button-next");
-		var txt = $pluginElement.data('aiiaWizard').settings.aiiaWizard.localization.buttons.next;
+		var txt = $pluginElement.data('lsxWizard').settings.lsxWizard.localization.buttons.next;
 		var $iconNext = $("<span class='glyphicon glyphicon-chevron-right pull-right'></span>");
-		var $iconNextText = $("<span>" + settings.aiiaWizard.localization.buttons.next + "</span>");
-		$iconNext.css(settings.aiiaWizard.buttons.next.icon.css);
+		var $iconNextText = $("<span>" + settings.lsxWizard.localization.buttons.next + "</span>");
+		$iconNext.css(settings.lsxWizard.buttons.next.icon.css);
 
-		$iconNextText.css(settings.aiiaWizard.buttons.next.text.css);
+		$iconNextText.css(settings.lsxWizard.buttons.next.text.css);
 
 		$finishButton
 			.removeClass('btn-success')
@@ -652,29 +650,29 @@ $(document).ready(function () {
 
 
 		// find the target progressButton to mark as completed
-		var $progressButton = $plugin.find(".aiia-wizard-progress-buttons-placeholder").find("[data-position='" + (activeElementPosition - 1) + "']");
+		var $progressButton = $plugin.find(".lsx-wizard-progress-buttons").find("[data-position='" + (activeElementPosition - 1) + "']");
 
 		// create a new success icon to place it on the progress button
-		var $successIcon = $("<span class='" + settings.aiiaWizard.progressButtons.completed.icon.cssClass + " aiia-wizard-icon-step-completed'></span>")
-			.css(settings.aiiaWizard.progressButtons.completed.icon.css);
+		var $successIcon = $("<span class='" + settings.lsxWizard.progressButtons.completed.icon.cssClass + " aiia-wizard-icon-step-completed'></span>")
+			.css(settings.lsxWizard.progressButtons.completed.icon.css);
 
 		var $a = $progressButton.find("a");
 		// When the step is completed, the progress button must show it with a new style (gray by default)...
-		$a.css(settings.aiiaWizard.progressButtons.completed.css);
+		$a.css(settings.lsxWizard.progressButtons.completed.css);
 		// ...and with a success icon appended.
 		$a.append($successIcon);
 	}
 
 	function unmarkStepAsCompleted(activeElementPosition, $plugin) {
 
-		var $progressButton = $plugin.find(".aiia-wizard-progress-buttons-placeholder").find("[data-position='" + activeElementPosition + "']");
+		var $progressButton = $plugin.find(".lsx-wizard-progress-buttons").find("[data-position='" + activeElementPosition + "']");
 		$progressButton.find(".aiia-wizard-icon-step-completed").remove();
 		var $a = $progressButton.find("a");
 		$a.removeAttr("style");
 	}
 
 	function previous($plugin, goToFirst) {
-		var settings = $plugin.data('aiiaWizard').settings;
+		var settings = $plugin.data('lsxWizard').settings;
 		var $elementToSlide = $plugin.find(".aiia-wizard-steps-wrapper .active");
 		var activeStep = parseInt($plugin.find(".aiia-wizard-steps-wrapper .active").attr("data-position"), 10);
 		if (activeStep > 0) {
@@ -685,22 +683,22 @@ $(document).ready(function () {
 
 	////////////////////////////////////////// Plugin definition
 
-	$.fn.aiiaWizard = function (method) {
+	$.fn.lsxWizard = function (method) {
 
 		if (pub[method]) {
 			return pub[method].apply(this, Array.prototype.slice.call(arguments, 1));
 		} else if (typeof method === 'object' || !method) {
 			return pub.init.apply(this, arguments);
 		} else {
-			$.error('Method ' + method + ' does not exist on jQuery.aiiaWizard');
+			$.error('Method ' + method + ' does not exist on jQuery.lsxWizard');
 		}
 
 	};
 
 	////////////////////////////////////////// Plugin Options
 
-	$.fn.aiiaWizard.defaults = {
-		aiiaWizard: {
+	$.fn.lsxWizard.defaults = {
+		lsxWizard: {
 			minHeight: 400,
 			activeStep: 1,
 			localization: {
