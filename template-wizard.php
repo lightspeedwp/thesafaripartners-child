@@ -712,6 +712,39 @@ $(document).ready(function () {
 				}
 
 			},
+			steps: {
+				title: {
+					number: {
+						css: {
+							'background-color': '#E6E6E6',
+							'-webkit-border-radius': '300px',
+							'-moz-border-radius': '300px',
+							'border-radius': '300px',
+							'color': '#FFFFFF',
+							'float': 'left',
+							'font-size': '36px',
+							'height': '70px',
+							'margin-right': '10px',
+							'text-align': 'center',
+							'width': '70px',
+							'font-weight': 'bold',
+							'padding-top': '8px'
+						}
+					},
+					text: {
+						css: {
+							'color': '#158CBA',
+							'font-size': '36px',
+							'float': 'left',
+							'font-size': '36px',
+							'margin-top': '8px'
+						}
+					}
+				},
+				content: {
+
+				}
+			},
 			buttons: {
 				previous: {
 					text: {
