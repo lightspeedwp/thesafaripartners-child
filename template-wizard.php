@@ -44,15 +44,11 @@ get_header(); ?>
 
             <div class="aiia-wizard-step">
                 <h4>Who</h4>
-                <div class="step-content">
+                <div id="who" class="step-content">
                   <section id="who-single" class="lsx-to-section-new">
                     <div class="row">
                     <div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
-                      <div class="col-md-3">
                       <h2 class="lsx-title left">Who is Traveling?</h2>
-                      <p>Tell us more about who is traveling.</p>
-                    </div>
-                    <div classs="col-md-9">
                       <div id="myBtnContainer">
                   <button style="display:none;" class="btn-check active" onclick="filterSelection('all')"> Show all</button>
                           <?php
@@ -72,7 +68,7 @@ get_header(); ?>
                         </div>
                     <?php endforeach; ?>
 
-                        </div></div></div></div>
+                        </div></div></div>
                     </section>                </div>
             </div>
 
@@ -895,5 +891,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
+
 <?php
 get_footer();
