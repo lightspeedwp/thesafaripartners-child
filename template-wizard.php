@@ -44,7 +44,7 @@ get_header(); ?>
 
             <div class="aiia-wizard-step">
                 <h4>Who</h4>
-                <div id="who" class="step-content">
+                <div class="step-content">
                   <section id="who-single" class="lsx-to-section-new">
                     <div class="row">
                     <div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
