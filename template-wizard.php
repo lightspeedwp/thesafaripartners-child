@@ -111,8 +111,6 @@ get_header(); ?>
             				</div>
             				</div>
 
-            			</div>
-            </div></div>
 
             <div class="aiia-wizard-step">
                 <h4>Not a carousel</h4>
