@@ -26,7 +26,6 @@ get_header(); ?>
         <div id="wizard" class="aiia-wizard" style="display: none;">
 
             <div class="aiia-wizard-step">
-                <h4>Introduction</h4>
                 <div class="step-content introslide">
                   <?php if ( have_posts() ) : ?>
 
