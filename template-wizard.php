@@ -44,32 +44,57 @@ get_header(); ?>
 
             <div class="aiia-wizard-step">
                 <h4>Who</h4>
-                <div id="who" class="step-content">
-                  <section id="who-single" class="lsx-to-section-new">
-                    <div class="row">
-                    <div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
-                      <h2 class="lsx-title left">Who is Traveling?</h2>
-                      <div id="myBtnContainer">
-                  <button style="display:none;" class="btn-check active" onclick="filterSelection('all')"> Show all</button>
-                          <?php
-                          $terms = get_terms('who');
-                          $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
-                      ?>
-                    <?php foreach( $terms as $term ): ?>
-                              <!-- post -->
+                <div class="step-content">
+                  <div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+                    <div class="safari-styles desinations-landing-style">
 
-                          <div class="lsx-to-widget-item-wrap lsx-who col-xs-12 col-sm-2 term-<?php echo esc_attr( $term->slug ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
-                                <div class="checkbox-wrapper">
-                                  <input class="btn-check"  type="checkbox" onclick="filterSelection('who-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
-                                  <span aria-hidden="true"></span>
-                                </div>
+                      <?php
+                      $term = get_queried_object();
+                      $the_query = new WP_Query( array(
+                      'post_type' => 'destination',
+                      'tax_query' => array(
+                          array (
+                              'taxonomy' => 'travel-style',
+                              'field' => 'slug',
+                              'terms' => $term,
+                            )
+                        ),
+                    ) );
 
-                          <?php lsx_to_content( 'content-widget', 'who' ); ?>
+                    while ( $the_query->have_posts() ) :
+                      $the_query->the_post();?>
+
+                      <div class="lsx-to-widget-item-wrap col-xs-12 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
+                        <div class="lsx-to-widget-thumb">
+
+                          <a href="<?php the_permalink() ?>">
+                            <?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+
+                          </a>
                         </div>
-                    <?php endforeach; ?>
 
-                        </div></div></div>
-                    </section>                </div>
+                        <div class="lsx-to-widget-content">
+                          <h4 class="lsx-to-widget-title text-center">
+
+                            <a href="<?php the_permalink() ?>">
+                              <?php the_title(); ?>
+                            </a>
+                          </h4>
+
+
+                          <?php
+                          ob_start();
+                          lsx_to_widget_entry_content_top();
+                          the_excerpt();
+                          lsx_to_widget_entry_content_bottom();
+                          $excerpt = ob_get_clean();
+                          echo wp_kses_post( $excerpt );?>
+                          <p class="moretag-wrapper"><a href="<?php the_permalink() ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
+                        </div></div>
+
+                      <?php endwhile; ?>
+                      <?php	wp_reset_query(); ?>
+                    </div></div>                </div>
             </div>
 
             <div class="aiia-wizard-step">
@@ -842,54 +867,6 @@ $(document).ready(function () {
 	};
 
 })( jQuery, window, document );
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn-check");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
 </script>
 
 <?php
