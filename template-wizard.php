@@ -51,7 +51,6 @@ get_header(); ?>
                       <h2>Who is Traveling?</h2>
                       <p>Let us know alittle more about who is traveling</p>
                       </div>
-
                       <div class="col-md-9">
             						<?php
             				    $terms = get_terms('who');
@@ -95,7 +94,7 @@ get_header(); ?>
 
             							<div class="lsx-to-widget-content bottom">
             								<h4 class="lsx-to-widget-title text-left">
-            										<?php the_title(); ?>
+            										<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
             						</h4>
 
             							</div>
