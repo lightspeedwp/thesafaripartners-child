@@ -46,55 +46,71 @@ get_header(); ?>
             <div class="aiia-wizard-step">
                 <h4>Who</h4>
                 <div class="step-content">
-                  <div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-                    <div class="safari-styles desinations-landing-style">
-
-                      <?php
-                      $the_query = new WP_Query( array(
-                      'post_type' => 'destination',
-                      'tax_query' => array(
-                          array (
-                              'taxonomy' => 'travel-style',
-                              'field' => 'slug',
-                            )
-                        ),
-                    ) );
-
-                    while ( $the_query->have_posts() ) :
-                      $the_query->the_post();?>
-
-                      <div class="lsx-to-widget-item-wrap col-xs-12 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
-                        <div class="lsx-to-widget-thumb">
-
-                          <a href="<?php the_permalink() ?>">
-                            <?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
-
-                          </a>
-                        </div>
-
-                        <div class="lsx-to-widget-content">
-                          <h4 class="lsx-to-widget-title text-center">
-
-                            <a href="<?php the_permalink() ?>">
-                              <?php the_title(); ?>
-                            </a>
-                          </h4>
+                  <div class="row travel-style-destinations">
+            						<div class="wp-block-tour-operator-block-post-types tours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+            							<div class="lsx-to-widget-items lsx-to-archive-template-grid">
 
 
-                          <?php
-                          ob_start();
-                          lsx_to_widget_entry_content_top();
-                          the_excerpt();
-                          lsx_to_widget_entry_content_bottom();
-                          $excerpt = ob_get_clean();
-                          echo wp_kses_post( $excerpt );?>
-                          <p class="moretag-wrapper"><a href="<?php the_permalink() ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
-                        </div></div>
+            						<?php
+            				    $terms = get_terms('who');
+            				    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
+            				?>
+            			<?php foreach( $terms as $term ): ?>
+            						    <!-- post -->
 
-                      <?php endwhile; ?>
-                      <?php	wp_reset_query(); ?>
-                    </div></div>                </div>
-            </div>
+            						<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+            									<div class="checkbox-wrapper">
+            	    							<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                								<span aria-hidden="true"></span>
+            									</div>
+
+            								<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+            									<div class="lsx-to-widget-thumb">
+            										<?php
+            										if ( ! empty( $title_link ) ) {
+            											?>
+            						<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+            											<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
+
+            										<?php
+            										if ( ! empty( $title_link ) ) {
+            											?>
+            						</a><?php } ?>
+            									</div>
+            								<?php else : ?>
+            									<div class="lsx-to-widget-thumb">
+            										<?php
+            										if ( ! empty( $title_link ) ) {
+            											?>
+            						<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+            											<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+            										<?php
+            										if ( ! empty( $title_link ) ) {
+            											?>
+            						</a><?php } ?>
+            									</div>
+            								<?php endif; ?>
+
+
+            							<div class="lsx-to-widget-content bottom">
+            								<h4 class="lsx-to-widget-title text-left">
+
+            						<a href="<?php echo esc_url( $title_link ); ?>">
+            										<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+
+            						</a>
+            						</h4>
+
+            							</div>
+            						</article>
+            			<?php endforeach; ?>
+
+            					<?php	wp_reset_query(); ?>
+            				</div>
+            				</div>
+            			
+            			</div>
+            </div></div>
 
             <div class="aiia-wizard-step">
                 <h4>Not a carousel</h4>
