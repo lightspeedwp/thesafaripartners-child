@@ -46,7 +46,11 @@ get_header(); ?>
             <div class="aiia-wizard-step">
                 <h4>Who</h4>
                 <div class="step-content">
-                  <div class="">
+                  <div class="wizard-who">
+                    <div class="col-md-3">
+                      <h2>Who is Traveling?</h2>
+                      <p>Let us know alittle more about who is traveling</p>
+</div><div class="col-md-9">
             						<?php
             				    $terms = get_terms('who');
             				    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
@@ -54,7 +58,7 @@ get_header(); ?>
             			<?php foreach( $terms as $term ): ?>
             						    <!-- post -->
 
-            						<article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+            						<article class="col-md-4 status-publish hentry">
             									<div class="checkbox-wrapper">
             	    							<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
                 								<span aria-hidden="true"></span>
@@ -102,6 +106,8 @@ get_header(); ?>
             			<?php endforeach; ?>
 
             					<?php	wp_reset_query(); ?>
+                    </div>
+                    </div>
             				</div>
             				</div>
 
@@ -514,7 +520,7 @@ $(document).ready(function () {
 		var $buttons = $("" +
 			"<div class='aiia-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
-					"<button class='pull-left aiia-wizard-button-previous'></button>" +
+					"<button class='btn btn-primary pull-left aiia-wizard-button-previous'></button>" +
 					"<button class='pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
