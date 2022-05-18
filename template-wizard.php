@@ -521,7 +521,7 @@ $(document).ready(function () {
 			"<div class='aiia-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
 					"<button class='btn btn-primary pull-left aiia-wizard-button-previous'></button>" +
-					"<button class='pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
