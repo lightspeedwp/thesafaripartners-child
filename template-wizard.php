@@ -26,8 +26,8 @@ get_header(); ?>
         <div id="wizard" class="aiia-wizard" style="display: none;">
 
             <div class="aiia-wizard-step">
-                <h1>Introduction</h1>
-                <div class="step-content">
+                <h4>Introduction</h4>
+                <div class="step-content introslide">
                   <?php if ( have_posts() ) : ?>
 
               			<?php
@@ -44,21 +44,21 @@ get_header(); ?>
             </div>
 
             <div class="aiia-wizard-step">
-                <h1>Responsive</h1>
+                <h4>Responsive</h4>
                 <div class="step-content">
                     The aiiaWizard plugin is Twitter Bootstrap 3.x oriented, thus responsive. It takes your input form elements (or any other HTML element for that matter) and breaks them down into as many steps as you set them to. In fact, in some way the result is very similar to the "Twitter Bootstrap tab plugin, but instead of tabs and corresponding content panels, you have progress buttons and steps. Steps are the elements that hold your form / HTML content.
                 </div>
             </div>
 
             <div class="aiia-wizard-step">
-                <h1>Not a carousel</h1>
+                <h4>Not a carousel</h4>
                 <div class="step-content">
                     You can also compare this plugin to a carousel, but then again it is not a carousel. Well, maybe I'll update the plugin so that it will have different modes (tabs, slider, carousel...). But right now it serves for one purpose only and that is creating a Wizard with steps, plain and simple. The aiiaPlugin may as well be a hybrid between the Tabs Twitter Bootstrap and the carousel plugin if you like.
                 </div>
             </div>
 
             <div class="aiia-wizard-step">
-                <h1>Methods</h1>
+                <h4>Methods</h4>
                 <div class="step-content">
                     This plugin allows you to interract with it or to retrieve some information from. The following methods are available:
                     <ul>
@@ -72,7 +72,7 @@ get_header(); ?>
             </div>
 
             <div class="aiia-wizard-step">
-                <h1>Callbacks</h1>
+                <h4>Callbacks</h4>
                 <div class="step-content">
                     As any good plugin, this one allows you to run your code when the plugin does something. This is a list of currently available  callbacks:
 
@@ -531,7 +531,7 @@ $(document).ready(function () {
 			var pos = parseInt($step.data('position'), 10);
 
 			var $progressButton = $("" +
-				"<li data-position='" + $step.attr('data-position') + "'><a href='#'><h1>" + $step.data('position') + ". </h1>" + $step.find('h1').html() + "</a></li>" +
+				"<li data-position='" + $step.attr('data-position') + "'><a href='#'><h4>" + $step.data('position') + ". </h4>" + $step.find('h4').html() + "</a></li>" +
 			"");
 
 			if ($step.hasClass("active") && settings.aiiaWizard.progressButtons.markActive) {
@@ -561,10 +561,10 @@ $(document).ready(function () {
 	function getStepTitleTemplate(i, $step, settings) {
 
 		var stepNumber = i + 1;
-		var $stepTitle = $step.find("h1");
+		var $stepTitle = $step.find("h4");
 		var stepTitleText = $stepTitle.html();
 
-		var $stepNumber = $("<h1 class='pull-left'>" + stepNumber + "</h1>");
+		var $stepNumber = $("<h4 class='pull-left'>" + stepNumber + "</h4>");
 		var $stepText = $("<span>" + stepTitleText + "</span>")
 		$stepTitle.remove();
 
