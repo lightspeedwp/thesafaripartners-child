@@ -100,7 +100,9 @@ font-weight: bold;}
 .archive-header-wrapper.banner-archive{margin:0;padding:0;z-index:0;}
 
 /*Wizard */
-.wizard-who{margin:0 auto; width:1300px;}
+.aiia-wizard-buttons-wrapper{margin:0 auto; width:1366px;}
+.wizard-who{margin:0 auto; width:1366px;}
+.aiia-wizard-progress-buttons-wrapper{margin:0 auto; width:1366px;padding-right:70%;}
 
 /*Content */
 .archive.category .post{width:32%;float:left;margin:8px;}
