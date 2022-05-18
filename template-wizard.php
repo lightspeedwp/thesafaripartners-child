@@ -42,72 +42,38 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="aiia-wizard-step">
-                <h4>Responsive</h4>
-                <div class="step-content">
-                  <div class="row travel-style-destinations">
-                        <div class="wp-block-tour-operator-block-post-types tours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+            <div class="aiia-wizard-step shrink">
+                <h4>Who</h4>
+                <div id="who" class="step-content">
+                  <section id="who-single" class="lsx-to-section-new">
+                    <div class="row">
+                    <div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
+                      <div class="col-xs-12 col-md-3">
+                      <h2 class="lsx-title left">Who is Traveling?</h2>
+                      <p>Tell us more about who is traveling.</p>
+                    </div>
+                    <div classs="col-xs-12 col-md-9">
+                      <div id="myBtnContainer">
+                  <button style="display:none;" class="btn-check active" onclick="filterSelection('all')"> Show all</button>
+                          <?php
+                          $terms = get_terms('who');
+                          $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
+                      ?>
+                    <?php foreach( $terms as $term ): ?>
+                              <!-- post -->
 
-
-                        <?php
-                        $terms = get_terms('travel-style');
-                        $post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));
-                    ?>
-                  <?php foreach( $terms as $term ): ?>
-                            <!-- post -->
-
-                        <article class="term-<?php echo esc_attr( $term->term_id ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
-                              <div class="checkbox-wrapper">
-                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
-                                <span aria-hidden="true"></span>
-                              </div>
-
-                            <?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
-                              <div class="lsx-to-widget-thumb">
-                                <?php
-                                if ( ! empty( $title_link ) ) {
-                                  ?>
-                        <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-                                  <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
-
-                                <?php
-                                if ( ! empty( $title_link ) ) {
-                                  ?>
-                        </a><?php } ?>
-                              </div>
-                            <?php else : ?>
-                              <div class="lsx-to-widget-thumb">
-                                <?php
-                                if ( ! empty( $title_link ) ) {
-                                  ?>
-                        <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-                                  <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-                                <?php
-                                if ( ! empty( $title_link ) ) {
-                                  ?>
-                        </a><?php } ?>
-                              </div>
-                            <?php endif; ?>
-
-
-                          <div class="lsx-to-widget-content bottom">
-                            <h4 class="lsx-to-widget-title text-left">
-
-                        <a href="<?php echo esc_url( $title_link ); ?>">
-                                <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-
-                        </a>
-                        </h4>
-
-                          </div>
-                        </article>
-                  <?php endforeach; ?>
-
-                      <?php	wp_reset_query(); ?>
-                  </div>
-                  </div>
-
+                          <div class="lsx-to-widget-item-wrap lsx-who col-xs-12 col-sm-2 term-<?php echo esc_attr( $term->slug ); ?> <?php echo esc_attr( $taxonomy ); ?> type-<?php echo esc_attr( $taxonomy ); ?> status-publish hentry">
+                                <div class="checkbox-wrapper">
+                                  <input class="btn-check"  type="checkbox" onclick="filterSelection('who-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                  <span aria-hidden="true"></span>
                                 </div>
+
+                          <?php lsx_to_content( 'content-widget', 'who' ); ?>
+                        </div>
+                    <?php endforeach; ?>
+
+                        </div></div></div></div>
+                    </section>                </div>
             </div>
 
             <div class="aiia-wizard-step">
