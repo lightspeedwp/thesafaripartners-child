@@ -556,6 +556,22 @@ $(document).ready(function () {
 
 	}
 
+	function getStepTitleTemplate(i, $step, settings) {
+
+		var stepNumber = i + 1;
+		var $stepTitle = $step.find("h4");
+		var stepTitleText = $stepTitle.html();
+
+		var $stepNumber = $("<h4 class='pull-left'>" + stepNumber + "</h4>");
+		var $stepText = $("<span>" + stepTitleText + "</span>")
+		$stepTitle.remove();
+
+		$newStepTitle.find(".aiia-wizard-step-title-number").css(settings.lsxWizard.steps.title.number.css);
+		$newStepTitle.find(".aiia-wizard-step-title-text").css(settings.lsxWizard.steps.title.text.css);
+
+		return $newStepTitle;
+	}
+
 	function moveStepLeft($s) {
 		$s.css({
 			'margin-left': '-100%'  // move all lower steps to the left
