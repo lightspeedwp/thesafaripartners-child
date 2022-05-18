@@ -29,7 +29,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'partials/content', 'page' ); ?>
         <div class="row">
-          div class="outer-container">
+          <div class="outer-container">
         <div id="wizard" class="aiia-wizard" style="display: none;">
 
             <div class="aiia-wizard-step">
