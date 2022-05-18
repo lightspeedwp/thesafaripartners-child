@@ -99,6 +99,9 @@ font-weight: bold;}
 .lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header{padding:10px;margin:0;position:relative;}
 .archive-header-wrapper.banner-archive{margin:0;padding:0;z-index:0;}
 
+/*Wizard */
+.aiia-wizard-buttons-wrapper{margin:0 auto; width:1200px;}
+
 /*Content */
 .archive.category .post{width:32%;float:left;margin:8px;}
 .intro-wrap p{font-size:12px;padding:2px;font-family: argesta_displayregular, serif;}

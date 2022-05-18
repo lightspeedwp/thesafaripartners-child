@@ -46,11 +46,7 @@ get_header(); ?>
             <div class="aiia-wizard-step">
                 <h4>Who</h4>
                 <div class="step-content">
-                  <div class="row travel-style-destinations">
-            						<div class="wp-block-tour-operator-block-post-types tours-posts lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
-            							<div class="lsx-to-widget-items lsx-to-archive-template-grid">
-
-
+                  <div class="">
             						<?php
             				    $terms = get_terms('who');
             				    $post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));
@@ -108,7 +104,7 @@ get_header(); ?>
             					<?php	wp_reset_query(); ?>
             				</div>
             				</div>
-            			
+
             			</div>
             </div></div>
 
@@ -518,8 +514,8 @@ $(document).ready(function () {
 		var $buttons = $("" +
 			"<div class='aiia-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
-					"<button class='btn btn-primary pull-left aiia-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='pull-left aiia-wizard-button-previous'></button>" +
+					"<button class='pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
