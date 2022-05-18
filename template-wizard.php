@@ -42,17 +42,17 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="aiia-wizard-step shrink">
+            <div class="aiia-wizard-step">
                 <h4>Who</h4>
                 <div id="who" class="step-content">
                   <section id="who-single" class="lsx-to-section-new">
                     <div class="row">
                     <div class="wp-block-tour-operator-block-taxonomy who-slide who-image-display">
-                      <div class="col-xs-12 col-md-3">
+                      <div class="col-md-3">
                       <h2 class="lsx-title left">Who is Traveling?</h2>
                       <p>Tell us more about who is traveling.</p>
                     </div>
-                    <div classs="col-xs-12 col-md-9">
+                    <div classs="col-md-9">
                       <div id="myBtnContainer">
                   <button style="display:none;" class="btn-check active" onclick="filterSelection('all')"> Show all</button>
                           <?php
