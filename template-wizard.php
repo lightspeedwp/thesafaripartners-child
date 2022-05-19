@@ -196,7 +196,12 @@ get_header(); ?>
                           <?php
                           $the_query = new WP_Query( array(
                           'post_type' => 'destination',
-
+                          'tax_query' => array(
+                              array (
+                                  'taxonomy' => 'travel-style',
+                                  'field' => 'slug',
+                                )
+                            ),
                         ) );
 
                         while ( $the_query->have_posts() ) :
@@ -207,28 +212,16 @@ get_header(); ?>
                                     <div class="lsx-to-widget-thumb">
 
                                       <a href="<?php the_permalink() ?>">
-                                        <?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+                                        <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
 
                                       </a>
                                     </div>
 
                                     <div class="lsx-to-widget-content">
                                       <h4 class="lsx-to-widget-title text-center">
-
-                                        <a href="<?php the_permalink() ?>">
-                                          <?php the_title(); ?>
-                                        </a>
+                                          <?php the_title(); ?>                            
                                       </h4>
 
-
-                                      <?php
-                                      ob_start();
-                                      lsx_to_widget_entry_content_top();
-                                      the_excerpt();
-                                      lsx_to_widget_entry_content_bottom();
-                                      $excerpt = ob_get_clean();
-                                      echo wp_kses_post( $excerpt );?>
-                                      <p class="moretag-wrapper"><a href="<?php the_permalink() ?>" class="moretag"><?php esc_html_e( 'View more', 'tour-operator' ); ?></a></p>
                                     </div></div>
 
                                   <?php endwhile; ?>
