@@ -17,7 +17,7 @@ get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
+<div id="primary" class="<?php echo esc_attr( lsx_main_class() ); ?>">
 
 	<?php lsx_content_before(); ?>
 
@@ -28,9 +28,9 @@ get_header(); ?>
 
         <div class="row">
           <div class="outer-container">
-        <div id="wizard" class="aiia-wizard" style="display: none;">
+        <div id="wizard" class="lsx-wizard" style="display: none;">
 
-            <div class="aiia-wizard-step">
+            <div class="lsx-wizard-step">
                 <div class="step-content introslide">
                   <?php if ( have_posts() ) : ?>
 
@@ -48,7 +48,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="aiia-wizard-step">
+            <div class="lsx-wizard-step">
                 <h4>Who</h4>
                 <div class="step-content">
                   <div class="wizard-who">
@@ -113,14 +113,14 @@ get_header(); ?>
             				</div>
 
 
-            <div class="aiia-wizard-step">
+            <div class="lsx-wizard-step">
                 <h4>Not a carousel</h4>
                 <div class="step-content">
-                    You can also compare this plugin to a carousel, but then again it is not a carousel. Well, maybe I'll update the plugin so that it will have different modes (tabs, slider, carousel...). But right now it serves for one purpose only and that is creating a Wizard with steps, plain and simple. The aiiaPlugin may as well be a hybrid between the Tabs Twitter Bootstrap and the carousel plugin if you like.
+                    You can also compare this plugin to a carousel, but then again it is not a carousel. Well, maybe I'll update the plugin so that it will have different modes (tabs, slider, carousel...). But right now it serves for one purpose only and that is creating a Wizard with steps, plain and simple. The lsxPlugin may as well be a hybrid between the Tabs Twitter Bootstrap and the carousel plugin if you like.
                 </div>
             </div>
 
-            <div class="aiia-wizard-step">
+            <div class="lsx-wizard-step">
                 <h4>Methods</h4>
                 <div class="step-content">
                     This plugin allows you to interract with it or to retrieve some information from. The following methods are available:
@@ -134,7 +134,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="aiia-wizard-step">
+            <div class="lsx-wizard-step">
                 <h4>Callbacks</h4>
                 <div class="step-content">
                     As any good plugin, this one allows you to run your code when the plugin does something. This is a list of currently available  callbacks:
@@ -239,10 +239,10 @@ $(document).ready(function () {
 
 					var $stepsWrapper = getStepsWrapperTemplate(globalMinHeight);
 					var $buttons = getButtonsTemplate(settings);
-					var $steps = $this.find(".aiia-wizard-step");
+					var $steps = $this.find(".lsx-wizard-step");
 
-					$buttonNext = $buttons.find(".aiia-wizard-button-next");
-					$buttonPrevious = $buttons.find(".aiia-wizard-button-previous");
+					$buttonNext = $buttons.find(".lsx-wizard-button-next");
+					$buttonPrevious = $buttons.find(".lsx-wizard-button-previous");
 
 					///////////////////////// Place Wizard component
 
@@ -313,14 +313,14 @@ $(document).ready(function () {
 
 					// If first step is shown
 					if (activeElementPosition === 1) {
-						$this.find('.aiia-wizard-button-previous').hide();
+						$this.find('.lsx-wizard-button-previous').hide();
 					}
 
 					/////////////////////////// Register event handlers
 
-					$this.find('.aiia-wizard-button-previous').click(function (e) {
+					$this.find('.lsx-wizard-button-previous').click(function (e) {
 						e.preventDefault();
-						var $elementToSlide = $this.find(".aiia-wizard-steps-wrapper .active");
+						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 						$this.trigger("onButtonPreviousClick.lsxWizard", this);
 
 						if ($.isFunction(settings.onButtonPreviousClick)) {
@@ -340,9 +340,9 @@ $(document).ready(function () {
 						resizeWizardStepsWrapper($this);
 					});
 
-					$this.find('.aiia-wizard-button-next').click(function (e) {
+					$this.find('.lsx-wizard-button-next').click(function (e) {
 						e.preventDefault();
-						var $elementToSlide = $this.find(".aiia-wizard-steps-wrapper .active");
+						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 
 						if ($.isFunction(settings.onButtonNextClick)) {
 							// Trigger the override callback it the callback is set at the plugin initialization...
@@ -393,7 +393,7 @@ $(document).ready(function () {
 		next: function () {
 			$plugin = $(this);
 			var settings = $plugin.data('lsxWizard').settings;
-			var $elementToSlide = $plugin.find(".aiia-wizard-steps-wrapper .active");
+			var $elementToSlide = $plugin.find(".lsx-wizard-steps-wrapper .active");
 			slideLeft($elementToSlide, settings, $plugin);
 		},
 		first: function (a) {
@@ -418,14 +418,14 @@ $(document).ready(function () {
 		},
 		getActiveStep: function () {
 			$plugin = $(this);
-			return parseInt($plugin.find(".aiia-wizard-steps-wrapper .active").attr("data-position"), 10);
+			return parseInt($plugin.find(".lsx-wizard-steps-wrapper .active").attr("data-position"), 10);
 		}
 	};
 
 	////////////////////////////////////////// Private functions
 
 	function resizeWizardStepsWrapper($this) {
-		var $wizardStepsWrapper = $this.find(".aiia-wizard-steps-wrapper");
+		var $wizardStepsWrapper = $this.find(".lsx-wizard-steps-wrapper");
 		var $activeStep = $wizardStepsWrapper.find(".active");
 
 		$wizardStepsWrapper.clearQueue().animate({
@@ -447,11 +447,11 @@ $(document).ready(function () {
 				'margin-left': 0
 			}, function () {
 
-				$(".aiia-wizard-step").removeClass("active");
+				$(".lsx-wizard-step").removeClass("active");
 				$next.addClass("active");
 
 				var activeElementPosition = highlightActiveElement($plugin);
-				var stepsCount = $plugin.find(".aiia-wizard-step").length;
+				var stepsCount = $plugin.find(".lsx-wizard-step").length;
 
 				markStepAsCompleted(activeElementPosition, $plugin, settings);
 
@@ -460,7 +460,7 @@ $(document).ready(function () {
 					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
 					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
 				} else {
-					$plugin.find('.aiia-wizard-button-previous').show();
+					$plugin.find('.lsx-wizard-button-previous').show();
 				}
 
 				var $progressButtons = $plugin.find(".lsx-wizard-progress-buttons").children();
@@ -489,7 +489,7 @@ $(document).ready(function () {
 				'margin-left': 0
 			}, function () {
 
-				$plugin.find(".aiia-wizard-step").removeClass("active");
+				$plugin.find(".lsx-wizard-step").removeClass("active");
 
 				$prev.addClass("active");
 
@@ -497,12 +497,12 @@ $(document).ready(function () {
 				unmarkStepAsCompleted(activeElementPosition, $plugin);
 
 				if (activeElementPosition === 1) {
-					$plugin.find('.aiia-wizard-button-previous').hide();
+					$plugin.find('.lsx-wizard-button-previous').hide();
 
 					$.isFunction(settings.onSlideRightLimitReached) && settings.onSlideRightLimitReached.call($plugin);
 					$plugin.trigger("slideRightLimitReached.lsxWizard", this);
 				} else {
-					if ($plugin.find('.aiia-wizard-button-next').hasClass('btn-success')) {
+					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
 						unsetFinishButton($plugin, settings);
 					}
 				}
@@ -517,10 +517,10 @@ $(document).ready(function () {
 
 	function getButtonsTemplate(settings) {
 		var $buttons = $("" +
-			"<div class='aiia-wizard-buttons-wrapper row'>" +
+			"<div class='lsx-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
-					"<button class='btn btn-primary pull-left aiia-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right aiia-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
+					"<button class='btn btn-primary pull-right lsx-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
@@ -539,11 +539,11 @@ $(document).ready(function () {
 
 		$buttons.find(".btn").css(settings.lsxWizard.buttons.css);
 
-		$buttons.find(".aiia-wizard-button-previous")
+		$buttons.find(".lsx-wizard-button-previous")
 			//.append($iconPrevious)
 			.append($iconPreviousText);
 
-		$buttons.find(".aiia-wizard-button-next")
+		$buttons.find(".lsx-wizard-button-next")
 			//.append($iconNext)
 			.append($iconNextText);
 
@@ -553,7 +553,7 @@ $(document).ready(function () {
 	function highlightActiveElement($plugin) {
 
 		// find the active element position
-		var $stepsWrapper = $plugin.find(".aiia-wizard-steps-wrapper");
+		var $stepsWrapper = $plugin.find(".lsx-wizard-steps-wrapper");
 		var $activeElement = $stepsWrapper.find(".active");
 		var activeElementPosition = parseInt($activeElement.data('position'), 10);
 
@@ -565,7 +565,7 @@ $(document).ready(function () {
 	}
 
 	function getStepsWrapperTemplate(globalMinHeight) {
-		var result = $("<div class='aiia-wizard-steps-wrapper'></div>")
+		var result = $("<div class='lsx-wizard-steps-wrapper'></div>")
 			.css({
 				'position': 'relative',
 				'overflow': 'hidden',
@@ -578,7 +578,7 @@ $(document).ready(function () {
 	function getProgressButtonsTemplate($steps, settings) {
 
 		var $progessButtonsWrapper = $("" +
-			"<div class='aiia-wizard-progress-buttons-wrapper row'>" +
+			"<div class='lsx-wizard-progress-buttons-wrapper row'>" +
 					"<ul class='nav nav-pills nav-justified lsx-wizard-progress-buttons'>" +
 					"</ul>" +
 			"</div>" +
@@ -633,8 +633,8 @@ $(document).ready(function () {
 			"" +
 		"");
 
-		$newStepTitle.find(".aiia-wizard-step-title-number").css(settings.lsxWizard.steps.title.number.css);
-		$newStepTitle.find(".aiia-wizard-step-title-text").css(settings.lsxWizard.steps.title.text.css);
+		$newStepTitle.find(".lsx-wizard-step-title-number").css(settings.lsxWizard.steps.title.number.css);
+		$newStepTitle.find(".lsx-wizard-step-title-text").css(settings.lsxWizard.steps.title.text.css);
 
 		return $newStepTitle;
 	}
@@ -659,18 +659,18 @@ $(document).ready(function () {
 
 	function getActiveElementPosition($pluginElement) {
 		var stringResult = $pluginElement
-			.find(".aiia-wizard-steps-wrapper")
+			.find(".lsx-wizard-steps-wrapper")
 			.find(".active").data('position');
 
 		return parseInt(stringResult, 10);
 	}
 
 	function countElements($pluginElement) {
-		return $pluginElement.find(".aiia-wizard-step").length;
+		return $pluginElement.find(".lsx-wizard-step").length;
 	}
 
 	function setFinishButton($pluginElement, text) {
-		var $finishButton = $pluginElement.find(".aiia-wizard-button-next");
+		var $finishButton = $pluginElement.find(".lsx-wizard-button-next");
 
 		var txt = $pluginElement.data('lsxWizard').settings.lsxWizard.localization.buttons.finish;
 		if (text)
@@ -685,7 +685,7 @@ $(document).ready(function () {
 	}
 
 	function unsetFinishButton($pluginElement, settings) {
-		var $finishButton = $pluginElement.find(".aiia-wizard-button-next");
+		var $finishButton = $pluginElement.find(".lsx-wizard-button-next");
 		var txt = $pluginElement.data('lsxWizard').settings.lsxWizard.localization.buttons.next;
 		var $iconNext = $("<span class='glyphicon glyphicon-chevron-right pull-right'></span>");
 		var $iconNextText = $("<span>" + settings.lsxWizard.localization.buttons.next + "</span>");
@@ -710,7 +710,7 @@ $(document).ready(function () {
 		var $progressButton = $plugin.find(".lsx-wizard-progress-buttons").find("[data-position='" + (activeElementPosition - 1) + "']");
 
 		// create a new success icon to place it on the progress button
-		var $successIcon = $("<span class='" + settings.lsxWizard.progressButtons.completed.icon.cssClass + " aiia-wizard-icon-step-completed'></span>")
+		var $successIcon = $("<span class='" + settings.lsxWizard.progressButtons.completed.icon.cssClass + " lsx-wizard-icon-step-completed'></span>")
 			.css(settings.lsxWizard.progressButtons.completed.icon.css);
 
 		var $a = $progressButton.find("a");
@@ -723,15 +723,15 @@ $(document).ready(function () {
 	function unmarkStepAsCompleted(activeElementPosition, $plugin) {
 
 		var $progressButton = $plugin.find(".lsx-wizard-progress-buttons").find("[data-position='" + activeElementPosition + "']");
-		$progressButton.find(".aiia-wizard-icon-step-completed").remove();
+		$progressButton.find(".lsx-wizard-icon-step-completed").remove();
 		var $a = $progressButton.find("a");
 		$a.removeAttr("style");
 	}
 
 	function previous($plugin, goToFirst) {
 		var settings = $plugin.data('lsxWizard').settings;
-		var $elementToSlide = $plugin.find(".aiia-wizard-steps-wrapper .active");
-		var activeStep = parseInt($plugin.find(".aiia-wizard-steps-wrapper .active").attr("data-position"), 10);
+		var $elementToSlide = $plugin.find(".lsx-wizard-steps-wrapper .active");
+		var activeStep = parseInt($plugin.find(".lsx-wizard-steps-wrapper .active").attr("data-position"), 10);
 		if (activeStep > 0) {
 			slideRight($elementToSlide, settings, $plugin, goToFirst);
 		}
