@@ -100,8 +100,8 @@ font-weight: bold;}
 .archive-header-wrapper.banner-archive{margin:0;padding:0;z-index:0;}
 
 /*Wizard */
-.lsx-wizard-buttons-wrapper{margin:0 81px; width:1366px;}
-.wizard-who{margin:0 81px; width:1366px;padding-top:120px;}
+.lsx-wizard-buttons-wrapper{margin:0 auto; width:1366px;padding:0 81px;}
+.wizard-who{margin:0 auto; width:1366px;padding:120 81px 0;}
 .lsx-wizard-progress-buttons-wrapper{margin:0 auto; width:1366px;}
 .lsx-wizard{position:relative;}
 .lsx-wizard-progress-buttons-wrapper{position: absolute;
