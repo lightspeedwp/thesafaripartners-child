@@ -109,9 +109,8 @@ font-weight: bold;}
     z-index: 9;
     margin-top: 1%;}
 
-.lsx-wizard-progress-buttons{width:40%;}
-.lsx-wizard-progress-buttons a{
-    background-color: inherit;color:#000!important; background:none!important;
+.lsx-wizard-progress-buttons{width:40%;
+    background-color: inherit;
 font-family: argesta_displayregular, serif!important;
 font-weight: bold;
 font-size: 14px;
