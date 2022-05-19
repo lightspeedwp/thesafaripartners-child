@@ -102,6 +102,7 @@ font-weight: bold;}
 /*Wizard */
 .lsx-wizard-buttons-wrapper{margin:0 auto; width:1366px;padding:0 81px;}
 .wizard-who{margin:0 auto; width:1366px;padding:120px 20px 0px 60px;}
+.wizard-what{margin:0 auto; width:1366px;padding:120px 20px 0px 60px;}
 .lsx-wizard-progress-buttons-wrapper{margin:0 auto; width:1366px;}
 .lsx-wizard{position:relative;}
 .lsx-wizard-progress-buttons-wrapper{position: absolute;
