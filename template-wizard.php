@@ -592,7 +592,7 @@ $(document).ready(function () {
 			var pos = parseInt($step.data('position'), 10);
 
 			var $progressButton = $("" +
-				"<li class=steps'" + $step.attr('data-position') + "' data-position='" + $step.attr('data-position') + "'><a href='#'>" + $step.find('h4').html() + "</a></li>" +
+				"<li class='steps" + $step.attr('data-position') + "' data-position='" + $step.attr('data-position') + "'><a href='#'>" + $step.data('position') + ". </h4>" + $step.find('h4').html() + "</a></li>" +
 			"");
 
 			if ($step.hasClass("active") && settings.lsxWizard.progressButtons.markActive) {
