@@ -179,56 +179,31 @@ get_header(); ?>
             </div>  </div>
 
             <div class="lsx-wizard-step">
-                <h4>Methods</h4>
+                <h4>Where</h4>
                 <div class="step-content">
-                    This plugin allows you to interract with it or to retrieve some information from. The following methods are available:
-                    <ul>
-                        <li>isFinalElementShown,</li>
-                        <li>previous,</li>
-                        <li>next,</li>
-                        <li>first,</li>
-                        <li>getActiveStep</li>
-                    </ul>
+                  <div class="wizard-where">
+                    <div class="col-md-12">
+                      <h2>Where in Africa?</h2>
+                      <p>Let us where you want to travel</p>
+                      </div>
+                      <div class="col-md-12">
+
+                    </div>
                 </div>
             </div>
 
             <div class="lsx-wizard-step">
-                <h4>Callbacks</h4>
+                <h4>When</h4>
                 <div class="step-content">
-                    As any good plugin, this one allows you to run your code when the plugin does something. This is a list of currently available  callbacks:
+                  <div class="wizard-when">
+                    <div class="col-md-3">
+                      <h2>Where in Africa?</h2>
+                      <p>Let us what interests you</p>
+                      </div>
+                      <div class="col-md-9">
 
+                    </div>
 
-                  <script type="text/javascript">
-    $("#wizard").lsxWizard({
-        onInitSuccess: function () {
-            //alert("init success");
-        },
-        onSlideLeftLimitReached: function () {
-            //alert("onSlideLeftLimitReached success");
-        },
-        onSlideLeftFinished: function () {
-            //alert("onSlideLeftFinished success");
-        },
-        onSlideRightLimitReached: function () {
-            //alert("onSlideRightLimitReached success");
-        },
-        onSlideRightFinished: function () {
-            //alert("onSlideRightFinished success");
-        },
-        onButtonPreviousClick: function () {
-            // Instead of just sliding to the previous step when clicking the "previous" button, you can override this functionality instead.
-            // By doing that you must then explixitly call the "previous" plugin method as shown below if you want to slide to the previous step.
-            alert("onButtonPreviousClick");
-            $("#wizard").lsxWizard('previous');
-        },
-        onButtonNextClick: function () {
-            // Instead of just sliding to the next step when clicking the "next" button, you can override this functionality instead.
-            // By doing that you must then explixitly call the "next" plugin method as shown below if you want to slide to the next step.
-            alert("onButtonNextClick");
-            $("#wizard").lsxWizard('next');
-        }
-    });
-                    </script>
                 </div>
             </div>
 
