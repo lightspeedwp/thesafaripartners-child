@@ -194,16 +194,9 @@ get_header(); ?>
                               <div class="lsx-to-slider-wrap">
                                 <div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
                           <?php
-                          $term = get_queried_object();
                           $the_query = new WP_Query( array(
                           'post_type' => 'destination',
-                          'tax_query' => array(
-                              array (
-                                  'taxonomy' => 'travel-style',
-                                  'field' => 'slug',
-                                  'terms' => $term,
-                                )
-                            ),
+
                         ) );
 
                         while ( $the_query->have_posts() ) :
