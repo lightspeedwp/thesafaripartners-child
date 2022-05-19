@@ -99,7 +99,7 @@ get_header(); ?>
 
             							<div class="lsx-to-widget-content bottom">
             								<h4 class="lsx-to-widget-title text-left">
-            										<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+            										<?php wp_get_post_terms( $term->name ) ); ?>
             						</h4>
 
             							</div>
