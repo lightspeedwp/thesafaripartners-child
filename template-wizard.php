@@ -520,7 +520,7 @@ $(document).ready(function () {
 			"<div class='lsx-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
 					"<button class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right lsx-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-right lsx-wizard-button-next 'stepsbtn" + $step.attr('data-position') + "'' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
@@ -592,7 +592,7 @@ $(document).ready(function () {
 			var pos = parseInt($step.data('position'), 10);
 
 			var $progressButton = $("" +
-				"<li class='steps" + $step.attr('data-position') + "' data-position='" + $step.attr('data-position') + "'><a href='#'class="btn btn-primary pull-right lsx-wizard-button-next" 'steps" + $step.attr('data-position') + "'"" + $step.find('h4').html() + "</a></li>" +
+				"<li class='steps" + $step.attr('data-position') + "' data-position='" + $step.attr('data-position') + "'><a href='#'>" + $step.find('h4').html() + "</a></li>" +
 			"");
 
 			if ($step.hasClass("active") && settings.lsxWizard.progressButtons.markActive) {
