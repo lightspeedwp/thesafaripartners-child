@@ -110,7 +110,7 @@ font-weight: bold;}
     width: 700px;
     margin: 1% auto 0;}
 
-.lsx-wizard-progress-buttons{width:40%;
+.lsx-wizard-progress-buttons{width:80%;
     background-color: inherit;
 font-family: argesta_displayregular, serif!important;
 font-weight: bold;
@@ -120,6 +120,10 @@ outline: none;
 cursor: pointer;
 padding: 0px 10px 2px;
 transition: 0.5s;}
+
+.lsx-wizard .nav-justified>li, .lsx-wizard .nav-tabs.nav-justified>li {
+    display: inline-block;
+    width: auto;}
 
 /*Content */
 .archive.category .post{width:32%;float:left;margin:8px;}
