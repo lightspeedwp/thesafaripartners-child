@@ -106,9 +106,12 @@ font-weight: bold;}
 .lsx-wizard{position:relative;}
 .lsx-wizard-progress-buttons-wrapper{position: absolute;
     right: 44%;
-    z-index: 9;
+    z-index: 1;
     width: 700px;
     margin: 1% auto 0;}
+
+  .lsx-wizard .entry-content{padding:0!important;}
+  .lsx-wizard-steps-wrapper{z-index:2;}
 
 .lsx-wizard-progress-buttons{width:80%;
     background-color: inherit;
