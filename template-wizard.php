@@ -774,7 +774,7 @@ $(document).ready(function () {
 					}
 				},
 				css: {
-					'padding': '0 43px',
+					'padding': '0 4px',
 
 				},
 				markActive: false,
