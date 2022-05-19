@@ -102,7 +102,7 @@ font-weight: bold;}
 /*Wizard */
 .lsx-wizard-buttons-wrapper{margin:0 auto; width:1366px;}
 .wizard-who{margin:0 auto; width:1366px;}
-.lsx-wizard-progress-buttons-wrapper{margin:0 auto; width:1366px;padding-right:70%;}
+.lsx-wizard-progress-buttons-wrapper{margin:0 auto; width:1366px;}
 
 /*Content */
 .archive.category .post{width:32%;float:left;margin:8px;}

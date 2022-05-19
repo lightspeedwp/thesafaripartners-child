@@ -611,7 +611,7 @@ $(document).ready(function () {
 
 	function getProgressButtonsBorderBottomTemplate(settings) {
 
-		var $hr = $("<hr/>");
+		var $hr = $("");
 
 		$hr.css(settings.lsxWizard.progressButtons.borderBottom.css);
 
