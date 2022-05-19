@@ -196,12 +196,6 @@ get_header(); ?>
                           <?php
                           $the_query = new WP_Query( array(
                           'post_type' => 'destination',
-                          'tax_query' => array(
-                              array (
-                                  'taxonomy' => 'travel-style',
-                                  'field' => 'slug',
-                                )
-                            ),
                         ) );
 
                         while ( $the_query->have_posts() ) :
@@ -219,7 +213,7 @@ get_header(); ?>
 
                                     <div class="lsx-to-widget-content">
                                       <h4 class="lsx-to-widget-title text-center">
-                                          <?php the_title(); ?>                            
+                                          <?php the_title(); ?>
                                       </h4>
 
                                     </div></div>
