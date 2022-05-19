@@ -122,7 +122,7 @@ get_header(); ?>
                       <p>Let us what interests you</p>
                       </div>
                       <div class="col-md-9">
-                        <div class="col-md-9">
+
                           <?php
                           $terms = get_terms('travel-style');
                           $post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));?>
@@ -173,10 +173,10 @@ get_header(); ?>
                         <?php endforeach; ?>
 
                         <?php	wp_reset_query(); ?>
-                        </div>
+
                         </div>
                       </div>
-            </div>
+            </div>  </div>
 
             <div class="lsx-wizard-step">
                 <h4>Methods</h4>
