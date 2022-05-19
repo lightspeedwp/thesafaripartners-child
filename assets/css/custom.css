@@ -122,7 +122,7 @@ padding: 0px 10px 2px;
 transition: 0.5s;}
 
 .page-template-template-wizard .entry-content {
-    padding-top: 0!important;
+    padding-top: 0;
 
 /*Content */
 .archive.category .post{width:32%;float:left;margin:8px;}
