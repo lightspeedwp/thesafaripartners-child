@@ -99,7 +99,15 @@ get_header(); ?>
 
             							<div class="lsx-to-widget-content bottom">
             								<h4 class="lsx-to-widget-title text-left">
-            										<?php wp_get_post_terms( $term->name ) ); ?>
+                              <?php
+                              if ( ! empty( $title_link ) ) {
+                                ?>
+                        <?php } ?>
+                                <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                              <?php
+                              if ( ! empty( $title_link ) ) {
+                                ?>
+                        <?php } ?>
             						</h4>
 
             							</div>
@@ -114,10 +122,17 @@ get_header(); ?>
 
 
             <div class="lsx-wizard-step">
-                <h4>Not a carousel</h4>
+                <h4>What</h4>
                 <div class="step-content">
-                    You can also compare this plugin to a carousel, but then again it is not a carousel. Well, maybe I'll update the plugin so that it will have different modes (tabs, slider, carousel...). But right now it serves for one purpose only and that is creating a Wizard with steps, plain and simple. The lsxPlugin may as well be a hybrid between the Tabs Twitter Bootstrap and the carousel plugin if you like.
-                </div>
+                  <div class="wizard-what">
+                    <div class="col-md-3">
+                      <h2>What interests you?</h2>
+                      <p>Let us what interests you</p>
+                      </div>
+                      <div class="col-md-9">
+
+                        </div>
+                      </div>
             </div>
 
             <div class="lsx-wizard-step">
