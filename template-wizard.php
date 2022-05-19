@@ -99,15 +99,7 @@ get_header(); ?>
 
             							<div class="lsx-to-widget-content bottom">
             								<h4 class="lsx-to-widget-title text-left">
-                              <?php
-                              if ( ! empty( $title_link ) ) {
-                                ?>
-                        <?php } ?>
                                 <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-                              <?php
-                              if ( ! empty( $title_link ) ) {
-                                ?>
-                        <?php } ?>
             						</h4>
 
             							</div>
@@ -130,7 +122,58 @@ get_header(); ?>
                       <p>Let us what interests you</p>
                       </div>
                       <div class="col-md-9">
+                        <div class="col-md-9">
+                          <?php
+                          $terms = get_terms('travel-style');
+                          $post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));?>
+                          <?php foreach( $terms as $term ): ?>
+                              <!-- post -->
 
+                          <article class="col-md-2 status-publish hentry">
+                                <div class="checkbox-wrapper">
+                                  <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                  <span aria-hidden="true"></span>
+                                </div>
+
+                              <?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+                                <div class="lsx-to-widget-thumb">
+                                  <?php
+                                  if ( ! empty( $title_link ) ) {
+                                    ?>
+                          <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+                                    <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
+
+                                  <?php
+                                  if ( ! empty( $title_link ) ) {
+                                    ?>
+                          </a><?php } ?>
+                                </div>
+                              <?php else : ?>
+                                <div class="lsx-to-widget-thumb">
+                                  <?php
+                                  if ( ! empty( $title_link ) ) {
+                                    ?>
+                          <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+                                    <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+                                  <?php
+                                  if ( ! empty( $title_link ) ) {
+                                    ?>
+                          </a><?php } ?>
+                                </div>
+                              <?php endif; ?>
+
+
+                            <div class="lsx-to-widget-content bottom">
+                              <h4 class="lsx-to-widget-title text-left">
+                                  <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                          </h4>
+
+                            </div>
+                          </article>
+                        <?php endforeach; ?>
+
+                        <?php	wp_reset_query(); ?>
+                        </div>
                         </div>
                       </div>
             </div>
