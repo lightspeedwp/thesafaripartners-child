@@ -239,7 +239,7 @@ font-weight: bold;font-size:14px;
     padding: 0 10px 0 18px;}
 
 	.lsx-button, .wp-block-button__link{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
-
+.pum-overlay{z-index:99!important;}
 /*home */
 .lsx-block-banner:first-child{height: 450px;
 width: 100%;
