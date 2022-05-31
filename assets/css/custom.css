@@ -247,14 +247,13 @@ position: relative;}
 .lsx-block-banner:not(:first-child){height: 350px;
 width: 100%;
 position: relative;}
-.lsx-banner-column{width: 40%;
+.lsx-banner-column{
 height: 30%;
-top: 50%;
+top: 55%;
 left: 50%;}
-.lsx-block-banner:not(:first-child) .lsx-banner-column{width: 40%;
-height: 30%;
-top: 25%!important;
-left: 50%;}
+.lsx-block-banner:not(:first-child) .lsx-banner-column{
+height: auto;
+top: 25%!important;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
 .home .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index;10;background:none;}
