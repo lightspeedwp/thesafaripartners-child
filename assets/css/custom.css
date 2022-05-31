@@ -241,7 +241,14 @@ font-weight: bold;font-size:14px;
 	.lsx-button, .wp-block-button__link{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
 
 /*home */
-.lsx-banner-column{padding:130px 20px;}
+.lsx-block-banner{height: 500px;
+width: 100%;
+position: relative;}
+.lsx-banner-column{width: 40%;
+height: 30%;
+position: absolute;
+top: 50%;
+left: 50%;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
 .home .lsx-banner-column{padding:130px 20px;}
