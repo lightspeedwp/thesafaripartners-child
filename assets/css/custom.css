@@ -244,7 +244,7 @@ font-weight: bold;font-size:14px;
 .lsx-block-banner:first-child{height: 400px;
 width: 100%;
 position: relative;}
-.lsx-block-banner:not(:first-child){height: 300px;
+.lsx-block-banner:not(:first-child){height: 350px;
 width: 100%;
 position: relative;}
 .lsx-banner-column{width: 40%;
@@ -253,7 +253,7 @@ top: 50%;
 left: 50%;}
 .lsx-block-banner:not(:first-child) .lsx-banner-column{width: 40%;
 height: 30%;
-top: 40%!important;
+top: 35%!important;
 left: 50%;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
@@ -495,9 +495,7 @@ border:1px solid #000;}
 .lsx-to-widget-item-wrap.lsx-team{margin:0;padding:1px;}
 .lsx-to-widget-item-wrap.lsx-team h4{text-align:left; margin-top: 1.5rem;margin-bottom: 1.5rem;margin-left:10px!important;}
 	.lsx-to-widget-item-wrap.lsx-team	.lsx-team-description{margin:0 10px!important;}
-	.lsx-to-widget-item-wrap.lsx-team .lsx-to-single-link{display:none;}
-	.social-about .lsx-banner-column {
-		padding: 90px 20px!important;}
+	.lsx-to-widget-item-wrap.lsx-team .lsx-to-single-link{display:none;}s
 
 	.financial-about .lsx-banner-column {
 		padding: 40px 20px 0px!important;}
