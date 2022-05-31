@@ -253,7 +253,7 @@ top: 50%;
 left: 50%;}
 .lsx-block-banner:not(:first-child) .lsx-banner-column{width: 40%;
 height: 30%;
-top: 35%!important;
+top: 25%!important;
 left: 50%;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
