@@ -241,12 +241,11 @@ font-weight: bold;font-size:14px;
 	.lsx-button, .wp-block-button__link{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
 
 /*home */
-.lsx-block-banner{height: 500px;
+.lsx-block-banner{height: 400px;
 width: 100%;
 position: relative;}
 .lsx-banner-column{width: 40%;
 height: 30%;
-position: absolute;
 top: 50%;
 left: 50%;}
 .ot-list{padding:30px 70px;}
@@ -256,6 +255,11 @@ left: 50%;}
 .home .wp-block-tour-operator-block-post-types{padding:10px;}
 .home .tour-styles-top-info{display:block!important;}
 .tour-styles-top-info{display:none;}
+.lsx-block-banner-button a{padding:10px 20px;}
+.button{ -webkit-box-shadow:none!important;
+    box-shadow: none!important;}
+    .gform_button{padding:10px 20px;-webkit-box-shadow:none!important;
+        box-shadow: none!important;border: 1px solid #000;}
 
 .ot-list .lsx-to-widget-content{position:absolute;top:-140px;right:-100px;}
 .ot-list .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag, .ot-list .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:visited{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;width:270px;float:right;padding:18px;}
