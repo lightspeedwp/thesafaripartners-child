@@ -241,19 +241,16 @@ font-weight: bold;font-size:14px;
 	.lsx-button, .wp-block-button__link{border:1px solid #000!important; background:#fff; color:#000!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
 
 /*home */
-.lsx-block-banner:first-child{height: 400px;
+.lsx-block-banner:first-child{height: 450px;
 width: 100%;
 position: relative;}
 .lsx-block-banner:not(:first-child){height: 350px;
 width: 100%;
 position: relative;}
 .lsx-banner-column{
-height: 30%;
-top: 55%;
-left: 50%;}
+height: 30%;}
 .lsx-block-banner:not(:first-child) .lsx-banner-column{
-height: auto;
-top: 25%!important;}
+height: 15%;}
 .ot-list{padding:30px 70px;}
 .ot-list h2{display:none;}
 .home .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index;10;background:none;}
