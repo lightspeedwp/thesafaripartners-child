@@ -75,7 +75,7 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 register_pattern (
     'lssx/who-we-are',
     array (
-        'title'   => __( 'Who We Are', 'lsx ),
+        'title'   => __( 'Who We Are', 'lsx' ),
         'content' => "<!-- wp:lsx-blocks/lsx-container {"containerPaddingTop":5.5,"containerPaddingRight":1,"containerPaddingBottom":2.5,"containerPaddingLeft":1,"containerMarginTop":2,"containerMarginBottom":2,"containerBackgroundColor":"#ffffff","className":"about-6"} -->
 			<div style="background-color:#ffffff;padding-left:1%;padding-right:1%;padding-bottom:2.5%;padding-top:5.5%;margin-top:2%;margin-bottom:2%" class="wp-block-lsx-blocks-lsx-container about-6 aligncenter lsx-block-container"><div class="lsx-container-inside"><div class="lsx-container-content" style="max-width:1200px"><!-- wp:columns -->
 			<div class="wp-block-columns"><!-- wp:column -->
