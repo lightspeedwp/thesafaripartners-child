@@ -489,6 +489,10 @@ border:1px solid #000;}
 .lsx-title:after, #home-widgets h3:after, #home-widgets .widget-title:after{display:none;}
 .entry-content .who-slide .lsx-title{padding-bottom:50px!important;width:90%;}
 
+/*Tours */
+.single-lsx-to-tour .content{width: 1366px!important;
+    margin: 20px auto!important;}
+
 /*About */
 .lsx-to-widget-item-wrap.lsx-team{margin:0;padding:1px;}
 .lsx-to-widget-item-wrap.lsx-team h4{text-align:left; margin-top: 1.5rem;margin-bottom: 1.5rem;margin-left:10px!important;}
