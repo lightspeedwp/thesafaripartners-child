@@ -393,7 +393,7 @@ background-color: #f0f0f0;
 #footer-widgets .widget a i{color:#000;}
 	.content-info{background-color: #f0f0f0!important;}
 
-#footer-sub .gform_heading{width:26%;float:left;padding-left:5%;}
+#footer-sub .gform_heading{width:26%;float:left;padding-left:5%;z-index:9;}
 #footer-sub{background-color: #f0f0f0;padding:50px 0!important;position:relative;border-bottom:2px solid #fff;}
 #footer-sub form{width:70%;float:left;}
 #footer-sub form input{border-top:0;border-right:0;border-left:0;border-bottom:1px solid #000;color:#000!important;padding:1px;line-height:10px;min-height:30px!important;height:30px;background:transparent;}
