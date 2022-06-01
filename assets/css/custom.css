@@ -75,6 +75,8 @@ font-weight: bold;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6{display:none;}
 	#mega-menu-wrap-primary .lsx-to-widget-items{margin-top:0px!important;}
 
+  .gutenberg-compatible-template.using-gutenberg .page-header{width:100%!important;position:relative;}
+
 
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu > ul.mega-sub-menu {padding:30px 60px 0;}
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu{padding:20px;}
