@@ -71,3 +71,5 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 	lsx_to_connected_panel_query( $args );
 }
 }
+
+require get_stylesheet_directory() . '/includes/patterns/who-we-are.php';
