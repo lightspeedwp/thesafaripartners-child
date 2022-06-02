@@ -25,6 +25,19 @@ get_header(); ?>
 							<div class="row">
 								<div class="col-md-6 tours-img">
 
+
+									<div class="tours-nav">
+										<div class="col-md-4">
+											<button class="btn lsx-btn">Book It!</button>
+											</div>
+											<div class="col-md-4">
+												<button class="btn lsx-btn">Find out more</button>
+												</div>
+												<div class="col-md-4">
+													<button class="btn lsx-btn">Share with a Friend</button>
+													</div>
+									</div>
+
 								</div>
 
 								<div class="col-md-6 outer-container">
