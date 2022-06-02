@@ -490,8 +490,21 @@ border:1px solid #000;}
 .entry-content .who-slide .lsx-title{padding-bottom:50px!important;width:90%;}
 
 /*Tours */
+.single-lsx-to-tour .archive-header-wrapper{display:none!important;}
 .single-lsx-to-tour .content{width: 1366px!important;
     margin: 20px auto!important;}
+
+  .single-lsx-to-tour .content-area{
+    margin-bottom: 0!important;
+    margin-top: 0!important;}
+
+  .single-lsx-to-tour .lsx-wizard-progress-buttons-wrapper {
+    position: absolute;
+    left: -4%;
+    z-index: 9;
+    width: 500px;
+    margin: 0;
+    top: 1px;}
 
 /*About */
 .lsx-to-widget-item-wrap.lsx-team{margin:0;padding:1px;}
