@@ -493,7 +493,7 @@ border:1px solid #000;}
 .single-lsx-to-tour .archive-header-wrapper{display:none!important;}
 .single-lsx-to-tour .content{width: 1280px!important;padding:0!important;margin:0px auto!important;height:80vh;}
 .single-lsx-to-tour .tabcontent .col-md-12{padding:0!important;}
-.single-lsx-to-tour .lsx-to-tour-content{padding-top:8vh;}
+.single-lsx-to-tour .lsx-to-tour-content{padding-top:8vh!important;}
 .single-lsx-to-tour .tab{z-index:9;overflow: hidden;
     left: 51%;
     z-index: 9;
