@@ -21,22 +21,24 @@ get_header(); ?>
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
 							<div class="row">
-								<div class="col-md-6 tours-img">
-
-
-									<div class="tours-nav">
-										<div class="col-md-4">
-											<button class="btn lsx-btn">Book It!</button>
+								<div class="col-md-6 lsx-contact-module-image">
+									<div class="lsx-banner-image-wrap">
+										<picture>
+											<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+											<picture>
 											</div>
-											<div class="col-md-4">
-												<button class="btn lsx-btn">Find out more</button>
-												</div>
+											<div class="tours-nav">
 												<div class="col-md-4">
-													<button class="btn lsx-btn">Share with a Friend</button>
+													<button class="btn lsx-btn">Book It!</button>
 													</div>
-									</div>
-
-								</div>
+													<div class="col-md-4">
+														<button class="btn lsx-btn">Find out more</button>
+														</div>
+														<div class="col-md-4">
+															<button class="btn lsx-btn">Share with a Friend</button>
+															</div>
+											</div>
+										</div>
 
 								<div class="col-md-6 outer-container">
 									<div class="tab">
