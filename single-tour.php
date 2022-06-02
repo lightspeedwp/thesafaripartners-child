@@ -21,22 +21,9 @@ get_header(); ?>
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
 							<div class="row">
-								<div class="col-md-6 tours-nav-panel">
 
-											<div class="tours-nav">
-												<div class="col-md-4">
-													<button class="btn lsx-btn">Book It!</button>
-													</div>
-													<div class="col-md-4">
-														<button class="btn lsx-btn">Find out more</button>
-														</div>
-														<div class="col-md-4">
-															<button class="btn lsx-btn">Share with a Friend</button>
-															</div>
-											</div>
-										</div>
 
-								<div class="col-md-6 outer-container">
+								<div class="col-md-12 outer-container">
 									<div class="tab">
 
 												<button class="tablinks" id="Open" onclick="openCity(event, 'Overview')">Overview</button>
@@ -237,6 +224,18 @@ get_header(); ?>
 															<?php	wp_reset_query(); ?>
 													</div>
 												</div>
+												</div>
+
+												<div class="tours-nav">
+													<div class="col-md-4">
+														<button class="btn lsx-btn">Book It!</button>
+														</div>
+														<div class="col-md-4">
+															<button class="btn lsx-btn">Find out more</button>
+															</div>
+															<div class="col-md-4">
+																<button class="btn lsx-btn">Share with a Friend</button>
+																</div>
 												</div>
 
 </div></div></div>
