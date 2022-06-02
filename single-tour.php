@@ -121,8 +121,8 @@ get_header(); ?>
 								<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
 									<div class="lsx-to-archive-container">
 										<div class="lsx-to-archive-thumb">
-											<div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $thumb ); ?>');">
-												<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+											<div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $full ); ?>');">
+												<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $full . '">' ); ?>
 											</div>
 										</div>
 
