@@ -12,7 +12,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area col-sm-12 <?php echo esc_attr( lsx_main_class() ); ?>">
 
+		<?php lsx_content_before(); ?>
+
 		<main id="main" class="site-main" role="main">
+
+			<?php lsx_content_top(); ?>
 
 			<?php
             while ( have_posts() ) :
