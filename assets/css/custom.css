@@ -492,6 +492,8 @@ border:1px solid #000;}
 /*Tours */
 .single-lsx-to-tour .archive-header-wrapper{display:none!important;}
 .single-lsx-to-tour .content{width: 1280px!important;padding:0!important;margin:0px auto!important;height:80vh;}
+.single-lsx-to-tour .tours-nav{position:absolute;bottom:0;left:0;border-right:1px solid #000;border-left:1px solid #000;}
+..tours-nav .btn{background:#fff;color:#000;border: 2px 1px solid #000;}
 
   .single-lsx-to-tour .content-area{
     margin-bottom: 0!important;
