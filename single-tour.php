@@ -118,7 +118,6 @@ get_header(); ?>
 			$itinerary_count = 1;
 			?>
 			<section id="itinerary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-				<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" data-toggle="collapse" data-target="#collapse-itinerary" aria-expanded="false"><?php esc_html_e( 'Full Day by Day Itinerary', 'tour-operator' ); ?></h2>
 
 				<div id="collapse-itinerary" class="collapse in">
 					<div class="collapse-inner">
@@ -238,7 +237,7 @@ get_header(); ?>
 												</div>
 												</div>
 
-
+</div></div></div></div>
 			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->
