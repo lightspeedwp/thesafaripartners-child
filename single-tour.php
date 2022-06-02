@@ -171,6 +171,33 @@ get_header(); ?>
 
 				<?php lsx_to_itinerary_read_more(); ?>
 			</section>
+
+			<?php
+        }
+
+		lsx_to_included_block();
+
+		lsx_to_gallery( '<section id="gallery" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-gallery' ) . '>' . esc_html__( 'Gallery', 'tour-operator' ) . '</h2><div id="collapse-gallery" class="collapse in"><div class="collapse-inner">', '</div></div></section>' );
+
+		if ( function_exists( 'lsx_to_videos' ) ) {
+			lsx_to_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse in"><div class="collapse-inner">', '</div></div></section>' );
+		} elseif ( class_exists( 'Envira_Videos' ) ) {
+			lsx_to_envira_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse in"><div class="collapse-inner">', '</div></div></section>' );
+		}
+
+		if ( function_exists( 'lsx_to_tour_specials' ) ) {
+			lsx_to_tour_specials();
+		}
+
+		if ( function_exists( 'lsx_to_tour_reviews' ) ) {
+			lsx_to_tour_reviews();
+		}
+
+		lsx_to_related_items( 'travel-style', '<section id="related-items" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-related-items' ) . '>' . lsx_to_get_post_type_section_title( 'tour', 'related', esc_html__( 'Related Tours', 'tour-operator' ) ) . '</h2><div id="collapse-related-items" class="collapse in"><div class="collapse-inner">', '</div></div></section>' );
+
+		lsx_to_tour_posts();
+	}
+} ?>
 																		</div>
 																		</div>
 
@@ -183,7 +210,9 @@ get_header(); ?>
 																<?php
 																lsx_entry_after(); ?>
 
-														
+																<?php endwhile; ?>
+
+															<?php endif; ?>
 															<?php	wp_reset_query(); ?>
 													</div>
 												</div>
