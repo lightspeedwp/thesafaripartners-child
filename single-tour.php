@@ -23,8 +23,11 @@ get_header(); ?>
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
 							<div class="row">
+								<div class="col-md-6 tours-img">
 
-								<div class="outer-container">
+								</div>
+
+								<div class="col-md-6 outer-container">
 								<div id="wizard" class="lsx-wizard" style="display: none;">
 
 									<div class="lsx-wizard-step">
