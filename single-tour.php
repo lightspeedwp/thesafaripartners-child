@@ -57,7 +57,8 @@ get_header(); ?>
 																	<?php lsx_entry_top(); ?>
 
 
-																		<div class="entry-content col-xs-12 col-sm-12 col-md-6 lsx-to-tour-content">
+																		<div class="entry-content col-xs-12 col-sm-12 col-md-6">
+																			<div class="lsx-to-tour-content">
 																			<div class="lsx-to-summary">
 																				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 
@@ -67,7 +68,7 @@ get_header(); ?>
 																			<?php the_content(); ?>
 
 																		</div>
-
+</div>
 																	<?php lsx_entry_bottom(); ?>
 
 																</article>
