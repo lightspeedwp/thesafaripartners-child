@@ -21,7 +21,7 @@ get_header(); ?>
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
 							<div class="row">
-								<div class="col-md-6 lsx-contact-module-image">
+								<div class="col-md-6 lsx-tour-module-image">
 									<div class="lsx-banner-image-wrap">
 										<picture>
 											<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
@@ -53,7 +53,7 @@ get_header(); ?>
 
 												<div id="Overview" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
-														<div class="lsx-contact-module">
+														<div class="lsx-tour-module">
 															<?php if ( have_posts() ) : ?>
 
 																<?php
@@ -96,7 +96,7 @@ get_header(); ?>
 
 												<div id="Day" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
-														<div class="lsx-contact-module">
+														<div class="lsx-tour-module">
 															<?php if ( have_posts() ) : ?>
 
 																<?php
@@ -141,7 +141,7 @@ get_header(); ?>
 
 												<div id="Accommodation" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
-														<div class="lsx-contact-module">
+														<div class="lsx-tour-module">
 															<?php if ( have_posts() ) : ?>
 
 																<?php

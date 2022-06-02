@@ -492,13 +492,15 @@ border:1px solid #000;}
 /*Tours */
 .single-lsx-to-tour .archive-header-wrapper{display:none!important;}
 .single-lsx-to-tour .content{width: 1280px!important;padding:0!important;margin:0px auto!important;height:80vh;}
+.single-lsx-to-tour .tabcontent .col-md-12{padding:0!important;}
+.single-lsx-to-tour .lsx-tour-module{padding-top:8vh;}
 .single-lsx-to-tour .tours-nav{position: absolute;
     bottom: 0;
     left: 15px;
     width: 610px;
     border-right: 1px solid #000;
     border-left: 1px solid #000;}
-    .single-lsx-to-tour .tours-nav .col-md-4{margin:0!important;}
+    .single-lsx-to-tour .tours-nav .col-md-4{padding:0!important;}
 .tours-nav .btn{background:#fff;color:#000;border-right: 1px solid #000;border-left: 1px solid #000;border-top: 2px solid #000;border-bottom: 2px solid #000;font-family:"moret",serif!important;width:100%;}
 .single-lsx-to-tour .lsx-banner-image-wrap{display: contents;
   justify-content: center;
