@@ -252,9 +252,6 @@ get_header(); ?>
 						</div>
 					</div>
 
-
-			<?php endwhile; ?>
-
 			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->
