@@ -52,62 +52,64 @@ get_header(); ?>
 											<h4>Who</h4>
 											<div class="step-content">
 												<div class="wizard-who">
-													<div class="col-md-3">
+													<div class="col-md-12 col-sm-12">
 														<h2>Who is Traveling?</h2>
-														<p>Let us know alittle more about who is traveling</p>
+														<section id="itinerary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+				<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" data-toggle="collapse" data-target="#collapse-itinerary" aria-expanded="false"><?php esc_html_e( 'Full Day by Day Itinerary', 'tour-operator' ); ?></h2>
+
+				<div id="collapse-itinerary" class="collapse in">
+					<div class="collapse-inner">
+						<div class="row lsx-to-archive-items lsx-to-archive-template-list lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?> itinerary-list">
+							<?php while ( lsx_to_itinerary_loop() ) { ?>
+								<?php
+									lsx_to_itinerary_loop_item();
+									$thumb = lsx_to_itinerary_thumbnail();
+								?>
+
+								<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
+									<div class="lsx-to-archive-container">
+										<div class="lsx-to-archive-thumb">
+											<div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $thumb ); ?>');">
+												<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+											</div>
+										</div>
+
+										<div class="lsx-to-archive-wrapper">
+											<div class="lsx-to-archive-content">
+												<h3 class="lsx-to-archive-content-title"><?php lsx_to_itinerary_title(); ?></h3>
+												<p class="lsx-to-archive-content-tagline"><?php lsx_to_itinerary_tagline(); ?></p>
+
+												<div class="entry-content">
+													<?php lsx_to_itinerary_description(); ?>
+												</div>
+											</div>
+
+											<div class="lsx-to-archive-meta-data">
+												<?php
+													$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+													lsx_to_itinerary_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Destination', 'tour-operator' ) . ':</span> ', '</span>' );
+													lsx_to_itinerary_accommodation( '<span class="' . $meta_class . 'accommodations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Accommodation', 'tour-operator' ) . ':</span> ', '</span>' );
+													lsx_to_itinerary_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
+													lsx_to_itinerary_includes( '<span class="' . $meta_class . 'day-includes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Included', 'tour-operator' ) . ':</span> ', '</span>' );
+													lsx_to_itinerary_excludes( '<span class="' . $meta_class . 'day-excludes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Excluded', 'tour-operator' ) . ':</span> ', '</span>' );
+												?>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php
+								$itinerary_count++;
+							}
+							?>
+						</div>
+					</div>
+				</div>
+
+				<?php lsx_to_itinerary_read_more(); ?>
+			</section>
 														</div>
-														<div class="col-md-9">
-															<?php
-															$terms = get_terms('who');
-															$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));?>
-															<?php foreach( $terms as $term ): ?>
-																	<!-- post -->
 
-															<article class="col-md-4 status-publish hentry">
-																		<div class="checkbox-wrapper">
-																			<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
-																			<span aria-hidden="true"></span>
-																		</div>
-
-																	<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
-																		<div class="lsx-to-widget-thumb">
-																			<?php
-																			if ( ! empty( $title_link ) ) {
-																				?>
-															<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-																				<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
-
-																			<?php
-																			if ( ! empty( $title_link ) ) {
-																				?>
-															</a><?php } ?>
-																		</div>
-																	<?php else : ?>
-																		<div class="lsx-to-widget-thumb">
-																			<?php
-																			if ( ! empty( $title_link ) ) {
-																				?>
-															<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-																				<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-																			<?php
-																			if ( ! empty( $title_link ) ) {
-																				?>
-															</a><?php } ?>
-																		</div>
-																	<?php endif; ?>
-
-
-																<div class="lsx-to-widget-content bottom">
-																	<h4 class="lsx-to-widget-title text-left">
-																			<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-															</h4>
-
-																</div>
-															</article>
-												<?php endforeach; ?>
-
-														<?php	wp_reset_query(); ?>
-													</div>
 													</div>
 													</div>
 													</div>
