@@ -44,9 +44,9 @@ get_header(); ?>
 									<div class="tab">
 
 
-												<button class="tablinks" id="page-1" onclick="openCity(event, 'Overview')">Overview</button>
-												<button class="tablinks" id="page-2" onclick="openCity(event, 'day')">Day by Day</button>
-												<button class="tablinks" id="page-3" onclick="openCity(event, 'page-3')">Accommodation</button>
+												<button class="tablinks" id="Open" onclick="openCity(event, 'Overview')">Overview</button>
+												<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
+												<button class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
 												</div>
 
 
@@ -75,6 +75,49 @@ get_header(); ?>
 
 																			<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
 																			<?php the_content(); ?>
+
+																		</div>
+
+																	<?php lsx_entry_bottom(); ?>
+
+																</article>
+
+																<?php
+																lsx_entry_after(); ?>
+
+																<?php endwhile; ?>
+
+															<?php endif; ?>
+															<?php	wp_reset_query(); ?>
+													</div>
+												</div>
+												</div>
+
+
+												<div id="Day" class="tabcontent">
+													<div class="col-md-12 col-sm-12">
+														<div class="lsx-contact-module">
+															<?php if ( have_posts() ) : ?>
+
+																<?php
+																while ( have_posts() ) :
+																	the_post();
+																?>
+
+																<?php lsx_entry_before(); ?>
+
+																<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
+																	<?php lsx_entry_top(); ?>
+
+
+																		<div class="entry-content col-xs-12 col-sm-12 col-md-12">
+																			<div class="lsx-to-summary">
+																				<h2 class="lsx-to-summary-title">Day by Day</h2>
+
+																			</div>
+
+																			<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
+																			<?php the_content(); ?>
 																			<?php lsx_to_sharing(); ?>
 																		</div>
 
@@ -94,7 +137,9 @@ get_header(); ?>
 													</div>
 												</div>
 												</div>
-												<div id="day" class="tabcontent">
+
+
+												<div id="Accommodation" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
 														<div class="lsx-contact-module">
 															<?php if ( have_posts() ) : ?>
@@ -112,7 +157,7 @@ get_header(); ?>
 
 																		<div class="entry-content col-xs-12 col-sm-12 col-md-12">
 																			<div class="lsx-to-summary">
-																				<h2 class="lsx-to-summary-title">Day by Day</h2>
+																				<h2 class="lsx-to-summary-title">Accommodation</h2>
 
 																			</div>
 
@@ -166,7 +211,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("Overview").click();
+document.getElementById("Open").click();
 </script>
 <?php
 get_footer();
