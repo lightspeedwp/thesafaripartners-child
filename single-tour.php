@@ -41,11 +41,11 @@ get_header(); ?>
 
 													<?php lsx_entry_before(); ?>
 
-													<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" class="entry-content col-xs-12 col-sm-12 col-md-12">
+													<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 														<?php lsx_entry_top(); ?>
 
 
-															<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
+															<div class="entry-content col-xs-12 col-sm-12 col-md-12">
 																<div class="lsx-to-summary">
 																	<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 
