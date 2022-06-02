@@ -183,9 +183,7 @@ get_header(); ?>
 																<?php
 																lsx_entry_after(); ?>
 
-																<?php endwhile; ?>
-
-															<?php endif; ?>
+														
 															<?php	wp_reset_query(); ?>
 													</div>
 												</div>
