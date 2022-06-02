@@ -53,11 +53,11 @@ get_header(); ?>
 																		</div>
 
 
-																<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
+																<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-single' ); ?>>
 																	<?php lsx_entry_top(); ?>
 
 
-																		<div class="entry-content col-xs-12 col-sm-12 col-md-6">
+																		<div class="entry-content col-xs-12 col-sm-12 col-md-6 lsx-to-tour-content">
 																			<div class="lsx-to-summary">
 																				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 
@@ -126,7 +126,7 @@ get_header(); ?>
 										</div>
 
 										<div class="lsx-to-archive-wrapper">
-											<div class="lsx-to-archive-content">
+											<div class="lsx-to-tour-content">
 												<h3 class="lsx-to-archive-content-title"><?php lsx_to_itinerary_title(); ?></h3>
 												<p class="lsx-to-archive-content-tagline"><?php lsx_to_itinerary_tagline(); ?></p>
 
@@ -198,7 +198,7 @@ get_header(); ?>
 																	<?php lsx_entry_top(); ?>
 
 
-																		<div class="entry-content col-xs-12 col-sm-12 col-md-12">
+																		<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
 																			<div class="lsx-to-summary">
 																				<h2 class="lsx-to-summary-title">Accommodation</h2>
 
