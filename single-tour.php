@@ -12,15 +12,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area col-sm-12 <?php echo esc_attr( lsx_main_class() ); ?>">
 
-		<?php lsx_content_before(); ?>
-
 		<main id="main" class="site-main" role="main">
 
-			<?php lsx_content_top(); ?>
-
-			<?php 
+			<?php
             while ( have_posts() ) :
-the_post(); 
+the_post();
 ?>
 
 				<section id="summary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
@@ -49,5 +45,5 @@ the_post();
 
 <?php //get_sidebar(); ?>
 <?php //get_sidebar( 'alt' ); ?>
-<?php 
+<?php
 get_footer();
