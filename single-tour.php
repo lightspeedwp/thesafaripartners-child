@@ -44,14 +44,14 @@ get_header(); ?>
 									<div class="tab">
 
 
-												<button class="tablinks" id="page-1" onclick="openCity(event, 'page-1')">Overview</button>
-												<button class="tablinks" id="page-2" onclick="openCity(event, 'page-2')">Day by Day</button>
+												<button class="tablinks" id="page-1" onclick="openCity(event, 'Overview')">Overview</button>
+												<button class="tablinks" id="page-2" onclick="openCity(event, 'day')">Day by Day</button>
 												<button class="tablinks" id="page-3" onclick="openCity(event, 'page-3')">Accommodation</button>
 												</div>
 
 
 
-												<div id="page-1" class="tabcontent">
+												<div id="Overview" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
 														<div class="lsx-contact-module">
 															<?php if ( have_posts() ) : ?>
@@ -94,7 +94,7 @@ get_header(); ?>
 													</div>
 												</div>
 												</div>
-												<div id="page-2" class="tabcontent">
+												<div id="day" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
 														<div class="lsx-contact-module">
 															<?php if ( have_posts() ) : ?>
@@ -112,7 +112,7 @@ get_header(); ?>
 
 																		<div class="entry-content col-xs-12 col-sm-12 col-md-12">
 																			<div class="lsx-to-summary">
-																				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
+																				<h2 class="lsx-to-summary-title">Day by Day</h2>
 
 																			</div>
 
@@ -166,7 +166,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("page-1").click();
+document.getElementById("Overview").click();
 </script>
 <?php
 get_footer();
