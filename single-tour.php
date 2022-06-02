@@ -21,12 +21,8 @@ get_header(); ?>
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
 							<div class="row">
-								<div class="col-md-6 lsx-tour-module-image">
-									<div class="lsx-banner-image-wrap">
-										<picture>
-											<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
-											<picture>
-											</div>
+								<div class="col-md-6 tours-nav-panel">
+
 											<div class="tours-nav">
 												<div class="col-md-4">
 													<button class="btn lsx-btn">Book It!</button>
@@ -47,6 +43,7 @@ get_header(); ?>
 												<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
 												<button class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
 										</div>
+									</div>
 
 												<div id="Overview" class="tabcontent">
 													<div class="col-md-12 col-sm-12">
@@ -59,12 +56,21 @@ get_header(); ?>
 																?>
 
 																<?php lsx_entry_before(); ?>
+																<div class="col-md-6 lsx-tour-module-image">
+																	<div class="lsx-banner-image-wrap">
+																		<picture>
+																			<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+																			<picture>
+																			</div>
+
+																		</div>
+
 
 																<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 																	<?php lsx_entry_top(); ?>
 
 
-																		<div class="entry-content col-xs-12 col-sm-12 col-md-12">
+																		<div class="entry-content col-xs-12 col-sm-12 col-md-6">
 																			<div class="lsx-to-summary">
 																				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 
@@ -108,10 +114,6 @@ get_header(); ?>
 
 
 																		<div class="entry-content col-xs-12 col-sm-12 col-md-12">
-																			<div class="lsx-to-summary">
-																				<h2 class="lsx-to-summary-title">Day by Day</h2>
-
-																			</div>
 
 																		<div class="itenary">
 																		<?php 	if ( lsx_to_has_itinerary() ) {
@@ -237,7 +239,7 @@ get_header(); ?>
 												</div>
 												</div>
 
-</div></div></div></div>
+</div></div></div>
 			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->

@@ -494,6 +494,11 @@ border:1px solid #000;}
 .single-lsx-to-tour .content{width: 1280px!important;padding:0!important;margin:0px auto!important;height:80vh;}
 .single-lsx-to-tour .tabcontent .col-md-12{padding:0!important;}
 .single-lsx-to-tour .lsx-tour-module{padding-top:8vh;}
+.lsx-to-archive-thumb {height:80vh;
+    flex-shrink: 0;
+    position: relative;
+    width: 50%;
+}
 .single-lsx-to-tour .tours-nav{position: absolute;
     bottom: 0;
     left: 15px;
