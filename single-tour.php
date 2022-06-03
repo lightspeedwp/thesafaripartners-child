@@ -1,50 +1,53 @@
 <?php
 /**
- * Tour Content Part
+ * Tour Single Template
  *
- * @package  tour-operator
- * @category tour
+ * @package     tour-operator
+ * @category    tour
  */
 
-global $lsx_to_archive, $post;
+get_header(); ?>
 
-if ( 1 !== $lsx_to_archive ) {
-	$lsx_to_archive = false;
-}
+<?php lsx_content_wrap_before(); ?>
+
+	<div id="primary" class="content-area col-sm-12 <?php echo esc_attr( lsx_main_class() ); ?>">
+
+		<?php lsx_content_before(); ?>
+
+		<main id="main" class="site-main" role="main">
+
+			<?php lsx_content_top(); ?>
+
+			<?php
+            while ( have_posts() ) :
+the_post();
 ?>
 
-<?php lsx_entry_before(); ?>
+				<section id="summary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
 
-<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
-	<?php lsx_entry_top(); ?>
+					<div id="collapse-summary" class="collapse in">
+						<div class="collapse-inner">
+							<div class="row">
+								<?php lsx_to_content( 'content', 'tour' ); ?>
+							</div>
+						</div>
+					</div>
+				</section>
 
-	<?php if ( is_single() && false === $lsx_to_archive ) { ?>
+			<?php endwhile; ?>
 
-		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
-			<div class="lsx-to-summary">
-				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
-			</div>
+			<?php lsx_content_bottom(); ?>
 
-			<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
-			<?php the_content(); ?>
-			<?php lsx_to_sharing(); ?>
-		</div>
+		</main><!-- #main -->
 
-	<?php } elseif ( is_search() || empty( tour_operator()->options[ get_post_type() ]['disable_entry_text'] ) ) { ?>
+		<?php lsx_content_after(); ?>
 
-		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
-		<?php
-			lsx_to_entry_content_top();
-			the_excerpt();
-			lsx_to_entry_content_bottom();
-		?>
-		</div>
+	</div><!-- #primary -->
 
-	<?php } ?>
+<?php lsx_content_wrap_after(); ?>
 
-	<?php lsx_entry_bottom(); ?>
-
-</article>
-
+<?php //get_sidebar(); ?>
+<?php //get_sidebar( 'alt' ); ?>
 <?php
-lsx_entry_after();
+get_footer();
