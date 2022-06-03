@@ -146,11 +146,11 @@ document.getElementById("Open").click();
 
 																										<div class="col-md-6 lsx-tour-module-image">
 																											<div class="lsx-banner-image-wrap">
-																			              <div class="lsx-to-archive-thumb">
+
 																			                <div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $thumb ); ?>');">
 																			                  <?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
 																			                </div>
-																			              </div>
+																			              
 																										</div>
 																										</div>
 
