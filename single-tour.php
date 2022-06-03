@@ -127,7 +127,7 @@ document.getElementById("tours-wizard").click();
 																			  <?php 	if ( lsx_to_has_itinerary() ) {
 																			$itinerary_count = 1;
 																			?>
-																			<section id="itinerary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+																			<div id="itinerary" class="<?php lsx_to_collapsible_class( 'tour', false ); ?>">
 
 																			<div id="collapse-itinerary" class="collapse in">
 																			<div class="collapse-inner">
@@ -189,7 +189,7 @@ document.getElementById("tours-wizard").click();
 																			  </div>
 
 																			  <?php lsx_to_itinerary_read_more(); ?>
-																			</section>
+																			</div>
 
 																			<?php } ?>
 
