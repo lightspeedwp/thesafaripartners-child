@@ -239,8 +239,8 @@ document.getElementByClassName("tours-wizard").click();
 																	<div class="col-md-6 lsx-tour-module-image">
 																		<div class="lsx-banner-image-wrap">
 
-																		<div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $envira_gallery ); ?>');">
-																			<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+																		<div class="lsx-to-thumb-slot" >
+																			<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $envira_gallery . '">' ); ?>
 																		</div>
 
 																	</div>
@@ -276,9 +276,7 @@ document.getElementByClassName("tours-wizard").click();
 													</div>
 												</div>
 												</div>
-											</div>
-										</div>
-										</div>
+
 
 												<div class="tours-nav">
 													<div class="col-md-4">
