@@ -255,9 +255,8 @@ document.getElementByClassName("tours-wizard").click();
 
 																			</div>
 
-																			<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
-																			<?php the_content(); ?>
-																			<?php lsx_to_sharing(); ?>
+																			<?php lsx_to_included_block(); ?>
+																	
 																		</div>
 
 
