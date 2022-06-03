@@ -122,6 +122,7 @@ get_header(); ?>
 																			?>
 
 																			    <div class="lsx-wizard-step">
+																						<h4><?php lsx_to_itinerary_title(); ?></h4>
 																			        <div class="step-content">
 																			          <div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
 																			            <div class="lsx-to-archive-container">
