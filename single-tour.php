@@ -236,8 +236,19 @@ document.getElementByClassName("tours-wizard").click();
 
 																<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 																	<?php lsx_entry_top(); ?>
+																	<div class="col-md-6 lsx-tour-module-image">
+																		<div class="lsx-banner-image-wrap">
 
+																		<div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $envira_gallery ); ?>');">
+																			<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+																		</div>
 
+																	</div>
+																	</div>
+
+																	<div class="col-xs-12 col-sm-12 col-md-6">
+																	<div class="lsx-to-archive-wrapper">
+																		<div class="lsx-to-tour-content">
 																		<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
 																			<div class="lsx-to-summary">
 																				<h2 class="lsx-to-summary-title">Accommodation</h2>
@@ -265,6 +276,9 @@ document.getElementByClassName("tours-wizard").click();
 													</div>
 												</div>
 												</div>
+											</div>
+										</div>
+										</div>
 
 												<div class="tours-nav">
 													<div class="col-md-4">
