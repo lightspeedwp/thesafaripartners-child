@@ -530,7 +530,7 @@ border:1px solid #000;}
     margin: 0;
     top: 1px;}
 
-    .single-lsx-to-tour .lsx-wizard-buttons-wrapper{width: 400px;
+    .single-lsx-to-tour .lsx-wizard-buttons-wrapper{width: 400px;float:right;
     padding: 0 0px;}
 
 /*About */
