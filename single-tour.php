@@ -48,6 +48,8 @@ document.getElementByClassName("tours-wizard").click();
 												<button class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
 												<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
 												<button class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
+												<button class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</button>
+
 										</div>
 									</div>
 
@@ -257,8 +259,8 @@ document.getElementByClassName("tours-wizard").click();
 
 																			<?php lsx_to_included_block(); ?>
 
-																		</div>
-
+																		</div></div></div></div>
+</div>
 
 
 																	<?php lsx_entry_bottom(); ?>
@@ -274,7 +276,74 @@ document.getElementByClassName("tours-wizard").click();
 															<?php	wp_reset_query(); ?>
 													</div>
 												</div>
+
+												<div id="Price" class="tabcontent">
+													<div class="col-md-12 col-sm-12">
+														<div class="lsx-tour-module">
+															<?php if ( have_posts() ) : ?>
+
+																<?php
+																while ( have_posts() ) :
+																	the_post();
+																?>
+
+																<?php lsx_entry_before(); ?>
+
+																<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
+																	<?php lsx_entry_top(); ?>
+																	<div class="col-md-6 lsx-tour-module-image">
+																		<div class="lsx-banner-image-wrap">
+
+																		<div class="lsx-to-thumb-slot" >
+																			<picture>
+																				<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+																				<picture>
+																		</div>
+
+																	</div>
+																	</div>
+
+																	<div class="col-xs-12 col-sm-12 col-md-6">
+																	<div class="lsx-to-archive-wrapper">
+																		<div class="lsx-to-tour-content">
+																		<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
+																			<div class="lsx-to-summary">
+																				<h2 class="lsx-to-summary-title">Dates & Prices</h2>
+
+																			</div>
+
+																			<table class="table table-striped">
+
+
+																							<thead>
+																								<tr>
+																									<th>Start Date:</th><th>End Date:</th><th>Price Sharing:</th><th>Single Add:</th><th></th>
+																							  	</tr>
+																							</thead>
+
+																							<tbody>
+																								<tr><td class="start-date" data-gform-date="04/01/2022">01 Apr 2022</td><td class="end-date" data-gform-date="06/30/2022">30 Jun 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $4590" data-price="4590" title="Original price:4590">USD $<strong>4,590</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1090" data-price="1090" title="Original price:1090">USD $<strong>1,090</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="07/01/2022">01 Jul 2022</td><td class="end-date" data-gform-date="10/31/2022">31 Oct 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $5780" data-price="5780" title="Original price:5780">USD $<strong>5,780</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1445" data-price="1445" title="Original price:1445">USD $<strong>1,445</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="11/01/2022">01 Nov 2022</td><td class="end-date" data-gform-date="11/30/2022">30 Nov 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $4590" data-price="4590" title="Original price:4590">USD $<strong>4,590</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1090" data-price="1090" title="Original price:1090">USD $<strong>1,090</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="12/01/2022">01 Dec 2022</td><td class="end-date" data-gform-date="03/31/2023">31 Mar 2023</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $3545" data-price="3545" title="Original price:3545">USD $<strong>3,545</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $775" data-price="775" title="Original price:775">USD $<strong>775</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr>				</tbody><tbody>
+																						</tbody></table>
+																			<?php lsx_to_included_block(); ?>
+
+																		</div></div></div></div>
+</div>
+
+
+																	<?php lsx_entry_bottom(); ?>
+
+																</article>
+
+																<?php
+																lsx_entry_after(); ?>
+
+																<?php endwhile; ?>
+
+															<?php endif; ?>
+															<?php	wp_reset_query(); ?>
+													</div>
 												</div>
+
 
 
 												<div class="tours-nav">
