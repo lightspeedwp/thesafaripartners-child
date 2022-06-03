@@ -240,8 +240,7 @@ document.getElementByClassName("tours-wizard").click();
 																		<div class="lsx-banner-image-wrap">
 
 																		<div class="lsx-to-thumb-slot" >
-																			<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $envira_gallery . '">' ); ?>
-																		</div>
+																			<?php echo esc_url( $envira_gallery ); ?>																		</div>
 
 																	</div>
 																	</div>
