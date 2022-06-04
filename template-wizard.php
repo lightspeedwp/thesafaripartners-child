@@ -130,10 +130,11 @@ get_header(); ?>
 
                               <?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
                                 <div class="lsx-to-widget-thumb">
-                                  <h4 class="lsx-to-title">
-                                      <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-                                    </h4>
+                                    <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
                                 </div>
+                                <h4 class="lsx-to-title">
+                                    <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                                  </h4>
                               <?php else : ?>
                                 <div class="lsx-to-widget-thumb">
                                     <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
@@ -143,7 +144,12 @@ get_header(); ?>
                                   </h4>
                               <?php endif; ?>
 
+                            <div class="lsx-to-content">
+                              <h4 class="lsx-to-title">
+                                  <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                                </h4>
 
+                            </div>
                           </article>
                         <?php endforeach; ?>
 
@@ -187,12 +193,14 @@ get_header(); ?>
                                         <span aria-hidden="true"></span>
                                       </div>
                                         <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
-                                        <h4 class="lsx-to-title">
-                                            <?php the_title(); ?>
-                                        </h4>
                                     </div>
 
-                                  </div>
+                                    <div class="lsx-to-content">
+                                      <h4 class="lsx-to-title">
+                                          <?php the_title(); ?>
+                                      </h4>
+
+                                    </div></div>
 
                                   <?php endwhile; ?>
                                   <?php	wp_reset_query(); ?>
