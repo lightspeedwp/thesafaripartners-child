@@ -597,7 +597,7 @@ $(document).ready(function () {
 			"<div class='lsx-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
 					"<button class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right lsx-wizard-button-next <?= $counter ?>' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-right lsx-wizard-button-next <? $counter ();?>' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
