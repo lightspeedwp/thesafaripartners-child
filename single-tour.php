@@ -12,7 +12,7 @@ function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    tabcontent[i].style.display = "none!important";
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -52,7 +52,7 @@ function openCity(evt, cityName) {
 										</div>
 									</div>
 
-												<div id="Overview" class="tabcontent tours-wizard">
+												<div id="Overview" class="tabcontent tours-wizard" style="display: block;">
 													<div class="col-md-12 col-sm-12">
 														<div class="lsx-tour-module">
 															<?php if ( have_posts() ) : ?>
