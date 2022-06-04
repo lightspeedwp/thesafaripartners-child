@@ -844,18 +844,17 @@ $(document).ready(function () {
 			progressButtons: {
 				borderBottom: {
 					css: {
-						'border-width': '4px',
-						'border-color': '#E6E6E6'
+
 					}
 				},
 				css: {
-					'padding': '0 4px',
+
 
 				},
 				markActive: false,
 				completed: {
 					css: {
-						'background-color': '#E6E6E6'
+					
 					},
 					icon: {
 						cssClass: 'glyphicon glyphicon-ok-sign',
