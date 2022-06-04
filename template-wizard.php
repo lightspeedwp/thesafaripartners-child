@@ -6,15 +6,16 @@
  */
  global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link;
 
- static $counter = 0;
- $counter++
-
  if ( empty( $disable_single_link ) ) {
  	$title_link = esc_url( get_term_link( $term, $taxonomy ) );
  } else {
  	$title_link = '';
  }
 get_header(); ?>
+<?php
+static $counter = 0;
+$counter++
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
