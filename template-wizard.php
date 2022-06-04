@@ -5,6 +5,8 @@
  * @package lsx
  */
  global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link;
+ $GLOBALS['counter'] = ++$GLOBALS['counter'] ?? 0;
+$counter = $GLOBALS['counter'];
 
  if ( empty( $disable_single_link ) ) {
  	$title_link = esc_url( get_term_link( $term, $taxonomy ) );
@@ -592,8 +594,8 @@ $(document).ready(function () {
 		var $buttons = $("" +
 			"<div class='lsx-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
-					"<button class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right lsx-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button id="item_<?= $counter ?>"> class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
+					"<button id="item_<?= $counter ?>"> class='btn btn-primary pull-right lsx-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
