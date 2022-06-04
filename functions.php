@@ -118,7 +118,7 @@ function lsx_child_register_block_patterns() {
 	$block_patterns = apply_filters( 'lsx_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
-		$pattern_file = get_child_theme_file_path( '/includes/patterns/' . $block_pattern . '.php' );
+		$pattern_file = get_stylesheet_directory( '/includes/patterns/' . $block_pattern . '.php' );
 
 		register_block_pattern(
 			'lsx/' . $block_pattern,
