@@ -594,8 +594,8 @@ $(document).ready(function () {
 		var $buttons = $("" +
 			"<div class='lsx-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
-					"<button id="item_<?= $counter ?>"> class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
-					"<button id="item_<?= $counter ?>"> class='btn btn-primary pull-right lsx-wizard-button-next' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
+					"<button class='btn btn-primary pull-right lsx-wizard-button-next <?= $counter ?>' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
