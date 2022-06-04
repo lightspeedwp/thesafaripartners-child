@@ -803,7 +803,7 @@ $(document).ready(function () {
 				'position': 'relative',
 				'overflow': 'hidden',
 				'width': '100%',
-				'min-height': globalMinHeight + 'px'
+				'min-height': '80vh'
 			});
 		return result;
 	}
