@@ -115,8 +115,15 @@ font-weight: bold;}
 .lsx-wizard .nav-pills li.active{border-bottom:4px solid #999;}
 .lsx-wizard-buttons-wrapper{margin-top:-10px;margin-bottom:10px;}
 .lsx-wizard-buttons-wrapper .btn{padding:0!important;background:#fff!important; border:none!important;-webkit-box-shadow: none;
-box-shadow: none;color:#000!important;font-size:20px;}
+box-shadow: none;color:#000!important;font-size:19px;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{color:#000!important;}
+
+.lsx-wizard-button-previous:before {content:content: "\f30a";font-family: FontAwesome;font-weight:100;
+color: #9d9d9d;
+font-size: 17px;}
+.lsx-wizard-button-next:after {content:content: "\f30b";font-family: FontAwesome;font-weight:100;
+color: #9d9d9d;
+font-size: 17px;}
 .lsx-wizard-progress-buttons-wrapper{position: relative;;
     z-index: 1;
     width: 1240px;
