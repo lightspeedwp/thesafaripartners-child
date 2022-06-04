@@ -21,8 +21,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-// Get the element with id="defaultOpen" and click on it
-document.getElementsByClassName("tours-wizard").click();
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -429,6 +427,9 @@ document.getElementsByClassName("tours-wizard").click();
 <?php //get_sidebar(); ?>
 <?php //get_sidebar( 'alt' ); ?>
 <script type="text/javascript">
+// Get the element with id="defaultOpen" and click on it
+document.getElementsByClassName("tours-wizard").click();
+
 $(document).ready(function () {
     $("#wizard").lsxWizard();
 });
