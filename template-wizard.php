@@ -136,6 +136,7 @@ get_header(); ?>
                                 <div class="lsx-to-widget-thumb">
                                     <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
                                 </div>
+                                <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
                               <?php endif; ?>
 
                             <div class="lsx-to-widget-content bottom">
@@ -183,11 +184,11 @@ get_header(); ?>
                                     <div class="lsx-to-widget-thumb">
 
                                       <div class="checkbox-wrapper">
-                                        <input class="btn-check"  type="checkbox" onclick="filterSelection('destination-<?php the_title(); ?>')" />
+                                        <input class="btn-check"  type="checkbox" onclick="filterSelection('destination-<?php the_title();?>')" />
                                         <span aria-hidden="true"></span>
                                       </div>
                                         <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
-
+                                        <?php the_title(); ?>
 
                                     </div>
 
