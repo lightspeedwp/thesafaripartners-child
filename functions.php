@@ -14,9 +14,9 @@ if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) )
 
 	add_action( 'after_setup_theme', 'remove_patterns' );
 	function remove_patterns() {
-	   remove_theme_support( 'core-block-patterns' );
+	   remove_theme_support( 'lsx_register_block_patterns' );
 	}
-	
+
 /**
  * Register our sidebars and widgetized areas.
  */
