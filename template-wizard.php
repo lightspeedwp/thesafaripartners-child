@@ -72,10 +72,8 @@ get_header(); ?>
             									</div>
             								<?php endif; ?>
 
-            							<div class="lsx-to-content">
-            								<h4>
+            							<div class="lsx-to-content">						
                                 <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-            						            </h4>
             							</div>
             						</article>
             			<?php endforeach; ?>
