@@ -100,7 +100,7 @@ function lsx_child_register_block_patterns() {
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
-			register_block_pattern_category( $name, $properties );
+			register_Child_block_pattern_category( $name, $properties );
 		}
 	}
 
@@ -115,15 +115,15 @@ function lsx_child_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
-	$block_patterns = apply_filters( 'lsx_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'lsx_child_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 		$pattern_file = get_stylesheet_directory( '/includes/patterns/' . $block_pattern . '.php' );
 
-		register_block_pattern(
-			'lsx/' . $block_pattern,
+		register_block_pattern_child(
+			'lsx-child/' . $block_pattern,
 			require $pattern_file
 		);
 	}
 }
-add_action( 'init', 'lsx_child_register_block_patterns', 120 );
+add_action( 'init', 'lsx_child_register_block_patterns', 10 );
