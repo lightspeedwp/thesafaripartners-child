@@ -381,7 +381,22 @@ document.getElementByClassName("tours-wizard").click();
 																			</div>
 
 
-																			<?php lsx_to_included_block(); ?>
+																			<?php
+
+		lsx_to_accommodation_units();
+
+		lsx_to_accommodation_facilities( '<section id="facilities" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-facilities' ) . '>' . esc_html__( 'Facilities', 'tour-operator' ) . '</h2><div id="collapse-facilities" class="collapse in"><div class="collapse-inner"><div class="row facilities-wrapper">', '</div></div></div></section>' );
+
+		lsx_to_included_block();
+
+		$connected_tours = get_post_meta( get_the_ID(), 'tour_to_accommodation', false );
+
+		if ( lsx_to_accommodation_display_connected_tours() && post_type_exists( 'tour' ) && is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
+			lsx_to_related_items( $connected_tours, '<section id="tours" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-related-items' ) . '>' . esc_html__( 'Related Tours', 'tour-operator' ) . '</h2><div id="collapse-related-items" class="collapse in"><div class="collapse-inner">', '</div></div></section>', true, 'tour' );
+		}
+
+		lsx_to_accommodation_posts();
+ ?>
 
 																		</div></div></div></div>
 </div>
