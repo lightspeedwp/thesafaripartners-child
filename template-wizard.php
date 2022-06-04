@@ -854,7 +854,7 @@ $(document).ready(function () {
 				markActive: false,
 				completed: {
 					css: {
-					
+
 					},
 					icon: {
 						cssClass: 'glyphicon glyphicon-ok-sign',
@@ -877,13 +877,14 @@ $(document).ready(function () {
 							'-webkit-border-radius': '300px',
 							'-moz-border-radius': '300px',
 							'border-radius': '300px',
-							'color': '#FFFFFF',
+							'color': '#000',
 							'float': 'left',
 							'font-size': '36px',
 							'height': '70px',
 							'margin-right': '10px',
 							'text-align': 'center',
 							'width': '70px',
+              'border-bottom': '3px solid #000',
 							'font-weight': 'bold',
 							'padding-top': '8px'
 						}
