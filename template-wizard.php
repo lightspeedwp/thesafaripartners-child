@@ -50,7 +50,7 @@ get_header(); ?>
             </div>
 
             <div class="lsx-wizard-step">
-                <h4>Who</h4>
+                <h4>1. Who</h4>
                 <div class="step-content">
                   <div class="wizard-who">
                     <div class="col-md-3">
@@ -115,7 +115,7 @@ get_header(); ?>
 
 
             <div class="lsx-wizard-step">
-                <h4>What</h4>
+                <h4>2. What</h4>
                 <div class="step-content">
                   <div class="wizard-what">
                     <div class="col-md-3">
@@ -180,7 +180,7 @@ get_header(); ?>
             </div>  </div>
 
             <div class="lsx-wizard-step">
-                <h4>Where</h4>
+                <h4>3. Where</h4>
                 <div class="step-content">
                   <div class="wizard-where">
                     <div class="col-md-12">
@@ -235,7 +235,7 @@ get_header(); ?>
             </div>
 
             <div class="lsx-wizard-step">
-                <h4>When</h4>
+                <h4>4. When</h4>
                 <div class="step-content">
                   <div class="wizard-when">
                     <div class="col-md-3">
