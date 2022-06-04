@@ -170,7 +170,7 @@ outline-color: #fff;}
       background-color: #999!important;
       -webkit-box-shadow: none;
       box-shadow: none;
-      color: #fff!important;border-radius:0; padding:14px 50px!important;left: 40% !important;}
+      color: #fff!important;border-radius:0!important; padding:14px 50px!important;left: 40% !important;}
 
 
 .bottom-contact{position: absolute;
