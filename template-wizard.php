@@ -144,8 +144,6 @@ get_header(); ?>
                               <?php endif; ?>
 
 
-
-                            </div>
                           </article>
                         <?php endforeach; ?>
 
@@ -194,7 +192,7 @@ get_header(); ?>
                                         </h4>
                                     </div>
 
-                                    </div>
+                                  </div>
 
                                   <?php endwhile; ?>
                                   <?php	wp_reset_query(); ?>
