@@ -183,7 +183,7 @@ get_header(); ?>
                                     <div class="lsx-to-widget-thumb">
 
                                       <div class="checkbox-wrapper">
-                                        <input class="btn-check"  type="checkbox" onclick="filterSelection('destination-<?php echo esc_html( apply_filters( 'the_title' ) ); ?>')" />
+                                        <input class="btn-check"  type="checkbox" onclick="filterSelection('destination-<?php the_title(); ?>')" />
                                         <span aria-hidden="true"></span>
                                       </div>
                                         <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
