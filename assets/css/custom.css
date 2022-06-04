@@ -157,7 +157,7 @@ transition: 0.5s;}
 
     .wizard-what .lsx-to-widget-thumb img {overflow:hidden;height:160px;object-fit: cover;}
 
-    .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{overflow:hidden;height:200px!important;object-fit: cover;}
+    .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{overflow:hidden;height:240px!important;object-fit: cover;}
 
     .lsx-wizard .checkbox-wrapper {
       position: absolute;
@@ -168,7 +168,6 @@ transition: 0.5s;}
         width: 25px;
         z-index: 9;background:#fff;
     }
-.lsx-wizard input:checked + .checkbox-wrapper + .lsx-to-widget-thumb + .lsx-to-widget-item-wrap{border:1px solid #ccc;}
 
     .lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + span::after {
     content: "\f00c";font-family: FontAwesome;
