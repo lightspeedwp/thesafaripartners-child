@@ -5,8 +5,9 @@
  * @package lsx
  */
  global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link;
- $GLOBALS['counter'] = ++$GLOBALS['counter'] ?? 0;
-$counter = $GLOBALS['counter'];
+
+ static $counter = 0;
+ $counter++
 
  if ( empty( $disable_single_link ) ) {
  	$title_link = esc_url( get_term_link( $term, $taxonomy ) );
