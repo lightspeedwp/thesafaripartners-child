@@ -786,7 +786,7 @@ $(document).ready(function () {
 
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
-			minHeight: 680,
+			minHeight: 580,
 			activeStep: 1,
 			localization: {
 				buttons: {
