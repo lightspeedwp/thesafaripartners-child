@@ -136,7 +136,6 @@ font-size: 14px;
 border: none;
 outline: none;
 cursor: pointer;
-padding: 0px 10px 2px;
 transition: 0.5s;}
 
 .lsx-wizard .nav-justified>li, .lsx-wizard .nav-tabs.nav-justified>li {
