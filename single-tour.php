@@ -405,7 +405,7 @@ document.getElementsByClassName("tours-wizard").click();
 
 												<div class="tours-nav">
 													<div class="col-md-4">
-														<button class="btn lsx-btn">Book It!</button>
+														<button class="btn lsx-btn popup-inquire">Book It!</button>
 														</div>
 														<div class="col-md-4">
 															<button class="btn lsx-btn">Find out more</button>
