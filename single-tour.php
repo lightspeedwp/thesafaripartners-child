@@ -427,13 +427,9 @@ function openCity(evt, cityName) {
 <?php //get_sidebar(); ?>
 <?php //get_sidebar( 'alt' ); ?>
 <script type="text/javascript">
-// Get the element with id="defaultOpen" and click on it
-document.getElementsByClassName("tours-wizard").click();
-
 $(document).ready(function () {
     $("#wizard").lsxWizard();
 });
-
 ;(function ($, window, document, undefined) {
 
 	var settings;
@@ -1115,7 +1111,8 @@ $(document).ready(function () {
 			}
 		}
 	};
-
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementsByClassName("tours-wizard").click();
 })( jQuery, window, document );
 </script>
 
