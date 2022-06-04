@@ -156,6 +156,25 @@ transition: 0.5s;}
 
     .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{overflow:hidden;height:200px!important;object-fit: cover;}
 
+    .lsx-wizard .checkbox-wrapper {
+      position: absolute;
+        font-size: 14px;border-radius: 50%;
+        top: 5px;
+        right: 20px;
+        height: 25px;
+        width: 25px;
+        z-index: 9;background:#fff;
+    }
+
+    .lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + span::after {
+    content: "\f00c";font-family: FontAwesome;
+    top: -0.2px;
+    left: 2px;font-weight:100;
+    color: #9d9d9d;
+    font-size: 14px;
+    position: absolute;
+    }
+
 /*Content */
 .archive.category .post{width:32%;float:left;margin:8px;}
 .intro-wrap p{font-size:12px;padding:2px;font-family: argesta_displayregular, serif;}
