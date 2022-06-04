@@ -258,7 +258,7 @@ document.getElementsByClassName("tours-wizard").click();
 
 																			</div>
 
-																			<?php tour_to_accommodation(); ?>
+																			<?php lsx_to_included_block(); ?>
 
 																		</div></div></div></div>
 </div>
