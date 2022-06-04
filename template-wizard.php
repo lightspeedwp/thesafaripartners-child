@@ -159,7 +159,7 @@ get_header(); ?>
                 <h4>3. Where</h4>
                 <div class="step-content">
                   <div class="wizard-where">
-                    <div class="col-md-12">
+                    <div class="col-md-12 whereintro">
                       <h2>Where in Africa?</h2>
                       <p>Let us where you want to travel</p>
                       </div>
