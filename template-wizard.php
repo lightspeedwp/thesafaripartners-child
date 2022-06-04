@@ -193,11 +193,46 @@ get_header(); ?>
                 <h4>4. When</h4>
                 <div class="step-content">
                   <div class="wizard-when">
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                       <h2>Where in Africa?</h2>
                       <p>Let us what interests you</p>
                       </div>
-                      <div class="col-md-9">
+                      <div class="col-md-12">
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <h4>January</h4>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <h4>February</h4>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <h4>March</h4>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <h4>May</h4>
+                              </div>
+
+                        </article>
 
                     </div>
 
@@ -790,8 +825,8 @@ $(document).ready(function () {
 			activeStep: 1,
 			localization: {
 				buttons: {
-					next: 'Next',
-					previous: 'Previous',
+					next: 'Next Step',
+					previous: 'Previous Step',
 					finish: 'Finish',
 					loading: 'Loading...'
 				}
