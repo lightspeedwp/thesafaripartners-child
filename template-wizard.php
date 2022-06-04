@@ -72,7 +72,7 @@ get_header(); ?>
             									</div>
             								<?php endif; ?>
 
-            							<div class="lsx-to-content">						
+            							<div class="lsx-to-content">
                                 <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
             							</div>
             						</article>
@@ -786,7 +786,7 @@ $(document).ready(function () {
 
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
-			minHeight: 400,
+			minHeight: 680,
 			activeStep: 1,
 			localization: {
 				buttons: {
