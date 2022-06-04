@@ -104,22 +104,22 @@ font-weight: bold;}
 
 /*Wizard */
 .lsx-wizard-buttons-wrapper{margin:0 auto; width:1366px;padding:0 81px;}
-.wizard-who{margin:0 auto; width:1366px;padding:100px 30px 0px 80px;}
-.wizard-what{margin:0 auto; width:1366px;padding:100px 30px 0px 80px;}
-.wizard-where{margin:0 auto; width:1366px;padding:80px 40px 0px 60px;}
-.wizard-when{margin:0 auto; width:1366px;padding:100px 30px 0px 80px;}
+.wizard-who{margin:0 auto; width:1366px;padding:60px 30px 0px 80px;}
+.wizard-what{margin:0 auto; width:1366px;padding:60px 30px 0px 80px;}
+.wizard-where{margin:0 auto; width:1366px;padding:60px 40px 0px 60px;}
+.wizard-when{margin:0 auto; width:1366px;padding:60px 30px 0px 80px;}
 
 .lsx-wizard-progress-buttons-wrapper{margin:0 auto; width:1366px;}
 .lsx-wizard{position:relative;}
+.lsx-wizard .nav-pills li.active{border-bottom:3px solid #999;}
 .lsx-wizard-buttons-wrapper{margin-top:-10px;margin-bottom:10px;}
 .lsx-wizard-buttons-wrapper .btn{padding:0!important;background:#fff!important; border:none!important;-webkit-box-shadow: none;
 box-shadow: none;color:#000!important;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{color:#000!important;}
-.lsx-wizard-progress-buttons-wrapper{position: absolute;
-    right: 44%;
+.lsx-wizard-progress-buttons-wrapper{position: relative;;
     z-index: 1;
-    width: 700px;
-    margin: 1% auto 0;}
+    width: 1280px;
+    margin: 4px auto -10px;}
     .lsx-wizard-progress-buttons .steps1{display:none!important;}
     .lsx-wizard-progress-buttons li{background:none;}
       .lsx-wizard-progress-buttons a{background:none!important;color:#000;}
