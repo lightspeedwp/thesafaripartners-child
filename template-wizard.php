@@ -197,6 +197,7 @@ get_header(); ?>
                           <?php
                           $the_query = new WP_Query( array(
                           'post_type' => 'destination',
+                          'post_parent' => 0,
                         ) );
 
                         while ( $the_query->have_posts() ) :
