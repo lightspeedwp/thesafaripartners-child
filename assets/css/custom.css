@@ -168,7 +168,7 @@ transition: 0.5s;}
         width: 25px;
         z-index: 9;background:#fff;
     }
-.lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + .lsx-to-widget-item-wrap{border:1px solid #ccc;}
+[type="checkbox"]:checked + .lsx-to-widget-item-wrap{border:1px solid #ccc;}
 
     .lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + span::after {
     content: "\f00c";font-family: FontAwesome;
