@@ -153,7 +153,7 @@ transition: 0.5s;}
       overflow: hidden;}
 
       .lsx-wizard .lsx-to-content{font-family:argesta_displayregular, serif!important;
-   font-weight: bold;font-size:15px;}
+   font-weight:bold;font-size:18px;padding:2px;}
 
     .wizard-what .lsx-to-widget-thumb img {overflow:hidden;height:170px;object-fit: cover;}
 
