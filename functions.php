@@ -120,7 +120,7 @@ function lsx_child_register_block_patterns() {
 	foreach ( $block_patterns as $block_pattern ) {
 		$pattern_file = get_stylesheet_directory( '/includes/patterns/' . $block_pattern . '.php' );
 
-		register_block_pattern_child(
+		register_block_pattern(
 			'lsx-child/' . $block_pattern,
 			require $pattern_file
 		);
