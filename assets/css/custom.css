@@ -49,6 +49,7 @@ font-weight: bold;}
     font-size: inherit;
     margin-left: 5px;
     text-rendering: auto;}
+  #masthead{z-index:1000;}
 
 	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;}
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{font-family:argesta_displayregular, serif!important;
