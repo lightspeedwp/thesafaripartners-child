@@ -13,8 +13,8 @@
  }
 get_header(); ?>
 <?php
-static $counter = 0;
-$counter++
+$GLOBALS['counter'] = isset($GLOBALS['counter']) ? ++$GLOBALS['counter'] : 0;
+$counter = $GLOBALS['counter'];
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -597,7 +597,7 @@ $(document).ready(function () {
 			"<div class='lsx-wizard-buttons-wrapper row'>" +
 				"<div class='col-md-12'>" +
 					"<button class='btn btn-primary pull-left lsx-wizard-button-previous'></button>" +
-					"<button class='btn btn-primary pull-right lsx-wizard-button-next <? $counter ?>' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
+					"<button class='btn btn-primary pull-right lsx-wizard-button-next <?= $counter ?>' data-loading-text='" + settings.lsxWizard.localization.buttons.loading + "'></button>" +
 				"</div>" +
 			"</div>" +
 		"").css({
