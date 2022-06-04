@@ -139,8 +139,8 @@ get_header(); ?>
                                 <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
                               <?php endif; ?>
 
-                            <div class="lsx-to-widget-content bottom">
-                              <h4 class="lsx-to-widget-title text-left">
+                            <div class="lsx-to-content">
+                              <h4 class="lsx-to-title">
                                   <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
                                 </h4>
 
@@ -188,12 +188,10 @@ get_header(); ?>
                                         <span aria-hidden="true"></span>
                                       </div>
                                         <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
-                                        <?php the_title(); ?>
-
                                     </div>
 
-                                    <div class="lsx-to-widget-content">
-                                      <h4 class="lsx-to-widget-title text-center">
+                                    <div class="lsx-to-content">
+                                      <h4 class="lsx-to-title">
                                           <?php the_title(); ?>
                                       </h4>
 
