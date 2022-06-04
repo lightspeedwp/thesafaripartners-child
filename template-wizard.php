@@ -90,8 +90,8 @@ get_header(); ?>
             								<?php endif; ?>
 
 
-            							<div class="lsx-to-widget-content bottom">
-            								<h4 class="lsx-to-widget-title text-left">
+            							<div class="lsx-to-content">
+            								<h4>
                                 <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
             						</h4>
 
@@ -140,8 +140,9 @@ get_header(); ?>
 
                               <?php endif; ?>
 
-
+                              <div class="lsx-to-content">
                                   <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                                  </div>
 
 
 
