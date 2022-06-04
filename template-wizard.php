@@ -170,7 +170,7 @@ get_header(); ?>
                               <div class="lsx-to-slider-wrap">
                                 <div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
                           <?php
-                          $the_query = WP_Query( array(
+                          $the_query = new WP_Query( array(
                           'post_type' => 'destination',
                           'post_parent' => 0,
                         ) );
