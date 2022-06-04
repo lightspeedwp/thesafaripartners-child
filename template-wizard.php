@@ -4,13 +4,6 @@
  *
  * @package lsx
  */
- global $term, $taxonomy, $disable_placeholder, $disable_single_link, $lsx_to_archive, $post;
-
- if ( empty( $disable_single_link ) ) {
- 	$title_link = esc_url( get_term_link( $term, $taxonomy ) );
- } else {
- 	$title_link = '';
- }
 get_header(); ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
