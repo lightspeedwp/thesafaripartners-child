@@ -182,10 +182,13 @@ get_header(); ?>
                                   <div class="lsx-to-widget-item-wrap col-xs-4 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
                                     <div class="lsx-to-widget-thumb">
 
-                                      <a href="<?php the_permalink() ?>">
+                                      <div class="checkbox-wrapper">
+                                        <input class="btn-check"  type="checkbox" onclick="filterSelection('destination-<?php echo esc_html( apply_filters( 'the_title' ) ); ?>')" />
+                                        <span aria-hidden="true"></span>
+                                      </div>
                                         <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
 
-                                      </a>
+
                                     </div>
 
                                     <div class="lsx-to-widget-content">
