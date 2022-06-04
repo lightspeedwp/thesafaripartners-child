@@ -54,7 +54,7 @@ document.getElementsByClassName("tours-wizard").click();
 										</div>
 									</div>
 
-												<div id="Overview" class="tabcontent">
+												<div id="Overview" class="tabcontent tours-wizard">
 													<div class="col-md-12 col-sm-12">
 														<div class="lsx-tour-module">
 															<?php if ( have_posts() ) : ?>
