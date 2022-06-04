@@ -5,7 +5,6 @@
  * @package lsx
  */
 get_header(); ?>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -131,28 +130,17 @@ get_header(); ?>
 
                               <?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
                                 <div class="lsx-to-widget-thumb">
-                                  <?php
-                                  if ( ! empty( $title_link ) ) {
-                                    ?>
-                          <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+
+
                                     <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
 
-                                  <?php
-                                  if ( ! empty( $title_link ) ) {
-                                    ?>
-                          </a><?php } ?>
+
                                 </div>
                               <?php else : ?>
                                 <div class="lsx-to-widget-thumb">
-                                  <?php
-                                  if ( ! empty( $title_link ) ) {
-                                    ?>
-                          <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
+
                                     <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-                                  <?php
-                                  if ( ! empty( $title_link ) ) {
-                                    ?>
-                          </a><?php } ?>
+
                                 </div>
                               <?php endif; ?>
 
@@ -160,6 +148,7 @@ get_header(); ?>
                             <div class="lsx-to-widget-content bottom">
                               <h4 class="lsx-to-widget-title text-left">
                                   <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                                  <?php the_title(); ?>
                           </h4>
 
                             </div>
