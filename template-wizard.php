@@ -130,26 +130,18 @@ get_header(); ?>
 
                               <?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
                                 <div class="lsx-to-widget-thumb">
-
-
                                     <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
-
-
                                 </div>
                               <?php else : ?>
                                 <div class="lsx-to-widget-thumb">
-
                                     <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-
                                 </div>
                               <?php endif; ?>
-
 
                             <div class="lsx-to-widget-content bottom">
                               <h4 class="lsx-to-widget-title text-left">
                                   <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-                                  <?php the_title(); ?>
-                          </h4>
+                                </h4>
 
                             </div>
                           </article>
@@ -159,7 +151,8 @@ get_header(); ?>
 
                         </div>
                       </div>
-            </div>  </div>
+                    </div>
+                  </div>
 
             <div class="lsx-wizard-step">
                 <h4>3. Where</h4>
@@ -177,7 +170,7 @@ get_header(); ?>
                               <div class="lsx-to-slider-wrap">
                                 <div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
                           <?php
-                          $the_query = new WP_Query( array(
+                          $the_query = WP_Query( array(
                           'post_type' => 'destination',
                           'post_parent' => 0,
                         ) );
