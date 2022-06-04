@@ -4,7 +4,7 @@
  *
  * @package lsx
  */
- global $term, $taxonomy, $disable_placeholder, $disable_text, $disable_single_link; $post;
+ global $term, $taxonomy, $disable_placeholder, $disable_single_link, $lsx_to_archive, $post;
 
  if ( empty( $disable_single_link ) ) {
  	$title_link = esc_url( get_term_link( $term, $taxonomy ) );
