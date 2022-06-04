@@ -190,11 +190,7 @@ get_header(); ?>
                                         <?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
                                     </div>
 
-                                    
-                                          <?php the_title(); ?>
-
-
-                                    </div></div>
+                                  </div>
 
                                   <?php endwhile; ?>
                                   <?php	wp_reset_query(); ?>
