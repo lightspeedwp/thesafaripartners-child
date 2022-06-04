@@ -118,8 +118,8 @@ box-shadow: none;color:#000!important;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{color:#000!important;}
 .lsx-wizard-progress-buttons-wrapper{position: relative;;
     z-index: 1;
-    width: 1280px;
-    margin: 4px auto -10px;}
+    width: 1260px;
+    margin: 4px auto -46x;}
     .lsx-wizard-progress-buttons .steps1{display:none!important;}
     .lsx-wizard-progress-buttons li{background:none;}
       .lsx-wizard-progress-buttons a{background:none!important;color:#000;}
