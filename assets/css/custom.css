@@ -36,7 +36,7 @@
    h1,h2,h3,h4,h5 {font-family:argesta_displayregular, serif!important;
 font-weight: bold;}
 	body,p,h6{font-family:"moret",serif!important;}
-  span{font-family:"moret",serif;}
+  span, th, tr, td, table{font-family:"moret",serif;}
   .page.safari-styles {margin-top: 0px;}
 
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item h4{font-family:"moret",serif!important;}
