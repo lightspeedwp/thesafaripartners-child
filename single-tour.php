@@ -243,7 +243,7 @@ document.getElementByClassName("tours-wizard").click();
 																		<div class="lsx-banner-image-wrap">
 
 																		<div class="lsx-to-thumb-slot" >
-																		 <?php echo do_shortcode('[gallery id="133313" columns="1" carousel="1"]'); ?>
+																			<?php lsx_to_gallery(); ?>
 																		</div>
 
 																	</div>
