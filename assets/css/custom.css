@@ -152,7 +152,10 @@ transition: 0.5s;}
       align-items: center;
       overflow: hidden;}
 
-    .wizard-what .lsx-to-widget-thumb img {overflow:hidden;height:190px;object-fit: cover;}
+      .lsx-wizard .lsx-to-widget-thumb{font-family:argesta_displayregular, serif!important;
+   font-weight: bold;font-size:15px;}
+
+    .wizard-what .lsx-to-widget-thumb img {overflow:hidden;height:170px;object-fit: cover;}
 
     .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{overflow:hidden;height:200px!important;object-fit: cover;}
 
