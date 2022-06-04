@@ -153,9 +153,9 @@ transition: 0.5s;}
       overflow: hidden;}
 
       .lsx-wizard .lsx-to-content{font-family:argesta_displayregular, serif!important;
-   font-weight:bold;font-size:18px;padding:2px;}
+   font-weight:bold;font-size:16px;padding:2px 4px;}
 
-    .wizard-what .lsx-to-widget-thumb img {overflow:hidden;height:170px;object-fit: cover;}
+    .wizard-what .lsx-to-widget-thumb img {overflow:hidden;height:160px;object-fit: cover;}
 
     .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{overflow:hidden;height:200px!important;object-fit: cover;}
 
