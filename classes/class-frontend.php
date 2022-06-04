@@ -88,7 +88,7 @@ class Frontend {
 		remove_action( 'lsx_to_fast_facts', 'lsx_to_tour_single_fast_facts' );
 		add_action( 'lsx_content_bottom', 'lsx_to_destination_tours_tsp' );
 		add_action( 'lsx-thumbnail-single', 'lsx_to_destination_single_fast_facts' );
-		remove_action( 'lsx_register_block_patterns', 9 );
+		remove_action( 'lsx_register_block_patterns', 111 );
 	}
 
 }
