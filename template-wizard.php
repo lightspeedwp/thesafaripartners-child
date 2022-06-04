@@ -132,9 +132,7 @@ get_header(); ?>
                                 <div class="lsx-to-widget-thumb">
                                     <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
                                 </div>
-                                <h4 class="lsx-to-title">
-                                    <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-                                  </h4>
+
                               <?php else : ?>
                                 <div class="lsx-to-widget-thumb">
                                     <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
@@ -144,12 +142,11 @@ get_header(); ?>
                                   </h4>
                               <?php endif; ?>
 
-                            <div class="lsx-to-content">
-                              <h4 class="lsx-to-title">
-                                  <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-                                </h4>
 
-                            </div>
+                                  <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                              
+
+
                           </article>
                         <?php endforeach; ?>
 
