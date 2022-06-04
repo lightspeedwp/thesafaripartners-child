@@ -115,7 +115,7 @@ font-weight: bold;}
 .lsx-wizard .nav-pills li.active{border-bottom:4px solid #999;}
 .lsx-wizard-buttons-wrapper{margin-top:-10px;margin-bottom:10px;}
 .lsx-wizard-buttons-wrapper .btn{padding:0!important;background:#fff!important; border:none!important;-webkit-box-shadow: none;
-box-shadow: none;color:#000!important;}
+box-shadow: none;color:#000!important;font-size:20px;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{color:#000!important;}
 .lsx-wizard-progress-buttons-wrapper{position: relative;;
     z-index: 1;
