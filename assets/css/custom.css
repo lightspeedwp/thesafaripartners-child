@@ -176,6 +176,9 @@ transition: 0.5s;}
         z-index: 9;background:#fff;
     }
 
+    .lsx-wizard .wizard-when label{width:80%; float:left; font-family:argesta_displayregular, serif!important;
+ font-weight:bold;font-size:16px;}
+
     .lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + span::after {
     content: "\f00c";font-family: FontAwesome;
     top: -0.2px;
