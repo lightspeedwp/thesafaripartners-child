@@ -102,7 +102,7 @@ font-weight: bold;}
 .lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header{padding:10px;margin:0;position:relative;}
 .archive-header-wrapper.banner-archive{margin:0;padding:0;z-index:0;}
 
-.post-template-default .container{margin:0 auto; width:1366px;padding:0 81px;}
+.post-template-default .content{margin:0 auto; width:1366px;padding:0 81px;}
 
 /*Wizard */
 .lsx-wizard-buttons-wrapper{margin:0 auto; width:1366px;padding:0 81px;}
