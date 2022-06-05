@@ -24,7 +24,7 @@ get_header(); ?>
         <div id="wizard" class="lsx-wizard" style="display: none;">
 
             <div class="lsx-wizard-step">
-                <div class="step-content introslide" style="display: block;">
+                <div class="step-content introslide">
                   <?php if ( have_posts() ) : ?>
 
               			<?php
