@@ -43,7 +43,7 @@ function openCity(evt, cityName) {
 								<div class="col-md-12 outer-container">
 									<div class="tab">
 
-												<button class="tablinks tours-wizard active" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
+												<button class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
 												<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
 												<button class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
 												<button class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</button>
@@ -52,7 +52,7 @@ function openCity(evt, cityName) {
 										</div>
 									</div>
 
-												<div id="Overview" class="tabcontent tours-wizard">
+												<div id="Overview" class="tabcontent tours-wizard" style="display: block;">
 													<div class="col-md-12 col-sm-12">
 														<div class="lsx-tour-module">
 															<?php if ( have_posts() ) : ?>
