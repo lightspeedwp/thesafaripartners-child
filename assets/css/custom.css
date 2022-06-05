@@ -205,7 +205,7 @@ transition: 0.5s;}
     z-index: 0;}
 
     .lsx-wizard .wizard-when .checkbox-wrapper {
-    position: absolute;
+    position: relative;;
     font-size: 14px;
     border-radius: 50%;
     top: 0px;
@@ -216,7 +216,7 @@ transition: 0.5s;}
     background: #fff;
     width: 200px;}
 
-    .wizard-when .travelwhen{position:relative;}
+    .wizard-when .travelwhen{position:relative;margin-bottom:10px;}
 
     .lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + span::after {
     content: "\f00c";font-family: FontAwesome;
