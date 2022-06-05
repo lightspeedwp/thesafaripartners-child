@@ -229,7 +229,79 @@ get_header(); ?>
                               <div class="checkbox-wrapper">
                                 <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
                                 <span aria-hidden="true"></span>
+                                <label>April</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
                                 <label>May</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>June</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>July</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>August</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>September</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>October</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>November</label>
+                              </div>
+
+                        </article>
+
+                        <article class="col-md-3 travelwhen">
+                              <div class="checkbox-wrapper">
+                                <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                <span aria-hidden="true"></span>
+                                <label>December</label>
                               </div>
 
                         </article>
