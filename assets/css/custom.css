@@ -216,7 +216,7 @@ transition: 0.5s;}
     background: #fff;
     width: 200px;}
 
-    .wizard-when .travelwhen{position:relative;margin-bottom:10px;}
+    .wizard-when .travelwhen{position:relative;margin:10px 0;}
 
     .lsx-wizard .checkbox-wrapper > [type="checkbox"]:checked + span::after {
     content: "\f00c";font-family: FontAwesome;
