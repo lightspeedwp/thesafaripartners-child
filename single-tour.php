@@ -267,8 +267,8 @@ function openCity(evt, cityName) {
                                       	?>
                                         <div class="tab">
 
-                      												<button class="tablinks tours-wizard" id="includes" onclick="openCity(event, 'Exclude')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
-                      												<button class="tablinks" id="excludes" onclick="openCity(event, 'Include')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
+                      												<button class="tablinks tours-wizard" id="includes" onclick="openCity(event, 'Include')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
+                      												<button class="tablinks" id="excludes" onclick="openCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
 
 
                       										</div>
@@ -278,7 +278,7 @@ function openCity(evt, cityName) {
 
 
                                       						<?php if ( null !== $tour_included ) { ?>
-                                                    <div id="include" class="tabcontent" style="display: block;">
+                                                    <div id="Include" class="tabcontent" style="display: block;">
                                       							<div class="<?php echo esc_attr( $class ); ?> included">
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
@@ -289,7 +289,7 @@ function openCity(evt, cityName) {
                                                               }
                                       						if ( null !== $tour_not_included ) {
                                                               ?>
-                                                    <div id="exclude" class="tabcontent" >
+                                                    <div id="Exclude" class="tabcontent" >
                                       							<div class="<?php echo esc_attr( $class ); ?> not-included">
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
