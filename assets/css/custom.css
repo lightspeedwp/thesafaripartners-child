@@ -100,7 +100,7 @@ font-weight: bold;}
       justify-content: center;
       align-items: center;
       overflow: hidden;}
-  .blog .entry-layout-content{background:#f0f0f0;}    
+  .blog .entry-layout-content{background:#ededed;}    
   .blog .entry-layout-content .moretag{float:right;padding-bottom:4px;font-size:16px;}
 
 /*Bread crumbs */
