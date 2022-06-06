@@ -285,8 +285,7 @@ function openinCity(evt, incityName) {
                       												<button class="intablink" id="excludes" onclick="openinCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
                       										</div>
                                       			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
-                                            <div class="collapse-inner">
-                                              <div class="row">
+
 
 
                                       						<?php if ( null !== $tour_included ) { ?>
@@ -309,8 +308,7 @@ function openinCity(evt, incityName) {
                                       							</div>
                                                     </div>
                                       						<?php } ?>
-                                      					</div>
-                                      				</div>
+                                      					
 
                                       	<?php
                                       	} ?>
