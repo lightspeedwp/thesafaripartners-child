@@ -31,7 +31,7 @@ function openinCity(evt, cityName) {
   }
   intablink = document.getElementsByClassName("intablink");
   for (i = 0; i < intablink.length; i++) {
-    intablink[i].className = intablinks[i].className.replace(" active", "");
+    intablink[i].className = intablink[i].className.replace(" active", "");
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
