@@ -255,31 +255,46 @@ function openCity(evt, cityName) {
 																				<h2 class="lsx-to-summary-title">Accommodation</h2>
 
 																			</div>
+                                    <?php   $tour_included = lsx_to_included( '', '', false );
+                                      	$tour_not_included = lsx_to_not_included( '', '', false );
 
-                                      <section id="included-excluded mine" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
+                                      	if ( null !== $tour_included || null !== $tour_not_included ) {
+                                      		$class = 'col-xs-12 col-sm-6';
 
-			<div id="collapse-included-excluded" class="collapse in">
-				<div class="collapse-inner">
-					<div class="row">
-							<div class="<?php echo esc_attr( $class ); ?> included">
-								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Included', 'tour-operator' ); ?></h2>
-								<div class="entry-content">
-									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
-								</div>
-							</div>
+                                      		if ( ( null === $tour_included && null !== $tour_not_included ) || ( null !== $tour_included && null === $tour_not_included ) ) {
+                                      			$class = 'col-xs-12';
+                                      		}
+                                      	?>
+                                      		<section id="included-excluded" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                                      			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
 
-							<div class="<?php echo esc_attr( $class ); ?> not-included">
-								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></h2>
-								<div class="entry-content">
-									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
-								</div>
-							</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
+                                      			<div id="collapse-included-excluded" class="collapse in">
+                                      				<div class="collapse-inner">
+                                      					<div class="row">
+                                      						<?php if ( null !== $tour_included ) { ?>
+                                      							<div class="<?php echo esc_attr( $class ); ?> included">
+                                      								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Included', 'tour-operator' ); ?></h2>
+                                      								<div class="entry-content">
+                                      									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
+                                      								</div>
+                                      							</div>
+                                      						<?php
+                                                              }
+                                      						if ( null !== $tour_not_included ) {
+                                                              ?>
+                                      							<div class="<?php echo esc_attr( $class ); ?> not-included">
+                                      								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></h2>
+                                      								<div class="entry-content">
+                                      									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
+                                      								</div>
+                                      							</div>
+                                      						<?php } ?>
+                                      					</div>
+                                      				</div>
+                                      			</div>
+                                      		</section>
+                                      	<?php
+                                      	} ?>
 
 																		</div></div></div></div>
 </div>
