@@ -23,7 +23,7 @@ function openCity(evt, cityName) {
 }
 </script>
 <script type="text/javascript">
-function openinCity(evt, incityName) {
+function openinCity(evt, cityName) {
   var i, intabcontent, intablink;
   intabcontent = document.getElementsByClassName("intabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -33,7 +33,7 @@ function openinCity(evt, incityName) {
   for (i = 0; i < intablink.length; i++) {
     intablink[i].className = intablinks[i].className.replace(" active", "");
   }
-  document.getElementById(incityName).style.display = "block";
+  document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 </script>
@@ -308,7 +308,7 @@ function openinCity(evt, incityName) {
                                       							</div>
                                                     </div>
                                       						<?php } ?>
-                                      					
+
 
                                       	<?php
                                       	} ?>
