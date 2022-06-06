@@ -262,24 +262,20 @@ function openCity(evt, cityName) {
 			<div id="collapse-included-excluded" class="collapse in">
 				<div class="collapse-inner">
 					<div class="row">
-						<?php if ( null !== $tour_included ) { ?>
 							<div class="<?php echo esc_attr( $class ); ?> included">
 								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Included', 'tour-operator' ); ?></h2>
 								<div class="entry-content">
 									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
 								</div>
 							</div>
-						<?php
-                        }
-						if ( null !== $tour_not_included ) {
-                        ?>
+
 							<div class="<?php echo esc_attr( $class ); ?> not-included">
 								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></h2>
 								<div class="entry-content">
 									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
 								</div>
 							</div>
-						<?php } ?>
+
 					</div>
 				</div>
 			</div>
