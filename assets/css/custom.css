@@ -93,6 +93,7 @@ font-weight: bold;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right > ul.mega-sub-menu .nav-contact-bottom{padding:8px 0;border-top:1px solid #ccc;}
 
 	#masthead>.container{width: 1260px;margin:0 auto;border-right: 1px solid #000;}
+  .blog .content-area{width: 1360px;margin:0 auto;}
 
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
