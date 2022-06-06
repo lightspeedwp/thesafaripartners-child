@@ -95,6 +95,12 @@ font-weight: bold;}
 	#masthead>.container{width: 1260px;margin:0 auto;border-right: 1px solid #000;}
   .blog .content-area{width: 1260px;margin:30px auto!important;float:none;}
 
+  .blog .entry-layout-content .entry-image img {object-fit: cover ;height:240px!important;}
+  .blog .entry-layout-content .entry-image {display: contents;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;}
+
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
     background-color: #e6e6e6;
