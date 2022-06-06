@@ -26,7 +26,7 @@ function openCity(evt, cityName) {
 function openinCity(evt, eventName) {
   var i, intabcontent, intablink;
   intabcontent = document.getElementsByClassName("intabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
+  for (i = 0; i < intabcontent.length; i++) {
     intabcontent[i].style.display = "none";
   }
   intablink = document.getElementsByClassName("intablink");
