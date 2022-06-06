@@ -472,7 +472,11 @@ display: contents;
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
     height: 52vh;}
 
-    input::-moz-placeholder, input::-webkit-input-placeholder, input:-ms-input-placeholder, input:-moz-placeholder{color:#000!important;opacity: 1;}
+    ::-webkit-input-placeholder { color:#000; }
+:-moz-placeholder { opacity: 1; color:#000; } /* Firefox 18- */
+::-moz-placeholder { opacity: 1; color:#000; } /* firefox 19+ */
+:-ms-input-placeholder { color:#000; } /* ie */
+input:-moz-placeholder { color:#000; }
 
     .page-template-template-contact #page-134234, .page-template-template-contact #page-134309{display:none;}
 
