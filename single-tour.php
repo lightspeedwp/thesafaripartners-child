@@ -22,6 +22,21 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 </script>
+<script type="text/javascript">
+function openinCity(evt, incityName) {
+  var i, intabcontent, intablink;
+  intabcontent = document.getElementsByClassName("intabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    intabcontent[i].style.display = "none";
+  }
+  intablink = document.getElementsByClassName("intablink");
+  for (i = 0; i < intablink.length; i++) {
+    intablink[i].className = intablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(incityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -255,7 +270,7 @@ function openCity(evt, cityName) {
 																				<h2 class="lsx-to-summary-title">Accommodation</h2>
 
 																			</div>
-                                    <?php   $tour_included = lsx_to_included( '', '', false );
+                                <?php  $tour_included = lsx_to_included( '', '', false );
                                       	$tour_not_included = lsx_to_not_included( '', '', false );
 
                                       	if ( null !== $tour_included || null !== $tour_not_included ) {
@@ -265,12 +280,9 @@ function openCity(evt, cityName) {
                                       			$class = 'col-xs-12';
                                       		}
                                       	?>
-                                        <div class="tab">
-
-                      												<button class="tablinks tours-wizard" id="includes" onclick="openCity(event, 'Include')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
-                      												<button class="tablinks" id="excludes" onclick="openCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
-
-
+                                        <div class="intab">
+                      												<button class="intablink" id="includes" onclick="openinCity(event, 'Include')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
+                      												<button class="intablink" id="excludes" onclick="openinCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
                       										</div>
                                       			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
                                             <div class="collapse-inner">
@@ -278,7 +290,7 @@ function openCity(evt, cityName) {
 
 
                                       						<?php if ( null !== $tour_included ) { ?>
-                                                    <div id="Include" class="tabcontent" style="display: block;">
+                                                    <div id="Include" class="intabcontent" style="display: block;">
                                       							<div class="<?php echo esc_attr( $class ); ?> included">
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
@@ -289,7 +301,7 @@ function openCity(evt, cityName) {
                                                               }
                                       						if ( null !== $tour_not_included ) {
                                                               ?>
-                                                    <div id="Exclude" class="tabcontent" >
+                                                    <div id="Exclude" class="intabcontent" >
                                       							<div class="<?php echo esc_attr( $class ); ?> not-included">
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
@@ -304,7 +316,7 @@ function openCity(evt, cityName) {
                                       	} ?>
 
 																		</div></div></div></div>
-</div>
+                                  </div>
 
 
 																	<?php lsx_entry_bottom(); ?>

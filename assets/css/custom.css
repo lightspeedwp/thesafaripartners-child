@@ -337,6 +337,43 @@ font-weight: bold;font-size:14px;
  transition: 1s;
 }
 
+.intab {
+  overflow: hidden;right: 0%;z-index:9;margin-top:1%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.intab button {
+  background-color: inherit;font-family:argesta_displayregular, serif!important;
+font-weight: bold;font-size:14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 10px 2px;
+  transition: 0.5s;
+}
+
+/* Change background color of buttons on hover */
+.intab button:hover {
+  border-bottom: 2px solid #ddd;
+}
+
+/* Create an active/current tablink class */
+.intab button.active {
+  border-bottom: 2px solid #ccc;
+}
+
+/* Style the tab content */
+.intabcontent {
+  display: none;
+  border-top: none;
+}
+
+.intabcontent {
+  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+  transition-timing-function: ease-in;
+ transition: 1s;
+}
+
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
   from {opacity: 0;}
