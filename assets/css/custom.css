@@ -100,8 +100,16 @@ font-weight: bold;}
       justify-content: center;
       align-items: center;
       overflow: hidden;}
-  .blog .entry-layout-content{background:#ededed;}    
+  .blog .entry-layout-content{background:#ededed;}
   .blog .entry-layout-content .moretag{float:right;padding-bottom:4px;font-size:16px;}
+
+  .single .lsx-related-posts-wrapper .entry-layout-content .entry-image img {object-fit: cover ;height:240px!important;}
+  .single .lsx-related-posts-wrapper .entry-layout-content .entry-image {display: contents;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;}
+      .single .lsx-related-posts-wrapper .entry-layout-content{background:#ededed;}
+      .single .lsx-related-posts-wrapper .entry-layout-content .moretag{float:right;padding-bottom:4px;font-size:16px;}
 
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
