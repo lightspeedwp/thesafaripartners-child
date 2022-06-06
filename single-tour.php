@@ -291,7 +291,7 @@ function openinCity(evt, eventName) {
 
                                                     <div id="Include" class="intabcontent" style="display: block;">
                                                       <?php if ( null !== $tour_included ) { ?>
-                                      							<div class="<?php echo esc_attr( $class ); ?> included">
+                                      							<div class=" included">
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
                                       								</div>
@@ -303,7 +303,7 @@ function openinCity(evt, eventName) {
                                                                   }
                                                       if ( null !== $tour_not_included ) {
                                                                   ?>
-                                      							<div class="<?php echo esc_attr( $class ); ?> not-included">
+                                      							<div class="not-included">
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
                                       								</div>
