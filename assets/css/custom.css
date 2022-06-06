@@ -472,12 +472,6 @@ display: contents;
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
     height: 52vh;}
 
-    ::-webkit-input-placeholder { color:#000; }
-:-moz-placeholder { opacity: 1; color:#000; } /* Firefox 18- */
-::-moz-placeholder { opacity: 1; color:#000; } /* firefox 19+ */
-:-ms-input-placeholder { color:#000; } /* ie */
-input:-moz-placeholder { color:#000; }
-
     .page-template-template-contact #page-134234, .page-template-template-contact #page-134309{display:none;}
 
   .safari-styles .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
@@ -808,3 +802,9 @@ position: absolute;
 .single-lsx-to-destination .filterDiv{  display: none!important; /* Hidden by default */}
 .single-lsx-to-destination .show {  display: block!important;}
 }
+
+::-webkit-input-placeholder { color:#000; }
+:-moz-placeholder { opacity: 1; color:#000; } /* Firefox 18- */
+::-moz-placeholder { opacity: 1; color:#000; } /* firefox 19+ */
+:-ms-input-placeholder { color:#000; } /* ie */
+input:-moz-placeholder { color:#000; }
