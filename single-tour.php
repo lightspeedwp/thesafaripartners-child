@@ -265,34 +265,41 @@ function openCity(evt, cityName) {
                                       			$class = 'col-xs-12';
                                       		}
                                       	?>
-                                      		<section id="included-excluded" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-                                      			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
+                                        <div class="tab">
 
-                                      			<div id="collapse-included-excluded" class="collapse in">
-                                      				<div class="collapse-inner">
-                                      					<div class="row">
+                      												<button class="tablinks tours-wizard" id="includes" onclick="openCity(event, 'Exclude')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
+                      												<button class="tablinks" id="excludes" onclick="openCity(event, 'Include')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
+
+
+                      										</div>
+                                      			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
+                                            <div class="collapse-inner">
+                                              <div class="row">
+
+
                                       						<?php if ( null !== $tour_included ) { ?>
+                                                    <div id="include" class="tabcontent" style="display: block;">
                                       							<div class="<?php echo esc_attr( $class ); ?> included">
-                                      								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Included', 'tour-operator' ); ?></h2>
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
                                       								</div>
                                       							</div>
+                                                    </div>
                                       						<?php
                                                               }
                                       						if ( null !== $tour_not_included ) {
                                                               ?>
+                                                    <div id="exclude" class="tabcontent" >
                                       							<div class="<?php echo esc_attr( $class ); ?> not-included">
-                                      								<h2 class="lsx-to-section-title lsx-to-section-title-small"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></h2>
                                       								<div class="entry-content">
                                       									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
                                       								</div>
                                       							</div>
+                                                    </div>
                                       						<?php } ?>
                                       					</div>
                                       				</div>
-                                      			</div>
-                                      		</section>
+
                                       	<?php
                                       	} ?>
 
