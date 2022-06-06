@@ -474,7 +474,7 @@ display: contents;
 
     .gfield input:-moz-placeholder, .gfield input:-webkit-input-placeholder, .gfield input:-ms-input-placeholder, .gfield input:-moz-placeholder{color:#000!important;}
 
-    .page-template-template-contact #page-134234{display:none;}
+    .page-template-template-contact #page-134234, .page-template-template-contact #page-134309{display:none;}
 
   .safari-styles .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
 
