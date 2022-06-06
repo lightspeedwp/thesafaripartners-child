@@ -101,6 +101,7 @@ font-weight: bold;}
       align-items: center;
       overflow: hidden;}
   .blog .entry-layout-content{background:#fcfcfc;}    
+  .blog .entry-layout-content .moretag{float:right;padding-bottom:4px;font-size:16px;}
 
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
