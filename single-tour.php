@@ -442,7 +442,7 @@ function openinCity(evt, eventName) {
 		$connected_tours = get_post_meta( get_the_ID(), 'tour_to_accommodation', false );
 
 		if ( lsx_to_accommodation_display_connected_tours() && post_type_exists( 'tour' ) && is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
-			lsx_to_related_items( $connected_tours, true, 'tour' );
+			lsx_to_related_items( $connected_tours, '', true, 'tour' );
 		}
 
 		lsx_to_accommodation_posts(); ?>
