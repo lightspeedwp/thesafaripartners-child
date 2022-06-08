@@ -430,13 +430,18 @@ function openinCity(evt, eventName) {
 																	<div class="lsx-to-archive-wrapper">
 																		<div class="lsx-to-tour-content">
 																		<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
-																			<div class="lsx-to-summary">
-																				<h2 class="lsx-to-summary-title">Maps</h2>
 
-																			</div>
+  																				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
+
+  																			</div>
+
+  																			<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
+                                        <?php lsx_to_tour_single_fast_facts(); ?>
+                                          <?php lsx_to_related_items (); ?>
+  																		</div>
 
 
-																			<?php lsx_to_included_block(); ?>
+
 
 																		</div></div></div></div>
 </div>
