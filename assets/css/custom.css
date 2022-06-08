@@ -124,7 +124,7 @@ font-weight: bold;}
         overflow: hidden;}
 
       .single-lsx-to-tour #Maps .lsx-to-section-inner{padding:0!important;}
-      .single-lsx-to-tour .lsx-map{height:80vh;}
+      .single-lsx-to-tour .lsx-map .lsx-map-preview{height:90vh;}
 
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
