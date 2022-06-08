@@ -111,6 +111,14 @@ font-weight: bold;}
       .single .lsx-related-posts-wrapper .entry-layout-content{background:#ededed;}
       .single .lsx-related-posts-wrapper .entry-layout-content .moretag{float:right;padding-bottom:4px;font-size:16px;}
 
+    .single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content{padding: 2px!important;}
+    .single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content .lsx-to-widget-meta-data, .lsx-tour-module .single-lsx-to-tour .lsx-to-widget-item-wrap .lsx-to-widget-content p{display:none;}
+    .single-lsx-to-tour #Maps .lsx-to-widget-thumb img {object-fit: cover ;height:240px!important;}
+  .single-lsx-to-tour #Maps .lsx-to-widget-thumb{display: contents;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;}
+
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
     background-color: #e6e6e6;
