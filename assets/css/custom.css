@@ -95,7 +95,7 @@ font-weight: bold;}
 	#masthead>.container{width: 1260px;margin:0 auto;border-right: 1px solid #000;}
   .blog .content-area{width: 1260px;margin:30px auto!important;float:none;}
 
-  #gform_submit_button_1{padding:10px 20px;border: 1px solid #000; background:#fff;}
+  #gform_submit_button_1{padding:10px 20px!important;border: 1px solid #000!important; background:#fff!important;}
 
   .blog .entry-layout-content .entry-image img {object-fit: cover ;height:240px!important;}
   .blog .entry-layout-content .entry-image {display: contents;
@@ -124,6 +124,7 @@ font-weight: bold;}
         overflow: hidden;}
 
       .single-lsx-to-tour #Maps .lsx-to-section-inner{padding:0!important;}
+      .single-lsx-to-tour .lsx-map{height:80vh;}
 
 /*Bread crumbs */
 .breadcrumbs-container {display:none;
