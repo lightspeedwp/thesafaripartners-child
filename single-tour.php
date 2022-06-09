@@ -270,50 +270,9 @@ function openinCity(evt, eventName) {
 																				<h2 class="lsx-to-summary-title">Accommodation</h2>
 
 																			</div>
-                                <?php  $tour_included = lsx_to_included( '', '', false );
-                                      	$tour_not_included = lsx_to_not_included( '', '', false );
 
-                                      	if ( null !== $tour_included || null !== $tour_not_included ) {
-                                      		$class = 'col-xs-12 col-sm-6';
+                                  <?php lsx_to_accommodation_posts();	?>
 
-                                      		if ( ( null === $tour_included && null !== $tour_not_included ) || ( null !== $tour_included && null === $tour_not_included ) ) {
-                                      			$class = 'col-xs-12';
-                                      		}
-                                      	?>
-                                        <div class="intab">
-                      												<button class="intablink" id="includes" onclick="openinCity(event, 'Include')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
-                      												<button class="intablink" id="excludes" onclick="openinCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
-                      										</div>
-                                      			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
-
-
-
-
-                                                    <div id="Include" class="intabcontent" style="display: block;">
-                                                      <?php if ( null !== $tour_included ) { ?>
-                                      							<div class=" included">
-                                      								<div class="entry-content">
-                                      									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
-                                      								</div>
-                                      							</div>
-                                                    </div>
-
-                                                    <div id="Exclude" class="intabcontent" >
-                                                      <?php
-                                                                  }
-                                                      if ( null !== $tour_not_included ) {
-                                                                  ?>
-                                      							<div class="not-included">
-                                      								<div class="entry-content">
-                                      									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
-                                      								</div>
-                                      							</div>
-                                                    </div>
-                                      						<?php } ?>
-
-
-                                      	<?php
-                                      	} ?>
 
 																		</div></div></div></div>
                                   </div>
@@ -380,7 +339,50 @@ function openinCity(evt, eventName) {
 																							<tbody>
 																								<tr><td class="start-date" data-gform-date="04/01/2022">01 Apr 2022</td><td class="end-date" data-gform-date="06/30/2022">30 Jun 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $4590" data-price="4590" title="Original price:4590">USD $<strong>4,590</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1090" data-price="1090" title="Original price:1090">USD $<strong>1,090</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="07/01/2022">01 Jul 2022</td><td class="end-date" data-gform-date="10/31/2022">31 Oct 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $5780" data-price="5780" title="Original price:5780">USD $<strong>5,780</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1445" data-price="1445" title="Original price:1445">USD $<strong>1,445</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="11/01/2022">01 Nov 2022</td><td class="end-date" data-gform-date="11/30/2022">30 Nov 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $4590" data-price="4590" title="Original price:4590">USD $<strong>4,590</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1090" data-price="1090" title="Original price:1090">USD $<strong>1,090</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="12/01/2022">01 Dec 2022</td><td class="end-date" data-gform-date="03/31/2023">31 Mar 2023</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $3545" data-price="3545" title="Original price:3545">USD $<strong>3,545</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $775" data-price="775" title="Original price:775">USD $<strong>775</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr>				</tbody><tbody>
 																						</tbody></table>
-																			<?php lsx_to_included_block(); ?>
+                                            <?php  $tour_included = lsx_to_included( '', '', false );
+                                                  	$tour_not_included = lsx_to_not_included( '', '', false );
+
+                                                  	if ( null !== $tour_included || null !== $tour_not_included ) {
+                                                  		$class = 'col-xs-12 col-sm-6';
+
+                                                  		if ( ( null === $tour_included && null !== $tour_not_included ) || ( null !== $tour_included && null === $tour_not_included ) ) {
+                                                  			$class = 'col-xs-12';
+                                                  		}
+                                                  	?>
+                                                    <div class="intab">
+                                  												<button class="intablink" id="includes" onclick="openinCity(event, 'Include')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
+                                  												<button class="intablink" id="excludes" onclick="openinCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
+                                  										</div>
+                                                  			<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
+
+
+
+
+                                                                <div id="Include" class="intabcontent" style="display: block;">
+                                                                  <?php if ( null !== $tour_included ) { ?>
+                                                  							<div class=" included">
+                                                  								<div class="entry-content">
+                                                  									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
+                                                  								</div>
+                                                  							</div>
+                                                                </div>
+
+                                                                <div id="Exclude" class="intabcontent" >
+                                                                  <?php
+                                                                              }
+                                                                  if ( null !== $tour_not_included ) {
+                                                                              ?>
+                                                  							<div class="not-included">
+                                                  								<div class="entry-content">
+                                                  									<?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
+                                                  								</div>
+                                                  							</div>
+                                                                </div>
+                                                  						<?php } ?>
+
+
+                                                  	<?php
+                                                  	} ?>
 
 																		</div></div></div></div>
 </div>
