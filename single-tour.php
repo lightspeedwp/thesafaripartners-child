@@ -39,8 +39,6 @@ function openinCity(evt, eventName) {
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel='stylesheet' id='child-css-css'  href='https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/assets/css/owl.carousel.css' type='text/css' media='all' />
-<script src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/assets/js/owl.carousel.min.js"></script>
 
 <?php lsx_content_wrap_before(); ?>
 
@@ -273,26 +271,7 @@ function openinCity(evt, eventName) {
 
 																			</div>
 
-                                  <?php
-                                  $args = array(
-	'post_parent' => $post->ID,
-	'post_type' => 'attachment',
-	'orderby' => 'menu_order', // you can also sort images by date or be name
-	'order' => 'ASC',
-	'numberposts' => 5, // number of images (slides)
-	'post_mime_type' => 'image'
-);
-if ( $images = get_children( $args ) ) {
-	// if there are no images in post, don't display anything
-	echo '<ul id="slider">';
-	foreach( $images as $image ) {
-		echo '<li>' . wp_get_attachment_image( $image->ID, 'my_slider' ) . '</li>';
-	}
-	echo '</ul>';
-}
-
-
-                                  lsx_to_accommodation_posts();	?>
+                                  <?php lsx_to_accommodation_posts();	?>
 
 
 																		</div></div></div></div>
@@ -1205,21 +1184,6 @@ $(document).ready(function () {
   // Get the element with id="defaultOpen" and click on it
   document.getElementsByClassName("tours-wizard").click();
 })( jQuery, window, document );
-
-jQuery(function($){
-	$('#slider').owlCarousel({
-		items:1, // if you want a slider, not a carousel, specify "1" here
-		loop:true,
-		autoPlay:true,
-		autoplayHoverPause:true, // if slider is autoplaying, pause on mouse hover
-		autoplayTimeout:380,
-		autoplaySpeed:800,
-		navSpeed:500,
-		dots:true, // dots navigation below the slider
-		nav:true, // left and right navigation
-		navText:['<','>']
-	});
-});
 </script>
 
 <?php
