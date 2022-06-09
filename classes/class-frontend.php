@@ -88,7 +88,7 @@ class Frontend {
 		remove_action( 'lsx_to_fast_facts', 'lsx_to_tour_single_fast_facts' );
 		add_action( 'lsx_content_bottom', 'lsx_to_destination_tours_tsp' );
 		add_action( 'lsx-thumbnail-single', 'lsx_to_destination_single_fast_facts' );
-
+		add_image_size( 'my_slider', 640, 480, true );
 	}
 
 }
