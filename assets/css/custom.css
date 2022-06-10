@@ -39,6 +39,10 @@ font-weight: bold;}
   span, th, tr, td,table{font-family:"moret",serif;}
   .page.safari-styles {margin-top: 0px;}
 
+  #masthead .navbar-default{background:transparent!important;}
+  #masthead>.container{background:transparent!important;}
+   #masthead .scroll-to-fixed-fixed{background:#woo_pdf_invoice_suffix!important;}
+
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item h4{font-family:"moret",serif!important;}
 
     #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item h4:after {
