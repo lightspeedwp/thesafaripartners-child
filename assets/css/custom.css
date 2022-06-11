@@ -45,6 +45,8 @@ font-weight: bold;}
   background-repeat: no-repeat;
   background-size: cover;}
 
+  #footer-widgets,#footer-sub{background:transparent;}
+
   #masthead.navbar-default{background:transparent;}
   #masthead>.container{background:transparent;}
    #masthead.scroll-to-fixed-fixed{background:#fff!important;}
