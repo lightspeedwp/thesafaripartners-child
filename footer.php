@@ -11,7 +11,7 @@
 
 			</div><!-- .content -->
 		</div><!-- .wrap -->
-
+<div id="travel-footer">
 		<div id="footer-sub" class="container">
 			<?php if ( is_active_sidebar( 'footer_sub' ) ) : ?>
 
@@ -31,7 +31,7 @@
 					<div class="col-sm-12">
 						<?php lsx_footer_top(); ?>
 
-						<p class="credit 
+						<p class="credit
 						<?php
 						if ( has_nav_menu( 'social' ) || has_nav_menu( 'footer' ) ) {
 							echo 'credit-float';}
@@ -93,6 +93,7 @@
 		<?php lsx_footer_after(); ?>
 		<?php lsx_body_bottom(); ?>
 		<?php wp_footer(); ?>
+		</div>
 	</div>
 	</body>
 </html>
