@@ -38,9 +38,12 @@ font-weight: bold;}
 	body,p,h6,ul,li,em{font-family:"moret",serif!important;}
   span, th, tr, td,table{font-family:"moret",serif;}
   .page.safari-styles {margin-top: 0px;}
-  
+
 #travel-footer{background-image: url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
- background-color: #fff;object-fit: cover ;position:center center;}
+ background-color: #fff; height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
 
   #masthead.navbar-default{background:transparent;}
   #masthead>.container{background:transparent;}
