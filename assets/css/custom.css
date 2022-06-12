@@ -518,7 +518,7 @@ display: contents;
       .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:80vh!important;}
 
       .page-template-template-contact #primary .center img{align:center; margin:0 auto;padding-bottom:4px;display:block!important;}
-      .page-template-template-contact #primary .center a{text-align:center;font-size:14px!important;}
+      .page-template-template-contact #primary .center h4{text-align:center;font-size:14px!important;}
 
       .page-template-template-contact .wp-block-button.btnNext a{background:#6a6d5b!important;color:#fff;
     box-shadow: none;padding:15px 20px;}
@@ -545,7 +545,7 @@ display: contents;
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
     height: 52vh;}
 
-    .page-template-template-contact #page-134234, .page-template-template-contact #page-134309{display:none;}
+    .page-template-template-contact #page-134234, .page-template-template-contact #page-134309,.page-template-template-contact #page-133993{display:none;}
 
   .safari-styles .lsx-to-slider-inner{width:100%!important;max-width:1220px!important;margin:0 60px!important;}
 
