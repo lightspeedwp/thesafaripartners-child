@@ -425,7 +425,7 @@ font-weight: bold;font-size:14px;
     display: inline-block;
     padding: 0 10px 0 18px;}
 
-	.lsx-button, .wp-block-button__link{font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
+	.lsx-button, .wp-block-button__link{ background:#6a6d5b; color:#fff!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
 .pum-overlay{z-index:99!important;}
 /*home */
 .lsx-block-banner:first-child{height: 450px;
