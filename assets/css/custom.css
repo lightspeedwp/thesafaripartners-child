@@ -572,6 +572,7 @@ background-color: #f0f0f0;
 	color: #000;padding: 4% 2% 5% 4%}
 
 #footer-widgets .widget .fa{font-size:18px;padding:5px; color:#ce9e57;background: none;margin-right:3px;border-radius:5px;float:left;width:28px;text-align:center}
+#footer-widgets .widget a:hover.fa{font-size:18px;padding:5px; color:#fff;background: #ce9e57;margin-right:3px;border-radius:5px;float:left;width:28px;text-align:center}
 #footer-widgets #menu-community a {width:30px;display:block;margin-right:5px;font-family:argesta_displayregular, serif!important;}
 
 #menu-community a {float:left;width:28px;
