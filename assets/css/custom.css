@@ -301,7 +301,7 @@ input[type=radio]:focus {
 outline-color: #fff;}
 .pum .gchoice{width:90px; float:left;}
 
-.gform_wrapper .button{background:#6a6d5b; color:#fff!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;padding:15px 20px;font-size:16px!important;}
+.lsx-contact-module .gform_wrapper .button{background:#6a6d5b!important; color:#fff!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:uppercase;padding:15px 20px!important;font-size:16px!important;border:none!important;}
 
 	.pum form button, .pum form button:active, .pum form button:visited, .pum .pum-form--style-default button, .pum .pum-form--style-default button:active, .pum .pum-form--style-default button:visited, .pum .pum-age-form button, .pum .pum-age-form button:active, .pum .pum-age-form button:visited{align-items: center;
     background-color: #999;
@@ -427,7 +427,7 @@ font-weight: bold;font-size:14px;
     display: inline-block;
     padding: 0 10px 0 18px;}
 
-	.lsx-button, .wp-block-button__link{ background:#6a6d5b; color:#fff!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:upeprcase;}
+	.lsx-button, .wp-block-button__link{ background:#6a6d5b; color:#fff!important;font-family: argesta_displayregular, serif;margin-top:20px; text-transform:uppercase;}
 .pum-overlay{z-index:99!important;}
 /*home */
 .lsx-block-banner:first-child{height: 450px;
