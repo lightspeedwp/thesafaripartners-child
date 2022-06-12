@@ -517,8 +517,8 @@ display: contents;
     overflow: hidden;}
       .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:80vh!important;}
 
-      .page-template-template-contact .center img{align:center; margin:0 auto;padding-bottom:4px;}
-      .page-template-template-contact .center a{text-align:center;font-size:15px;}
+      .page-template-template-contact #primary .center img{align:center; margin:0 auto;padding-bottom:4px;display:block!important;}
+      .page-template-template-contact #primary .center a{text-align:center;font-size:14px!important;}
 
       .page-template-template-contact .wp-block-button.btnNext a{background:#6a6d5b!important;color:#fff;
     box-shadow: none;padding:15px 20px;}
