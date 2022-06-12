@@ -520,7 +520,7 @@ display: contents;
       .page-template-template-contact .center img{align:center; margin:0 auto;padding-bottom:4px;}
       .page-template-template-contact .center a{text-align:center;font-size:15px;}
 
-      .page-template-template-contact .wp-block-button.btnNext a{background: none 0% 0% / auto repeat scroll padding-box border-box rgb(106, 109, 91);color:#fff;
+      .page-template-template-contact .wp-block-button.btnNext a{background-color:rgb(106, 109, 91)!important;color:#fff;
     box-shadow: none;padding:15px 20px;}
 
       .page-template-template-contact #primary {
