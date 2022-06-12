@@ -517,6 +517,12 @@ display: contents;
     overflow: hidden;}
       .page-template-template-contact .lsx-contact-module-image img {object-fit: cover ;height:80vh!important;}
 
+      .page-template-template-contact .center img{align:center; margin:0 auto;padding-bottom:4px;}
+      .page-template-template-contact .center a{text-align:center;font-size:15px;}
+
+      .page-template-template-contact .wp-block-button.btnNext{background: none 0% 0% / auto repeat scroll padding-box border-box rgb(106, 109, 91);color:#fff;
+    box-shadow: none;}
+
       .page-template-template-contact #primary {
     margin-top: 0!important;position: relative;margin-bottom: 0!important;
     width: 100%;
@@ -573,7 +579,7 @@ background-color: #f0f0f0;
 
 #footer-widgets .widget .fa{font-size:18px;padding:5px; color:#ce9e57;background: none;margin-right:3px;border-radius:5px;float:left;width:28px;text-align:center}
 #footer-widgets .widget a:hover .fa{font-size:18px;padding:5px; color:#fff;background: #ce9e57;margin-right:3px;border-radius:5px;float:left;width:28px;text-align:center}
-#footer-widgets #menu-community a {width:30px;display:block;margin-right:5px;font-family:argesta_displayregular, serif!important;}
+#footer-widgets #menu-community a {width:30pfx;display:block;margin-right:5px;font-family:argesta_displayregular, serif!important;}
 
 #menu-community a {float:left;width:28px;
 	color:#000;}
