@@ -50,7 +50,7 @@ if ( $has_single ) {
 			if ( $has_single ) {
 				?>
 <a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
-				<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+				<?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
 			<?php
 			if ( $has_single ) {
 				?>
