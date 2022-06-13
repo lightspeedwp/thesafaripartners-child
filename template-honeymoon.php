@@ -153,27 +153,66 @@ get_header(); ?>
 			<?php
 			$the_query = new WP_Query( array(
 			'post_type' => 'tour',
-			'post_parent' => 0,
 		) );
 
 		while ( $the_query->have_posts() ) :
 			$the_query->the_post();?>
+			<article <?php post_class( 'filterDiv' ); ?>>
+
+				<?php lsx_widget_entry_top(); ?>
+
+					<div class="lsx-to-widget-thumb">
+			<a href="<?php echo esc_url( $permalink ); ?>">
+							<?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
+			</a>
+					</div>
+
+				<div class="lsx-to-widget-content">
+
+					<?php lsx_widget_entry_content_top(); ?>
+
+					<h4 class="lsx-to-widget-title text-center">
+			<a href="<?php echo esc_url( $permalink ); ?>">
+							<?php the_title(); ?>
+			</a>
+					</h4>
 
 
-							<div class="lsx-to-widget-item-wrap col-xs-4 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
-								<div class="lsx-to-widget-thumb">
 
-									<div class="checkbox-wrapper">
-										<input class="btn-check"  type="checkbox" onclick="filterSelection('tour-<?php the_title();?>')" />
-										<span aria-hidden="true"></span>
-									</div>
-										<?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
-								</div>
 
-									<div class="lsx-to-content">
-											<?php the_title(); ?>
-										</div>
-									</div>
+					<?php
+					ob_start();
+					lsx_to_widget_entry_content_top();
+					the_excerpt();
+
+					$excerpt = ob_get_clean();
+
+						echo wp_kses_post( $excerpt );
+					?>
+						<div class="lsx-to-widget-meta-data">
+							<?php
+							$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+							lsx_to_price( '<span class="' . $meta_class . 'price"><span class="lsx-to-meta-data-key">' . esc_html__( 'from', 'tour-operator' ) . ':</span> ', '</span>' );
+							lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key">' . esc_html__( 'Duration', 'tour-operator' ) . ':</span> ', '</span>' );
+							the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key">' . esc_html__( 'Travel Style', 'tour-operator' ) . ':</span> ', ', ', '</span>' );
+							lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Destinations', 'tour-operator' ) . ':</span> ', '</span>' );
+
+							if ( function_exists( 'lsx_to_connected_activities' ) ) {
+								lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
+							}
+							?>
+							<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
+						</div>
+
+
+
+					<?php lsx_widget_entry_content_bottom(); ?>
+				</div>
+
+				<?php lsx_widget_entry_bottom(); ?>
+
+			</article>
 
 							<?php endwhile; ?>
 							<?php	wp_reset_query(); ?>
