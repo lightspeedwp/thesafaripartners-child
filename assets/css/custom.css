@@ -127,7 +127,7 @@ font-weight: bold;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right > ul.mega-sub-menu .nav-contact-email{padding:0px 0;border-bottom:1px solid #ccc;margin-top:-8px;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right > ul.mega-sub-menu .nav-contact-bottom{padding:8px 0;border-top:1px solid #ccc;}
 
-	#masthead>.container{width: 1260px;margin:0 auto;border-right: 1px solid #000;}
+	#masthead>.container{width: 1260px;margin:0 auto;}
   .blog .content-area{width: 1260px;margin:30px auto!important;float:none;}
 
   #gform_submit_button_1{padding:10px 20px!important;border: 1px solid #000!important; background:#fff!important;}
@@ -845,6 +845,59 @@ width: 100%;}
 
 .single .travel-style-destinations .slick-initialized .slick-slide{position:relative;}
 .single .lsx-to-section {padding-top:10px!important;padding-bottom:10px!important;}
+
+#mega-menu-wrap-primary #mega-menu-primary #mega-menu-item-text-5{padding-bottom:0!important;}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-item-align-right{background: #ce9e57;
+  margin: -5px -23px 0 5px;
+      padding: 4px 18px;}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162{background:#fff;}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.expand-to-left{background:#fff;}
+.top-destination-nav{margin-bottom:-26px!important;}
+.thank-you .lsx-banner-column{padding:0!important;}
+.entry-content .desinations-landing-style .lsx-title{width:90%!important;}
+.page-banner-wrap .page-banner{min-height:500px;}
+.archive-intro{margin:0 40px 0px 20px!important;width:auto;}
+.archive .desinations-landing-style{margin:60px 80px 0 60px!important;}
+.full{width:100%!important;}
+.single-lsx-to-destination .content{width:1366px!important;margin:20px auto!important;}
+.page-template-template-contact .archive-header-wrapper{display:none;}
+.page-template-template-contact .content{width:100%!important;margin:0px auto!important;}
+.page-template-template-contact #primary{margin-top:0!important;}
+.site-main > .lsx-to-section:first-of-type {background-color: #fff!important;}
+.single-lsx-to-destination .travel-style-destinations{margin-top:60px;margin-left:0px}
+.wizard-text{position:relative;}
+.single-lsx-to-destination #summary{margin: 0 60px 40px!important;}
+.page-id-133855 .entry-content .desinations-landing-style .lsx-title {
+    width: 100%!important;
+}
+
+#masthead .navbar-header .custom-logo-link>img{height:70px;}
+#masthead .navbar-header{width:215px;}
+#masthead .navbar-header .custom-logo-link:after {
+  content: 'The Safari Partners';
+	font-size:30px;color:#000;padding-left:8px;position:absolute;}
+.wizard-landing .entry-content, .contact .lsx-container-content{padding-top:0!important;}
+.wizard-landing .lsx-container-content, .contact .lsx-container-content{max-width:100%!important;}
+.wizard-landing .lsx-banner-column{
+	padding: 30% 0px 0!important;}
+ .contact .lsx-banner-column{
+	padding: 54% 0px 0!important;}
+.single-lsx-to-destination #summary .col-md-7 {
+	width: 64.33333%!important;}
+.page-template-template-contact .entry{position:relative;}
+.page-template-template-contact .tab{position:absolute;}
+.single-lsx-to-destination .toptours-posts h2{
+    margin-bottom: 55px;
+    margin-left: 60px;
+    margin-top: -30px;}
+.single-lsx-to-destination .content-area{margin-top:90px!important;}
+.single-lsx-to-destination .content-area .lsx-to-summary{margin-top:-60px!important;}
+.tax-travel-style .desinations-landing-style > div:first-of-type{width:50%;}
+.tax-travel-style .desinations-landing-style > div:first-of-type .lsx-to-widget-thumb{padding: 0 1px!important;}
+.tax-travel-style .desinations-landing-style > div:first-of-type img{width:100%;}
+.archive-intro{padding-bottom:50px;}
+.page-template-template-contact form input, .page-template-template-contact form select, .page-template-template-contact form textarea{border-top:0!important;border-right:0!important;border-left:0!important;border-bottom:1px solid #000!important;color:#000!important;padding:1px!important;line-height:10px!important;min-height:30px!important;height:30px!important;background:transparent!important;font-family:"moret",serif!important;}
+
 
 #who-single .checkbox-wrapper {
   position: absolute;
