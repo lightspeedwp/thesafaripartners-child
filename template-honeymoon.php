@@ -145,7 +145,7 @@ get_header(); ?>
 
 	<div class="tour-display col-md-12">
 
-		<div class="safari-styles desinations-landing-style">
+		<div class="toptours-posts desinations-landing-style">
 			<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
 				<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 					<div class="lsx-to-slider-wrap">
