@@ -33,9 +33,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php lsx_content_bottom(); ?>
-		<div id="myBtnContainer">
-	<button style="display:none;" class="btn-check active" onclick="filterSelection('all')"> Show all</button>
+<div id="myBtnContainer">
 		<div id="wizard" class="lsx-wizard" style="display: none;">
+
 				<div class="lsx-wizard-step">
 						<h4>2. What</h4>
 						<div class="step-content">
