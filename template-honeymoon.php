@@ -152,9 +152,10 @@ get_header(); ?>
 					<div class="lsx-to-slider-wrap">
 						<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 			<?php
+
 			$the_query = new WP_Query( array(
-			'post_type' => 'tour',
-			'tax_query' => array(
+    'post_type' => 'tour',
+    'tax_query' => array(
         array (
             'taxonomy' => 'who',
             'field' => 'slug',
@@ -162,7 +163,6 @@ get_header(); ?>
         )
     ),
 ) );
-		) );
 
 		while ( $the_query->have_posts() ) :
 			$the_query->the_post();?>
