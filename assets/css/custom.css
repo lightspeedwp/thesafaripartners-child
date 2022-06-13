@@ -50,13 +50,19 @@ font-weight: bold;}
 
   #masthead.navbar-default{background:transparent;}
   #masthead>.container{background:transparent;}
-   #masthead.scroll-to-fixed-fixed{background:#fff!important;}
+   #masthead.scroll-to-fixed-fixed{background:#fff!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+     transition-timing-function: ease-in;
+    transition: 1s;}
 
    .page-template-template-nav-trans #masthead.navbar-default #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#fff!important;}
-   .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#000!important;}
+   .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#000!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+     transition-timing-function: ease-in;
+    transition: 1s;}
 
    .page-template-template-nav-trans #masthead.navbar-default .custom-logo-link:after{color:#fff!important;}
-   .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed .custom-logo-link:after{color:#000!important;}
+   .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed .custom-logo-link:after{color:#000!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+     transition-timing-function: ease-in;
+    transition: 1s;}
 
    .bannerup{margin-bottom:0!important;margin-top:-68px;}
 
