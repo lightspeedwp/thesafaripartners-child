@@ -154,6 +154,14 @@ get_header(); ?>
 			<?php
 			$the_query = new WP_Query( array(
 			'post_type' => 'tour',
+			'tax_query' => array(
+        array (
+            'taxonomy' => 'who',
+            'field' => 'slug',
+            'terms' => 'honeymooners',
+        )
+    ),
+) );
 		) );
 
 		while ( $the_query->have_posts() ) :
