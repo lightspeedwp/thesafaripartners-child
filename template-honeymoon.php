@@ -35,7 +35,7 @@ get_header(); ?>
 		<?php lsx_content_bottom(); ?>
 
 		<div id="wizard" class="lsx-wizard" style="display: none;">
-
+			<div id="myBtnContainer">
 				<div class="lsx-wizard-step">
 						<h4>2. What</h4>
 						<div class="step-content">
@@ -140,7 +140,7 @@ get_header(); ?>
 				</div>
 				</div>
 
-
+			</div>
 	</div>
 
 	<div class="tour-display col-md-12">
