@@ -37,68 +37,6 @@ get_header(); ?>
 		<div id="wizard" class="lsx-wizard" style="display: none;">
 
 				<div class="lsx-wizard-step">
-						<div class="step-content introslide">
-							<?php if ( have_posts() ) : ?>
-
-								<?php
-								while ( have_posts() ) :
-									the_post();
-								?>
-
-									<?php get_template_part( 'partials/content', 'page' ); ?>
-
-								<?php endwhile; ?>
-
-							<?php endif; ?>
-							<?php	wp_reset_query(); ?>
-						</div>
-				</div>
-
-				<div class="lsx-wizard-step">
-						<h4>1. Who</h4>
-						<div class="step-content">
-							<div class="wizard-who">
-								<div class="col-md-3">
-									<h2>Who is Traveling?</h2>
-									<p>Let us know alittle more about who is traveling</p>
-									</div>
-									<div class="col-md-9">
-										<?php
-										$terms = get_terms('who');
-										$post_tags = wp_get_post_terms($post->ID,'who',array('fields' => 'slugs'));?>
-										<?php foreach( $terms as $term ): ?>
-												<!-- post -->
-
-										<article class="col-md-4 status-publish hentry">
-													<div class="checkbox-wrapper">
-														<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
-														<span aria-hidden="true"></span>
-													</div>
-
-												<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
-													<div class="lsx-to-widget-thumb">
-															<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
-													</div>
-												<?php else : ?>
-													<div class="lsx-to-widget-thumb">
-															<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-													</div>
-												<?php endif; ?>
-
-											<div class="lsx-to-content">
-														<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-											</div>
-										</article>
-							<?php endforeach; ?>
-
-									<?php	wp_reset_query(); ?>
-												</div>
-											</div>
-										</div>
-								</div>
-
-
-				<div class="lsx-wizard-step">
 						<h4>2. What</h4>
 						<div class="step-content">
 							<div class="wizard-what">
