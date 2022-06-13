@@ -54,10 +54,10 @@ font-weight: bold;}
      transition-timing-function: ease-in;
     transition: 1s;}
 
-   .page-template-template-nav-trans #masthead.navbar-default #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#fff!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+   .page-template-template-nav-trans #masthead.navbar-default #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a {color:#fff!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
      transition-timing-function: ease-in;
     transition: 1s;}
-   .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#000!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+   .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a {color:#000!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
      transition-timing-function: ease-in;
     transition: 1s;}
 
