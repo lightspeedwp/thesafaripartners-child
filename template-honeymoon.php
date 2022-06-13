@@ -33,9 +33,8 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php lsx_content_bottom(); ?>
-
+<div id="myBtnContainer">
 		<div id="wizard" class="lsx-wizard" style="display: none;">
-			<div id="myBtnContainer">
 				<div class="lsx-wizard-step">
 						<h4>2. What</h4>
 						<div class="step-content">
