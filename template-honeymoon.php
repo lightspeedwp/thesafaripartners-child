@@ -34,6 +34,7 @@ get_header(); ?>
 
 		<?php lsx_content_bottom(); ?>
 <div id="myBtnContainer">
+	<button style="display:none;" class="btn-check active" onclick="filterSelection('who-honeymooners')"> who-honeymooners</button>
 		<div id="wizard" class="lsx-wizard" style="display: none;">
 
 				<div class="lsx-wizard-step">
