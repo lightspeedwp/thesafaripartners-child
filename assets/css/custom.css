@@ -48,15 +48,13 @@ font-weight: bold;}
   #footer-widgets,#footer-sub{background:transparent!important;}
   #mega-menu-wrap-primary{background:transparent!important;}
 
-  #masthead.navbar-default{background:transparent;  animation: fadeEffect 1s; /* Fading effect takes 1 second */
-    transition-timing-function: ease-in;
-   transition: 1s;}
+  #masthead.navbar-default{background:transparent;  }
   #masthead>.container{background:transparent;}
    #masthead.scroll-to-fixed-fixed{background:#fff!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
      transition-timing-function: ease-in;
     transition: 1s;}
 
-   .page-template-template-nav-trans #masthead.navbar-default #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#fff!important;  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+   .page-template-template-nav-trans #masthead.navbar-default #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#fff!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
      transition-timing-function: ease-in;
     transition: 1s;}
    .page-template-template-nav-trans #masthead.scroll-to-fixed-fixed #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item a {color:#000!important;  animation: fadeEffect 2s; /* Fading effect takes 1 second */
@@ -89,6 +87,8 @@ font-weight: bold;}
 	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;}
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{font-family:argesta_displayregular, serif!important;
 font-weight: bold;}
+#mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu li a{color:#000!important;}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-current_page_item{color:#000!important;}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link{font-family:argesta_displayregular, serif!important;
 font-weight: bold;}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu{background-color:#fff;margin-top:12px; width:255px;}
