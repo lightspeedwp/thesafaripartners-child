@@ -961,9 +961,8 @@ position: absolute;
 	box-shadow: 1px 1px 1px 1px #6b6b6b;
 }
 
-.single-lsx-to-destination .filterDiv{  display: none!important; /* Hidden by default */}
-.single-lsx-to-destination .show {  display: block!important;}
-}
+.filterDiv{  display: none!important; /* Hidden by default */}
+.show {  display: block!important;}}
 
 ::-webkit-input-placeholder { color:#000; }
 :-moz-placeholder { opacity: 1; color:#000; } /* Firefox 18- */
