@@ -506,7 +506,7 @@ height: 15%;}
 .tours-posts .lsx-to-widget-title{text-align:left;}
 
 .style-posts{margin-top:50px;}
-.style-posts .lsx-title{max-width:90%!important; margin-bottom:40px;font-size:42px!important;}
+.home .style-posts h2.lsx-title{max-width:90%!important; margin-bottom:40px!important;font-size:42px!important;}
 .style-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap{padding:1px;width:314px!important;}
 .style-posts .type-travel-style{padding:1px;width:314px!important;}
 .style-posts .lsx-to-widget-thumb img{object-fit: cover ;height:410px!important;}
