@@ -34,7 +34,6 @@ get_header(); ?>
 
 		<?php lsx_content_bottom(); ?>
 <div id="myBtnContainer">
-	<button style="display:none;" class="btn-check active" onclick="filterSelection('who-honeymooners')"> who-honeymooners</button>
 		<div id="wizard" class="lsx-wizard" style="display: none;">
 
 				<div class="lsx-wizard-step">
@@ -152,7 +151,6 @@ get_header(); ?>
 					<div class="lsx-to-slider-wrap">
 						<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 			<?php
-
 			$the_query = new WP_Query( array(
     'post_type' => 'tour',
     'tax_query' => array(
