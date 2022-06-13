@@ -33,7 +33,6 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php lsx_content_bottom(); ?>
-<div id="myBtnContainer">
 		<div id="wizard" class="lsx-wizard" style="display: none;">
 
 				<div class="lsx-wizard-step">
@@ -44,7 +43,7 @@ get_header(); ?>
 									<h2>What interests you?</h2>
 									<p>Let us what interests you</p>
 									</div>
-									<div class="col-md-9">
+									<div class="col-md-9 myBtnContainer">
 
 											<?php
 											$terms = get_terms('travel-style');
@@ -94,7 +93,7 @@ get_header(); ?>
 									<h2>Where in Africa?</h2>
 									<p>Let us where you want to travel</p>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12 myBtnContainer">
 
 										<div class="safari-styles desinations-landing-style">
 											<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
@@ -920,7 +919,7 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
+var btnContainer = document.getElementsByClassName("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn-check");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
