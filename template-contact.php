@@ -99,4 +99,4 @@ function openCity(evt, cityName) {
 document.getElementById("page-133993").click();
 </script>
 <?php
-get_footer('new');
+get_footer();
