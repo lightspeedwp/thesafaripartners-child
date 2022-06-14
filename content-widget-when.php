@@ -57,7 +57,7 @@ if ( empty( $disable_single_link ) ) {
 
 			<div class="lsx-to-widget-content bottom">
 				<h4 class="lsx-to-widget-title text-left">
-					<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">	Family Experences		</a></h4>
+					<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">	Family Experiences	</a></h4>
 
 					</div>
 		</article>
