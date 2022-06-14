@@ -12,11 +12,13 @@
 			</div><!-- .content -->
 		</div><!-- .wrap -->
 
+						<?php lsx_footer_bottom(); ?>
+
 
 		<?php lsx_footer_after(); ?>
 		<?php lsx_body_bottom(); ?>
 		<?php wp_footer(); ?>
-		</div>
+
 	</div>
 	</body>
 </html>
