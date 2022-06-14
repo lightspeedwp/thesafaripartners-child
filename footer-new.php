@@ -11,11 +11,20 @@
 
 			</div><!-- .content -->
 		</div><!-- .wrap -->
+<div id="travel-footer">
+		<div id="footer-sub" class="container">
+			<?php if ( is_active_sidebar( 'footer_sub' ) ) : ?>
 
+
+<div class="footer-sub-area" role="complementary">
+				<?php dynamic_sidebar( 'footer_sub' ); ?>
+</div><!-- #primary-sidebar -->
+<?php endif; ?>
+</div>
 
 		<?php lsx_footer_before(); ?>
 
-		<footer style="display:none;" id="colophon" class="content-info" role="contentinfo">
+		<footer id="colophon" class="content-info" role="contentinfo">
 			<div class="container">
 				<div class="row">
 
@@ -76,12 +85,15 @@
 						<?php endif; ?>
 
 						<?php lsx_footer_bottom(); ?>
-
+					</div>
+				</div>
+			</div>
+		</footer>
 
 		<?php lsx_footer_after(); ?>
 		<?php lsx_body_bottom(); ?>
 		<?php wp_footer(); ?>
-
+		</div>
 	</div>
 	</body>
 </html>
