@@ -73,15 +73,6 @@ font-weight: bold;}
    .home .content-area{margin-top:-70px!important;}
 
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item h4{font-family:"moret",serif!important;}
-
-    #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item h4:after {
-    color: inherit;
-    content: "";
-    display: inline-block;
-    font-family: "FontAwesome";
-    font-size: inherit;
-    margin-left: 5px;
-    text-rendering: auto;}
   #masthead{z-index:1000;}
 
 	#masthead .primary-navbar {margin-left:0!important;margin-right:0!important;padding:14px 0 0 150px!important;}
