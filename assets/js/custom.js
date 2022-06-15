@@ -5,7 +5,6 @@
  */(function($, window, document, undefined) {
 
 	'use strict';
+	$('.slick-slider')[0].slick.refresh();
 
 })( jQuery, window, document );
-
-$('.slick-slider')[0].slick.refresh()
