@@ -152,12 +152,12 @@ get_header(); ?>
 			<?php
 			$the_query = new WP_Query( array(
     'post_type' => 'tour',
-		'facetwp' => true,
     'tax_query' => array(
         array (
             'taxonomy' => 'who',
             'field' => 'slug',
             'terms' => 'honeymooners',
+						'facetwp' => true,
         )
     ),
 ) );
@@ -987,6 +987,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+$('.slick-slider').slick('refresh');
 </script>
 <?php
 get_footer();
