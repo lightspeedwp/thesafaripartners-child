@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
+<div id="primary" class="content-area bannerup <?php echo esc_attr( lsx_main_class() ); ?>">
 
 	<?php lsx_content_before(); ?>
 
@@ -44,7 +44,7 @@ get_header(); ?>
 									<p>Let us what interests you</p>
 									</div>
 									<div class="col-md-9 myBtnContainer">
-<div class="facetwp-facet facetwp-facet-interests" data-name="interests" data-type="checkboxes">
+
 											<?php
 											$terms = get_terms('travel-style');
 											$post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));?>
@@ -52,8 +52,8 @@ get_header(); ?>
 													<!-- post -->
 
 											<article class="col-md-2 status-publish hentry">
-												<div class="checkbox-wrapper facetwp-checkbox facetwp-display-value" data-value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>">
-															<input class="btn-check"  type="checkbox"/>
+														<div class="checkbox-wrapper">
+															<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
 															<span aria-hidden="true"></span>
 														</div>
 
@@ -79,7 +79,7 @@ get_header(); ?>
 										<?php endforeach; ?>
 
 										<?php	wp_reset_query(); ?>
-</div>
+
 										</div>
 									</div>
 								</div>
@@ -157,72 +157,13 @@ get_header(); ?>
             'taxonomy' => 'who',
             'field' => 'slug',
             'terms' => 'honeymooners',
-						'facetwp' => true,
         )
     ),
 ) );
 
 		while ( $the_query->have_posts() ) :
 			$the_query->the_post();?>
-			<article <?php post_class( 'filterDiv facet-box' ); ?>>
-
-				<?php lsx_widget_entry_top(); ?>
-
-
-					<div class="lsx-to-widget-thumb">
-
-			<a href="<?php echo esc_url( $permalink ); ?>">
-							<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
-
-			</a>
-					</div>
-
-
-				<div class="lsx-to-widget-content">
-
-					<?php lsx_widget_entry_content_top(); ?>
-
-					<h4 class="lsx-to-widget-title text-center">
-
-			<a href="<?php echo esc_url( $permalink ); ?>">
-							<?php the_title(); ?>
-
-			</a>
-					</h4>
-
-					<?php
-					ob_start();
-					lsx_to_widget_entry_content_top();
-					the_excerpt();
-
-					$excerpt = ob_get_clean();
-
-						echo wp_kses_post( $excerpt );
-					?>
-						<div class="lsx-to-widget-meta-data">
-							<?php
-							$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
-
-							lsx_to_price( '<span class="' . $meta_class . 'price"><span class="lsx-to-meta-data-key">' . esc_html__( 'from', 'tour-operator' ) . ':</span> ', '</span>' );
-							lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key">' . esc_html__( 'Duration', 'tour-operator' ) . ':</span> ', '</span>' );
-							the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key">' . esc_html__( 'Travel Style', 'tour-operator' ) . ':</span> ', ', ', '</span>' );
-							lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Destinations', 'tour-operator' ) . ':</span> ', '</span>' );
-
-							if ( function_exists( 'lsx_to_connected_activities' ) ) {
-								lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
-							}
-							?>
-							<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
-						</div>
-
-
-
-					<?php lsx_widget_entry_content_bottom(); ?>
-				</div>
-
-				<?php lsx_widget_entry_bottom(); ?>
-
-			</article>
+			<?php lsx_to_content( 'content-widget', 'tour' ); ?>
 
 
 							<?php endwhile; ?>
@@ -987,7 +928,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-$('.slick-slider').slick('refresh');
 </script>
 <?php
 get_footer();
