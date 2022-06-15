@@ -7,3 +7,5 @@
 	'use strict';
 
 })( jQuery, window, document );
+
+$('.slick-slider')[0].slick.refresh()
