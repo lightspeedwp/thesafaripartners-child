@@ -19,7 +19,7 @@ if ( $has_single ) {
 
 <?php lsx_widget_entry_before(); ?>
 
-<article <?php post_class( 'filterDiv' ); ?>>
+<article <?php post_class( 'filterDiv facet-box' ); ?>>
 
 	<?php lsx_widget_entry_top(); ?>
 
