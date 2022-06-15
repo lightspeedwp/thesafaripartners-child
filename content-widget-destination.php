@@ -17,34 +17,6 @@ if ( $has_single ) {
 }
 ?>
 <article <?php post_class(); ?>>
-	<div class="col-md-6">
-		<h3 class="lsx-to-widget-title text-left">
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-				<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-			<?php
-			if ( ! empty( $title_link ) ) {
-				?>
-</a><?php } ?>
-</h3>
-	</div>
-
-	<?php if ( empty( $disable_placeholder ) ) { ?>
-		<div class="col-md-6">
-			<h4 class="lsx-to-widget-title text-left">
-				<?php
-				if ( ! empty( $title_link ) ) {
-					?>
-	<a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-					<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
-				<?php
-				if ( ! empty( $title_link ) ) {
-					?>
-	</a><?php } ?>
-</h4>
-		</div>
 		<div class="lsx-to-widget-thumb">
 			<?php
 			if ( $has_single ) {
