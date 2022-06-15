@@ -152,6 +152,7 @@ get_header(); ?>
 			<?php
 			$the_query = new WP_Query( array(
     'post_type' => 'tour',
+		'facetwp' => true,
     'tax_query' => array(
         array (
             'taxonomy' => 'who',
