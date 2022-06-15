@@ -459,6 +459,7 @@ height: 15%;}
 
 .home .wp-block-tour-operator-block-post-types{padding:10px;}
 .home .tour-styles-top-info{display:block!important;}
+.home .style-posts .lsx-to-widget-thumb img{object-fit: cover ;height:250px!important;}
 .tour-styles-top-info{display:none;}
 .lsx-block-banner-button a{padding:10px 20px;}
 .button{ -webkit-box-shadow:none!important;
@@ -514,8 +515,8 @@ height: 15%;}
 .who-posts .lsx-to-slider-inner{width:100%!important;max-width: 1252px!important;
     margin: 5px 6px 20px 74px!important;}
 
-.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap{padding:1px;width:623px!important;}
-.tours-posts .type-travel-style{padding:1px;width:623px!important;}
+.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap{padding:1px;width:314px!important;}
+.tours-posts .type-travel-style{padding:1px;width:314px!important;}
 .tours-posts .lsx-to-widget-thumb img{object-fit: cover ;height:410px!important;}
 .tours-posts .moretag-wrapper{display:none;}
 .tours-posts .lsx-to-slider-inner .slick-dots{display:none!important;}
