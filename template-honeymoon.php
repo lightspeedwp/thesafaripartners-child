@@ -44,7 +44,7 @@ get_header(); ?>
 									<p>Let us what interests you</p>
 									</div>
 									<div class="col-md-9 myBtnContainer">
-<div class="facetwp-facet facetwp-facet-interests facetwp-type-checkboxes" data-name="interests" data-type="checkboxes">
+<div class="facetwp-facet facetwp-facet-interests" data-name="interests" data-type="checkboxes">
 											<?php
 											$terms = get_terms('travel-style');
 											$post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));?>
