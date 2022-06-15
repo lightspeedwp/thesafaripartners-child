@@ -95,7 +95,40 @@ get_header(); ?>
                       </div>
                       <div class="col-md-9">
 
-                          <div class="facetwp-facet facetwp-facet-interests facetwp-type-checkboxes" data-name="interests" data-type="checkboxes"><div class="facetwp-checkbox" data-value="beach-relaxation"><span class="facetwp-display-value">Beach &amp; Relaxation</span><span class="facetwp-counter">(4)</span></div><div class="facetwp-checkbox" data-value="city-breaks"><span class="facetwp-display-value">City Breaks</span><span class="facetwp-counter">(2)</span></div><div class="facetwp-checkbox" data-value="flying-safaris"><span class="facetwp-display-value">Flying Safaris</span><span class="facetwp-counter">(2)</span></div><div class="facetwp-checkbox" data-value="migration"><span class="facetwp-display-value">Migration</span><span class="facetwp-counter">(1)</span></div><div class="facetwp-checkbox" data-value="rail-journeys"><span class="facetwp-display-value">Rail Journeys</span><span class="facetwp-counter">(2)</span></div><div class="facetwp-checkbox" data-value="romantic"><span class="facetwp-display-value">Romantic</span><span class="facetwp-counter">(4)</span></div><div class="facetwp-checkbox checked" data-value="self-drive"><span class="facetwp-display-value">Self Drive</span><span class="facetwp-counter">(5)</span></div><div class="facetwp-checkbox" data-value="walking-safaris"><span class="facetwp-display-value">Walking Safaris</span><span class="facetwp-counter">(2)</span></div><div class="facetwp-checkbox" data-value="water-based-safari"><span class="facetwp-display-value">Water Based Safari</span><span class="facetwp-counter">(4)</span></div></div>
+                          <?php
+                          $terms = get_terms('travel-style');
+                          $post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));?>
+                          <?php foreach( $terms as $term ): ?>
+                              <!-- post -->
+
+                          <article class="col-md-2 status-publish hentry">
+                                <div class="checkbox-wrapper">
+                                  <input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+                                  <span aria-hidden="true"></span>
+                                </div>
+
+                              <?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+                                <div class="lsx-to-widget-thumb">
+                                    <?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
+                                </div>
+
+                              <?php else : ?>
+                                <div class="lsx-to-widget-thumb">
+                                    <img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+                                </div>
+
+                              <?php endif; ?>
+
+                              <div class="lsx-to-content">
+                                  <?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
+                                  </div>
+
+
+
+                          </article>
+                        <?php endforeach; ?>
+
+                        <?php	wp_reset_query(); ?>
 
                         </div>
                       </div>
