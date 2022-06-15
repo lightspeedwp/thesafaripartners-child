@@ -456,9 +456,7 @@ height: 15%;}
 .single-lsx-to-tour #lsx-banner{display:none!important;}
 .ot-list h2{display:none;}
 .home .lsx-to-widget-item-wrap .lsx-to-widget-content{position:relative; z-index:10;background:none;padding: 8px 8px 0 8px!important;}
-.home .lsx-to-widget-item-wrap {border:1px solid #fff;}
-.home .lsx-to-widget-item-wrap:hover {border:1px solid #ce9e57;}
-.home .lsx-to-widget-item-wrap:hover h4{color:#ce9e57!important;}
+
 .home .wp-block-tour-operator-block-post-types{padding:10px;}
 .home .tour-styles-top-info{display:block!important;}
 .tour-styles-top-info{display:none;}
