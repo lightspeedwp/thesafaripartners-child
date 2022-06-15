@@ -17,6 +17,10 @@ if ( $has_single ) {
 }
 ?>
 <article <?php post_class(); ?>>
+
+
+	<?php if ( empty( $disable_placeholder ) ) { ?>
+	
 		<div class="lsx-to-widget-thumb">
 			<?php
 			if ( $has_single ) {
