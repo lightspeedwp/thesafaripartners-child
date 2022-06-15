@@ -44,7 +44,7 @@ get_header(); ?>
 									<p>Let us what interests you</p>
 									</div>
 									<div class="col-md-9 myBtnContainer">
-
+<div class="facetwp-facet facetwp-facet-interests facetwp-type-checkboxes" data-name="interests" data-type="checkboxes">
 											<?php
 											$terms = get_terms('travel-style');
 											$post_tags = wp_get_post_terms($post->ID,'travel-style',array('fields' => 'slugs'));?>
@@ -52,7 +52,7 @@ get_header(); ?>
 													<!-- post -->
 
 											<article class="col-md-2 status-publish hentry">
-												<div class="checkbox-wrapper facetwp-checkbox" data-value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>">
+												<div class="checkbox-wrapper facetwp-checkbox facetwp-display-value" data-value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>">
 															<input class="btn-check"  type="checkbox"/>
 															<span aria-hidden="true"></span>
 														</div>
@@ -79,7 +79,7 @@ get_header(); ?>
 										<?php endforeach; ?>
 
 										<?php	wp_reset_query(); ?>
-
+</div>
 										</div>
 									</div>
 								</div>
