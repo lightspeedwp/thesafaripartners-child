@@ -7,5 +7,3 @@
 	'use strict';
 
 })( jQuery, window, document );
-
-$('#slick-slider').slick('refresh');
