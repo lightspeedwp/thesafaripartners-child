@@ -612,13 +612,7 @@ display: contents;
 .page .entry-content > div:first-of-type{width:100%!important;}
 
 #dates-prices{height:350px;max-height:350px;overflow-y: scroll;}
-#dates-prices .btn{background-color: #6a6d5b!important;color:#fff!important;
-    padding-top: 10px;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    box-shadow: none;border-radius: none!important;box-shadow:none!important;}
-
+#dates-prices .btn{background-color: #6a6d5b!important;color:#fff!important;height:24px;border-radius: 0!important;box-shadow:0!important;}
 
 .archive .wrap.container{width:1366px!important;margin: 0 auto;}
 .page .entry-content > div:not(:first-of-type){width:1366px;}
