@@ -326,10 +326,6 @@ function openinCity(evt, eventName) {
 																	<div class="lsx-to-archive-wrapper">
 																		<div class="lsx-to-tour-content">
 																		<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
-																			<div class="lsx-to-summary">
-																				<h2 class="lsx-to-summary-title">Dates & Prices</h2>
-
-																			</div>
 
 
   		  	<div class="tab-pane <?php echo $active; ?>" id="dates-prices">
