@@ -331,7 +331,7 @@ function openinCity(evt, eventName) {
 
 																			</div>
 
-																		<?php	get_post_meta( $tour, 'bs_tour_dates_prices', false ); ?>
+																		<?php	get_post_meta( $tour, 'bs_tour_dates_prices' ); ?>
 
 
 
