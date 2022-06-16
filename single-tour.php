@@ -333,7 +333,7 @@ function openinCity(evt, eventName) {
 
                                       <?php
   		$count = 0;
-  		if ( $dates_prices || $includes || $excludes ) :
+  		if ( $dates_prices ) :
   			?>
   		  	<div class="tab-pane <?php echo $active; ?>" id="dates-prices">
             <?php
@@ -458,18 +458,7 @@ function openinCity(evt, eventName) {
   		}
   		?>
 
-  		<?php
-  			$includes = get_post_meta( get_the_ID(), 'bs_tour_price_includes', true );
-  			$excludes = get_post_meta( get_the_ID(), 'bs_tour_price_excludes', true );
-
-  			if ( $includes ) { ?>
-  				<p class="marginless"><strong>Price Includes:</strong> <?php echo wpautop( str_replace('And',' And ',$includes) ); ?></p>
-  			<?php }
-
-  			if ( $excludes ) { ?>
-  				<p class="marginless"><strong>Price Excludes:</strong> <?php echo wpautop( str_replace('And',' And ',$excludes) ); ?></p>
-  			<?php }
-  		?>
+  	
 
   	<div class="clearfix"></div>
   </article><!-- #post-## -->
