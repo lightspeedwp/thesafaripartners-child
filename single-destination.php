@@ -201,10 +201,5 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-<script type="text/javascript">
-	jQuery( function( $ ) {
-   	alert( 'Hi' );
-	} );
-</script>
 <?php
 get_footer();
