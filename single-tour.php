@@ -331,10 +331,7 @@ function openinCity(evt, eventName) {
 
 																			</div>
 
-                                      <?php
-  		$count = 0;
-  		if ( $dates_prices ) :
-  			?>
+
   		  	<div class="tab-pane <?php echo $active; ?>" id="dates-prices">
             <?php
   $dates_prices = get_post_meta( get_the_ID(), 'bs_tour_dates_prices', false );
@@ -458,7 +455,7 @@ function openinCity(evt, eventName) {
   		}
   		?>
 
-  	
+
 
   	<div class="clearfix"></div>
   </article><!-- #post-## -->
@@ -466,7 +463,6 @@ function openinCity(evt, eventName) {
   		  	<?php
   			$active = "";
   			// wp_reset_query();
-  		endif;
   		?>
 
 
