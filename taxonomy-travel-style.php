@@ -144,7 +144,7 @@ get_header(); ?>
 								<div class="lsx-to-widget-thumb">
 
 									<a href="<?php the_permalink() ?>">
-										<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+										<?php lsx_thumbnail( 'lsx-thumbnail-large' ); ?>
 
 									</a>
 								</div>
