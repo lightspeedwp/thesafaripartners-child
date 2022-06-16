@@ -272,7 +272,7 @@ function openinCity(evt, eventName) {
 
 																			</div>
 
-                                  <?php lsx_to_itinerary_accommodation();	?>
+                                  <?php lsx_to_connected_accommodation(); get_post_meta( $tour, 'accommodation_to_tour', false );	?>
 
 
 																		</div></div></div></div>
