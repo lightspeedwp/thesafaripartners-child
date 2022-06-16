@@ -272,7 +272,10 @@ function openinCity(evt, eventName) {
 
 																			</div>
 
-                                  <?php lsx_to_connected_accommodation(); get_post_meta( $tour, 'accommodation_to_tour', true );	?>
+
+                                  <?php lsx_to_connected_accommodation();
+
+                                  lsx_to_accommodation_posts();?>
 
 
 																		</div></div></div></div>
@@ -328,18 +331,10 @@ function openinCity(evt, eventName) {
 
 																			</div>
 
-																			<table class="table table-striped">
+																		<?php	get_post_meta( $tour, 'bs_tour_dates_prices', false ); ?>
 
 
-																							<thead>
-																								<tr>
-																									<th>Start Date:</th><th>End Date:</th><th>Price Sharing:</th><th>Single Add:</th><th></th>
-																							  	</tr>
-																							</thead>
 
-																							<tbody>
-																								<tr><td class="start-date" data-gform-date="04/01/2022">01 Apr 2022</td><td class="end-date" data-gform-date="06/30/2022">30 Jun 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $4590" data-price="4590" title="Original price:4590">USD $<strong>4,590</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1090" data-price="1090" title="Original price:1090">USD $<strong>1,090</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="07/01/2022">01 Jul 2022</td><td class="end-date" data-gform-date="10/31/2022">31 Oct 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $5780" data-price="5780" title="Original price:5780">USD $<strong>5,780</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1445" data-price="1445" title="Original price:1445">USD $<strong>1,445</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="11/01/2022">01 Nov 2022</td><td class="end-date" data-gform-date="11/30/2022">30 Nov 2022</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $4590" data-price="4590" title="Original price:4590">USD $<strong>4,590</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $1090" data-price="1090" title="Original price:1090">USD $<strong>1,090</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr><tr><td class="start-date" data-gform-date="12/01/2022">01 Dec 2022</td><td class="end-date" data-gform-date="03/31/2023">31 Mar 2023</td><td class="price-sharing"><span class="amount" data-currency="USD" data-original=" USD $3545" data-price="3545" title="Original price:3545">USD $<strong>3,545</strong></span></td><td class="single-add"><span class="amount" data-currency="USD" data-original=" USD $775" data-price="775" title="Original price:775">USD $<strong>775</strong></span></td><td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="Botswana Value Flying Safari" class="btn btn-default dates-prices-book-now">Book Now</button></td></tr>				</tbody><tbody>
-																						</tbody></table>
                                             <?php  $tour_included = lsx_to_included( '', '', false );
                                                   	$tour_not_included = lsx_to_not_included( '', '', false );
 
