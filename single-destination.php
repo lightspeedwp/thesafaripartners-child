@@ -194,7 +194,8 @@ function w3RemoveClass(element, name) {
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn-check");
 for (var i = 0; i < btns.length; i++) {
-	selector.addEventListener("change", () => {
+  btns[i].addEventListener("click", function() {
+		selector.addEventListener("change", () => {
   // if value switched by client
     switch (selector.value) {
       case "add":
@@ -206,10 +207,9 @@ for (var i = 0; i < btns.length; i++) {
         result.innerHTML = selector.value;
         break; // then take break
     }
-  btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    current[0].className = current[0].className.replace("active", "");
+    this.className += "active";
   });
 }
 </script>
