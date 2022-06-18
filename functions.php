@@ -71,18 +71,3 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 	lsx_to_connected_panel_query( $args );
 }
 }
-
-function fwp_disable_auto_refresh() {
-?>
-<script>
-(function($) {
-    $(function() {
-        if ('undefined' !== typeof FWP) {
-            FWP.auto_refresh = false;
-        }
-    });
-})(fUtil);
-</script>
-<?php
-}
-add_action( 'wp_footer', 'fwp_disable_auto_refresh', 100 );
