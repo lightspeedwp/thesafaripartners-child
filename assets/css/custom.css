@@ -424,6 +424,29 @@ font-weight: bold;font-size:14px;
   to {opacity: 1;}
 }
 
+/* Wizard-Pages */
+.facetwp-facet.facetwp-facet-interests {
+    margin-bottom: 0;
+}
+.facetwp-facet-interests .facetwp-checkbox {
+    display: inline-block;
+    background: none;
+    line-height: 48px;
+    width: 120px;
+    margin: 0;
+}
+.facetwp-facet-interests .facetwp-checkbox.checked {
+    background: none;
+}
+.facetwp-facet-interests .facetwp-checkbox img {
+    opacity: 0.3;
+    vertical-align: top;
+    width: 98px;
+}
+.facetwp-facet-interests .facetwp-checkbox.checked img {
+    opacity: 1;
+}
+
 /*Gutenberg */
 .gutenberg-compatible-template.using-gutenberg .entry-content{padding:0;}
 .gutenberg-compatible-template.using-gutenberg .entry-content>div, .gutenberg-compatible-template.using-gutenberg .entry-content>p, .gutenberg-compatible-template.using-gutenberg .entry-content>h1, .gutenberg-compatible-template.using-gutenberg .entry-content>h2, .gutenberg-compatible-template.using-gutenberg .entry-content>h3, .gutenberg-compatible-template.using-gutenberg .entry-content>h4, .gutenberg-compatible-template.using-gutenberg .entry-content>h5, .gutenberg-compatible-template.using-gutenberg .entry-content>h6, .gutenberg-compatible-template.using-gutenberg .entry-content>ul, .gutenberg-compatible-template.using-gutenberg .entry-content>ol, .gutenberg-compatible-template.using-gutenberg .entry-content>blockquote, .gutenberg-compatible-template.using-gutenberg .entry-content>pre, .gutenberg-compatible-template.using-gutenberg .entry-content>figure, .gutenberg-compatible-template.using-gutenberg .entry-content>strong, .gutenberg-compatible-template.using-gutenberg .entry-content>span, .gutenberg-compatible-template.using-gutenberg .entry-content>table{width:100%;max-width:100%;}

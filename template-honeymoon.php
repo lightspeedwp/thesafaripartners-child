@@ -929,5 +929,21 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
+<script>
+(function($) {
+    $(document).on('facetwp-loaded', function() {
+        var $parent = $('.facetwp-facet-interests');
+        if (! $parent.hasClass('modded')) {
+            $parent.find('.facetwp-radio').each(function() {
+                var $this = $(this);
+                var type = $this.attr('data-value');
+                var counter = $this.find('.facetwp-counter').text().replace('(', '').replace(')', '');
+                $this.html('<img src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/img/' + type + '.img" alt="' + type + '" /> ' );
+            });
+            $parent.addClass('modded');
+        }
+    });
+})(jQuery);
+</script>
 <?php
 get_footer();
