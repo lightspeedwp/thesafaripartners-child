@@ -938,7 +938,7 @@ for (var i = 0; i < btns.length; i++) {
                 var $this = $(this);
                 var type = $this.attr('facetwp-display-value');
                 var counter = $this.find('.facetwp-counter').text().replace('(', '').replace(')', '');
-                $this.html('<img src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/img/' + type + '.img" alt="' + type + '" /> ' );
+                $this.html('<img src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/img/' + type + '.jpg" alt="' + type + '" /> ' );
             });
             $parent.addClass('modded');
         }
