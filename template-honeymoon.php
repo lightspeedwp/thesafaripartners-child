@@ -936,7 +936,7 @@ for (var i = 0; i < btns.length; i++) {
         if (! $parent.hasClass('modded')) {
             $parent.find('.facetwp-checkbox').each(function() {
                 var $this = $(this);
-                var type = $this.attr('facetwp-display-value');
+                var type = $this.attr('date-value');
                 var counter = $this.find('.facetwp-counter').text().replace('(', '').replace(')', '');
                 $this.html('<img src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/img/' + type + '.jpg" alt="' + type + '" /> ' );
             });
