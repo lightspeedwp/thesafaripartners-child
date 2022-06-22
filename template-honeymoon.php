@@ -934,9 +934,9 @@ for (var i = 0; i < btns.length; i++) {
     $(document).on('facetwp-loaded', function() {
         var $parent = $('.facetwp-facet-interests');
         if (! $parent.hasClass('modded')) {
-            $parent.find('.facetwp-radio').each(function() {
+            $parent.find('.facetwp-checkbox').each(function() {
                 var $this = $(this);
-                var type = $this.attr('data-value');
+                var type = $this.attr('facetwp-display-value');
                 var counter = $this.find('.facetwp-counter').text().replace('(', '').replace(')', '');
                 $this.html('<img src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/img/' + type + '.img" alt="' + type + '" /> ' );
             });
