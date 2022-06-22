@@ -928,11 +928,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-$('.facetwp-facet').click(function() {
-      setTimeout(function() {
-        location.reload();
-      },500);
-  });
 </script>
 <script>
 (function($) {
@@ -948,7 +943,11 @@ $('.facetwp-facet').click(function() {
             $parent.addClass('modded');
         }
     });
-
+		$('.facetwp-facet').click(function() {
+		      setTimeout(function() {
+		        location.reload();
+		      },500);
+		  });
 }
 )(jQuery);
 </script>
