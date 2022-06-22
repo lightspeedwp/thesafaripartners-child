@@ -928,6 +928,11 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+$('.facetwp-facet').click(function() {
+      setTimeout(function() {
+        location.reload();
+      },500);
+  });
 </script>
 <script>
 (function($) {
@@ -943,7 +948,9 @@ for (var i = 0; i < btns.length; i++) {
             $parent.addClass('modded');
         }
     });
-})(jQuery);
+
+}
+)(jQuery);
 </script>
 <?php
 get_footer();
