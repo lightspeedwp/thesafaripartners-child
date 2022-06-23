@@ -313,8 +313,6 @@ input[type=radio]:focus {
 outline-color: #fff;}
 .pum .gchoice{width:90px; float:left;}
 
-.lsx-contact-module #primary .gform_wrapper .button, .lsx-contact-module #primary .gform_wrapper input[type=submit]{background:#6a6d5b!important; color:#fff!important;font-family: argesta_displayregular, serif;; text-transform:uppercase;padding:18px 26px 26px!important;font-size:17px!important;border:none!important;border-radius:0;border:none;}
-
 	.pum form button, .pum form button:active, .pum form button:visited, .pum .pum-form--style-default button, .pum .pum-form--style-default button:active, .pum .pum-form--style-default button:visited, .pum .pum-age-form button, .pum .pum-age-form button:active, .pum .pum-age-form button:visited{align-items: center;
     background-color: #999;
     -webkit-box-shadow: none;
@@ -936,6 +934,8 @@ width: 100%;}
 .tax-travel-style .desinations-landing-style > div:first-of-type img{width:100%;}
 .archive-intro{padding-bottom:50px;}
 .page-template-template-contact #primary form input, .page-template-template-contact #primary form select, .page-template-template-contact #primary  form textarea{border-top:0;border-right:0;border-left:0;border-bottom:1px solid #000;color:#000;padding:1px;line-height:10px;min-height:30px;height:30px;background:transparent;font-family:"moret",serif!important;}
+
+.page-template-template-contact #primary form input[type=submit]{background:#6a6d5b!important; color:#fff!important;font-family: argesta_displayregular, serif;; text-transform:uppercase;padding:18px 26px 26px!important;font-size:17px!important;border:none!important;border-radius:0;border:none;}
 
 
 #who-single .checkbox-wrapper {
