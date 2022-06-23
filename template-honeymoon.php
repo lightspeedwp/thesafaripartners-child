@@ -901,15 +901,5 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-<script>
-(function($) {
-		$('.facetwp-facet').click(function() {
-		      setTimeout(function() {
-		        location.reload();
-		      },500);
-		  });
-}
-)(jQuery);
-</script>
 <?php
 get_footer();
