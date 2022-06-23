@@ -344,12 +344,12 @@ outline-color: #fff;}
     text-rendering: auto;}
 /*Tabber */
     /* Style the tab */
-.tab {
+#primary .tab {
   overflow: hidden;right: 56%;z-index:9;margin-top:1%;
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+#primary .tab button {
   background-color: inherit;font-family:argesta_displayregular, serif!important;
 font-weight: bold;font-size:14px;
   border: none;
@@ -360,12 +360,12 @@ font-weight: bold;font-size:14px;
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+#primary .tab button:hover {
   border-bottom: 2px solid #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+#primary .tab button.active {
   border-bottom: 2px solid #ccc;
 }
 
