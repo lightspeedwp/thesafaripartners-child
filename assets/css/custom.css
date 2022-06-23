@@ -609,11 +609,13 @@ display: contents;
     margin: auto;
     padding: 0!important;}
 
-  .page-template-template-contact .lsx-contact-module{ width: 100%;max-width:574px!important;
+  .page-template-template-contact .lsx-contact-module{ width: 100%;max-width:580px!important;
     position: absolute;
     right: 4%;
     z-index: 4;
     padding-top: 18%;}
+    .page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column{position: relative;
+    height: 35vh!important;}
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
     height: 52vh;}
 
