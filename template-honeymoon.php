@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-<div id="primary" class="content-area bannerup <?php echo esc_attr( lsx_main_class() ); ?>">
+<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
 
 	<?php lsx_content_before(); ?>
 
@@ -43,7 +43,7 @@ get_header(); ?>
 									<h2>What interests you?</h2>
 									<p>Let us what interests you</p>
 									</div>
-									<div class="col-md-9 myBtnContainer">
+									<div class="col-md-9 myBtnContainer facetwp-facet facetwp-facet-interests facetwp-type-checkboxes">
 
 											<?php
 											$terms = get_terms('travel-style');
@@ -53,7 +53,7 @@ get_header(); ?>
 
 											<article class="col-md-2 status-publish hentry">
 														<div class="checkbox-wrapper">
-															<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+															<input class="btn-check facetwp-checkbox" data-value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" type="checkbox" />
 															<span aria-hidden="true"></span>
 														</div>
 
