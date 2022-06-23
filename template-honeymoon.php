@@ -144,7 +144,36 @@ get_header(); ?>
 
 	<div class="tour-display col-md-12">
 
-	<?php	echo do_shortcode( '[facetwp template="gallery"]' );?>
+		<div class="toptours-posts">
+			<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
+				<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+					<div class="lsx-to-slider-wrap">
+						<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
+			<?php
+			$the_query = new WP_Query( array(
+    'post_type' => 'tour',
+		'facetwp' => true, // we added this
+    'tax_query' => array(
+        array (
+            'taxonomy' => 'who',
+            'field' => 'slug',
+            'terms' => 'honeymooners',
+        )
+    ),
+) );
+
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();?>
+			<?php lsx_to_content( 'content-widget', 'tour' ); ?>
+
+
+							<?php endwhile; ?>
+							<?php	wp_reset_query(); ?>
+							</div>
+							</div>
+							</div>
+							</div>
+							</div>
 						</div>
 
 	</main><!-- #main -->
@@ -903,6 +932,18 @@ for (var i = 0; i < btns.length; i++) {
 </script>
 <script>
 (function($) {
+    $(document).on('facetwp-loaded', function() {
+        var $parent = $('.facetwp-facet-interests');
+        if (! $parent.hasClass('modded')) {
+            $parent.find('.facetwp-checkbox').each(function() {
+                var $this = $(this);
+                var type = $this.attr('data-value');
+                var counter = $this.find('.facetwp-counter').text().replace('(', '').replace(')', '');
+                $this.html('<img src="https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/themes/thesafaripartners-child/img/' + type + '.jpg" alt="' + type + '" /> ' );
+            });
+            $parent.addClass('modded');
+        }
+    });
 		$('.facetwp-facet').click(function() {
 		      setTimeout(function() {
 		        location.reload();
