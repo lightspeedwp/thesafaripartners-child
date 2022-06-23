@@ -935,7 +935,7 @@ width: 100%;}
 .tax-travel-style .desinations-landing-style > div:first-of-type .lsx-to-widget-thumb{padding: 0 1px!important;}
 .tax-travel-style .desinations-landing-style > div:first-of-type img{width:100%;}
 .archive-intro{padding-bottom:50px;}
-.page-template-template-contact #primary form input, .page-template-template-contact #primary form select, .page-template-template-contact #primary  form textarea{border-top:0!important;border-right:0!important;border-left:0!important;border-bottom:1px solid #000!important;color:#000!important;padding:1px!important;line-height:10px!important;min-height:30px!important;height:30px!important;background:transparent!important;font-family:"moret",serif!important;}
+.page-template-template-contact #primary form input, .page-template-template-contact #primary form select, .page-template-template-contact #primary  form textarea{border-top:0;border-right:0;border-left:0;border-bottom:1px solid #000;color:#000;padding:1px;line-height:10px;min-height:30px;height:30px;background:transparent;font-family:"moret",serif!important;}
 
 
 #who-single .checkbox-wrapper {
