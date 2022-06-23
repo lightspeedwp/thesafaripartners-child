@@ -45,7 +45,7 @@ get_header(); ?>
 
 									$content = apply_filters( 'the_content', $content );?>
 
-							<div id="<?php echo $page->post_title; ?>" class="tabcontent">
+							<div id="<?php echo $page->post_title; ?>" class="<?php echo $page->ID; ?> tabcontent">
 								<div class="col-md-6">
 									<div class="lsx-contact-module">
 			  					<?php echo $content; ?>
