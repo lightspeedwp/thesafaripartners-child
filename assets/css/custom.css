@@ -343,7 +343,7 @@ outline-color: #fff;}
 /*Tabber */
     /* Style the tab */
 #primary .tab {
-  overflow: hidden;right: 56%;z-index:9;margin-top:1%;
+  overflow: hidden;right: 57%;z-index:9;margin-top:1%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -614,9 +614,12 @@ display: contents;
     padding-top: 18%;}
     .page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column{position: relative;
     height: 35vh!important;}
+    .page-template-template-contact .contact-134004 .lsx-contact-module .wp-block-column{position: relative;
+    padding-top: 20%!important;}
+    .page-template-template-contact .contact-134234 .lsx-contact-module .wp-block-column{position: relative;
+    padding-top: 20%!important;}
     .page-template-template-contact .contact-133993 .wp-block-column{width:24%!important;margin:0!important;padding:0 2px!important;}
-    .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;
-    height: 52vh;}
+    .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;}
 
     .page-template-template-contact #page-134234, .page-template-template-contact #page-134309,.page-template-template-contact #page-133993{display:none;}
 
