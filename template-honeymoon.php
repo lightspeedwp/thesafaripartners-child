@@ -26,7 +26,7 @@ get_header(); ?>
 				the_post();
 			?>
 
-
+				<?php get_template_part( 'partials/content', 'page' ); ?>
 
 			<?php endwhile; ?>
 
@@ -900,6 +900,16 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+</script>
+<script>
+(function($) {
+		$('.facetwp-facet').click(function() {
+		      setTimeout(function() {
+		        location.reload();
+		      },500);
+		  });
+}
+)(jQuery);
 </script>
 <?php
 get_footer();
