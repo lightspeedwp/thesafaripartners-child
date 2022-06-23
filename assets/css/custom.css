@@ -313,7 +313,7 @@ input[type=radio]:focus {
 outline-color: #fff;}
 .pum .gchoice{width:90px; float:left;}
 
-.lsx-contact-module #primary .gform_wrapper .button{background:#6a6d5b!important; color:#fff!important;font-family: argesta_displayregular, serif;; text-transform:uppercase;padding:18px 26px 26px!important;font-size:17px!important;border:none!important;border-radius:0;border:none;}
+.lsx-contact-module #primary .gform_wrapper .button, .lsx-contact-module #primary .gform_wrapper input[type=submit]{background:#6a6d5b!important; color:#fff!important;font-family: argesta_displayregular, serif;; text-transform:uppercase;padding:18px 26px 26px!important;font-size:17px!important;border:none!important;border-radius:0;border:none;}
 
 	.pum form button, .pum form button:active, .pum form button:visited, .pum .pum-form--style-default button, .pum .pum-form--style-default button:active, .pum .pum-form--style-default button:visited, .pum .pum-age-form button, .pum .pum-age-form button:active, .pum .pum-age-form button:visited{align-items: center;
     background-color: #999;
