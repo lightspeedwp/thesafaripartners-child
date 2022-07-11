@@ -21,7 +21,8 @@ get_header(); ?>
 		<div class="row">
 			<div class="outer-container">
 				<div id="wizard" class="lsx-wizard" style="display: none;">
-					<form class="insipre-wizard-form" action="<?php home_url('/'); ?>?s=">
+					<form class="insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET">
+						<input type="hidden" name="s" value="" />
 						<div class="lsx-wizard-step">
 							<div class="step-content introslide">
 								<?php if ( have_posts() ) : ?>
@@ -278,7 +279,7 @@ get_header(); ?>
 
 			},
 			final: function () {
-				// TODO: implement
+				jQuery('.insipre-wizard-form').submit();
 			},
 			// disables the "previous" button for the provided step
 			disablePreviousButton: function (stepNumber) {
@@ -342,6 +343,8 @@ get_header(); ?>
 					$plugin.trigger("slideLeftSuccess.lsxWizard", this);
 				});
 
+			} else {
+				jQuery('.insipre-wizard-form').submit();
 			}
 
 		}
@@ -610,13 +613,6 @@ get_header(); ?>
 			}
 		}
 
-		function submitForm() {
-			jQuery('.lsx-wizard-button-next.btn-success').on('click', function(event){
-				event.preventDefault();
-				jQuery('.insipre-wizard-form').submit();
-			});
-		}
-
 		////////////////////////////////////////// Plugin definition
 
 		$.fn.lsxWizard = function (method) {
@@ -760,16 +756,6 @@ get_header(); ?>
 				}
 			}
 		};
-
-		/**
-		 * On window load.
-		 *
-		 * @package    lsx
-		 * @subpackage scripts
-		 */
-		$(window).on('load', function () {
-			submitForm();
-		});
 
 	})( jQuery, window, document );
 </script>
