@@ -614,10 +614,6 @@ display: contents;
     padding-top: 18%;}
     .page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column{position: relative;
     height: 35vh!important;}
-    .page-template-template-contact .contact-134004 .lsx-contact-module .wp-block-column{position: relative;
-    padding-top: 20%!important;}
-    .page-template-template-contact .contact-134234 .lsx-contact-module .wp-block-column{position: relative;
-    padding-top: 20%!important;}
     .page-template-template-contact .contact-133993 .wp-block-column{width:24%!important;margin:0!important;padding:0 2px!important;}
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;}
 
@@ -1006,8 +1002,5 @@ position: absolute;
 .single .filterDiv{  display: none!important; /* Hidden by default */}
 .single .show {  display: block!important;}}
 
-::-webkit-input-placeholder { color:#000; }
-:-moz-placeholder { opacity: 1; color:#000; } /* Firefox 18- */
-::-moz-placeholder { opacity: 1; color:#000; } /* firefox 19+ */
-:-ms-input-placeholder { color:#000; } /* ie */
-input:-moz-placeholder { color:#000; }
+.gfield input::-webkit-input-placeholder {color: #000!important;}
+.gfield  textarea::-webkit-input-placeholder {color:#000!important;}
