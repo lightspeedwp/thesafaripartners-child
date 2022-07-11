@@ -27,7 +27,7 @@
 						?>
 						<article class="col-md-3 travelwhen">
 							<div class="checkbox-wrapper">
-								<input class="btn-check"  type="checkbox" name="fwp_interests" value="<?php echo esc_html( $key ); ?>" />
+								<input class="btn-check"  type="checkbox" name="fwp_when" value="<?php echo esc_html( $key ); ?>" />
 								<span aria-hidden="true"></span>
 								<label><?php echo esc_html( $month ); ?><label>
 							</div>

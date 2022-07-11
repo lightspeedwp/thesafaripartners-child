@@ -10,15 +10,14 @@
 			<div class="col-md-9">
 
 				<?php
-				$terms     = get_terms( 'travel-style' );
-				$post_tags = wp_get_post_terms( $post->ID, 'travel-style', array( 'fields' => 'slugs' ) );
+				$terms = get_terms( 'travel-style' );
 				?>
 
 				<?php foreach ( $terms as $term ) : ?>
 					<!-- post -->
 					<article class="col-md-2 status-publish hentry">
 						<div class="checkbox-wrapper">
-							<input class="btn-check"  type="checkbox" name="fwp_interests" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
+							<input class="btn-check"  type="checkbox" name="fwp_what" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 							<span aria-hidden="true"></span>
 						</div>
 

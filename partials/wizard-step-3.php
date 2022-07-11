@@ -21,12 +21,13 @@
 									);
 
 									while ( $the_query->have_posts() ) :
+										global $post;
 										$the_query->the_post();
 										?>
 										<div class="lsx-to-widget-item-wrap col-xs-4 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
 											<div class="lsx-to-widget-thumb">
 												<div class="checkbox-wrapper">
-													<input class="btn-check"  type="checkbox" onclick="filterSelection('destination-<?php the_title(); ?>')" />
+													<input class="btn-check"  type="checkbox" value="<?php echo $post->post_name; ?>" name="fwp_where" />
 													<span aria-hidden="true"></span>
 												</div>
 												<?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
