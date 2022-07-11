@@ -38,6 +38,8 @@ class Setup {
 		add_action( 'after_setup_theme', array( $this, 'language_setup' ), 11 );
 		add_action( 'init', array( $this, 'who_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
+		add_action( 'init', array( $this, 'budget_taxonomy_setup' ), 90 );
+		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
 		$this->menu_position = 100;
@@ -148,6 +150,46 @@ class Setup {
 		register_taxonomy( 'when', array( 'tour' ), $args );
 	}
 
+	public function budget_taxonomy_setup() {
+
+		$labels = array(
+			'name'                       => _x( 'Budget', 'Taxonomy General Name', 'tsp-child' ),
+			'singular_name'              => _x( 'Budget', 'Taxonomy Singular Name', 'tsp-child' ),
+			'menu_name'                  => __( 'Budget', 'tsp-child' ),
+			'all_items'                  => __( 'All Items', 'tsp-child' ),
+			'parent_item'                => __( 'Parent Item', 'tsp-child' ),
+			'parent_item_colon'          => __( 'Parent Item:', 'tsp-child' ),
+			'new_item_name'              => __( 'New Item Name', 'tsp-child' ),
+			'add_new_item'               => __( 'Add New Item', 'tsp-child' ),
+			'edit_item'                  => __( 'Edit Item', 'tsp-child' ),
+			'update_item'                => __( 'Update Item', 'tsp-child' ),
+			'view_item'                  => __( 'View Item', 'tsp-child' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'tsp-child' ),
+			'add_or_remove_items'        => __( 'Add or remove items', 'tsp-child' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'tsp-child' ),
+			'popular_items'              => __( 'Popular Items', 'tsp-child' ),
+			'search_items'               => __( 'Search Items', 'tsp-child' ),
+			'not_found'                  => __( 'Not Found', 'tsp-child' ),
+			'no_terms'                   => __( 'No items', 'tsp-child' ),
+			'items_list'                 => __( 'Items list', 'tsp-child' ),
+			'items_list_navigation'      => __( 'Items list navigation', 'tsp-child' ),
+		);
+		$args = array(
+			'labels'                     => $labels,
+			'hierarchical'               => false,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => false,
+			'rewrite'             => array(
+				'slug' => 'budget',
+			),
+			'show_in_rest'               => true,
+		);
+		register_taxonomy( 'budget', array( 'tour' ), $args );
+	}
+
 	/**
 	 * Register the taxonomy menus.
 	 *
@@ -156,6 +198,7 @@ class Setup {
 	public function register_sub_menus() {
 		add_submenu_page( 'tour-operator', __( 'Who', 'tsp-child' ), __( 'Who', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );
 		add_submenu_page( 'tour-operator', __( 'When', 'tsp-child' ), __( 'When', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );
+		add_submenu_page( 'tour-operator', __( 'Budget', 'tsp-child' ), __( 'Budget', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=budget' );
 	}
 
 	public function admin_menu_position( $position, $config ) {
