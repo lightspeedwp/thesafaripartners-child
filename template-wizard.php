@@ -346,7 +346,7 @@ get_header(); ?>
 				});
 
 			} else {
-				console.log(jQuery('.insipre-wizard-form').serialize() );
+				console.log(jQuery('.insipre-wizard-form').serializeArray() );
 				jQuery('.insipre-wizard-form').submit();
 			}
 
