@@ -16,7 +16,7 @@
 					<!-- post -->
 					<article class="col-md-4 status-publish hentry">
 						<div class="checkbox-wrapper">
-							<input class="btn-check"  type="checkbox" onclick="filterSelection('travel-style-<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>')" />
+							<input class="btn-check"  type="checkbox" name="fwp_tourdestinations" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 							<span aria-hidden="true"></span>
 						</div>
 

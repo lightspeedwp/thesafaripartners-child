@@ -761,6 +761,16 @@ get_header(); ?>
 			}
 		};
 
+		/**
+		 * On window load.
+		 *
+		 * @package    lsx
+		 * @subpackage scripts
+		 */
+		$(window).on('load', function () {
+			submitForm();
+		});
+
 	})( jQuery, window, document );
 </script>
 
