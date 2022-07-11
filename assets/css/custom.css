@@ -33,10 +33,10 @@
 
  @media screen and (min-width: 1000px) {
 
-   h1,h2,h3,h4,h5 {font-family:argesta_displayregular, serif!important;
+   h1,h2,h3,h4,h5 {font-family:"moret",serif!important;
 font-weight: bold;}
-	body,p,h6,ul,li,em{font-family:"moret",serif!important;}
-  span, th, tr, td,table,legend,label{font-family:"moret",serif;}
+	body,p,h6,ul,li,em{font-family:argesta_displayregular, serif!important;}
+  span, th, tr, td,table,legend,label{font-family:argesta_displayregular, serif!important;}
   .page.safari-styles {margin-top: 0px;}
 
 #travel-footer{background-image: url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
@@ -344,6 +344,10 @@ outline-color: #fff;}
     /* Style the tab */
 #primary .tab {
   overflow: hidden;right: 57%;z-index:9;margin-top:1%;
+}
+
+.single-lsx-to-tour #primary .tab {
+  overflow: hidden;right: 1%!important;z-index:9;margin-top:1%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -1010,4 +1014,4 @@ legend{border-bottom:none;}
 
 .gform_wrapper input[type="email"]:focus, .gform_wrapper input[type="date"]:focus, .gform_wrapper input[type="datetime"]:focus, .gform_wrapper input[type="datetime-local"]:focus, .gform_wrapper input[type="month"]:focus, .gform_wrapper input[type="number"]:focus, .gform_wrapper input[type="password"]:focus,
 .gform_wrapper input[type="search"]:focus, .gform_wrapper input[type="tel"]:focus, .gform_wrapper input[type="text"]:focus, .gform_wrapper input[type="time"]:focus, .gform_wrapper input[type="week"]:focus, .gform_wrapper input[type="url"]:focus, .gform_wrapper select:focus,
-.gform_wrapper textarea:focus{color:#262423!important;opacity:1;}
+.gform_wrapper textarea:focus{color:#262423!important;opacity:1;-webkit-box-shadow:none!important;box-shadow:none!important;}
