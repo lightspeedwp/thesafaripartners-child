@@ -1005,3 +1005,5 @@ position: absolute;
 .gfield input::-webkit-input-placeholder {color:#000!important;}
 .gfield textarea::-webkit-input-placeholder {color:#000!important;}
 .gfield_radio .gchoice{width:50%; float:left;}
+.gfield_radio{text-align:left!important;}
+legend{border-bottom:none;}
