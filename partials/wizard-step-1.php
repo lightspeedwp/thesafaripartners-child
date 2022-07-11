@@ -1,5 +1,5 @@
 <div class="lsx-wizard-step">
-	<h4>1. Who<?php esc_html_e( '', 'thesafaripartners-child' ); ?></h4>
+	<h4>1. <?php esc_html_e( 'Who', 'thesafaripartners-child' ); ?></h4>
 	<div class="step-content">
 		<div class="wizard-who">
 			<div class="col-md-3">

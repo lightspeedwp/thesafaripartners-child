@@ -47,6 +47,8 @@ get_header(); ?>
 						<?php get_template_part( 'partials/wizard-step', '3' ); ?>
 
 						<?php get_template_part( 'partials/wizard-step', '4' ); ?>
+
+						<?php get_template_part( 'partials/wizard-step', '5' ); ?>
 					</form>
 				</div>
 			</div>
