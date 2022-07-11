@@ -39,6 +39,9 @@ class Setup {
 		add_action( 'init', array( $this, 'who_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
+
+		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );
+		
 	}
 
 	/**
@@ -97,7 +100,9 @@ class Setup {
 			'show_admin_column'          => true,
 			'show_in_nav_menus'          => true,
 			'show_tagcloud'              => false,
-			'rewrite'                    => false,
+			'rewrite'             => array(
+				'slug' => 'who',
+			),
 			'show_in_rest'               => true,
 		);
 		register_taxonomy( 'who', array( 'tour', 'destination' ), $args );
@@ -135,7 +140,9 @@ class Setup {
 			'show_admin_column'          => true,
 			'show_in_nav_menus'          => true,
 			'show_tagcloud'              => false,
-			'rewrite'                    => false,
+			'rewrite'             => array(
+				'slug' => 'when',
+			),
 			'show_in_rest'               => true,
 		);
 		register_taxonomy( 'when', array( 'tour' ), $args );
@@ -149,5 +156,12 @@ class Setup {
 	public function register_sub_menus() {
 		add_submenu_page( 'tour-operator', __( 'Who', 'tsp-child' ), __( 'Who', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );
 		add_submenu_page( 'tour-operator', __( 'When', 'tsp-child' ), __( 'When', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );
+	}
+
+	public function admin_menu_position( $position, $config ) {
+		if ( isset( $config['args']['rewrite']['slug'] ) && 'who' === $config['args']['rewrite']['slug'] ) {
+			$position = 88;
+		}
+		return $position;
 	}
 }
