@@ -19,17 +19,13 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="temporay-search-boxes">
-				<?php echo do_shortcode( '[facetwp facet="who"]' ); ?>
-
-				<?php echo do_shortcode( '[facetwp facet="what"]' ); ?>
-
-				<?php echo do_shortcode( '[facetwp facet="where"]' ); ?>
-
-				<?php echo do_shortcode( '[facetwp facet="when"]' ); ?>
-
-				<?php echo do_shortcode( '[facetwp facet="budget"]' ); ?>
-			</div>
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'filter-menu',
+					)
+				);
+			?>
 
 			<div class="post-wrapper <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php

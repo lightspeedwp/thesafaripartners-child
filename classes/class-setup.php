@@ -68,6 +68,12 @@ class Setup {
 	 */
 	public function language_setup() {
 		load_child_theme_textdomain( 'tsp-child', get_stylesheet_directory() . '/languages' );
+
+		register_nav_menus(
+			array(
+				'filter-menu' => esc_html__( 'Filter Menu', 'thesafaripartners-child' ),
+			)
+		);
 	}
 
 	// Register Custom Taxonomy
