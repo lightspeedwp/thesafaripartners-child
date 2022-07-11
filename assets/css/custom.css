@@ -36,7 +36,7 @@
    h1,h2,h3,h4,h5 {font-family:argesta_displayregular, serif!important;
 font-weight: bold;}
 	body,p,h6,ul,li,em{font-family:"moret",serif!important;}
-  span, th, tr, td,table{font-family:"moret",serif;}
+  span, th, tr, td,table,legend,label{font-family:"moret",serif;}
   .page.safari-styles {margin-top: 0px;}
 
 #travel-footer{background-image: url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
@@ -1002,5 +1002,6 @@ position: absolute;
 .single .filterDiv{  display: none!important; /* Hidden by default */}
 .single .show {  display: block!important;}}
 
-.gfield input::-webkit-input-placeholder {color: #000!important;}
-.gfield  textarea::-webkit-input-placeholder {color:#000!important;}
+.gfield input::-webkit-input-placeholder {color:#000!important;}
+.gfield textarea::-webkit-input-placeholder {color:#000!important;}
+.gfield_radio .gchoice{width:50%; float:left;}
