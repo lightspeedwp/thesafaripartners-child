@@ -345,11 +345,8 @@ get_header(); ?>
 			} else {
 				console.log(jQuery('.insipre-wizard-form').serializeArray() );
 
-				let selectedCheckboxes = $('.insipre-wizard-form input[type=checkbox]:checked').map(function(){return $(this).val()}).get()
-
-				console.log(selectedCheckboxes);
-
-				console.log(selectedCheckboxes);
+				//let selectedCheckboxes = $('.insipre-wizard-form input[type="checkbox"]:checked').map(function(){return $(this).val()}).get()
+				$('.insipre-wizard-form').submit();
 			}
 
 		}
