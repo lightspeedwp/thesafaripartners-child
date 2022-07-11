@@ -20,13 +20,15 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<div class="temporay-search-boxes">
-				<?php echo do_shortcode( '[facetwp facet="tourdestinations"]' ); ?>
+				<?php echo do_shortcode( '[facetwp facet="who"]' ); ?>
 
-				<?php echo do_shortcode( '[facetwp facet="interests"]' ); ?>
+				<?php echo do_shortcode( '[facetwp facet="what"]' ); ?>
 
-				<?php echo do_shortcode( '[facetwp facet="destinations"]' ); ?>
+				<?php echo do_shortcode( '[facetwp facet="where"]' ); ?>
 
 				<?php echo do_shortcode( '[facetwp facet="when"]' ); ?>
+
+				<?php echo do_shortcode( '[facetwp facet="budget"]' ); ?>
 			</div>
 
 			<div class="post-wrapper <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
