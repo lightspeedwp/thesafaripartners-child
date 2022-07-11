@@ -23,6 +23,10 @@ get_header(); ?>
 				<?php echo do_shortcode( '[facetwp facet="tourdestinations"]' ); ?>
 
 				<?php echo do_shortcode( '[facetwp facet="interests"]' ); ?>
+
+				<?php echo do_shortcode( '[facetwp facet="destinations"]' ); ?>
+
+				<?php echo do_shortcode( '[facetwp facet="when"]' ); ?>
 			</div>
 
 			<div class="post-wrapper <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
