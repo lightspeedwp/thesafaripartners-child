@@ -36,7 +36,7 @@
    h1,h2,h3,h4,h5 {font-family:argesta_displayregular, serif!important;
 font-weight: bold;}
 	body,p,h6,ul,li,em{font-family:"moret",serif!important;}
-  span, th, tr, td,table{font-family:"moret",serif;}
+  span, th, tr, td,table,legend,label{font-family:"moret",serif;}
   .page.safari-styles {margin-top: 0px;}
 
 #travel-footer{background-image: url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
@@ -614,10 +614,6 @@ display: contents;
     padding-top: 18%;}
     .page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column{position: relative;
     height: 35vh!important;}
-    .page-template-template-contact .contact-134004 .lsx-contact-module .wp-block-column{position: relative;
-    padding-top: 20%!important;}
-    .page-template-template-contact .contact-134234 .lsx-contact-module .wp-block-column{position: relative;
-    padding-top: 20%!important;}
     .page-template-template-contact .contact-133993 .wp-block-column{width:24%!important;margin:0!important;padding:0 2px!important;}
     .page-template-template-contact .lsx-contact-module .wp-block-column{position: relative;}
 
@@ -1006,8 +1002,8 @@ position: absolute;
 .single .filterDiv{  display: none!important; /* Hidden by default */}
 .single .show {  display: block!important;}}
 
-::-webkit-input-placeholder { color:#000; }
-:-moz-placeholder { opacity: 1; color:#000; } /* Firefox 18- */
-::-moz-placeholder { opacity: 1; color:#000; } /* firefox 19+ */
-:-ms-input-placeholder { color:#000; } /* ie */
-input:-moz-placeholder { color:#000; }
+.gfield input::-webkit-input-placeholder {color:#000!important;}
+.gfield textarea::-webkit-input-placeholder {color:#000!important;}
+.gfield_radio .gchoice{width:50%; float:left;}
+.gfield_radio{text-align:left!important;}
+legend{border-bottom:none;}
