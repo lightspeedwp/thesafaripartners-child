@@ -20,37 +20,35 @@ get_header(); ?>
 
 		<div class="row">
 			<div class="outer-container">
-				<div id="wizard" class="lsx-wizard" style="display: none;">
-					<form class="insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET">
-						<input type="hidden" name="s" value="" />
-						<div class="lsx-wizard-step">
-							<div class="step-content introslide">
-								<?php if ( have_posts() ) : ?>
-									<?php
-									while ( have_posts() ) :
-										the_post();
-										?>
+				<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
+					<input type="hidden" name="s" value="" />
+					<div class="lsx-wizard-step">
+						<div class="step-content introslide">
+							<?php if ( have_posts() ) : ?>
+								<?php
+								while ( have_posts() ) :
+									the_post();
+									?>
 
-										<?php get_template_part( 'partials/content', 'page' ); ?>
+									<?php get_template_part( 'partials/content', 'page' ); ?>
 
-									<?php endwhile; ?>
+								<?php endwhile; ?>
 
-								<?php endif; ?>
-								<?php wp_reset_query(); ?>
-							</div>
+							<?php endif; ?>
+							<?php wp_reset_query(); ?>
 						</div>
+					</div>
 
-						<?php get_template_part( 'partials/wizard-step', '1' ); ?>
+					<?php get_template_part( 'partials/wizard-step', '1' ); ?>
 
-						<?php get_template_part( 'partials/wizard-step', '2' ); ?>
+					<?php get_template_part( 'partials/wizard-step', '2' ); ?>
 
-						<?php get_template_part( 'partials/wizard-step', '3' ); ?>
+					<?php get_template_part( 'partials/wizard-step', '3' ); ?>
 
-						<?php get_template_part( 'partials/wizard-step', '4' ); ?>
+					<?php get_template_part( 'partials/wizard-step', '4' ); ?>
 
-						<?php get_template_part( 'partials/wizard-step', '5' ); ?>
-					</form>
-				</div>
+					<?php get_template_part( 'partials/wizard-step', '5' ); ?>
+				</form>
 			</div>
 
 		<?php lsx_content_bottom(); ?>
@@ -281,7 +279,6 @@ get_header(); ?>
 
 			},
 			final: function () {
-				jQuery('.insipre-wizard-form').submit();
 			},
 			// disables the "previous" button for the provided step
 			disablePreviousButton: function (stepNumber) {
@@ -347,7 +344,12 @@ get_header(); ?>
 
 			} else {
 				console.log(jQuery('.insipre-wizard-form').serializeArray() );
-				jQuery('.insipre-wizard-form').submit();
+
+				let selectedCheckboxes = $('.insipre-wizard-form input[type=checkbox]:checked').map(function(){return $(this).val()}).get()
+
+				console.log(selectedCheckboxes);
+
+				console.log(selectedCheckboxes);
 			}
 
 		}
