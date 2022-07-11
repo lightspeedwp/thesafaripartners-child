@@ -40,8 +40,8 @@ class Setup {
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
-		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );
-		
+		$this->menu_position = 100;
+		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );	
 	}
 
 	/**
@@ -159,8 +159,9 @@ class Setup {
 	}
 
 	public function admin_menu_position( $position, $config ) {
-		if ( isset( $config['args']['rewrite']['slug'] ) && 'who' === $config['args']['rewrite']['slug'] ) {
-			$position = 88;
+		if ( empty( $config ) ) {
+			$position = $this->menu_position;
+			$this->menu_position++;
 		}
 		return $position;
 	}
