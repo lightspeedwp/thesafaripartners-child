@@ -56,6 +56,13 @@ class Core {
 	public $search;
 
 	/**
+	 * Holds the FaceWP instances
+	 *
+	 * @var object tsp_child\classes\facetwp\Post_Connections();
+	 */
+	public $facetwp;
+
+	/**
 	 * Initialize the plugin by setting localization, filters, and administration functions.
 	 *
 	 * @since 1.0.0
@@ -71,6 +78,9 @@ class Core {
 
 		require_once get_stylesheet_directory() . '/classes/class-frontend.php';
 		$this->frontend = Frontend::get_instance();
+
+		require_once get_stylesheet_directory() . '/classes/class-post-connections.php';
+		$this->facetwp->post_connections = \tsp_child\classes\facetwp\Post_Connections::get_instance();
 	}
 
 	/**

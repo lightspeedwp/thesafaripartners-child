@@ -344,6 +344,7 @@ get_header(); ?>
 				});
 
 			} else {
+				console.log(jQuery('.insipre-wizard-form').serialize() );
 				jQuery('.insipre-wizard-form').submit();
 			}
 
