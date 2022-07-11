@@ -21,33 +21,32 @@ get_header(); ?>
 		<div class="row">
 			<div class="outer-container">
 				<div id="wizard" class="lsx-wizard" style="display: none;">
+					<form class="insipre-wizard-form" action="<?php home_url('/'); ?>?s=">
+						<div class="lsx-wizard-step">
+							<div class="step-content introslide">
+								<?php if ( have_posts() ) : ?>
+									<?php
+									while ( have_posts() ) :
+										the_post();
+										?>
 
-					<div class="lsx-wizard-step">
-						<div class="step-content introslide">
-							<?php if ( have_posts() ) : ?>
+										<?php get_template_part( 'partials/content', 'page' ); ?>
 
-								<?php
-								while ( have_posts() ) :
-									the_post();
-									?>
+									<?php endwhile; ?>
 
-									<?php get_template_part( 'partials/content', 'page' ); ?>
-
-								<?php endwhile; ?>
-
-							<?php endif; ?>
-							<?php wp_reset_query(); ?>
+								<?php endif; ?>
+								<?php wp_reset_query(); ?>
+							</div>
 						</div>
-					</div>
 
-					<?php get_template_part( 'partials/wizard-step', '1' ); ?>
+						<?php get_template_part( 'partials/wizard-step', '1' ); ?>
 
-					<?php get_template_part( 'partials/wizard-step', '2' ); ?>
+						<?php get_template_part( 'partials/wizard-step', '2' ); ?>
 
-					<?php get_template_part( 'partials/wizard-step', '3' ); ?>
+						<?php get_template_part( 'partials/wizard-step', '3' ); ?>
 
-					<?php get_template_part( 'partials/wizard-step', '4' ); ?>
-
+						<?php get_template_part( 'partials/wizard-step', '4' ); ?>
+					</form>
 				</div>
 			</div>
 
@@ -611,6 +610,12 @@ get_header(); ?>
 			}
 		}
 
+		function submitForm() {
+			jQuery('.lsx-wizard-button-next.btn-success').on('click', function(event){
+				event.preventDefault();
+				jQuery('.insipre-wizard-form').submit();
+			});
+		}
 
 		////////////////////////////////////////// Plugin definition
 
@@ -683,7 +688,7 @@ get_header(); ?>
 								'margin-right': '10px',
 								'text-align': 'center',
 								'width': '70px',
-				'border-bottom': '3px solid #000',
+								'border-bottom': '3px solid #000',
 								'font-weight': 'bold',
 								'padding-top': '8px'
 							}

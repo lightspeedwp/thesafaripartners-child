@@ -101,7 +101,7 @@
 						<span aria-hidden="true"></span>
 						<label>December</label>
 					</div>
-				</article>ß
+				</article>
 			</div>
 		</div>
 	</div>
