@@ -11,6 +11,8 @@
 
 namespace tsp_child\classes;
 
+use stdClass;
+
 /**
  * Class Core
  *
@@ -80,6 +82,7 @@ class Core {
 		$this->frontend = Frontend::get_instance();
 
 		require_once get_stylesheet_directory() . '/classes/class-post-connections.php';
+		$this->facetwp = new stdClass();
 		$this->facetwp->post_connections = \tsp_child\classes\facetwp\Post_Connections::get_instance();
 	}
 
