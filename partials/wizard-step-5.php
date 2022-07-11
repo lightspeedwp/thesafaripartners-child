@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-md-9">
 				<?php
-				$terms = get_terms( 'budget' );
+				$terms = get_terms( 'budget', array( 'hide_empty' => 0 ) );
 				?>
 
 				<?php foreach ( $terms as $term ) : 
