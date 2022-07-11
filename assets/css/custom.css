@@ -33,8 +33,7 @@
 
  @media screen and (min-width: 1000px) {
 
-   h1,h2,h3,h4,h5 {font-family:"moret",serif!important;
-font-weight: bold;}
+   h1,h2,h3,h4,h5 {font-family:"moret",serif!important;}
 	body,p,h6,ul,li,em{font-family:argesta_displayregular, serif!important;}
   span, th, tr, td,table,legend,label{font-family:argesta_displayregular, serif!important;}
   .page.safari-styles {margin-top: 0px;}
