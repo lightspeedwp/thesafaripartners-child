@@ -383,23 +383,23 @@ get_header(); ?>
 				});
 
 				if ( 0 < who.length ) {
-					urlParams = urlParams + '&fwp_who=' + who.join(' ');
+					urlParams = urlParams + '&fwp_who=' + who.join(',');
 				}
 
 				if ( 0 < what.length ) {
-					urlParams = urlParams + '&fwp_what=' + what.join(' ');
+					urlParams = urlParams + '&fwp_what=' + what.join(',');
 				}
 
 				if ( 0 < where.length ) {
-					urlParams = urlParams + '&fwp_where=' + where.join(' ');
+					urlParams = urlParams + '&fwp_where=' + where.join(',');
 				}
 
 				if ( 0 < when.length ) {
-					urlParams = urlParams + '&fwp_when=' + when.join(' ');
+					urlParams = urlParams + '&fwp_when=' + when.join(',');
 				}
 
 				if ( 0 < budget.length ) {
-					urlParams = urlParams + '&fwp_budget=' + budget.join(' ');
+					urlParams = urlParams + '&fwp_budget=' + budget.join(',');
 				}
 				
 				//console.log($('.insipre-wizard-form').attr('action') + urlParams);
