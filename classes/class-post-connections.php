@@ -373,7 +373,15 @@ class Post_Connections {
 		$selected .= ( 0 == $result['counter'] && '' == $selected ) ? ' disabled' : '';
 		$selected .= ' ' . $region;
 
-		$temp_html .= '<div class="facetwp-checkbox' . $selected . '" data-value="' . $result['facet_value'] . '">';
+		$destination = get_page_by_title( $result['facet_display_value'], OBJECT, 'destination' );
+		if ( '' !== $destination && null !== $destination ) {
+			$url = get_the_post_thumbnail_url( $destination, 'thumbnail' );
+			if ( '' !== $url && false !== $url ) {
+				$image = '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $url . '">';
+			}
+		}
+
+		$temp_html .= '<div class="facetwp-checkbox' . $selected . '" data-value="' . $result['facet_value'] . '">' . $image;
 		$temp_html .= $result['facet_display_value'] . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
 		$temp_html .= '</div>';
 
