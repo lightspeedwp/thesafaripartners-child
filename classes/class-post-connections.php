@@ -189,6 +189,16 @@ class Post_Connections {
 		if ( in_array( $params['facet']['source'], $possible_keys ) ) {
 			$output = $this->destination_facet_render( $params );
 		}
+
+		$possible_taxonomies = array(
+			'tax/who',
+			'tax/when',
+			'tax/budget',
+			'tax/travel-style',
+		);
+		if ( in_array( $params['facet']['source'], $possible_taxonomies ) ) {
+			$output = $this->taxonomy_facet_render( $params );
+		}
 		return $output;
 	}
 
@@ -368,5 +378,85 @@ class Post_Connections {
 		$temp_html .= '</div>';
 
 		return $temp_html;
+	}
+
+	/**
+	 * Generates the output for the taxonomy facets.
+	 *
+	 * @param array $params
+	 * @return html
+	 */
+	public function taxonomy_facet_render( $params ) {
+		$facet = $params['facet'];
+
+		$output          = '';
+		$values          = (array) $params['values'];
+		$selected_values = (array) $params['selected_values'];
+		$soft_limit      = empty( $facet['soft_limit'] ) ? 0 : (int) $facet['soft_limit'];
+		$options         = array();
+
+		$this->set_current_terms();
+
+		foreach ( $values as $key => $facet ) {
+			$options[] = $this->format_taxonomy_facet( $key, $facet, $selected_values, '' );
+		}
+		
+
+		return $output;
+	}
+
+	/**
+	 * Gets the current terms and sets them to an array.
+	 *
+	 * @param string $taxonomy
+	 * @return void
+	 */
+	public function set_current_terms( $taxonomy = '' ) {
+		$terms = array();
+		if ( '' !== $taxonomy ) {
+			$temp_terms = get_terms( 'budget', array( 'hide_empty' => 0 ) );
+			if ( ! empty( $temp_terms ) && ! is_wp_error( $temp_terms ) ) {
+				foreach ( $temp_terms as $temp_value ) {
+					$terms[ $temp_value->slug ] = $temp_value->term_id;
+				}
+			}
+		}
+		$this->current_terms = $terms;
+	}
+
+	/**
+	 * Formatting the singular facet term
+	 *
+	 * @param string $key
+	 * @param string $result
+	 * @param array $selected_values
+	 * @param string $region
+	 * @return string
+	 */
+	public function format_taxonomy_facet( $key, $result, $selected_values, $region = '' ) {
+		$temp_html = '';
+
+		$selected = in_array( $result['facet_value'], $selected_values ) ? ' checked' : '';
+		$selected .= ( 0 == $result['counter'] && '' == $selected ) ? ' disabled' : '';
+		$selected .= ' ' . $region;
+
+		$image = $this->get_term_thumbnail( $result['facet_value'] );
+
+		$temp_html .= '<div class="facetwp-checkbox' . $selected . '" data-value="' . $result['facet_value'] . '">' . $image;
+		$temp_html .= $result['facet_display_value'] . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
+		$temp_html .= '</div>';
+
+		return $temp_html;
+	}
+
+	public function get_term_thumbnail( $term_slug = '' ) {
+		$output = '';
+		if ( '' !== $term_slug && isset( $this->current_terms[ $term_slug ] ) ) {
+			$term_id = $this->current_terms[ $term_slug ];
+			if ( lsx_to_has_term_thumbnail( $term_id ) ) {
+				$output = lsx_to_get_term_thumbnail( $term_id,'lsx-full' );
+			}
+		}
+		return $output;
 	}
 }
