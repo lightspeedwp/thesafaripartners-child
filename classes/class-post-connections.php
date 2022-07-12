@@ -395,12 +395,15 @@ class Post_Connections {
 		$soft_limit      = empty( $facet['soft_limit'] ) ? 0 : (int) $facet['soft_limit'];
 		$options         = array();
 
-		$this->set_current_terms();
+		$this->set_current_terms( $params['facet']['source'] );
 
 		foreach ( $values as $key => $facet ) {
 			$options[] = $this->format_taxonomy_facet( $key, $facet, $selected_values, '' );
 		}
 		
+		if ( ! empty( $options ) ) {
+			$output = implode( '', $options );
+		}
 
 		return $output;
 	}
@@ -414,7 +417,8 @@ class Post_Connections {
 	public function set_current_terms( $taxonomy = '' ) {
 		$terms = array();
 		if ( '' !== $taxonomy ) {
-			$temp_terms = get_terms( 'budget', array( 'hide_empty' => 0 ) );
+			$taxonomy = str_replace( 'tax/', '', $taxonomy );
+			$temp_terms = get_terms( $taxonomy, array( 'hide_empty' => 0 ) );
 			if ( ! empty( $temp_terms ) && ! is_wp_error( $temp_terms ) ) {
 				foreach ( $temp_terms as $temp_value ) {
 					$terms[ $temp_value->slug ] = $temp_value->term_id;
@@ -454,7 +458,7 @@ class Post_Connections {
 		if ( '' !== $term_slug && isset( $this->current_terms[ $term_slug ] ) ) {
 			$term_id = $this->current_terms[ $term_slug ];
 			if ( lsx_to_has_term_thumbnail( $term_id ) ) {
-				$output = lsx_to_get_term_thumbnail( $term_id,'lsx-full' );
+				$output = lsx_to_get_term_thumbnail( $term_id,'thumbnail' );
 			}
 		}
 		return $output;
