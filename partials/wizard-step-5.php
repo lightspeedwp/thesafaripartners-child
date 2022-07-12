@@ -18,7 +18,7 @@
 					<!-- post -->
 					<article class="col-md-4 status-publish hentry">
 						<div class="checkbox-wrapper">
-							<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check"  type="checkbox" name="fwp_budget[]" value="<?php echo esc_html( $value ); ?>" />
+							<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check"  type="checkbox" name="fwp_budget" value="<?php echo esc_html( $value ); ?>" />
 							<span aria-hidden="true"></span>
 						</div>
 
