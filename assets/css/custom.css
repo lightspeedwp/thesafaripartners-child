@@ -433,6 +433,7 @@ th,tr,td,table,legend,label {
 		padding-right:3px;
 		padding-left:3px;
 		margin-bottom:8px;
+    height:220px;
 	}
 	.wizard-what .lsx-to-widget-thumb {
 		display:contents;
