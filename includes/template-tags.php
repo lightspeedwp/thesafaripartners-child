@@ -16,37 +16,26 @@ function tsp_mini_wizard( $panels = array() ) {
 	if ( empty( $panels ) ) {
 		return;
 	}
-	
 	?>
 	<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
-		<div class="lsx-wizard-step">
-			<div class="step-content introslide">
-				<?php if ( have_posts() ) : ?>
-					<?php
-					while ( have_posts() ) :
-						the_post();
-						?>
 
-						<?php get_template_part( 'partials/content', 'page' ); ?>
+		<?php
+		foreach ( $panels as $panel  ) {
+			if ( is_array( $panel ) ) {
+				echo '<div class="lsx-wizard-step">';
+				foreach ( $panel as $panel_content ) {
+					get_template_part( 'partials/mini-wizard', $panel_content );
+				}
+				echo '</div>';
+			} else {
+				echo '<div class="lsx-wizard-step">';
+				get_template_part( 'partials/mini-wizard', $panel );
+				echo '</div>';
+			}
+		}
 
-					<?php endwhile; ?>
-
-				<?php endif; ?>
-				<?php wp_reset_query(); ?>
-			</div>
-		</div>
-
-		<?php get_template_part( 'partials/wizard-step', '1' ); ?>
-
-		<?php get_template_part( 'partials/wizard-step', '2' ); ?>
-
-		<?php get_template_part( 'partials/wizard-step', '3' ); ?>
-
-		<?php get_template_part( 'partials/wizard-step', '4' ); ?>
-
-		<?php get_template_part( 'partials/wizard-step', '5' ); ?>
-
-		<?php tsp_init_wizard(); ?>
+		tsp_init_wizard();
+		?>
 	</form>
 	<?php
 }
