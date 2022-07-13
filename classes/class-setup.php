@@ -43,7 +43,10 @@ class Setup {
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
 		$this->menu_position = 100;
-		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );	
+		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );
+
+		//remove the filters we need
+		add_filter( 'lsx_to_disable_map', array( $this, 'disable_map' ), 10, 1 );
 	}
 
 	/**
@@ -213,5 +216,18 @@ class Setup {
 			$this->menu_position++;
 		}
 		return $position;
+	}
+
+	/**
+	 * Disable the TO map on certain pages.
+	 *
+	 * @param boolean $disable
+	 * @return boolean
+	 */
+	public function disable_map( $disable = false ) {
+		if ( is_post_type_archive( 'destination' ) ) {
+			$disable = true;
+		}
+		return $disable;
 	}
 }
