@@ -726,6 +726,11 @@ span,th,tr,td,table,legend,label {
 	.facetwp-facet-interests .facetwp-checkbox.checked img {
 		opacity: 1;
 	}
+  /*Search Results */
+  .search-results .content{
+    width: 1366px!important;
+    margin: 20px auto!important;}
+    .search-results .archive-header-wrapper{display:none;}
 	/*Gutenberg */
 	.gutenberg-compatible-template.using-gutenberg .entry-content {
 		padding:0;
