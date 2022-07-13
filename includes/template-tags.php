@@ -20,18 +20,26 @@ function tsp_mini_wizard( $panels = array() ) {
 	<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
 
 		<?php
+		$counter = 0;
 		foreach ( $panels as $panel  ) {
+			if ( 0 === $counter ) {
+				$active = 'active';
+			} else {
+				$active = '';
+			}
 			if ( is_array( $panel ) ) {
-				echo '<div class="lsx-wizard-step">';
+				echo '<div class="lsx-wizard-step ' . $active . '">';
 				foreach ( $panel as $panel_content ) {
 					get_template_part( 'partials/mini-wizard', $panel_content );
 				}
 				echo '</div>';
 			} else {
-				echo '<div class="lsx-wizard-step">';
+				echo '<div class="lsx-wizard-step ' . $active . '">';
 				get_template_part( 'partials/mini-wizard', $panel );
 				echo '</div>';
 			}
+
+			$counter++;
 		}
 
 		tsp_init_wizard();
