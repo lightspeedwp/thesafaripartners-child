@@ -17,7 +17,7 @@ function tsp_mini_wizard( $panels = array() ) {
 		return;
 	}
 	?>
-	<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
+	<form id="wizard" class="lsx-wizard mini-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
 
 		<?php
 		$counter = 0;
@@ -29,12 +29,14 @@ function tsp_mini_wizard( $panels = array() ) {
 			}
 			if ( is_array( $panel ) ) {
 				echo '<div class="lsx-wizard-step ' . $active . '">';
+				echo wp_kses_post( '<h4>1. ' . implode( '-', $panel ) . '</h4>' );
 				foreach ( $panel as $panel_content ) {
 					get_template_part( 'partials/mini-wizard', $panel_content );
 				}
 				echo '</div>';
 			} else {
 				echo '<div class="lsx-wizard-step ' . $active . '">';
+				echo wp_kses_post( '<h4>1. ' . $panel . '</h4>' );
 				get_template_part( 'partials/mini-wizard', $panel );
 				echo '</div>';
 			}

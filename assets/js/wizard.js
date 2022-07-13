@@ -268,6 +268,8 @@
 
 		} else {
 
+			console.log($plugin);
+
 			let urlParams = '?s=';
 			let selectedCheckboxes = $('.insipre-wizard-form input[type="checkbox"]:checked').map(
 				function(){
@@ -326,8 +328,10 @@
 				urlParams = urlParams + '&fwp_budget=' + budget.join(',');
 			}
 			
-			//console.log($('.insipre-wizard-form').attr('action') + urlParams);
-			window.location.href = $('.insipre-wizard-form').attr('action') + urlParams;
+
+			if ( $plugin.hasClass( 'insipre-wizard-form' ) ) {
+				window.location.href = $('.insipre-wizard-form').attr('action') + urlParams;	
+			}
 		}
 
 	}
