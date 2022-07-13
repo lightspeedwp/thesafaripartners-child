@@ -26,6 +26,12 @@ get_header(); ?>
 					)
 				);
 			?>
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<h2>The Shaman Says...</h2>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6">
+			<p> <?php /*  Search Count */ $allsearch = &new  WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1);  $count = $allsearch->post_count; _e(''); _e('<span  class="search-terms">'); echo $key; _e('</span>'); _e(' —  '); echo $count . ' '; _e('articles'); wp_reset_query(); ?> trips found</p>
+			</div>
 
 			<div class="post-wrapper <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php

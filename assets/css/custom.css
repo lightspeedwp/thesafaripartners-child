@@ -728,8 +728,8 @@ span,th,tr,td,table,legend,label {
 	}
   /*Search Results */
   .search-results .content{
-    width: 1366px!important;
-    margin: 20px auto!important;}
+    width: 1266px!important;
+    margin: 0px auto!important;}
     .search-results .archive-header-wrapper{display:none;}
 	/*Gutenberg */
 	.gutenberg-compatible-template.using-gutenberg .entry-content {
