@@ -67,7 +67,7 @@ class Setup {
 	 * @return void
 	 */
 	public function language_setup() {
-		load_child_theme_textdomain( 'tsp-child', get_stylesheet_directory() . '/languages' );
+		load_child_theme_textdomain( 'thesafaripartners-child', get_stylesheet_directory() . '/languages' );
 
 		register_nav_menus(
 			array(
@@ -79,26 +79,26 @@ class Setup {
 	// Register Custom Taxonomy
 	public function who_taxonomy_setup() {
 		$labels = array(
-			'name'                       => _x( 'Who', 'Taxonomy General Name', 'tsp-child' ),
-			'singular_name'              => _x( 'Who', 'Taxonomy Singular Name', 'tsp-child' ),
-			'menu_name'                  => __( 'Who', 'tsp-child' ),
-			'all_items'                  => __( 'All Items', 'tsp-child' ),
-			'parent_item'                => __( 'Parent Item', 'tsp-child' ),
-			'parent_item_colon'          => __( 'Parent Item:', 'tsp-child' ),
-			'new_item_name'              => __( 'New Item Name', 'tsp-child' ),
-			'add_new_item'               => __( 'Add New Item', 'tsp-child' ),
-			'edit_item'                  => __( 'Edit Item', 'tsp-child' ),
-			'update_item'                => __( 'Update Item', 'tsp-child' ),
-			'view_item'                  => __( 'View Item', 'tsp-child' ),
-			'separate_items_with_commas' => __( 'Separate items with commas', 'tsp-child' ),
-			'add_or_remove_items'        => __( 'Add or remove items', 'tsp-child' ),
-			'choose_from_most_used'      => __( 'Choose from the most used', 'tsp-child' ),
-			'popular_items'              => __( 'Popular Items', 'tsp-child' ),
-			'search_items'               => __( 'Search Items', 'tsp-child' ),
-			'not_found'                  => __( 'Not Found', 'tsp-child' ),
-			'no_terms'                   => __( 'No items', 'tsp-child' ),
-			'items_list'                 => __( 'Items list', 'tsp-child' ),
-			'items_list_navigation'      => __( 'Items list navigation', 'tsp-child' ),
+			'name'                       => _x( 'Who', 'Taxonomy General Name', 'thesafaripartners-child' ),
+			'singular_name'              => _x( 'Who', 'Taxonomy Singular Name', 'thesafaripartners-child' ),
+			'menu_name'                  => __( 'Who', 'thesafaripartners-child' ),
+			'all_items'                  => __( 'All Items', 'thesafaripartners-child' ),
+			'parent_item'                => __( 'Parent Item', 'thesafaripartners-child' ),
+			'parent_item_colon'          => __( 'Parent Item:', 'thesafaripartners-child' ),
+			'new_item_name'              => __( 'New Item Name', 'thesafaripartners-child' ),
+			'add_new_item'               => __( 'Add New Item', 'thesafaripartners-child' ),
+			'edit_item'                  => __( 'Edit Item', 'thesafaripartners-child' ),
+			'update_item'                => __( 'Update Item', 'thesafaripartners-child' ),
+			'view_item'                  => __( 'View Item', 'thesafaripartners-child' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'thesafaripartners-child' ),
+			'add_or_remove_items'        => __( 'Add or remove items', 'thesafaripartners-child' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'thesafaripartners-child' ),
+			'popular_items'              => __( 'Popular Items', 'thesafaripartners-child' ),
+			'search_items'               => __( 'Search Items', 'thesafaripartners-child' ),
+			'not_found'                  => __( 'Not Found', 'thesafaripartners-child' ),
+			'no_terms'                   => __( 'No items', 'thesafaripartners-child' ),
+			'items_list'                 => __( 'Items list', 'thesafaripartners-child' ),
+			'items_list_navigation'      => __( 'Items list navigation', 'thesafaripartners-child' ),
 		);
 		$args = array(
 			'labels'                     => $labels,
@@ -119,26 +119,26 @@ class Setup {
 	public function when_taxonomy_setup() {
 
 		$labels = array(
-			'name'                       => _x( 'When', 'Taxonomy General Name', 'tsp-child' ),
-			'singular_name'              => _x( 'When', 'Taxonomy Singular Name', 'tsp-child' ),
-			'menu_name'                  => __( 'When', 'tsp-child' ),
-			'all_items'                  => __( 'All Items', 'tsp-child' ),
-			'parent_item'                => __( 'Parent Item', 'tsp-child' ),
-			'parent_item_colon'          => __( 'Parent Item:', 'tsp-child' ),
-			'new_item_name'              => __( 'New Item Name', 'tsp-child' ),
-			'add_new_item'               => __( 'Add New Item', 'tsp-child' ),
-			'edit_item'                  => __( 'Edit Item', 'tsp-child' ),
-			'update_item'                => __( 'Update Item', 'tsp-child' ),
-			'view_item'                  => __( 'View Item', 'tsp-child' ),
-			'separate_items_with_commas' => __( 'Separate items with commas', 'tsp-child' ),
-			'add_or_remove_items'        => __( 'Add or remove items', 'tsp-child' ),
-			'choose_from_most_used'      => __( 'Choose from the most used', 'tsp-child' ),
-			'popular_items'              => __( 'Popular Items', 'tsp-child' ),
-			'search_items'               => __( 'Search Items', 'tsp-child' ),
-			'not_found'                  => __( 'Not Found', 'tsp-child' ),
-			'no_terms'                   => __( 'No items', 'tsp-child' ),
-			'items_list'                 => __( 'Items list', 'tsp-child' ),
-			'items_list_navigation'      => __( 'Items list navigation', 'tsp-child' ),
+			'name'                       => _x( 'When', 'Taxonomy General Name', 'thesafaripartners-child' ),
+			'singular_name'              => _x( 'When', 'Taxonomy Singular Name', 'thesafaripartners-child' ),
+			'menu_name'                  => __( 'When', 'thesafaripartners-child' ),
+			'all_items'                  => __( 'All Items', 'thesafaripartners-child' ),
+			'parent_item'                => __( 'Parent Item', 'thesafaripartners-child' ),
+			'parent_item_colon'          => __( 'Parent Item:', 'thesafaripartners-child' ),
+			'new_item_name'              => __( 'New Item Name', 'thesafaripartners-child' ),
+			'add_new_item'               => __( 'Add New Item', 'thesafaripartners-child' ),
+			'edit_item'                  => __( 'Edit Item', 'thesafaripartners-child' ),
+			'update_item'                => __( 'Update Item', 'thesafaripartners-child' ),
+			'view_item'                  => __( 'View Item', 'thesafaripartners-child' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'thesafaripartners-child' ),
+			'add_or_remove_items'        => __( 'Add or remove items', 'thesafaripartners-child' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'thesafaripartners-child' ),
+			'popular_items'              => __( 'Popular Items', 'thesafaripartners-child' ),
+			'search_items'               => __( 'Search Items', 'thesafaripartners-child' ),
+			'not_found'                  => __( 'Not Found', 'thesafaripartners-child' ),
+			'no_terms'                   => __( 'No items', 'thesafaripartners-child' ),
+			'items_list'                 => __( 'Items list', 'thesafaripartners-child' ),
+			'items_list_navigation'      => __( 'Items list navigation', 'thesafaripartners-child' ),
 		);
 		$args = array(
 			'labels'                     => $labels,
@@ -159,26 +159,26 @@ class Setup {
 	public function budget_taxonomy_setup() {
 
 		$labels = array(
-			'name'                       => _x( 'Budget', 'Taxonomy General Name', 'tsp-child' ),
-			'singular_name'              => _x( 'Budget', 'Taxonomy Singular Name', 'tsp-child' ),
-			'menu_name'                  => __( 'Budget', 'tsp-child' ),
-			'all_items'                  => __( 'All Items', 'tsp-child' ),
-			'parent_item'                => __( 'Parent Item', 'tsp-child' ),
-			'parent_item_colon'          => __( 'Parent Item:', 'tsp-child' ),
-			'new_item_name'              => __( 'New Item Name', 'tsp-child' ),
-			'add_new_item'               => __( 'Add New Item', 'tsp-child' ),
-			'edit_item'                  => __( 'Edit Item', 'tsp-child' ),
-			'update_item'                => __( 'Update Item', 'tsp-child' ),
-			'view_item'                  => __( 'View Item', 'tsp-child' ),
-			'separate_items_with_commas' => __( 'Separate items with commas', 'tsp-child' ),
-			'add_or_remove_items'        => __( 'Add or remove items', 'tsp-child' ),
-			'choose_from_most_used'      => __( 'Choose from the most used', 'tsp-child' ),
-			'popular_items'              => __( 'Popular Items', 'tsp-child' ),
-			'search_items'               => __( 'Search Items', 'tsp-child' ),
-			'not_found'                  => __( 'Not Found', 'tsp-child' ),
-			'no_terms'                   => __( 'No items', 'tsp-child' ),
-			'items_list'                 => __( 'Items list', 'tsp-child' ),
-			'items_list_navigation'      => __( 'Items list navigation', 'tsp-child' ),
+			'name'                       => _x( 'Budget', 'Taxonomy General Name', 'thesafaripartners-child' ),
+			'singular_name'              => _x( 'Budget', 'Taxonomy Singular Name', 'thesafaripartners-child' ),
+			'menu_name'                  => __( 'Budget', 'thesafaripartners-child' ),
+			'all_items'                  => __( 'All Items', 'thesafaripartners-child' ),
+			'parent_item'                => __( 'Parent Item', 'thesafaripartners-child' ),
+			'parent_item_colon'          => __( 'Parent Item:', 'thesafaripartners-child' ),
+			'new_item_name'              => __( 'New Item Name', 'thesafaripartners-child' ),
+			'add_new_item'               => __( 'Add New Item', 'thesafaripartners-child' ),
+			'edit_item'                  => __( 'Edit Item', 'thesafaripartners-child' ),
+			'update_item'                => __( 'Update Item', 'thesafaripartners-child' ),
+			'view_item'                  => __( 'View Item', 'thesafaripartners-child' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'thesafaripartners-child' ),
+			'add_or_remove_items'        => __( 'Add or remove items', 'thesafaripartners-child' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'thesafaripartners-child' ),
+			'popular_items'              => __( 'Popular Items', 'thesafaripartners-child' ),
+			'search_items'               => __( 'Search Items', 'thesafaripartners-child' ),
+			'not_found'                  => __( 'Not Found', 'thesafaripartners-child' ),
+			'no_terms'                   => __( 'No items', 'thesafaripartners-child' ),
+			'items_list'                 => __( 'Items list', 'thesafaripartners-child' ),
+			'items_list_navigation'      => __( 'Items list navigation', 'thesafaripartners-child' ),
 		);
 		$args = array(
 			'labels'                     => $labels,
@@ -202,9 +202,9 @@ class Setup {
 	 * @return void
 	 */
 	public function register_sub_menus() {
-		add_submenu_page( 'tour-operator', __( 'Who', 'tsp-child' ), __( 'Who', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );
-		add_submenu_page( 'tour-operator', __( 'When', 'tsp-child' ), __( 'When', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );
-		add_submenu_page( 'tour-operator', __( 'Budget', 'tsp-child' ), __( 'Budget', 'tsp-child' ), 'edit_posts', 'edit-tags.php?taxonomy=budget' );
+		add_submenu_page( 'tour-operator', __( 'Who', 'thesafaripartners-child' ), __( 'Who', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );
+		add_submenu_page( 'tour-operator', __( 'When', 'thesafaripartners-child' ), __( 'When', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );
+		add_submenu_page( 'tour-operator', __( 'Budget', 'thesafaripartners-child' ), __( 'Budget', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=budget' );
 	}
 
 	public function admin_menu_position( $position, $config ) {

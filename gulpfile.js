@@ -15,7 +15,7 @@ gulp.task(
 		console.log( 'gulp compile-css    to compile the custom.scss to custom.css' );
 		console.log( 'gulp compile-js     to compile the custom.js to custom.min.js' );
 		console.log( 'gulp watch          to continue watching the files for changes.' );
-		console.log( 'gulp wordpress-lang to compile the tsp-child.pot, en_EN.po and en_EN.mo' );
+		console.log( 'gulp wordpress-lang to compile the thesafaripartners-child.pot, en_EN.po and en_EN.mo' );
 	}
 );
 
@@ -96,13 +96,13 @@ gulp.task(
 		.pipe(
 			wppot(
 				{
-					domain: 'tsp-child',
-					package: 'tsp-child',
+					domain: 'thesafaripartners-child',
+					package: 'thesafaripartners-child',
 					team: 'LightSpeed <webmaster@lsdev.biz>'
 				}
 			)
 		)
-		.pipe( gulp.dest( 'languages/tsp-child.pot' ) ),
+		.pipe( gulp.dest( 'languages/thesafaripartners-child.pot' ) ),
 		done();
 	}
 );
@@ -115,8 +115,8 @@ gulp.task(
 		.pipe(
 			wppot(
 				{
-					domain: 'tsp-child',
-					package: 'tsp-child',
+					domain: 'thesafaripartners-child',
+					package: 'thesafaripartners-child',
 					team: 'LightSpeed <webmaster@lsdev.biz>'
 				}
 			)

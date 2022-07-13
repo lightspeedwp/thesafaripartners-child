@@ -1,4 +1,4 @@
-# tsp-child
+# thesafaripartners-child
 
 ## Install NPM
 https://nodejs.org/en/

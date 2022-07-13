@@ -2,7 +2,7 @@
 /**
  * LSX Starter Child functions
  *
- * @package tsp-child
+ * @package thesafaripartners-child
  */
 
 require get_stylesheet_directory() . '/classes/class-core.php';

@@ -1,11 +1,11 @@
 {
-  "name": "tsp-child",
+  "name": "thesafaripartners-child",
   "version": "1.0.0",
   "description": "A Starter LSX Child Theme",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lightspeeddevelopment/tsp-child.git"
+    "url": "git+https://github.com/lightspeeddevelopment/thesafaripartners-child.git"
   },
   "keywords": [
     "lsx",
@@ -16,9 +16,9 @@
   "author": "LightSpeed",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lightspeeddevelopment/tsp-child/issues"
+    "url": "https://github.com/lightspeeddevelopment/thesafaripartners-child/issues"
   },
-  "homepage": "https://github.com/lightspeeddevelopment/tsp-child#readme",
+  "homepage": "https://github.com/lightspeeddevelopment/thesafaripartners-child#readme",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",

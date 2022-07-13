@@ -1,7 +1,7 @@
 ;/**
  * LSX Starter Child scripts
  *
- * @package 	tsp-child
+ * @package 	thesafaripartners-child
  */(function($, window, document, undefined) {
 
 	'use strict';
