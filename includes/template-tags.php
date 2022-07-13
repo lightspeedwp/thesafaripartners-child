@@ -47,15 +47,5 @@ function tsp_mini_wizard( $panels = array() ) {
 		tsp_init_wizard();
 		?>
 	</form>
-
-	<div class="facetwp-hidden-filters hidden" style="display:none;">
-		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'filter-menu',
-				)
-			);
-		?>
-	</div>
 	<?php
 }

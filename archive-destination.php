@@ -36,7 +36,18 @@ get_header(); ?>
 				);
 				$query = new WP_Query( $query_args );
 
-				if ( $query->have_posts() ) { ?>
+				if ( $query->have_posts() ) { 
+				?>
+				<div class="facetwp-hidden-filters">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'filter-menu',
+							)
+						);
+					?>
+				</div>
+
 				<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
 					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 						<div class="lsx-to-slider-wrap">
