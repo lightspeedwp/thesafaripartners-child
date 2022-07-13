@@ -12,7 +12,11 @@ function tsp_init_wizard() {
 }
 
 
-function tsp_mini_wizard() {
+function tsp_mini_wizard( $panels = array() ) {
+	if ( empty( $panels ) ) {
+		return;
+	}
+	
 	?>
 	<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
 		<div class="lsx-wizard-step">
