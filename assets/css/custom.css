@@ -378,14 +378,14 @@ th,tr,td,table,legend,label {
 		content:"\f30a";
 		font-family:FontAwesome;
 		font-weight:100;
-		color:#9d9d9d;
+		color:#ce9e57;;
 		font-size:17px;
 	}
 	.lsx-wizard-button-next span:after {
 		content:"\f30b";
 		font-family:FontAwesome;
 		font-weight:100;
-		color:#9d9d9d;
+		color:#ce9e57;;
 		font-size:17px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
@@ -482,7 +482,7 @@ th,tr,td,table,legend,label {
 		z-index:-1;
 		height:30px;
 		width:30px;
-		border:2px solid #9d9d9d;
+		border:2px solid #ce9e57;;
 	}
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"] {
 		cursor:pointer;
@@ -515,13 +515,13 @@ th,tr,td,table,legend,label {
 	}
 	.lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		content:"\f00c";
-		font-family:FontAwesome;
-		top:-0.2px;
-		left:2px;
-		font-weight:100;
-		color:#9d9d9d;
-		font-size:14px;
-		position: absolute;
+    font-family: FontAwesome;
+    top: 0.8px;
+    left: 3px;
+    font-weight: 100;
+    color: #ce9e57;;
+    font-size: 15px;
+    position: absolute;
 	}
 	/*Content */
 	.archive.category .post {
@@ -1866,7 +1866,7 @@ s	.financial-about .lsx-banner-column {
 	top:-0.2px;
 	left:2px;
 	font-weight:100;
-	color:#9d9d9d;
+	color:#ce9e57;;
 	font-size:1.7em;
 	position:absolute;
 }
@@ -1900,7 +1900,7 @@ s	.financial-about .lsx-banner-column {
 	z-index:-1;
 	height:100%;
 	width:100%;
-	border:2px solid #9d9d9d;
+	border:2px solid #ce9e57;;
 }
 .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	content:"\f00c";
@@ -1908,7 +1908,7 @@ s	.financial-about .lsx-banner-column {
 	top:-0.1em;
 	left:0.1em;
 	font-weight:100;
-	color:#9d9d9d;
+	color:#ce9e57;;
 	font-size:3em;
 	position:absolute;
 }
