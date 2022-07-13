@@ -1,7 +1,3 @@
-$(document).ready(function () {
-	$("#wizard").lsxWizard();
-});
-
 ;(function ($, window, document, undefined) {
 
 	var settings;
@@ -743,5 +739,9 @@ $(document).ready(function () {
 			}
 		}
 	};
+
+	$(document).ready(function () {
+		$("#wizard").lsxWizard();
+	});
 
 })( jQuery, window, document );
