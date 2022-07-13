@@ -33,13 +33,14 @@ get_header(); ?>
 			<p> <?php
   global $wp_query;
   if($wp_query->found_posts < 2) {
-    $result = "result";
+    $result = "trip";
   } else {
-    $result = "results";
+    $result = "trips";
   }
     echo $wp_query->found_posts . " " . $result . " found.";
-    ?> trips found</p>
+    ?> </p>
 			</div>
+			<div class="clear"></div>
 
 			<div class="post-wrapper <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php
