@@ -29,14 +29,14 @@ function tsp_mini_wizard( $panels = array() ) {
 			}
 			if ( is_array( $panel ) ) {
 				echo '<div class="lsx-wizard-step ' . $active . '">';
-				echo wp_kses_post( '<h4>1. ' . implode( '-', $panel ) . '</h4>' );
+				echo wp_kses_post( '<h4>' . implode( '-', $panel ) . '</h4>' );
 				foreach ( $panel as $panel_content ) {
 					get_template_part( 'partials/mini-wizard', $panel_content );
 				}
 				echo '</div>';
 			} else {
 				echo '<div class="lsx-wizard-step ' . $active . '">';
-				echo wp_kses_post( '<h4>1. ' . $panel . '</h4>' );
+				echo wp_kses_post( '<h4>' . $panel . '</h4>' );
 				get_template_part( 'partials/mini-wizard', $panel );
 				echo '</div>';
 			}
@@ -47,5 +47,15 @@ function tsp_mini_wizard( $panels = array() ) {
 		tsp_init_wizard();
 		?>
 	</form>
+
+	<div class="facetwp-hidden-filters hidden" style="display:none;">
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'filter-menu',
+				)
+			);
+		?>
+	</div>
 	<?php
 }
