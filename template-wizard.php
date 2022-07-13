@@ -4,9 +4,10 @@
  *
  * @package lsx
  */
-get_header(); ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+get_header();
+
+//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+?>
 
 <?php lsx_content_wrap_before(); ?>
 
@@ -48,6 +49,8 @@ get_header(); ?>
 					<?php get_template_part( 'partials/wizard-step', '4' ); ?>
 
 					<?php get_template_part( 'partials/wizard-step', '5' ); ?>
+
+					<?php tsp_init_wizard(); ?>
 				</form>
 			</div>
 

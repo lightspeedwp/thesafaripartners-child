@@ -84,6 +84,8 @@ class Core {
 		require_once get_stylesheet_directory() . '/classes/class-post-connections.php';
 		$this->facetwp = new stdClass();
 		$this->facetwp->post_connections = \tsp_child\classes\facetwp\Post_Connections::get_instance();
+
+		require_once get_stylesheet_directory() . '/includes/template-tags.php';
 	}
 
 	/**
