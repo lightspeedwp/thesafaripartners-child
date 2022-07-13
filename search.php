@@ -26,6 +26,21 @@ get_header(); ?>
 					)
 				);
 			?>
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<h2>The Shaman Says...</h2>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6">
+			<p> <?php
+  global $wp_query;
+  if($wp_query->found_posts < 2) {
+    $result = "trip";
+  } else {
+    $result = "trips";
+  }
+    echo $wp_query->found_posts . " " . $result . " found.";
+    ?> </p>
+			</div>
+			<div class="clear"></div>
 
 			<div class="post-wrapper <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php
