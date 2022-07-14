@@ -19,7 +19,7 @@
 					global $post;
 					$the_query->the_post();
 					?>
-					<div class="lsx-to-widget-item-wrap col-xs-4 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
+					<div class="lsx-to-widget-item-wrap col-xs-3 col-sm-2 lsx-travel-style destinations-archive lsx-to-archive-item">
 						<div class="lsx-to-widget-thumb">
 							<div class="checkbox-wrapper">
 								<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
