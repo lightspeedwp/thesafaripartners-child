@@ -72,7 +72,7 @@ get_header(); ?>
 									the_post();
 									?>
 									<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-widget-item-wrap' ) ); ?>">
-										<?php lsx_to_content( 'content', 'tour' ); ?>
+										<?php lsx_to_content( 'content-widget', 'tour' ); ?>
 									</div>
 								<?php
 								}
