@@ -41,6 +41,7 @@ get_header(); ?>
 				</div>
 			</div>
 
+			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
 			<?php 
 				if ( have_posts() ) {
