@@ -154,7 +154,7 @@
 
 					});
 
-					if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
+					if ( $this.hasClass( 'mini-wizard-form' ) ) {
 						refreshMiniWizardResults( selectedCheckboxes );
 
 						$(document).on( 'facetwp-loaded', function() {
