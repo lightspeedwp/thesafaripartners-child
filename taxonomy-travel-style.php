@@ -71,7 +71,7 @@ get_header(); ?>
 								while ( have_posts() ) {
 									the_post();
 									?>
-									<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+									<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-widget-item-wrap' ) ); ?>">
 										<?php lsx_to_content( 'content', 'tour' ); ?>
 									</div>
 								<?php
