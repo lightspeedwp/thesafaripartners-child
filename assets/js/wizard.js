@@ -238,7 +238,7 @@
 		if ($elementToSlide.next().length) {
 
 			jQuery('html, body').animate({
-				scrollTop: jQuery(".mini-wizard-form").offset().top - 40
+				scrollTop: jQuery(".mini-wizard-form").offset().top - 100
 			}, 100);
 			console.log('scrolling left the top 100');
 
@@ -414,6 +414,10 @@
 	function slideRight($elementToSlide, settings, $plugin, goToFirst) {
 
 		if ($elementToSlide.prev().length) {
+
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".mini-wizard-form").offset().top - 100
+			}, 100);
 
 			// Move the target element to the right first (out of the visual field)...
 			$elementToSlide.clearQueue().animate({

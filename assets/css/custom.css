@@ -345,6 +345,11 @@ th,tr,td,table,legend,label {
 		width:1366px;
 		padding:60px 16px 0px 60px;
 	}
+	.wizard-budget {
+		margin:0 auto;
+		width:1366px;
+		padding:60px 16px 0px 60px;
+	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
 		width:1366px;
