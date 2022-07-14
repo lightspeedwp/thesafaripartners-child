@@ -32,7 +32,7 @@ get_header(); ?>
 
 				if ( have_posts() ) { 
 				?>
-				<div class="facetwp-hidden-filters">
+				<div class="facetwp-hidden-filters hidden">
 					<?php
 						wp_nav_menu(
 							array(
