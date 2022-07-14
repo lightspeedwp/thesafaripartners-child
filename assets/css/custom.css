@@ -213,11 +213,11 @@ th,tr,td,table,legend,label {
 		border-top:1px solid #ccc;
 	}
 	#masthead>.container {
-		width:1260px;
+		width:1360px;
 		margin:0 auto;
 	}
 	.blog .content-area {
-		width:1260px;
+		width:1360px;
 		margin:30px auto!important;
 		float:none;
 	}
@@ -1717,7 +1717,7 @@ s	.financial-about .lsx-banner-column {
 }
 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-item-align-right {
 	background:#ce9e57;
-	margin:-5px -23px 0 5px;
+	margin:-5px 0px 0 5px;
 	padding:4px 18px;
 }
 #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 {
