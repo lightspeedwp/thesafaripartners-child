@@ -18,7 +18,7 @@ get_header(); ?>
 
 
 
-			<div class="archive-intro col-sm-12">
+			<div class="archive-intro row">
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
 						<?php $term = get_queried_object(); ?>
