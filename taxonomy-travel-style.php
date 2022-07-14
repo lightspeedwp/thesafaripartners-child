@@ -16,8 +16,6 @@ get_header(); ?>
 
 		<main id="main" class="site-main entry-content" role="main">
 
-
-
 			<div class="archive-intro row">
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
@@ -65,7 +63,7 @@ get_header(); ?>
 						?>
 					</div>
 	
-					<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+					<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
 						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 							<div class="lsx-to-slider-wrap">
 								<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >

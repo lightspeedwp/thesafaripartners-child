@@ -541,8 +541,6 @@ th,tr,td,table,legend,label {
 		font-family: argesta_displayregular,serif;
 	}
 
-  .lsx-button.primary{background:6a6d5b;color:#fff;padding:10px 26px;}
-  .lsx-button.primary:hover{background:#000;}
 	/*Pop-ups */
 	.pum-overlay {
 		top:68px;
@@ -1740,10 +1738,7 @@ s	.financial-about .lsx-banner-column {
 .page-banner-wrap .page-banner {
 	min-height:500px;
 }
-.archive-intro {
-	margin:0 40px 0px 20px!important;
-	width:auto;
-}
+
 .archive .desinations-landing-style {
 	margin:60px 80px 0 60px!important;
 }
@@ -1832,6 +1827,15 @@ s	.financial-about .lsx-banner-column {
 }
 .archive-intro {
 	padding-bottom:50px;
+  margin:0 40px 0px 20px!important;
+  width:auto;
+}
+
+.tax-travel-style .archive-intro {
+	padding-bottom:20px!important;
+  margin:60px 16px 20px 60px!important;
+  width:1366px!important;
+  border-bottom:1px solid #000;
 }
 .page-template-template-contact #primary form input,.page-template-template-contact #primary form select,.page-template-template-contact #primary form textarea {
 	border-top:0;
