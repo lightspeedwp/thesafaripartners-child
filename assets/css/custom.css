@@ -1816,9 +1816,6 @@ s	.financial-about .lsx-banner-column {
 .single-lsx-to-destination .content-area .lsx-to-summary {
 	margin-top:-60px!important;
 }
-.tax-travel-style .desinations-landing-style>div:first-of-type {
-	width:50%;
-}
 .tax-travel-style .desinations-landing-style>div:first-of-type .lsx-to-widget-thumb {
 	padding:0 1px!important;
 }
@@ -1838,7 +1835,7 @@ s	.financial-about .lsx-banner-column {
   border-bottom: 1px solid #000;
 }
 
-.tax-travel-style .tourslink .moretag{display:block!important;}
+.tax-travel-style .tourslink .moretag{display:block!important;width:80%!important;margin:6px 0 0 10px!important}
 .tax-travel-style p .moretag{display:none!important;}
 
 .search-results .content{
