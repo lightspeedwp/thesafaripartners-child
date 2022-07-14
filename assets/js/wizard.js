@@ -270,70 +270,85 @@
 
 			console.log($plugin);
 
-			let urlParams = '?s=';
-			let selectedCheckboxes = $('.insipre-wizard-form input[type="checkbox"]:checked').map(
+			let selectedCheckboxes = $plugin.find('.insipre-wizard-form input[type="checkbox"]:checked').map(
 				function(){
 					return {
 						'id' : $(this).val(),
 						'name' : $(this).attr('name')
 					}
 				}).get();
-
-			let what = [];
-			let who = [];
-			let where = [];
-			let when = [];
-			let budget = [];
-
-			selectedCheckboxes.forEach(function (value, index, array) {
-
-				switch(value.name) {
-					case 'fwp_who':
-						who.push(value.id);
-						break;
-					case 'fwp_what':
-						what.push(value.id);
-						break;
-					case 'fwp_where':
-						where.push(value.id);
-						break;
-					case 'fwp_when':
-						when.push(value.id);
-						break;
-					case 'fwp_budget':
-						budget.push(value.id);
-						break;
-					default:
-						// code block
-				}
-			});
-
-			if ( 0 < who.length ) {
-				urlParams = urlParams + '&fwp_who=' + who.join(',');
-			}
-
-			if ( 0 < what.length ) {
-				urlParams = urlParams + '&fwp_what=' + what.join(',');
-			}
-
-			if ( 0 < where.length ) {
-				urlParams = urlParams + '&fwp_where=' + where.join(',');
-			}
-
-			if ( 0 < when.length ) {
-				urlParams = urlParams + '&fwp_when=' + when.join(',');
-			}
-
-			if ( 0 < budget.length ) {
-				urlParams = urlParams + '&fwp_budget=' + budget.join(',');
-			}
 			
-
 			if ( $plugin.hasClass( 'insipre-wizard-form' ) ) {
-				window.location.href = $('.insipre-wizard-form').attr('action') + urlParams;	
+				submitInspireWizard( selectedCheckboxes );
+			}
+
+			if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
+				submitMiniWizard( selectedCheckboxes );
 			}
 		}
 
+	}
+
+	function submitMiniWizard( selectedCheckboxes ) {
+
+		console.log();
+
+		//FWP.facets['car_brand'] = ['audi'];
+		//FWP.fetchData();
+	}
+
+	function submitInspireWizard( selectedCheckboxes ) {
+		let urlParams = '?s=';
+		let what = [];
+		let who = [];
+		let where = [];
+		let when = [];
+		let budget = [];
+
+		selectedCheckboxes.forEach(function (value, index, array) {
+
+			switch(value.name) {
+				case 'fwp_who':
+					who.push(value.id);
+					break;
+				case 'fwp_what':
+					what.push(value.id);
+					break;
+				case 'fwp_where':
+					where.push(value.id);
+					break;
+				case 'fwp_when':
+					when.push(value.id);
+					break;
+				case 'fwp_budget':
+					budget.push(value.id);
+					break;
+				default:
+					// code block
+			}
+		});
+
+		if ( 0 < who.length ) {
+			urlParams = urlParams + '&fwp_who=' + who.join(',');
+		}
+
+		if ( 0 < what.length ) {
+			urlParams = urlParams + '&fwp_what=' + what.join(',');
+		}
+
+		if ( 0 < where.length ) {
+			urlParams = urlParams + '&fwp_where=' + where.join(',');
+		}
+
+		if ( 0 < when.length ) {
+			urlParams = urlParams + '&fwp_when=' + when.join(',');
+		}
+
+		if ( 0 < budget.length ) {
+			urlParams = urlParams + '&fwp_budget=' + budget.join(',');
+		}
+
+		window.location.href = $('.insipre-wizard-form').attr('action') + urlParams;
 	}
 
 	function slideRight($elementToSlide, settings, $plugin, goToFirst) {
