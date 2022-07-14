@@ -540,6 +540,9 @@ th,tr,td,table,legend,label {
 		padding:2px;
 		font-family: argesta_displayregular,serif;
 	}
+
+  .lsx-button.primary{background:6a6d5b;color:#fff;padding:10px 26px;}
+  .lsx-button.primary:hover{background:#000;}
 	/*Pop-ups */
 	.pum-overlay {
 		top:68px;

@@ -50,7 +50,6 @@ get_header();
 
 					<?php get_template_part( 'partials/wizard-step', '5' ); ?>
 
-					<?php tsp_init_wizard(); ?>
 				</form>
 			</div>
 
