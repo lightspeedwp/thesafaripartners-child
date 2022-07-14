@@ -4,6 +4,8 @@
 
 	////////////////////////////////////////// Public methods
 
+	var tspSliderFirstLoad = true;
+
 	var pub = {
 
 		init: function (options) {
@@ -140,8 +142,6 @@
 					$this.find('.lsx-wizard-button-next').click(function (e) {
 						e.preventDefault();
 
-						console.log('scrolling 1');
-
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 
 						if ($.isFunction(settings.onButtonNextClick)) {
@@ -158,9 +158,7 @@
 						refreshMiniWizardResults();
 					}
 					
-
 					/////////////////////////// Testing Success Icon
-
 					var $progressButtonsPlaceholder = $progressButtonsTemplate.find(".lsx-wizard-progress-buttons");
 					var $progressButtons = $progressButtonsPlaceholder.children();
 
@@ -228,42 +226,47 @@
 	};
 
 	////////////////////////////////////////// Private functions
-
 	function refreshMiniWizardResults() {
 		$(document).on( 'facetwp-loaded', function() {
-			console.log('tsp facet loaded.');
-			$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
-				$(this).slick( {
-					draggable: false,
-					infinite: true,
-					swipe: false,
-					//cssEase: lsx_to_params.slickSlider.desktop.cssEase,
-					dots: false,
-					slidesToShow: 4,
-					slidesToScroll: 4,
-					autoplay: false,
-					responsive: [
-						{
-							breakpoint: 992,
-							settings: {
-								draggable: false,
-								arrows: true,
-								swipe: false,
+
+			console.log(tspSliderFirstLoad);
+			if ( true === tspSliderFirstLoad ) {
+				tspSliderFirstLoad = false;
+			} else {
+				console.log('tsp facet loaded.');
+				$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
+					$(this).slick( {
+						draggable: false,
+						infinite: true,
+						swipe: false,
+						//cssEase: lsx_to_params.slickSlider.desktop.cssEase,
+						dots: false,
+						slidesToShow: 4,
+						slidesToScroll: 4,
+						autoplay: false,
+						responsive: [
+							{
+								breakpoint: 992,
+								settings: {
+									draggable: false,
+									arrows: true,
+									swipe: false,
+								}
+							},
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow:   1,
+									slidesToScroll: 1,
+									draggable:      true,
+									arrows:         false,
+									swipe:          true
+								}
 							}
-						},
-						{
-							breakpoint: 768,
-							settings: {
-								slidesToShow:   1,
-								slidesToScroll: 1,
-								draggable:      true,
-								arrows:         false,
-								swipe:          true
-							}
-						}
-					]
-				} );
-			});
+						]
+					} );
+				});
+			}
 		} );
 	}
 
