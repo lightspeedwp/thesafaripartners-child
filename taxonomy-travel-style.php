@@ -66,7 +66,7 @@ get_header(); ?>
 					<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
 						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 							<div class="lsx-to-slider-wrap">
-								<div class="lsx-to-slider-inner slick-initialized slick-slider slick-dotted slick-has-arrows" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
+								<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 								<?php
 								while ( have_posts() ) {
 									the_post();
