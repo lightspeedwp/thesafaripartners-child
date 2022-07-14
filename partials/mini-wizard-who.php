@@ -11,7 +11,7 @@
 
 			<?php foreach ( $terms as $term ) { ?>
 				<!-- post -->
-				<article class="col-md-4 status-publish hentry">
+				<article class="col-md-2 status-publish hentry">
 					<div class="checkbox-wrapper">
 						<input class="btn-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 						<span aria-hidden="true"></span>
