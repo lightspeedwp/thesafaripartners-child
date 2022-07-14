@@ -154,6 +154,46 @@
 
 					});
 
+					if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
+						refreshMiniWizardResults( selectedCheckboxes );
+
+						$(document).on( 'facetwp-loaded', function() {
+							$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
+								$(this).slick( {
+									draggable: false,
+									infinite: true,
+									swipe: false,
+									//cssEase: lsx_to_params.slickSlider.desktop.cssEase,
+									dots: false,
+									slidesToShow: 4,
+									slidesToScroll: 4,
+									autoplay: false,
+									responsive: [
+										{
+											breakpoint: 992,
+											settings: {
+												draggable: false,
+												arrows: true,
+												swipe: false,
+											}
+										},
+										{
+											breakpoint: 768,
+											settings: {
+												slidesToShow:   1,
+												slidesToScroll: 1,
+												draggable:      true,
+												arrows:         false,
+												swipe:          true
+											}
+										}
+									]
+								} );
+							});
+						} );
+					}
+					
+
 					/////////////////////////// Testing Success Icon
 
 					var $progressButtonsPlaceholder = $progressButtonsTemplate.find(".lsx-wizard-progress-buttons");
@@ -353,6 +393,10 @@
 		if ( 0 < budget.length ) {
 			FWP.facets['budget'] = budget;
 		}
+
+		$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
+			$(this).slick('unslick');
+		});
 
 		FWP.fetchData();
 	}
