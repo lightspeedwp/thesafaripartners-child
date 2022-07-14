@@ -1,9 +1,9 @@
 <?php
 /**
- * Tour Archive
+ * Destination Archive
  *
  * @package  tour-operator
- * @category tour
+ * @category destination
  */
 
 get_header(); ?>
@@ -18,28 +18,51 @@ get_header(); ?>
 
 			<?php lsx_content_top(); ?>
 
-			<?php if ( have_posts() ) : ?>
+			<?php 
+				$panels = array(
+					0 => array( 'who', 'where' ),
+					1 => array( 'what' ),
+					2 => array( 'when' ),
+					3 => array( 'budget' ),
+				);
+				tsp_mini_wizard( $panels );
+			?>
 
-				<div class="row lsx-to-archive-items lsx-to-archive-template-<?php echo esc_attr( tour_operator()->archive_layout ); ?> lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?>">
+			<?php
 
+				if ( have_posts() ) { 
+				?>
+				<div class="facetwp-hidden-filters">
 					<?php
-					while ( have_posts() ) :
-						the_post();
-						?>
-
-						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-							<?php lsx_to_content( 'content', 'tour' ); ?>
-						</div>
-
-					<?php endwhile; ?>
-
+						wp_nav_menu(
+							array(
+								'theme_location' => 'filter-menu',
+							)
+						);
+					?>
 				</div>
 
-			<?php else : ?>
-
+				<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+						<div class="lsx-to-slider-wrap">
+							<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
+							<?php
+							while ( have_posts() ) {
+								the_post();
+								?>
+								<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+									<?php lsx_to_content( 'content', 'tour' ); ?>
+								</div>
+							<?php
+							}
+							?>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php } else {  ?>
 				<?php get_template_part( 'partials/content', 'none' ); ?>
-
-			<?php endif; ?>
+			<?php } ?>
 
 			<?php lsx_content_bottom(); ?>
 
