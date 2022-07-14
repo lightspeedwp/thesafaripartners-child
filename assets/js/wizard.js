@@ -270,14 +270,14 @@
 
 			console.log($plugin);
 
-			let selectedCheckboxes = $plugin.find('.insipre-wizard-form input[type="checkbox"]:checked').map(
+			let selectedCheckboxes = $plugin.find('input[type="checkbox"]:checked').map(
 				function(){
 					return {
 						'id' : $(this).val(),
 						'name' : $(this).attr('name')
 					}
 				}).get();
-			
+
 			if ( $plugin.hasClass( 'insipre-wizard-form' ) ) {
 				submitInspireWizard( selectedCheckboxes );
 			}
@@ -291,10 +291,62 @@
 
 	function submitMiniWizard( selectedCheckboxes ) {
 
-		console.log();
+		console.log(selectedCheckboxes);
 
-		//FWP.facets['car_brand'] = ['audi'];
-		//FWP.fetchData();
+		if( typeof FWP === 'undefined' ) {
+			return '';
+		}
+
+		let what = [];
+		let who = [];
+		let where = [];
+		let when = [];
+		let budget = [];
+
+		selectedCheckboxes.forEach(function (value, index, array) {
+
+			switch(value.name) {
+				case 'fwp_who':
+					who.push(value.id);
+					break;
+				case 'fwp_what':
+					what.push(value.id);
+					break;
+				case 'fwp_where':
+					where.push(value.id);
+					break;
+				case 'fwp_when':
+					when.push(value.id);
+					break;
+				case 'fwp_budget':
+					budget.push(value.id);
+					break;
+				default:
+					// code block
+			}
+		});
+
+		if ( 0 < who.length ) {
+			FWP.facets['who'] = who;
+		}
+
+		if ( 0 < what.length ) {
+			FWP.facets['what'] = what;
+		}
+
+		if ( 0 < where.length ) {
+			FWP.facets['where'] = where;
+		}
+
+		if ( 0 < when.length ) {
+			FWP.facets['when'] = when;
+		}
+
+		if ( 0 < budget.length ) {
+			FWP.facets['budget'] = budget;
+		}
+
+		FWP.fetchData();
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
