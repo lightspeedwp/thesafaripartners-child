@@ -55,7 +55,7 @@ get_header(); ?>
 					tsp_mini_wizard( $panels );
 
 					?>
-					<div class="facetwp-hidden-filters">
+					<div class="facetwp-hidden-filters hidden">
 						<?php
 							wp_nav_menu(
 								array(
