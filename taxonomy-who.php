@@ -16,8 +16,6 @@ get_header(); ?>
 
 		<main id="main" class="site-main entry-content" role="main">
 
-
-
 			<div class="archive-intro row">
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">

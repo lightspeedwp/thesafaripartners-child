@@ -347,6 +347,10 @@
 		}
 
 		FWP.fetchData();
+
+		jQuery('html, body').animate({
+			scrollTop: jQuery(".mini-wizard-form").offset().top - 40
+		}, 1000);
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
