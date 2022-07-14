@@ -1946,3 +1946,7 @@ opacity:1;
 -webkit-box-shadow:none!important;
 box-shadow: none!important;
 }
+
+.mini-wizard-results .lsx-to-archive-thumb {
+	height: auto;
+}
