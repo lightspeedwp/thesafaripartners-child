@@ -37,6 +37,7 @@ class Frontend {
 	private function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 11 );
 		add_action( 'wp_head', array( $this, 'wp_head' ), 200 );
+		add_action( 'pre_get_posts', array( $this, 'set_main_query_arguments' ), 200, 1 );
 	}
 
 	/**
@@ -91,4 +92,25 @@ class Frontend {
 
 	}
 
+
+	public function set_main_query_arguments( $query ) {
+		if ( ! is_admin() && $query->is_main_query() ) {
+
+			$taxonomies = array(
+				'who',
+				'travel-style',
+			);
+
+			if ( $query->is_tax( array( $taxonomies ) )  ) {
+				$query->set( 'posts_per_page', -1 );
+				$query->set( 'nopagin', true );
+			}
+
+			if ( $query->is_post_type_archive( 'destination' )  ) {
+				$query->set( 'post_type', 'destination' );
+				$query->set( 'posts_per_page', -1 );
+				$query->set( 'nopagin', true );
+			}
+		}
+	}
 }
