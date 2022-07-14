@@ -540,6 +540,7 @@ th,tr,td,table,legend,label {
 		padding:2px;
 		font-family: argesta_displayregular,serif;
 	}
+
 	/*Pop-ups */
 	.pum-overlay {
 		top:68px;
@@ -1737,10 +1738,7 @@ s	.financial-about .lsx-banner-column {
 .page-banner-wrap .page-banner {
 	min-height:500px;
 }
-.archive-intro {
-	margin:0 40px 0px 20px!important;
-	width:auto;
-}
+
 .archive .desinations-landing-style {
 	margin:60px 80px 0 60px!important;
 }
@@ -1818,9 +1816,6 @@ s	.financial-about .lsx-banner-column {
 .single-lsx-to-destination .content-area .lsx-to-summary {
 	margin-top:-60px!important;
 }
-.tax-travel-style .desinations-landing-style>div:first-of-type {
-	width:50%;
-}
 .tax-travel-style .desinations-landing-style>div:first-of-type .lsx-to-widget-thumb {
 	padding:0 1px!important;
 }
@@ -1829,7 +1824,43 @@ s	.financial-about .lsx-banner-column {
 }
 .archive-intro {
 	padding-bottom:50px;
+  margin:0 40px 0px 20px!important;
+  width:auto;
 }
+
+.tax-travel-style .archive-intro {
+	padding-bottom: 20px!important;
+  margin: 60px 0px 17px 58px!important;
+  width: 1248px!important;
+  border-bottom: 1px solid #000;
+}
+.tax-travel-style .col-xs-1, .tax-travel-style .col-sm-1, .tax-travel-style .col-md-1, .tax-travel-style .col-lg-1, .tax-travel-style .col-xs-2, .tax-travel-style .col-sm-2, .tax-travel-style .col-md-2, .tax-travel-style .col-lg-2, .tax-travel-style .col-xs-3, .tax-travel-style .col-sm-3, .tax-travel-style .col-md-3, .tax-travel-style .col-lg-3, .tax-travel-style .col-xs-4, .tax-travel-style .col-sm-4, .tax-travel-style .col-md-4, .tax-travel-style .col-lg-4, .tax-travel-style .col-xs-5, .tax-travel-style .col-sm-5, .tax-travel-style .col-md-5, .tax-travel-style .col-lg-5, .tax-travel-style .col-xs-6, .tax-travel-style .col-sm-6, .tax-travel-style .col-md-6, .tax-travel-style .col-lg-6, .tax-travel-style .col-xs-7, .tax-travel-style .col-sm-7, .tax-travel-style .col-md-7, .tax-travel-style .col-lg-7, .tax-travel-style .col-xs-8, .tax-travel-style .col-sm-8, .tax-travel-style .col-md-8, .tax-travel-style .col-lg-8, .tax-travel-style .col-xs-9, .tax-travel-style .col-sm-9, .tax-travel-style .col-md-9, .tax-travel-style .col-lg-9, .tax-travel-style .col-xs-10, .tax-travel-style .col-sm-10, .tax-travel-style .col-md-10, .tax-travel-style .col-lg-10, .tax-travel-style .col-xs-11, .tax-travel-style .col-sm-11, .tax-travel-style .col-md-11, .tax-travel-style .col-lg-11, .tax-travel-style .col-xs-12, .tax-travel-style .col-sm-12, .tax-travel-style .col-md-12, .tax-travel-style .col-lg-12{padding:0!important;}
+
+.tax-travel-style .tourslink .moretag{display:block!important;width:80%!important;margin:6px 0 0 10px!important}
+.tax-travel-style p .moretag{display:none!important;}
+
+.search-results .content{
+  width: 1266px!important;
+  margin: 0px auto!important;}
+.search-results .archive-header-wrapper{display:none;}
+.search-results .content-area{margin-top:10px!important;}
+#mega-menu-wrap-filter-menu #mega-menu-filter-menu{padding: 0px 0px 10px 0px!important;}
+.search-results .moretag{background:#f5ecdd;color:#000;padding:8px 55px;text-transform:uppaercase;border:1px solid #000;}
+.search-results .moretag:hover{background:#ce9e57;border:1px solid #ce9e57;color:#000!important;padding:8px 55px;text-transform:uppaercase;}
+.lsx-to-widget-content .tourslink .moretag{background:#f5ecdd!important;color:#000!important;text-transform:uppaercase;border:1px solid #000!important;}
+.lsx-to-widget-content .tourslink .moretag:hover{background:#ce9e57!important;border:1px solid #ce9e57!important;color:#000!important;}
+.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag{color:#000!important;}
+.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:hover{color:#000!important;}
+.mega-menu-item-custom_html-2, .mega-menu-item-custom_html-3{padding:0!important;}
+.mega-menu-item-custom_html-2 h3, .mega-menu-item-custom_html-3 h3{padding:0!important;margin:0!important;}
+.right-align{float: right;
+  margin: 4px -6px 0px 0!important;
+  height: 10px;}
+.wizardstart{position:absolute!important; width: 516px!important;
+  right: 9%;}
+.lsx-button.primary{background:#6a6d5b!important;color:#fff!important;padding:10px 26px!important;display:block;}
+.lsx-button.primary:hover{background:#000;}
+
 .page-template-template-contact #primary form input,.page-template-template-contact #primary form select,.page-template-template-contact #primary form textarea {
 	border-top:0;
 	border-right:0;
@@ -1928,7 +1959,6 @@ s	.financial-about .lsx-banner-column {
 .single .show {
 	display:block!important;
 }
-
 .gfield input::-webkit-input-placeholder {
 color:#262423!important;
 }
@@ -1951,7 +1981,6 @@ opacity:1;
 -webkit-box-shadow:none!important;
 box-shadow: none!important;
 }
-
 
 /* MINI Wizard Styles */
 .mini-wizard-form .lsx-wizard-progress-buttons-wrapper {
