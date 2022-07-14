@@ -284,9 +284,8 @@
 		if ($elementToSlide.next().length) {
 
 			jQuery('html, body').animate({
-				scrollTop: jQuery(".mini-wizard-form").offset().top - 100
+				scrollTop: $plugin.offset().top - 100
 			}, 100);
-			console.log('scrolling left the top 100');
 
 			$elementToSlide.clearQueue().animate({
 				'margin-left': '-100%'
