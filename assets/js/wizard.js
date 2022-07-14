@@ -158,6 +158,7 @@
 						refreshMiniWizardResults( selectedCheckboxes );
 
 						$(document).on( 'facetwp-loaded', function() {
+							console.log('tsp facet loaded.');
 							$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
 								$(this).slick( {
 									draggable: false,
