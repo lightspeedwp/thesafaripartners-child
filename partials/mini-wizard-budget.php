@@ -22,7 +22,7 @@
 
 					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 						<div class="lsx-to-widget-thumb">
-							<label for="budget-<?php echo esc_html( $value ); ?>"><?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?></label>
+							<label for="budget-<?php echo esc_html( $value ); ?>"><?php lsx_to_term_thumbnail( $term->term_id, 'thumbnail' ); ?></label>
 						</div>
 					<?php else : ?>
 						<div class="lsx-to-widget-thumb">

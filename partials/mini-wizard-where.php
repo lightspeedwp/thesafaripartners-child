@@ -25,7 +25,7 @@
 								<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 								<span aria-hidden="true"></span>
 							</div>
-							<?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
+							<?php lsx_thumbnail( 'thumbnail' ); ?>
 						</div>
 
 						<div class="lsx-to-content">
