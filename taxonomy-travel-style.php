@@ -70,8 +70,8 @@ get_header(); ?>
 							<div class="lsx-to-slider-wrap">
 								<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
 								<?php
-								while ( $query->have_posts() ) {
-									$query->the_post();
+								while ( have_posts() ) {
+									the_post();
 									?>
 									<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 										<?php lsx_to_content( 'content', 'tour' ); ?>
