@@ -78,7 +78,6 @@
 					var activeElementPosition = parseInt($activeStep.data('position'), 10);
 
 					$.each($steps, function (i, step) {
-
 						var $step = $(step);
 						var $newStepTitleTemplate = getStepTitleTemplate(i, $step, settings);
 						$step.prepend($newStepTitleTemplate);
@@ -140,6 +139,9 @@
 
 					$this.find('.lsx-wizard-button-next').click(function (e) {
 						e.preventDefault();
+
+						console.log('scrolling 1');
+
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 
 						if ($.isFunction(settings.onButtonNextClick)) {
@@ -192,6 +194,7 @@
 			$plugin = $(this);
 			var settings = $plugin.data('lsxWizard').settings;
 			var $elementToSlide = $plugin.find(".lsx-wizard-steps-wrapper .active");
+			console.log('next slide');
 			slideLeft($elementToSlide, settings, $plugin);
 		},
 		first: function (a) {
@@ -233,6 +236,11 @@
 	function slideLeft($elementToSlide, settings, $plugin, slideSuccessCallback) {
 
 		if ($elementToSlide.next().length) {
+
+			jQuery('html, body').animate({
+				scrollTop: jQuery(".mini-wizard-form").offset().top - 40
+			}, 100);
+			console.log('scrolling left the top 100');
 
 			$elementToSlide.clearQueue().animate({
 				'margin-left': '-100%'
@@ -347,10 +355,6 @@
 		}
 
 		FWP.fetchData();
-
-		jQuery('html, body').animate({
-			scrollTop: jQuery(".mini-wizard-form").offset().top - 40
-		}, 1000);
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {

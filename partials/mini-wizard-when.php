@@ -1,6 +1,6 @@
 
 <div class="step-content">
-	<div class="wizard-when">
+	<div class="wizard-when row">
 		<div class="col-md-12">
 			<h2><?php esc_html_e( 'Where in Africa?', 'thesafaripartners-child' ); ?></h2>
 			<p><?php esc_html_e( 'Let us what interests you', 'thesafaripartners-child' ); ?></p>

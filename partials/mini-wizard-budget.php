@@ -1,5 +1,5 @@
 <div class="step-content">
-	<div class="wizard-budget">
+	<div class="wizard-budget row">
 		<div class="col-md-3">
 			<h2><?php esc_html_e( 'What is your budget?', 'thesafaripartners-child' ); ?></h2>
 			<p><?php esc_html_e( 'If you have an idea of your budget let us know here, or skip it if you wish.', 'thesafaripartners-child' ); ?></p>

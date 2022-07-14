@@ -1,6 +1,6 @@
 
 <div class="step-content">
-	<div class="wizard-where">
+	<div class="wizard-where row">
 		<div class="col-md-3">
 			<h2><?php esc_html_e( 'Where in Africa would you like to go?', 'thesafaripartners-child' ); ?></h2>
 			<p><?php esc_html_e( 'Select any countries which may interest you, or if you are not sure, skip this section', 'thesafaripartners-child' ); ?></p>

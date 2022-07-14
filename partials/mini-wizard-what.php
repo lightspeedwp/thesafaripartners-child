@@ -1,5 +1,5 @@
 <div class="step-content">
-	<div class="wizard-what">
+	<div class="wizard-what row">
 		<div class="col-md-3">
 			<h2><?php esc_html_e( 'What interests you?', 'thesafaripartners-child' ); ?></h2>
 			<p><?php esc_html_e( 'Let us what interests you', 'thesafaripartners-child' ); ?></p>
