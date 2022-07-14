@@ -155,43 +155,7 @@
 					});
 
 					if ( $this.hasClass( 'mini-wizard-form' ) ) {
-						refreshMiniWizardResults( selectedCheckboxes );
-
-						$(document).on( 'facetwp-loaded', function() {
-							console.log('tsp facet loaded.');
-							$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
-								$(this).slick( {
-									draggable: false,
-									infinite: true,
-									swipe: false,
-									//cssEase: lsx_to_params.slickSlider.desktop.cssEase,
-									dots: false,
-									slidesToShow: 4,
-									slidesToScroll: 4,
-									autoplay: false,
-									responsive: [
-										{
-											breakpoint: 992,
-											settings: {
-												draggable: false,
-												arrows: true,
-												swipe: false,
-											}
-										},
-										{
-											breakpoint: 768,
-											settings: {
-												slidesToShow:   1,
-												slidesToScroll: 1,
-												draggable:      true,
-												arrows:         false,
-												swipe:          true
-											}
-										}
-									]
-								} );
-							});
-						} );
+						refreshMiniWizardResults();
 					}
 					
 
@@ -264,6 +228,44 @@
 	};
 
 	////////////////////////////////////////// Private functions
+
+	function refreshMiniWizardResults() {
+		$(document).on( 'facetwp-loaded', function() {
+			console.log('tsp facet loaded.');
+			$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
+				$(this).slick( {
+					draggable: false,
+					infinite: true,
+					swipe: false,
+					//cssEase: lsx_to_params.slickSlider.desktop.cssEase,
+					dots: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					autoplay: false,
+					responsive: [
+						{
+							breakpoint: 992,
+							settings: {
+								draggable: false,
+								arrows: true,
+								swipe: false,
+							}
+						},
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow:   1,
+								slidesToScroll: 1,
+								draggable:      true,
+								arrows:         false,
+								swipe:          true
+							}
+						}
+					]
+				} );
+			});
+		} );
+	}
 
 	function resizeWizardStepsWrapper($this) {
 		var $wizardStepsWrapper = $this.find(".lsx-wizard-steps-wrapper");
