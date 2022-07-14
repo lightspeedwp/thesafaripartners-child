@@ -62,7 +62,6 @@ if ( $has_single ) {
 
 		<?php
 		ob_start();
-		lsx_to_widget_entry_content_top();
 		the_excerpt();
 
 		$excerpt = ob_get_clean();
