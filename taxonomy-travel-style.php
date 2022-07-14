@@ -71,9 +71,9 @@ get_header(); ?>
 								while ( have_posts() ) {
 									the_post();
 									?>
-									
+									<div class="lsx-to-widget-item-wrap lsx-tour slick-slide">
 										<?php lsx_to_content( 'content-widget', 'tour' ); ?>
-									
+									</div>
 								<?php
 								}
 								?>
