@@ -1947,6 +1947,12 @@ opacity:1;
 box-shadow: none!important;
 }
 
+
+/* MINI Wizard Styles */
+.mini-wizard-form .lsx-wizard-progress-buttons-wrapper {
+	display: none !important;
+}
+
 .mini-wizard-results .lsx-to-archive-thumb {
 	height: auto;
 }
