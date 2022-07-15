@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-md-9">
 				<div class="safari-styles desinations-landing-style">
-				
+					
 									<?php
 									$the_query = new WP_Query(
 										array(
@@ -21,8 +21,8 @@
 										global $post;
 										$the_query->the_post();
 										?>
-					<article class="col-md-2 status-publish hentry">										
-							<div class="lsx-to-widget-thumb">
+										<div class="col-md-2 status-publish hentry">
+											<div class="lsx-to-widget-thumb">
 												<div class="checkbox-wrapper">
 													<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 													<span aria-hidden="true"></span>
@@ -37,10 +37,9 @@
 
 										<?php endwhile; ?>
 										<?php wp_reset_query(); ?>
-								</div>
-						</article>
-					</div>	
-				</div>		
+								
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
