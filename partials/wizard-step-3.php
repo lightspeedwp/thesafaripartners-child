@@ -2,16 +2,13 @@
 	<h4>3. <?php esc_html_e( 'Where', 'thesafaripartners-child' ); ?></h4>
 	<div class="step-content">
 		<div class="wizard-where">
-			<div class="col-md-12 whereintro">
-				<h2><?php esc_html_e( 'Where in Africa?', 'thesafaripartners-child' ); ?></h2>
+		<div class="col-md-3">
+				<h3><?php esc_html_e( 'Where in Africa?', 'thesafaripartners-child' ); ?></h3>
 				<p><?php esc_html_e( 'Let us where you want to travel', 'thesafaripartners-child' ); ?></p>
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<div class="safari-styles desinations-landing-style">
-					<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
-						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
-							<div class="lsx-to-slider-wrap">
-								<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
+				
 									<?php
 									$the_query = new WP_Query(
 										array(
@@ -24,8 +21,8 @@
 										global $post;
 										$the_query->the_post();
 										?>
-										<div class="lsx-to-widget-item-wrap col-xs-4 col-sm-3 lsx-travel-style destinations-archive lsx-to-archive-item">
-											<div class="lsx-to-widget-thumb">
+					<article class="col-md-2 status-publish hentry">										
+							<div class="lsx-to-widget-thumb">
 												<div class="checkbox-wrapper">
 													<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 													<span aria-hidden="true"></span>
@@ -41,11 +38,9 @@
 										<?php endwhile; ?>
 										<?php wp_reset_query(); ?>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+						</article>
+					</div>	
+				</div>		
 		</div>
 	</div>
 </div>
