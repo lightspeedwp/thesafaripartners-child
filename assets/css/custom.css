@@ -452,7 +452,7 @@ th,tr,td,table,legend,label {
 		display:inline-block;
 		width:auto;
 	}
-	.wizard-what .col-md-2, .wizard-who .col-md-2 {
+	.wizard-what .col-md-2, .wizard-who .col-md-2, .wizard-where .col-md-2 {
 		padding-right:3px;
 		padding-left:3px;
 		margin-bottom:8px;
@@ -477,7 +477,12 @@ th,tr,td,table,legend,label {
 	}
   .page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:160px;
+		height:200px;
+		object-fit:cover;
+	}
+  .page-template-template-wizard .wizard-where .lsx-to-widget-thumb img {
+		overflow:hidden;
+		height:200px;
 		object-fit:cover;
 	}
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
