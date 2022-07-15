@@ -366,8 +366,8 @@ th,tr,td,table,legend,label {
 	.lsx-wizard {
 		position:relative;
 	}
-  .tax-travel-styl #wizard .step-content .col-md-3{padding-right:10px!important;}
-  .tax-travel-styl #wizard .step-content .col-md-2{padding: 0 1px!important;}
+  .tax-travel-style #wizard .step-content .col-md-3{padding-right:10px!important;}
+  .tax-travel-style #wizard .step-content .col-md-2{padding: 0 1px!important;}
   .tax-travel-style .safari-styles{margin-top:0!important;}
 	.lsx-wizard .nav-pills li.active {
 		border-bottom:4px solid #999;
