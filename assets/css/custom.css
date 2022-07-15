@@ -366,8 +366,10 @@ th,tr,td,table,legend,label {
 	.lsx-wizard {
 		position:relative;
 	}
-  
-  .tax-travel-style .btn-primary{background:#a55244!important;padding:10px 24px; color:#fff!important;}
+  .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10p;}
+  .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;
+    font-weight:bold;font-size:22px!important;}
+  .tax-travel-style .btn-primary{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
   .tax-travel-style .btn-primary:hover{background:#000!important;}
   .tax-travel-style #wizard .step-content .col-md-3{padding-right:35px!important;}
   .tax-travel-style #wizard .step-content .col-sm-2{padding: 0 2px!important;}
