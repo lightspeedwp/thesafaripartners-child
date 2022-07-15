@@ -6,9 +6,7 @@
 				<h3><?php esc_html_e( 'Where in Africa?', 'thesafaripartners-child' ); ?></h3>
 				<p><?php esc_html_e( 'Let us where you want to travel', 'thesafaripartners-child' ); ?></p>
 			</div>
-			<div class="col-md-9">
-				<div class="safari-styles desinations-landing-style">
-					
+			<div class="col-md-9">					
 									<?php
 									$the_query = new WP_Query(
 										array(
@@ -21,13 +19,13 @@
 										global $post;
 										$the_query->the_post();
 										?>
-										<div class="col-md-2 status-publish hentry">
+										<div class="col-md-2 status-publish hentry destination">
 											<div class="lsx-to-widget-thumb">
 												<div class="checkbox-wrapper">
 													<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 													<span aria-hidden="true"></span>
 												</div>
-												<?php lsx_thumbnail( 'lsx-thumbnail-full' ); ?>
+												<?php lsx_thumbnail( 'large' ); ?>
 											</div>
 
 											<div class="lsx-to-content">
@@ -38,7 +36,7 @@
 										<?php endwhile; ?>
 										<?php wp_reset_query(); ?>
 								
-				</div>
+				
 			</div>
 		</div>
 	</div>
