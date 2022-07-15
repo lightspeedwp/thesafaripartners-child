@@ -23,6 +23,10 @@
 	font-weight:300;
 	font-stretch:normal;
 }
+h1{font-size:58px!important; line-height:68px;}
+h2{font-size:46px!important; line-height:54px;}
+h3{font-size:28px!important; line-height:34px;}
+h4{font-size:22px!important; line-height:28px;}
 .tk-moret {
 	font-family:"moret",serif;
 }
@@ -36,6 +40,8 @@ body,p,ul,li,em {
 th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
 }
+.btn, button{font-family:"moret",serif!important;
+	font-weight:bold;}
 @media screen and (min-width:1000px) {
 	.page.safari-styles {
 		margin-top:0px;
