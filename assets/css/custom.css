@@ -328,12 +328,12 @@ th,tr,td,table,legend,label {
 	.wizard-who {
 		margin:0 auto;
 		width:1366px;
-		padding:60px 16px 0px 60px;
+		padding:60px 0px 0px 36px;
 	}
 	.wizard-what {
 		margin:0 auto;
 		width:1366px;
-		padding:60px 16px 0px 60px;
+		padding:60px 0px 0px 36px;
 	}
 	.wizard-where {
 		margin:0 auto;
@@ -343,12 +343,12 @@ th,tr,td,table,legend,label {
 	.wizard-when {
 		margin:0 auto;
 		width:1366px;
-		padding:60px 16px 0px 60px;
+		padding:60px 0px 0px 36px;
 	}
 	.wizard-budget {
 		margin:0 auto;
 		width:1366px;
-		padding:60px 16px 0px 60px;
+		padding:60px 0px 0px 36px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
@@ -360,6 +360,7 @@ th,tr,td,table,legend,label {
 	.lsx-wizard {
 		position:relative;
 	}
+  .tax-travel-style .safari-styles{margin-top:0!important;}
 	.lsx-wizard .nav-pills li.active {
 		border-bottom:4px solid #999;
 	}
