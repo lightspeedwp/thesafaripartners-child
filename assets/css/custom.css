@@ -490,6 +490,7 @@ th,tr,td,table,legend,label {
 		height:210px!important;
 		object-fit:cover;
 	}
+  .page-template-template-wizard .body-wrap{height:100vh!important;}
 	.lsx-wizard .checkbox-wrapper {
 		position:absolute;
 		font-size:14px;
