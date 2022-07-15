@@ -181,6 +181,8 @@ th,tr,td,table,legend,label {
 	.body-wrap {
 		background:#fff;
 	}
+  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus{color:#ce9e57!important;}
+  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#000!important;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6 {
 		display:none;
 	}
@@ -366,7 +368,7 @@ th,tr,td,table,legend,label {
 	.lsx-wizard {
 		position:relative;
 	}
-  .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10p;}
+  .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
   .tax-travel-style .lsx-wizard-button-next:hover{background:#000!important;}
@@ -383,7 +385,7 @@ th,tr,td,table,legend,label {
 		margin-bottom:10px;
 	}
 	.lsx-wizard-buttons-wrapper .btn {
-		padding:0!important;
+		padding:0;
 		background:#fff;
 		border:none!important;
 		-webkit-box-shadow:none;
