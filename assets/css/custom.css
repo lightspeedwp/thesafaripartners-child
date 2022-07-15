@@ -366,8 +366,10 @@ th,tr,td,table,legend,label {
 	.lsx-wizard {
 		position:relative;
 	}
-  .tax-travel-style #wizard .step-content .col-md-3{padding-right:10px!important;}
-  .tax-travel-style #wizard .step-content .col-md-2{padding: 0 1px!important;}
+  
+  .tax-travel-style #wizard .step-content .col-md-3{padding-right:35px!important;}
+  .tax-travel-style #wizard .step-content .col-sm-2{padding: 0 1px!important;}
+  .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
   .tax-travel-style .safari-styles{margin-top:0!important;}
 	.lsx-wizard .nav-pills li.active {
 		border-bottom:4px solid #999;
@@ -468,7 +470,7 @@ th,tr,td,table,legend,label {
 	}
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:240px!important;
+		height:210px!important;
 		object-fit:cover;
 	}
 	.lsx-wizard .checkbox-wrapper {
@@ -1745,7 +1747,7 @@ s	.financial-about .lsx-banner-column {
 	width:90%!important;
 }
 .page-banner-wrap .page-banner {
-	min-height:500px;
+	min-height:85vh;
 }
 .full {
 	width:100%!important;
