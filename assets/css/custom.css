@@ -174,15 +174,15 @@ th,tr,td,table,legend,label {
 		margin:0;
 	}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content h4 {
-		font-size:16px;
-		margin-top:8px;
-		margin-bottom:28px;
+		font-size:16px!important;
+		margin-top:6px;
+		margin-bottom:18px;
 	}
 	.body-wrap {
 		background:#fff;
 	}
   .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus{color:#ce9e57!important;}
-  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#000!important;}
+  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#000;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6 {
 		display:none;
 	}
@@ -547,6 +547,8 @@ th,tr,td,table,legend,label {
     font-size: 15px;
     position: absolute;
 	}
+
+  .page-template-template-wizard .wizard-who .status-publish{height:240px;}
 	/*Content */
 	.archive.category .post {
 		width:32%;
@@ -782,9 +784,9 @@ th,tr,td,table,legend,label {
 	.lsx-button,.wp-block-button__link {
 		background:#6a6d5b;
 		color:#fff!important;
-		font-family:argesta_displayregular,serif;
-		margin-top:20px;
+		font-family:"moret",serif!important;
 		text-transform:uppercase;
+    border:0!important;
 	}
 	.pum-overlay {
 		z-index: 99!important;

@@ -3,7 +3,7 @@
 	<div class="step-content">
 		<div class="wizard-who">
 			<div class="col-md-3">
-				<h2><?php esc_html_e( 'Who is Traveling?', 'thesafaripartners-child' ); ?></h2>
+				<h3><?php esc_html_e( 'Who is Traveling?', 'thesafaripartners-child' ); ?></h3>
 				<p><?php esc_html_e( 'Let us know alittle more about who is traveling', 'thesafaripartners-child' ); ?></p>
 			</div>
 			<div class="col-md-9">
@@ -13,7 +13,7 @@
 
 				<?php foreach ( $terms as $term ) : ?>
 					<!-- post -->
-					<article class="col-md-4 status-publish hentry">
+					<article class="col-md-2 status-publish hentry">
 						<div class="checkbox-wrapper">
 							<input class="btn-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 							<span aria-hidden="true"></span>
