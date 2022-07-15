@@ -65,6 +65,7 @@ get_header(); ?>
 					</div>
 	
 					<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
+					<h3><?php esc_html_e( 'Our picks for', 'thesafaripartners-child' ); ?> <span style="text-transform:lowercase;"><?php echo $term->name; ?></span></h3>
 						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 							<div class="lsx-to-slider-wrap">
 								<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
