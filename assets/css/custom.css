@@ -452,7 +452,7 @@ th,tr,td,table,legend,label {
 		display:inline-block;
 		width:auto;
 	}
-	.wizard-what .col-md-2 {
+	.wizard-what .col-md-2, .wizard-who .col-md-2 {
 		padding-right:3px;
 		padding-left:3px;
 		margin-bottom:8px;
@@ -471,6 +471,11 @@ th,tr,td,table,legend,label {
 		padding:2px 4px;
 	}
 	.wizard-what .lsx-to-widget-thumb img {
+		overflow:hidden;
+		height:200px;
+		object-fit:cover;
+	}
+  .page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
 		height:160px;
 		object-fit:cover;
