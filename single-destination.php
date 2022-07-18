@@ -36,7 +36,7 @@ get_header(); ?>
 				</section>
 
 
-			
+			<?php endwhile; ?><?php wp_reset_query(); ?>
 
 		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
@@ -65,7 +65,7 @@ get_header(); ?>
 		
 		<?php lsx_content_bottom(); ?>
 		
-		
+
 			<section id="wizard-template" class="lsx-to-section-new">
 				<div class="row">
 				<?php	$id=134126;
