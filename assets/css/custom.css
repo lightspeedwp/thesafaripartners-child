@@ -397,19 +397,20 @@ th,tr,td,table,legend,label {
 		color:#262423!important;
 	}
 	.lsx-wizard-button-previous span:before {
-		content:"\f30a";
-		font-family:FontAwesome;
-		font-weight:100;
-		color:#262423;
-		font-size:17px;
+		background-image: url('img/tsp-see-more-arrow.svg');
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    content:"";margin-right:9px;
 	}
 	.lsx-wizard-button-next span:after {
 		background-image: url('img/tsp-see-more-arrow.svg');
-    background-size: 16px 16px;
+    background-size: 20px 20px;
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    content:"";margin-right:5px;
+    width: 20px;
+    height:20px;
+    content:"";margin-left:9px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		position:relative;
