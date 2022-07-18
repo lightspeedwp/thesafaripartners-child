@@ -121,7 +121,6 @@ th,tr,td,table,legend,label {
 	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
 		font-family:"moret",serif!important;
-		font-weight:bold;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu li a {
 		color:#262423!important;
@@ -130,8 +129,7 @@ th,tr,td,table,legend,label {
 		color:#262423!important;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-ancestor>a.mega-menu-link,#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-page-ancestor>a.mega-menu-link {
-		font-family:argesta_displayregular,serif!important;
-		font-weight:bold;
+		font-family:"moret",serif!important;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu {
 		background-color:#fff;
