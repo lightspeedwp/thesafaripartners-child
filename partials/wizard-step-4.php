@@ -3,7 +3,7 @@
 	<div class="step-content">
 		<div class="wizard-when">
 			<div class="col-md-12">
-				<h3><?php esc_html_e( 'When would you like to travel??', 'thesafaripartners-child' ); ?></h3>
+				<h3><?php esc_html_e( 'When would you like to travel?', 'thesafaripartners-child' ); ?></h3>
 				<p><?php esc_html_e( 'Select the momnths you would like to be on vaction, or skip it, and let us make the suggestions for you.', 'thesafaripartners-child' ); ?></p>
 			</div>
 			<div class="col-md-12 when-wiz">
