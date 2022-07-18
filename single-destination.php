@@ -36,7 +36,7 @@ get_header(); ?>
 				</section>
 
 
-			
+			<?php endwhile; ?><?php wp_reset_query(); ?>
 
 		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
@@ -44,8 +44,8 @@ get_header(); ?>
 	if ( have_posts() ) {
 
 		$panels = array(
-			0 => array( 'who' ),
-			1 => array( 'what' ),
+			0 => array( 'what' ),
+			1 => array( 'where' ),
 			2 => array( 'when' ),
 			3 => array( 'budget' ),
 		);
