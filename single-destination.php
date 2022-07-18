@@ -62,12 +62,9 @@ get_header(); ?>
 			?>
 		</div>
 
-		<?php
-			while ( have_posts() ) :
-				the_post();
-				?>
+		
 		<?php lsx_content_bottom(); ?>
-		<?php endwhile; ?><?php wp_reset_query(); ?>
+		
 
 			<section id="wizard-template" class="lsx-to-section-new">
 				<div class="row">
