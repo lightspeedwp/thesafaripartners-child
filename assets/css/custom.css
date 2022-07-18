@@ -464,7 +464,7 @@ th,tr,td,table,legend,label {
 		overflow:hidden;
 	}
 	.lsx-wizard .lsx-to-content {
-		font-family:argesta_displayregular,serif!important;
+		font-family:"moret",serif!important;
 		font-weight:bold;
 		font-size:17px;
 		padding:2px 4px;
@@ -560,7 +560,7 @@ th,tr,td,table,legend,label {
       height: 262px;
       margin-left: -116px;
       padding-left: 117px;
-      padding-top: 7px;
+      padding-top: 6px;
 	}
   .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     content: "\f00c";
@@ -575,7 +575,7 @@ th,tr,td,table,legend,label {
     height: 262px;
     margin-left: -116px;
     padding-left: 117px;
-    padding-top: 7px;
+    padding-top: 6px;
 }
 
 .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -588,10 +588,10 @@ th,tr,td,table,legend,label {
   font-size: 15px;
   border: 1px solid #ce9e57;
   width: 156px;
-  height: 222px;
+  height: 228px;
   margin-left: -116px;
   padding-left: 117px;
-  padding-top: 7px;
+  padding-top: 6px;
 }
 
 .wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -613,7 +613,6 @@ th,tr,td,table,legend,label {
   color: #ce9e57;
   font-size: 15px;
 }
-
   .when-wiz{margin-top:30px;}
 
   .page-template-template-wizard .wizard-who .status-publish{height:240px;}
