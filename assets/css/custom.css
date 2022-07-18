@@ -400,13 +400,14 @@ th,tr,td,table,legend,label {
 		content:"\f30a";
 		font-family:FontAwesome;
 		font-weight:100;
-		color:#000;;
+		color:#262423;
 		font-size:17px;
 	}
-	.lsx-wizard-button-next span:after {
-    background-image: url('img/tsp-see-more-arrow.svg');
+	.lsx-wizard-button-next span::after {
+		background-image: url('img/tsp-see-more-arrow.svg');
     background-size: 16px 16px;
 		font-weight:100;
+		color:#262423;
 		font-size:17px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
@@ -464,8 +465,8 @@ th,tr,td,table,legend,label {
 	.lsx-wizard .lsx-to-content {
 		font-family:"moret",serif!important;
 		font-weight:bold;
-		font-size:20px;line-height: 20pxx;letter-spacing: 1px;
-		padding:2px 8px;
+		font-size:20px;line-height: 22px;letter-spacing: 1px;
+		padding:4px 8px 2PX;
 	}
 	.wizard-what .lsx-to-widget-thumb img {
 		overflow:hidden;
