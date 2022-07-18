@@ -4,7 +4,7 @@
 		<div class="wizard-who">
 			<div class="col-md-3">
 				<h3><?php esc_html_e( 'Who is Traveling?', 'thesafaripartners-child' ); ?></h3>
-				<p><?php esc_html_e( 'Let us know alittle more about who is traveling', 'thesafaripartners-child' ); ?></p>
+				<p><?php esc_html_e( 'Click on the type of traveller you are.', 'thesafaripartners-child' ); ?></p>
 			</div>
 			<div class="col-md-9">
 				<?php

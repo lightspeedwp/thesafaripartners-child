@@ -3,7 +3,7 @@
 	<div class="step-content">
 		<div class="wizard-who">
 			<div class="col-md-3">
-				<h2><?php esc_html_e( 'What is your budget?', 'thesafaripartners-child' ); ?></h2>
+				<h3><?php esc_html_e( 'What is your budget?', 'thesafaripartners-child' ); ?></h3>
 				<p><?php esc_html_e( 'If you have an idea of your budget let us know here, or skip it if you wish.', 'thesafaripartners-child' ); ?></p>
 			</div>
 			<div class="col-md-9">

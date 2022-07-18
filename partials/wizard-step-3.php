@@ -4,7 +4,7 @@
 		<div class="wizard-where">
 		<div class="col-md-3">
 				<h3><?php esc_html_e( 'Where in Africa?', 'thesafaripartners-child' ); ?></h3>
-				<p><?php esc_html_e( 'Let us where you want to travel', 'thesafaripartners-child' ); ?></p>
+				<p><?php esc_html_e( 'Do you know where you might want to go? Select any countries that may interest you, or if you are not sure, skip this section.', 'thesafaripartners-child' ); ?></p>
 			</div>
 			<div class="col-md-9">					
 									<?php
