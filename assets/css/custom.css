@@ -414,7 +414,7 @@ th,tr,td,table,legend,label {
 	.lsx-wizard-progress-buttons-wrapper {
 		position:relative;
 		z-index:1;
-		width:1344px;
+		width:1338px;
 		margin:4px auto -46px;
 	}
 	.lsx-wizard-progress-buttons .steps1 {
@@ -553,9 +553,17 @@ th,tr,td,table,legend,label {
     top: 0.8px;
     left: 3px;
     font-weight: 100;
-    color: #ce9e57;;
+    color: #ce9e57;
     font-size: 15px;
     position: absolute;
+	}
+
+  .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::before {
+    top: 0px;
+    left: 0px;
+    border: 1px solid #ce9e57;
+    width:120px;height:220px;
+    position: relative;
 	}
   .when-wiz{margin-top:30px;}
 
@@ -1883,8 +1891,8 @@ s	.financial-about .lsx-banner-column {
 .right-align{float: right;
   margin: 4px -6px 0px 0!important;
   height: 10px;}
-.wizardstart{position:absolute!important; width: 516px!important;
-  right: 9%;}
+.wizardstart{position:absolute!important; width: 604px!important;
+  right: 5%;}
 .lsx-button.primary{background:#6a6d5b!important;color:#fff!important;padding:10px 26px!important;display:block;}
 .lsx-button.primary:hover{background:#000;}
 
