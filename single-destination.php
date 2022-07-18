@@ -36,7 +36,7 @@ get_header(); ?>
 				</section>
 
 
-			<?php endwhile; ?><?php wp_reset_query(); ?>
+			
 
 		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
