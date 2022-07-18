@@ -67,6 +67,12 @@ get_header(); ?>
 					</div>
 
 					<?php
+				} else {
+					get_template_part( 'partials/content', 'none' );
+				}
+				?>
+
+					<?php
 			while ( have_posts() ) :
 				the_post();
 				?>
@@ -75,12 +81,8 @@ get_header(); ?>
 					<?php lsx_content_bottom(); ?>
 
 					<?php endwhile; ?>
+
 					
-					<?php
-				} else {
-					get_template_part( 'partials/content', 'none' );
-				}
-				?>
 
 		
 		</main><!-- #main -->
