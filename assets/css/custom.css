@@ -1443,12 +1443,12 @@ th,tr,td,table,legend,label {
 	#footer-sub .gform_footer .btn span {
 		color:#262423;
 	}
+  #footer-widgets .widget-title{color:#fff;}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu>ul.mega-sub-menu {
-		width:1260px;
-		margin-top:12px;
-		max-width:none;
-		left:-375.5px;
-		border:1px solid #262423;
+		width: 1444px;
+    margin-top: 12px;
+    max-width: none;
+    left: -413.5px;
 	}
 	#masthead>.container {
 		min-height:66px;
