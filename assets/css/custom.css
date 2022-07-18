@@ -547,7 +547,7 @@ th,tr,td,table,legend,label {
 		position:relative;
 		margin:15px 0;
 	}
-	.wizard-who .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	.wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
       content: "\f00c";
       font-family: FontAwesome;
       top: -8.2px;
@@ -562,7 +562,7 @@ th,tr,td,table,legend,label {
       padding-left: 117px;
       padding-top: 7px;
 	}
-  .wizard-what .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+  .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     content: "\f00c";
     font-family: FontAwesome;
     top: -8.2px;
@@ -578,7 +578,7 @@ th,tr,td,table,legend,label {
     padding-top: 7px;
 }
 
-.wizard-where .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -594,7 +594,7 @@ th,tr,td,table,legend,label {
   padding-top: 7px;
 }
 
-.wizard-when .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -604,7 +604,7 @@ th,tr,td,table,legend,label {
   font-size: 15px;
 }
 
-.wizard-budget .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
