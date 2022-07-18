@@ -1,9 +1,9 @@
 <?php
 /**
- * Travel Style Archive.
+ * Who Archive.
  *
  * @package  tour-operator
- * @category travel-style
+ * @category who
  */
 
 get_header(); ?>
@@ -41,9 +41,11 @@ get_header(); ?>
 				</div>
 			</div>
 
+			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
 			<?php 
 				if ( have_posts() ) {
+
 					$panels = array(
 						0 => array( 'what' ),
 						1 => array( 'where' ),
@@ -51,6 +53,7 @@ get_header(); ?>
 						3 => array( 'budget' ),
 					);
 					tsp_mini_wizard( $panels );
+
 					?>
 					<div class="facetwp-hidden-filters hidden">
 						<?php
@@ -62,16 +65,17 @@ get_header(); ?>
 						?>
 					</div>
 	
-					<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+					<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
+					<h3><?php esc_html_e( 'Our picks for', 'thesafaripartners-child' ); ?> <span style="text-transform:lowercase;"><?php echo $term->name; ?></span></h3>
 						<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 							<div class="lsx-to-slider-wrap">
-								<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
+								<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 								<?php
 								while ( have_posts() ) {
 									the_post();
 									?>
-									<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-										<?php lsx_to_content( 'content', 'tour' ); ?>
+									<div class="lsx-to-widget-item-wrap lsx-tour slick-slide">
+										<?php lsx_to_content( 'content-widget', 'tour' ); ?>
 									</div>
 								<?php
 								}
