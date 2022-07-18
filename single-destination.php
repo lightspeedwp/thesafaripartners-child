@@ -44,8 +44,8 @@ get_header(); ?>
 	if ( have_posts() ) {
 
 		$panels = array(
-			0 => array( 'what' ),
-			1 => array( 'where' ),
+			0 => array( 'who' ),
+			1 => array( 'what' ),
 			2 => array( 'when' ),
 			3 => array( 'budget' ),
 		);
