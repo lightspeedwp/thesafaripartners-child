@@ -2036,13 +2036,6 @@ s	.financial-about .lsx-banner-column {
 .checkbox-wrapper>[type="checkbox"]:focus+span {
 	box-shadow:1px 1px 1px 1px #6b6b6b;
 }
-.single .filterDiv {
-	display:none!important;
-	/* Hidden by default */
-}
-.single .show {
-	display:block!important;
-}
 .gfield input::-webkit-input-placeholder {
 color:#262423!important;
 }
