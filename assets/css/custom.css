@@ -131,6 +131,7 @@ th,tr,td,table,legend,label {
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-ancestor>a.mega-menu-link,#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-page-ancestor>a.mega-menu-link {
 		font-family:"moret",serif!important;
 	}
+  #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848 > a.mega-menu-link:before{margin-top:9px;}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu {
 		background-color:#fff;
 		margin-top:12px;
@@ -399,14 +400,13 @@ th,tr,td,table,legend,label {
 		content:"\f30a";
 		font-family:FontAwesome;
 		font-weight:100;
-		color:#ce9e57;;
+		color:#000;;
 		font-size:17px;
 	}
 	.lsx-wizard-button-next span:after {
-		content:"\f30b";
-		font-family:FontAwesome;
+    background-image: url('img/tsp-see-more-arrow.svg');
+    background-size: 16px 16px;
 		font-weight:100;
-		color:#ce9e57;;
 		font-size:17px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
