@@ -120,7 +120,7 @@ th,tr,td,table,legend,label {
 		padding:14px 0 0 150px!important;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
-		font-family:argesta_displayregular,serif!important;
+		font-family:"moret",serif!important;
 		font-weight:bold;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu li a {
@@ -331,7 +331,7 @@ th,tr,td,table,legend,label {
 	.lsx-wizard-buttons-wrapper {
 		margin:0 auto;
 		width:1366px;
-		padding:0 81px;
+		padding:0 9px;
 	}
 	.wizard-who {
 		margin:0 auto;
@@ -466,8 +466,8 @@ th,tr,td,table,legend,label {
 	.lsx-wizard .lsx-to-content {
 		font-family:"moret",serif!important;
 		font-weight:bold;
-		font-size:17px;
-		padding:2px 4px;
+		font-size:20px;line-height: 20pxx;letter-spacing: 1px;
+		padding:2px 8px;
 	}
 	.wizard-what .lsx-to-widget-thumb img {
 		overflow:hidden;
