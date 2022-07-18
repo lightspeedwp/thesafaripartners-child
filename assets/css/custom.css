@@ -455,7 +455,7 @@ th,tr,td,table,legend,label {
 		padding-right:3px;
 		padding-left:3px;
 		margin-bottom:8px;
-    height:220px;
+    height:260px;
 	}
 	.wizard-what .lsx-to-widget-thumb {
 		display:contents;
@@ -548,23 +548,21 @@ th,tr,td,table,legend,label {
 		margin:15px 0;
 	}
 	.lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-		content:"\f00c";
-    font-family: FontAwesome;
-    top: 0.8px;
-    left: 3px;
-    font-weight: 100;
-    color: #ce9e57;
-    font-size: 15px;
-    position: absolute;
+      content: "\f00c";
+      font-family: FontAwesome;
+      top: -8.2px;
+      left: 0px;
+      font-weight: 100;
+      color: #ce9e57;
+      font-size: 15px;
+      border: 1px solid #ce9e57;
+      width: 156px;
+      height: 262px;
+      margin-left: -116px;
+      padding-left: 117px;
+      padding-top: 7px;
 	}
 
-  .lsx-wizard .checkbox-wrapper>[type="checkbox"]:checked+span::before {
-    top: 0px;
-    left: 0px;
-    border: 1px solid #ce9e57;
-    width:120px;height:220px;
-    position: relative;
-	}
   .when-wiz{margin-top:30px;}
 
   .page-template-template-wizard .wizard-who .status-publish{height:240px;}
