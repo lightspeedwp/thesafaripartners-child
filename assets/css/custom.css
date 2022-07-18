@@ -181,8 +181,8 @@ th,tr,td,table,legend,label {
 	.body-wrap {
 		background:#fff;
 	}
-  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus{color:#ce9e57!important;}
-  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#000;}
+  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus{color:#ce9e57;}
+  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#262423;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6 {
 		display:none;
 	}
@@ -371,8 +371,8 @@ th,tr,td,table,legend,label {
   .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
-  .tax-travel-style .lsx-wizard-button-next:hover{background:#000!important;}
-  .tax-travel-style #wizard{padding-bottom:30px; border-bottom: 1px solid #000;}
+  .tax-travel-style .lsx-wizard-button-next:hover{background:#262423!important;}
+  .tax-travel-style #wizard{padding-bottom:30px; border-bottom: 1px solid #262423;}
   .tax-travel-style #wizard .step-content .col-md-3{padding-right:35px!important;}
   .tax-travel-style #wizard .step-content .col-sm-2{padding: 0 2px!important;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
@@ -508,7 +508,7 @@ th,tr,td,table,legend,label {
 		font-size:17px;
 		display:inline-block;
 		padding-left:6px;
-    color:#000;
+    color:#262423;
 	}
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]+span {
 		border-radius:50%;
@@ -517,7 +517,7 @@ th,tr,td,table,legend,label {
 		z-index:-1;
 		height:30px;
 		width:30px;
-		border:2px solid #000;
+		border:2px solid #262423;
 	}
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"] {
 		cursor:pointer;
@@ -1915,11 +1915,11 @@ s	.financial-about .lsx-banner-column {
 	padding-bottom: 60px!important;
     margin: 60px 0px 17px 74px!important;
     width: 1247px!important;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #262423;
 }
 .tax-travel-style .col-xs-1, .tax-travel-style .col-sm-1, .tax-travel-style .col-md-1, .tax-travel-style .col-lg-1, .tax-travel-style .col-xs-2, .tax-travel-style .col-sm-2, .tax-travel-style .col-md-2, .tax-travel-style .col-lg-2, .tax-travel-style .col-xs-3, .tax-travel-style .col-sm-3, .tax-travel-style .col-md-3, .tax-travel-style .col-lg-3, .tax-travel-style .col-xs-4, .tax-travel-style .col-sm-4, .tax-travel-style .col-md-4, .tax-travel-style .col-lg-4, .tax-travel-style .col-xs-5, .tax-travel-style .col-sm-5, .tax-travel-style .col-md-5, .tax-travel-style .col-lg-5, .tax-travel-style .col-xs-6, .tax-travel-style .col-sm-6, .tax-travel-style .col-md-6, .tax-travel-style .col-lg-6, .tax-travel-style .col-xs-7, .tax-travel-style .col-sm-7, .tax-travel-style .col-md-7, .tax-travel-style .col-lg-7, .tax-travel-style .col-xs-8, .tax-travel-style .col-sm-8, .tax-travel-style .col-md-8, .tax-travel-style .col-lg-8, .tax-travel-style .col-xs-9, .tax-travel-style .col-sm-9, .tax-travel-style .col-md-9, .tax-travel-style .col-lg-9, .tax-travel-style .col-xs-10, .tax-travel-style .col-sm-10, .tax-travel-style .col-md-10, .tax-travel-style .col-lg-10, .tax-travel-style .col-xs-11, .tax-travel-style .col-sm-11, .tax-travel-style .col-md-11, .tax-travel-style .col-lg-11, .tax-travel-style .col-xs-12, .tax-travel-style .col-sm-12, .tax-travel-style .col-md-12, .tax-travel-style .col-lg-12{padding:0!important;}
 
-.tax-travel-style .tourslink .moretag{display:block!important;width:100%!important;margin:6px 0 0 0px!important; color:#000!important;}
+.tax-travel-style .tourslink .moretag{display:block!important;width:100%!important;margin:6px 0 0 0px!important; color:#262423!important;}
 .tax-travel-style p .moretag{display:none!important;}
 
 .search-results .content{
@@ -1928,12 +1928,12 @@ s	.financial-about .lsx-banner-column {
 .search-results .archive-header-wrapper{display:none;}
 .search-results .content-area{margin-top:10px!important;}
 #mega-menu-wrap-filter-menu #mega-menu-filter-menu{padding: 0px 0px 10px 0px!important;}
-.search-results .moretag{background:#f5ecdd;color:#000;padding:8px 55px;text-transform:uppaercase;border:1px solid #000;}
-.search-results .moretag:hover{background:#ce9e57;border:1px solid #ce9e57;color:#000!important;padding:8px 55px;text-transform:uppaercase;}
-.lsx-to-widget-content .tourslink .moretag{background:#f5ecdd!important;color:#000!important;text-transform:uppaercase;border:1px solid #000!important;}
-.lsx-to-widget-content .tourslink .moretag:hover{background:#ce9e57!important;border:1px solid #ce9e57!important;color:#000!important;}
-.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag{color:#000!important;}
-.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:hover{color:#000!important;}
+.search-results .moretag{background:#f5ecdd;color:#262423;padding:8px 55px;text-transform:uppaercase;border:1px solid #262423;}
+.search-results .moretag:hover{background:#ce9e57;border:1px solid #ce9e57;color:#262423!important;padding:8px 55px;text-transform:uppaercase;}
+.lsx-to-widget-content .tourslink .moretag{background:#f5ecdd!important;color:#262423!important;text-transform:uppaercase;border:1px solid #262423!important;}
+.lsx-to-widget-content .tourslink .moretag:hover{background:#ce9e57!important;border:1px solid #ce9e57!important;color:#262423!important;}
+.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag{color:#262423!important;}
+.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:hover{color:#262423!important;}
 .mega-menu-item-custom_html-2, .mega-menu-item-custom_html-3{padding:0!important;}
 .mega-menu-item-custom_html-2 h3, .mega-menu-item-custom_html-3 h3{padding:0!important;margin:0!important;}
 .right-align{float: right;
@@ -1942,7 +1942,7 @@ s	.financial-about .lsx-banner-column {
 .wizardstart{position:absolute!important; width: 604px!important;
   right: 5%;}
 .lsx-button.primary{background:#6a6d5b!important;color:#fff!important;padding:10px 26px!important;display:block;}
-.lsx-button.primary:hover{background:#000;}
+.lsx-button.primary:hover{background:#262423;}
 
 .page-template-template-contact #primary form input,.page-template-template-contact #primary form select,.page-template-template-contact #primary form textarea {
 	border-top:0;
