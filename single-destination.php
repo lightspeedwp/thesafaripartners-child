@@ -65,7 +65,7 @@ get_header(); ?>
 		
 		<?php lsx_content_bottom(); ?>
 		
-		<?php endwhile; ?><?php wp_reset_query(); ?>
+		
 			<section id="wizard-template" class="lsx-to-section-new">
 				<div class="row">
 				<?php	$id=134126;
