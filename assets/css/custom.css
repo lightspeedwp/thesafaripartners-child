@@ -432,6 +432,10 @@ th,tr,td,table,legend,label {
       height:20px;
       content:"";} 
 
+      .lsx-to-slider-inner .slick-arrow:before{font-family: none;
+        font-size: 0rem!important;
+        line-height: 0;}
+
   .shaman-icon{height: 120px;width: 98px;margin:0 auto;}
   .shaman-icon:after {
 		background-image: url('img/safari-shaman.svg');
