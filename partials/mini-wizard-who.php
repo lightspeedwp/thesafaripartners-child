@@ -17,9 +17,14 @@
 						<span aria-hidden="true"></span>
 					</div>
 
-					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
+					<?php 	$image = get_field('wizard-image');
+						$size = 'large'; // (thumbnail, medium, large, full or custom size)
+
+						?>
+
+					<?php if ( $image ) : ?>
 						<div class="lsx-to-widget-thumb">
-							<?php lsx_to_term_thumbnail( $term->term_id, 'large' ); ?>
+							<?php echo wp_get_attachment_image( $image, $size ); ?>
 						</div>
 					<?php else : ?>
 						<div class="lsx-to-widget-thumb">
