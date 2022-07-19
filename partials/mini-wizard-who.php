@@ -17,7 +17,7 @@
 						<span aria-hidden="true"></span>
 					</div>
 
-					<?php 	$image = get_field('wizard-image');
+					<?php 	$image = get_field('wizard_image');
 						$size = 'large'; // (thumbnail, medium, large, full or custom size)
 
 						?>
