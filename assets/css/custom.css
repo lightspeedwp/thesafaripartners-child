@@ -417,6 +417,16 @@ th,tr,td,table,legend,label {
     height:20px;
     content:"";margin-left:9px;
 	}
+
+  .shaman-icon{height:140px;width:200px;margin:0 auto;}
+  .shaman-icon:after {
+		background-image: url('img/safari-shaman.svg');
+    background-size: 120px 200px;
+    display: inline-block;
+    width: 120px;
+    height:200px;
+    content:"";
+	}
 	.lsx-wizard-progress-buttons-wrapper {
 		position:relative;
 		z-index:1;
