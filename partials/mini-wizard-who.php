@@ -21,8 +21,8 @@ $image_id = get_field('wizard_image', $term, false); // 3rd arg set to false to 
 // $size is a defined image size
 	$image = wp_get_attachment_image_src($image_id, $size);
 
-?><a type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
-  <img src="<?php echo $image[0]; ?>" /></a>
+?><span aria-checked="false" type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
+  <img src="<?php echo $image[0]; ?>" /></span>
 
 						
 					</div>
