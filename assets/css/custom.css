@@ -418,7 +418,21 @@ th,tr,td,table,legend,label {
     content:"";margin-left:9px;
 	}
 
-  .shaman-icon{height:140px;width:200px;margin:0 auto;}
+  .lsx-to-slider-inner .slick-prev:before{background-image: url('img/tsp-carousel-arrow-left.svg');
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    content:"";}
+
+  .lsx-to-slider-inner .slick-next:before{background-image: url('img/tsp-carousel-arrow-right.svg');
+      background-size: 20px 20px;
+      display: inline-block;
+      width: 20px;
+      height:20px;
+      content:"";} 
+
+  .shaman-icon{height: 120px;width: 98px;margin:0 auto;}
   .shaman-icon:after {
 		background-image: url('img/safari-shaman.svg');
     background-size: 98px 120px;
@@ -490,6 +504,7 @@ th,tr,td,table,legend,label {
 		height:200px;
 		object-fit:cover;
 	}
+  .page-template-template-wizard .wizard-who{height: 170px;}
   .page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
 		height:200px;
