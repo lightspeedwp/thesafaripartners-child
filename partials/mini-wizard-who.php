@@ -22,15 +22,15 @@
 
 						?>
 
-					<?php if ( $image ) : ?>
+					<?php if( $image ) { ?>
 						<div class="lsx-to-widget-thumb">
-							<?php echo wp_get_attachment_image( $image, $size ); ?>
+							<?php echo wp_get_attachment_image( $image, $size ); }
+
+					?>
 						</div>
-					<?php else : ?>
-						<div class="lsx-to-widget-thumb">
-							<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-						</div>
-					<?php endif; ?>
+					
+						
+					
 
 					<div class="lsx-to-content">
 						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
