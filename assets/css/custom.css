@@ -329,33 +329,38 @@ th,tr,td,table,legend,label {
 	/*Wizard */
 	.lsx-wizard-buttons-wrapper {
 		margin:0 auto;
-		width:1366px;
+		width:1344px;
 		padding:0 9px;
 	}
 	.wizard-who {
-		margin:0 auto;
-		width:1366px;
-		padding:80px 18px 0px 12px;
+		margin: 0 auto;
+    width: 1340px;
+    display: flex;
+    padding: 80px 0px 0px 12px;
 	}
 	.wizard-what {
-		margin:0 auto;
-		width:1366px;
-		padding:80px 18px 0px 12px;
+		margin: 0 auto;
+    width: 1340px;
+    display: flex;
+    padding: 80px 0px 0px 12px;
 	}
 	.wizard-where {
-		margin:0 auto;
-		width:1366px;
-		padding:80px 18px 0px 12px;
+		margin: 0 auto;
+    width: 1340px;
+    display: flex;
+    padding: 80px 0px 0px 12px;
 	}
 	.wizard-when {
-		margin:0 auto;
-		width:1366px;
-		padding:80px 18px 0px 12px;
+		margin: 0 auto;
+    width: 1340px;
+    display: flex;
+    padding: 80px 0px 0px 12px;
 	}
 	.wizard-budget {
-		margin:0 auto;
-		width:1366px;
-		padding:80px 18px 0px 36px;
+		margin: 0 auto;
+    width: 1340px;
+    display: flex;
+    padding: 80px 0px 0px 12px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
@@ -548,7 +553,7 @@ th,tr,td,table,legend,label {
 		position:relative;
 		margin:15px 0;
 	}
-	.wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
       content: "\f00c";
       font-family: FontAwesome;
       top: -8.2px;
@@ -563,7 +568,7 @@ th,tr,td,table,legend,label {
       padding-left: 117px;
       padding-top: 6px;
 	}
-  .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+  .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     content: "\f00c";
     font-family: FontAwesome;
     top: -8.2px;
@@ -579,7 +584,7 @@ th,tr,td,table,legend,label {
     padding-top: 6px;
 }
 
-.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.page-template-template-wizard .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -595,7 +600,7 @@ th,tr,td,table,legend,label {
   padding-top: 6px;
 }
 
-.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.page-template-template-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -605,7 +610,7 @@ th,tr,td,table,legend,label {
   font-size: 15px;
 }
 
-.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.page-template-template-wizard .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -1120,8 +1125,8 @@ th,tr,td,table,legend,label {
 		text-align:left;
 	}
 	.toptours-posts .lsx-to-slider-inner {
-		max-width:1261px!important;
-		margin:5px 6px 20px 52px!important;
+		max-width:1320px!important;
+		margin:5px 6px 20px 31px!important;
 		width:100%!important;
 	}
 	.toptours-posts .lsx-to-widget-thumb,.tours-posts .lsx-to-widget-thumb {
@@ -1914,8 +1919,8 @@ s	.financial-about .lsx-banner-column {
 
 .tax-travel-style .archive-intro {
 	padding-bottom: 60px!important;
-    margin: 60px 0px 17px 74px!important;
-    width: 1247px!important;
+    margin: 60px 0px 17px 26px!important;
+    width: 1322px!important;
     border-bottom: 1px solid #262423;
 }
 .tax-travel-style .col-xs-1, .tax-travel-style .col-sm-1, .tax-travel-style .col-md-1, .tax-travel-style .col-lg-1, .tax-travel-style .col-xs-2, .tax-travel-style .col-sm-2, .tax-travel-style .col-md-2, .tax-travel-style .col-lg-2, .tax-travel-style .col-xs-3, .tax-travel-style .col-sm-3, .tax-travel-style .col-md-3, .tax-travel-style .col-lg-3, .tax-travel-style .col-xs-4, .tax-travel-style .col-sm-4, .tax-travel-style .col-md-4, .tax-travel-style .col-lg-4, .tax-travel-style .col-xs-5, .tax-travel-style .col-sm-5, .tax-travel-style .col-md-5, .tax-travel-style .col-lg-5, .tax-travel-style .col-xs-6, .tax-travel-style .col-sm-6, .tax-travel-style .col-md-6, .tax-travel-style .col-lg-6, .tax-travel-style .col-xs-7, .tax-travel-style .col-sm-7, .tax-travel-style .col-md-7, .tax-travel-style .col-lg-7, .tax-travel-style .col-xs-8, .tax-travel-style .col-sm-8, .tax-travel-style .col-md-8, .tax-travel-style .col-lg-8, .tax-travel-style .col-xs-9, .tax-travel-style .col-sm-9, .tax-travel-style .col-md-9, .tax-travel-style .col-lg-9, .tax-travel-style .col-xs-10, .tax-travel-style .col-sm-10, .tax-travel-style .col-md-10, .tax-travel-style .col-lg-10, .tax-travel-style .col-xs-11, .tax-travel-style .col-sm-11, .tax-travel-style .col-md-11, .tax-travel-style .col-lg-11, .tax-travel-style .col-xs-12, .tax-travel-style .col-sm-12, .tax-travel-style .col-md-12, .tax-travel-style .col-lg-12{padding:0!important;}
