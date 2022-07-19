@@ -16,22 +16,17 @@
 						<input class="btn-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 						<span aria-hidden="true"></span>
 					</div>
+					<div class="lsx-to-widget-thumb">
+					<?php
 
-					<?php 	$image = get_field('wizard_image');
-						$size = 'large'; // (thumbnail, medium, large, full or custom size)
+							$wizard_img = get_field('wizard_image');
+							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
 
-						?>
+							if( $wizard_img) {
+								echo wp_get_attachment_image( $wizard_img, $size );
+							} else { ?>
 
-					<?php if ( $image ) : ?>
-						<div class="lsx-to-widget-thumb">
-							<?php echo wp_get_attachment_image( $image, $size ); ?>
-						</div>
-					<?php else : ?>
-						<div class="lsx-to-widget-thumb">
-							<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-						</div>
-					<?php endif; ?>
-
+					</div>
 					<div class="lsx-to-content">
 						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
 					</div>
