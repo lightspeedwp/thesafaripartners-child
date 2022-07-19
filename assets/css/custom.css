@@ -507,7 +507,9 @@ th,tr,td,table,legend,label {
 		height:200px;
 		object-fit:cover;
 	}
-  .page-template-template-wizard .wizard-who{height: 170px;}
+  .tax-travel-style .wizard-who, .single .wizard-who{height: 200px;}
+  .tax-travel-style .wizard-who, .tax-travel-style .wizard-where, .tax-travel-style .wizard-what, .tax-travel-style .wizard-when, .tax-travel-style .wizard-budget{padding-top:50px!important;}
+  .tax-travel-style .wizard-who, .tax-travel-style .wizard-where, .tax-travel-style .wizard-what, .tax-travel-style .wizard-when, .tax-travel-style .wizard-budget{padding-top:50px!important;}
   .page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
 		height:200px;
