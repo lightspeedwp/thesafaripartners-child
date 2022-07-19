@@ -64,16 +64,6 @@ get_header(); ?>
 
 		
 		<?php lsx_content_bottom(); ?>
-		
-
-			<section id="wizard-template" class="lsx-to-section-new">
-				<div class="row">
-				<?php	$id=134126;
-$post = get_post($id);
-$content = apply_filters('the_content', $post->post_content);
-echo $content; ?>
-			</section>
-</main><!-- #main -->
 
 		<?php
 	} else {

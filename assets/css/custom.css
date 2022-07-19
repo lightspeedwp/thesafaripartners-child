@@ -353,7 +353,6 @@ th,tr,td,table,legend,label {
 	.wizard-when {
 		margin: 0 auto;
     width: 1340px;
-    display: flex;
     padding: 80px 0px 0px 12px;
 	}
 	.wizard-budget {
@@ -582,14 +581,16 @@ th,tr,td,table,legend,label {
 		position:relative;
 		margin:15px 0;
 	}
+  .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    top: -8.2px;
+    left: 0px;
+    font-weight: 100;
+    color: #ce9e57;
+    font-size: 15px;}
+
 	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-      content: "\f00c";
-      font-family: FontAwesome;
-      top: -8.2px;
-      left: 0px;
-      font-weight: 100;
-      color: #ce9e57;
-      font-size: 15px;
       border: 1px solid #ce9e57;
       width: 156px;
       height: 262px;
@@ -597,7 +598,8 @@ th,tr,td,table,legend,label {
       padding-left: 117px;
       padding-top: 6px;
 	}
-  .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+
+  .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     content: "\f00c";
     font-family: FontAwesome;
     top: -8.2px;
@@ -605,6 +607,9 @@ th,tr,td,table,legend,label {
     font-weight: 100;
     color: #ce9e57;
     font-size: 15px;
+  }
+
+  .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 156px;
     height: 262px;
@@ -613,7 +618,7 @@ th,tr,td,table,legend,label {
     padding-top: 6px;
 }
 
-.page-template-template-wizard .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -621,6 +626,9 @@ th,tr,td,table,legend,label {
   font-weight: 100;
   color: #ce9e57;
   font-size: 15px;
+}
+
+.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   border: 1px solid #ce9e57;
   width: 156px;
   height: 228px;
@@ -629,7 +637,7 @@ th,tr,td,table,legend,label {
   padding-top: 6px;
 }
 
-.page-template-template-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -651,6 +659,7 @@ th,tr,td,table,legend,label {
   .when-wiz{margin-top:30px;}
 
   .page-template-template-wizard .wizard-who .status-publish{height:240px;}
+
 	/*Content */
 	.archive.category .post {
 		width:32%;
