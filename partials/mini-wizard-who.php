@@ -19,14 +19,15 @@
 					<div class="lsx-to-widget-thumb">
 					<?php
 
-							$wizard_img = get_field('wizard_image');
-							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+$image_id = get_field('wizard_image', $term, false); // 3rd arg set to false to ensure we get unformatted value (ID)
 
-							if( $wizard_img) {
-								echo wp_get_attachment_image( $wizard_img, $size );
-							} else { ?>
-						<?php }
-							?>
+// $size is a defined image size
+	$image = wp_get_attachment_image_src($image_id, $size);
+
+?>
+  <img src="<?php echo $image[0]; ?>" />
+
+						
 					</div>
 					<div class="lsx-to-content">
 						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
