@@ -25,7 +25,8 @@
 							if( $wizard_img) {
 								echo wp_get_attachment_image( $wizard_img, $size );
 							} else { ?>
-
+						<?php }
+							?>
 					</div>
 					<div class="lsx-to-content">
 						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
