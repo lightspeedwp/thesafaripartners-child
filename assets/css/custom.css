@@ -376,10 +376,11 @@ th,tr,td,table,legend,label {
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
   .tax-travel-style .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
   .tax-travel-style .lsx-wizard-button-next:hover{background:#262423!important;}
-  .tax-travel-style #wizard{padding-bottom:30px; border-bottom: 1px solid #262423;margin:14px 18px 12px 24px;}
+  .tsp-seperator{padding:0 15px; height:2px; border-bottom: 1px solid #262423;width:1322px;margin:0 auto;}
+  .tax-travel-style #wizard{padding-bottom:30px; border-bottom: 1px solid #262423;}
   .tax-travel-style #wizard .step-content .col-md-3{padding-right:35px!important;}
   .tax-travel-style #wizard .step-content .col-sm-2{padding: 0 2px!important;}
-  .tax-travel-style .wizard-where .col-sm-2{height:216px;}
+  .tax-travel-style .wizard-where .col-sm-2{height:210px;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
   .tax-travel-style .safari-styles{margin-top:0!important;}
 	.lsx-wizard .nav-pills li.active {
@@ -525,7 +526,7 @@ th,tr,td,table,legend,label {
 	}
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:200px!important;
+		height:184px!important;
 		object-fit:cover;
 	}
   .tax-travel-style .wizard-who img{margin:0 auto!important; text-align:center;}
