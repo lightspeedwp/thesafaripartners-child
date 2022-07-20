@@ -11,25 +11,28 @@
 
 			<?php foreach ( $terms as $term ) { ?>
 				<!-- post -->
+				<div class="checkbox-clear">
+							<input class="clear-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
+							<span aria-hidden="true"></span>
+						
 				<article class="col-md-2 status-publish hentry">
 				
 					<div class="lsx-to-widget-thumb">
 					<?php
 
-$image_id = get_field('wizard_image', $term, false); // 3rd arg set to false to ensure we get unformatted value (ID)
+					$image_id = get_field('wizard_image', $term, false); 
 
-// $size is a defined image size
-	$image = wp_get_attachment_image_src($image_id, $size);
+					$image = wp_get_attachment_image_src($image_id, $size);
 
-?><span role="checkbox" type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
-  <img src="<?php echo $image[0]; ?>" /></span>
+		?>
+  		<img src="<?php echo $image[0]; ?>" />
 
-						
 					</div>
 					<div class="lsx-to-content">
 						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
 					</div>
 				</article>
+				</div>
 			<?php } ?>
 
 			<?php wp_reset_query(); ?>
