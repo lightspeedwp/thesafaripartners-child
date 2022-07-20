@@ -11,12 +11,13 @@
 
 			<?php foreach ( $terms as $term ) { ?>
 				<!-- post -->
+				
+						
+				<article class="col-md-2 status-publish hentry">
 				<div class="checkbox-clear">
 							<input class="clear-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 							<span aria-hidden="true"></span>
-						
-				<article class="col-md-2 status-publish hentry">
-				
+
 					<div class="lsx-to-widget-thumb">
 					<?php
 
@@ -26,13 +27,13 @@
 
 		?>
   		<img src="<?php echo $image[0]; ?>" />
-
+</div>
 					</div>
 					<div class="lsx-to-content">
 						<?php echo esc_html( apply_filters( 'the_title', $term->name ) ); ?>
 					</div>
 				</article>
-				</div>
+				
 			<?php } ?>
 
 			<?php wp_reset_query(); ?>
