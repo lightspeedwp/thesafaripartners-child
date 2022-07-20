@@ -8,7 +8,24 @@
 
 get_header(); ?>
 
-	<?php lsx_content_wrap_before(); ?>
+		<<div id="lsx-banner">
+			<div class="page-banner-wrap">
+				<div class="page-banner rotating" style="">	
+				<?php
+
+					$image_banner = get_field('banner', $term, false); 
+
+					$imagebanner = wp_get_attachment_image_src($image_banner, $size); ?>
+
+						<div class="page-banner-image" style="background-position: center center; background-image:url(<?php echo $imagebanner[0]; ?>);"></div>
+								<div class="container">
+									<header class="page-header">
+												<h1 class="page-title"><?php echo $term->tagline; ?></h1>											</header>
+																												
+						</div>
+				</div>
+			</div>
+		</div>
 
 	<div id="primary" class="content-area col-sm-12 <?php echo esc_attr( lsx_main_class() ); ?>">
 

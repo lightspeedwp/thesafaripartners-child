@@ -526,9 +526,10 @@ th,tr,td,table,legend,label {
 		height:200px!important;
 		object-fit:cover;
 	}
+  .tax-travel-style .wizard-who img{margin:0 auto!important; text-align:center;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-    order: 1px solid #ce9e57;
+    border: 1px solid #ce9e57;
     width: 163px;
     height: 202px;
     margin-left: -122px;
