@@ -17,11 +17,12 @@ get_header(); ?>
 <main id="main" class="site-main entry-content" role="main">
 
 	<div class="archive-intro row">
+
+	<h2 class="category-title"><?php echo $term->name; ?></h2>
+
 		<div class="col-sm-8">
 			<div class="lsx-to-widget-description">
 				<?php $term = get_queried_object(); ?>
-
-				<h2 class="category-title"><?php echo $term->name; ?></h2>
 
 				<p class="category-description"><?php echo $term->description; ?></p>
 			</div>
@@ -40,6 +41,8 @@ get_header(); ?>
 			<?php wp_reset_query(); ?>
 		</div>
 	</div>
+
+	<div class="tsp-seperator"></div>
 
 	<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
