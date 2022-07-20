@@ -2046,7 +2046,6 @@ s	.financial-about .lsx-banner-column {
 }
 .checkbox-clear>[type="checkbox"] {
 	cursor:pointer;
-	border-radius:50%;
 	height:100%;
 		left:0;
 		margin:0;
@@ -2057,22 +2056,26 @@ s	.financial-about .lsx-banner-column {
 		z-index:0;
 }
 .checkbox-clear>[type="checkbox"]+span {
-	border-radius:50%;
-	display:block;
-	position:relative;
-	z-index:-1;
-	height:100%;
-	width:100%;
+	border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 .checkbox-clear>[type="checkbox"]:checked+span::after {
 	content:"\f00c";
 	font-family:FontAwesome;
-	top:-0.1em;
-	right:0.1em;
-	font-weight:100;
-	color:#ce9e57;
-	font-size:3em;    background: #FFF;
-	position:absolute;
+  top: -0.1em;
+  left: 0;
+  font-weight: 100;
+  color: #ce9e57;
+  font-size: 0;
+  background: #FFF;
+  position: absolute;
+  width: 139px;
+  height: 134px;
+  opacity: 0.4;
 }
 .checkbox-wrapper {
 	position:absolute;
