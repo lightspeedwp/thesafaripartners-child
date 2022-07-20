@@ -2037,18 +2037,27 @@ s	.financial-about .lsx-banner-column {
 }
 .checkbox-clear {
 	position: absolute;
+    right: 10px;
     height: 100%;
     width: 100%;
     z-index: 9;
+    background: #fff;
+    opacity: 0.1;
 }
 .checkbox-clear>[type="checkbox"] {
 	cursor:pointer;
+	border-radius:50%;
 	height:100%;
+		left:0;
+		margin:0;
+		opacity:0;
 		position:absolute;
+		top:0;
 		width:100%;
 		z-index:0;
 }
 .checkbox-clear>[type="checkbox"]+span {
+	border-radius:50%;
 	display:block;
 	position:relative;
 	z-index:-1;
@@ -2062,8 +2071,7 @@ s	.financial-about .lsx-banner-column {
 	right:0.1em;
 	font-weight:100;
 	color:#ce9e57;
-	font-size:3em;    
-  background: #FFF;
+	font-size:3em;    background: #FFF;
 	position:absolute;
 }
 .checkbox-wrapper {
