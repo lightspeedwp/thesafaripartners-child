@@ -329,7 +329,7 @@ th,tr,td,table,legend,label {
 	/*Wizard */
 	.lsx-wizard-buttons-wrapper {
 		margin:0 auto;
-		width:1344px;
+		width:1334px;
 		padding:0 9px;
 	}
 	.wizard-who {
@@ -379,6 +379,7 @@ th,tr,td,table,legend,label {
   .tax-travel-style #wizard{padding-bottom:30px; border-bottom: 1px solid #262423;margin:14px 18px 12px 24px;}
   .tax-travel-style #wizard .step-content .col-md-3{padding-right:35px!important;}
   .tax-travel-style #wizard .step-content .col-sm-2{padding: 0 2px!important;}
+  .tax-travel-style #wizard .wizard-where .step-content .col-sm-2{height:216px;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
   .tax-travel-style .safari-styles{margin-top:0!important;}
 	.lsx-wizard .nav-pills li.active {
@@ -410,11 +411,11 @@ th,tr,td,table,legend,label {
     content:"";margin-right:9px;
 	}
 	.lsx-wizard-button-next span:after {
-		background-image: url('img/tsp-see-more-arrow.svg');
+		background-image: url('img/tsp-see-more-arrow-white.svg');
     background-size: 20px 20px;
     display: inline-block;
     width: 20px;
-    height:20px;
+    height:216px;
     content:"";margin-left:9px;
 	}
 
