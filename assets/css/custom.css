@@ -334,32 +334,32 @@ th,tr,td,table,legend,label {
 	}
 	.wizard-who {
 		margin: 0 auto;
-    width: 1340px;
+    width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 12px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-what {
 		margin: 0 auto;
-    width: 1340px;
+    width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 12px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-where {
 		margin: 0 auto;
-    width: 1340px;
+    width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 12px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-when {
 		margin: 0 auto;
-    width: 1340px;
-    padding: 80px 0px 0px 12px;
+    width: 1334px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-budget {
 		margin: 0 auto;
-    width: 1340px;
+    width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 12px;
+    padding: 80px 0px 0px 8px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
@@ -401,6 +401,7 @@ th,tr,td,table,legend,label {
 		color:#262423;
 		font-size:19px;
 	}
+  .mini-wizard-results h3{margin-left:10px;}
   .lsx-to-widget-meta-data{margin:20px 0 10px;}
 	.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus {
 		color:#262423!important;
@@ -1184,9 +1185,9 @@ th,tr,td,table,legend,label {
 		text-align:left;
 	}
 	.toptours-posts .lsx-to-slider-inner {
-		max-width:1320px!important;
-		margin:5px 6px 20px 31px!important;
-		width:100%!important;
+		max-width: 1326px!important;
+    margin: 5px 6px 20px 8px!important;
+    width: 100%!important;
 	}
 	.toptours-posts .lsx-to-widget-thumb,.tours-posts .lsx-to-widget-thumb {
 		display:contents;

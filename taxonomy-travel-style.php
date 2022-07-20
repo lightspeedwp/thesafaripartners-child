@@ -17,13 +17,12 @@ get_header(); ?>
 <main id="main" class="site-main entry-content" role="main">
 
 	<div class="archive-intro row">
-
+	<?php $term = get_queried_object(); ?>
 	<h2 class="category-title"><?php echo $term->name; ?></h2>
 
 		<div class="col-sm-8">
 			<div class="lsx-to-widget-description">
-				<?php $term = get_queried_object(); ?>
-
+				
 				<p class="category-description"><?php echo $term->description; ?></p>
 			</div>
 		</div>
