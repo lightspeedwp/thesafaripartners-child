@@ -23,7 +23,7 @@
 
 					$image_id = get_field('wizard_image', $term, false); 
 
-					$image = wp_get_attachment_image_src($image_id, $size);
+					$image = wp_get_attachment_image_src($image_id);
 
 		?>
   		<img src="<?php echo $image[0]; ?>" />
