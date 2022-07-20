@@ -373,6 +373,7 @@ th,tr,td,table,legend,label {
 	}
   .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
+  .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
   .tax-travel-style .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
   .tax-travel-style .lsx-wizard-button-next:hover{background:#262423!important;}
   .tax-travel-style #wizard{padding-bottom:30px; border-bottom: 1px solid #262423;}
@@ -522,9 +523,21 @@ th,tr,td,table,legend,label {
 	}
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:210px!important;
+		height:200px!important;
 		object-fit:cover;
 	}
+  .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
+  .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+    order: 1px solid #ce9e57;
+    width: 163px;
+    height: 202px;
+    margin-left: -122px;
+    padding-left: 117px;
+    padding-top: 6px;
+    background: #fff;
+    opacity: 0.4;
+  }
+
   .page-template-template-wizard .body-wrap{height:90vh!important;}
 	.lsx-wizard .checkbox-wrapper {
 		position:absolute;
@@ -2037,12 +2050,9 @@ s	.financial-about .lsx-banner-column {
 }
 .checkbox-clear {
 	position: absolute;
-    right: 10px;
-    height: 100%;
+    height: 84%;
     width: 100%;
     z-index: 9;
-    background: #fff;
-    opacity: 0.1;
 }
 .checkbox-clear>[type="checkbox"] {
 	cursor:pointer;
@@ -2073,7 +2083,7 @@ s	.financial-about .lsx-banner-column {
   font-size: 0;
   background: #FFF;
   position: absolute;
-  width: 139px;
+  width: 152px;
   height: 134px;
   opacity: 0.4;
 }
