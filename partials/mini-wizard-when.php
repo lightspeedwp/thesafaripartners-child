@@ -2,8 +2,8 @@
 <div class="step-content">
 	<div class="wizard-when row">
 		<div class="col-md-12">
-			<h2><?php esc_html_e( 'Where in Africa?', 'thesafaripartners-child' ); ?></h2>
-			<p><?php esc_html_e( 'Let us what interests you', 'thesafaripartners-child' ); ?></p>
+			<h3><?php esc_html_e( 'When would you like to travel?', 'thesafaripartners-child' ); ?></h3>
+			<p><?php esc_html_e( 'Select the months you would like to be on vacation, or skip it, and let us make the suggestions for you.', 'thesafaripartners-child' ); ?></p>
 		</div>
 		<div class="col-md-12">
 			<?php

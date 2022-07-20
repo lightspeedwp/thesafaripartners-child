@@ -1,7 +1,7 @@
 <div class="step-content">
 	<div class="wizard-budget row">
 		<div class="col-md-3">
-			<h2><?php esc_html_e( 'What is your budget?', 'thesafaripartners-child' ); ?></h2>
+			<h3><?php esc_html_e( 'What is your budget?', 'thesafaripartners-child' ); ?></h3>
 			<p><?php esc_html_e( 'If you have an idea of your budget let us know here, or skip it if you wish.', 'thesafaripartners-child' ); ?></p>
 		</div>
 		<div class="col-md-9">
@@ -14,7 +14,7 @@
 				$value = apply_filters( 'the_title', $term->slug );
 				?>
 				<!-- post -->
-				<article class="col-md-4 status-publish hentry">
+				<article class="col-md-2 status-publish hentry">
 					<div class="checkbox-wrapper">
 						<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check"  type="checkbox" name="fwp_budget" value="<?php echo esc_html( $value ); ?>" />
 						<span aria-hidden="true"></span>
