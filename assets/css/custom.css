@@ -2036,7 +2036,7 @@ s	.financial-about .lsx-banner-column {
 	position:absolute;
 }
 .checkbox-clear {
-	position:absolute;
+	position:relative;
 	font-size:1rem;
 	border-radius:50%;
 	top:10px;
@@ -2047,7 +2047,7 @@ s	.financial-about .lsx-banner-column {
 	background:#fff;
     cursor: pointer;
     background:#fff;
-    opacity: 0;
+    opacity: 0.8;
 }
 .checkbox-clear>[type="checkbox"] {
 	cursor:pointer;
