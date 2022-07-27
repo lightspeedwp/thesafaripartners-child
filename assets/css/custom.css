@@ -635,9 +635,9 @@ th,tr,td,table,legend,label {
     margin-left: -116px;
     padding-left: 117px;
     padding-top: 6px;
-}
+	}
 
-.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -645,18 +645,18 @@ th,tr,td,table,legend,label {
   font-weight: 100;
   color: #ce9e57;
   font-size: 15px;
-}
+	}
 
-.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   border: 1px solid #ce9e57;
   width: 156px;
   height: 228px;
   margin-left: -116px;
   padding-left: 117px;
   padding-top: 6px;
-}
+	}
 
-.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -664,9 +664,9 @@ th,tr,td,table,legend,label {
   font-weight: 100;
   color: #ce9e57;
   font-size: 15px;
-}
+	}
 
-.page-template-template-wizard .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	.page-template-template-wizard .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
   top: -8.2px;
@@ -674,7 +674,7 @@ th,tr,td,table,legend,label {
   font-weight: 100;
   color: #ce9e57;
   font-size: 15px;
-}
+	}
   .when-wiz{margin-top:30px;}
 
   .page-template-template-wizard .wizard-who .status-publish{height:240px;}
@@ -719,8 +719,7 @@ th,tr,td,table,legend,label {
 		min-height:30px;
 	}
 	input[type=radio]:checked {
-		background:url(data:image/gif;
-		base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+		background:url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
 		background-size:4px 4px;
 	}
 	input[type=radio]:focus {
@@ -927,7 +926,7 @@ th,tr,td,table,legend,label {
 		width:100%;
 		position:relative;
 	}
-	.home .lsx-to-widget-content .tours-posts p, .home .lsx-to-widget-content .style-posts p{display:none;}
+	.home .tours-posts .lsx-to-widget-content p, .home .style-posts .lsx-to-widget-content p{display:none;}
 	.lsx-block-banner:not(:first-child) {
 		height:350px;
 		width:100%;
@@ -1241,7 +1240,7 @@ th,tr,td,table,legend,label {
 		height:86vh!important;
 	}
 	.page-template-template-contact #primary .center img {
-		align:center;
+		box-align:center;
 		margin:0 auto;
 		padding-bottom:4px;
 		display:block!important;
@@ -1619,7 +1618,7 @@ th,tr,td,table,legend,label {
 	.destinations-landing .entry-content .lsx-title {
 		max-width:90%!important;
 	}
-	.lsx-title:after,#home-widgets h3:after,#home-widgets .widget-title:after {
+	.lsx-title:after, #home-widgets h3:after, #home-widgets .widget-title:after {
 		display:none;
 	}
 	.entry-content .who-slide .lsx-title {
