@@ -927,7 +927,7 @@ th,tr,td,table,legend,label {
 		width:100%;
 		position:relative;
 	}
-	.home .lsx-to-widget-content p{display:none;}
+	.home .lsx-to-widget-content .tours-posts p, .home .lsx-to-widget-content .style-posts p{display:none;}
 	.lsx-block-banner:not(:first-child) {
 		height:350px;
 		width:100%;
@@ -1121,7 +1121,7 @@ th,tr,td,table,legend,label {
 	}
 	.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:318px!important;
+		width:327px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
