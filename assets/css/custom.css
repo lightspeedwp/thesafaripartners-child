@@ -1700,7 +1700,7 @@ th,tr,td,table,legend,label {
 		align-items:center;
 		overflow:hidden;
 	}
-}
+
 .single-lsx-to-tour .lsx-banner-image-wrap img {
 	object-fit:cover;
 	height:80vh!important;
@@ -2166,4 +2166,5 @@ box-shadow: none!important;
 
 .mini-wizard-results .lsx-to-archive-thumb {
 	height: auto;
+}
 }
