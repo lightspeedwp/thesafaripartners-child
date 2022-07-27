@@ -1062,8 +1062,8 @@ th,tr,td,table,legend,label {
 		margin-top:60px;
 	}
 	.style-posts .lsx-to-slider-inner {
-		max-width: 1314px!important;
-    margin: 5px 6px 20px 19px!important;
+		max-width: 1322px!important;
+    margin: 5px 6px 20px 10px!important;
 	}
 	.lsx-to-widget-title.text-right {
 		text-transform:uppercase;
@@ -1155,7 +1155,6 @@ th,tr,td,table,legend,label {
 	}
 	.style-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:326px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
@@ -1491,14 +1490,14 @@ th,tr,td,table,legend,label {
 		margin:0px 0 0 50px;
 		width:20%;
 	}
-	#footer-sub .gform_footer .btn {
-		background:#6a6d5b;
-		color:#fff;
+	#footer-sub .gform_footer #gform_submit_button_1 {
+		background:#6a6d5b!important;
+		color:#fff!important;
 		border-radius:0;
 		box-shadow:none;
-		padding:25px 44px 25px;
-		min-height:45px;
-		height:45px;
+		padding:25px 44px 25px!important;
+		min-height:45px!important;
+		height:45px!important;
 		line-height:0px
 	}
 	#footer-sub .gform_footer .btn span {
