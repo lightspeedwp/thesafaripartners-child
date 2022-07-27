@@ -49,7 +49,7 @@ th,tr,td,table,legend,label {
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 		background-color:#fff;
-		height:590px;
+		height:6300px;
 		background-position:center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -1062,8 +1062,8 @@ th,tr,td,table,legend,label {
 		margin-top:60px;
 	}
 	.style-posts .lsx-to-slider-inner {
-		max-width:1323px!important;
-		margin:5px 6px 20px 10px!important;
+		max-width: 1314px!important;
+    margin: 5px 6px 20px 19px!important;
 	}
 	.lsx-to-widget-title.text-right {
 		text-transform:uppercase;
@@ -1121,7 +1121,7 @@ th,tr,td,table,legend,label {
 	}
 	.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:327px!important;
+		width:326px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
@@ -1148,7 +1148,7 @@ th,tr,td,table,legend,label {
 		text-align:left;
 	}
 	.tours-posts .lsx-to-slider-inner {
-		max-width:1322px!important;
+		max-width:1313px!important;
 		margin:35px 4px 10px 10px!important;
 	}
 	.style-posts {
@@ -1156,7 +1156,7 @@ th,tr,td,table,legend,label {
 	}
 	.style-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:327px!important;
+		width:326px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
@@ -1457,28 +1457,27 @@ th,tr,td,table,legend,label {
 	#footer-sub .gform_heading {
 		width:26%;
 		float:left;
-		padding-left:5%;
+		padding-left:3%;
 	}
 	#footer-sub {
 		background-color:transparent;
-		padding:60px 0!important;
+		padding:60px 0 90px!important;
 		position:relative;
 	}
 	#footer-sub form {
 		width:70%;
 		float:left;
 	}
-	#footer-sub form input {
+	#footer-sub form #gform_submit_button_1 {
 		border-top:0;
 		border-right:0;
 		border-left:0;
-		border-bottom:1px solid #262423;
-		color:#262423!important;
+		color:#fff!important;
 		padding:1px;
 		line-height:10px;
-		min-height:30px!important;
-		height:30px;
-		background:transparent;
+		min-height:40px!important;
+		height:40px;
+		background:#6a6d5b;
 	}
 	#footer-sub .gform_body {
 		width:70%;
