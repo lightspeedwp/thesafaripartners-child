@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 body,p,ul,li,em {
 	font-family:argesta_displayregular,serif!important;
 }
+.lsx-to-widget-meta-data span{font-family:argesta_displayregular,serif!important;}
 th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
 }
@@ -49,7 +50,7 @@ th,tr,td,table,legend,label {
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 		background-color:#fff;
-		height:590px;
+		height:660px;
 		background-position:center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -403,6 +404,23 @@ th,tr,td,table,legend,label {
 	.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus {
 		color:#262423!important;
 	}
+
+	.lsx-to-meta-data.lsx-to-meta-data-duration:before{	background-image: url('img/tsp-duration.svg');
+		background-size: 14px 14px;
+		display: inline-block;
+		width: 14px;
+		height:14px;
+		content:"";margin-right:9px;
+		}
+
+		.lsx-to-meta-data.lsx-to-meta-data-destinations:before{	background-image: url('img/tsp-country.svg');
+			background-size: 14px 14px;
+			display: inline-block;
+			width: 14px;
+			height:14px;
+			content:"";margin-right:9px;
+			}
+
 	.lsx-wizard-button-previous span:before {
 		background-image: url('img/tsp-see-more-arrow.svg');
     background-size: 20px 20px;
@@ -1463,7 +1481,7 @@ th,tr,td,table,legend,label {
 		position:relative;
 	}
 	#footer-sub form {
-		width:70%;
+		width:74%;
 		float:left;
 	}
 	#footer-sub form input {
@@ -1487,11 +1505,11 @@ th,tr,td,table,legend,label {
 		float:left;
 	}
 	#footer-sub .gform_footer {
-		margin:0px 0 0 50px;
+		margin:20px 0 0 100px;
 		width:20%;
 	}
 	#footer-sub .gform_footer #gform_submit_button_1 {
-		background:#6a6d5b!important;
+		background:#6a6d5b!important;border:0!important;
 		color:#fff!important;
 		border-radius:0;
 		box-shadow:none;
