@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 body,p,ul,li,em {
 	font-family:argesta_displayregular,serif!important;
 }
-.lsx-to-widget-meta-data span{font-family:argesta_displayregular,serif!important;}
+.lsx-to-widget-meta-data span{font-family:"moret",serif!important;font-size:15px!important;color:#6a6d5b;}
 th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
 }
@@ -406,18 +406,18 @@ th,tr,td,table,legend,label {
 	}
 
 	.lsx-to-meta-data.lsx-to-meta-data-duration:before{	background-image: url('img/tsp-duration.svg');
-		background-size: 14px 14px;
+		background-size: 17px 17px;
 		display: inline-block;
-		width: 14px;
-		height:14px;
+		width: 17px;
+		height:17px;
 		content:"";margin-right:9px;
 		}
 
 		.lsx-to-meta-data.lsx-to-meta-data-destinations:before{	background-image: url('img/tsp-country.svg');
-			background-size: 14px 14px;
+			background-size: 17px 17px;
 			display: inline-block;
-			width: 14px;
-			height:14px;
+			width: 17px;
+			height:17px;
 			content:"";margin-right:9px;
 			}
 
