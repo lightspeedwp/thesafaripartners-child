@@ -49,7 +49,7 @@ th,tr,td,table,legend,label {
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 		background-color:#fff;
-		height:6300px;
+		height:590px;
 		background-position:center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -1468,16 +1468,17 @@ th,tr,td,table,legend,label {
 		width:70%;
 		float:left;
 	}
-	#footer-sub form #gform_submit_button_1 {
+	#footer-sub form input {
 		border-top:0;
 		border-right:0;
 		border-left:0;
-		color:#fff!important;
+		border-bottom:1px solid #262423;
+		color:#262423!important;
 		padding:1px;
 		line-height:10px;
-		min-height:40px!important;
-		height:40px;
-		background:#6a6d5b;
+		min-height:30px!important;
+		height:30px;
+		background:transparent;
 	}
 	#footer-sub .gform_body {
 		width:70%;
@@ -1492,9 +1493,8 @@ th,tr,td,table,legend,label {
 		width:20%;
 	}
 	#footer-sub .gform_footer .btn {
-		border:1px solid #262423;
-		background:#fff;
-		color:#262423;
+		background:#6a6d5b;
+		color:#fff;
 		border-radius:0;
 		box-shadow:none;
 		padding:25px 44px 25px;
@@ -1503,7 +1503,7 @@ th,tr,td,table,legend,label {
 		line-height:0px
 	}
 	#footer-sub .gform_footer .btn span {
-		color:#262423;
+		color:#fff;
 	}
   #footer-widgets .widget-title{color:#fff;}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu>ul.mega-sub-menu {
