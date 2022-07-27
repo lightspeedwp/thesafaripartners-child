@@ -1121,7 +1121,6 @@ th,tr,td,table,legend,label {
 	}
 	.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:326px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
@@ -1148,8 +1147,8 @@ th,tr,td,table,legend,label {
 		text-align:left;
 	}
 	.tours-posts .lsx-to-slider-inner {
-		max-width:1313px!important;
-		margin:35px 4px 10px 10px!important;
+		max-width:1322px!important;
+		margin:35px 4px 10px 0px!important;
 	}
 	.style-posts {
 		margin-top:50px;
