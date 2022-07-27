@@ -1061,8 +1061,8 @@ th,tr,td,table,legend,label {
 		margin-top:60px;
 	}
 	.style-posts .lsx-to-slider-inner {
-		max-width:1250px!important;
-		margin:5px 6px 20px 70px!important;
+		max-width:1323px!important;
+		margin:5px 6px 20px 10px!important;
 	}
 	.lsx-to-widget-title.text-right {
 		text-transform:uppercase;
@@ -1088,7 +1088,7 @@ th,tr,td,table,legend,label {
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		padding:0!important;
 		margin:2px;
-		width:414px!important;
+		width:428px!important;
 		border:1px solid #fff;
 	}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover {
@@ -1098,7 +1098,7 @@ th,tr,td,table,legend,label {
 		color:#ce9e57;
 	}
 	.who-posts .type-travel-style {
-		width:414px!important;
+		width:428px!important;
 	}
 	.who-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
@@ -1115,8 +1115,8 @@ th,tr,td,table,legend,label {
 	}
 	.who-posts .lsx-to-slider-inner {
 		width:100%!important;
-		max-width:1252px!important;
-		margin:5px 6px 20px 74px!important;
+		max-width:1324px!important;
+		margin:5px 6px 20px 23px!important;
 	}
 	.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
@@ -1155,7 +1155,7 @@ th,tr,td,table,legend,label {
 	}
 	.style-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:309px!important;
+		width:327px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
@@ -1166,7 +1166,7 @@ th,tr,td,table,legend,label {
 		color:#ce9e57;
 	}
 	.style-posts .type-travel-style {
-		width:308px!important;
+		width:326px!important;
 	}
 	.style-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
