@@ -105,9 +105,6 @@ th,tr,td,table,legend,label {
 		margin-bottom:0!important;
 		margin-top:-68px;
 	}
-	.home .content-area {
-		margin-top:-70px!important;
-	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item h4 {
 		font-family:"moret",serif!important;
 	}
@@ -329,7 +326,7 @@ th,tr,td,table,legend,label {
 	/*Wizard */
 	.lsx-wizard-buttons-wrapper {
 		margin:0 auto;
-		width:1334px;
+		width:1342px;
 		padding:0 9px;
 	}
 	.wizard-who {
@@ -532,7 +529,7 @@ th,tr,td,table,legend,label {
 		height:184px!important;
 		object-fit:cover;
 	}
-  .tax-travel-style .wizard-who img{margin:0 auto!important; text-align:center;}
+  .tax-travel-style .wizard-who .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
@@ -930,6 +927,7 @@ th,tr,td,table,legend,label {
 		width:100%;
 		position:relative;
 	}
+	.home .lsx-to-widget-content p{display:none;}
 	.lsx-block-banner:not(:first-child) {
 		height:350px;
 		width:100%;
@@ -1086,7 +1084,7 @@ th,tr,td,table,legend,label {
 	.who-top h2.lsx-title {
 		max-width:90%!important;
 		margin-bottom:80px!important;
-		font-size:36px!important;
+		font-size:54px!important;
 	}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		padding:0!important;
@@ -1123,7 +1121,7 @@ th,tr,td,table,legend,label {
 	}
 	.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
-		width:309px!important;
+		width:318px!important;
 		border:1px solid #fff;
 		padding:0!important;
 	}
@@ -1150,8 +1148,8 @@ th,tr,td,table,legend,label {
 		text-align:left;
 	}
 	.tours-posts .lsx-to-slider-inner {
-		max-width:1251px!important;
-		margin:35px 4px 10px 59px!important;
+		max-width:1322px!important;
+		margin:35px 4px 10px 10px!important;
 	}
 	.style-posts {
 		margin-top:50px;
@@ -1366,7 +1364,7 @@ th,tr,td,table,legend,label {
 		margin:0 auto;
 	}
 	.page .entry-content>div:not(:first-of-type) {
-		width:1366px;
+		width:1336px;
 	}
 	#masthead .navbar-header .custom-logo-link>img {
 		margin:1px 0;
@@ -1764,7 +1762,7 @@ s	.financial-about .lsx-banner-column {
 	margin:12px 0;
 }
 .social-about h2,.financial-about h2 {
-	font-size:34px!important;
+	font-size:54px!important;
 	margin-bottom:14px!important;
 }
 .social-about .lsx-button,.financial-about .lsx-button {
