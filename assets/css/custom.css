@@ -1409,13 +1409,12 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin:auto;
 	}
 	#footer-widgets .container {
-		width:1280px;
+		width:1322px;
 		margin:auto;
 	}
 	#footer-widgets {
 		background-color:#f0f0f0;
 		color:#262423;
-		padding:4% 2% 5% 4%
 	}
 	#footer-widgets .widget .fa {
 		font-size:18px;
@@ -2212,7 +2211,7 @@ box-shadow: none!important;
 	 #travel-footer {
 			background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 			background-color:#fff;
-			height:760px;
+			height:960px;
 			background-position:center;
 			background-repeat:no-repeat;
 			background-size:cover;
