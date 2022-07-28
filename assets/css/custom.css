@@ -30,6 +30,32 @@ body,p,ul,li,em {font-family:argesta_displayregular,serif!important;}
 .lsx-to-widget-meta-data span{font-family:"moret",serif!important;font-size:15px!important;color:#6a6d5b;}
 th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 .btn, button{font-family:"moret",serif!important;}
+
+.gfield input::-webkit-input-placeholder {
+	color:#262423!important;
+	}
+	.gfield textarea::-webkit-input-placeholder {
+	color:#262423!important;
+	}
+	.gfield_radio .gchoice {
+	width:50%;
+	float:left;
+	}
+	.gfield_radio {
+	text-align:left!important;
+	}
+	legend {
+	border-bottom:none;
+	}
+	.gform_wrapper input[type="email"]:focus,.gform_wrapper input[type="date"]:focus,.gform_wrapper input[type="datetime"]:focus,.gform_wrapper input[type="datetime-local"]:focus,.gform_wrapper input[type="month"]:focus,.gform_wrapper input[type="number"]:focus,.gform_wrapper input[type="password"]:focus,.gform_wrapper input[type="search"]:focus,.gform_wrapper input[type="tel"]:focus,.gform_wrapper input[type="text"]:focus,.gform_wrapper input[type="time"]:focus,.gform_wrapper input[type="week"]:focus,.gform_wrapper input[type="url"]:focus,.gform_wrapper select:focus,.gform_wrapper textarea:focus {
+	color:#262423!important;
+	opacity:1;
+	-webkit-box-shadow:none!important;
+	box-shadow: none!important;
+	}
+	#mega-menu-wrap-primary .moretag {
+		display:none;
+	}
 @media screen and (min-width:1000px) {
 	.page.safari-styles {
 		margin-top:0px;
@@ -179,9 +205,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu {
 		padding:20px;
 	}
-	#mega-menu-wrap-primary .moretag {
-		display:none;
-	}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right>ul.mega-sub-menu {
 		text-align:left;
 	}
@@ -287,7 +310,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		background-color:#e6e6e6;
 		color:#919191;
 		padding:5px 8px;
-		;
 		margin:0;
 		position:relative;
 		z-index:0;
@@ -927,7 +949,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		width:100%;
 		position:relative;
 	}
-	.home .home-txt{margin-left:20px;}
+	.home .home-txt{padding-left:20px;}
 	.home-txt h4:after{  color: inherit;
 		content: "";
 		display: inline-block;
@@ -1067,7 +1089,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin-top:90px;
 	}
 	.toptours-posts {
-		margin-top:10px;
+		margin-top:20px;
 	}
 	.safari-styles {
 		margin-top:60px;
@@ -1159,10 +1181,10 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.tours-posts .lsx-to-slider-inner {
 		max-width:1322px!important;
-		margin:35px 4px 10px 0px!important;
+		margin:20px 4px 10px 0px!important;
 	}
 	.style-posts {
-		margin-top:50px;
+		margin-top:32px;
 	}
 	.style-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		margin:2px;
@@ -1439,7 +1461,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		text-align:center
 	}
 	#footer-widgets #menu-community a {
-		width:30pfx;
+		width:30px;
 		display:block;
 		margin-right:5px;
 		font-family:argesta_displayregular,serif!important;
@@ -2143,28 +2165,6 @@ s	.financial-about .lsx-banner-column {
 }
 .checkbox-wrapper>[type="checkbox"]:focus+span {
 	box-shadow:1px 1px 1px 1px #6b6b6b;
-}
-.gfield input::-webkit-input-placeholder {
-color:#262423!important;
-}
-.gfield textarea::-webkit-input-placeholder {
-color:#262423!important;
-}
-.gfield_radio .gchoice {
-width:50%;
-float:left;
-}
-.gfield_radio {
-text-align:left!important;
-}
-legend {
-border-bottom:none;
-}
-.gform_wrapper input[type="email"]:focus,.gform_wrapper input[type="date"]:focus,.gform_wrapper input[type="datetime"]:focus,.gform_wrapper input[type="datetime-local"]:focus,.gform_wrapper input[type="month"]:focus,.gform_wrapper input[type="number"]:focus,.gform_wrapper input[type="password"]:focus,.gform_wrapper input[type="search"]:focus,.gform_wrapper input[type="tel"]:focus,.gform_wrapper input[type="text"]:focus,.gform_wrapper input[type="time"]:focus,.gform_wrapper input[type="week"]:focus,.gform_wrapper input[type="url"]:focus,.gform_wrapper select:focus,.gform_wrapper textarea:focus {
-color:#262423!important;
-opacity:1;
--webkit-box-shadow:none!important;
-box-shadow: none!important;
 }
 
 /* MINI Wizard Styles */
