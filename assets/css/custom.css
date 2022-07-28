@@ -149,10 +149,11 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.mega-search.expand-to-left {
 		padding:6px;
-		top:-14px;height: 44px;
+		top:-10px;height: 48px;
 		align-items:center;
 	}
-	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=text]{width: 700px;border-top:1px solid #ccc;border-left:1px solid #ccc;border-bottom:1px solid #ccc;}
+	.mega-search.mega-search-open{border-top:1px solid #ccc;border-left:1px solid #ccc;border-bottom:1px solid #ccc;height:48px;}
+	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=text]{width: 700px;height:42px;}
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=submit]{display:block!important; position:relative; color:#fff;border-radius: 0;border:0; background:#6a6d5b;padding: 4px 12px; }
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search .search-icon {
 		right:18px;
