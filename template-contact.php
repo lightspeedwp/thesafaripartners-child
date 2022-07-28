@@ -55,7 +55,7 @@ get_header(); ?>
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 						<picture>
-							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+							<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
 							<picture>
 							</div>
 						</div>
