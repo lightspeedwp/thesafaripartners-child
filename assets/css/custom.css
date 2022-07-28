@@ -161,16 +161,17 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		height:48px;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=text]{
-		width: 700px;
+		width: 740px;
 		height:42px;}
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=submit]{
 		display: block!important;
 		position: absolute;
 		right: 52px;
 		color: #fff;
-		top: 10px;
+		top: 4px;
 		border-radius: 0;
-		width: 120px;
+		width: 140px;
+		text-transform: uppercase;
 		border: 0;
 		background: #6a6d5b;
 		padding: 4px 12px;
@@ -1928,6 +1929,7 @@ s	.financial-about .lsx-banner-column {
 }
 #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.expand-to-left {
 	background:#fff;
+	right: -24px;
 }
 .top-destination-nav {
 	margin-bottom:-26px!important;
