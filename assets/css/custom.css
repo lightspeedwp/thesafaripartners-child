@@ -89,10 +89,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		transition-timing-function:ease-in;
 		transition:1s;
 	}
-	.bannerup {
-		margin-bottom:0!important;
-		margin-top:-68px;
-	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item h4 {
 		font-family:"moret",serif!important;
 	}
@@ -925,7 +921,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.pum-overlay {
 		z-index: 99!important;
 	}
-	.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag, .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:visited{color:#262423!important;}
 	/*home */
 	.lsx-block-banner:first-child {
 		height:450px;
@@ -2181,4 +2176,53 @@ box-shadow: none!important;
 .mini-wizard-results .lsx-to-archive-thumb {
 	height: auto;
 }
+}
+@media screen and (max-width: 780px) { 
+	.lsx-to-slider-inner .slick-arrow.slick-prev {
+		left:-10px;
+		width:20px!important;
+		height:20px!important;
+	}
+	.lsx-to-slider-inner .slick-arrow.slick-next {
+		right:-10px;
+		width:20px!important;
+		height:20px!important;
+	}
+	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
+		border:1px solid #ce9e57!important;
+		background:#fff;
+		border-radius:0;
+		color:#ce9e57;
+		padding:10px;
+	}
+	.lsx-to-slider-inner .slick-prev:before{background-image: url('img/tsp-carousel-arrow-left.svg');
+		background-size: 10px 10px;
+		display: inline-block;
+		width: 10px;
+		height:10px;
+		content:"";}
+	
+	  .lsx-to-slider-inner .slick-next:before{background-image: url('img/tsp-carousel-arrow-right.svg');
+		  background-size: 10px 10px;
+		  display: inline-block;
+		  width: 10px;
+		  height:10px;
+		  content:"";} 
+		  
+	 #travel-footer {
+			background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
+			background-color:#fff;
+			height:760px;
+			background-position:center;
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+		#footer-widgets,#footer-sub {
+			background:transparent!important;
+		}	
+	
+		.lsx-to-slider-inner .slick-dots {
+			display:none!important;
+		}	
+	.home-txt h4{display:none;}	
 }
