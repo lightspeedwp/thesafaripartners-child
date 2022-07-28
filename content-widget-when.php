@@ -23,74 +23,74 @@ if ( empty( $disable_single_link ) ) {
 						<div class="lsx-to-slider-wrap">
 							<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 3, "slidesToScroll": 3 }'>
 
-								<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
+								<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><a href="/who/romance-seekers/" tabindex="0"><article class="term-11095 travel-style type-travel-style status-publish hentry">
 												<div class="lsx-to-widget-thumb">
-										<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">
+										
 											<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/07/romance-seekers-traveller-type-1024x576.jpg">
-										</a>			</div>
+												</div>
 
 							<div class="lsx-to-widget-content bottom">
 								<h4 class="lsx-to-widget-title text-left">
-									<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">				Romance Seekers		</a></h4>
+									<a href="/who/romance-seekers/" tabindex="0">				Romance Seekers		</a></h4>
 
 									</div>
-						</article>
+						</article></a>	
 						</div>
 
 
-						<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
+						<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><a href="/who/seasoned-travellers/" tabindex="0"><article class="term-11095 travel-style type-travel-style status-publish hentry">
 										<div class="lsx-to-widget-thumb">
-								<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">
+								
 									<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-seasoned-travellers-1024x576.jpg">
-								</a>			</div>
+											</div>
 
 					<div class="lsx-to-widget-content bottom">
 						<h4 class="lsx-to-widget-title text-left">
-							<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">	Seasoned Travellers		</a></h4>
+							<a href="/who/seasoned-travellers/" tabindex="0">	Seasoned Travellers		</a></h4>
 
 							</div>
-				</article>
+				</article></a>
 				</div>
 
-				<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
+				<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><a href="/who/family-experiences/" tabindex="0">	<article class="term-11095 travel-style type-travel-style status-publish hentry">
 								<div class="lsx-to-widget-thumb">
-						<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">					
+										
 							<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/07/family-experiences-traveller-type-1024x576.jpg">
-						</a>			</div>
+								</div>
 
 			<div class="lsx-to-widget-content bottom">
 				<h4 class="lsx-to-widget-title text-left">
-					<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">	Family Experiences	</a></h4>
+					<a href="/who/family-experiences/" tabindex="0">	Family Experiences	</a></h4>
 
 					</div>
-		</article>
+		</article></a>	
 		</div>
 
-		<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
+			<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><a href="/who/group-of-friends/" tabindex="0"><article class="term-11095 travel-style type-travel-style status-publish hentry">
 						<div class="lsx-to-widget-thumb">
-				<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">					
+								
 					<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-group-of-friends-1024x576.jpg">
-				</a>			</div>
+							</div>
 
 	<div class="lsx-to-widget-content bottom">
 		<h4 class="lsx-to-widget-title text-left">
-			<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">	Group of Friends		</a></h4>
+			<a href="/who/group-of-friends/" tabindex="0">	Group of Friends		</a></h4>
 
 			</div>
-</article>
+</article></a>
 </div>
 
-<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
+<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><a href="/who/solo-traveller/" tabindex="0"><article class="term-11095 travel-style type-travel-style status-publish hentry">
 				<div class="lsx-to-widget-thumb">
-		<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">					<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-solo-traveller.jpg">
-		</a>			</div>
+							<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-solo-traveller.jpg">
+					</div>
 
 <div class="lsx-to-widget-content bottom">
 <h4 class="lsx-to-widget-title text-left">
-	<a href="https://thesafaripartners-upgraded.lightspeedwp.dev/travel-style/walking-safaris/" tabindex="0">	Solo Travellers		</a></h4>
+	<a href="/who/solo-traveller/" tabindex="0">	Solo Travellers		</a></h4>
 
 	</div>
-</article>
+</article></a>
 </div>
 
 
