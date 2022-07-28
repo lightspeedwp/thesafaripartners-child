@@ -2063,9 +2063,6 @@ s	.financial-about .lsx-banner-column {
 	background:transparent;
 	font-family:"moret",serif!important;
 }
-.page-template-template-contact #primary form input[type=radio]{padding: 0.2em!important;border:1px solid #262423!important;
-    -webkit-appearance: none!important;
-    min-height: 30px!important;}
 .page-template-template-contact #primary form input[type=submit] {
 	background:#6a6d5b!important;
 	color:#fff!important;
