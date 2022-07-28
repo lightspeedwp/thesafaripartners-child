@@ -759,19 +759,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		min-height:30px!important;
 		height:30px!important;
 	}
-	input[type=radio] {
-		border:1px solid #fff;
-		padding:0.2em;
-		-webkit-appearance:none;
-		min-height:30px;
-	}
-	input[type=radio]:checked {
-		background:url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
-		background-size:4px 4px;
-	}
-	input[type=radio]:focus {
-		outline-color:#fff;
-	}
+
 	.pum .gchoice {
 		width:90px;
 		float:left;
