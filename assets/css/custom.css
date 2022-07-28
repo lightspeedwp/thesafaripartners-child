@@ -925,6 +925,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.pum-overlay {
 		z-index: 99!important;
 	}
+	.lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag, .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:visited{color:#262423!important;}
 	/*home */
 	.lsx-block-banner:first-child {
 		height:450px;
