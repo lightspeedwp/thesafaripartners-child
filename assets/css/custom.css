@@ -152,8 +152,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		top:-14px;height: 44px;
 		align-items:center;
 	}
-	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.expand-to-left input[type=text]{width: 700px;border-top:1px solid #ccc;border-left:1px solid #ccc;border-bottom:1px solid #ccc;}
-	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.expand-to-left input[type=submit]{display:block!important; position:relative; color:#fff;border-radius: 0;border:0; background:#6a6d5b;padding: 4px 12px; }
+	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=text]{width: 700px;border-top:1px solid #ccc;border-left:1px solid #ccc;border-bottom:1px solid #ccc;}
+	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-open input[type=submit]{display:block!important; position:relative; color:#fff;border-radius: 0;border:0; background:#6a6d5b;padding: 4px 12px; }
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search .search-icon {
 		right:18px;
 	}
