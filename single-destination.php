@@ -41,7 +41,7 @@ get_header(); ?>
 
 			<?php 
 				$panels = array(
-					'intro' => array( 'who' ),
+					'intro' => 'who',
 					0 => array( 'what' ),
 					1 => array( 'when' ),
 					2 => array( 'budget' ),
