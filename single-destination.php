@@ -61,7 +61,9 @@ get_header(); ?>
 					);
 					$tours = new WP_Query( $query_args );
 	
-					if ( $tours->have_posts() ) { 
+					if ( $tours->have_posts() ) {
+						global $lsx_to_archive;
+						$lsx_to_archive = 1;
 						?>
 						<div class="facetwp-hidden-filters hidden">
 							<?php
@@ -87,7 +89,7 @@ get_header(); ?>
 
 										?>
 										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-											<?php get_template_part( 'content', 'tour' ); ?>
+											<?php lsx_to_content( 'content', 'tour' ); ?>
 										</div>
 									<?php
 									}
