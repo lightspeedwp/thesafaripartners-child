@@ -41,11 +41,10 @@ get_header(); ?>
 
 			<?php 
 				$panels = array(
-					0 => array( 'who' ),
-					1 => array( 'where' ),
-					2 => array( 'what' ),
-					3 => array( 'when' ),
-					4 => array( 'budget' ),
+					'intro' => array( 'who' ),
+					0 => array( 'what' ),
+					1 => array( 'when' ),
+					2 => array( 'budget' ),
 				);
 				tsp_mini_wizard( $panels );
 			?>
@@ -82,7 +81,7 @@ get_header(); ?>
 										$tours->the_post();
 										?>
 										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-											<?php lsx_to_content( 'content', 'tour' ); ?>
+											<?php get_template_part( 'content', 'tour' ); ?>
 										</div>
 									<?php
 									}
