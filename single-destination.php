@@ -28,7 +28,7 @@ get_header(); ?>
 
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
-							<div class="row">
+							<div class="row <?php lsx_to_entry_class( 'entry-content' ); ?>">
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
 						</div>
@@ -73,7 +73,7 @@ get_header(); ?>
 							?>
 						</div>
 		
-						<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+						<div class="slider-container mini-wizard-results lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
 							<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 								<div class="lsx-to-slider-wrap">
 									<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
