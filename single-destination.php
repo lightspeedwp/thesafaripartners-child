@@ -52,6 +52,7 @@ get_header(); ?>
 
 			<?php
 				$tours = get_post_meta( get_the_ID(), 'tour_to_destination', false );
+				var_dump($tours);
 				if ( false !== $tours && ! empty( $tours ) ) {
 					$query_args = array(
 						'post_type' => 'tour',
@@ -59,9 +60,9 @@ get_header(); ?>
 						'facetwp' => true,
 						'post__id' => $tours,
 					);
-					$query = new WP_Query( $query_args );
+					$tours = new WP_Query( $query_args );
 	
-					if ( $query->have_posts() ) { 
+					if ( $tours->have_posts() ) { 
 						?>
 						<div class="facetwp-hidden-filters hidden">
 							<?php
@@ -78,8 +79,8 @@ get_header(); ?>
 								<div class="lsx-to-slider-wrap">
 									<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
 									<?php
-									while ( $query->have_posts() ) {
-										$query->the_post();
+									while ( $tours->have_posts() ) {
+										$tours->the_post();
 										?>
 										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 											<?php lsx_to_content( 'content', 'tour' ); ?>
