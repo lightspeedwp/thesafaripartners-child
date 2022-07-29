@@ -2,7 +2,7 @@
 <div class="step-content">
 	<div class="wizard-where row">
 		<div class="col-md-3">
-			<h2><?php esc_html_e( 'Where in Africa would you like to go?', 'thesafaripartners-child' ); ?></h2>
+			<h3><?php esc_html_e( 'Where in Africa would you like to go?', 'thesafaripartners-child' ); ?></h3>
 			<p><?php esc_html_e( 'Select any countries which may interest you, or if you are not sure, skip this section', 'thesafaripartners-child' ); ?></p>
 		</div>
 		<div class="col-md-9">
@@ -25,7 +25,7 @@
 								<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 								<span aria-hidden="true"></span>
 							</div>
-							<?php lsx_thumbnail( 'thumbnail' ); ?>
+							<?php lsx_thumbnail( 'large' ); ?>
 						</div>
 
 						<div class="lsx-to-content">

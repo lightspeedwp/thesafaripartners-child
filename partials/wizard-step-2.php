@@ -3,8 +3,8 @@
 	<div class="step-content">
 		<div class="wizard-what">
 			<div class="col-md-3">
-				<h2><?php esc_html_e( 'What interests you?', 'thesafaripartners-child' ); ?></h2>
-				<p><?php esc_html_e( 'Let us what interests you', 'thesafaripartners-child' ); ?></p>
+				<h3><?php esc_html_e( 'What interests you?', 'thesafaripartners-child' ); ?></h3>
+				<p><?php esc_html_e( 'Select all the experiences you would enjoy. Choose as many as you like.', 'thesafaripartners-child' ); ?></p>
 			</div>
 
 			<div class="col-md-9">
@@ -23,7 +23,7 @@
 
 						<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 							<div class="lsx-to-widget-thumb">
-								<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-full' ); ?>
+								<?php lsx_to_term_thumbnail( $term->term_id, 'large' ); ?>
 							</div>
 
 						<?php else : ?>

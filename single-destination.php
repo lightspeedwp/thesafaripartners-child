@@ -37,6 +37,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
+			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
+
 			<?php 
 				$panels = array(
 					0 => array( 'who' ),
