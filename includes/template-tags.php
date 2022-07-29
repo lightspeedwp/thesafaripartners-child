@@ -17,7 +17,7 @@ function tsp_mini_wizard( $panels = array() ) {
 		return;
 	}
 	?>
-	<form class="mini-wizard-wrapper" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
+	<form class="mini-wizard-wrapper" action="<?php echo home_url('/'); ?>" method="GET">
 
 		<?php 
 		if ( isset( $panels['intro'] ) ) {
@@ -25,7 +25,7 @@ function tsp_mini_wizard( $panels = array() ) {
 		}
 		?>
 
-		<div id="wizard" class="lsx-wizard mini-wizard-form">
+		<div id="wizard" class="lsx-wizard mini-wizard-form" style="display: none;">
 			<?php
 			$counter = 0;
 			foreach ( $panels as $panel_key => $panel  ) {
