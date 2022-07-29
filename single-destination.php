@@ -79,6 +79,7 @@ get_header(); ?>
 									<?php
 									while ( $tours->have_posts() ) {
 										$tours->the_post();
+										
 										?>
 										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 											<?php get_template_part( 'content', 'tour' ); ?>
