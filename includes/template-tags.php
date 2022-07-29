@@ -20,8 +20,8 @@ function tsp_mini_wizard( $panels = array() ) {
 	<form class="mini-wizard-wrapper" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
 
 		<?php 
-		if ( isset( $panel['intro'] ) ) {
-			get_template_part( 'partials/mini-wizard', $panel['intro'] );
+		if ( isset( $panels['intro'] ) ) {
+			get_template_part( 'partials/mini-wizard', $panels['intro'] );
 		}
 		?>
 
