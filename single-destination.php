@@ -52,7 +52,6 @@ get_header(); ?>
 
 			<?php
 				$tours = get_post_meta( get_the_ID(), 'tour_to_destination', false );
-				var_dump($tours);
 				if ( false !== $tours && ! empty( $tours ) ) {
 					$query_args = array(
 						'post_type' => 'tour',
