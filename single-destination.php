@@ -50,7 +50,8 @@ get_header(); ?>
 			?>
 
 			<?php
-				$tours = get_post_meta( get_the_ID(), 'tour_to_destination', false );
+				$current_destination = get_the_ID();
+				$tours               = get_post_meta( get_the_ID(), 'tour_to_destination', false );
 				if ( false !== $tours && ! empty( $tours ) ) {
 					$query_args = array(
 						'post_type' => 'tour',
@@ -79,7 +80,11 @@ get_header(); ?>
 									<?php
 									while ( $tours->have_posts() ) {
 										$tours->the_post();
-										
+
+										if ( get_the_ID() === $current_destination ) {
+											continue;
+										}
+
 										?>
 										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
 											<?php get_template_part( 'content', 'tour' ); ?>
