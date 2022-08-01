@@ -710,5 +710,6 @@ function openinCity(evt, eventName) {
 
 	$(document).ready(function () {
 		$("#wizard").lsxWizard();
+		$("#wizard2").lsxWizard();
 	});
 })( jQuery, window, document );

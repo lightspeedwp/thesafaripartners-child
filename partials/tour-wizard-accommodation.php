@@ -17,7 +17,7 @@
 						<?php lsx_entry_top(); ?>
 	
 						<div class="entry-content col-xs-12 col-sm-12 col-md-12">
-							<div id="wizard" class="lsx-wizard" style="display: none;">
+							<div id="wizard2" class="lsx-wizard" style="display: none;">
 								<?php
 								while ( $accom_query->have_posts() ) {
 									$accom_query->the_post();
