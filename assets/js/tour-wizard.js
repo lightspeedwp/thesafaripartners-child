@@ -706,7 +706,7 @@
 		}
 	};
 	// Get the element with id="defaultOpen" and click on it
-	document.getElementsByClassName("tours-wizard").click();
+	//document.getElementsByClassName("tours-wizard").click();
 
 	$(document).ready(function () {
 		$("#wizard").lsxWizard();
