@@ -2,48 +2,63 @@
 	<div class="col-md-12 col-sm-12">
 		<div class="lsx-tour-module">
 			<?php 
-			if ( have_posts() ) {
-
-				while ( have_posts() ) {
-					the_post();
-					
-					lsx_entry_before();
+			$accommodation = get_post_meta( get_the_ID(), 'accommodation_to_tour', false );
+			if ( ! empty( $accommodation ) && false !== $accommodation ) {
+				$accom_query = new WP_Query( $accommodation );
+				if ( $accom_query->have_posts() ) {
 					?>
-
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 						<?php lsx_entry_top(); ?>
-						<div class="col-md-6 lsx-tour-module-image">
-							<div class="lsx-banner-image-wrap">
-								<div class="lsx-to-thumb-slot" >
-									<?php lsx_to_gallery(); ?>
-								</div>
-							</div>
-						</div>
+	
+						<div class="entry-content col-xs-12 col-sm-12 col-md-12">
+							<div id="wizard" class="lsx-wizard" style="display: none;">
+								<?php
+								while ( $accom_query->have_posts() ) {
+									$accom_query->the_post();
+									?>
+									<div class="lsx-wizard-step">
+										<div class="step-content">
+											<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
+												<div class="lsx-to-archive-container">
+													<div class="col-md-6 lsx-tour-module-image">
+														<div class="lsx-banner-image-wrap">
+															<div class="lsx-to-thumb-slot">
+																<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+															</div>
+														</div>
+													</div>
+	
+													<div class="col-xs-12 col-sm-12 col-md-6">
+														<div class="lsx-to-archive-wrapper">
+															<div class="lsx-to-tour-content">
+																<h3 class="lsx-to-archive-content-title"><?php the_title(); ?></h3>
+	
+																<div class="entry-content">
+																	<?php lsx_to_entry_content_top(); ?>
 
-						<div class="col-xs-12 col-sm-12 col-md-6">
-							<div class="lsx-to-archive-wrapper">
-								<div class="lsx-to-tour-content">
-									<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
-										<div class="lsx-to-summary">
-											<h2 class="lsx-to-summary-title">Accommodation</h2>
+																	<?php the_content(); ?>
+
+																	<?php lsx_to_entry_content_bottom(); ?>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+	
 										</div>
-										<?php
-										lsx_to_connected_accommodation();
-										lsx_to_accommodation_posts();
-										?>
 									</div>
-								</div>
+									<?php
+								}
+								?>
 							</div>
 						</div>
-						
 						<?php lsx_entry_bottom(); ?>
 					</article>
-
 					<?php
-					lsx_entry_after();
 				}
+				wp_reset_query();
 			}
-			wp_reset_query();
 			?>
 		</div>
 	</div>
