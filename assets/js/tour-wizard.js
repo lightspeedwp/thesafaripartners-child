@@ -1,32 +1,32 @@
+
+function openCity(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+function openinCity(evt, eventName) {
+	var i, intabcontent, intablink;
+	intabcontent = document.getElementsByClassName("intabcontent");
+	for (i = 0; i < intabcontent.length; i++) {
+		intabcontent[i].style.display = "none";
+	}
+	intablink = document.getElementsByClassName("intablink");
+	for (i = 0; i < intablink.length; i++) {
+		intablink[i].className = intablink[i].className.replace(" active", "");
+	}
+	document.getElementById(eventName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
 ;(function ($, window, document, undefined) {
-
-	function openCity(evt, cityName) {
-		var i, tabcontent, tablinks;
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(cityName).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
-	function openinCity(evt, eventName) {
-		var i, intabcontent, intablink;
-		intabcontent = document.getElementsByClassName("intabcontent");
-		for (i = 0; i < intabcontent.length; i++) {
-			intabcontent[i].style.display = "none";
-		}
-		intablink = document.getElementsByClassName("intablink");
-		for (i = 0; i < intablink.length; i++) {
-			intablink[i].className = intablink[i].className.replace(" active", "");
-		}
-		document.getElementById(eventName).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
-
 	var settings;
 
 	////////////////////////////////////////// Public methods
