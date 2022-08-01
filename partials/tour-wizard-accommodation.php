@@ -4,7 +4,13 @@
 			<?php 
 			$accommodation = get_post_meta( get_the_ID(), 'accommodation_to_tour', false );
 			if ( ! empty( $accommodation ) && false !== $accommodation ) {
-				$accom_query = new WP_Query( $accommodation );
+				$accommodation_args = array(
+					'post_type'      => 'accommodation',
+					'post_status'    => 'publish',
+					'post__in'       => $accommodation,
+					'posts_per_page' => -1,
+				);
+				$accom_query = new WP_Query( $accommodation_args );
 				if ( $accom_query->have_posts() ) {
 					?>
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
