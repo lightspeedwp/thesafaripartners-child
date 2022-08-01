@@ -1,6 +1,3 @@
-$(document).ready(function () {
-    $("#wizard").lsxWizard();
-});
 ;(function ($, window, document, undefined) {
 
 	function openCity(evt, cityName) {
@@ -708,6 +705,10 @@ $(document).ready(function () {
 			}
 		}
 	};
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementsByClassName("tours-wizard").click();
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementsByClassName("tours-wizard").click();
+
+	$(document).ready(function () {
+		$("#wizard").lsxWizard();
+	});
 })( jQuery, window, document );
