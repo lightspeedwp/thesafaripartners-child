@@ -2060,7 +2060,7 @@ s	.financial-about .lsx-banner-column {
 .lsx-button.primary{background:#6a6d5b!important;color:#fff!important;padding:10px 26px!important;display:block;}
 .lsx-button.primary:hover{background:#262423;}
 
-.page-template-template-contact #primary form input,.page-template-template-contact #primary form select,.page-template-template-contact #primary form textarea {
+.page-template-template-contact #primary form input,.page-template-template-contact #primary form select {
 	border-top:0;
 	border-right:0;
 	border-left:0;
@@ -2073,6 +2073,9 @@ s	.financial-about .lsx-banner-column {
 	background:transparent;
 	font-family:"moret",serif!important;
 }
+.page-template-template-contact #primary form textarea {height:90px;}
+.page-template-template-contact #primary form .gform_fields input[type='radio']{border: 1px solid#ce9e57;color:#ce9e57;height:12px;width:14px; }
+
 .page-template-template-contact #primary form input[type=submit] {
 	background:#6a6d5b!important;
 	color:#fff!important;
