@@ -55,16 +55,24 @@ get_header(); ?>
 							<?php
 
 	// Display the product banner.
-	$bannerimg = get_post_meta( get_the_ID(), 'bannerimg', true );
 	$map = get_post_meta( get_the_ID(), 'map', true );
 		?>
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 						<picture>
-						<?php if( $bannerimg) { echo $bannerimg; }?>
+						<?php
+
+$bannerimg = get_field('bannerimg');
+$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+
+if( $bannerimg) {
+	echo wp_get_attachment_image( $bannerimg, $size );
+} else { ?>
+	<?php  echo $map; ?><?php
+}
+?>
+						
 							<picture>
-							</div>
-						<?php if( $map) { echo $map; }?>
 						</div>
 
 				</div>
