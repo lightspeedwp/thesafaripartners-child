@@ -56,15 +56,26 @@ get_header(); ?>
 					<div class="lsx-banner-image-wrap">
 						<picture>
 
-						<?php if ( has_post_thumbnail() ) : ?>
+						<?php
 
-<?php the_post_thumbnail(); ?>
+							$banner_image = get_field('banner_image');
+							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
 
-<?php else : ?>
-
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10414.115504121639!2d-123.1041657!3d49.266375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5702308706ebfe9!2sThe%20Safari%20Partners!5e0!3m2!1sen!2sza!4v1659433294096!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-<?php endif; ?>
+							if( $banner_image) {
+								echo wp_get_attachment_image( $banner_image, $size );
+							} else { ?>
+								<img
+									src="<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png"
+									style="max-width: 300px; margin-right:90px;"
+									alt="" class="wp-image-14890"
+									decoding="async"
+									sizes="389px"
+									srcset="<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png 600w,
+									<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png 300w,
+									<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png 150w"
+								><?php
+							}
+							?>
 
 							
 							<picture>
