@@ -1322,11 +1322,11 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.page-template-template-contact .lsx-contact-module {
 		width:100%;
-		max-width:580px!important;
+		max-width:604px!important;
 		position:absolute;
-		right:4%;
+		right:6%;
 		z-index:4;
-		padding-top:18%;
+		padding-top:16%;
 	}
 	.page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column {
 		position:relative;
