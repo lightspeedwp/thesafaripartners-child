@@ -1328,10 +1328,18 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		z-index:4;
 		padding-top:16%;
 	}
+	.page-template-template-contact .contact-133993 .lsx-contact-module{width: 100%;
+		max-width: 432px!important;
+		position: absolute;
+		right: 20%!important;
+		z-index: 4;
+		padding-top: 16%;}
+		.contact-left{margin-left:30px;}
+		.contact-right{margin-right:30px;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column {
 		position:relative;
 	}
-	.page-template-template-contact .contact-133993 .tablinks{width:140px; margin:0 auto;}
+	.page-template-template-contact .contact-133993 .tablinks{width:140px; margin:0 auto;cursor: pointer;}
 	.page-template-template-contact .contact-133993 .wp-block-column {
 		width:24%!important;
 		margin:0!important;
