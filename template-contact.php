@@ -62,17 +62,16 @@ get_header(); ?>
 						<picture>
 						<?php
 
-$bannerimg = get_field('bannerimg');
-$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+$map = get_field('map');
 
-if( $bannerimg) {
-	echo wp_get_attachment_image( $bannerimg, $size );
+if ( has_post_thumbnail() ) {
+	echo get_the_post_thumbnail($page->ID,'large'); 
 } else { ?>
-	<?php  echo $map; ?><?php
+	<?php echo $map; ?><?php
 }
 ?>
-						
 							<picture>
+							</div>
 						</div>
 
 				</div>
