@@ -55,7 +55,7 @@ get_header(); ?>
 	
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
-						<picture>
+					
 						<?php
 
 if ( has_post_thumbnail() ) {
@@ -64,7 +64,7 @@ if ( has_post_thumbnail() ) {
 	<?php echo $map; ?><?php
 }
 ?>
-							<picture>
+							
 							</div>
 						</div>
 
