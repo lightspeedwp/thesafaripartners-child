@@ -123,11 +123,12 @@ class Frontend {
 	}
 
 	public function get_swp_relevance( $results, $query ){
-		global $search_results;
+		global $search_relevance;
 
 		if( empty( $results) ){
 			return $results;
 		}
+		$search_relevance = array();
 	
 		remove_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ) );
 		$max_relevance_query = new \SearchWP\Query( $query->get_keywords( true ),
@@ -137,14 +138,13 @@ class Frontend {
 			]
 		);
 		$max_relevance = (int)$max_relevance_query->results[0]->relevance;
-	
 		$posts_relevance = wp_list_pluck( $query->get_raw_results(), 'relevance', 'id' );
-	
+		
 		foreach( $results as $index => $result ){
-			$results[$index]->relevance = round( ( $posts_relevance[$result->ID] * 100 ) / $max_relevance );
-		}
-
-		$search_results = $results;
+			if ( isset( $posts_relevance[$result] ) ) {
+				$search_relevance[$result] = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
+			}
+		}		
 	
 		return $results;
 	}
