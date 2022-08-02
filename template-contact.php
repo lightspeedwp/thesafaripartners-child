@@ -32,7 +32,7 @@ get_header(); ?>
 
 							<button class="tablinks" id="page-<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 								<?php } ?>
-								
+								<?php	wp_reset_query(); ?>
 							</div>
 
 							<?php
@@ -55,29 +55,7 @@ get_header(); ?>
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 						<picture>
-
-						<?php
-
-							$banner_image = get_field('banner_image');
-							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-
-							if( $banner_image) {
-								echo wp_get_attachment_image( $banner_image, $size );
-							} else { ?>
-								<img
-									src="<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png"
-									style="max-width: 300px; margin-right:90px;"
-									alt="" class="wp-image-14890"
-									decoding="async"
-									sizes="389px"
-									srcset="<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png 600w,
-									<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png 300w,
-									<?php echo home_url(); ?>/wp-content/uploads/2022/06/control-panel-banner-474x474.png 150w"
-								><?php
-							}
-							?>
-
-							
+							<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
 							<picture>
 							</div>
 						</div>
