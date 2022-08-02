@@ -52,7 +52,7 @@ get_header(); ?>
 								</div>
 							</div>
 
-				<div class="col-md-6 lsx-contact-module-image">
+							<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 					<?php   if ( is_page(13561) ) { ?>
 						<div class="map-full">
@@ -70,6 +70,8 @@ get_header(); ?>
 
 				</div>
 
+
+			<?php } ?>
 
 
 		<?php lsx_content_bottom(); ?>
