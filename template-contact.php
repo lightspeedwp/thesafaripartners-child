@@ -54,8 +54,12 @@ get_header(); ?>
 
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
+					<?php
+	$map = get_post_meta( get_the_ID(), 'map', true );
+
+		?>
 						<picture>
-						<?php if ( get_field( 'map' ) ): ?>
+						<?php if ( echo $mapt; ): ?>
 
 <?php else: ?>
 
@@ -63,7 +67,7 @@ get_header(); ?>
 
 <?php endif; ?>
 							
-							<picture>
+</picture>
 							</div>
 						</div>
 
