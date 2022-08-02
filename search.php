@@ -25,6 +25,12 @@ get_header(); ?>
 						'theme_location' => 'filter-menu',
 					)
 				);
+				if (isset($_GET['debug2'])) {
+					global $search_results;
+					print_r('<pre>');
+					print_r($search_results);
+					print_r('</pre>');
+				}
 			?>
 			<p>Click above to change your answers and show different results</p>
 			<div class="col-xs-12 col-sm-12 col-md-6">
