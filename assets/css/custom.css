@@ -755,8 +755,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.form-center {
 		text-align:center;
 	}
-	.pum form input,.pum form input[type="email"],.pum form input[type="date"],.pum form input[type="datetime"],.pum form input[type="datetime-local"],.pum form input[type="month"],.pum form input[type="number"],.pum form input[type="password"],.pum form input[type="search"],.pum form input[type="tel"],.pum form input[type="text"],.pum form input[type="time"],.pum form input[type="week"],.pum form input[type="url"],.pum .pum-form--style-default input,.pum .pum-form--style-default input[type="email"],.pum .pum-form--style-default input[type="date"],.pum .pum-form--style-default input[type="datetime"],.pum .pum-form--style-default input[type="datetime-local"],.pum .pum-form--style-default input[type="month"],.pum .pum-form--style-default input[type="number"],.pum .pum-form--style-default input[type="password"],.pum .pum-form--style-default input[type="search"],.pum .pum-form--style-default input[type="tel"],.pum .pum-form--style-default input[type="text"],.pum .pum-form--style-default input[type="time"],.pum .pum-form--style-default input[type="week"],.pum .pum-form--style-default input[type="url"],.pum .pum-age-form input,.pum .pum-age-form input[type="email"],.pum .pum-age-form input[type="date"],.pum .pum-age-form input[type="datetime"],.pum .pum-age-form input[type="datetime-local"],.pum .pum-age-form input[type="month"],.pum .pum-age-form input[type="number"],.pum .pum-age-form input[type="password"],.pum .pum-age-form input[type="search"],.pum .pum-age-form input[type="tel"],.pum .pum-age-form input[type="text"],.pum .pum-age-form input[type="time"],.pum .pum-age-form input[type="week"],.pum .pum-age-form input[type="url"] {
-		border:none;
+	.pum form input,.pum form input[type="email"],.pum form input[type="date"],.pum form input[type="datetime"],.pum form input[type="datetime-local"],.pum form input[type="month"],.pum form input[type="number"],.pum form input[type="password"],.pum form input[type="search"],.pum form input[type="tel"],.pum form input[type="text"],.pum form input[type="time"],.pum form input[type="week"],.pum form input[type="url"],.pum .pum-form--style-default input,.pum .pum-form--style-default input[type="email"],.pum .pum-form--style-default input[type="date"],.pum .pum-form--style-default input[type="datetime"],.pum .pum-form--style-default input[type="datetime-local"],.pum .pum-form--style-default input[type="month"],.pum .pum-form--style-default input[type="number"],.pum .pum-form--style-default input[type="password"],.pum .pum-form--style-default input[type="search"],.pum .pum-form--style-default input[type="tel"],.pum .pum-form--style-default input[type="text"],.pum .pum-form--style-default input[type="time"],.pum .pum-form--style-default input[type="week"],.pum .pum-form--style-default input[type="url"],.pum .pum-age-form input,.pum .pum-age-form input[type="email"],.pum .pum-age-form input[type="date"],.pum .pum-age-form input[type="datetime"],.pum .pum-age-form input[type="datetime-local"],.pum .pum-age-form input[type="month"],.pum .pum-age-form input[type="number"],.pum .pum-age-form input[type="password"],.pum .pum-age-form input[type="search"],.pum .pum-age-form input[type="tel"],.pum .pum-age-form input[type="text"],.pum .pum-age-form input[type="time"],.pum .pum-age-form input[type="week"],.pum .pum-age-form input[type="url"],.pum .gform_wrapper.gravity-theme select {
+		border:none;padding:0!important;
 		min-height:30px!important;
 		height:30px!important;
 	}
@@ -1333,15 +1333,15 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		right: 20%!important;
 		z-index: 4;
 		padding-top: 16%;}
-		.contact-left{margin-left:30px;}
-		.contact-right{margin-right:30px;}
+		.contact-left{margin-left:45px!important;}
+		.contact-right{margin-right:45px!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column {
 		position:relative;
 	}
 	.page-template-template-contact .contact-133993 .tablinks{width:140px; margin:0 auto;cursor: pointer;}
 	.page-template-template-contact .contact-133993 .wp-block-column {
 		width:24%!important;
-		margin:0!important;
+		margin:0;
 		padding:0 2px!important;
 	}
 	.page-template-template-contact .contact-135619 .lsx-contact-module-image{display: block!important;}
@@ -2073,7 +2073,16 @@ s	.financial-about .lsx-banner-column {
 	background:transparent;
 	font-family:"moret",serif!important;
 }
-.page-template-template-contact #primary form textarea {height:90px;}
+.page-template-template-contact #primary form textarea {height:90px;border-top:0;
+	border-right:0;
+	border-left:0;
+	border-bottom:1px solid #262423;
+	color:#262423;
+	padding:1px;
+	line-height:10px;
+	min-height:30px;
+	background:transparent;
+	font-family:"moret",serif!important;}
 .page-template-template-contact #primary form .gform_fields input[type='radio']{border: 1px solid#ce9e57;color:#ce9e57;height:12px;width:14px; }
 
 .page-template-template-contact #primary form input[type=submit] {
