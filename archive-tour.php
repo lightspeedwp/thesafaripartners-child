@@ -29,7 +29,6 @@ get_header(); ?>
 			?>
 
 			<?php
-
 				if ( have_posts() ) { 
 				?>
 				<div class="facetwp-hidden-filters hidden">

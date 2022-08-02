@@ -28,57 +28,93 @@ get_header(); ?>
 
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
-							<div class="row">
+							<div class="row <?php lsx_to_entry_class( 'entry-content' ); ?>">
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
 						</div>
 					</div>
 				</section>
 
+			<?php endwhile; ?>
 
-			<?php endwhile; ?><?php wp_reset_query(); ?>
+			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
-		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
-
-<?php 
-	if ( have_posts() ) {
-
-		$panels = array(
-			0 => array( 'who' ),
-			1 => array( 'what' ),
-			2 => array( 'when' ),
-			3 => array( 'budget' ),
-		);
-		tsp_mini_wizard( $panels );
-
-		?>
-		<div class="facetwp-hidden-filters hidden">
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'filter-menu',
-					)
+			<?php 
+				$panels = array(
+					'intro' => 'who',
+					0 => array( 'what' ),
+					1 => array( 'when' ),
+					2 => array( 'budget' ),
 				);
+				tsp_mini_wizard( $panels );
 			?>
-		</div>
 
+			<?php
+				$current_destination = get_the_ID();
+				$tours               = get_post_meta( get_the_ID(), 'tour_to_destination', false );
+				if ( false !== $tours && ! empty( $tours ) ) {
+					$query_args = array(
+						'post_type' => 'tour',
+						'post_status' => 'publish',
+						'facetwp' => true,
+						'post__id' => $tours,
+					);
+					$tours = new WP_Query( $query_args );
+	
+					if ( $tours->have_posts() ) {
+						global $lsx_to_archive;
+						$lsx_to_archive = 1;
+						?>
+						<div class="facetwp-hidden-filters hidden">
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'filter-menu',
+									)
+								);
+							?>
+						</div>
 		
-		<?php lsx_content_bottom(); ?>
+						<div class="slider-container mini-wizard-results lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+							<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+								<div class="lsx-to-slider-wrap">
+									<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
+									<?php
+									while ( $tours->have_posts() ) {
+										$tours->the_post();
 
-		<?php
-	} else {
-		get_template_part( 'partials/content', 'none' );
-	}
-	?>
-</main><!-- #main -->
+										if ( get_the_ID() === $current_destination ) {
+											continue;
+										}
 
-<?php lsx_content_after(); ?>
+										?>
+										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+											<?php lsx_to_content( 'content', 'tour' ); ?>
+										</div>
+									<?php
+									}
+									?>
+									</div>
+								</div>
+							</div>
+						</div>
 
-</div><!-- #primary -->
+						<?php
+					} else {
+						get_template_part( 'partials/content', 'none' );
+					} 
+					
+					wp_reset_query();
+				}
+			?>
+
+		</main><!-- #main -->
+
+		<?php lsx_content_after(); ?>
+
+	</div><!-- #primary -->
 
 <?php lsx_content_wrap_after(); ?>
-
-<?php // get_sidebar(); ?>
 
 <?php
 get_footer();
