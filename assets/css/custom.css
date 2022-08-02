@@ -808,7 +808,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	/* Style the tab */
 	#primary .tab {
 		overflow:hidden;
-		right:57%;
+		right:52%;
 		z-index:9;
 		margin-top:1%;
 	}
@@ -1330,7 +1330,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.page-template-template-contact .contact-133993 .lsx-contact-module .wp-block-column {
 		position:relative;
-		height:35vh!important;
 	}
 	.page-template-template-contact .contact-133993 .wp-block-column {
 		width:24%!important;
