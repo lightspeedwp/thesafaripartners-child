@@ -61,8 +61,8 @@ get_header(); ?>
 
 						<?php } 
 						else {
-							echo  '<picture>
-							<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
+							echo  '<picture>';
+							echo get_the_post_thumbnail($page->ID,'large'); ?>
 							<picture>';
 						}
 						
