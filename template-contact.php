@@ -52,17 +52,11 @@ get_header(); ?>
 								</div>
 							</div>
 
-							<?php
-
-	// Display the product banner.
-	$map = get_post_meta( get_the_ID(), 'map', true );
-		?>
+	
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 						<picture>
 						<?php
-
-$map = get_field('map');
 
 if ( has_post_thumbnail() ) {
 	echo get_the_post_thumbnail($page->ID,'large'); 
