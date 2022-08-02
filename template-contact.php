@@ -59,7 +59,7 @@ get_header(); ?>
 
 		?>
 						<picture>
-						<?php if ( echo $mapt; ): ?>
+						<?php if( $map) { echo $map; }?>
 
 <?php else: ?>
 
