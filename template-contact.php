@@ -55,7 +55,14 @@ get_header(); ?>
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 						<picture>
-							<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
+						<?php if ( get_field( 'map' ) ): ?>
+
+<?php else: ?>
+
+	<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
+
+<?php endif; ?>
+							
 							<picture>
 							</div>
 						</div>
