@@ -61,11 +61,9 @@ get_header(); ?>
 						<picture>
 						<?php if( $map) { echo $map; }?>
 
-<?php else: ?>
 
 	<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
 
-<?php endif; ?>
 							
 </picture>
 							</div>
