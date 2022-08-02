@@ -32,7 +32,7 @@ get_header(); ?>
 
 							<button class="tablinks" id="page-<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 								<?php } ?>
-								<?php	wp_reset_query(); ?>
+								
 							</div>
 
 							<?php
