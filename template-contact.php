@@ -55,8 +55,16 @@ get_header(); ?>
 				<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 						<picture>
-							<?php echo get_the_post_thumbnail($page->ID,'large'); ?>
-							<picture>
+						<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
+						<?php if ( get_the_post_thumbnail( get_the_ID() ) ) { 
+                    the_post_thumbnail('large'); }
+                else {
+                    echo 
+                    '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10414.115504121639!2d-123.1041657!3d49.266375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5702308706ebfe9!2sThe%20Safari%20Partners!5e0!3m2!1sen!2sza!4v1659440538085!5m2!1sen!2sza" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>'
+                ; } ?>
+
+							
+</picture>
 							</div>
 						</div>
 
