@@ -47,9 +47,10 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	legend {
 	border-bottom:none;
 	}
+	.gform_wrapper input[type="email"],.gform_wrapper input[type="date"],.gform_wrapper input[type="datetime"],.gform_wrapper input[type="datetime-local"],.gform_wrapper input[type="month"],.gform_wrapper input[type="number"],.gform_wrapper input[type="password"],.gform_wrapper input[type="search"],.gform_wrapper input[type="tel"],.gform_wrapper input[type="text"],.gform_wrapper input[type="time"],.gform_wrapper input[type="week"],.gform_wrapper input[type="url"],.gform_wrapper select,.gform_wrapper textarea {opacity:0.6}
 	.gform_wrapper input[type="email"]:focus,.gform_wrapper input[type="date"]:focus,.gform_wrapper input[type="datetime"]:focus,.gform_wrapper input[type="datetime-local"]:focus,.gform_wrapper input[type="month"]:focus,.gform_wrapper input[type="number"]:focus,.gform_wrapper input[type="password"]:focus,.gform_wrapper input[type="search"]:focus,.gform_wrapper input[type="tel"]:focus,.gform_wrapper input[type="text"]:focus,.gform_wrapper input[type="time"]:focus,.gform_wrapper input[type="week"]:focus,.gform_wrapper input[type="url"]:focus,.gform_wrapper select:focus,.gform_wrapper textarea:focus {
 	color:#262423!important;
-	opacity:1;
+	opacity:1!important;
 	-webkit-box-shadow:none!important;
 	box-shadow: none!important;
 	}
@@ -827,16 +828,14 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		border:none;
 		outline:none;
 		cursor:pointer;
-		padding:0px 10px 2px;
+		padding:0px 0px 2px;
 		transition: 0.5s;
+		margin: 0 10px;
 	}
-	/* Change background color of buttons on hover */
-	#primary .tab button:hover {
-		border-bottom: 2px solid #ddd;
-	}
+	
 	/* Create an active/current tablink class */
 	#primary .tab button.active {
-		border-bottom: 2px solid #ccc;
+		border-bottom: 5px solid #000;
 	}
 	/* Style the tab content */
 	.tabcontent {
