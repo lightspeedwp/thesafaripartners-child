@@ -1,4 +1,4 @@
-<div id="Day" class="tabcontent">
+<div id="Day" class="tabcontent tours-wizard" style="display: block;">
 	<div class="col-md-12 col-sm-12">
 		<div class="lsx-tour-module">
 			<?php
@@ -9,11 +9,9 @@
 				
 				lsx_entry_before();
 				?>
-				<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
+				<article id="tour-<?php echo esc_attr( $post->post_name ); ?>">
 					<?php lsx_entry_top(); ?>
 
-					<div class="entry-content col-xs-12 col-sm-12 col-md-12">
-						<div class="itenary">
 							<div id="wizard" class="lsx-wizard" style="display: none;">
 								<?php
 								if ( lsx_to_has_itinerary() ) {
@@ -87,8 +85,7 @@
 								}
 							?>
 							</div>
-						</div>
-					</div>
+						
 					<?php lsx_entry_bottom(); ?>
 				</article>
 
