@@ -1719,7 +1719,9 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin:0 auto;
 	}
 	.single-lsx-to-tour .lsx-to-tour-content {
-		padding-top:8vh!important;
+		padding-top: 13vh!important;
+    width: 560px;
+    padding-left: 20px;
 	}
 	.single-lsx-to-tour .nav-pills {
 		display:none!important;
@@ -1781,12 +1783,15 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	object-fit:cover;
 	height:85vh!important;
 }
-.single-lsx-to-tour .lsx-contact-module-image{padding-left:0!important;}
+.single-lsx-to-tour .lsx-contact-module-image{
+	padding-left:0!important;
+}
 .single-lsx-to-tour .lsx-single-contact{width: 49%;
     position: absolute;
     bottom: 6px;
     left: 1px;
-    margin-left: -16px;}
+    margin-left: -16px;
+}
 .single-lsx-to-tour .content-area {
 	margin-bottom:0!important;
 	margin-top:0!important;
