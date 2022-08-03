@@ -58,6 +58,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		display:none;
 	}
 @media screen and (min-width:1000px) {
+	#masthead{background:#fff!important;}
 	.page.safari-styles {
 		margin-top:0px;
 	}
@@ -1792,6 +1793,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 .single-lsx-to-tour .lsx-banner-image-wrap img {
 	object-fit:cover;
 	height:85vh!important;
+	width:100%;
 }
 .single-lsx-to-tour .lsx-contact-module-image{
 	padding-left:0!important;
