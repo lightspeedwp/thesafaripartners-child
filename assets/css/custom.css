@@ -1434,7 +1434,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		color:#fff!important;
 		height:18px;
 		border-radius:0!important;
-		box-shadow:0!important;
+		box-shadow:none;
 		padding:0px 8px!important;
 	}
 	.archive .wrap.container {
@@ -2252,7 +2252,7 @@ s	.financial-about .lsx-banner-column {
 	position:absolute;
 }
 .checkbox-wrapper>[type="checkbox"]:focus+span {
-	box-shadow:1px 1px 1px 1px #6b6b6b;
+	box-shadow:none;
 }
 
 /* MINI Wizard Styles */
