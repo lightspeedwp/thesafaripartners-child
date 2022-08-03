@@ -1793,6 +1793,10 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     left: 1px;
     margin-left: -16px;
 }
+.single-lsx-to-tour #Price .lsx-single-contact{
+	width: 41%!important;
+    margin-left: -22px!important;
+}
 .single-lsx-to-tour .content-area {
 	margin-bottom:0!important;
 	margin-top:0!important;
