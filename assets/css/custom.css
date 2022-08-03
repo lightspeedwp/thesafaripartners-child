@@ -1793,6 +1793,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     left: 1px;
     margin-left: -16px;
 }
+.single-lsx-to-tour #accommodation .lsx-to-archive-item{margin-top:0!important;}
 .single-lsx-to-tour #Price .lsx-single-contact{
 	width: 41%!important;
     margin-left: -22px!important;
