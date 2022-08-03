@@ -875,7 +875,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		overflow:hidden;
 		right:0%;
 		z-index:9;
-		margin-top: 1%;
+		margin-top: 1%;margin-bottom:8px;border-bottom:1px solid #000;
 	}
 	/* Style the buttons that are used to open the tab content */
 	.intab button {
@@ -887,15 +887,16 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		outline:none;
 		cursor:pointer;
 		padding:0px 10px 2px;
+		opacity:0.8;
 		transition: 0.5s;
 	}
 	/* Change background color of buttons on hover */
 	.intab button:hover {
-		border-bottom: 2px solid #ddd;
+		opacity:1;
 	}
 	/* Create an active/current tablink class */
 	.intab button.active {
-		border-bottom: 2px solid #ccc;
+		opacity:1;
 	}
 	/* Style the tab content */
 	.intabcontent {
@@ -908,6 +909,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		transition-timing-function:ease-in;
 		transition:1s;
 	}
+	.intabcontent p{margin-top:10px;padding-left:10px;}
 	/* Go from zero to full opacity */
 	@keyframes fadeEffect {
 		from {
@@ -1432,8 +1434,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		color:#fff!important;
 		height:18px;
 		border-radius:0!important;
-		box-shadow:0;
-		padding:3px 8px!important;
+		box-shadow:0!important;
+		padding:0px 8px!important;
 	}
 	.archive .wrap.container {
 		width:1366px!important;
@@ -1725,9 +1727,9 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     padding-left: 40px;
 	}
 	.single-lsx-to-tour #Price .lsx-to-tour-content{
-	padding-top: 7vh!important;
+	padding-top: 3vh!important;
     width: 774px;
-    padding-left: 10px;
+    padding-left: 10px!important;
 	}
 	.single-lsx-to-tour #Price .table>tbody>tr>td{
 		padding: 2px!important;
