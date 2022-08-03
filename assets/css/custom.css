@@ -1808,6 +1808,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	width:400px;
 	padding: 0 0px;
 }
+.single-lsx-to-tour .step-content .lsx-to-archive-item{padding:0!important;}
 .single-lsx-to-tour .lsx-wizard-steps-wrapper{height:500px!important;}
 /*About */
 .lsx-to-widget-item-wrap.lsx-team {

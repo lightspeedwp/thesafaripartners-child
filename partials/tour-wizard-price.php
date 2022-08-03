@@ -11,18 +11,17 @@
 
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 						<?php lsx_entry_top(); ?>
-						<div class="col-md-6 lsx-tour-module-image">
-							<div class="lsx-banner-image-wrap">
-								<div class="lsx-to-thumb-slot" >
+						<div class="col-md-5 lsx-contact-module-image">
+					<div class="lsx-banner-image-wrap">
 									<picture>
 										<?php echo get_the_post_thumbnail( $page->ID, 'full' ); ?>
 									<picture>
-								</div>
+							
 
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-sm-12 col-md-6">
+						<div class="col-xs-12 col-sm-12 col-md-7">
 							<div class="lsx-to-archive-wrapper">
 								<div class="lsx-to-tour-content">
 									<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
