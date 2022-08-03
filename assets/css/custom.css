@@ -1270,6 +1270,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		border:1px solid #ce9e57;
 		padding:0;
 	}
+	body.page-template-template-contact{   height: 100%;
+		overflow-y: hidden;}
 	.page-template-template-contact .lsx-contact-module-image {
 		position:relative;
 		padding:0!important;
@@ -1281,7 +1283,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.page-template-template-contact .lsx-contact-module-image img {
 		object-fit:cover;
-		height:86vh!important;
+		height:89vh!important;
 	}
 	.page-template-template-contact #primary .center img {
 		box-align:center;
