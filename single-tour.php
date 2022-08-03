@@ -48,8 +48,11 @@ get_header(); ?>
 							<div class="col-md-4">
 								<button class="btn lsx-btn">Find out more</button>
 							</div>
-							<div class="col-md-4">
-								<button class="btn lsx-btn">Share with a Friend</button>
+							<div class="col-md-4 dropdown-share">
+								<button class="btn lsx-btn -lsx-share-initiated">Share with a Friend</button>
+								<div class="dropdown-content">
+								<?php lsx_sharing(); ?>
+ 								 </div>
 							</div>
 						</div>
 
@@ -68,4 +71,4 @@ get_header(); ?>
 <?php lsx_content_wrap_after(); ?>
 
 <?php
-get_footer();
+get_footer('new');

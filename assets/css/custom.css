@@ -61,7 +61,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.page.safari-styles {
 		margin-top:0px;
 	}
-	body.page-template-template-contact, body.page-template-template-wizard{ height: 100%;
+	body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour{ height: 100%;
 		overflow-y: hidden;position: fixed; width:100%;}
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
@@ -331,6 +331,32 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		padding-right:10px;
 		display: inline;
 	}
+	.dropdown-share {
+		position: relative;
+		display: inline-block;
+	  }
+	  
+	  .dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f1f1f1;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	  }
+	  
+	  .dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	  }
+	  
+	  .dropdown-content a:hover {background-color: #ddd;}
+	  
+	  .dropdown-share:hover .dropdown-content {display: block;}
+	  
+	  .dropdown-share:hover .dropbtn {background-color: #3e8e41;}
 	/*Bread crumbs */
 	.breadcrumbs-container {
 		display:none;
@@ -405,7 +431,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
   .tax-travel-style .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
-  .tax-travel-style .lsx-wizard-button-next:hover, .page-template-template-wizard .lsx-wizard-button-next{background:#262423!important;}
+  .tax-travel-style .lsx-wizard-button-next:hover, .page-template-template-wizard .lsx-wizard-button-next:hover{background:#262423!important;}
   .tsp-seperator{padding:0 15px; height:2px; border-bottom: 1px solid #262423;width: 1324px;
     margin-left: 10px!important;
     margin: 0 auto;}
