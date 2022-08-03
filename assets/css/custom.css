@@ -1806,9 +1806,9 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 }
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
 	width:400px;
-	float:right;
 	padding: 0 0px;
 }
+.single-lsx-to-tour .lsx-wizard-steps-wrapper{height:500px!important;}
 /*About */
 .lsx-to-widget-item-wrap.lsx-team {
 	margin:0;
