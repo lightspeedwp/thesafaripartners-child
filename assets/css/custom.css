@@ -61,7 +61,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.page.safari-styles {
 		margin-top:0px;
 	}
-	body.page-template-template-contact{ height: 100%;
+	body.page-template-template-contact, body.page-template-template-wizard{ height: 100%;
 		overflow-y: hidden;position: fixed; width:100%;}
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
