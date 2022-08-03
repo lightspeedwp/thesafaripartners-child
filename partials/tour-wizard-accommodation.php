@@ -26,11 +26,10 @@
 										<div class="step-content">
 											<div id="accommodation-<?php echo esc_attr( get_the_ID() ); ?>" class="lsx-to-archive-item itinerary-item col-xs-12">
 												<div class="lsx-to-archive-container">
-													<div class="col-md-6 lsx-tour-module-image">
-														<div class="lsx-banner-image-wrap">
-															<div class="lsx-to-thumb-slot">
+												<div class="col-md-6 lsx-contact-module-image">
+													<div class="lsx-banner-image-wrap">
 															<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
-															</div>
+															
 														</div>
 													</div>
 	
