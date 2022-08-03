@@ -1824,6 +1824,30 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	padding: 0 0px;
 }
 .single-lsx-to-tour .lsx-wizard-steps-wrapper{height:500px!important;}
+
+.example+[data-readmore-toggle],
+.example[data-readmore] {
+  display: block;
+}
+/*Read more */
+.example[data-readmore]::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 85%);
+  bottom: 0;
+  content: '';
+  display: inline-block;
+  height: 250px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.remove-after::after {
+  display: none !important;
+}
+
+[data-readmore-toggle] {
+  margin-left: 15px;
+}
 /*About */
 .lsx-to-widget-item-wrap.lsx-team {
 	margin:0;

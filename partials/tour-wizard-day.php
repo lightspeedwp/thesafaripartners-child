@@ -60,7 +60,7 @@
 																					lsx_to_itinerary_excludes( '<span class="' . $meta_class . 'day-excludes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Excluded', 'tour-operator' ) . ':</span> ', '</span>' );
 																					?>
 																				</div>
-																					<div class="entry-content">
+																					<div class="entry-content example">
 																						<?php lsx_to_itinerary_description(); ?>
 																					</div>
 																				</div>

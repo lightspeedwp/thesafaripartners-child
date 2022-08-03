@@ -55,6 +55,21 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php lsx_content_wrap_after(); ?>
-
+<script>
+$('.example').readmore({
+  collapsedHeight: 300,
+  speed: 500,
+  embedCSS: false,
+  moreLink: '<a href="#">More information</a>',
+  lessLink: '<a href="#">Less information</a>',
+  beforeToggle: function(trigger, element, expanded) {
+    if (expanded === false) {
+      element.addClass('remove-after');
+    } else {
+      element.removeClass('remove-after');
+    }
+  }
+});
+</script>
 <?php
 get_footer('new');
