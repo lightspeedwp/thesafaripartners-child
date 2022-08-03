@@ -12,8 +12,8 @@
 
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 						<?php lsx_entry_top(); ?>
-						<div class="col-md-6 lsx-tour-module-image">
-							<div class="lsx-banner-image-wrap">
+						<div class="col-md-6 lsx-tour-module-map">
+							<div class="lsx-banner-map-wrap">
 								<div class="lsx-to-thumb-slot" >
 									<?php lsx_to_map(); ?>
 								</div>

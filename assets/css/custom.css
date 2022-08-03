@@ -321,6 +321,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.single-lsx-to-tour #Maps .lsx-to-section-inner {
 		padding:0!important;
+		display: inline-block;
 	}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview {
 		height:90vh;
@@ -1720,8 +1721,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.single-lsx-to-tour .lsx-to-tour-content {
 		padding-top: 13vh!important;
-    width: 560px;
-    padding-left: 20px;
+    width: 550px;
+    padding-left: 40px;
 	}
 	.single-lsx-to-tour .nav-pills {
 		display:none!important;
