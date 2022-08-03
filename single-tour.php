@@ -46,7 +46,7 @@ get_header(); ?>
 								<button class="btn lsx-btn popup-inquire">Book It!</button>
 							</div>
 							<div class="col-md-4">
-								<button class="btn lsx-btn">Find out more</button>
+								<button class="btn lsx-btn">DOWNLOAD ITINERY</button>
 							</div>
 							<div class="col-md-4 dropdown-share">
 								<button class="btn lsx-btn -lsx-share-initiated">Share with a Friend</button>
