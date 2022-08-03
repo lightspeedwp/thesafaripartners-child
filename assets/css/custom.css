@@ -542,7 +542,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		padding-right:3px;
 		padding-left:3px;
 		margin-bottom:8px;
-    height:260px;
+    height:240px;
 	}
 	.wizard-what .lsx-to-widget-thumb {
 		display:contents;
@@ -558,7 +558,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.wizard-what .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:200px;
+		height:180px;
 		object-fit:cover;
 	}
   .tax-travel-style .wizard-who, .single .wizard-who{height: 200px;}
@@ -566,12 +566,12 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
   .tax-travel-style .wizard-who, .tax-travel-style .wizard-where, .tax-travel-style .wizard-what, .tax-travel-style .wizard-when, .tax-travel-style .wizard-budget{padding-top:50px!important;}
   .page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:200px;
+		height:180px;
 		object-fit:cover;
 	}
   .page-template-template-wizard .wizard-where .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:200px;
+		height:180px;
 		object-fit:cover;
 	}
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
@@ -681,7 +681,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
   .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 156px;
-    height: 262px;
+    height: 236px;
     margin-left: -116px;
     padding-left: 117px;
     padding-top: 6px;
