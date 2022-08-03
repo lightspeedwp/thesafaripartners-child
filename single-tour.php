@@ -10,7 +10,7 @@ get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-	<div id="primary" class="content-area wizard-landing col-sm-12 <?php echo esc_attr( lsx_main_class() ); ?>">
+	<div id="primary" class="content-area wizard-landing <?php echo esc_attr( lsx_main_class() ); ?>">
 
 		<?php lsx_content_before(); ?>
 
