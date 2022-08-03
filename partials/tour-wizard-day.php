@@ -35,11 +35,10 @@
 															<div class="step-content">
 																<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
 																	<div class="lsx-to-archive-container">
-																		<div class="col-md-6 lsx-tour-module-image">
+																	<div class="col-md-6 lsx-contact-module-image">
 																			<div class="lsx-banner-image-wrap">
-																				<div class="lsx-to-thumb-slot">
 																					<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
-																				</div>
+																				
 																			</div>
 																		</div>
 
