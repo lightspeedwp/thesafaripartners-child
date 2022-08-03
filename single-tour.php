@@ -41,6 +41,7 @@ get_header(); ?>
 
 						<?php get_template_part( 'partials/tour-wizard', 'maps' ); ?>
 										
+						<div class="lsx-single-contact">
 						<div class="tours-nav">
 							<div class="col-md-4">
 								<button class="btn lsx-btn popup-inquire">Book It!</button>
@@ -63,7 +64,7 @@ get_header(); ?>
  								 </div>
 							</div>
 						</div>
-
+						</div>
 					</div>
 				</div>
 			</div>
