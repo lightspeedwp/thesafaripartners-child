@@ -23,7 +23,17 @@
 								<div class="lsx-to-summary">
 									<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 								</div>
-								<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
+								<?php
+				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+				lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+				the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key">' . esc_html__( 'Travel Style', 'tour-operator' ) . ':</span> ', ', ', '</span><br/>' );
+				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+
+				if ( function_exists( 'lsx_to_connected_activities' ) ) {
+					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
+				}
+				?>
 								<?php the_content(); ?>
 							</div>
 						</div>
