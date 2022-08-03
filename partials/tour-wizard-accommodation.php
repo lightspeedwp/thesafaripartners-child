@@ -29,7 +29,7 @@
 													<div class="col-md-6 lsx-tour-module-image">
 														<div class="lsx-banner-image-wrap">
 															<div class="lsx-to-thumb-slot">
-																<?php lsx_thumbnail( 'large', get_the_ID() ); ?>
+															<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 															</div>
 														</div>
 													</div>
