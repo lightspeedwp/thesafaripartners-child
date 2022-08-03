@@ -27,7 +27,7 @@
 													while ( lsx_to_itinerary_loop() ) {
 														
 														lsx_to_itinerary_loop_item();
-														$thumb = lsx_to_itinerary_thumbnail();
+														$large = lsx_to_itinerary_thumbnail();
 														?>
 
 														<div class="lsx-wizard-step">
@@ -47,13 +47,8 @@
 																				<div class="lsx-to-tour-content">
 																					<h3 class="lsx-to-archive-content-title"><?php lsx_to_itinerary_title(); ?></h3>
 																					<p class="lsx-to-archive-content-tagline"><?php lsx_to_itinerary_tagline(); ?></p>
-
-																					<div class="entry-content">
-																						<?php lsx_to_itinerary_description(); ?>
-																					</div>
-																				</div>
-
-																				<div class="lsx-to-archive-meta-data">
+																					
+																					<div class="lsx-to-archive-meta-data">
 																					<?php
 																					$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
@@ -64,6 +59,12 @@
 																					lsx_to_itinerary_excludes( '<span class="' . $meta_class . 'day-excludes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Excluded', 'tour-operator' ) . ':</span> ', '</span>' );
 																					?>
 																				</div>
+																					<div class="entry-content">
+																						<?php lsx_to_itinerary_description(); ?>
+																					</div>
+																				</div>
+
+																				
 																			</div>
 																		</div>
 																	</div>
