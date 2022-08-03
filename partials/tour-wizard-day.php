@@ -27,7 +27,7 @@
 													while ( lsx_to_itinerary_loop() ) {
 														
 														lsx_to_itinerary_loop_item();
-														$large = lsx_to_itinerary_thumbnail();
+														$thumb = lsx_to_itinerary_thumbnail('large');
 														?>
 
 														<div class="lsx-wizard-step">
