@@ -102,7 +102,7 @@
 																		$park_fees_column = true;
 																	}
 
-																	$tab_row .= '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now">Book Now</button></td>';
+																	$tab_row .= '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire">Book Now</button></td>';
 
 																	$tab_row .= '</tr>';
 
