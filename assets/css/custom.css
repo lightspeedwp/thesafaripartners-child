@@ -425,6 +425,14 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.page-template-template-wizard .wizard-budget .col-md-2{text-align:center;}
   .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
+  .tax-travel-style .archive-intro .sx-to-widget-thumb{display:contents;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;}
+	.tax-travel-style .archive-intro .sx-to-widget-thumb img{overflow:hidden;
+		height:220px;
+		object-fit:cover;}
+	.tax-travel-style .archive-intro p{width:586px;}	
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
   .tax-travel-style .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
