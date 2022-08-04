@@ -614,7 +614,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		width: 100%!important;
 	}
 	.tax-travel-style .lsx-wizard-progress-buttons-wrapper{
-		position: absolute!important;
+		position: absolute!important;s
 		z-index: 1;
 		left: 48%!important;
 		margin: 4px auto 6px!important;
@@ -624,6 +624,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.tax-travel-style .lsx-wizard-progress-buttons .steps1{
 		display:inline-block!important;
 	}
+	.tax-travel-style .lsx-wizard-progress-buttons {text-transform: capitalize ;
   .tax-travel-style .wizard-who .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
