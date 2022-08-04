@@ -398,7 +398,7 @@ function openinCity(evt, eventName) {
 				'position': 'relative',
 				'overflow': 'hidden',
 				'width': '100%',
-				'min-height': '240px'
+				'min-height': globalMinHeight + 'px'
 			});
 		return result;
 	}
