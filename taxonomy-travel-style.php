@@ -30,7 +30,7 @@ get_header(); ?>
 		<div class="col-sm-4">
 			<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
 				<div class="lsx-to-widget-thumb">
-					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-block-post-grid-square' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="lsx-to-widget-thumb">
