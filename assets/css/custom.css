@@ -1164,7 +1164,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		padding:0!important;
 		margin:2px;
-		width:438px!important;
 		border:1px solid #fff;
 	}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover {
@@ -1172,9 +1171,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover h4 a {
 		color:#ce9e57;
-	}
-	.who-posts .type-travel-style {
-		width:438px!important;
 	}
 	.who-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
@@ -1204,9 +1200,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.tours-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover h4 a {
 		color:#ce9e57;
-	}
-	.tours-posts .type-travel-style {
-		width:309px!important;
 	}
 	.tours-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
