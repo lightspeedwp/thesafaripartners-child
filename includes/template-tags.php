@@ -62,3 +62,27 @@ function tsp_mini_wizard( $panels = array() ) {
 	</form>
 	<?php
 }
+
+/**
+ * Adding in afunction to call the search relevance.
+ *
+ * @param integer $post_id
+ * @return string
+ */
+function tsp_get_search_relevance( $post_id = 0 ) {
+	global $search_relevance;
+	$return = '';
+	if ( 0 !== $post_id && null !== $search_relevance && isset( $search_relevance[ $post_id ] ) ) {
+		
+		switch ( $search_relevance[ $post_id ] ) {
+			case $search_relevance[ $post_id ] > 80 :
+				$relevance_class = 'red';
+				break;
+			default:
+				$relevance_class = 'orange';
+				break;
+		}
+		$return = '<div class="' . $relevance_class . '">' . $search_relevance[ $post_id ] . '</div>';
+	}
+	return $return;
+}

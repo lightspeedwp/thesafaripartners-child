@@ -77,6 +77,13 @@
 				$format = lsx_translate_format_to_fontawesome( $format );
 				?>
 
+				<?php
+				$relevance = tsp_get_search_relevance( get_the_ID() );
+				if ( '' !== $relevance ) {
+					echo '<div class="relevance">' . $relevance . '</div>';
+				}
+				?>
+
 				<h3 class="entry-title">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<a href="<?php echo esc_url( $archive_link ); ?>" class="format-link has-thumb fa fa-<?php echo esc_attr( $format ); ?>"></a>
