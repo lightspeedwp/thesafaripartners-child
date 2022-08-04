@@ -383,34 +383,35 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		width:1342px;
 		padding:0 9px;
 	}
+	.page-template-template-wizard .wizard-who .col-md-3, .page-template-template-wizard .wizard-what .col-md-3, .page-template-template-wizard .wizard-where .col-md-3, .page-template-template-wizard .wizard-when .col-md-3, .page-template-template-wizard .wizard-budget .col-md-3{padding-left:0!important;}
 	.wizard-who {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 8px;
+    padding: 80px 0px 0px 0px;
 	}
 	.wizard-what {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 8px;
+    padding: 80px 0px 0px 0px;
 	}
 	.wizard-where {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 8px;
+    padding: 80px 0px 0px 0px;
 	}
 	.wizard-when {
 		margin: 0 auto;
     width: 1334px;
-    padding: 80px 0px 0px 8px;
+    padding: 80px 0px 0px 0px;
 	}
 	.wizard-budget {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 8px;
+    padding: 80px 0px 0px 0px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
@@ -475,7 +476,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 			}
 
 	.lsx-wizard-button-previous span:before {
-		background-image: url('img/tsp-see-more-arrow.svg');
+		background-image: url('img/tsp-see-more-arrow-left.svg');
     background-size: 20px 20px;
     display: inline-block;
     width: 20px;
@@ -730,11 +731,11 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
   font-family: FontAwesome;
-  top: -8.2px;
-  left: 0px;
-  font-weight: 100;
-  color: #ce9e57;
-  font-size: 15px;
+  top: -0.2px;
+    left: 3px;
+    font-weight: 100;
+    color: #ce9e57;
+    font-size: 19px;
 	}
 
 	.page-template-template-wizard .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -859,7 +860,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	
 	/* Create an active/current tablink class */
 	#primary .tab button.active {
-		border-bottom: 5px solid #000;
+		border-bottom: 5px solid #262423;
 	}
 	/* Style the tab content */
 	.tabcontent {
@@ -876,7 +877,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		overflow:hidden;
 		right:0%;
 		z-index:9;
-		margin-top: 1%;margin-bottom:8px;border-bottom:1px solid #000;
+		margin-top: 1%;margin-bottom:8px;border-bottom:1px solid #262423;
 	}
 	/* Style the buttons that are used to open the tab content */
 	.intab button {
