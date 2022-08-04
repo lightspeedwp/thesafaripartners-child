@@ -35,6 +35,11 @@ if ( 1 !== $lsx_to_archive ) {
 		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
 		<?php
 			lsx_to_entry_content_top();
+
+			$relevance = tsp_get_search_relevance( get_the_ID() );
+			if ( '' !== $relevance ) {
+				echo '<div>' . $relevance . '</div>';
+			}
 			the_excerpt();
 			lsx_to_entry_content_bottom();
 		?>
