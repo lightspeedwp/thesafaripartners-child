@@ -80,7 +80,7 @@
 				<?php
 				$relevance = tsp_get_search_relevance( get_the_ID() );
 				if ( '' !== $relevance ) {
-					echo '<div class="relevance">' . esc_attr__( 'Shaman Score', 'thesafaripartners-child' ) . $relevance . '%</div>';
+					echo '<div class="relevance">' . esc_attr__( 'Shaman Score', 'thesafaripartners-child' ) . $relevance . '</div>';
 				}
 				?>
 

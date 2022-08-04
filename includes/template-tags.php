@@ -73,7 +73,6 @@ function tsp_get_search_relevance( $post_id = 0 ) {
 	global $search_relevance;
 	$return = '';
 	if ( 0 !== $post_id && null !== $search_relevance && isset( $search_relevance[ $post_id ] ) ) {
-		
 		switch ( $search_relevance[ $post_id ] ) {
 			case $search_relevance[ $post_id ] > 80 :
 				$relevance_class = 'red';
@@ -82,7 +81,7 @@ function tsp_get_search_relevance( $post_id = 0 ) {
 				$relevance_class = 'orange';
 				break;
 		}
-		$return = '<div class="' . $relevance_class . '">' . $search_relevance[ $post_id ] . '</div>';
+		$return = '<span class="' . $relevance_class . '">' . $search_relevance[ $post_id ] . '%</span>';
 	}
 	return $return;
 }
