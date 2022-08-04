@@ -388,30 +388,30 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-what {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-where {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-when {
 		margin: 0 auto;
     width: 1334px;
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 0px 8px;
 	}
 	.wizard-budget {
 		margin: 0 auto;
     width: 1334px;
     display: flex;
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 0px 8px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;

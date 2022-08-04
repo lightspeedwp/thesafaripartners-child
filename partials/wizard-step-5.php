@@ -10,13 +10,13 @@
 				<?php
 				$terms = get_terms( 'budget', array( 'hide_empty' => 0 ) );
 				?>
-
+<article class="col-md-2 status-publish hentry"></article>
 				<?php foreach ( $terms as $term ) : 
 					
 					$value = apply_filters( 'the_title', $term->slug );
 					?>
 					<!-- post -->
-					<article class="col-md-3 status-publish hentry">
+					<article class="col-md-2 status-publish hentry">
 						<div class="checkbox-wrapper">
 							<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check"  type="checkbox" name="fwp_budget" value="<?php echo esc_html( $value ); ?>" />
 							<span aria-hidden="true"></span>
