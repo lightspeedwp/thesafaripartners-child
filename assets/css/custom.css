@@ -431,8 +431,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	overflow:hidden;}
 	.tax-travel-style .archive-intro .lsx-to-widget-thumb img{overflow:hidden;
 		height:220px;
-		object-fit:cover;}
-	.tax-travel-style .archive-intro p{width:586px;}	
+		object-fit:cover;width:100%;}
+	.tax-travel-style .archive-intro p{width:686px;}	
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
   .tax-travel-style .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
@@ -2113,8 +2113,9 @@ s	.financial-about .lsx-banner-column {
 
 .tax-travel-style .archive-intro {
 	padding-bottom: 60px!important;
-    margin: 60px 0px 17px 16px!important;
+    margin: 60px 0px 80px 8px!important;
     width: 1322px!important;
+	border-bottom:1px solid #000;
     
 }
 .tax-travel-style #main .col-xs-1, .tax-travel-style #main .col-sm-1, .tax-travel-style #main .col-md-1, .tax-travel-style #main .col-lg-1, .tax-travel-style #main .col-xs-2, .tax-travel-style #main .col-sm-2, .tax-travel-style #main .col-md-2, .tax-travel-style #main .col-lg-2, .tax-travel-style #main .col-xs-3, .tax-travel-style #main .col-sm-3, .tax-travel-style #main .col-md-3, .tax-travel-style #main .col-lg-3, .tax-travel-style #main .col-xs-4, .tax-travel-style #main .col-sm-4, .tax-travel-style #main .col-md-4, .tax-travel-style #main .col-lg-4, .tax-travel-style #main .col-xs-5, .tax-travel-style #main .col-sm-5, .tax-travel-style #main .col-md-5, .tax-travel-style #main .col-lg-5, .tax-travel-style #main .col-xs-6, .tax-travel-style #main .col-sm-6, .tax-travel-style #main .col-md-6, .tax-travel-style #main .col-lg-6, .tax-travel-style #main .col-xs-7, .tax-travel-style #main .col-sm-7, .tax-travel-style #main .col-md-7, .tax-travel-style #main .col-lg-7, .tax-travel-style #main .col-xs-8, .tax-travel-style #main .col-sm-8, .tax-travel-style #main .col-md-8, .tax-travel-style #main .col-lg-8, .tax-travel-style #main .col-xs-9, .tax-travel-style #main .col-sm-9, .tax-travel-style #main .col-md-9, .tax-travel-style #main .col-lg-9, .tax-travel-style #main .col-xs-10, .tax-travel-style #main .col-sm-10, .tax-travel-style #main .col-md-10, .tax-travel-style #main .col-lg-10, .tax-travel-style #main .col-xs-11, .tax-travel-style #main .col-sm-11, .tax-travel-style #main .col-md-11, .tax-travel-style #main .col-lg-11, .tax-travel-style #main .col-xs-12, .tax-travel-style #main .col-sm-12, .tax-travel-style #main .col-md-12, .tax-travel-style #main .col-lg-12{padding:0!important;}

@@ -79,7 +79,6 @@ function openinCity(evt, eventName) {
 
 					$steps.css({
 						'position': 'absolute',
-						'min-height': globalMinHeight + 'px',
 						'width': '100%'
 					});
 
@@ -398,7 +397,6 @@ function openinCity(evt, eventName) {
 				'position': 'relative',
 				'overflow': 'hidden',
 				'width': '100%',
-				'min-height': globalMinHeight + 'px'
 			});
 		return result;
 	}
@@ -583,7 +581,7 @@ function openinCity(evt, eventName) {
 
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
-			minHeight: 400,
+			minHeight: 200,
 			activeStep: 1,
 			localization: {
 				buttons: {
