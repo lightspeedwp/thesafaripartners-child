@@ -607,9 +607,15 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:184px!important;
+		height:174px!important;
 		object-fit:cover;
 	}
+	.tax-travel-style .lsx-wizard-progress-buttons{width: 100%!important;}
+	.tax-travel-style .lsx-wizard-progress-buttons-wrapper{position: absolute!important;
+		z-index: 1;
+		left: 48%!important;
+		margin: 4px auto 6px!important;
+		width: 500px;}
   .tax-travel-style .wizard-who .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
