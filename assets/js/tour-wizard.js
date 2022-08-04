@@ -79,7 +79,7 @@ function openinCity(evt, eventName) {
 
 					$steps.css({
 						'position': 'absolute',
-						'min-height': '200px!important',
+						'min-height': `${globalMinHeight}px`,
 						'width': '100%'
 					});
 
