@@ -41,7 +41,6 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="tsp-seperator"></div>
 
 	<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
@@ -49,9 +48,10 @@ get_header(); ?>
 		if ( have_posts() ) {
 
 			$panels = array(
-				0 => array( 'who', 'where' ),
-				1 => array( 'when' ),
-				2 => array( 'budget' ),
+				0 => array( 'who' ),
+				1 => array( 'where' ),
+				2 => array( 'when' ),
+				3 => array( 'budget' ),
 			);
 			tsp_mini_wizard( $panels );
 

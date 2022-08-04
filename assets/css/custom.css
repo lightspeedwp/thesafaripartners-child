@@ -423,7 +423,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.lsx-wizard {
 		position:relative;
 	}
-	.page-template-template-wizard .wizard-budget img, .page-template-template-wizard .wizard-budget .lsx-to-content{text-align:center;}
+	.page-template-template-wizard .wizard-budget .col-md-2{text-align:center;}
   .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
