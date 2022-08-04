@@ -11,18 +11,17 @@
 
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 						<?php lsx_entry_top(); ?>
-						<div class="col-md-6 lsx-tour-module-image">
-							<div class="lsx-banner-image-wrap">
-								<div class="lsx-to-thumb-slot" >
+						<div class="col-md-5 lsx-contact-module-image">
+					<div class="lsx-banner-image-wrap">
 									<picture>
 										<?php echo get_the_post_thumbnail( $page->ID, 'full' ); ?>
 									<picture>
-								</div>
+							
 
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-sm-12 col-md-6">
+						<div class="col-xs-12 col-sm-12 col-md-7">
 							<div class="lsx-to-archive-wrapper">
 								<div class="lsx-to-tour-content">
 									<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
@@ -103,7 +102,7 @@
 																		$park_fees_column = true;
 																	}
 
-																	$tab_row .= '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now">Book Now</button></td>';
+																	$tab_row .= '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire">Book Now</button></td>';
 
 																	$tab_row .= '</tr>';
 
@@ -217,4 +216,28 @@
 			?>
 		</div>
 	</div>
+	<div class="lsx-single-contact">
+						<div class="tours-nav">
+							<div class="col-md-4">
+								<button class="btn lsx-btn popup-inquire">Book It!</button>
+							</div>
+							<div class="col-md-4">
+								<button class="btn lsx-btn">DOWNLOAD ITINERY</button>
+							</div>
+							<div class="col-md-4 dropdown-share">
+								<button class="btn lsx-btn -lsx-share-initiated">Share with a Friend</button>
+								<div class="dropdown-content">
+								<?php
+				if ( class_exists( 'LSX_Sharing' ) ) {
+					lsx_content_sharing();
+				} else {
+					if ( function_exists( 'sharing_display' ) ) {
+						sharing_display( '', true );
+					}
+				}
+				?>
+ 								 </div>
+							</div>
+						</div>
+						</div>
 </div>

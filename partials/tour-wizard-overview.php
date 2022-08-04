@@ -7,8 +7,8 @@
 					the_post();
 					lsx_entry_before();
 					?>
-					<div class="col-md-6 lsx-tour-module-image">
-						<div class="lsx-banner-image-wrap">
+					<div class="col-md-6 lsx-contact-module-image">
+					<div class="lsx-banner-image-wrap">
 							<picture>
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 							<picture>
@@ -23,8 +23,16 @@
 								<div class="lsx-to-summary">
 									<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
 								</div>
-								<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
+								<div class="lsx-to-widget-meta-data">
+								<?php
+									$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+									lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+									lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+									?>
+								</div>	
 								<?php the_content(); ?>
+								<button class="tablinks" style="float:right;align:bottom;" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
 							</div>
 						</div>
 						<?php lsx_entry_bottom(); ?>
@@ -38,4 +46,28 @@
 			?>
 		</div>
 	</div>
+	<div class="lsx-single-contact">
+						<div class="tours-nav">
+							<div class="col-md-4">
+								<button class="btn lsx-btn popup-inquire">Book It!</button>
+							</div>
+							<div class="col-md-4">
+								<button class="btn lsx-btn">DOWNLOAD ITINERY</button>
+							</div>
+							<div class="col-md-4 dropdown-share">
+								<button class="btn lsx-btn -lsx-share-initiated">Share with a Friend</button>
+								<div class="dropdown-content">
+								<?php
+				if ( class_exists( 'LSX_Sharing' ) ) {
+					lsx_content_sharing();
+				} else {
+					if ( function_exists( 'sharing_display' ) ) {
+						sharing_display( '', true );
+					}
+				}
+				?>
+ 								 </div>
+							</div>
+						</div>
+						</div>
 </div>

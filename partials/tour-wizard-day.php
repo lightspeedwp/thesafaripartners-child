@@ -27,7 +27,7 @@
 													while ( lsx_to_itinerary_loop() ) {
 														
 														lsx_to_itinerary_loop_item();
-														$thumb = lsx_to_itinerary_thumbnail();
+														$thumb = lsx_to_itinerary_thumbnail('large');
 														?>
 
 														<div class="lsx-wizard-step">
@@ -35,11 +35,11 @@
 															<div class="step-content">
 																<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
 																	<div class="lsx-to-archive-container">
-																		<div class="col-md-6 lsx-tour-module-image">
+																	<div class="col-md-6 lsx-contact-module-image">
 																			<div class="lsx-banner-image-wrap">
-																				<div class="lsx-to-thumb-slot">
+																			<picture>
 																					<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
-																				</div>
+																			</picture>
 																			</div>
 																		</div>
 
@@ -48,13 +48,8 @@
 																				<div class="lsx-to-tour-content">
 																					<h3 class="lsx-to-archive-content-title"><?php lsx_to_itinerary_title(); ?></h3>
 																					<p class="lsx-to-archive-content-tagline"><?php lsx_to_itinerary_tagline(); ?></p>
-
-																					<div class="entry-content">
-																						<?php lsx_to_itinerary_description(); ?>
-																					</div>
-																				</div>
-
-																				<div class="lsx-to-archive-meta-data">
+																					
+																					<div class="lsx-to-archive-meta-data">
 																					<?php
 																					$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
@@ -65,6 +60,12 @@
 																					lsx_to_itinerary_excludes( '<span class="' . $meta_class . 'day-excludes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Excluded', 'tour-operator' ) . ':</span> ', '</span>' );
 																					?>
 																				</div>
+																					<div class="entry-content example">
+																						<?php lsx_to_itinerary_description(); ?>
+																					</div>
+																				</div>
+
+																				
 																			</div>
 																		</div>
 																	</div>
@@ -99,4 +100,28 @@
 			?>
 		</div>
 	</div>
+	<div class="lsx-single-contact">
+						<div class="tours-nav">
+							<div class="col-md-4">
+								<button class="btn lsx-btn popup-inquire">Book It!</button>
+							</div>
+							<div class="col-md-4">
+								<button class="btn lsx-btn">DOWNLOAD ITINERY</button>
+							</div>
+							<div class="col-md-4 dropdown-share">
+								<button class="btn lsx-btn -lsx-share-initiated">Share with a Friend</button>
+								<div class="dropdown-content">
+								<?php
+				if ( class_exists( 'LSX_Sharing' ) ) {
+					lsx_content_sharing();
+				} else {
+					if ( function_exists( 'sharing_display' ) ) {
+						sharing_display( '', true );
+					}
+				}
+				?>
+ 								 </div>
+							</div>
+						</div>
+						</div>
 </div>
