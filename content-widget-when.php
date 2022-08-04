@@ -21,7 +21,7 @@ if ( empty( $disable_single_link ) ) {
 				<div class="slider-container lsx-to-widget-items lsx-to-archive-template-grid">
 					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 						<div class="lsx-to-slider-wrap">
-							<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 3, "slidesToScroll": 3 }'>
+							<div class="lsx-to-slider-inner" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 
 								<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 												<div class="lsx-to-widget-thumb">
