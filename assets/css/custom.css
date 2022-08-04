@@ -1813,6 +1813,9 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		overflow:hidden;
 	}
 
+	.single-lsx-to-tour .lsx-tour-module-map{padding-left:0 !important;}
+	.single-lsx-to-tour.lsx-map{height:100%;}
+
 .single-lsx-to-tour .lsx-banner-image-wrap img {
 	object-fit:cover;
 	height:85vh!important;
