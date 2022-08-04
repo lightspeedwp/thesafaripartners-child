@@ -615,7 +615,9 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		z-index: 1;
 		left: 48%!important;
 		margin: 4px auto 6px!important;
-		width: 500px;}
+		width: 500px;
+	    bottom: 20px;}
+		.tax-travel-style .lsx-wizard-progress-buttons .steps1{display:block!important;}
   .tax-travel-style .wizard-who .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -2294,9 +2296,6 @@ s	.financial-about .lsx-banner-column {
 }
 
 /* MINI Wizard Styles */
-.mini-wizard-form .lsx-wizard-progress-buttons-wrapper {
-	display: none !important;
-}
 
 .mini-wizard-results .lsx-to-archive-thumb {
 	height: auto;
