@@ -325,8 +325,10 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		display: inline-block;
 	}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview {
-		height:86vh!important;
+		height:84vh!important;
 	}
+	.single-lsx-to-tour .lsx-to-meta-data{font-family:"moret",serif!important;font-size:16px!important;color:#6a6d5b;}
+	.single-lsx-to-tour .lsx-to-meta-data.lsx-to-meta-data-style{display:none;}
 	.single-lsx-to-tour .lsx-to-single-meta-data .lsx-to-meta-data {
 		width:auto;
 		float:left;
@@ -435,6 +437,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.tax-travel-style .archive-intro p{width:686px;}	
   .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
+  .lsx-cta{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;box-shadow: none;}
   .tax-travel-style .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
   .tax-travel-style .lsx-wizard-button-next:hover, .page-template-template-wizard .lsx-wizard-button-next:hover{background:#262423!important;}
   .tsp-seperator{padding:0 15px; height:2px; border-bottom: 1px solid #262423;width: 1324px;
@@ -614,7 +617,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		width: 100%!important;
 	}
 	.tax-travel-style .lsx-wizard-progress-buttons-wrapper{
-		position: absolute!important;s
+		position: absolute!important;
 		z-index: 1;
 		left: 48%!important;
 		margin: 4px auto 6px!important;

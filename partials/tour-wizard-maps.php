@@ -32,7 +32,7 @@
 									<?php lsx_to_tour_single_fast_facts(); ?>
 
 									<h4>Love this Tip?</h4>
-									<button class="btn lsx-btn popup-inquire">MAKE AN INQUIRY</button>
+									<button class="btn lsx-cta popup-inquire">MAKE AN INQUIRY</button>
 
 									<h4>You may also like</h4>
 									<?php lsx_to_related_items( 'travel-style' );
