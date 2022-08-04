@@ -948,6 +948,11 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     margin: 0px auto!important;}
     .search-results .archive-header-wrapper{display:none;}
     .search-results .content-area{margin-top:10px!important;}
+
+	.search-results .entry-content .relevance {
+		padding: 0 24px;
+	}
+
     #mega-menu-wrap-filter-menu #mega-menu-filter-menu{padding: 0px 0px 10px 0px!important;}
 	/*Gutenberg */
 	.gutenberg-compatible-template.using-gutenberg .entry-content {

@@ -259,7 +259,7 @@ function openinCity(evt, eventName) {
 	}
 
 	function slideLeft($elementToSlide, settings, $plugin, slideSuccessCallback) {
-
+		console.log( $elementToSlide.next().length );
 		if ($elementToSlide.next().length) {
 
 			$elementToSlide.clearQueue().animate({
@@ -267,6 +267,9 @@ function openinCity(evt, eventName) {
 			});
 
 			var $next = $elementToSlide.next();
+
+			console.log( 'Slide Left' );
+			console.log( $next );
 
 			$next.clearQueue().animate({
 				'margin-left': 0
