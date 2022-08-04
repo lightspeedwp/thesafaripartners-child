@@ -425,11 +425,11 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.page-template-template-wizard .wizard-budget .col-md-2{text-align:center;}
   .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
-  .tax-travel-style .archive-intro .sx-to-widget-thumb{display:contents;
+  .tax-travel-style .archive-intro .lsx-to-widget-thumb{display:contents;
 	justify-content:center;
 	align-items:center;
 	overflow:hidden;}
-	.tax-travel-style .archive-intro .sx-to-widget-thumb img{overflow:hidden;
+	.tax-travel-style .archive-intro .lsx-to-widget-thumb img{overflow:hidden;
 		height:220px;
 		object-fit:cover;}
 	.tax-travel-style .archive-intro p{width:586px;}	
