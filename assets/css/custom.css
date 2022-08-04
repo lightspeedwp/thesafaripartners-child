@@ -325,7 +325,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		display: inline-block;
 	}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview {
-		height:90vh;
+		height:86vh!important;
 	}
 	.single-lsx-to-tour .lsx-to-single-meta-data .lsx-to-meta-data {
 		width:auto;
@@ -1814,7 +1814,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 
 	.single-lsx-to-tour .lsx-tour-module-map{padding-left:0 !important;}
-	.single-lsx-to-tour .lsx-map{height:100%;}
 
 .single-lsx-to-tour .lsx-banner-image-wrap img {
 	object-fit:cover;

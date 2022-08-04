@@ -25,11 +25,16 @@
 							<div class="lsx-to-archive-wrapper">
 								<div class="lsx-to-tour-content">
 									<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
-										<h4 class="lsx-to-summary-title"><?php the_title(); ?></h4>
+										<h3 class="lsx-to-summary-title"><?php the_title(); ?></h3>
 									</div>
 
 									<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
 									<?php lsx_to_tour_single_fast_facts(); ?>
+
+									<h4>Love this Tip?</h4>
+									<button class="btn lsx-btn popup-inquire">MAKE AN INQUIRY</button>
+
+									<h4>You may also like</h4>
 									<?php lsx_to_related_items( 'travel-style' );
 
 									$connected_tours = get_post_meta( get_the_ID(), 'tour_to_accommodation', false );
