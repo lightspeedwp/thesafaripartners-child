@@ -325,7 +325,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		display: inline-block;
 	}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview {
-		height:84vh!important;
+		height:78vh!important;
 	}
 	.single-lsx-to-tour .lsx-to-meta-data{font-family:"moret",serif!important;font-size:16px!important;color:#6a6d5b;}
 	.single-lsx-to-tour .lsx-to-meta-data.lsx-to-meta-data-style{display:none;}
@@ -1807,7 +1807,21 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		border-bottom:2px solid #ce9e57;
 		font-family:"moret",serif!important;
 		width:100%;border-radius: 0!important;
+		box-shadow: none;
 	}
+	.lsx-to-single .tablinks{padding: 0;
+		background: #fff;
+		border: none!important;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #262423;
+		font-size: 16px;}
+		.lsx-to-single .tablinks:after{background-image: url('img/tsp-see-more-arrow.svg');
+			background-size: 10px 10px;
+			display: inline-block;
+			width: 10px;
+			height:10px;
+			content:"";}
 	.tours-nav .btn.popup-inquire{background:#ce9e57!important;}
 	.single-lsx-to-tour .lsx-banner-image-wrap {
 		display:contents;
