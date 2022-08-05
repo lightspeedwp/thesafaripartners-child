@@ -22,10 +22,9 @@ $tag = get_field('tagline', $term);
 		<main id="main" class="site-main entry-content" role="main">
 
 			<div class="archive-intro row">
+			<h2 class="category-title"><?php echo $tag; ?></h2>
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
-
-						<h2 class="category-title"><?php echo $tag; ?></h2>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
