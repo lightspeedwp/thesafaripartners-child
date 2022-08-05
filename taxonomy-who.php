@@ -23,7 +23,7 @@ get_header(); ?>
 						<?php $term = get_queried_object(); ?>
 						
 
-						<h2 class="category-title"><?php $term->tagline; ?></h2>
+						<h2 class="category-title"><?php echo $term->tagline; ?></h2>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
