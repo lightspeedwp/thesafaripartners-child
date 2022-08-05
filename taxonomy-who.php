@@ -7,6 +7,7 @@
  */
 
 get_header(); ?>
+<?php get_template_part( 'partials/who-banner', '1' ); ?>
 
 	<?php lsx_content_wrap_before(); ?>
 
