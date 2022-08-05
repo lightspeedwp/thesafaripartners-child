@@ -504,6 +504,7 @@ opacity: 0.4;
   .tax-who .wizard-who, .tax-who .wizard-where, .tax-who .wizard-what, .tax-who .wizard-when, .tax-who .wizard-budget{padding-top:50px!important;}
   
   .tax-who #wizard{padding-bottom:10px;}
+  .tax-who  .archive-header-wrapper{display:none;}
   .tax-who #wizard .step-content .col-md-3{padding-right:35px!important;}
   .tax-who #wizard .step-content .col-sm-2{padding: 0 2px!important;}
   .tax-who .wizard-where .col-sm-2{height:210px;}
@@ -1540,7 +1541,7 @@ opacity: 0.4;
 		box-shadow:none;
 		padding:0px 8px!important;
 	}
-	.archive .wrap.container {
+	.archive #primary {
 		width:1366px!important;
 		margin:0 auto;
 	}
