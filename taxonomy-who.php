@@ -6,7 +6,11 @@
  * @category who
  */
 
-get_header(); ?>
+get_header(); 
+$term = get_queried_object();
+$tag = get_field('tagline', $term);
+
+?>
 <?php get_template_part( 'partials/who-banner', '1' ); ?>
 
 	<?php lsx_content_wrap_before(); ?>
@@ -20,10 +24,8 @@ get_header(); ?>
 			<div class="archive-intro row">
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
-						<?php $term = get_queried_object(); ?>
-						
 
-						<h2 class="category-title"><?php echo $term->tagline; ?></h2>
+						<h2 class="category-title"><?php echo $tag; ?></h2>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
