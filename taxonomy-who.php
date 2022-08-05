@@ -22,7 +22,7 @@ get_header(); ?>
 					<div class="lsx-to-widget-description">
 						<?php $term = get_queried_object(); ?>
 
-						<h2 class="category-title"><?php echo $term->name; ?></h2>
+						<h2 class="category-title"><?php the_field('tagline'); ?></h2>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
