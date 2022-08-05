@@ -749,6 +749,7 @@ opacity: 0.4;
 		width:30px;
 		border:2px solid #262423;
 	}
+	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span{border:2px solid #ce9e57!important;}
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"] {
 		cursor:pointer;
 		border-radius:50%;
