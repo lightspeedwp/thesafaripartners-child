@@ -21,9 +21,9 @@ get_header(); ?>
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
 						<?php $term = get_queried_object(); ?>
-						<?php $terms = get_terms( 'who' ); ?>
+						
 
-						<h2 class="category-title"><?php the_field('tagline'); ?></h2>
+						<h2 class="category-title"><?php $term->tagline; ?></h2>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
