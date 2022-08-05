@@ -20,12 +20,10 @@ get_header(); ?>
 			<div class="archive-intro row">
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
-						<?php $term = get_queried_object(); 
-						
-						$term = get_field('tagline');
-if( $term ): ?> 
+						<?php $term = get_queried_object(); ?>
+						<?php $terms = get_terms( 'who' ); ?>
+
 						<h2 class="category-title"><?php the_field('tagline'); ?></h2>
-						<?php endif; ?>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
