@@ -1541,10 +1541,15 @@ opacity: 0.4;
 		box-shadow:none;
 		padding:0px 8px!important;
 	}
-	.archive #primary {
-		width:1366px!important;
+	.archive .wrap.container {
+		width:1366px;
 		margin:0 auto;
 	}
+	.tax-who .wrap.container {
+		width:100%!important;
+		margin:0 auto;
+	}
+	.tax-who #primary{width:1366px!important;}
 	.page .entry-content>div:not(:first-of-type) {
 		width:1336px;
 	}
