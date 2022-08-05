@@ -1550,7 +1550,10 @@ opacity: 0.4;
 		margin:0 auto;
 	}
 	.tax-who #primary{
-		width:1366px!important;margin:0 auto;
+		width:1366px!important;
+		margin:0 auto;
+		float:none!important;
+		display:flex;
 	}
 	.page .entry-content>div:not(:first-of-type) {
 		width:1336px;
