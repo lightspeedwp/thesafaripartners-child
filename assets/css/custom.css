@@ -426,6 +426,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		position:relative;
 	}
 	.page-template-template-wizard .wizard-budget .col-md-2{text-align:center;}
+
+
   .tax-travel-style .lsx-wizard-buttons-wrapper{margin-top:10px;}
   .tax-travel-style .archive-intro .lsx-to-widget-thumb{display:contents;
 	justify-content:center;
@@ -449,6 +451,80 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
   .tax-travel-style .wizard-where .col-sm-2{height:210px;}
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
   .tax-travel-style .safari-styles{margin-top:0!important;}
+
+  .tax-who .archive-intro {
+	padding-bottom: 80px!important;
+    margin: 60px 0px 40px 8px!important;
+    width: 1322px!important;
+	border-bottom:1px solid #000;
+    
+}
+.tax-who #main .col-xs-1, .tax-who #main .col-sm-1, .tax-who #main .col-md-1, .tax-who #main .col-lg-1, .tax-who #main .col-xs-2, .tax-who #main .col-sm-2, .tax-who #main .col-md-2, .tax-who #main .col-lg-2, .tax-who #main .col-xs-3, .tax-who #main .col-sm-3, .tax-who #main .col-md-3, .tax-who #main .col-lg-3, .tax-who #main .col-xs-4, .tax-who #main .col-sm-4, .tax-who #main .col-md-4, .tax-who #main .col-lg-4, .tax-who #main .col-xs-5, .tax-who #main .col-sm-5, .tax-who #main .col-md-5, .tax-who #main .col-lg-5, .tax-who #main .col-xs-6, .tax-who #main .col-sm-6, .tax-who #main .col-md-6, .tax-who #main .col-lg-6, .tax-who #main .col-xs-7, .tax-who #main .col-sm-7, .tax-who #main .col-md-7, .tax-who #main .col-lg-7, .tax-who #main .col-xs-8, .tax-who #main .col-sm-8, .tax-who #main .col-md-8, .tax-who #main .col-lg-8, .tax-who #main .col-xs-9, .tax-who #main .col-sm-9, .tax-who #main .col-md-9, .tax-who #main .col-lg-9, .tax-who #main .col-xs-10, .tax-who #main .col-sm-10, .tax-who #main .col-md-10, .tax-who #main .col-lg-10, .tax-who #main .col-xs-11, .tax-who #main .col-sm-11, .tax-who #main .col-md-11, .tax-who #main .col-lg-11, .tax-who #main .col-xs-12, .tax-who #main .col-sm-12, .tax-who #main .col-md-12, .tax-who #main .col-lg-12{padding:0!important;}
+
+.tax-who .tourslink .moretag{display:block!important;width:100%!important;margin:6px 0 0 0px!important; color:#262423!important;}
+.tax-who p .moretag{display:none!important;}
+
+.tax-who .desinations-landing-style>div:first-of-type .lsx-to-widget-thumb {
+	padding:0 1px!important;
+}
+.tax-who .desinations-landing-style>div:first-of-type img {
+	width:100%;
+}
+
+.tax-who .lsx-wizard-progress-buttons{
+    width: 100%!important;
+}
+.tax-who .lsx-wizard-progress-buttons-wrapper{
+    position: absolute!important;
+    z-index: 1;
+    left: 48%!important;
+    margin: 4px auto 6px!important;
+    width: 500px;
+    bottom: 20px;
+}
+.tax-who .lsx-wizard-progress-buttons .steps1{
+    display:inline-block!important;
+}
+.tax-who .lsx-wizard-progress-buttons {text-transform: capitalize ;}
+.tax-who .wizard-who .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
+.tax-who .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
+.tax-who .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+border: 1px solid #ce9e57;
+width: 163px;
+height: 202px;
+margin-left: -122px;
+padding-left: 124px;
+padding-top: 6px;
+background: #fff;
+opacity: 0.4;
+}
+
+.tax-who .wizard-who, .single .wizard-who{height: 200px;}
+  .tax-who .wizard-who, .tax-who .wizard-where, .tax-who .wizard-what, .tax-who .wizard-when, .tax-who .wizard-budget{padding-top:50px!important;}
+  .tax-who .wizard-who, .tax-who .wizard-where, .tax-who .wizard-what, .tax-who .wizard-when, .tax-who .wizard-budget{padding-top:50px!important;}
+  
+  .tax-who #wizard{padding-bottom:10px;}
+  .tax-who #wizard .step-content .col-md-3{padding-right:35px!important;}
+  .tax-who #wizard .step-content .col-sm-2{padding: 0 2px!important;}
+  .tax-who .wizard-where .col-sm-2{height:210px;}
+  .tax-who .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
+  .tax-who .safari-styles{margin-top:0!important;}
+
+  .tax-who .lsx-wizard-buttons-wrapper{margin-top:10px;}
+  .tax-who .archive-intro .lsx-to-widget-thumb{display:contents;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;}
+	.tax-who .archive-intro .lsx-to-widget-thumb img{overflow:hidden;
+		height:220px;
+		object-fit:cover;width:100%;}
+	.tax-who .archive-intro p{width:686px;}	
+  .tax-who #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
+  .tax-who #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
+  .lsx-cta{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;box-shadow: none;}
+  .tax-who .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
+  .tax-who .lsx-wizard-button-next:hover, .page-template-template-wizard .lsx-wizard-button-next:hover{background:#262423!important;}
+
 	.lsx-wizard .nav-pills li.active {
 		border-bottom:6px solid #999;
 	}
@@ -2203,7 +2279,7 @@ s	.financial-about .lsx-banner-column {
 	background:transparent;
 	font-family:"moret",serif!important;}
 .page-template-template-contact #primary form .gform_fields input[type='radio']{border: 1px solid#ce9e57;color:#ce9e57;height:12px;width:14px; }
-
+.gform_wrapper .gform_validation_errors>h2{font-size:20px!important}
 .page-template-template-contact #primary form input[type=submit] {
 	background:#6a6d5b!important;
 	color:#fff!important;
