@@ -212,7 +212,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin-top:6px;
 		margin-bottom:18px;
 	}
-	.nav-destinations p{display:none;}
+	.mega-top-destination-nav .lsx-to-widget-item-wrap p{display:none;}
 	.mega-top-destination-nav .lsx-to-widget-item-wrap:hover p{display:block!important; position:absolute!important; left:0px;top:30px;}
 	.body-wrap {
 		background:#fff;
