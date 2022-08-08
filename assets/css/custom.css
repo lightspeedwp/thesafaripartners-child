@@ -307,6 +307,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		padding-bottom:4px;
 		font-size:16px;
 	}
+	#primary .destinationhover{display:none;}
 	.single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content {
 		padding:2px!important;
 	}
@@ -443,7 +444,6 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		height:220px;
 		object-fit:cover;width:100%;}
 	.tax-travel-style .archive-intro p{width:686px;}	
-  .tax-travel-style #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
   .tax-travel-style #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
   .lsx-cta{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;box-shadow: none;}
   .tax-travel-style .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
@@ -671,7 +671,7 @@ opacity: 0.4;
 	.lsx-wizard .lsx-to-content {
 		font-family:"moret",serif!important;
 		font-weight:bold;
-		font-size:20px;line-height: 22px;letter-spacing: 1px;
+		font-size:19px;line-height: 22px;letter-spacing: 1px;
 		padding:4px 8px 2PX;
 	}
 	.wizard-what .lsx-to-widget-thumb img {
@@ -849,6 +849,7 @@ opacity: 0.4;
     color: #ce9e57;
     font-size: 19px;
 	}
+	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+label{color: #ce9e57!important;}
 
 	.page-template-template-wizard .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
