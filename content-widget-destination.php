@@ -79,6 +79,6 @@ if ( $has_single ) {
 				<?php
 		}
 		?>
-		<>/div
+		</div>
 	</div>
 </article>
