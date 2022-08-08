@@ -24,13 +24,15 @@
 							<div class="checkbox-wrapper">
 								<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 								<span aria-hidden="true"></span>
-							</div>
-							<?php lsx_thumbnail( 'large' ); ?>
-						</div>
-
-						<div class="lsx-to-content">
+								<?php lsx_thumbnail( 'medium' ); ?>
+								<div class="lsx-to-content">
 							<?php the_title(); ?>
 						</div>
+							</div>
+							
+						</div>
+
+						
 					</div>
 
 					<?php endwhile; ?>
