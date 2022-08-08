@@ -1564,7 +1564,11 @@ opacity: 0.4;
 		display:flex;
 	}
 	.page .entry-content>div:not(:first-of-type) {
-		width:1336px;
+		width:1330px;
+	}
+	.page-id-133119 .entry-content>div:not(:first-of-type) {
+		width:1310px;
+		margin-left:20px;
 	}
 	#masthead .navbar-header .custom-logo-link>img {
 		margin:1px 0;
