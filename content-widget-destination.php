@@ -35,7 +35,7 @@ if ( $has_single ) {
 	<?php } ?>
 
 	<div class="lsx-to-widget-content">
-		<h4 class="lsx-to-widget-title text-center">
+		<h4 class="lsx-to-widget-title text-left">
 			<?php
 			if ( $has_single ) {
 				?>
@@ -53,6 +53,18 @@ if ( $has_single ) {
 			// }
 		?>
 
+<div class="destinationhover">
+<h4 class="lsx-to-widget-title text-left">
+			<?php
+			if ( $has_single ) {
+				?>
+<a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
+				<?php the_title(); ?>
+			<?php
+			if ( $has_single ) {
+				?>
+</a><?php } ?>
+		</h4>
 		<?php
 			ob_start();
 			lsx_to_widget_entry_content_top();
@@ -67,5 +79,6 @@ if ( $has_single ) {
 				<?php
 		}
 		?>
+		<>/div
 	</div>
 </article>
