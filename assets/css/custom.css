@@ -1061,7 +1061,7 @@ opacity: 0.4;
     margin: 0px auto!important;}
     .search-results .archive-header-wrapper{display:none;}
     .search-results .content-area{margin-top:10px!important;}
-	.search-results .lsx-slot .entry-layout > .entry-image{height:320px!important;flex-basis: 51%!important;}
+	.search-results .lsx-slot .entry-layout > .entry-image{height:380px!important;flex-basis: 51%!important;}
 
 	.search-results .lsx-slot .entry-layout-content{margin-left:8%; margin-right:10%;}
 
