@@ -118,17 +118,13 @@
 						<?php
 						if ( false === apply_filters( 'lsx_disable_content_excerpt', false ) ) {
 							if ( ! has_excerpt() ) {
-								$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
 								$content      = wp_trim_words( strip_shortcodes( get_the_content() ), 30 );
-								$content      = '<p>' . $content . '</p>' . $excerpt_more;
+								$content      = '<p>' . $content . '</p>'
 								echo wp_kses_post( $content );
 							} else {
 								the_excerpt();
 							}
-						} else {
-							$excerpt_more = '<p style="display:none;"><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
-							echo wp_kses_post( $excerpt_more );
-						}
+						} 
 						?>
 
 <div class="lsx-to-widget-meta-data">
@@ -144,7 +140,7 @@
 					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 				}
 				?>
-				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
+				<p><a class="moretag" href="<?php esc_url( get_permalink() ) ?>'"><?php esc_html__( 'Read More', 'lsx' ) ?></a></p>
 			</div>
 
 					</div><!-- .entry-summary -->
