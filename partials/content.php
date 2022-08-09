@@ -106,6 +106,11 @@
 					<?php lsx_post_meta_list_top(); ?>
 				</div><!-- .entry-meta -->
 
+				<div class="toursmeta">
+									<?php lsx_to_tour_single_fast_facts(); ?>
+									
+					</div>
+
 				<?php lsx_post_meta_category(); ?>
 
 			</header><!-- .entry-header -->
