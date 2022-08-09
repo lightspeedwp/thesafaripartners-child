@@ -84,7 +84,7 @@
 				}
 				?>
 
-				<h3 class="entry-title">
+				<h4 class="entry-title">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<a href="<?php echo esc_url( $archive_link ); ?>" class="format-link has-thumb fa fa-<?php echo esc_attr( $format ); ?>"></a>
 					<?php else : ?>
@@ -100,7 +100,7 @@
 					<?php if ( is_sticky() ) : ?>
 						<span class="label label-default label-sticky"><?php esc_html_e( 'Featured', 'lsx' ); ?></span>
 					<?php endif; ?>
-				</h3>
+				</h4>
 
 				<div class="entry-meta">
 					<?php lsx_post_meta_list_top(); ?>
