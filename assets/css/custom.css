@@ -1057,10 +1057,11 @@ opacity: 0.4;
 	}
   /*Search Results */
   .search-results .content{
-    width: 1266px!important;
+    width: 1336px!important;
     margin: 0px auto!important;}
     .search-results .archive-header-wrapper{display:none;}
     .search-results .content-area{margin-top:10px!important;}
+	.search-results .lsx-slot .entry-layout > .entry-image{height:290px!important;}
 
 	.search-results .entry-content .relevance {
 		padding: 0 24px;
