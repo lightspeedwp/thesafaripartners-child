@@ -126,7 +126,7 @@
 								the_excerpt();
 							}
 						} else {
-							$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+							$excerpt_more = '<p style="display:none;"><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
 							echo wp_kses_post( $excerpt_more );
 						}
 						?>
@@ -144,7 +144,9 @@
 					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 				}
 				?>
+				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 			</div>
+
 					</div><!-- .entry-summary -->
 
 				<?php elseif ( has_post_format( array( 'link' ) ) ) : ?>
@@ -168,6 +170,7 @@
 								'link_after'  => '</span>',
 							) );
 						?>
+
 
 					</div><!-- .entry-content -->
 
