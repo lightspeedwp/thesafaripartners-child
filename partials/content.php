@@ -200,7 +200,7 @@
 
 			<div class="entry-image hidden-xs">
 				<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
-					<?php lsx_thumbnail( 'lsx-thumbnail-single' ); ?>
+					<?php lsx_thumbnail( 'medium_large' ); ?>
 				</a>
 			</div>
 
