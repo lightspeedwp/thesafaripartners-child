@@ -120,6 +120,12 @@ class Frontend {
 				$query->set( 'posts_per_page', -1 );
 				$query->set( 'nopagin', true );
 			}
+
+			if ( $query->is_page( 'safari-styles' )  ) {
+				$query->set( 'post_type', 'tour' );
+				$query->set( 'posts_per_page', -1 );
+				$query->set( 'nopagin', true );
+			}
 		}
 	}
 
