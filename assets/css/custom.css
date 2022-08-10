@@ -1567,6 +1567,7 @@ opacity: 0.4;
 		float:none!important;
 		display:flex;
 	}
+	.page #primary{margin:0 auto;}
 	.page .entry-content>div:not(:first-of-type) {
 		width:1330px;
 	}
@@ -1711,10 +1712,27 @@ opacity: 0.4;
 		height:45px!important;
 		line-height:0px
 	}
+	#footer-sub .gform_footer #gform_submit_button_1:hover{background:#000!important;}
 	#footer-sub .gform_footer .btn span {
 		color:#fff;
 	}
   #footer-widgets .widget-title{color:#fff;font-weight:100!important;}
+  #footer-widgets a:not(.btn):not(button), #footer-widgets a:not(.btn):not(button):active, #footer-widgets a:not(.btn):not(button):visited{font-size: 18px;
+    line-height: 40px;}
+	#footer-widget .callicon{padding-left:20p;}
+	#footer-widget .callicon:after{background-image: url('img/tsp-phone.svg');
+		background-size: 16px 16px;
+		display: inline-block;
+		width: 16px;
+		height:16px;
+		content:"";}
+	#footer-widget .mailicon{padding-left:20p;}
+	#footer-widget .mailicon:after{background-image: url('img/tsp-email.svg');
+			background-size: 16px 16px;
+			display: inline-block;
+			width: 16px;
+			height:16px;
+			content:"";}	
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu>ul.mega-sub-menu {
 		width: 1444px;
     margin-top: 12px;
