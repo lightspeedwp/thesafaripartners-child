@@ -1719,15 +1719,15 @@ opacity: 0.4;
   #footer-widgets .widget-title{color:#fff;font-weight:100!important;}
   #footer-widgets a:not(.btn):not(button), #footer-widgets a:not(.btn):not(button):active, #footer-widgets a:not(.btn):not(button):visited{font-size: 18px;
     line-height: 40px;}
-	#footer-widget .callicon a{padding-left:20p;}
-	#footer-widget .callicon a::before{background-image: url('img/tsp-phone.svg');
+	#menu-connect-footer .callicon a{padding-left:20px;}
+	#menu-connect-footer .callicon a::before{background-image: url('img/tsp-phone.svg');
 		background-size: 16px 16px;
 		display: inline-block;
 		width: 16px;
 		height:16px;
 		content:"";}
-	#footer-widget .mailicon a{padding-left:20p;}
-	#footer-widget .mailicon a::before{background-image: url('img/tsp-email.svg');
+	#menu-connect-footer .mailicon a{padding-left:20px;}
+	#menu-connect-footer .mailicon a::before{background-image: url('img/tsp-email.svg');
 			background-size: 16px 16px;
 			display: inline-block;
 			width: 16px;
