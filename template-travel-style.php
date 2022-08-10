@@ -29,13 +29,17 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 		<?php endif; ?>
+		<?php wp_reset_query(); ?>
+
+		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
 			<?php 
 				$panels = array(
-					0 => array( 'who', 'where' ),
-					1 => array( 'what' ),
-					2 => array( 'when' ),
-					3 => array( 'budget' ),
+					0 => array( 'who' ),
+					1 => array( 'where' ),
+					2 => array( 'what' ),
+					3 => array( 'when' ),
+					4 => array( 'budget' ),
 				);
 				tsp_mini_wizard( $panels );
 			?>
