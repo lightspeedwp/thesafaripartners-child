@@ -1719,20 +1719,18 @@ opacity: 0.4;
   #footer-widgets .widget-title{color:#fff;font-weight:100!important;}
   #footer-widgets a:not(.btn):not(button), #footer-widgets a:not(.btn):not(button):active, #footer-widgets a:not(.btn):not(button):visited{font-size: 18px;
     line-height: 40px;}
-	#menu-connect-footer .callicon a{padding-left:20px;}
 	#menu-connect-footer .callicon a::before{background-image: url('img/tsp-phone.svg');
-		background-size: 16px 16px;
-		display: inline-block;
-		width: 16px;
-		height:16px;
-		content:"";}
-	#menu-connect-footer .mailicon a{padding-left:20px;}
-	#menu-connect-footer .mailicon a::before{background-image: url('img/tsp-email.svg');
-			background-size: 16px 16px;
+		background-size: 20px 20px;
 			display: inline-block;
-			width: 16px;
-			height:16px;
-			content:"";}	
+			width: 20px;
+			height:20px;
+		content:"";margin-right: 10px;}
+	#menu-connect-footer .mailicon a::before{background-image: url('img/tsp-email.svg');
+			background-size: 20px 20px;
+			display: inline-block;
+			width: 20px;
+			height:20px;
+			content:"";margin-right: 10px;}	
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu>ul.mega-sub-menu {
 		width: 1444px;
     margin-top: 12px;
