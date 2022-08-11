@@ -117,6 +117,7 @@ function openinCity(evt, eventName) {
 							moveStepRight($step);
 						} else {
 							showStep($step); // Only one element should satisfy this condition
+							checkForSliders( $this, $step );
 							highlightActiveElement($this);
 							markStepAsCompleted(i + 1, $this, settings);
 						}
@@ -601,27 +602,6 @@ function openinCity(evt, eventName) {
 				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
 				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
 			});
-
-			responsive: [
-				{
-					breakpoint: 992,
-					settings: {
-						draggable: lsx_to_params.slickSlider.tablet.draggable,
-						arrows: lsx_to_params.slickSlider.tablet.arrows,
-						swipe: lsx_to_params.slickSlider.tablet.swipe,
-					}
-				},
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow:   lsx_to_params.slickSlider.mobile.slidesToShow,
-						slidesToScroll: lsx_to_params.slickSlider.mobile.slidesToScroll,
-						draggable:      lsx_to_params.slickSlider.mobile.draggable,
-						arrows:         lsx_to_params.slickSlider.mobile.arrows,
-						swipe:          lsx_to_params.slickSlider.mobile.swipe
-					}
-				}
-			]
 		}
 	}
 
