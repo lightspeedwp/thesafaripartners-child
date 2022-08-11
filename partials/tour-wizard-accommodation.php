@@ -28,7 +28,7 @@
 											<div id="accommodation" class="lsx-to-archive-item itinerary-item col-xs-12">
 												<div class="lsx-to-archive-container">
 													<div class="col-md-6 lsx-contact-module-image">
-														<?php tsp_accommodation_gallery( $page->ID ); ?>
+														<?php tsp_accommodation_gallery( get_the_ID() ); ?>
 													</div>
 	
 													<div class="col-xs-12 col-sm-12 col-md-6">

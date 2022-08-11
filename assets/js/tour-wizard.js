@@ -566,7 +566,7 @@ function openinCity(evt, eventName) {
 	}
 
 	function checkForSliders( $plugin, $next ) {
-		if ( 0 < $next.find( '.tour-accommodation-gallery' ).length ) {
+		if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
 			$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
 			$next.find( '.tour-accommodation-gallery .slider-content').show();
 
