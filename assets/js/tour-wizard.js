@@ -268,9 +268,6 @@ function openinCity(evt, eventName) {
 
 			var $next = $elementToSlide.next();
 
-			console.log( 'Slide Left' );
-			console.log( $next );
-
 			$next.clearQueue().animate({
 				'margin-left': 0
 			}, function () {

@@ -67,7 +67,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 		background-color:#fff;
-		height:660px;
+		min-height:660px;
 		background-position:center;
 		background-repeat:no-repeat;
 		background-size:cover;
