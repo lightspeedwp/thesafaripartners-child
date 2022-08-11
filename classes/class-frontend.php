@@ -143,7 +143,12 @@ class Frontend {
 		
 		foreach( $results as $index => $result ){
 			if ( isset( $posts_relevance[$result] ) ) {
-				$search_relevance[$result] = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
+				$relevance = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
+				$search_relevance[$result] = $relevance;
+
+				if ( (int) $relevance < 50 ) {
+					unset( $results[ $index ] );
+				}
 			}
 		}		
 	
