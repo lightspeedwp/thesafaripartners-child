@@ -1177,56 +1177,59 @@ opacity: 0.4;
 		box-shadow:none!important;
 		border:1px solid #262423;
 	}
-	.gform_body [type="radio"]:checked,
-.gform_body [type="radio"]:not(:checked) {
+	gform_body
+
+.page-template-template-contact .gform_body [type="radio"]:checked,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px;
 }
-.gform_body [type="radio"]:checked + label,
-.gform_body [type="radio"]:not(:checked) + label
+.page-template-template-contact .gform_body [type="radio"]:checked + label,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label
 {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #ce9e57;;
+    color: #000;
 }
-.gform_body [type="radio"]:checked + label:before,
-.gform_body [type="radio"]:not(:checked) + label:before {
+.page-template-template-contact .gform_body [type="radio"]:checked + label:before,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #ddd;
+    width: 19px;
+    height: 19px;
+    border: 2px solid #ce9e57;
     border-radius: 100%;
     background: #fff;
 }
-.gform_body [type="radio"]:checked + label:after,
-.gform_body [type="radio"]:not(:checked) + label:after {
+.page-template-template-contact .gform_body [type="radio"]:checked + label:after,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
     background: #ce9e57;
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 3px;
+    left: 3px;
     border-radius: 100%;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-.gform_body [type="radio"]:not(:checked) + label:after {
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
-.gform_body [type="radio"]:checked + label:after {
+.page-template-template-contact .gform_body [type="radio"]:checked + label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
 	.ot-list .lsx-to-widget-content {
 		position:absolute;
 		top:-140px;
