@@ -11,7 +11,7 @@ function openCity(evt, cityName) {
 	}
 	document.getElementById(cityName).style.display = "block";
 
-	checkForSliders( $( '#'+cityName ) );
+	//checkForSliders( $( '#'+cityName ) );
 	evt.currentTarget.className += " active";
 }
 function openinCity(evt, eventName) {
@@ -582,7 +582,7 @@ function openinCity(evt, eventName) {
 				dots: false,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
 				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
-				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
+				nextArrow : '<button type="button" class="slick-next">&raquo;</button>'/*,
 				responsive: [
 					{
 						breakpoint: 1280,
@@ -591,7 +591,7 @@ function openinCity(evt, eventName) {
 							dots: false,
 						}
 					}
-				]
+				]*/
 			});
 			$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
 				slidesToShow: 3,
