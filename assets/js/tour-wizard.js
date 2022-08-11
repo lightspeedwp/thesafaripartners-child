@@ -752,5 +752,11 @@ function openinCity(evt, eventName) {
 	$(document).ready(function () {
 		$("#wizard").lsxWizard();
 		$("#wizard2").lsxWizard();
+
+		$("#page-5").on('click',function(){
+			console.log('click');
+			$(".lsx-map-placeholder").click();
+		});
+		
 	});
 })( jQuery, window, document );
