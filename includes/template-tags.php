@@ -109,7 +109,7 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 
 						foreach ( $gallery_images as $gallery_image ) {
 							$slider_content[] = '<div class="image-slide">' . wp_get_attachment_image( $gallery_image, 'full' ) . '</div>';
-							$slider_nav[]     = '<div class="nav-slide">' . wp_get_attachment_image( $gallery_image, 'thumbnail' ) . '</div>';
+							$slider_nav[]     = '<div class="nav-slide">' . wp_get_attachment_image( $gallery_image, 'lsx-thumbnail-wide' ) . '</div>';
 						}
 
 						$slider_content[] = '</div>';

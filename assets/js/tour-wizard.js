@@ -583,7 +583,8 @@ function openinCity(evt, eventName) {
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
-				dots: true,
+				dots: false,
+				arrows: false,
 				centerMode: true,
 				focusOnSelect: true
 			});
