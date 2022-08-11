@@ -19,10 +19,11 @@
 						<div class="entry-content col-xs-12 col-sm-12 col-md-12">
 							<div id="wizard2" class="lsx-wizard" style="display: none;">
 								<?php
+								$active = 'active';
 								while ( $accom_query->have_posts() ) {
 									$accom_query->the_post();
 									?>
-									<div class="lsx-wizard-step">
+									<div class="lsx-wizard-step <?php echo esc_attr( $active ); ?>">
 										<div class="step-content">
 											<div id="accommodation" class="lsx-to-archive-item itinerary-item col-xs-12">
 												<div class="lsx-to-archive-container">
@@ -54,6 +55,9 @@
 										</div>
 									</div>
 									<?php
+									if ( '' !== $active ) {
+										$active = '';
+									}
 								}
 								?>
 							</div>

@@ -219,6 +219,8 @@ function openinCity(evt, eventName) {
 			$plugin = $(this);
 			var settings = $plugin.data('lsxWizard').settings;
 			var $elementToSlide = $plugin.find(".lsx-wizard-steps-wrapper .active");
+			console.log($elementToSlide);
+			console.log(settings);
 			slideLeft($elementToSlide, settings, $plugin);
 		},
 		first: function (a) {
@@ -259,7 +261,7 @@ function openinCity(evt, eventName) {
 	}
 
 	function slideLeft($elementToSlide, settings, $plugin, slideSuccessCallback) {
-		console.log( $elementToSlide.next().length );
+		console.log( $elementToSlide );
 		if ($elementToSlide.next().length) {
 
 			$elementToSlide.clearQueue().animate({
