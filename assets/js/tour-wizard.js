@@ -577,9 +577,21 @@ function openinCity(evt, eventName) {
 				slidesToScroll: 1,
 				arrows: false,
 				fade: true,
-				asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav'
+				dots: false,
+				asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
+				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
+				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
+				responsive: [
+					{
+						breakpoint: 1280,
+						settings: {
+							arrows: true,
+							dots: false,
+						}
+					}
+				]
 			});
-			$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
+			$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
@@ -589,6 +601,27 @@ function openinCity(evt, eventName) {
 				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
 				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
 			});
+
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						draggable: lsx_to_params.slickSlider.tablet.draggable,
+						arrows: lsx_to_params.slickSlider.tablet.arrows,
+						swipe: lsx_to_params.slickSlider.tablet.swipe,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow:   lsx_to_params.slickSlider.mobile.slidesToShow,
+						slidesToScroll: lsx_to_params.slickSlider.mobile.slidesToScroll,
+						draggable:      lsx_to_params.slickSlider.mobile.draggable,
+						arrows:         lsx_to_params.slickSlider.mobile.arrows,
+						swipe:          lsx_to_params.slickSlider.mobile.swipe
+					}
+				}
+			]
 		}
 	}
 

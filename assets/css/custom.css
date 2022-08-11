@@ -1537,6 +1537,10 @@ opacity: 0.4;
 		color:#ce9e57;
 		padding:20px;
 	}
+	.tour-accommodation-gallery .slick-slide img {
+		max-height: 500px;
+		height: auto;
+	}
 	.page .entry-content>div:first-of-type {
 		width:100%!important;
 	}

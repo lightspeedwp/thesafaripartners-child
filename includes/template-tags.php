@@ -104,8 +104,8 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 				<?php
 					$gallery_images = get_post_meta( $post_id, 'gallery', false );
 					if ( ! empty( $gallery_images ) ) {
-						$slider_content = array( '<div class="accomodation-slider">' );
-						$slider_nav     = array( '<div class="accomodation-nav">' );
+						$slider_content = array( '<div class="accomodation-slider lsx-to-slider-inner">' );
+						$slider_nav     = array( '<div class="accomodation-nav lsx-to-slider-inner">' );
 
 						$slider_content[] = '<div class="image-slide">' .get_the_post_thumbnail( $post_id, 'large' ) . '</div>';
 						$slider_nav[]     = '<div class="nav-slide">' . get_the_post_thumbnail( $post_id, 'lsx-thumbnail-wide' ) . '</div>';
