@@ -10,6 +10,8 @@ function openCity(evt, cityName) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
 	}
 	document.getElementById(cityName).style.display = "block";
+
+	checkForSliders( $( '#'+cityName ) );
 	evt.currentTarget.className += " active";
 }
 function openinCity(evt, eventName) {
@@ -117,7 +119,6 @@ function openinCity(evt, eventName) {
 							moveStepRight($step);
 						} else {
 							showStep($step); // Only one element should satisfy this condition
-							checkForSliders( $this, $step );
 							highlightActiveElement($this);
 							markStepAsCompleted(i + 1, $this, settings);
 						}
@@ -293,7 +294,7 @@ function openinCity(evt, eventName) {
 				}
 
 				// Check for any sliders that need initializing
-				checkForSliders( $plugin, $next );
+				checkForSliders( $next );
 
 				$.isFunction(settings.onSlideLeftFinished) && settings.onSlideLeftFinished.call($plugin);
 				$plugin.trigger("slideLeftSuccess.lsxWizard", this);
@@ -566,7 +567,7 @@ function openinCity(evt, eventName) {
 		}
 	}
 
-	function checkForSliders( $plugin, $next ) {
+	function checkForSliders( $next ) {
 		if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
 			var currentID = $next.find( '.tour-accommodation-gallery').attr('data-slider-id');
 
