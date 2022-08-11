@@ -75,6 +75,16 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#footer-widgets,#footer-sub {
 		background:transparent!important;
 	}
+	#footer-widgets .lsx-testimonials-title{display:none;}
+	#footer-widgets blockquote .moretag{display:none;}
+	#footer-widgets .lsx-testimonials-meta-wrap .fa{display:none;}
+	#footer-widgets blockquote{
+		padding: 0px!important;
+    	margin: 0px!important;
+    	font-size: 16px!important;
+		text-align:center;
+    	border-left:0px!important;
+	}
 	#mega-menu-wrap-primary {
 		background:transparent!important;
 	}
@@ -979,6 +989,10 @@ opacity: 0.4;
 	#primary .tab button.active {
 		border-bottom: 5px solid #262423;
 	}
+	#primary #page-133998.tab button.active{}
+
+	#primary .tab button.active::after{height:5px; border:1px solid #000;margin-top:12px;}
+	
 	/* Style the tab content */
 	.tabcontent {
 		display:none;
@@ -1479,6 +1493,7 @@ opacity: 0.4;
 	.page-template-template-contact .lsx-contact-module-image img {
 		object-fit:cover;
 		height:89vh!important;
+		width:100%;
 	}
 	.page-template-template-contact #primary .center img {
 		box-align:center;
