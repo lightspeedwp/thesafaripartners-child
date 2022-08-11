@@ -75,6 +75,16 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#footer-widgets,#footer-sub {
 		background:transparent!important;
 	}
+	#footer-widgets .lsx-testimonials-title{display:none;}
+	#footer-widgets blockquote .moretag{display:none;}
+	#footer-widgets .lsx-testimonials-meta-wrap .fa{display:none;}
+	#footer-widgets blockquote{
+		padding: 0px!important;
+    	margin: 0px!important;
+    	font-size: 16px!important;
+		text-align:center;
+    	border-left:0px!important;
+	}
 	#mega-menu-wrap-primary {
 		background:transparent!important;
 	}
@@ -148,10 +158,12 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu {
 		background-color:#fff;
 		margin-top:12px;
-		width:186px;
+		width:176px;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
 		background-color:#fff;
+		letter-spacing: -1px;
+		font-size:14px;
 	}
 	.mega-search.expand-to-left {
 		padding:6px;
@@ -942,6 +954,9 @@ opacity: 0.4;
 		margin-left:5px;
 		text-rendering: auto;
 	}
+	.gform_wrapper.gravity-theme legend{text-align:left;}
+
+	
 	/*Tabber */
 	/* Style the tab */
 	#primary .tab {
@@ -974,6 +989,10 @@ opacity: 0.4;
 	#primary .tab button.active {
 		border-bottom: 5px solid #262423;
 	}
+	#primary #page-133998.tab button.active{}
+
+	#primary .tab button.active::after{height:5px; border:1px solid #000;margin-top:12px;}
+	
 	/* Style the tab content */
 	.tabcontent {
 		display:none;
@@ -1172,6 +1191,58 @@ opacity: 0.4;
 		box-shadow:none!important;
 		border:1px solid #262423;
 	}
+
+.page-template-template-contact .gform_body [type="radio"]:checked,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) {
+    position: absolute!important;
+    left: -9999px!important;
+}
+.page-template-template-contact .gform_body [type="radio"]:checked + label,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000;
+}
+.page-template-template-contact .gform_body [type="radio"]:checked + label:before,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ce9e57;
+    border-radius: 35%;
+    background: #fff;
+}
+.page-template-template-contact .gform_body [type="radio"]:checked + label:after,
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: #ce9e57;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.page-template-template-contact .gform_body [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
 	.ot-list .lsx-to-widget-content {
 		position:absolute;
 		top:-140px;
@@ -1422,6 +1493,7 @@ opacity: 0.4;
 	.page-template-template-contact .lsx-contact-module-image img {
 		object-fit:cover;
 		height:89vh!important;
+		width:100%;
 	}
 	.page-template-template-contact #primary .center img {
 		box-align:center;
@@ -2324,7 +2396,8 @@ s	.financial-about .lsx-banner-column {
 	min-height:30px;
 	background:transparent;
 	font-family:"moret",serif!important;}
-.page-template-template-contact #primary form .gform_fields input[type='radio']{border: 1px solid#ce9e57;color:#ce9e57;height:12px;width:14px; }
+.page-template-template-contact #primary form .gform_fields input[type='radio']{display:none;height:12px;width:14px; }
+.page-template-template-contact .gform_required_legend{text-align:left;}
 .gform_wrapper .gform_validation_errors>h2{font-size:20px!important}
 .page-template-template-contact #primary form input[type=submit] {
 	background:#6a6d5b!important;
