@@ -148,10 +148,12 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu {
 		background-color:#fff;
 		margin-top:12px;
-		width:186px;
+		width:176px;
 	}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
 		background-color:#fff;
+		letter-spacing: -1px;
+		font-size:14px;
 	}
 	.mega-search.expand-to-left {
 		padding:6px;
@@ -942,6 +944,9 @@ opacity: 0.4;
 		margin-left:5px;
 		text-rendering: auto;
 	}
+	.gform_wrapper.gravity-theme legend{text-align:left;}
+
+	
 	/*Tabber */
 	/* Style the tab */
 	#primary .tab {
@@ -1172,6 +1177,56 @@ opacity: 0.4;
 		box-shadow:none!important;
 		border:1px solid #262423;
 	}
+	.gform_body [type="radio"]:checked,
+.gform_body [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.gform_body [type="radio"]:checked + label,
+.gform_body [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #ce9e57;;
+}
+.gform_body [type="radio"]:checked + label:before,
+.gform_body [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.gform_body [type="radio"]:checked + label:after,
+.gform_body [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #ce9e57;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.gform_body [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.gform_body [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
 	.ot-list .lsx-to-widget-content {
 		position:absolute;
 		top:-140px;
