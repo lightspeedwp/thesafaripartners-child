@@ -10,8 +10,6 @@ function openCity(evt, cityName) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
 	}
 	document.getElementById(cityName).style.display = "block";
-
-	//checkForSliders( $( '#'+cityName ) );
 	evt.currentTarget.className += " active";
 }
 function openinCity(evt, eventName) {
@@ -122,7 +120,6 @@ function openinCity(evt, eventName) {
 							highlightActiveElement($this);
 							markStepAsCompleted(i + 1, $this, settings);
 						}
-
 					});
 
 					var $progressButtonsBorderBottom = getProgressButtonsBorderBottomTemplate(settings);
@@ -581,19 +578,19 @@ function openinCity(evt, eventName) {
 				fade: true,
 				dots: false,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
-				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
-				nextArrow : '<button type="button" class="slick-next">&raquo;</button>'/*,
 				responsive: [
 					{
 						breakpoint: 1280,
 						settings: {
 							arrows: true,
 							dots: false,
+							prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
+							nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
 						}
 					}
-				]*/
+				]
 			});
-			$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
+			$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
