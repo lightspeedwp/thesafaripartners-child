@@ -85,3 +85,43 @@ function tsp_get_search_relevance( $post_id = 0 ) {
 	}
 	return $return;
 }
+
+/**
+ * Outputs the accommodation gallery ready as a slider.
+ *
+ * @param integer $post_id
+ * @return string
+ */
+function tsp_accommodation_gallery( $post_id = 0 ) {
+	$return = '';
+	if ( 0 !== $post_id ) {
+		?>
+		<div class="tour-accommodation-gallery">
+			<div class="lsx-banner-image-wrap placeholder-image">
+				<?php echo get_the_post_thumbnail( $post_id, 'full' ); ?>
+			</div>
+			<div class="slider-content" style="display:none;">
+				<?php
+					$gallery_images = get_post_meta( $post_id, 'gallery', false );
+					if ( ! empty( $gallery_images ) ) {
+						$slider_content = array( '<div class="accomodation-slider">' );
+						$slider_nav     = array( '<div class="accomodation-nav">' );
+
+						foreach ( $gallery_images as $gallery_image ) {
+							$slider_content[] = wp_get_attachment_image( $gallery_image, 'full' );
+							$slider_nav[]     = wp_get_attachment_image( $gallery_image, 'thumbnail' );
+						}
+
+						$slider_content[] = '</div>';
+						$slider_nav[]     = '</div>';
+
+						echo wp_kses_post( implode( '', $slider_content ) );
+						echo wp_kses_post( implode( '', $slider_nav ) );
+					}
+				?>
+			</div>
+		</div>
+		<?php
+	}
+	return $return;
+}

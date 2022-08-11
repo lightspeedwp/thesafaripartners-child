@@ -169,6 +169,8 @@ function openinCity(evt, eventName) {
 						e.preventDefault();
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 
+						console.log($elementToSlide);
+
 						if ($.isFunction(settings.onButtonNextClick)) {
 							// Trigger the override callback it the callback is set at the plugin initialization...
 							settings.onButtonNextClick.call(this);
@@ -274,7 +276,7 @@ function openinCity(evt, eventName) {
 				'margin-left': 0
 			}, function () {
 
-				$(".lsx-wizard-step").removeClass("active");
+				$plugin.find(".lsx-wizard-step").removeClass("active");
 				$next.addClass("active");
 
 				var activeElementPosition = highlightActiveElement($plugin);
@@ -561,6 +563,27 @@ function openinCity(evt, eventName) {
 		var activeStep = parseInt($plugin.find(".lsx-wizard-steps-wrapper .active").attr("data-position"), 10);
 		if (activeStep > 0) {
 			slideRight($elementToSlide, settings, $plugin, goToFirst);
+		}
+	}
+
+	function checkForSliders( $plugin ) {
+
+		if ( 0 < $plugin.find( '.tour-accommodation-gallery' ).length ) {
+			$('.slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.slider-nav'
+			});
+			$('.slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				dots: true,
+				centerMode: true,
+				focusOnSelect: true
+			});
 		}
 	}
 

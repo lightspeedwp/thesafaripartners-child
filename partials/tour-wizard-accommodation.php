@@ -27,11 +27,8 @@
 										<div class="step-content">
 											<div id="accommodation" class="lsx-to-archive-item itinerary-item col-xs-12">
 												<div class="lsx-to-archive-container">
-												<div class="col-md-6 lsx-contact-module-image">
-													<div class="lsx-banner-image-wrap">
-															<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
-															
-														</div>
+													<div class="col-md-6 lsx-contact-module-image">
+														<?php tsp_accommodation_gallery( $page->ID ); ?>
 													</div>
 	
 													<div class="col-xs-12 col-sm-12 col-md-6">
