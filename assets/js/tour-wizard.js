@@ -567,6 +567,8 @@ function openinCity(evt, eventName) {
 
 	function checkForSliders( $plugin, $next ) {
 		if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
+			var currentID = $next.find( '.tour-accommodation-gallery').attr('data-slider-id');
+
 			$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
 			$next.find( '.tour-accommodation-gallery .slider-content').show();
 
@@ -575,12 +577,12 @@ function openinCity(evt, eventName) {
 				slidesToScroll: 1,
 				arrows: false,
 				fade: true,
-				asNavFor: '.accomodation-nav'
+				asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav'
 			});
 			$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				asNavFor: '.accomodation-slider',
+				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
 				dots: true,
 				centerMode: true,
 				focusOnSelect: true
