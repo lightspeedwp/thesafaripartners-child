@@ -263,7 +263,6 @@ function openinCity(evt, eventName) {
 	}
 
 	function slideLeft($elementToSlide, settings, $plugin, slideSuccessCallback) {
-		console.log( $elementToSlide );
 		if ($elementToSlide.next().length) {
 
 			$elementToSlide.clearQueue().animate({
@@ -292,7 +291,8 @@ function openinCity(evt, eventName) {
 					$plugin.find('.lsx-wizard-button-previous').show();
 				}
 
-				var $progressButtons = $plugin.find(".lsx-wizard-progress-buttons").children();
+				// Check for any sliders that need initializing
+				checkForSliders( $plugin, $next );
 
 				$.isFunction(settings.onSlideLeftFinished) && settings.onSlideLeftFinished.call($plugin);
 				$plugin.trigger("slideLeftSuccess.lsxWizard", this);
@@ -338,7 +338,6 @@ function openinCity(evt, eventName) {
 
 				$.isFunction(settings.onSlideRightFinished) && settings.onSlideRightFinished.call($plugin);
 				$plugin.trigger("slideRightSuccess.lsxWizard", goToFirst);
-
 			});
 
 		}
@@ -566,20 +565,22 @@ function openinCity(evt, eventName) {
 		}
 	}
 
-	function checkForSliders( $plugin ) {
+	function checkForSliders( $plugin, $next ) {
+		if ( 0 < $next.find( '.tour-accommodation-gallery' ).length ) {
+			$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
+			$next.find( '.tour-accommodation-gallery .slider-content').show();
 
-		if ( 0 < $plugin.find( '.tour-accommodation-gallery' ).length ) {
-			$('.slider-for').slick({
+			$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				arrows: false,
 				fade: true,
-				asNavFor: '.slider-nav'
+				asNavFor: '.accomodation-nav'
 			});
-			$('.slider-nav').slick({
+			$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				asNavFor: '.slider-for',
+				asNavFor: '.accomodation-slider',
 				dots: true,
 				centerMode: true,
 				focusOnSelect: true
