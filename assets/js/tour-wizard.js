@@ -584,9 +584,10 @@ function openinCity(evt, eventName) {
 				slidesToScroll: 1,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
 				dots: false,
-				arrows: false,
 				centerMode: true,
-				focusOnSelect: true
+				focusOnSelect: true,
+				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
+				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
 			});
 		}
 	}
