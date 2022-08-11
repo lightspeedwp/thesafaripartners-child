@@ -1,7 +1,7 @@
 <div class="lsx-wizard-step">
 	<h4>5. <?php esc_html_e( 'Budget', 'thesafaripartners-child' ); ?></h4>
 	<div class="step-content">
-		<div class="wizard-who">
+		<div class="wizard-budget">
 			<div class="col-md-3">
 				<h3><?php esc_html_e( 'What is your budget?', 'thesafaripartners-child' ); ?></h3>
 				<p><?php esc_html_e( 'If you have an idea of your budget let us know here, or skip it if you wish.', 'thesafaripartners-child' ); ?></p>
@@ -10,13 +10,13 @@
 				<?php
 				$terms = get_terms( 'budget', array( 'hide_empty' => 0 ) );
 				?>
-
+<article class="col-md-2 status-publish hentry"></article>
 				<?php foreach ( $terms as $term ) : 
 					
 					$value = apply_filters( 'the_title', $term->slug );
 					?>
 					<!-- post -->
-					<article class="col-md-3 status-publish hentry">
+					<article class="col-md-2 status-publish hentry">
 						<div class="checkbox-wrapper">
 							<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check"  type="checkbox" name="fwp_budget" value="<?php echo esc_html( $value ); ?>" />
 							<span aria-hidden="true"></span>

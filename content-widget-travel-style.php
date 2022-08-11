@@ -23,7 +23,7 @@ if ( empty( $disable_single_link ) ) {
 				if ( ! empty( $title_link ) ) {
 					?>
 <a href="<?php echo esc_url( $title_link ); ?>"><?php } ?>
-					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-large' ); ?>
+					<?php lsx_to_term_thumbnail( $term->term_id, 'medium_large' ); ?>
 
 				<?php
 				if ( ! empty( $title_link ) ) {

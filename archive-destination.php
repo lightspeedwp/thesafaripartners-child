@@ -20,10 +20,11 @@ get_header(); ?>
 
 			<?php 
 				$panels = array(
-					0 => array( 'who', 'where' ),
+					0 => array( 'who' ),
 					1 => array( 'what' ),
-					2 => array( 'when' ),
-					3 => array( 'budget' ),
+					3 => array( 'where' ),
+					3 => array( 'when' ),
+					4 => array( 'budget' ),
 				);
 				tsp_mini_wizard( $panels );
 			?>
@@ -42,16 +43,16 @@ get_header(); ?>
 					?>
 				</div>
 
-				<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
+				<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
 					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 						<div class="lsx-to-slider-wrap">
-							<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
+						<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 							<?php
 							while ( have_posts() ) {
 								the_post();
 								?>
 								<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-									<?php lsx_to_content( 'content', 'tour' ); ?>
+									<?php lsx_to_content( 'content-widget', 'tour' ); ?>
 								</div>
 							<?php
 							}

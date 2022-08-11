@@ -6,7 +6,12 @@
  * @category who
  */
 
-get_header(); ?>
+get_header(); 
+$term = get_queried_object();
+$tag = get_field('tagline', $term);
+
+?>
+<?php get_template_part( 'partials/who-banner', '1' ); ?>
 
 	<?php lsx_content_wrap_before(); ?>
 
@@ -17,11 +22,9 @@ get_header(); ?>
 		<main id="main" class="site-main entry-content" role="main">
 
 			<div class="archive-intro row">
+			<h2 class="category-title"><?php echo $tag; ?></h2>
 				<div class="col-sm-8">
 					<div class="lsx-to-widget-description">
-						<?php $term = get_queried_object(); ?>
-
-						<h2 class="category-title"><?php echo $term->name; ?></h2>
 
 						<p class="category-description"><?php echo $term->description; ?></p>
 					</div>
@@ -30,7 +33,7 @@ get_header(); ?>
 				<div class="col-sm-4">
 					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
 						<div class="lsx-to-widget-thumb">
-							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-block-post-grid-square' ); ?>
 						</div>
 					<?php } else { ?>
 						<div class="lsx-to-widget-thumb">

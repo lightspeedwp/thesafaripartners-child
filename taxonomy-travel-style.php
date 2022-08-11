@@ -30,7 +30,7 @@ get_header(); ?>
 		<div class="col-sm-4">
 			<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
 				<div class="lsx-to-widget-thumb">
-					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-thumbnail-wide' ); ?>
+					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-block-post-grid-square' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="lsx-to-widget-thumb">
@@ -41,7 +41,6 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="tsp-seperator"></div>
 
 	<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
@@ -49,9 +48,10 @@ get_header(); ?>
 		if ( have_posts() ) {
 
 			$panels = array(
-				0 => array( 'who', 'where' ),
-				1 => array( 'when' ),
-				2 => array( 'budget' ),
+				0 => array( 'who' ),
+				1 => array( 'where' ),
+				2 => array( 'when' ),
+				3 => array( 'budget' ),
 			);
 			tsp_mini_wizard( $panels );
 

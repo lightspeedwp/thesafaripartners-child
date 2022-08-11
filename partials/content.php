@@ -84,7 +84,7 @@
 				}
 				?>
 
-				<h3 class="entry-title">
+				<h4 class="entry-title">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<a href="<?php echo esc_url( $archive_link ); ?>" class="format-link has-thumb fa fa-<?php echo esc_attr( $format ); ?>"></a>
 					<?php else : ?>
@@ -100,7 +100,7 @@
 					<?php if ( is_sticky() ) : ?>
 						<span class="label label-default label-sticky"><?php esc_html_e( 'Featured', 'lsx' ); ?></span>
 					<?php endif; ?>
-				</h3>
+				</h4>
 
 				<div class="entry-meta">
 					<?php lsx_post_meta_list_top(); ?>
@@ -120,7 +120,7 @@
 							if ( ! has_excerpt() ) {
 								$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
 								$content      = wp_trim_words( strip_shortcodes( get_the_content() ), 30 );
-								$content      = '<p>' . $content . '</p>' . $excerpt_more;
+								$content      = '<p>' . $content . '</p>';
 								echo wp_kses_post( $content );
 							} else {
 								the_excerpt();
@@ -130,6 +130,22 @@
 							echo wp_kses_post( $excerpt_more );
 						}
 						?>
+
+<div class="lsx-to-widget-meta-data">
+				<?php
+				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+				lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+				lsx_to_price( '<span><span class="lsx-to-meta-data-key">' . esc_html__( 'from', 'tour-operator' ) . ':</span> ', '</span>' );
+				the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key"></span> ', ', ', '</span><br/>' );
+				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+
+				if ( function_exists( 'lsx_to_connected_activities' ) ) {
+					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
+				}
+				$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+							echo wp_kses_post( $excerpt_more );?>
+			</div>
 
 					</div><!-- .entry-summary -->
 
@@ -154,6 +170,8 @@
 								'link_after'  => '</span>',
 							) );
 						?>
+
+
 					</div><!-- .entry-content -->
 
 				<?php endif; ?>
@@ -191,6 +209,7 @@
 								?>
 							</a>
 						</div>
+						
 					<?php endif ?>
 				</div>
 			<?php } ?>
@@ -200,7 +219,7 @@
 
 			<div class="entry-image hidden-xs">
 				<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
-					<?php lsx_thumbnail( 'lsx-thumbnail-single' ); ?>
+					<?php lsx_thumbnail( 'medium_large' ); ?>
 				</a>
 			</div>
 
