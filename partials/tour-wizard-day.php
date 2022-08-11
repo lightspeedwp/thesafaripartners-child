@@ -24,13 +24,14 @@
 											<div class="collapse-inner">
 												<div class="row lsx-to-archive-items lsx-to-archive-template-list lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?> itinerary-list">
 													<?php
+													$active = 'active';
 													while ( lsx_to_itinerary_loop() ) {
 														
 														lsx_to_itinerary_loop_item();
 														$thumb = lsx_to_itinerary_thumbnail('large');
 														?>
 
-														<div class="lsx-wizard-step">
+														<div class="lsx-wizard-step <?php echo esc_attr( $active ); ?>">
 															<h4><?php lsx_to_itinerary_title(); ?></h4>
 															<div class="step-content">
 																<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
@@ -74,6 +75,9 @@
 															</div>
 														</div>
 														<?php
+														if ( '' !== $active ) {
+															$active = '';
+														}
 														$itinerary_count++;
 													}
 													?>
