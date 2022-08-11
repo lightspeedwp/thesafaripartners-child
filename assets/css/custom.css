@@ -1177,7 +1177,6 @@ opacity: 0.4;
 		box-shadow:none!important;
 		border:1px solid #262423;
 	}
-	gform_body
 
 .page-template-template-contact .gform_body [type="radio"]:checked,
 .page-template-template-contact .gform_body [type="radio"]:not(:checked) {
@@ -1203,7 +1202,7 @@ opacity: 0.4;
     width: 18px;
     height: 18px;
     border: 1px solid #ce9e57;
-    border-radius: 100%;
+    border-radius: 35%;
     background: #fff;
 }
 .page-template-template-contact .gform_body [type="radio"]:checked + label:after,
@@ -2378,7 +2377,8 @@ s	.financial-about .lsx-banner-column {
 	min-height:30px;
 	background:transparent;
 	font-family:"moret",serif!important;}
-.page-template-template-contact #primary form .gform_fields input[type='radio']{border: 1px solid#ce9e57;color:#ce9e57;height:12px;width:14px; }
+.page-template-template-contact #primary form .gform_fields input[type='radio']{display:none;height:12px;width:14px; }
+.page-template-template-contact .gform_required_legend{text-align:left;}
 .gform_wrapper .gform_validation_errors>h2{font-size:20px!important}
 .page-template-template-contact #primary form input[type=submit] {
 	background:#6a6d5b!important;
