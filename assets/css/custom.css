@@ -397,13 +397,13 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.post-template-default .content {
 		margin:0 auto;
-		width:1366px;
-		padding: 0 81px;
+		width:1204px;
+		padding: 0px;
 	}
 	/*Wizard */
 	.lsx-wizard-buttons-wrapper {
 		margin:0 auto;
-		width:1342px;
+		width:1204px;
 		padding:0 9px;
 	}
 	.page-template-template-wizard .wizard-who .col-md-3, .page-template-template-wizard .wizard-what .col-md-3, .page-template-template-wizard .wizard-where .col-md-3, .page-template-template-wizard .wizard-when .col-md-3, .page-template-template-wizard .wizard-budget .col-md-3{padding-left:0!important;}
@@ -1803,10 +1803,10 @@ opacity: 0.4;
 			height:20px;
 			content:"";margin-right: 10px;}	
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu>ul.mega-sub-menu {
-		width: 1444px;
+		width: 1366px;
     margin-top: 12px;
     max-width: none;
-    left: -413.5px;
+    left: -333.5px;
 	}
 	#masthead>.container {
 		min-height:66px;
@@ -2339,8 +2339,8 @@ s	.financial-about .lsx-banner-column {
 
 .tax-travel-style .archive-intro {
 	padding-bottom: 80px!important;
-    margin: 60px 0px 40px 8px!important;
-    width: 1322px!important;
+    margin: 60px 0px 40px 0px!important;
+    width: 1204px!important;
 	border-bottom:1px solid #000;
     
 }
