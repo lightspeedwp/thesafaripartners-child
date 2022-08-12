@@ -1598,15 +1598,15 @@ opacity: 0.4;
 		width:60px!important;
 		height:60px!important;
 	}
-	.lsx-to-slider-inner .slick-arrow.slick-prev {
-		left:-30px;
-		width:60px!important;
-		height:60px!important;
+	.accomodation-slider .slick-arrow.slick-prev {
+		left:0px!important;
+		width:30px!important;
+		height:30px!important;
 	}
-	.lsx-to-slider-inner .slick-arrow.slick-next {
-		right:-30px;
-		width:60px!important;
-		height:60px!important;
+	.accomodation-slider .slick-arrow.slick-next {
+		right:0px!important;
+		width:30px!important;
+		height:30px!important;
 	}
 	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
 		border:1px solid #ce9e57!important;
