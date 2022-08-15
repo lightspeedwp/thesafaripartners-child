@@ -1603,15 +1603,28 @@ opacity: 0.4;
 		height:60px!important;
 	}
 	.tour-accommodation-gallery .slick-arrow.slick-prev {
-		left:0px!important;
+		left:15px!important;
 		width:30px!important;
 		height:30px!important;
 	}
+	.tour-accommodation-gallery .slick-arrow.slick-prev:before{background-size: 10px 10px!important;
+		width: 10px!important;left: 8px;
+		height: 10px!important;}
+		.tour-accommodation-gallery .slick-arrow.slick-next:before{background-size: 10px 10px!important;
+			width: 10px!important;left: 12px;
+			height: 10px!important;}
 	.tour-accommodation-gallery .slick-arrow.slick-next {
 		right:0px!important;
 		width:30px!important;
 		height:30px!important;
 	}
+
+	.tour-accommodation-gallery .accomodation-slider{width:100%;padding:0!important;}
+.tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;}
+.tour-accommodation-gallery .accomodation-slider{height: 56vh;}
+.tour-accommodation-gallery .accomodation-nav{margin-bottom:70px!important;border-top:3px solid #fff;}
+.tour-accommodation-gallery .accomodation-nav .slick-list{padding:0!important;}
+
 	.tour-accommodation-gallery .lsx-to-slider-inner{width: calc(100% + 15px)!important;}
 
 	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
