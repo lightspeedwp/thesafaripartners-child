@@ -749,7 +749,7 @@ opacity: 0.4;
     font-size: 14px;
     border-radius: 0;
     top: 8px;
-    right: -1px;
+    right: -2px;
     height: 100%;
     width: 100%;
     z-index: 9;
@@ -813,12 +813,11 @@ opacity: 0.4;
     font-size: 15px;}
 
 	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-      border: 1px solid #ce9e57;
-      width: 156px;
-      height: 262px;
-      margin-left: -116px;
-      padding-left: 117px;
-      padding-top: 6px;
+		border: 1px solid #ce9e57;
+		width: 142px;
+		height: 240px;
+		margin-left: 0;
+		padding-top: 6px;
 	}
 
   .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -828,7 +827,7 @@ opacity: 0.4;
     left: 0px;
     font-weight: 100;
     color: #ce9e57;
-    font-size: 15px;
+    font-size: 0px;
   }
 
   .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -847,7 +846,7 @@ opacity: 0.4;
   left: 0px;
   font-weight: 100;
   color: #ce9e57;
-  font-size: 15px;
+  font-size: 0x;
 	}
 
 	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -877,7 +876,7 @@ opacity: 0.4;
   left: 0px;
   font-weight: 100;
   color: #ce9e57;
-  font-size: 15px;
+  font-size: 0px;
 	}
   .when-wiz{margin-top:30px;}
 
