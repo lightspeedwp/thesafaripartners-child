@@ -621,7 +621,7 @@ function openinCity(evt, eventName) {
 
 	let setReadMoreDescriptions = function() {
 		$( '.entry-content.lsx-readmore' ).each( function() {
-			if ( 1 < $( this ).children().length ) {
+			if ( 2 < $( this ).children().length ) {
 				let counter = 0;
 				$( this ).children().each( function() {
 					counter++;
@@ -641,6 +641,11 @@ function openinCity(evt, eventName) {
 				let collapse = false;
 				if ( $(this).hasClass( 'open' ) ) {
 					collapse = true;
+					$( this ).html('Read More');
+					$( this ).removeClass( 'open' );
+				} else {
+					$( this ).html('Read Less');
+					$( this ).addClass( 'open' );
 				}
 
 				let counter = 0;
