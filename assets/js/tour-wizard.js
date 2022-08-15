@@ -731,7 +731,7 @@ function openinCity(evt, eventName) {
 				finish: {
 					text: {
 						css: {
-							//'font-size': '20px',
+							'display': 'none',
 							//'float': 'left',
 							//'font-size': '20px',
 							//'margin-top': '2px',
@@ -754,7 +754,6 @@ function openinCity(evt, eventName) {
 		$("#wizard2").lsxWizard();
 
 		$("#page-5").on('click',function(){
-			console.log('click');
 			$(".lsx-map-placeholder").click();
 		});
 		
