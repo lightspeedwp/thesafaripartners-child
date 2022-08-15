@@ -13,7 +13,7 @@
 		var lesstext = "Show less";
 	
 	
-		$('.lsx-readmore').each(function() {
+		$('.lsx-readmore p').each(function() {
 			var content = $(this).html();
 	
 			if(content.length > showChar) {
