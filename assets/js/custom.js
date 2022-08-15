@@ -18,7 +18,7 @@
 	}
 	
 	var len = 100;
-	var shrinkables = $('.lsx-readmore p');
+	var shrinkables = document.getElementsByClassName('lsx-readmore p');
 	if (shrinkables.length > 0) {
 		for (var i = 0; i < shrinkables.length; i++){
 			var fullText = shrinkables[i].innerHTML;
@@ -31,4 +31,5 @@
 			}
 		}
 	}
+
 })( jQuery, window, document );
