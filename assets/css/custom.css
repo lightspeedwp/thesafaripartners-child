@@ -412,32 +412,32 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.page-template-template-wizard .wizard-who .col-md-3, .page-template-template-wizard .wizard-what .col-md-3, .page-template-template-wizard .wizard-where .col-md-3, .page-template-template-wizard .wizard-when .col-md-3, .page-template-template-wizard .wizard-budget .col-md-3{padding-left:0!important;}
 	.wizard-who {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-what {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-where {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-when {
 		margin: 0 auto;
-    width: 1204px;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-budget {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
@@ -846,7 +846,7 @@ opacity: 0.4;
   left: 0px;
   font-weight: 100;
   color: #ce9e57;
-  font-size: 0x;
+  font-size: 0px;
 	}
 
 	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
