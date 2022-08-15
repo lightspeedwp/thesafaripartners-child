@@ -2512,7 +2512,6 @@ s	.financial-about .lsx-banner-column {
 	z-index:-1;
 	height:100%;
 	width:100%;
-	border:2px solid #ce9e57;;
 }
 .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	content:"\f00c";
