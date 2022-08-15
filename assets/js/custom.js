@@ -5,40 +5,40 @@
  */(function($, window, document, undefined) {
 
 	'use strict';
-	window.addEventListener('load', () => {
-		let intro = new ShowMore('lsx-readmore', 'read_more', 300);
-	  });
-  
-	  function ShowMore(e, l, stop) {
-		this.e = document.getElementById(e);
-		this.eText = this.e.innerText;
-		this.stop = stop;
-		this.l = document.getElementById(l);
-  
-		this.l.addEventListener('click', (e) => {
-		  this.expand_text();
-		  e.preventDefault();
-		  e.stopPropagation();
+	$(document).ready(function() {
+		// Configure/customize these variables.
+		var showChar = 100;  // How many characters are shown by default
+		var ellipsestext = "...";
+		var moretext = "Show more >";
+		var lesstext = "Show less";
+	
+	
+		$('.lsx-readmore').each(function() {
+			var content = $(this).html();
+	
+			if(content.length > showChar) {
+	
+				var c = content.substr(0, showChar);
+				var h = content.substr(showChar, content.length - showChar);
+	
+				var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+	
+				$(this).html(html);
+			}
+	
 		});
-  
-		this.get_length = () => {
-		  return this.e.innerText.length;
-		};
-  
-		this.hide_text = () => {
-		  this.e.innerText = this.e.innerText.substr(0, this.stop) + '\u2026';
-		  this.l.style.display = 'inline';
-		  this.e.appendChild(this.l);
-		}
-  
-		this.expand_text = () => {
-		  this.e.innerText = this.eText;
-		}
-  
-		this.show = () => {
-		  return (this.get_length() > this.stop) ? this.hide_text() : this.expand_text();
-		};
-  
-		this.show();
-	  };
+	
+		$(".morelink").click(function(){
+			if($(this).hasClass("less")) {
+				$(this).removeClass("less");
+				$(this).html(moretext);
+			} else {
+				$(this).addClass("less");
+				$(this).html(lesstext);
+			}
+			$(this).parent().prev().toggle();
+			$(this).prev().toggle();
+			return false;
+		});
+	});
 })( jQuery, window, document );
