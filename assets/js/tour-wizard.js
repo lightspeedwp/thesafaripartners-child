@@ -666,6 +666,15 @@ function openinCity(evt, eventName) {
 		});
 	};
 
+	let createItineraryNavigation = function() {
+		let itineraryItems = [];
+		let counter = 0;
+		
+		itineraryItems = $(".itenary .itenary-item .lsx-to-tour-content .lsx-to-archive-content-title").map(function(){
+			return $(this).html();
+		});
+	}
+
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
 			minHeight: 400,
