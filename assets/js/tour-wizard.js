@@ -619,6 +619,12 @@ function openinCity(evt, eventName) {
 
 	////////////////////////////////////////// Plugin Options
 
+	let setReadMoreDescriptions = function() {
+		$( '.entry-content.lsx-readmore' ).each( function() {
+			console.log( $( this ).children() );
+		} );
+	};
+
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
 			minHeight: 400,
@@ -756,6 +762,7 @@ function openinCity(evt, eventName) {
 		$("#page-5").on('click',function(){
 			$(".lsx-map-placeholder").click();
 		});
-		
+
+		setReadMoreDescriptions();
 	});
 })( jQuery, window, document );
