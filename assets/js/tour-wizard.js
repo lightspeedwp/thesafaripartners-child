@@ -649,7 +649,6 @@ function openinCity(evt, eventName) {
 				}
 
 				let counter = 0;
-				console.log($( this ).parent('.entry-content.lsx-readmore').children());
 				$( this ).parent('.entry-content.lsx-readmore').children().each( function(){
 					counter++;
 					if ( true === collapse ) {
