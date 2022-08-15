@@ -1598,12 +1598,12 @@ opacity: 0.4;
 		width:60px!important;
 		height:60px!important;
 	}
-	.accomodation-slider .slick-arrow.slick-prev {
+	.tour-accommodation-gallery .slick-arrow.slick-prev {
 		left:0px!important;
 		width:30px!important;
 		height:30px!important;
 	}
-	.accomodation-slider .slick-arrow.slick-next {
+	.tour-accommodation-gallery .slick-arrow.slick-next {
 		right:0px!important;
 		width:30px!important;
 		height:30px!important;
@@ -2069,8 +2069,13 @@ opacity: 0.4;
 	top:1px;
 }
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
-	width:400px;
-	padding: 0 0px;
+	width: 534px;
+    padding: 0 0px;
+    position: relative;
+    bottom: 36px;
+    right: 69px;
+    z-index: 99;
+    float: right;
 }
 .single-lsx-to-tour .lsx-wizard-steps-wrapper{height:500px!important;}
 
