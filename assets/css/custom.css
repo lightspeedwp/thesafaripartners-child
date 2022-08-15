@@ -1620,9 +1620,9 @@ opacity: 0.4;
 	}
 
 	.tour-accommodation-gallery .accomodation-slider{width:100%;padding:0!important;}
-.tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;}
+.tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;margin-top: -75px;}
 .tour-accommodation-gallery .accomodation-slider{height: 56vh;}
-.tour-accommodation-gallery .accomodation-nav{margin-bottom:70px!important;border-top:3px solid #fff;}
+.tour-accommodation-gallery .accomodation-nav{margin-bottom:70px!important;border-top:4px solid #fff;}
 .tour-accommodation-gallery .accomodation-nav .slick-list{padding:0!important;}
 
 	.tour-accommodation-gallery .lsx-to-slider-inner{width: calc(100% + 15px)!important;}
