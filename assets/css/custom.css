@@ -225,12 +225,15 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin-top:6px;
 		margin-bottom:18px;
 	}
+	#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-columns-10-of-12 {
+		width: 900px!important;
+		float: right;}
 	#mega-menu-wrap-primary #mega-menu-primary .lsx-destination .destinationhover{display:none;}
 	#mega-menu-wrap-primary #mega-menu-primary .lsx-destination:hover .destinationhover{display: block!important;
-    position: fixed !important;
-    left: -222px;
-    top: 30px;
-    width: 220px;}
+		position: fixed !important;
+		left: -295px;
+		top: 0px;
+		width: 278px;}
 	.body-wrap {
 		background:#fff;
 	}
@@ -409,32 +412,32 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	.page-template-template-wizard .wizard-who .col-md-3, .page-template-template-wizard .wizard-what .col-md-3, .page-template-template-wizard .wizard-where .col-md-3, .page-template-template-wizard .wizard-when .col-md-3, .page-template-template-wizard .wizard-budget .col-md-3{padding-left:0!important;}
 	.wizard-who {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-what {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-where {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-when {
 		margin: 0 auto;
-    width: 1204px;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		padding: 80px 0px 0px 24px;
 	}
 	.wizard-budget {
 		margin: 0 auto;
-    width: 1204px;
-    display: flex;
-    padding: 80px 0px 0px 0px;
+		width: 1240px;
+		display: flex;
+		padding: 80px 0px 0px 24px;
 	}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
@@ -519,7 +522,9 @@ padding-top: 6px;
 background: #fff;
 opacity: 0.4;
 }
-
+.lsx-readmore{height:400px;
+	max-height:400px;
+	overflow-y:scroll;}
 .archive .wizard-who, .single .wizard-who{height: 200px;}
   .archive .wizard-who, .archive .wizard-where, .archive .wizard-what, .archive .wizard-when, .archive .wizard-budget{padding-top:50px!important;}
   .archive .wizard-who, .archive .wizard-where, .archive .wizard-what, .archive .wizard-when, .archive .wizard-budget{padding-top:50px!important;}
@@ -527,7 +532,7 @@ opacity: 0.4;
   .archive #wizard{padding-bottom:10px;}
   .archive  .archive-header-wrapper{display:none;}
   .archive #wizard .step-content .col-md-3{padding-right:35px!important;}
-  .archive #wizard .step-content .col-sm-2{padding: 0 2px!important;}
+  .archive #wizard .step-content .col-sm-2{padding: 0 2px!important;margin-bottom:10px;}
   .archive .wizard-where .col-sm-2{height:210px;}
   .archive .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{margin-bottom:10px;}
   .archive .safari-styles{margin-top:0!important;}
@@ -729,26 +734,27 @@ opacity: 0.4;
   .tax-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .tax-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
-    width: 163px;
-    height: 202px;
-    margin-left: -122px;
+    width: 148px;
+    height: 210px;
+    margin-left: 0px;
     padding-left: 124px;
-    padding-top: 6px;
-    background: #fff;
-    opacity: 0.4;
+    padding-top: 0px;
+    background: none;
+    opacity: 1;
   }
 
   .page-template-template-wizard .body-wrap{height:90vh!important;}
 	.lsx-wizard .checkbox-wrapper {
-		position:absolute;
-		font-size:14px;
-		border-radius:50%;
-		top:5px;
-		right:20px;
-		height:25px;
-		width:25px;
-		z-index:9;
-		background:#fff;
+		position: absolute;
+    font-size: 14px;
+    border-radius: 0;
+    top: 8px;
+    right: -2px;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    opacity: 1;
+    background: none;
 	}
 	.lsx-wizard .wizard-when label {
 		width:160px;
@@ -804,15 +810,14 @@ opacity: 0.4;
     left: 0px;
     font-weight: 100;
     color: #ce9e57;
-    font-size: 15px;}
+    font-size: 0px;}
 
 	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-      border: 1px solid #ce9e57;
-      width: 156px;
-      height: 262px;
-      margin-left: -116px;
-      padding-left: 117px;
-      padding-top: 6px;
+		border: 1px solid #ce9e57;
+		width: 142px;
+		height: 240px;
+		margin-left: 0;
+		padding-top: 6px;
 	}
 
   .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -822,14 +827,14 @@ opacity: 0.4;
     left: 0px;
     font-weight: 100;
     color: #ce9e57;
-    font-size: 15px;
+    font-size: 0px;
   }
 
   .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
-    width: 156px;
+    width: 141px;
     height: 236px;
-    margin-left: -116px;
+    margin-left: 0px;
     padding-left: 117px;
     padding-top: 6px;
 	}
@@ -841,17 +846,26 @@ opacity: 0.4;
   left: 0px;
   font-weight: 100;
   color: #ce9e57;
-  font-size: 15px;
+  font-size: 0px;
 	}
 
 	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   border: 1px solid #ce9e57;
-  width: 156px;
+  width: 141px;
   height: 228px;
-  margin-left: -116px;
+  margin-left: 0px;
   padding-left: 117px;
   padding-top: 6px;
 	}
+
+	.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+		border: 1px solid #ce9e57;
+		width: 141px;
+		height: 228px;
+		margin-left: 0px;
+		padding-left: 117px;
+		padding-top: 6px;
+		  }
 
 	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
@@ -871,7 +885,7 @@ opacity: 0.4;
   left: 0px;
   font-weight: 100;
   color: #ce9e57;
-  font-size: 15px;
+  font-size: 0px;
 	}
   .when-wiz{margin-top:30px;}
 
@@ -1672,6 +1686,7 @@ opacity: 0.4;
 	.page-id-133119 #primary .notfull {
 		width:1204px;padding:0!important;
 	}
+	.page-id-133119 .socialresponce{gap: 0em!important;}
 	.page-id-133119 .entry-content>div:not(:first-of-type) {
 		width:1204px;
 		padding-left:20px;
@@ -2078,7 +2093,7 @@ opacity: 0.4;
 	width: 41%!important;
     margin-left: -22px!important;
 }
-.single-lsx-to-tour #Maps .lsx-to-tour-content{padding-top: 9vh!important;}
+.single-lsx-to-tour #Maps .lsx-to-tour-content{padding-top: 5vh!important;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data-style, .single-lsx-to-tour #Maps .lsx-to-meta-data-price, .single-lsx-to-tour #Maps .lsx-to-meta-data-destinations{display:none;}
 .single-lsx-to-tour .content-area {
 	margin-bottom:0!important;
@@ -2103,29 +2118,7 @@ opacity: 0.4;
 }
 .single-lsx-to-tour .lsx-wizard-steps-wrapper{height:500px!important;}
 
-.example+[data-readmore-toggle],
-.example[data-readmore] {
-  display: block;
-}
-/*Read more */
-.example[data-readmore]::after {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 85%);
-  bottom: 0;
-  content: '';
-  display: inline-block;
-  height: 250px;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
 
-.remove-after::after {
-  display: none !important;
-}
-
-[data-readmore-toggle] {
-  margin-left: 15px;
-}
 /*About */
 .lsx-to-widget-item-wrap.lsx-team {
 	margin:0;
@@ -2509,16 +2502,16 @@ s	.financial-about .lsx-banner-column {
 	background:#fff;
 }
 .checkbox-wrapper>[type="checkbox"] {
-	cursor:pointer;
-	border-radius:50%;
-	height:100%;
-		left:0;
-		margin:0;
-		opacity:0;
-		position:absolute;
-		top:0;
-		width:100%;
-		z-index:0;
+	cursor: pointer;
+    border-radius: 50%;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }
 .checkbox-wrapper>[type="checkbox"]+span {
 	border-radius:50%;
@@ -2527,7 +2520,6 @@ s	.financial-about .lsx-banner-column {
 	z-index:-1;
 	height:100%;
 	width:100%;
-	border:2px solid #ce9e57;;
 }
 .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	content:"\f00c";
