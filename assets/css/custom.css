@@ -963,7 +963,7 @@ opacity: 0.4;
 	/* Style the tab */
 	#primary .tab {
 		overflow:hidden;
-		right:52%;
+		right:51.5%;
 		z-index:9;
 		margin-top:1%;
 	}
@@ -984,7 +984,7 @@ opacity: 0.4;
 		cursor:pointer;
 		padding:0px 0px 2px;
 		transition: 0.5s;
-		margin: 0 10px;
+		margin: 0 4px;
 	}
 	
 	/* Create an active/current tablink class */
@@ -1529,12 +1529,12 @@ opacity: 0.4;
 		padding:0!important;
 	}
 	.page-template-template-contact .lsx-contact-module {
-		width:100%;
-		max-width:604px!important;
-		position:absolute;
-		right:6%;
-		z-index:4;
-		padding-top:16%;
+		width: 100%;
+    max-width: 555px!important;
+    position: absolute;
+    right: 5%;
+    z-index: 4;
+    padding-top: 15%;
 	}
 	.page-template-template-contact .contact-133993 .lsx-contact-module{width: 100%;
 		max-width: 432px!important;
@@ -1746,11 +1746,11 @@ opacity: 0.4;
 	#footer-sub .gform_heading {
 		width:26%;
 		float:left;
-		padding-left:3%;
+		padding-left:3px;
 	}
 	#footer-sub {
 		background-color:transparent;
-		padding:60px 0 90px!important;
+		padding:15px 0 150px!important;
 		position:relative;
 	}
 	#footer-sub form {
@@ -2228,7 +2228,7 @@ s	.financial-about .lsx-banner-column {
 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-item-align-right {
 	background:#ce9e57;
 	margin:-5px 0px 0 5px;
-	padding:4px 18px;
+	padding:4px 30px 4px 10px;
 }
 #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 {
 	background:#fff;
