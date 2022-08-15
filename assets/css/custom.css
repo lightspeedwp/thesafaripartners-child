@@ -968,10 +968,14 @@ opacity: 0.4;
 		margin-top:1%;
 	}
 	.single-lsx-to-tour #primary .tab {
-		overflow:hidden;
-		right:0%!important;
-		z-index:9;
+		overflow: hidden;
+		left: 54%!important;
+		z-index: 9;
+		position: relative;
 		margin-top: 1%;
+		right: 0;
+		margin-bottom: -30px;
+		width: 476px;
 	}
 	/* Style the buttons that are used to open the tab content */
 	#primary .tab button {
@@ -1608,6 +1612,7 @@ opacity: 0.4;
 		width:30px!important;
 		height:30px!important;
 	}
+	.tour-accommodation-gallery .lsx-to-slider-inner{width: calc(100% + 15px)!important;}
 	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
 		border:1px solid #ce9e57!important;
 		background:#fff;
@@ -1944,9 +1949,9 @@ opacity: 0.4;
 		padding:0!important;
 	}
 	.single-lsx-to-tour .outer-container {
-		position:relative;
-		width:1366px!important;
-		margin:0 auto;
+	width: 1204px;
+    margin: 0 auto;
+    float: none;
 	}
 	.single-lsx-to-tour .lsx-to-tour-content {
 	padding-top: 13vh!important;
@@ -2010,6 +2015,7 @@ opacity: 0.4;
 		box-shadow: none;
 		font-size:20px;font-weight: normal;
 		letter-spacing: 0;
+		height:58px;
 	}
 	.lsx-to-single .tablinks{padding: 0;
 		background: #fff;
