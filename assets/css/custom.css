@@ -810,7 +810,7 @@ opacity: 0.4;
     left: 0px;
     font-weight: 100;
     color: #ce9e57;
-    font-size: 15px;}
+    font-size: 0px;}
 
 	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border: 1px solid #ce9e57;
@@ -832,9 +832,9 @@ opacity: 0.4;
 
   .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
-    width: 156px;
+    width: 141px;
     height: 236px;
-    margin-left: -116px;
+    margin-left: 0px;
     padding-left: 117px;
     padding-top: 6px;
 	}
@@ -851,12 +851,21 @@ opacity: 0.4;
 
 	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   border: 1px solid #ce9e57;
-  width: 156px;
+  width: 141px;
   height: 228px;
-  margin-left: -116px;
+  margin-left: 0px;
   padding-left: 117px;
   padding-top: 6px;
 	}
+
+	.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+		border: 1px solid #ce9e57;
+		width: 141px;
+		height: 228px;
+		margin-left: 0px;
+		padding-left: 117px;
+		padding-top: 6px;
+		  }
 
 	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
   content: "\f00c";
