@@ -673,7 +673,8 @@ function openinCity(evt, eventName) {
 		itineraryItems = $(".itenary .itenary-item .lsx-to-tour-content .lsx-to-archive-content-title").map(function(){
 			return $(this).html();
 		});
-	}
+		console.log(itineraryItems);
+	};
 
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
@@ -814,5 +815,6 @@ function openinCity(evt, eventName) {
 		});
 
 		setReadMoreDescriptions();
+		createItineraryNavigation();
 	});
 })( jQuery, window, document );
