@@ -36,7 +36,7 @@
 															<div class="lsx-to-tour-content">
 																<h3 class="lsx-to-archive-content-title"><?php the_title(); ?></h3>
 	
-																<div class="entry-content">
+																<div class="entry-content lsx-readmore">
 																	<?php lsx_to_entry_content_top(); ?>
 
 																	<?php the_content(); ?>
