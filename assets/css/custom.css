@@ -1619,24 +1619,6 @@ opacity: 0.4;
 		height:30px!important;
 	}
 
-	.toggledText {
-		height: 200px;
-		overflow: hidden;
-	  }
-	  
-	  .toggledText.toggle {
-	   height: auto;
-	  }
-	  
-	  .readless-txt,
-	  .toggledText.toggle~#readmore span.readmore-txt {
-		display: none;
-	   }
-	  
-	  .toggledText.toggle~#readmore span.readless-txt {
-		 display: block;
-	  }
-	  
 	.tour-accommodation-gallery .accomodation-slider{width:100%;padding:0!important;}
 .tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;margin-top: -75px;}
 .tour-accommodation-gallery .accomodation-slider{height: 56vh;}
@@ -2070,7 +2052,7 @@ opacity: 0.4;
 		overflow:hidden;
 	}
 
-	.single-lsx-to-tour .lsx-tour-module-map{padding-left:0 !important;}
+	.single-lsx-to-tour .lsx-tour-module-map{padding:0 !important;}
 
 .single-lsx-to-tour .lsx-banner-image-wrap img {
 	object-fit:cover;

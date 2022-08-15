@@ -36,11 +36,10 @@
 															<div class="lsx-to-tour-content">
 																<h3 class="lsx-to-archive-content-title"><?php the_title(); ?></h3>
 	
-																<div class="entry-content toggledText" id="toggledText">
+																<div class="entry-content lsx-readmore">
 																	<?php lsx_to_entry_content_top(); ?>
 
 																	<?php the_content(); ?>
-																	<a href="#" id="readmore"><span class="readmore-txt">Read more</span><span class="readless-txt">Read Less</span></a>
 
 																	<?php lsx_to_entry_content_bottom(); ?>
 																</div>
