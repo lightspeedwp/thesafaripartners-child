@@ -5,40 +5,12 @@
  */(function($, window, document, undefined) {
 
 	'use strict';
-	$(document).ready(function() {
-		// Configure/customize these variables.
-		var showChar = 100;  // How many characters are shown by default
-		var ellipsestext = "...";
-		var moretext = "Show more >";
-		var lesstext = "Show less";
-	
-	
-		$('.lsx-readmore p').each(function() {
-			var content = $(this).html();
-	
-			if(content.length > showChar) {
-	
-				var c = content.substr(0, showChar);
-				var h = content.substr(showChar, content.length - showChar);
-	
-				var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-	
-				$(this).html(html);
-			}
-	
-		});
-	
-		$(".morelink").click(function(){
-			if($(this).hasClass("less")) {
-				$(this).removeClass("less");
-				$(this).html(moretext);
-			} else {
-				$(this).addClass("less");
-				$(this).html(lesstext);
-			}
-			$(this).parent().prev().toggle();
-			$(this).prev().toggle();
-			return false;
-		});
-	});
+	$('.lsx-readmore p').readmore({
+		speed: 500,
+		collapsedHeight:200,
+		collapsedMoreHeight: 400, // This is your new second height. Always bigger than collapsedHeigh. There isn't any control to that. Be careful.
+		moreLink: '<a class="white-shadow" href="#">More information</a>',
+		evenMoreLink: '<a class="white-shadow" href="#">Even More informations</a>', // Add new label
+		lessLink: '<a href="#">Less information</a>'
+	  });
 })( jQuery, window, document );
