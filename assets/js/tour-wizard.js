@@ -621,8 +621,45 @@ function openinCity(evt, eventName) {
 
 	let setReadMoreDescriptions = function() {
 		$( '.entry-content.lsx-readmore' ).each( function() {
-			console.log( $( this ).children() );
+			if ( 1 < $( this ).children().length ) {
+				let counter = 0;
+				$( this ).children().each( function() {
+					counter++;
+
+					if ( 2 < counter ) {
+						$( this ).hide();
+					}
+				} );
+
+				$( this ).append( '<a class="read-more">Read More</a>' )
+			}
 		} );
+
+		$( '.entry-content.lsx-readmore .read-more' ).each( function() {
+			$( this ).on( 'click', function( event ){
+
+				let collapse = false;
+				if ( $(this).hasClass( 'open' ) ) {
+					collapse = true;
+				}
+
+				let counter = 0;
+				console.log($( this ).parent('.entry-content.lsx-readmore').children());
+				$( this ).parent('.entry-content.lsx-readmore').children().each( function(){
+					counter++;
+					if ( true === collapse ) {
+						if ( ! $( this ).hasClass('read-more' ) ) {
+							$( this ).hide();
+						}
+					} else {
+						if ( ! $( this ).hasClass('read-more' ) ) {
+							$( this ).show();
+						}
+					}
+					
+				});
+			} );
+		});
 	};
 
 	$.fn.lsxWizard.defaults = {
