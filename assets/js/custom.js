@@ -7,6 +7,7 @@
 	'use strict';
 })( jQuery, window, document );
 
+function hide_all_pars(par){
 if ($('.lsx-readmore').find('p').length) {
 
 	$(".lsx-readmore").each(function(i) {
@@ -59,3 +60,4 @@ if ($('.lsx-readmore').find('p').length) {
 	});
   
   }
+}
