@@ -235,7 +235,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		background:#fff;
 	}
   .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus{color:#ce9e57;}
-  .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#262423;}
+  .content-area .tourslink a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .content-area .tourslink a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .content-area .tourslink a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited{color:#262423!important;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6 {
 		display:none;
 	}
@@ -542,7 +542,7 @@ opacity: 0.4;
 		object-fit:cover;width:100%;}
 	.archive .archive-intro p{width:686px;}	
   .archive #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
-  .archive #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;}
+  .archive #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;padding-top: 30px;}
   .lsx-cta{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;box-shadow: none;}
   .archive .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
   .archive .lsx-wizard-button-next:hover, .page-template-template-wizard .lsx-wizard-button-next:hover{background:#262423!important;}
@@ -1668,6 +1668,10 @@ opacity: 0.4;
 	.page .entry-content>div:not(:first-of-type) {
 		width:1204px;padding:0!important;
 	}
+
+	.page-id-133119 #primary .notfull {
+		width:1204px;padding:0!important;
+	}
 	.page-id-133119 .entry-content>div:not(:first-of-type) {
 		width:1204px;
 		padding-left:20px;
@@ -2490,7 +2494,7 @@ s	.financial-about .lsx-banner-column {
   background: #FFF;
   position: absolute;
   width: 152px;
-  height: 134px;
+  height: 100px;
   opacity: 0.4;
 }
 .checkbox-wrapper {
