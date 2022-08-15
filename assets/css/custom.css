@@ -1614,16 +1614,6 @@ opacity: 0.4;
 	}
 	.tour-accommodation-gallery .lsx-to-slider-inner{width: calc(100% + 15px)!important;}
 
-	.tour-accommodation-gallery .accomodation-slider.lsx-to-slider-inner .image-slide{display: contents;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;}
-
-	.tour-accommodation-gallery .accomodation-slider.lsx-to-slider-inner .image-slide img {
-		object-fit: cover;
-		height: 70vh!important;
-		width: 100%;}
-
 	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
 		border:1px solid #ce9e57!important;
 		background:#fff;
