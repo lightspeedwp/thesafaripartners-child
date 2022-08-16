@@ -561,7 +561,6 @@
 				'position': 'relative',
 				'overflow': 'hidden',
 				'width': '100%',
-				'min-height': globalMinHeight + 'px'
 			});
 		return result;
 	}

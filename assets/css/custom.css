@@ -735,11 +735,12 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     background: none;
     opacity: 1;
   }
+  .archive #wizard .step-content .wizard-what .col-sm-2{height: 250px!important;}
 
   .archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 148px;
-    height: 210px;
+    height: 238px;
     margin-left: 0px;
     padding-left: 124px;
     padding-top: 0px;

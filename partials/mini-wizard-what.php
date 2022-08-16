@@ -21,7 +21,7 @@
 
 					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 						<div class="lsx-to-widget-thumb">
-							<?php lsx_to_term_thumbnail( $term->term_id, 'thumbnail' ); ?>
+							<?php lsx_to_term_thumbnail( $term->term_id, 'medium' ); ?>
 						</div>
 
 					<?php else : ?>
