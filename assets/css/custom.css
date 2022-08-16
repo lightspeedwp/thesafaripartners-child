@@ -769,10 +769,12 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     content:"";
 	}
 	.lsx-wizard-progress-buttons-wrapper {
-		position:relative;
-		z-index:1;
-		width:1204px;
-		margin:4px auto -46px;
+		position: absolute;
+    z-index: 1;
+    width: 569px;
+    margin: 4px auto -46px;
+    bottom: 40px;
+    right: 25%;
 	}
 	.lsx-wizard-progress-buttons .steps1 {
 		display:none!important;
