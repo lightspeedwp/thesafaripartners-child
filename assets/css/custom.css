@@ -1813,7 +1813,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		width:100%!important;
 		margin:0 auto;
 	}
-	.archive #primary{
+	.archive #primary, .single-lsx-to-destination  #primary{
 		width:1204px!important;
 		margin:0 auto;
 		float:none!important;
