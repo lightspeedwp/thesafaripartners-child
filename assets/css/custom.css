@@ -228,12 +228,18 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-columns-10-of-12 {
 		width: 900px!important;
 		float: right;}
+		#mega-menu-46380-0-0
+		#mega-menu-wrap-primary #mega-menu-primary #mega-menu-46380-0-0 h4{margin-left:-14px; color:#000;}
 	#mega-menu-wrap-primary #mega-menu-primary .lsx-destination .destinationhover{display:none;}
 	#mega-menu-wrap-primary #mega-menu-primary .lsx-destination:hover .destinationhover{display: block!important;
 		position: fixed !important;
 		left: -295px;
 		top: 0px;
 		width: 278px;}
+		#mega-menu-wrap-primary #mega-menu-primary #mega-menu-46380-1-0 .lsx-destination:hover .destinationhover{display: block!important;
+			position: fixed !important;
+			left: 0px!important;
+		}
 	.body-wrap {
 		background:#fff;
 	}
@@ -459,7 +465,9 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.page-template-template-wizard .wizard-budget .col-md-2{text-align:center;}
 
-
+.tax-travel-style .banner-content p{font-family: "moret",serif!important;font-size: 58px!important;
+    line-height: 68px;}
+	.tax-travel-style .page-banner-image .page-header{display:none;}
   .archive .lsx-wizard-buttons-wrapper{margin-top:10px;}
   .archive .archive-intro .lsx-to-widget-thumb{display:contents;
 	justify-content:center;

@@ -30,7 +30,9 @@ get_header(); ?>
 		<div class="col-sm-4">
 			<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
 				<div class="lsx-to-widget-thumb">
-					<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-block-post-grid-square' ); ?>
+				<?php if( get_field('page-image') ): ?>
+    				<img src="<?php the_field('page-image'); ?>" />
+				<?php endif; ?>
 				</div>
 			<?php } else { ?>
 				<div class="lsx-to-widget-thumb">
