@@ -23,7 +23,7 @@ get_header(); ?>
 				the_post();
 				?>
 
-				<section id="summary" class="lsx-to-section-new <?php lsx_to_collapsible_class( 'destination', false ); ?>">
+				<section class="lsx-to-section-new <?php lsx_to_collapsible_class( 'destination', false ); ?>">
 					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
 
 					<div id="collapse-summary" class="collapse in">
@@ -39,7 +39,6 @@ get_header(); ?>
 
 			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
-			<div class="tsp-seperator"></div>
 
 			<?php 
 				$panels = array(
