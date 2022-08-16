@@ -745,7 +745,7 @@
 
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
-			minHeight: 360,
+			minHeight: 380,
 			activeStep: 1,
 			localization: {
 				buttons: {

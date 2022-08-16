@@ -723,7 +723,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		display:inline-block!important;
 	}
 	.archive .lsx-wizard-progress-buttons {text-transform: capitalize ;}
-  .archive .wizard-who .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
+  .archive .wizard-who .lsx-to-widget-thumb, .archive .wizard-budget .lsx-to-widget-thumb{margin:0 auto!important; text-align:center;}
   .archive .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb{height:216px;}
   .archive .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
