@@ -140,7 +140,7 @@ function openinCity(evt, eventName) {
 						$this.find('.lsx-wizard-button-previous').hide();
 					}
 
-					$this.trigger("beForeEventRegistration.lsxWizard", this);
+					$this.trigger("beForeEventRegistration.lsxWizard", this, $this);
 
 					/////////////////////////// Register event handlers
 
@@ -668,14 +668,36 @@ function openinCity(evt, eventName) {
 		});
 	};
 
-	let createItineraryNavigation = function() {
+	let createItineraryNavigation = function( $itinerary ) {
 		let itineraryItems = [];
 		let counter = 0;
-		
-		itineraryItems = $(".itenary .itenary-item .lsx-to-tour-content .lsx-to-archive-content-title").map(function(){
-			return $(this).html();
+
+		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
+			itineraryItems.push($(this).html());
 		});
-		console.log(itineraryItems);
+
+		// Run through and inject the new text.
+		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
+			let nextIndex = counter + 1;
+			let prevIndex = counter - 1;
+
+			let navEle    = '<div class="itinerary-navigation">';
+			if ( 0 != counter ) {
+				navEle += '<button class="lsx-wizard-button-previous ignore-text"><span>' + itineraryItems[prevIndex] + '</span></button>';
+			}
+
+			if ( counter != itineraryItems.length ) {
+				navEle += '<button class="lsx-wizard-button-next ignore-text"><span>' + itineraryItems[nextIndex] + '</span></button>';
+			}
+
+			navEle += '</div>';
+
+			console.log(navEle);
+
+			$(this).prepend( navEle );
+
+			counter++;
+		});
 	};
 
 	$.fn.lsxWizard.defaults = {
@@ -809,9 +831,9 @@ function openinCity(evt, eventName) {
 	//document.getElementsByClassName("tours-wizard").click();
 
 	$(document).ready(function () {
-		$(document).on('beForeEventRegistration',function( $this ){
-			console.log($this);
-		});
+		$("#wizard").on('beForeEventRegistration.lsxWizard', function( event ) {
+			createItineraryNavigation( $("#wizard") );
+		} );
 
 		$("#wizard").lsxWizard();
 		$("#wizard2").lsxWizard();
@@ -821,8 +843,5 @@ function openinCity(evt, eventName) {
 		});
 
 		setReadMoreDescriptions();
-
-		beForeEventRegistration.lsxWizard
-		createItineraryNavigation();
 	});
 })( jQuery, window, document );
