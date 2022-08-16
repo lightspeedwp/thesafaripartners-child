@@ -736,6 +736,17 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
     opacity: 1;
   }
 
+  .archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+    border: 1px solid #ce9e57;
+    width: 148px;
+    height: 210px;
+    margin-left: 0px;
+    padding-left: 124px;
+    padding-top: 0px;
+    background: none;
+    opacity: 1;
+  }
+
   .page-template-template-wizard .body-wrap{height:90vh!important;}
 	.lsx-wizard .checkbox-wrapper {
 		position: absolute;
