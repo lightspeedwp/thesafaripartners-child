@@ -691,7 +691,7 @@ function openinCity(evt, eventName) {
 			}
 
 			navEle += '</div>';
-			$(this).replace( navEle );
+			$(this).replaceWith( navEle );
 			counter++;
 		});
 	};
