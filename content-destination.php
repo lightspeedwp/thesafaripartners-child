@@ -29,11 +29,9 @@ if ( 1 !== $lsx_to_archive ) {
 
 		<div class="col-sm-4">
 				<div class="lsx-to-widget-thumb">
-				<?php 
-				$image = get_field('page-image');
-					if( !empty( $image ) ): ?>
-    				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-					<?php endif; ?>
+				<?php if( get_field('page-image') ): ?>
+    				<img src="<?php the_field('page-image'); ?>" />
+				<?php endif; ?>
 				</div>
 			
 			<?php wp_reset_query(); ?>
