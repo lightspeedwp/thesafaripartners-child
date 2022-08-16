@@ -142,7 +142,7 @@ function openinCity(evt, eventName) {
 
 					/////////////////////////// Register event handlers
 
-					$this.find('.lsx-wizard-button-previous').click(function (e) {
+					$this.find('.lsx-wizard-button-previous').on( 'click', function (e) {
 						e.preventDefault();
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 						$this.trigger("onButtonPreviousClick.lsxWizard", this);
@@ -154,7 +154,7 @@ function openinCity(evt, eventName) {
 							// ...slide right imediatelly otherwise.
 							slideRight($elementToSlide, settings, $this);
 						}
-					});
+					} );
 
 					$this.on("slideRightSuccess.lsxWizard", function () {
 						resizeWizardStepsWrapper($this);
@@ -164,7 +164,7 @@ function openinCity(evt, eventName) {
 						resizeWizardStepsWrapper($this);
 					});
 
-					$this.find('.lsx-wizard-button-next').click(function (e) {
+					$this.find('.lsx-wizard-button-next').on('click',function (e) {
 						e.preventDefault();
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 
