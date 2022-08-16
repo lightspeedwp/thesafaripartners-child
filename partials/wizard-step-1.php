@@ -37,6 +37,7 @@
 
 				<?php wp_reset_query(); ?>
 			</div>
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 		</div>
 	</div>
 </div>
