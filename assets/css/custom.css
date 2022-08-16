@@ -26,7 +26,7 @@ h3{font-size:28px!important; line-height:34px;}
 h4{font-size:22px!important; line-height:28px;}
 .tk-moret {font-family:"moret",serif;}
 h1,h2,h3,h4,h5,h6 {font-family:"moret",serif!important;}
-body,p,ul,li,em {font-family:argesta_displayregular,serif!important;font-size:16px;line-height:26px;letter-spacing:0;}
+body,p,ul,li,em {font-family:argesta_displayregular,serif!important;font-size:16px;line-height:26px;letter-spacing:-0.1px!important;}
 .lsx-to-widget-meta-data span{font-family:"moret",serif!important;font-size:15px!important;color:#6a6d5b;}
 th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 .btn, button{font-family:"moret",serif!important;}
@@ -248,6 +248,14 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6 {
 		display:none;
 	}
+	#mega-menu-wrap-primary #mega-menu-item-lsx_to_taxonomy_widget-4 .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{height: 276px!important;}
+#mega-menu-wrap-primary .interestsnav{margin-top:-10px; margin-left:-20px;margin-bottom:-22px;}
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu >#mega-menu-item-lsx_to_taxonomy_widget-4{margin-top:-4px}
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > #mega-menu-item-lsx_to_taxonomy_widget-5{margin-top:-30px;}
+#mega-menu-wrap-primary .interestsnav h3{
+margin-top: -4px!important;
+	margin-bottom: -6px!important;}
+
 	#mega-menu-wrap-primary .lsx-to-widget-items {
 		margin-top:0px!important;
 	}
@@ -1532,7 +1540,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 	}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 		padding:0!important;
-		margin:2px;
+		margin:1px;
 		border:1px solid #fff;
 	}
 	.who-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover {
@@ -1591,7 +1599,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		margin-top:32px;
 	}
 	.style-posts .lsx-to-slider-inner .lsx-to-widget-item-wrap {
-		margin:2px;
+		margin:1px;
 		border:1px solid #fff;
 		padding:0!important;
 	}
