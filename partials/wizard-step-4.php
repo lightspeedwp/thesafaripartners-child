@@ -36,7 +36,7 @@
 					}
 				?>
 			</div>
-			<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 		</div>
 	</div>
 </div>
