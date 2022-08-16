@@ -18,7 +18,7 @@ if ( 1 !== $lsx_to_archive ) {
 	<?php lsx_entry_top(); ?>
 <div class="archive-intro row">
 	<?php $term = get_queried_object(); ?>
-	<h2 class="category-title"><?php the_title(); ?></h2>
+	<h2 class="category-title"><?php the_field('subheading'); ?></h2>
 
 		<div class="col-sm-8">
 			<div class="lsx-to-widget-description">
@@ -29,7 +29,11 @@ if ( 1 !== $lsx_to_archive ) {
 
 		<div class="col-sm-4">
 				<div class="lsx-to-widget-thumb">
-				<?php lsx_thumbnail( 'lsx-block-post-grid-square' ); ?>
+				<?php 
+				$image = get_field('page-image');
+					if( !empty( $image ) ): ?>
+    				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>
 				</div>
 			
 			<?php wp_reset_query(); ?>
