@@ -76,9 +76,9 @@ get_header(); ?>
 						</div>
 		
 						<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
-							<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
-								<div class="lsx-to-slider-wrap">
-									<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' >
+					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+						<div class="lsx-to-slider-wrap">
+						<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 									<?php
 									while ( $tours->have_posts() ) {
 										$tours->the_post();
