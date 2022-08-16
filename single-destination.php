@@ -28,7 +28,7 @@ get_header(); ?>
 
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
-							<div class="row <?php lsx_to_entry_class( 'entry-content' ); ?>">
+							<div class="<?php lsx_to_entry_class( 'entry-content' ); ?>">
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
 						</div>
@@ -42,9 +42,9 @@ get_header(); ?>
 
 			<?php 
 				$panels = array(
-					'intro' => 'who',
-					0 => array( 'what' ),
-					1 => array( 'when' ),
+					0 => array( 'who' ),
+					1 => array( 'what' ),
+					2 => array( 'when' ),
 					2 => array( 'budget' ),
 				);
 				tsp_mini_wizard( $panels );
