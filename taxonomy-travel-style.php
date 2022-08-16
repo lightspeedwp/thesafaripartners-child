@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<div class="archive-intro row">
 	<?php $term = get_queried_object(); ?>
-	<h2 class="category-title"><?php echo $term->name; ?></h2>
+	<h2 class="category-title"><?php $subheading = get_field('subheading', $term); echo $subheading; ?></h2>
 
 		<div class="col-sm-8">
 			<div class="lsx-to-widget-description">
@@ -33,8 +33,8 @@ get_header(); ?>
 				<?php
 
 					$image_id = get_field('page-image', $term, false); 
-
-					$image = wp_get_attachment_image_src($image_id);
+					$size = 'medium';
+					$image = wp_get_attachment_image_src($image_id, $size);
 
 		?>
   		<img src="<?php echo $image[0]; ?>" />
