@@ -540,6 +540,8 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		object-fit:cover;width:100%;}
 	.archive .archive-intro p{width:686px;}	
   .archive #wizard .lsx-to-content{font-family:"moret",serif!important;font-size:22px!important;}
+  .archive #wizard .wizard-budget .lsx-to-content{text-align:center;}
+  .archive #wizard .wizard-budget{margin-top:10px;}
   .archive #wizard .wizard-who .lsx-to-content{font-family:"moret",serif!important;font-size:18px!important;text-align:center;padding-top: 30px;}
   .lsx-cta{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;box-shadow: none;}
   .archive .lsx-wizard-button-next, .page-template-template-wizard .lsx-wizard-button-next{background:#a55244!important;padding:10px 24px!important; color:#fff!important;border-radius: 0!important;}
@@ -865,11 +867,11 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 
 	.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border: 1px solid #ce9e57;
-		width: 141px;
-		height: 228px;
-		margin-left: 0px;
-		padding-left: 117px;
-		padding-top: 6px;
+    width: 125px;
+    height: 142px;
+    margin-left: 0px;
+    padding-left: 91px;
+    padding-top: 2px;
 		  }
 
 	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -2534,7 +2536,7 @@ s	.financial-about .lsx-banner-column {
 	left:0.1em;
 	font-weight:100;
 	color:#ce9e57;;
-	font-size:3em;
+	font-size:0em;
 	position:absolute;
 }
 .checkbox-wrapper>[type="checkbox"]:focus+span {
