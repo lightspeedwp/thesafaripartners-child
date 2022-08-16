@@ -37,6 +37,8 @@
 									<?php
 									$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
 									if ( is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
+										global $columns;
+										$columns = 2;
 										lsx_to_related_items( $connected_tours, '', '' , true, 'tour' );
 									}
 									?>
