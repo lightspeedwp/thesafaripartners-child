@@ -17,35 +17,30 @@ if ( 1 !== $lsx_to_archive ) {
 
 <article id="destination-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 	<?php lsx_entry_top(); ?>
+<div class="archive-intro row">
+	<?php $term = get_queried_object(); ?>
+	<h2 class="category-title"><?php the_title(); ?></h2>
 
-	<?php if ( is_single() && false === $lsx_to_archive ) { ?>
-
-		<div class="entry-content col-xs-12 col-sm-12 col-md-8">
-			<div class="lsx-to-summary">
-				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
+		<div class="col-sm-8">
+			<div class="lsx-to-widget-description">
+				
+				<p class="category-description"><?php the_content(); ?></p>
 			</div>
-
-			<?php the_content(); ?>
-			<?php lsx_to_sharing(); ?>
-
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-4 to-facts-wrapper">
-		<div class="lsx-to-widget-thumb">
-		<?php lsx_thumbnail( 'lsx-block-post-grid-square' ); ?>
+
+		<div class="col-sm-4">
+			<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
+				<div class="lsx-to-widget-thumb">
+				<?php lsx_thumbnail( 'lsx-block-post-grid-square' ); ?>
 				</div>
+			<?php } else { ?>
+				<div class="lsx-to-widget-thumb">
+					<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
 				</div>
-
-	<?php } elseif ( is_search() || empty( tour_operator()->options[ get_post_type() ]['disable_entry_text'] ) ) { ?>
-
-		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
-                                       <?php
-			lsx_to_entry_content_top();
-			the_excerpt();
-			lsx_to_entry_content_bottom();
-		?>
-        </div>
-
-	<?php } ?>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		</div>
+	</div>
 
 	<?php lsx_entry_bottom(); ?>
 
