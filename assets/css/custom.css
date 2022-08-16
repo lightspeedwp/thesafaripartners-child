@@ -439,6 +439,10 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		display: flex;
 		padding: 80px 0px 0px 24px;
 	}
+	.archive .wizard-who, .archive .wizard-what, .archive .wizard-where, .archive .wizard-budget{margin: 0 auto;display: flex;
+		padding: 80px 0px 0px 24px;}
+		.archive .wizard-when{margin: 0 auto;
+			padding: 80px 0px 0px 24px;}
 	.lsx-wizard-progress-buttons-wrapper {
 		margin:0 auto;
 		width:1204px;
