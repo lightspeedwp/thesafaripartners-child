@@ -140,6 +140,8 @@ function openinCity(evt, eventName) {
 						$this.find('.lsx-wizard-button-previous').hide();
 					}
 
+					$this.trigger("beForeEventRegistration.lsxWizard", this);
+
 					/////////////////////////// Register event handlers
 
 					$this.find('.lsx-wizard-button-previous').on( 'click', function (e) {
@@ -807,6 +809,10 @@ function openinCity(evt, eventName) {
 	//document.getElementsByClassName("tours-wizard").click();
 
 	$(document).ready(function () {
+		$(document).on('beForeEventRegistration',function( $this ){
+			console.log($this);
+		});
+
 		$("#wizard").lsxWizard();
 		$("#wizard2").lsxWizard();
 
@@ -815,6 +821,8 @@ function openinCity(evt, eventName) {
 		});
 
 		setReadMoreDescriptions();
+
+		beForeEventRegistration.lsxWizard
 		createItineraryNavigation();
 	});
 })( jQuery, window, document );
