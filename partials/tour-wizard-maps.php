@@ -35,11 +35,9 @@
 
 									<h4>You may also like</h4>
 									<?php
-									lsx_to_related_items( 'travel-style' );
-
 									$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
 									if ( is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
-										lsx_to_related_items( $connected_tours, '', '' , false, 'tour' );
+										lsx_to_related_items( $connected_tours, '', '' , true, 'tour' );
 									}
 									?>
 								</div>
