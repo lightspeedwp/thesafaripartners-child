@@ -15,7 +15,7 @@
 						<div class="col-md-6 lsx-tour-module-map">
 							<div class="lsx-banner-map-wrap">
 								<div class="lsx-to-thumb-slot" >
-									<?php lsx_to_map(); ?>
+									<?php 	(); ?>
 								</div>
 
 							</div>
@@ -37,13 +37,17 @@
 									<h4>You may also like</h4>
 									<?php lsx_to_related_items( 'travel-style' );
 
-									$connected_tours = get_post_meta( get_the_ID(), 'tour_to_accommodation', false );
+									$connected_tours = get_post_meta( get_the_ID(), 'related_tours', false );
+									var_dump($connected_tours);
+									if ( false === $connected_tours || empty( $connected_tours ) ) {
+										$connected_tours = get_post_meta( get_the_ID(), 'tour_to_accommodation', false );
+									}
 
-									if ( lsx_to_accommodation_display_connected_tours() && post_type_exists( 'tour' ) && is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
+									if ( is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
 										lsx_to_related_items( $connected_tours, true, 'tour' );
-									} ?>
+									}
+									?>
 								</div>
-
 							</div>
 						</div>
 
