@@ -15,7 +15,7 @@
 						<div class="col-md-6 lsx-tour-module-map">
 							<div class="lsx-banner-map-wrap">
 								<div class="lsx-to-thumb-slot" >
-									<?php 	(); ?>
+									<?php lsx_to_map(); ?>
 								</div>
 
 							</div>
