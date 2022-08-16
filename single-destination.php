@@ -92,7 +92,7 @@ get_header(); ?>
 										}
 
 										?>
-										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
+										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-widget-item-wrap lsx-tour' ) ); ?>">
 											<?php lsx_to_content( 'content-widget', 'tour' ); ?>
 										</div>
 									<?php
