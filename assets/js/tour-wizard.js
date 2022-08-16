@@ -499,7 +499,7 @@ function openinCity(evt, eventName) {
 	}
 
 	function setFinishButton($pluginElement, text) {
-		var $finishButton = $pluginElement.find(".lsx-wizard-button-next");
+		var $finishButton = $pluginElement.find(".lsx-wizard-button-next:not(.ignore-text)");
 
 		var txt = $pluginElement.data('lsxWizard').settings.lsxWizard.localization.buttons.finish;
 		if (text)
@@ -514,7 +514,7 @@ function openinCity(evt, eventName) {
 	}
 
 	function unsetFinishButton($pluginElement, settings) {
-		var $finishButton = $pluginElement.find(".lsx-wizard-button-next");
+		var $finishButton = $pluginElement.find(".lsx-wizard-button-next:not(.ignore-text)");
 		var txt = $pluginElement.data('lsxWizard').settings.lsxWizard.localization.buttons.next;
 		var $iconNext = $("<span class='glyphicon glyphicon-chevron-right pull-right'></span>");
 		var $iconNextText = $("<span>" + settings.lsxWizard.localization.buttons.next + "</span>");
@@ -691,11 +691,7 @@ function openinCity(evt, eventName) {
 			}
 
 			navEle += '</div>';
-
-			console.log(navEle);
-
-			$(this).prepend( navEle );
-
+			$(this).replace( navEle );
 			counter++;
 		});
 	};
