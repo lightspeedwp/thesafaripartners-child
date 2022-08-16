@@ -39,6 +39,8 @@ get_header(); ?>
 
 			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
+			<div class="tsp-seperator"></div>
+
 			<?php 
 				$panels = array(
 					'intro' => 'who',
@@ -74,6 +76,8 @@ get_header(); ?>
 								);
 							?>
 						</div>
+
+						<div class="tsp-seperator"></div>
 		
 						<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
 					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
