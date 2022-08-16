@@ -17,7 +17,6 @@
 								<div class="lsx-to-thumb-slot" >
 									<?php lsx_to_map(); ?>
 								</div>
-
 							</div>
 						</div>
 
@@ -35,16 +34,12 @@
 									<button class="btn lsx-cta popup-inquire">MAKE AN INQUIRY</button>
 
 									<h4>You may also like</h4>
-									<?php lsx_to_related_items( 'travel-style' );
+									<?php
+									lsx_to_related_items( 'travel-style' );
 
-									$connected_tours = get_post_meta( get_the_ID(), 'related_tours', false );
-									var_dump($connected_tours);
-									if ( false === $connected_tours || empty( $connected_tours ) ) {
-										$connected_tours = get_post_meta( get_the_ID(), 'tour_to_accommodation', false );
-									}
-
+									$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
 									if ( is_array( $connected_tours ) && ! empty( $connected_tours ) ) {
-										lsx_to_related_items( $connected_tours, true, 'tour' );
+										lsx_to_related_items( $connected_tours, '', '' , true, 'tour' );
 									}
 									?>
 								</div>
