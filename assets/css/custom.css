@@ -464,7 +464,15 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		position:relative;
 	}
 	.page-template-template-wizard .wizard-budget .col-md-2{text-align:center;}
-
+	table {
+		position: relative;
+	  }
+	  th {
+		background: white;
+		position: sticky;
+		top: 0;
+	  }
+	  #mega-menu-wrap-primary #mega-menu-46380-1-0 .lsx-to-widget-item-wrap{width:160px;position:absolute;top:177px;left:142px;}
 .tax-travel-style .banner-content p{font-family: "moret",serif!important;font-size: 58px!important;
     line-height: 68px;}
 	.tax-travel-style .page-banner-image .page-header{display:none;}
