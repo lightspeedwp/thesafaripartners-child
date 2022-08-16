@@ -410,30 +410,30 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
 		padding:0 9px;
 	}
 	.page-template-template-wizard .wizard-who .col-md-3, .page-template-template-wizard .wizard-what .col-md-3, .page-template-template-wizard .wizard-where .col-md-3, .page-template-template-wizard .wizard-when .col-md-3, .page-template-template-wizard .wizard-budget .col-md-3{padding-left:0!important;}
-	.wizard-who {
+	.page-template-template-wizard .wizard-who {
 		margin: 0 auto;
 		width: 1240px;
 		display: flex;
 		padding: 80px 0px 0px 24px;
 	}
-	.wizard-what {
+	.page-template-template-wizard .wizard-what {
 		margin: 0 auto;
 		width: 1240px;
 		display: flex;
 		padding: 80px 0px 0px 24px;
 	}
-	.wizard-where {
+	.page-template-template-wizard .wizard-where {
 		margin: 0 auto;
 		width: 1240px;
 		display: flex;
 		padding: 80px 0px 0px 24px;
 	}
-	.wizard-when {
+	.page-template-template-wizard .wizard-when {
 		margin: 0 auto;
 		width: 1240px;
 		padding: 80px 0px 0px 24px;
 	}
-	.wizard-budget {
+	.page-template-template-wizard .wizard-budget {
 		margin: 0 auto;
 		width: 1240px;
 		display: flex;
@@ -1635,7 +1635,7 @@ opacity: 0.4;
 
 	.tour-accommodation-gallery .accomodation-slider{width:100%;padding:0!important;}
 .tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;margin-top: -75px;}
-.tour-accommodation-gallery .accomodation-slider{height: 56vh;}
+.tour-accommodation-gallery .accomodation-slider{height: 58vh;}
 .tour-accommodation-gallery .accomodation-nav{margin-bottom:70px!important;border-top:4px solid #fff;}
 .tour-accommodation-gallery .accomodation-nav .slick-list{padding:0!important;}
 
@@ -1684,7 +1684,8 @@ opacity: 0.4;
 	}
 
 	.page-id-133119 #primary .notfull {
-		width:1204px;padding:0!important;
+		width:1204px!important;
+		padding:0!important;
 	}
 	.page-id-133119 .socialresponce{gap: 0em!important;}
 	.page-id-133119 .entry-content>div:not(:first-of-type) {
