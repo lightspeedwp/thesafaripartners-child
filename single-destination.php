@@ -23,12 +23,12 @@ get_header(); ?>
 				the_post();
 				?>
 
-				<section id="summary" class="lsx-to-section-new <?php lsx_to_collapsible_class( 'destination', false ); ?>">
+				<section class="lsx-to-section-new <?php lsx_to_collapsible_class( 'destination', false ); ?>">
 					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
 
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
-							<div class="row <?php lsx_to_entry_class( 'entry-content' ); ?>">
+							<div class="<?php lsx_to_entry_class( 'entry-content' ); ?>">
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
 						</div>
@@ -39,11 +39,12 @@ get_header(); ?>
 
 			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
+
 			<?php 
 				$panels = array(
-					'intro' => 'who',
-					0 => array( 'what' ),
-					1 => array( 'when' ),
+					0 => array( 'who' ),
+					1 => array( 'what' ),
+					2 => array( 'when' ),
 					2 => array( 'budget' ),
 				);
 				tsp_mini_wizard( $panels );
@@ -74,11 +75,13 @@ get_header(); ?>
 								);
 							?>
 						</div>
+
+						<div class="tsp-seperator"></div>
 		
-						<div class="slider-container mini-wizard-results lsx-to-archive-template-grid" style="max-width:1200px;margin-left:auto;margin-right:auto;">
-							<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
-								<div class="lsx-to-slider-wrap">
-									<div class="lsx-to-slider-inner" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }' style="max-width: 100vw;width: 100%;overflow: hidden;" >
+						<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
+					<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+						<div class="lsx-to-slider-wrap">
+						<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 									<?php
 									while ( $tours->have_posts() ) {
 										$tours->the_post();
@@ -88,8 +91,8 @@ get_header(); ?>
 										}
 
 										?>
-										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-archive-item' ) ); ?>">
-											<?php lsx_to_content( 'content', 'tour' ); ?>
+										<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-widget-item-wrap lsx-tour' ) ); ?>">
+											<?php lsx_to_content( 'content-widget', 'tour' ); ?>
 										</div>
 									<?php
 									}

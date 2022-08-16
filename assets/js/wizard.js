@@ -561,7 +561,6 @@
 				'position': 'relative',
 				'overflow': 'hidden',
 				'width': '100%',
-				'min-height': globalMinHeight + 'px'
 			});
 		return result;
 	}
@@ -746,7 +745,7 @@
 
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
-			minHeight: 560,
+			minHeight: 380,
 			activeStep: 1,
 			localization: {
 				buttons: {

@@ -1,7 +1,7 @@
 <div class="step-content">
 	<div class="wizard-what row">
 		<div class="col-md-3">
-			<h2><?php esc_html_e( 'What interests you?', 'thesafaripartners-child' ); ?></h2>
+			<h3><?php esc_html_e( 'What interests you?', 'thesafaripartners-child' ); ?></h3>
 			<p><?php esc_html_e( 'Let us what interests you', 'thesafaripartners-child' ); ?></p>
 		</div>
 
@@ -13,7 +13,7 @@
 
 			<?php foreach ( $terms as $term ) : ?>
 				<!-- post -->
-				<article class="col-md-2 status-publish hentry">
+				<article class="col-xs-3 col-sm-2 status-publish hentry">
 					<div class="checkbox-wrapper">
 						<input class="btn-check"  type="checkbox" name="fwp_what" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 						<span aria-hidden="true"></span>
@@ -21,7 +21,7 @@
 
 					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 						<div class="lsx-to-widget-thumb">
-							<?php lsx_to_term_thumbnail( $term->term_id, 'thumbnail' ); ?>
+							<?php lsx_to_term_thumbnail( $term->term_id, 'medium' ); ?>
 						</div>
 
 					<?php else : ?>
