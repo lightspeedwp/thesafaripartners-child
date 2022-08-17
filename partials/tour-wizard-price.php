@@ -88,7 +88,7 @@
 																	</tr>
 																</thead>
 																<tbody>
-																	<?php echo implode( '', $table_data ); ?>
+																	<tr><?php echo implode( '</tr><tr>', $table_data ); ?></tr>
 																</tbody>
 															</table>
 														</article>
