@@ -49,12 +49,6 @@
 
 	<div class="entry-layout">
 		<div class="entry-layout-content entry-layout-content-<?php echo has_post_thumbnail() ? '67' : '100'; ?>">
-		<?php
-				$relevance = tsp_get_search_relevance( get_the_ID() );
-				if ( '' !== $relevance ) {
-					echo '<div class="relevance">' . esc_attr__( 'Shaman Score', 'thesafaripartners-child' ) . ' ' . $relevance . '</div>';
-				}
-				?>
 			<header class="entry-header">
 				<?php if ( $has_thumb ) : ?>
 					<div class="entry-image <?php echo esc_attr( $image_class ); ?>">
@@ -81,6 +75,13 @@
 				}
 
 				$format = lsx_translate_format_to_fontawesome( $format );
+				?>
+
+				<?php
+				$relevance = tsp_get_search_relevance( get_the_ID() );
+				if ( '' !== $relevance ) {
+					echo '<div class="relevance">' . esc_attr__( 'Shaman Score', 'thesafaripartners-child' ) . ' ' . $relevance . '</div>';
+				}
 				?>
 
 				<h4 class="entry-title">
@@ -117,7 +118,7 @@
 						<?php
 						if ( false === apply_filters( 'lsx_disable_content_excerpt', false ) ) {
 							if ( ! has_excerpt() ) {
-								$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+								$excerpt_more = '<p><a class="moretag readmoresearch" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
 								$content      = wp_trim_words( strip_shortcodes( get_the_content() ), 30 );
 								$content      = '<p>' . $content . '</p>';
 								echo wp_kses_post( $content );
