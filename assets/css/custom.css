@@ -59,6 +59,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;letter-spa
 	}
 @media screen and (min-width:1000px) {
 	#masthead{background:#fff!important;}
+	.mobile{display:none;}
 	.page.safari-styles {
 		margin-top:0px;
 	}
@@ -1823,7 +1824,7 @@ margin-top: -4px!important;
 	}
 
 	.tour-accommodation-gallery .accomodation-slider{width:100%;padding:0!important;}
-.tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;margin-top: -75px;}
+.tour-accommodation-gallery .accomodation-slider .slick-slide img{padding:0; margin:0;width: 100%;margin-top: -25px;}
 .tour-accommodation-gallery .accomodation-slider{height: 58vh;}
 .tour-accommodation-gallery .accomodation-nav{margin-bottom:70px!important;border-top:4px solid #fff;}
 .tour-accommodation-gallery .accomodation-nav .slick-list{padding:0!important;}
@@ -2290,7 +2291,7 @@ margin-top: -4px!important;
 	margin-top:0!important;
 }
 .single-lsx-to-tour .lsx-wizard-progress-buttons-wrapper {
-	position:absolute;
+	position:relative;
 	left:-4%;
 	z-index:9;
 	width:500px;
@@ -2773,4 +2774,19 @@ s	.financial-about .lsx-banner-column {
 			display:none!important;
 		}	
 	.home-txt h4{display:none;}	
+}
+
+@media screen and (max-width: 400px) {
+	#masthead .wrapper-toggle{
+		display:none;
+	}
+	.header-wrap .intro-wrap{
+		display:none;
+	}
+	.contactbtn{
+	background: #ce9e57;
+    color: #000;
+    font-size: 14px;
+    text-align:center;padding:0 2px;
+	}
 }

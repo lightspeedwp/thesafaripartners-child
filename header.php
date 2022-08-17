@@ -24,6 +24,7 @@
 <div class="body-wrap">
 		<div class="header-wrap">
 			<div class="intro-wrap"><p>Chat to an expert on 1.888.71SAFARI (72327)</p></div>
+			<div class="mobile contactbtn"><a href="/contact/">GET IN TOUCH</a></div>
 			<?php lsx_header_before(); ?>
 			<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">
 				<?php lsx_header_top(); ?>
@@ -31,6 +32,8 @@
 					<?php lsx_nav_before(); ?>
 					<?php lsx_nav_menu(); ?>
 					<?php lsx_nav_after(); ?>
+					<?php if ( wp_is_mobile() ) { wp_nav_menu( array('container_class' => 'primary-navbar', 'theme_location' => 'max_mega_menu_1') );} ?>
+
 					<?php lsx_header_bottom(); ?>
 				</div>
 			</header>
