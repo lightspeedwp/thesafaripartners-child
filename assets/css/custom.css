@@ -1277,6 +1277,11 @@ margin-top: -4px!important;
 	.search-results .lsx-slot .entry-layout-content{margin-left:6%; margin-right:10%;}
 
 
+	.page-id-133965 .search-results .lsx-to-widget-thumb{height: 380px!important;
+    flex-basis: 51%!important;float:left;}
+	.page-id-133965 .search-results .lsx-to-widget-content{margin-left:4%; margin-right:4%;}
+
+
 	.search-results .entry-content .relevance {
 		padding: 0 24px;
 	}
