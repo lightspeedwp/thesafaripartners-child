@@ -28,8 +28,8 @@
 			<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">
 				<?php lsx_header_top(); ?>
 				<div class="container">
+				<?php if ( wp_is_mobile() ) { wp_nav_menu( array('container_class' => 'primary-navbar', 'menu' => 'mobile-menu' ) );} ?>
 					<?php lsx_nav_before(); ?>
-					<?php if ( wp_is_mobile() ) { wp_nav_menu( array( 'menu' => 'mobile-menu' ) );} ?>
 					<?php lsx_nav_menu(); ?>
 					<?php lsx_nav_after(); ?>
 					<?php lsx_header_bottom(); ?>
