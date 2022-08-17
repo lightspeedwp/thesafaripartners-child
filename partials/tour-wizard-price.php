@@ -27,6 +27,54 @@
 									<div class="entry-content col-xs-12 col-sm-12 col-md-12 lsx-to-tour-content">
 										<div class="tab-pane <?php echo $active; ?>" id="dates-prices">
 											<?php
+
+											$price_row_amount = get_post_meta( get_the_ID(), 'price_row', true );
+											if ( false !== $price_row_amount && 0 !== $price_row_amount ) {
+
+												$column_titles   = array();
+												$table_data      = array();
+												$row_counter     = 0;
+												$currency        = 'USD';
+												$currency_letter = 'USD';
+												$symbol          = '$';
+
+												// Grab the rows and process the data
+												do {
+													// Grab all of the row data
+													$rc_num  = 1;
+													$rc_data = array();
+
+													do {
+
+														$value = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true );
+														if ( '' !== $value && false !== $value ) {
+															switch( $rc_num ) {
+																case 1:
+																case 2:
+																	$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
+																	break;
+
+																default:
+																	$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $value . '</span></td>';
+																	break;
+															}
+														}
+														$rc_num++;
+
+													} while ( 7 > $rc_num );
+
+													$table_data[ $row_counter ] = $rc_data;
+
+													$row_counter++;
+												} while ( $row_counter < $price_row_amount );
+
+												if ( isset( $_GET['dates_debug'] ) ) {
+													print_r('<pre>');
+													print_r($table_data);
+													print_r('</pre>');
+												}
+											}
+
 											$dates_prices = get_post_meta( get_the_ID(), 'bs_tour_dates_prices', false );
 											?>
 											<article id="post-<?php the_ID(); ?>" class="dates-prices hentry">
