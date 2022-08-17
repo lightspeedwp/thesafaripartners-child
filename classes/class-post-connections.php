@@ -30,7 +30,7 @@ class Post_Connections {
 		$this->get_cmb2_options();
 		add_filter( 'facetwp_indexer_row_data', array( $this, 'facetwp_index_row_data' ), 10, 2 );
 		add_filter( 'facetwp_index_row', array( $this, 'facetwp_index_row' ), 10, 2 );
-		add_filter( 'facetwp_facet_html', array( $this, 'destination_facet_html' ), 10, 2 );
+		add_action( 'wp_head', array( $this, 'wp_head' ) );
 	}
 
 	/**
@@ -57,6 +57,12 @@ class Post_Connections {
 			self::$instance = new self();
 		}
 		return self::$instance;
+	}
+
+	public function wp_head() {
+		if ( ! is_search() ) {
+			add_filter( 'facetwp_facet_html', array( $this, 'destination_facet_html' ), 10, 2 );
+		}
 	}
 
 	/**
