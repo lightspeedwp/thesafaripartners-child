@@ -1277,9 +1277,18 @@ margin-top: -4px!important;
 	.search-results .lsx-slot .entry-layout-content{margin-left:6%; margin-right:10%;}
 
     .page-id-133965 .type-lsx-to-tour{display:flex;margin-bottom:20px;}
-	.page-id-133965 .search-results .lsx-to-widget-thumb{height: 380px!important;
-    width: 51%!important;}
-	.page-id-133965 .search-results .lsx-to-widget-content{margin-left:4%; margin-right:4%;width:49%;}
+	.page-id-133965 .search-results .lsx-to-widget-thumb{height: 400px!important;display:contents;
+		justify-content:center;
+		align-items:center;
+		overflow:hidden;
+    width: 54%!important;}
+	
+	
+	.page-id-133965 .search-results .lsx-to-widget-thumb img {
+		object-fit:cover;
+		height:400px!important;
+	}
+	.page-id-133965 .search-results .lsx-to-widget-content{margin-left:6%; margin-right:8%;width:45%;}
 	.page-id-133965 .search-results .lsx-to-widget-content h4{text-align:left;}
 
 
