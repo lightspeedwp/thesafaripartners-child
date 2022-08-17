@@ -59,6 +59,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;letter-spa
 	}
 @media screen and (min-width:1000px) {
 	#masthead{background:#fff!important;}
+	.mobile{display:none;}
 	.page.safari-styles {
 		margin-top:0px;
 	}
@@ -2773,4 +2774,19 @@ s	.financial-about .lsx-banner-column {
 			display:none!important;
 		}	
 	.home-txt h4{display:none;}	
+}
+
+@media screen and (max-width: 400px) {
+	#masthead .wrapper-toggle{
+		display:none;
+	}
+	.header-wrap .intro-wrap{
+		display:none;
+	}
+	.contactbtn{
+	background: #ce9e57;
+    color: #000;
+    font-size: 14px;
+    text-align:center;padding:0 2px;
+	}
 }
