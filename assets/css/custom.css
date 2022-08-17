@@ -2164,17 +2164,17 @@ margin-top: -4px!important;
 	}
 	.single-lsx-to-tour .lsx-to-tour-content {
 	padding-top: 13vh!important;
-    width: 20px;
+    width: 550px;
     padding-left: 40px;
 	}
-	.single-lsx-to-tour .itinerary-item .lsx-to-tour-content{padding-top: 10vh!important;}
+	..single-lsx-to-tour .itinerary-item .lsx-to-tour-content{padding-top: 10vh!important;}
 	.single-lsx-to-tour #Price .lsx-to-tour-content{
 	padding-top: 3vh!important;
     width: 774px;
     padding-left: 10px!important;
 	}
 	.single-lsx-to-tour .itinerary-navigation button{background:none; color:#000; font-size:17px;border:none;}
-	.single-lsx-to-tour .itinerary-navigation .lsx-wizard-button-next{float:right;}
+	.single-lsx-to-tour .itinerary-navigation .lsx-wizard-button-next{}
 	.single-lsx-to-tour #Price .table>tbody>tr>td{
 		padding: 2px!important;
 		font-size:14px;
