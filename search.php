@@ -31,7 +31,7 @@ get_header(); ?>
 			<p>Click above to change your answers and show different results</p>
 			
 			<div class="col-md-6">
-				<h2>The Shaman Says...</h2>
+				<h3>The Shaman Says...</h3>
 			</div>
 			<div class="col-md-6">
 			<p class="right-align"> <?php
