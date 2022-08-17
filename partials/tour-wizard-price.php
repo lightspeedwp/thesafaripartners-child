@@ -63,144 +63,39 @@
 
 													} while ( 7 > $rc_num );
 
-													$table_data[ $row_counter ] = $rc_data;
+													$column_titles              = array_keys( $rc_data );
 
+													$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire">Book Now</button></td>';
+
+													$table_data[ $row_counter ] = implode( '', $rc_data );
 													$row_counter++;
 												} while ( $row_counter < $price_row_amount );
 
-												if ( isset( $_GET['dates_debug'] ) ) {
-													print_r('<pre>');
-													print_r($table_data);
-													print_r('</pre>');
-												}
-											}
 
-											$dates_prices = get_post_meta( get_the_ID(), 'bs_tour_dates_prices', false );
-											?>
-											<article id="post-<?php the_ID(); ?>" class="dates-prices hentry">
-												<?php
-
-												if ( $dates_prices ) {
+												if ( ! empty( $table_data ) && isset( $table_data[0] ) && ! empty( $table_data[0] ) ) {
 													?>
-													<table class="table table-striped">
-																<?php
-																$body_array = false;
-
-																$start_date_column    = false;
-																$end_date_column      = false;
-																$price_sharing_column = false;
-																$single_add_column    = false;
-																$park_fees_column     = false;
-																$footnote_column      = false;
-
-																foreach ( $dates_prices as $row ) {
-																	$currency = get_post_meta( get_the_ID(), 'bs_tour_currency', true );
-																	switch ( $currency ) {
-																		case 'USD':
-																			$symbol = '$';
-																			break;
-
-																		case 'EUR':
-																			$symbol = '€';
-																			break;
-
-																		case 'GBP':
-																			$symbol = '£';
-																			break;
-
-																		case 'ZAR':
-																			$symbol = 'R';
-																			break;
-
-																		case 'CAD':
-																			$symbol = '$';
-																			break;
-
-																		default:
-																			$symbol   = '$';
-																			$currency = 'USD';
-																			break;
-																	}
-
-																	if ( 'USD' == $currency || 'CAD' == $currency ) {
-																		$currency_letter = ' ' . $currency;
-																	} else {
-																		$currency_letter = ' '; }
-
-																	$tab_row = '<tr>';
-
-																	if ( $row['start_date'] ) {
-																		$tab_row          .= '<td class="start-date" data-gform-date="' . date( 'm/d/Y', strtotime( $row['start_date'] ) ) . '">' . date( 'd M Y', strtotime( $row['start_date'] ) ) . '</td>';
-																		$start_date_column = true;
-																	}
-																	if ( $row['end_date'] ) {
-																		$tab_row        .= '<td class="end-date" data-gform-date="' . date( 'm/d/Y', strtotime( $row['end_date'] ) ) . '">' . date( 'd M Y', strtotime( $row['end_date'] ) ) . '</td>';
-																		$end_date_column = true;
-																	}
-																	if ( $row['price_sharing'] ) {
-																		$tab_row             .= '<td class="price-sharing"><span class="amount"  data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $row['price_sharing'] . '</span></td>';
-																		$price_sharing_column = true;
-																	}
-																	if ( $row['single_add'] ) {
-																		$tab_row          .= '<td class="single-add"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $row['single_add'] . '</span></td>';
-																		$single_add_column = true;
-																	}
-																	if ( $row['park_fees'] ) {
-																		$tab_row         .= '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $row['park_fees'] . '</span></td>';
-																		$park_fees_column = true;
-																	}
-
-																	$tab_row .= '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire">Book Now</button></td>';
-
-																	$tab_row .= '</tr>';
-
-																	$body_array[] = $tab_row;
-																}
-																?>
-
-														<thead>
-															<tr>
-																<?php
-																if ( $start_date_column ) {
-																	echo '<th>Start Date:</th>';
-																}
-																if ( $end_date_column ) {
-																	echo '<th>End Date:</th>';
-																}
-																if ( $price_sharing_column ) {
-																	echo '<th>Price Sharing:</th>';
-																}
-																if ( $single_add_column ) {
-																	echo '<th>Single Add:</th>';
-																}
-																if ( $park_fees_column ) {
-																	echo '<th>Park Fees:</th>';
-																}
-																echo '<th></th>';
-																?>
-															</tr>
-														</thead>
-
-														<tbody>
-															<?php
-															if ( false != $body_array ) {
-																echo implode( '', $body_array );
-															}
-															?>
-														<tbody>
-													</table>
+														<article id="post-<?php the_ID(); ?>" class="dates-prices hentry">
+															<table class="table table-striped">
+																<thead>
+																	<tr>
+																		<?php
+																		// Format the column Titles
+																		foreach( $column_titles as $column_index ) {
+																			echo '<th>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index, true ) . '</th>';
+																		}
+																		echo '<th></th>';
+																		?>
+																	</tr>
+																</thead>
+																<tbody>
+																	<?php echo implode( '', $table_data ); ?>
+																</tbody>
+															</table>
+														</article>
 													<?php
 												}
-												?>
-
-												<?php
-												$footnote = get_post_meta( get_the_ID(), 'bs_tour_footnote', true );
-												if ( false != $footnote ) {
-													echo '<p>' . $footnote . '</p>';
-												}
-												?>
-												<div class="clearfix"></div>
-											</article><!-- #post-## -->
+											}
+											?>
 										</div>
 
 										<?php
