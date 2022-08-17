@@ -158,9 +158,9 @@ class Frontend {
 		add_action( 'wp_head', array( $this, 'wp_head' ), 200 );
 		add_action( 'pre_get_posts', array( $this, 'set_main_query_arguments' ), 200, 1 );
 
-		//add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
-		//add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
-		//add_filter( 'gform_pre_submission_filter_4', array( $this, 'populate_prices_dropdown' ) );
+		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
+		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
+		add_filter( 'gform_pre_submission_filter_4', array( $this, 'populate_prices_dropdown' ) );
 
 		add_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ), 10, 2 );
 	}
@@ -279,18 +279,23 @@ class Frontend {
 
 	public function populate_prices_dropdown( $form ) {
 		foreach ( $form['fields'] as &$field ) {
-			if ( $field->type != 'select' || strpos( $field->cssClass, 'populate-posts' ) === false ) {
+			if ( $field->type != 'select' || strpos( $field->cssClass, 'dates-prices-dropdown' ) === false ) {
 				continue;
 			}
 	 
 			$choices = array();
-			$date_prices = get_post_meta( get_the_ID(), 'bs_tour_dates_prices', false );
-			if ( false !== $date_prices && ! empty( $date_prices ) ) {
-				foreach ( $date_prices as $date_price ) {
-					$temp_data = maybe_unserialize( $date_price );
 
-					$choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title );
-				}
+			$price_row_amount = get_post_meta( get_the_ID(), 'price_row', true );
+			if ( false !== $price_row_amount && 0 !== $price_row_amount ) {
+				$row_counter = 0;
+
+				do {
+					$start_date = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_1', true );
+					$end_date   = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_2', true );
+
+					$choices[] = array( 'text' => $start_date . '-' . $end_date, 'value' => $start_date . '-' . $end_date );
+					$row_counter++;
+				} while ( $row_counter < $price_row_amount );
 			}
 			// update 'Select a Post' to whatever you'd like the instructive option to be
 			$field->placeholder = 'Select a date';
