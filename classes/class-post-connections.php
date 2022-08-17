@@ -30,7 +30,7 @@ class Post_Connections {
 		$this->get_cmb2_options();
 		add_filter( 'facetwp_indexer_row_data', array( $this, 'facetwp_index_row_data' ), 10, 2 );
 		add_filter( 'facetwp_index_row', array( $this, 'facetwp_index_row' ), 10, 2 );
-		add_action( 'wp_head', array( $this, 'wp_head' ) );
+		add_filter( 'facetwp_facet_html', array( $this, 'destination_facet_html' ), 10, 2 );
 	}
 
 	/**
@@ -57,12 +57,6 @@ class Post_Connections {
 			self::$instance = new self();
 		}
 		return self::$instance;
-	}
-
-	public function wp_head() {
-		if ( ! is_search() ) {
-			add_filter( 'facetwp_facet_html', array( $this, 'destination_facet_html' ), 10, 2 );
-		}
 	}
 
 	/**
@@ -380,7 +374,7 @@ class Post_Connections {
 		$selected .= ' ' . $region;
 
 		$destination = get_page_by_title( $result['facet_display_value'], OBJECT, 'destination' );
-		if ( '' !== $destination && null !== $destination ) {
+		if ( ! is_search() && '' !== $destination && null !== $destination ) {
 			$url = get_the_post_thumbnail_url( $destination, 'thumbnail' );
 			if ( '' !== $url && false !== $url ) {
 				$image = '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $url . '">';
@@ -458,7 +452,11 @@ class Post_Connections {
 		$selected .= ( 0 == $result['counter'] && '' == $selected ) ? ' disabled' : '';
 		$selected .= ' ' . $region;
 
-		$image = $this->get_term_thumbnail( $result['facet_value'] );
+		if ( ! is_search() ) {
+			$image = $this->get_term_thumbnail( $result['facet_value'] );
+		} else {
+			$image = '';
+		}
 
 		$temp_html .= '<div class="facetwp-checkbox' . $selected . '" data-value="' . $result['facet_value'] . '">' . $image;
 		$temp_html .= $result['facet_display_value'] . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
