@@ -1277,7 +1277,7 @@ margin-top: -4px!important;
 	.search-results .lsx-slot .entry-layout-content{margin-left:6%; margin-right:10%;}
 
     .page-id-133965 .type-lsx-to-tour{display:flex;margin-bottom:20px;}
-	.page-id-133965 .search-results .lsx-to-widget-thumb{height: 400px!important;display:contents;
+	.page-id-133965 .search-results .lsx-to-widget-thumb{height: 400px!important;display:block;
 		justify-content:center;
 		align-items:center;
 		overflow:hidden;
