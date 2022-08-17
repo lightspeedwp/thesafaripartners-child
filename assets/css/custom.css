@@ -57,6 +57,115 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;letter-spa
 	#mega-menu-wrap-primary .moretag {
 		display:none;
 	}
+	.page-template-template-contact #primary form .gform_fields input[type='radio']{display:none;height:12px;width:14px; }
+	.page-template-template-contact .gform_required_legend{text-align:left;}
+	#footer-widgets .lsx-testimonials-title{display:none;}
+	#footer-widgets blockquote .moretag{display:none;}
+	#footer-widgets .lsx-testimonials-meta-wrap .fa{display:none;}
+	#footer-widgets,#footer-sub {
+		background:transparent!important;
+	}
+	
+	#footer-widgets blockquote{
+		padding: 0px!important;
+    	margin: 0px!important;
+    	font-size: 16px!important;
+		text-align:center;
+		color:#fff;
+    	border-left:0px!important;
+	}
+
+	.lsx-to-meta-data.lsx-to-meta-data-duration:before{	background-image: url('img/tsp-duration.svg');
+		background-size: 17px 17px;
+		display: inline-block;
+		width: 17px;
+		height:17px;
+		content:"";margin-right:17px;margin-top:3px;
+		}
+
+		.lsx-to-meta-data.lsx-to-meta-data-destinations:before{	background-image: url('img/tsp-country.svg');
+			background-size: 17px 17px;
+			display: inline-block;
+			width: 17px;
+			height:17px;
+			content:"";margin-right:17px;margin-top:3px;
+			}
+			.page-template-template-contact .gform_body [type="radio"]:checked + label:after,
+			.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
+				content: '';
+				width: 11px;
+				height: 11px;
+				background: #ce9e57;
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				border-radius: 100%;
+				-webkit-transition: all 0.2s ease;
+				transition: all 0.2s ease;
+			}
+			.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
+				opacity: 0;
+				-webkit-transform: scale(0);
+				transform: scale(0);
+			}
+			.page-template-template-contact .gform_body [type="radio"]:checked + label:after {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+			.gform_button {
+				padding:10px 20px;
+				-webkit-box-shadow:none!important;
+				box-shadow:none!important;
+				border:1px solid #262423;
+			}
+		
+		.page-template-template-contact .gform_body [type="radio"]:checked,
+		.page-template-template-contact .gform_body [type="radio"]:not(:checked) {
+			position: absolute!important;
+			left: -9999px!important;
+		}
+		.page-template-template-contact .gform_body [type="radio"]:checked + label,
+		.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label
+		{
+			position: relative;
+			padding-left: 28px;
+			cursor: pointer;
+			line-height: 20px;
+			display: inline-block;
+			color: #262423;
+		}
+		.page-template-template-contact .gform_body [type="radio"]:checked + label:before,
+		.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 18px;
+			height: 18px;
+			border: 1px solid #ce9e57;
+			border-radius: 35%;
+			background: #fff;
+		}
+		.who-posts .moretag-wrapper {
+			display:none;
+		}
+		.who-posts .lsx-to-slider-inner .slick-dots {
+			display:none!important;
+		}
+		#footer-sub form input {
+			border-top:0;
+			border-right:0;
+			border-left:0;
+			border-bottom:1px solid #262423;
+			color:#262423!important;
+			padding:1px;
+			line-height:10px;
+			min-height:30px!important;
+			height:30px;
+			background:transparent;
+		}
+		
 @media screen and (min-width:1000px) {
 	#masthead{background:#fff!important;}
 	.mobile{display:none;}
@@ -73,20 +182,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;letter-spa
 		background-repeat:no-repeat;
 		background-size:cover;
 	}
-	#footer-widgets,#footer-sub {
-		background:transparent!important;
-	}
-	#footer-widgets .lsx-testimonials-title{display:none;}
-	#footer-widgets blockquote .moretag{display:none;}
-	#footer-widgets .lsx-testimonials-meta-wrap .fa{display:none;}
-	#footer-widgets blockquote{
-		padding: 0px!important;
-    	margin: 0px!important;
-    	font-size: 16px!important;
-		text-align:center;
-		color:#fff;
-    	border-left:0px!important;
-	}
+	
 	#mega-menu-wrap-primary {
 		background:transparent!important;
 	}
@@ -103,34 +199,7 @@ th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;letter-spa
 		transition-timing-function:ease-in;
 		transition:1s;
 	}
-	.page-template-template-nav-trans #masthead.navbar-default #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a {
-		color:#fff;
-		animation:fadeEffect 2s;
-		/* Fading effect takes 1 second */
-		transition-timing-function:ease-in;
-		transition:1s;
-	}
-	.page-template-template-nav-trans #masthead.scroll-to-fixed-fixed #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a {
-		color:#262423!important;
-		animation:fadeEffect 2s;
-		/* Fading effect takes 1 second */
-		transition-timing-function:ease-in;
-		transition:1s;
-	}
-	.page-template-template-nav-trans #masthead.navbar-default .custom-logo-link:after {
-		color:#fff!important;
-		animation:fadeEffect 1s;
-		/* Fading effect takes 1 second */
-		transition-timing-function:ease-in;
-		transition:1s;
-	}
-	.page-template-template-nav-trans #masthead.scroll-to-fixed-fixed .custom-logo-link:after {
-		color:#262423!important;
-		animation:fadeEffect 2s;
-		/* Fading effect takes 1 second */
-		transition-timing-function:ease-in;
-		transition:1s;
-	}
+	
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item h4 {
 		font-family:"moret",serif!important;
 	}
@@ -731,22 +800,6 @@ margin-top: -4px!important;
 	.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus {
 		color:#262423!important;
 	}
-
-	.lsx-to-meta-data.lsx-to-meta-data-duration:before{	background-image: url('img/tsp-duration.svg');
-		background-size: 17px 17px;
-		display: inline-block;
-		width: 17px;
-		height:17px;
-		content:"";margin-right:17px;margin-top:3px;
-		}
-
-		.lsx-to-meta-data.lsx-to-meta-data-destinations:before{	background-image: url('img/tsp-country.svg');
-			background-size: 17px 17px;
-			display: inline-block;
-			width: 17px;
-			height:17px;
-			content:"";margin-right:17px;margin-top:3px;
-			}
 
 	.lsx-wizard-button-previous span:before {
 		background-image: url('img/tsp-see-more-arrow-left.svg');
@@ -1393,63 +1446,6 @@ margin-top: -4px!important;
 		-webkit-box-shadow:none!important;
 		box-shadow:none!important;
 	}
-	.gform_button {
-		padding:10px 20px;
-		-webkit-box-shadow:none!important;
-		box-shadow:none!important;
-		border:1px solid #262423;
-	}
-
-.page-template-template-contact .gform_body [type="radio"]:checked,
-.page-template-template-contact .gform_body [type="radio"]:not(:checked) {
-    position: absolute!important;
-    left: -9999px!important;
-}
-.page-template-template-contact .gform_body [type="radio"]:checked + label,
-.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label
-{
-    position: relative;
-    padding-left: 28px;
-    cursor: pointer;
-    line-height: 20px;
-    display: inline-block;
-    color: #262423;
-}
-.page-template-template-contact .gform_body [type="radio"]:checked + label:before,
-.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #ce9e57;
-    border-radius: 35%;
-    background: #fff;
-}
-.page-template-template-contact .gform_body [type="radio"]:checked + label:after,
-.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
-    content: '';
-    width: 11px;
-    height: 11px;
-    background: #ce9e57;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
-.page-template-template-contact .gform_body [type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-.page-template-template-contact .gform_body [type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
 
 	.ot-list .lsx-to-widget-content {
 		position:absolute;
@@ -1571,12 +1567,6 @@ margin-top: -4px!important;
 	.who-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
 		height:400px!important;
-	}
-	.who-posts .moretag-wrapper {
-		display:none;
-	}
-	.who-posts .lsx-to-slider-inner .slick-dots {
-		display:none!important;
 	}
 	.who-posts .lsx-to-widget-title {
 		text-align:left;
@@ -1985,18 +1975,6 @@ margin-top: -4px!important;
 	#footer-sub form {
 		width:74%;
 		float:left;
-	}
-	#footer-sub form input {
-		border-top:0;
-		border-right:0;
-		border-left:0;
-		border-bottom:1px solid #262423;
-		color:#262423!important;
-		padding:1px;
-		line-height:10px;
-		min-height:30px!important;
-		height:30px;
-		background:transparent;
 	}
 	#footer-sub .gform_body {
 		width:70%;
@@ -2601,8 +2579,6 @@ s	.financial-about .lsx-banner-column {
 	min-height:30px;
 	background:transparent;
 	font-family:"moret",serif!important;}
-.page-template-template-contact #primary form .gform_fields input[type='radio']{display:none;height:12px;width:14px; }
-.page-template-template-contact .gform_required_legend{text-align:left;}
 .gform_wrapper .gform_validation_errors>h2{font-size:20px!important}
 .page-template-template-contact #primary form input[type=submit] {
 	background:#6a6d5b!important;
@@ -2786,7 +2762,21 @@ s	.financial-about .lsx-banner-column {
 	.contactbtn{
 	background: #ce9e57;
     color: #000;
-    font-size: 14px;
-    text-align:center;padding:0 2px;
+    font-size: 16px;
+    text-align:center;padding:0 5px;
 	}
+	.contactbtn a{color:#000;}
+	#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle {
+		background: none;
+	}
+	#mega-menu-wrap-max_mega_menu_1 {
+		position: absolute;
+    right: 0;
+    top: 14px;
+    z-index: 999;
+    width: 100%;}
+	#mega-menu-wrap-max_mega_menu_1 .destinationhover{
+		display:none;
+	}
+	#mega-menu-wrap-max_mega_menu_1 .lsx-to-widget-item-wrap, #mega-menu-wrap-max_mega_menu_1 .lsx-to-widget-item-wrap .lsx-to-widget-content{margin:0!important;padding:0;}
 }
