@@ -25,11 +25,11 @@ h2{font-size:46px!important; line-height:54px;}
 h3{font-size:28px!important; line-height:34px;}
 h4{font-size:22px!important; line-height:28px;}
 .tk-moret {font-family:"moret",serif;}
-h1,h2,h3,h4,h5,h6 {font-family:"moret",serif!important;}
+h1,h2,h3,h4,h5,h6 {font-family:"moret",serif!important;letter-spacing:-0.1px!important;}
 body,p,ul,li,em {font-family:argesta_displayregular,serif!important;font-size:16px;line-height:26px;letter-spacing:-0.1px!important;}
-.lsx-to-widget-meta-data span{font-family:"moret",serif!important;font-size:15px!important;color:#6a6d5b;}
-th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;}
-.btn, button{font-family:"moret",serif!important;}
+.lsx-to-widget-meta-data span{font-family:"moret",serif!important;font-size:15px!important;color:#6a6d5b;letter-spacing:-0.1px!important;}
+th,tr,td,table,legend,label {font-family:argesta_displayregular,serif;letter-spacing:-0.1px!important;}
+.btn, button{font-family:"moret",serif!important;letter-spacing:-0.1px!important;}
 
 .gfield input::-webkit-input-placeholder {
 	color:#262423!important;
@@ -1268,10 +1268,28 @@ margin-top: -4px!important;
     width: 1204px!important;
     margin: 0px auto!important;}
     .search-results .archive-header-wrapper{display:none;}
-    .search-results .content-area{margin-top:10px!important;}
+    .search-results .content-area{margin-top:10px!important;padding:0!important;}
+	.search-results .content-area .col-md-6, .search-results .content-area .col-md-12{padding:0!important;}
+	.search-results .moretag.readmoresearch{display:inline-block!important;margin-top:16px;}
+	.search-results .moretag, .search-results .entry-meta{display:none;}
 	.search-results .lsx-slot .entry-layout > .entry-image{height:380px!important;flex-basis: 51%!important;}
 
 	.search-results .lsx-slot .entry-layout-content{margin-left:6%; margin-right:10%;}
+
+    .page-id-133965 .type-lsx-to-tour{display:flex;margin-bottom:20px;}
+	.page-id-133965 .search-results .lsx-to-widget-thumb{height: 400px!important;display:block;
+		justify-content:center;
+		align-items:center;
+		overflow:hidden;
+    width: 54%!important;}
+	
+	
+	.page-id-133965 .search-results .lsx-to-widget-thumb img {
+		object-fit:cover;
+		height:400px!important;
+	}
+	.page-id-133965 .search-results .lsx-to-widget-content{margin-left:6%; margin-right:8%;width:45%;}
+	.page-id-133965 .search-results .lsx-to-widget-content h4{text-align:left;}
 
 
 	.search-results .entry-content .relevance {

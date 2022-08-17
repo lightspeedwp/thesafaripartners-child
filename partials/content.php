@@ -135,15 +135,15 @@
 				<?php
 				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-				lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
-				lsx_to_price( '<span><span class="lsx-to-meta-data-key">' . esc_html__( 'from', 'tour-operator' ) . ':</span> ', '</span>' );
-				the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key"></span> ', ', ', '</span><br/>' );
-				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span>' );
+				lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span><br/>' );
+				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span><br/>' );
+				the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key"></span> ', ', ', '</span>' );
+				
 
 				if ( function_exists( 'lsx_to_connected_activities' ) ) {
 					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 				}
-				$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+				$excerpt_more = '<p><a class="moretag readmoresearch" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'View Trip', 'lsx' ) . '</a></p>';
 							echo wp_kses_post( $excerpt_more );?>
 			</div>
 
