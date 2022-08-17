@@ -1271,7 +1271,7 @@ margin-top: -4px!important;
     .search-results .content-area{margin-top:10px!important;padding:0!important;}
 	.search-results .content-area .col-md-6, .search-results .content-area .col-md-12{padding:0!important;}
 	.search-results .moretag.readmoresearch{display:block!important;}
-	.search-results .moretag{display:block!important;}
+	.search-results .moretag{display:none;}
 	.search-results .lsx-slot .entry-layout > .entry-image{height:380px!important;flex-basis: 51%!important;}
 
 	.search-results .lsx-slot .entry-layout-content{margin-left:6%; margin-right:10%;}
