@@ -697,7 +697,7 @@ function openinCity(evt, eventName) {
 	};
 
 	function populatePrefferedDatesField() {
-		console.log('running2');
+		console.log('running3');
 		$('#popmake-133252').on('pumAfterOpen', function (event) {
 			console.log(event);
 		});
