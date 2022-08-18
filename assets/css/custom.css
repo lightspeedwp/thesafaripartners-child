@@ -289,6 +289,7 @@ legend {
 .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag:hover {
 	color:#262423!important;
 }
+#masthead .wrapper-toggle {display:none;}
 @media screen and (min-width:1000px) {
 	#masthead {
 		background:#fff!important;
@@ -340,6 +341,11 @@ legend {
 			margin-right:0!important;
 			padding:14px 0 0 110px!important;
 	}
+	#masthead #mega-menu-wrap-primary{
+		margin-left:0!important;
+		margin-right:0!important;
+		padding:14px 0 0 110px!important;
+}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
 			font-family:"moret",serif!important;
 	}

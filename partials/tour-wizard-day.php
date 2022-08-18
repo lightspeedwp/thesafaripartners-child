@@ -53,7 +53,7 @@
 																					<div class="lsx-to-archive-meta-data">
 																					<?php
 																					$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
-																					lsx_to_itinerary_destinations( '<span class="heading-destinations">' . esc_html__( '', 'tour-operator' ) . '</span> ', '' );
+																					lsx_to_itinerary_destinations( '<span class="heading-destinations">' . esc_html__( 'tour-operator' ) . '</span>');
 																					lsx_to_itinerary_accommodation( '<span class="' . $meta_class . 'accommodations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>' );
 																					lsx_to_itinerary_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>' );
 																					lsx_to_itinerary_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
