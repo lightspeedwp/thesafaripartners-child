@@ -697,6 +697,7 @@ function openinCity(evt, eventName) {
 	};
 
 	function populatePrefferedDatesField() {
+		console.log('running');
 		$('#tour-request-modal').on('shown.bs.modal', function (event) {
 			console.log(event);
 		});
