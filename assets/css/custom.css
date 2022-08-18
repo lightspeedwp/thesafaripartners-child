@@ -3339,6 +3339,9 @@ legend {
 
 
 @media screen and (max-width:900px) {
+
+	#mega-menu-wrap-primary{position:absolute; right:30px;top:35px;}
+	#masthead{height:78px;}
 	#masthead .wrapper-toggle {
 			display:none;
 	}
