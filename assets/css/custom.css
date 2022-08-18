@@ -3338,7 +3338,7 @@ legend {
 }
 
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:900px) {
 	#masthead .wrapper-toggle {
 			display:none;
 	}
@@ -3355,20 +3355,20 @@ legend {
 	.contactbtn a {
 		color:#000;
 	}
-	#mega-menu-wrap-max_mega_menu_1 .mega-menu-toggle {
+	#mega-menu-wrap-max_mega_menu .mega-menu-toggle {
 			background:none;
 	}
-	#mega-menu-wrap-max_mega_menu_1 {
+	#mega-menu-wrap-max_mega_menu {
 			position:absolute;
 		right:0;
 		top:14px;
 		z-index:999;
 		width:100%;
 	}
-	#mega-menu-wrap-max_mega_menu_1 .destinationhover {
+	.destinationhover {
 			display:none;
 	}
-	#mega-menu-wrap-max_mega_menu_1 .lsx-to-widget-item-wrap,#mega-menu-wrap-max_mega_menu_1 .lsx-to-widget-item-wrap .lsx-to-widget-content {
+	#mega-menu-wrap-max_mega_menu .lsx-to-widget-item-wrap,#mega-menu-wrap-max_mega_menu .lsx-to-widget-item-wrap .lsx-to-widget-content {
 		margin:0!important;
 		padding: 0;
 	}
@@ -3388,4 +3388,12 @@ legend {
 
   @media screen and (min-width: 1100px) and (max-width: 1199px) {
 	.homebanner{min-height: 64vh!important;}
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1099px) {
+	.homebanner{min-height: 60vh!important;}
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 999px) {
+	.homebanner{min-height: 55vh!important;}
   }
