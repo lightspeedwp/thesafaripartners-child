@@ -3337,10 +3337,17 @@ legend {
 .lsx-to-slider-inner.slick-has-arrows { width: calc(100% - 0rem)!important;}
 }
 
-
+@media screen and (max-width:900px) {
+	#mega-menu-wrap-primary .lsx-to-widget-thumb, #mega-menu-wrap-primary .lsx-to-widget-thumb img{display:none;}
+}
 @media screen and (max-width:900px) {
 
-	#mega-menu-wrap-primary{position:absolute; right:30px;top:35px;}
+	#mega-menu-wrap-primary{position: absolute;
+		right: 0px;
+		top: 18px;
+		z-index: 9;
+		width: 100%;}
+	#masthead .navbar-header .custom-logo-link>img{z-index: 99;}
 	#masthead{height:78px;}
 	#masthead .wrapper-toggle {
 			display:none;
