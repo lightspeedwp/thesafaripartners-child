@@ -123,10 +123,13 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 								//loop through the columns and grab the values
 								foreach ( $file_headers as $f_key => $f_value ) {
 
-									$value = preg_replace("/[^A-Za-z0-9 ]/", '', $row_data[$f_key]);
-									
-									add_post_meta( $_GET['post'], 'price_row_' . ( $r-1 ) . '_column_' . $header_counter, $value, true );
+									if ( 1 === $header_counter || 2 === $header_counter ) {
+										$value = preg_replace("/[^A-Za-z0-9 ]/", '', $row_data[$f_key]);
+									} else {
+										$value = date('m/d/Y',strtotime($row_data[$f_key]));
+									}
 
+									add_post_meta( $_GET['post'], 'price_row_' . ( $r-1 ) . '_column_' . $header_counter, $value, true );
 									add_post_meta( $_GET['post'], '_price_row_' . ( $r-1 ) . '_column_' . $header_counter, $field_ids[ $header_counter ], true );
 
 									$header_counter++;
