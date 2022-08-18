@@ -697,10 +697,14 @@ function openinCity(evt, eventName) {
 	};
 
 	function populatePrefferedDatesField() {
-		console.log('running7');
-		$('#popmake-133252').on('pumAfterOpen', function (event) {
-			let date_value = $.fn.popmake.last_open_trigger.attr('data-gform-value');
-			console.log(event);
+		console.log('running11');
+		$('#pum-133252').on('pumAfterOpen', function (event) {
+			if ( 0 < $.fn.popmake.last_open_trigger.length ) {
+				let date_value = $.fn.popmake.last_open_trigger.attr('data-gform-value');
+				if ( 0 < $('#input_4_27').length ) {
+					$('#input_4_27').val(date_value);
+				}
+			}
 		});
 	};
 
