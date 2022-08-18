@@ -282,7 +282,6 @@ class Frontend {
 			if ( $field->type != 'select' || strpos( $field->cssClass, 'dates-prices-dropdown' ) === false ) {
 				continue;
 			}
-	 
 			$choices = array();
 
 			$price_row_amount = get_post_meta( get_the_ID(), 'price_row', true );

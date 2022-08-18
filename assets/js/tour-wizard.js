@@ -696,6 +696,12 @@ function openinCity(evt, eventName) {
 		});
 	};
 
+	function populatePrefferedDatesField() {
+		$('#tour-request-modal').on('shown.bs.modal', function (event) {
+			console.log(event);
+		});
+	};
+
 	$.fn.lsxWizard.defaults = {
 		lsxWizard: {
 			minHeight: 400,
@@ -839,5 +845,6 @@ function openinCity(evt, eventName) {
 		});
 
 		setReadMoreDescriptions();
+		populatePrefferedDatesField();
 	});
 })( jQuery, window, document );
