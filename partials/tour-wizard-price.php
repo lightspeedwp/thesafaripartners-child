@@ -43,6 +43,7 @@
 													// Grab all of the row data
 													$rc_num  = 1;
 													$rc_data = array();
+													$btn_val = '';
 
 													do {
 
@@ -50,8 +51,13 @@
 														if ( '' !== $value && false !== $value ) {
 															switch( $rc_num ) {
 																case 1:
+																	$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
+																	$btn_val                = date( 'm/d/Y', strtotime( $value ) );
+																	break;
+
 																case 2:
 																	$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
+																	$btn_val                .= '-' . date( 'm/d/Y', strtotime( $value ) );
 																	break;
 
 																default:
@@ -65,7 +71,7 @@
 
 													$column_titles              = array_keys( $rc_data );
 
-													$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire">Book Now</button></td>';
+													$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">Book Now</button></td>';
 
 													$table_data[ $row_counter ] = implode( '', $rc_data );
 													$row_counter++;

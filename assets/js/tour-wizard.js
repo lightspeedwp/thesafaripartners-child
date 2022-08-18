@@ -697,8 +697,9 @@ function openinCity(evt, eventName) {
 	};
 
 	function populatePrefferedDatesField() {
-		console.log('running3');
+		console.log('running7');
 		$('#popmake-133252').on('pumAfterOpen', function (event) {
+			let date_value = $.fn.popmake.last_open_trigger.attr('data-gform-value');
 			console.log(event);
 		});
 	};
