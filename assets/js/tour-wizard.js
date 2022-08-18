@@ -688,9 +688,7 @@ function openinCity(evt, eventName) {
 				navEle += '<span class="first-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
 
-			console.log(counter);
-			console.log(itineraryItems.length);
-			if ( counter != itineraryItems.length ) {
+			if ( counter != ( itineraryItems.length - 1 ) ) {
 				navEle += '<button class="lsx-wizard-button-next ignore-text"><span>' + itineraryItems[nextIndex] + '</span></button>';
 			} else {
 				navEle += '<span class="last-day ignore-text">' + itineraryItems[counter] + '</span>';
