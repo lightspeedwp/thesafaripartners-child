@@ -53,6 +53,16 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 
 			if ( is_admin() && isset( $_GET['post'] ) && 'tour' == get_post_type( $_GET['post'] ) ) {
 
+				$field_ids = array(
+					1 => 'field_62fcebf69657c',
+					2 => 'field_62fcec159657d',
+					3 => 'field_62fcec319657e',
+					4 => 'field_62fcec389657f',
+					5 => 'field_62fcec3f96580',
+					6 => 'field_62fcec4796581',
+					7 => 'field_62fcec4e96582',
+				);
+
 				//a:5:{s:10:"start_date";s:10:"08/14/2014";s:8:"end_date";s:10:"08/08/2014";s:13:"price_sharing";s:3:"500";s:10:"single_add";s:3:"300";s:9:"park_fees";s:3:"200";}
 				//a:3:{i:0;a:5:{i:0;s:10:"01/21/2014";i:1;s:10:"03/23/2014";i:2;s:4:"R400";i:3;s:3:"100";i:4;s:3:"400";}i:1;a:5:{i:0;s:10:"01/21/2014";i:1;s:10:"06/27/2014";i:2;s:3:"350";i:3;s:3:"150";i:4;s:0:"";}i:2;a:5:{i:0;s:10:"03/01/2014";i:1;s:10:"04/01/2014";i:2;s:3:"250";i:3;s:3:"100";i:4;s:2:"70";}}
 				//delete_post_meta($_GET['post'],'tour_schedule_upload');
@@ -69,8 +79,33 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 					$file_headers  = array();
 					$schedule_data = array();
 
-					$old_values = get_post_meta( $_GET['post'], 'bs_tour_dates_prices', false );
-					delete_post_meta( $_GET['post'], 'bs_tour_dates_prices' );
+					//first delete the old data
+					$number_of_rows = get_post_meta( $_GET['post'], 'price_row', true );
+
+					if ( false !== $number_of_rows && 0 !== $number_of_rows ) {
+						$counter = 0;
+						do {
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_1' );
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_2' );
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_3' );
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_4' );
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_5' );
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_6' );
+							delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_7' );
+
+							//Delete the hidden fields.
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_1' );
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_2' );
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_3' );
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_4' );
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_5' );
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_6' );
+							delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_7' );
+							$counter++;
+						} while ( $counter < $number_of_rows );
+						delete_post_meta( $_GET['post'], 'price_row' );
+						delete_post_meta( $_GET['post'], '_price_row' );
+					}
 
 					while ( ( $row_data = fgetcsv( $handle, 1000, ',' ) ) !== false ) {
 						//skip first row = columnheaders
@@ -84,44 +119,27 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 
 							if ( $num && $num > 1 ) {
 
-								$temp_array = array();
-
+								$header_counter = 1;
 								//loop through the columns and grab the values
 								foreach ( $file_headers as $f_key => $f_value ) {
 
-									//print_r($row_data[$f_key]);print_r('-');print_r($f_key);print_r('<br />');
+									$value = preg_replace("/[^A-Za-z0-9 ]/", '', $row_data[$f_key]);
+									
+									add_post_meta( $_GET['post'], 'price_row_' . ( $r-1 ) . '_column_' . $header_counter, $value, true );
 
-									switch ( ltrim( rtrim( $f_value ) ) ) {
-										case 'Start Date':
-											$temp_array['start_date'] = date( 'm/d/Y', strtotime( $row_data[ $f_key ] ) );
-											break;
-										case 'End Date':
-											$temp_array['end_date'] = date( 'm/d/Y', strtotime( $row_data[ $f_key ] ) );
-											break;
+									add_post_meta( $_GET['post'], '_price_row_' . ( $r-1 ) . '_column_' . $header_counter, $field_ids[ $header_counter ], true );
 
-										case 'Price Sharing':
-											$temp_array['price_sharing'] = preg_replace( '/[^A-Za-z0-9 ]/', '', $row_data[ $f_key ] );
-											break;
-
-										case 'Single Addon Price':
-											$temp_array['single_add'] = preg_replace( '/[^A-Za-z0-9 ]/', '', $row_data[ $f_key ] );
-											break;
-
-										case 'Park Fees':
-											$temp_array['park_fees'] = preg_replace( '/[^A-Za-z0-9 ]/', '', $row_data[ $f_key ] );
-											break;
-									}
+									$header_counter++;
 								}
-
-								add_post_meta( $_GET['post'], 'bs_tour_dates_prices', $temp_array );
-
-								//print_r($temp_array);
 
 							}//end Num if
 						}//en $r if
 
 						$r++;
 					}//end of the while
+
+					add_post_meta( $_GET['post'], 'price_row', $r, true );
+					add_post_meta( $_GET['post'], '_price_row', 'field_62fcebb79657b', true );
 
 					wp_delete_attachment( $tour_schedule );
 					delete_post_meta( $_GET['post'], 'tour_schedule_upload' );

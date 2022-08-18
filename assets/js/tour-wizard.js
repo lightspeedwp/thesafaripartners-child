@@ -688,6 +688,8 @@ function openinCity(evt, eventName) {
 				navEle += '<span class="first-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
 
+			console.log(counter);
+			console.log(itineraryItems.length);
 			if ( counter != itineraryItems.length ) {
 				navEle += '<button class="lsx-wizard-button-next ignore-text"><span>' + itineraryItems[nextIndex] + '</span></button>';
 			} else {
@@ -701,7 +703,6 @@ function openinCity(evt, eventName) {
 	};
 
 	function populatePrefferedDatesField() {
-		console.log('running11');
 		$('#pum-133252').on('pumAfterOpen', function (event) {
 			if ( 0 < $.fn.popmake.last_open_trigger.length ) {
 				let date_value = $.fn.popmake.last_open_trigger.attr('data-gform-value');
