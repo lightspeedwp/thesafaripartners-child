@@ -143,7 +143,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 						$r++;
 					}//end of the while
 
-					add_post_meta( $_GET['post'], 'price_row', $r, true );
+					add_post_meta( $_GET['post'], 'price_row', ($r-1), true );
 					add_post_meta( $_GET['post'], '_price_row', 'field_62fcebb79657b', true );
 
 					wp_delete_attachment( $tour_schedule );
