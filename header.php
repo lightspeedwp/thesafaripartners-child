@@ -30,8 +30,7 @@
 				<?php lsx_header_top(); ?>
 				<div class="container">
 					<?php lsx_nav_before(); ?>
-					<?php lsx_nav_menu(); ?>
-					<?php lsx_nav_after(); ?>
+					<?php wp_nav_menu( array( 'container_class' => 'primary-navbar', 'theme_location' => 'primary' ) ); ?>
 					<?php if ( wp_is_mobile() ) { wp_nav_menu( array('container_class' => 'primary-navbar', 'theme_location' => 'max_mega_menu_1') );} ?>
 
 					<?php lsx_header_bottom(); ?>
