@@ -108,7 +108,13 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 					while ( ( $row_data = fgetcsv( $handle, 1000, ',' ) ) !== false ) {
 						//skip first row = columnheaders
 						if ( $r == 0 ) {
+							
+							// Save the titles
 							$file_headers = $row_data;
+							foreach ( $file_headers as $f_key => $f_value ) {
+								delete_post_meta( $_GET['post'], 'column_titles_column_' . $f_key );
+								add_post_meta( $_GET['post'], 'column_titles_column_' . $f_key, $f_value, true );
+							}
 						}
 
 						if ( $r > 0 ) {
