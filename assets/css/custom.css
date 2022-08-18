@@ -299,6 +299,7 @@ legend {
     position: absolute;
     left: 20px;
     top: 4px;
+	z-index:999;
 }
 }
 
@@ -357,6 +358,7 @@ legend {
 		margin-left:0!important;
 		margin-right:0!important;
 		padding:14px 0 0 110px!important;
+		width:100%;
 }
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
 			font-family:"moret",serif!important;
@@ -2367,7 +2369,7 @@ legend {
 			float:none;
 	}
 	#masthead .navbar-header .custom-logo-link>img {
-			margin:1px 0;
+			margin:1px 0;z-index:999;
 	}
 	.page-template-template-contact #masthead>.container {
 			padding-right:0px!important;
@@ -3347,7 +3349,7 @@ legend {
 		top: 18px;
 		z-index: 9;
 		width: 100%;}
-	#masthead .navbar-header .custom-logo-link>img{z-index: 99;}
+	#masthead .navbar-header .custom-logo-link>img{z-index: 999!important;}
 	#masthead{height:78px;}
 	#masthead .wrapper-toggle {
 			display:none;
