@@ -684,10 +684,14 @@ function openinCity(evt, eventName) {
 			let navEle    = '<div class="itinerary-navigation">';
 			if ( 0 != counter ) {
 				navEle += '<button class="lsx-wizard-button-previous ignore-text"><span>' + itineraryItems[prevIndex] + '</span></button>';
+			} else {
+				navEle += '<span class="first-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
 
 			if ( counter != itineraryItems.length ) {
 				navEle += '<button class="lsx-wizard-button-next ignore-text"><span>' + itineraryItems[nextIndex] + '</span></button>';
+			} else {
+				navEle += '<span class="last-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
 
 			navEle += '</div>';
