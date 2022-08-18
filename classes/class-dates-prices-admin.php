@@ -112,8 +112,8 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 							// Save the titles
 							$file_headers = $row_data;
 							foreach ( $file_headers as $f_key => $f_value ) {
-								delete_post_meta( $_GET['post'], 'column_titles_column_' . $f_key );
-								add_post_meta( $_GET['post'], 'column_titles_column_' . $f_key, $f_value, true );
+								delete_post_meta( $_GET['post'], 'column_titles_column_' . ( $f_key + 1 ) );
+								add_post_meta( $_GET['post'], 'column_titles_column_' . ( $f_key + 1 ), $f_value, true );
 							}
 						}
 
