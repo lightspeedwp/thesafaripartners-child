@@ -358,7 +358,7 @@ legend {
 		margin-left:0!important;
 		margin-right:0!important;
 		padding:14px 0 0 110px!important;
-		width:100%;
+		width:949px;
 }
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
 			font-family:"moret",serif!important;
@@ -3339,7 +3339,7 @@ legend {
 .lsx-to-slider-inner.slick-has-arrows { width: calc(100% - 0rem)!important;}
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:500px) {
 	#mega-menu-wrap-primary .lsx-to-widget-thumb, #mega-menu-wrap-primary .lsx-to-widget-thumb img{display:none;}
 }
 @media screen and (max-width:900px) {
