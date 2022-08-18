@@ -595,6 +595,10 @@ legend {
 		font-size:16px!important;
 		color:#6a6d5b;
 	}
+	.single-lsx-to-tour .heading-destinations{font-size: 28px!important;
+		line-height: 34px;font-family: "moret",serif!important;
+		letter-spacing: -0.1px!important;width:100%; padding: 0; margin:0;
+	}
 	.single-lsx-to-tour .itinerary-item .lsx-to-meta-data {
 		font-size:22px!important;
 	}
@@ -2646,8 +2650,9 @@ legend {
 	.single-lsx-to-tour .lsx-to-tour-content {
 		padding-top:13vh!important;
 		width:550px;
-		padding-left:20px;
+		padding-left:40px;
 	}
+	.single-lsx-to-tour .lsx-to-archive-wrapper{padding:0;margin:0;}
 	.single-lsx-to-tour #Price .lsx-to-tour-content {
 		padding-top:3vh!important;
 		width:774px;
