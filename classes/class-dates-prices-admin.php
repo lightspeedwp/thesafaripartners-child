@@ -73,11 +73,9 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 					$schedule = get_attached_file( $tour_schedule );
 
 					$handle = fopen( $schedule, 'r' );
-					$errors = '';
 					$r      = 0;
 
 					$file_headers  = array();
-					$schedule_data = array();
 
 					//first delete the old data
 					$number_of_rows = get_post_meta( $_GET['post'], 'price_row', true );
