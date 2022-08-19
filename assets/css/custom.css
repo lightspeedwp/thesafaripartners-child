@@ -361,6 +361,7 @@ legend {
 		padding:14px 0 0 110px!important;
 		width:987px;
 }
+	#mega-menu-wrap-primary #mega-menu-primary{margin-top:-2px;}
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
 			font-family:"moret",serif!important;
 	}
@@ -2848,16 +2849,13 @@ legend {
 	.lsx-to-widget-item-wrap.lsx-team .lsx-to-single-link {
 		display:none;
 	}
-	s	.financial-about .lsx-banner-column {
-			padding:40px 20px 0px!important;
-	}
+	
 	.about-1 .wp-block-columns>div:first-child {
 		padding-right:8%;
 	}
 	.lsx-to-widget-item-wrap.lsx-team .lsx-to-widget-thumb {
 		border-radius:0;
 		height:220px;
-		;
 		margin:0 auto 12px;
 		overflow:hidden;
 		position:relative;
@@ -3417,7 +3415,11 @@ legend {
     border: 1px solid #fff;
     padding: 0!important;
 }
-@media screen and (max-width:900px) {
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu.mega-menu-item{font-size:20px!important;}
+#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135943 > a.mega-menu-link {padding: 4px; border-bottom:1px solid #ccc;}
+
+}
+@media screen and (max-width:999px) {
 
 	#mega-menu-wrap-primary{position: absolute;
 		right: 0px;
@@ -3429,6 +3431,8 @@ legend {
 	#masthead .wrapper-toggle {
 			display:none;
 	}
+	#mega-menu-wrap-primary .mega-search-wrap{margin:30p 10px;}
+	#mega-menu-wrap-primary .mega-search-wrap form{border: 1px solid #ccc;padding:5px;}
 	.header-wrap .intro-wrap {
 			display:none;
 	}
