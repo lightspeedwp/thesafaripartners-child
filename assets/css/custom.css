@@ -3393,8 +3393,8 @@ width:100%;
 		padding: 0;
 	}
 
-	.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9{width:100%;}
-	.lsx-wizard-step .col-md-9 .col-sm-2, .lsx-wizard-step .col-md-9 .col-md-2{width:20%; float:left; }
+	.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9{width:100%!important;padding:0!important;}
+	.lsx-wizard-step .col-md-9 .col-sm-2, .lsx-wizard-step .col-md-9 .col-md-2{width:20%!important; float:left!important; }
 	.lsx-wizard-step .col-md-9 .col-sm-2 img, .lsx-wizard-step .col-md-9 .col-md-2 img{height:240px!important;}
 }
 
