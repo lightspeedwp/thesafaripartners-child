@@ -3433,7 +3433,7 @@ width:100%;
 }
 	#mega-menu-wrap-primary .lsx-to-widget-thumb, #mega-menu-wrap-primary .lsx-to-widget-thumb img{display:none!important;}
 	.who-top {
-		margin-top:80px;
+		padding-top:80px;
 }
 .who-top h2.lsx-title {
 		max-width:98%!important;
@@ -3532,6 +3532,7 @@ h3 {
 	font-size:26px!important;
 	line-height:30px;
 }
+.gutenberg-compatible-template.using-gutenberg .alignfull.wp-block-cover{width:100%!important; max-width:100%!important;margin:0!important;}
 .who-top {
     background-color: #fff;
     display: block;
