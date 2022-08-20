@@ -3308,42 +3308,9 @@ width:100%;
 			margin-top: 11px!important;}
 		#mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile{display:block!important; width:176px!important; float:right!important;margin-right:18px!important;}
 
-		.lsx-to-slider-inner .slick-arrow.slick-prev {
-			left:-10px;
-			width:20px!important;
-			height:20px!important;
-	}
-	.lsx-to-slider-inner .slick-arrow.slick-next {
-			right:-10px;
-			width:20px!important;
-			height:20px!important;
-	}
-	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
-			border:1px solid #ce9e57!important;
-			background:#fff;
-			border-radius:0;
-			color:#ce9e57;
-			padding:10px;
-	}
-	.lsx-to-slider-inner .slick-prev:before {
-		background-image:url('img/tsp-carousel-arrow-left.svg');
-			background-size:10px 10px;
-			display:inline-block;
-			width:10px;
-			height:10px;
-			content:"";
-	}
-		 .lsx-to-slider-inner .slick-next:before {
-		background-image:url('img/tsp-carousel-arrow-right.svg');
-			 background-size:10px 10px;
-			 display:inline-block;
-			 width:10px;
-			 height:10px;
-			 content:"";
-	}
 			 	 #travel-footer {
 				background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
-				background-color:#fff;
+				background-color:#000;
 				height:960px;
 				background-position:center;
 				background-repeat:no-repeat;
@@ -3408,6 +3375,39 @@ width:100%;
 }
 
 @media screen and (max-width:500px) {
+	.lsx-to-slider-inner .slick-arrow.slick-prev {
+		left:-10px;
+		width:20px!important;
+		height:20px!important;
+}
+.lsx-to-slider-inner .slick-arrow.slick-next {
+		right:-10px;
+		width:20px!important;
+		height:20px!important;
+}
+.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
+		border:1px solid #ce9e57!important;
+		background:#fff;
+		border-radius:0;
+		color:#ce9e57;
+		padding:10px;
+}
+.lsx-to-slider-inner .slick-prev:before {
+	background-image:url('img/tsp-carousel-arrow-left.svg');
+		background-size:10px 10px;
+		display:inline-block;
+		width:10px;
+		height:10px;
+		content:"";
+}
+	 .lsx-to-slider-inner .slick-next:before {
+	background-image:url('img/tsp-carousel-arrow-right.svg');
+		 background-size:10px 10px;
+		 display:inline-block;
+		 width:10px;
+		 height:10px;
+		 content:"";
+}
 	#mega-menu-wrap-primary .lsx-to-widget-thumb, #mega-menu-wrap-primary .lsx-to-widget-thumb img{display:none!important;}
 	.who-top {
 		margin-top:80px;
@@ -3458,6 +3458,25 @@ width:100%;
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{font-size:20px!important;}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {padding: 4px; border-bottom:1px solid #ccc;}
+
+#travel-footer {
+	background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
+	background-color:#000;
+	height:960px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background:#000!important;
+}
+#footer-widgets,#footer-sub {
+	background:transparent!important;
+}
+	.lsx-to-slider-inner .slick-dots {
+	display:none!important;
+}
+.home-txt h4 {
+display:none;
+}
 
 }
 
