@@ -335,6 +335,34 @@ legend {
     background: none;
     padding: 10px!important;}
 
+	#mega-menu-wrap-primary #mega-menu-primary .lsx-destination .destinationhover {
+		display:none;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary .lsx-destination:hover .destinationhover {
+		display:block!important;
+			position:fixed !important;
+			left:-295px;
+			top:0px;
+			width:278px;
+	}
+		#mega-menu-wrap-primary #mega-menu-primary #mega-menu-46380-1-0 .lsx-destination:hover .destinationhover {
+		display:block!important;
+				position:fixed !important;
+				left:0px!important;
+	}
+	.body-wrap {
+			background:#fff;
+	}
+	.content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover,.content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active,.content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus,.widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover,.widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active,.widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus,.modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover,.modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active,.modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus,.remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover,.remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active,.remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus {
+		color:#ce9e57;
+	}
+	.content-area .tourslink a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor),.content-area .tourslink a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active,.content-area .tourslink a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited,.widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor),.widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active,.widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited,.modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor),.modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active,.modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited,.remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor),.remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active,.remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited {
+		color:#262423!important;
+	}
+	#mega-menu-wrap-primary .lsx-to-widget-item-wrap .col-md-6 {
+			display:none;
+	}	
+
 @media (max-width: 1199px){
 #masthead .navbar-header {
     width: 215px;
