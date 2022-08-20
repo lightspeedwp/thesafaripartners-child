@@ -3378,8 +3378,8 @@ legend {
 .lsx-to-slider-inner.slick-has-arrows { width: calc(100% - 0rem)!important;}
 }
 
-@media screen and (max-width:500px) {
-	#mega-menu-wrap-primary .lsx-to-widget-thumb, #mega-menu-wrap-primary .lsx-to-widget-thumb img{display:none;}
+@media (max-width:500px) {
+	#mega-menu-wrap-primary .lsx-to-widget-thumb, #mega-menu-wrap-primary .lsx-to-widget-thumb img{display:none!important;}
 	.who-top {
 		margin-top:80px;
 }
