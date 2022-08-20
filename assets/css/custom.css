@@ -368,9 +368,6 @@ legend {
 			padding:6px;
 			margin:10px 0;}
 
-		footer.content-info	{background-color: #000!important;}
-
-
 	.wp-block-cover video.wp-block-cover__video-background{width: 108%!important;}
 	#masthead {
 		background:#fff!important;
@@ -681,9 +678,6 @@ legend {
 
 	.archive .lsx-wizard-progress-buttons .steps1 {
 		display:inline-block!important;
-	}
-	.archive .archive-intro h2 {
-		padding-right:46%;
 	}
 	.archive .lsx-wizard-progress-buttons {
 		text-transform:capitalize;
@@ -2058,7 +2052,7 @@ legend {
 	}
 	#footer-sub {
 			background-color:transparent;
-			padding:15px 0 150px!important;
+			padding:70px 0 150px!important;
 			position:relative;
 	}
 	#footer-sub form {
@@ -2069,13 +2063,11 @@ legend {
 			width:70%;
 			float:left;
 	}
+
 	#footer-sub .gform_footer {
-			width:30%;
-			float:left;
-	}
-	#footer-sub .gform_footer {
-			margin:20px 0 0 89px;
+			margin:20px 0 0 82px;
 			width:20%;
+			float:left;
 	}
 	#footer-sub .gform_footer #gform_submit_button_1 {
 			background:#6a6d5b!important;
@@ -2842,7 +2834,9 @@ legend {
 				margin:30px auto!important;
 				float:none;
 		}
-
+		.archive .archive-intro h2 {
+			padding-right:46%;
+		}
 		.archive .archive-intro {
 			padding-bottom:80px!important;
 			margin:60px 0px 40px 0px!important;
@@ -3495,7 +3489,6 @@ width:100%;
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
-	background:#000!important;
 }
 #footer-widgets,#footer-sub {
 	background:transparent!important;
@@ -3505,6 +3498,18 @@ width:100%;
 }
 .home-txt h4 {
 display:none;
+}
+h1 {
+	font-size:46px!important;
+	line-height:52px;
+}
+h2 {
+	font-size:36px!important;
+	line-height:40px;
+}
+h3 {
+	font-size:26px!important;
+	line-height:30px;
 }
 
 }
