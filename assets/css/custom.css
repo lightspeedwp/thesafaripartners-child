@@ -3392,7 +3392,8 @@ width:100%;
 		margin:0!important;
 		padding: 0;
 	}
-
+	.archive .wizard-who, .archive .wizard-what, .archive .wizard-where, .archive .wizard-budget{display:block!important;}
+	.archive #wizard .step-content .col-md-3, .archive #wizard .step-content .col-md-9{width:100%!important;padding:0!important;}
 	.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9{width:100%!important;padding:0!important;}
 	.lsx-wizard-step .col-md-9 .col-sm-2, .lsx-wizard-step .col-md-9 .col-md-2{width:20%!important; float:left!important; }
 	.lsx-wizard-step .col-md-9 .col-sm-2 img, .lsx-wizard-step .col-md-9 .col-md-2 img{height:240px!important;}
