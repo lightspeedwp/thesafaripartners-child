@@ -381,12 +381,6 @@ legend {
 	.page.safari-styles {
 			margin-top:0px;
 	}
-	body.page-template-template-contact,body.page-template-template-wizard,body.single-lsx-to-tour {
-		height:100%;
-			overflow-y:hidden;
-		position:fixed;
-		width:100%;
-	}
 	#travel-footer {
 			background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 			background-color:#fff;
@@ -1212,9 +1206,6 @@ legend {
 		background:none;
 		opacity:1;
 	}
-	.page-template-template-wizard .body-wrap {
-		height:90vh!important;
-	}
 	.lsx-wizard .checkbox-wrapper {
 			position:absolute;
 		font-size:14px;
@@ -1894,13 +1885,7 @@ legend {
 	.page-template-template-contact .contact-135619 .lsx-contact-module-image {
 		display:block!important;
 	}
-	.page-template-template-contact .contact-135619 .lsx-contact-module-image iframe {
-		height:90vh;
-		max-height:100%;
-		width:100%;
-		max-width:100%;
-		display:block!important;
-	}
+	
 	.page-template-template-contact .lsx-contact-module-image iframe {
 		display:none!important;
 	}
@@ -1959,13 +1944,7 @@ legend {
 		width:100%;
 		margin-top:-25px;
 	}
-	.tour-accommodation-gallery .accomodation-slider {
-		height:58vh;
-	}
-	.tour-accommodation-gallery .accomodation-nav {
-		margin-bottom:70px!important;
-		border-top:4px solid #fff;
-	}
+	
 	.tour-accommodation-gallery .accomodation-nav .slick-list {
 		padding:0!important;
 	}
@@ -2376,22 +2355,11 @@ legend {
 	.single-lsx-to-tour .lsx-tour-module-map {
 		padding:0 !important;
 	}
-	.single-lsx-to-tour .lsx-banner-image-wrap img {
-		object-fit:cover;
-		height:85vh!important;
-		width:100%;
-	}
+	
 	.single-lsx-to-tour .lsx-contact-module-image {
 		padding:0!important;
 	}
-	.single-lsx-to-tour .lsx-single-contact {
-		width:50%;
-		position:fixed;
-		bottom:0px;
-		left:1px;
-		margin-left:-16px;
-		z-index:99;
-	}
+	
 	.single-lsx-to-tour #accommodation {
 		margin-top:0!important;
 	}
@@ -2570,10 +2538,7 @@ legend {
 	.full {
 		width:100%!important;
 	}
-	.single-lsx-to-destination .content {
-		width:1366px!important;
-		margin:20px auto!important;
-	}
+	
 	.page-template-template-contact .archive-header-wrapper {
 		display:none;
 	}
@@ -2994,7 +2959,12 @@ margin:4px auto -46px;
 bottom:40px;
 right:25%;
 }
-
+body.page-template-template-contact,body.page-template-template-wizard,body.single-lsx-to-tour {
+	height:100%;
+		overflow-y:hidden;
+	position:fixed;
+	width:100%;
+}
 .lsx-wizard-progress-buttons-wrapper {
 			position:absolute;
 		z-index:1;
@@ -3287,6 +3257,44 @@ width:100%;
     margin-bottom:-30px;
     width: 476px;
 }
+.page-template-template-wizard .body-wrap {
+    height:90vh!important;
+}
+.page-template-template-contact .contact-135619 .lsx-contact-module-image iframe {
+    height:90vh;
+    max-height:100%;
+    width:100%;
+    max-width:100%;
+    display:block!important;
+}
+
+.tour-accommodation-gallery .accomodation-slider {
+    height:58vh;
+}
+.tour-accommodation-gallery .accomodation-nav {
+    margin-bottom:70px!important;
+    border-top:4px solid #fff;
+}
+
+.single-lsx-to-tour .lsx-banner-image-wrap img {
+    object-fit:cover;
+    height:85vh!important;
+    width:100%;
+}
+
+.single-lsx-to-tour .lsx-single-contact {
+    width:50%;
+    position:fixed;
+    bottom:0px;
+    left:1px;
+    margin-left:-16px;
+    z-index:99;
+}
+
+.single-lsx-to-destination .content {
+    width:1204px!important;
+    margin:20px auto!important;
+}
 }
 
 @media (min-width: 500px) and (max-width:1200px){
@@ -3491,6 +3499,15 @@ display:none;
 }
 
 }
+
+@media (min-width: 800px) and (max-width:1200px){
+	body.single-lsx-to-tour {
+		height:100%;
+			overflow-y:hidden;
+		position:fixed;
+		width:100%;
+	}
+	}
 
 @media screen and (min-width: 1300px) and (max-width: 1400px) {
 	.homebanner{min-height: 80vh!important;}
