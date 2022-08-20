@@ -2870,7 +2870,11 @@ legend {
 			width:1204px;
 			margin:auto;
 	}
-
+	.page .entry-content>div:first-of-type {
+		width: 100%!important;
+		padding: 0!important;
+		max-width: 100%!important;margin:0!important;
+	}	
 	.page .entry-content>div:not(:first-of-type) {
 		width:1204px;
 	padding:0!important;
@@ -3015,7 +3019,6 @@ body.page-template-template-contact,body.page-template-template-wizard,body.sing
     width:500px;
     bottom:20px;
 }
-
 
 .page-template-template-wizard .wizard-who {
     margin:0 auto;
