@@ -2916,12 +2916,12 @@ legend {
 			float: left;
 			position: absolute;
 			left: 20px;
-			top: 4px;
+			top: 14px;
 			z-index:999;
 		}
 		}
 		
-		@media screen and (min-width:1000px) {
+		@media screen and (min-width:1200px) {
 
 			#masthead>.container {
 				width:1204px;
