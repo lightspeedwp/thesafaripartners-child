@@ -368,7 +368,7 @@ legend {
 			padding:6px;
 			margin:10px 0;}
 
-		footer.content-info	{background-color: #2B3840!important;}
+		footer.content-info	{background-color: #000!important;}
 
 @media (max-width: 1199px){
 #masthead .navbar-header {
@@ -3272,7 +3272,7 @@ legend {
     max-width: 100%!important;
 		}	
 
-		#footer-widgets .col-md-3{width:50%!important;}
+		#footer-widgets .col-md-3{width:50%!important;float:left;}
 }
 
 @media screen and (max-width:999px) {
@@ -3325,6 +3325,53 @@ legend {
 	}
 		.home-txt h4 {
 		display:none;
+	}
+
+	#mega-menu-wrap-primary{position: absolute;
+		right: 0px;
+		top: 18px;
+		z-index: 9;
+		width: 100%;}
+	#masthead .navbar-header .custom-logo-link>img{z-index: 999!important;}
+	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135956 .mega-search .search-icon{right:10px;}
+	#masthead{height:78px;}
+	#masthead .wrapper-toggle {
+			display:none!important;
+	}
+	.mega-toggle-block.mega-search-block{display:none!important;}
+	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135956 .mega-search-wrap{margin:35px 20px!important;width: 92%!important;}
+	#mega-menu-wrap-primary .mega-search-wrap form{border: 1px solid #ccc;
+		padding-top: 8px!important;
+		line-height: 35px!important;}
+	.header-wrap .intro-wrap {
+			display:none!important;
+	}
+	.contactbtn {
+		background:#ce9e57;
+		color:#000;
+		font-size:16px;
+		text-align:center;
+		padding:0 5px;
+	}
+	.contactbtn a {
+		color:#000;
+	}
+	#mega-menu-wrap-max_mega_menu .mega-menu-toggle {
+			background:none;
+	}
+	#mega-menu-wrap-max_mega_menu {
+			position:absolute;
+		right:0;
+		top:14px;
+		z-index:999;
+		width:100%;
+	}
+	.destinationhover {
+			display:none;
+	}
+	#mega-menu-wrap-max_mega_menu .lsx-to-widget-item-wrap,#mega-menu-wrap-max_mega_menu .lsx-to-widget-item-wrap .lsx-to-widget-content {
+		margin:0!important;
+		padding: 0;
 	}
 }
 @media (min-width: 992px){
@@ -3384,55 +3431,6 @@ legend {
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {padding: 4px; border-bottom:1px solid #ccc;}
 
 }
-@media screen and (max-width:999px) {
-
-	#mega-menu-wrap-primary{position: absolute;
-		right: 0px;
-		top: 18px;
-		z-index: 9;
-		width: 100%;}
-	#masthead .navbar-header .custom-logo-link>img{z-index: 999!important;}
-	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135956 .mega-search .search-icon{right:10px;}
-	#masthead{height:78px;}
-	#masthead .wrapper-toggle {
-			display:none!important;
-	}
-	.mega-toggle-block.mega-search-block{display:none!important;}
-	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135956 .mega-search-wrap{margin:35px 20px!important;width: 92%!important;}
-	#mega-menu-wrap-primary .mega-search-wrap form{border: 1px solid #ccc;
-		padding-top: 8px!important;
-		line-height: 35px!important;}
-	.header-wrap .intro-wrap {
-			display:none!important;
-	}
-	.contactbtn {
-		background:#ce9e57;
-		color:#000;
-		font-size:16px;
-		text-align:center;
-		padding:0 5px;
-	}
-	.contactbtn a {
-		color:#000;
-	}
-	#mega-menu-wrap-max_mega_menu .mega-menu-toggle {
-			background:none;
-	}
-	#mega-menu-wrap-max_mega_menu {
-			position:absolute;
-		right:0;
-		top:14px;
-		z-index:999;
-		width:100%;
-	}
-	.destinationhover {
-			display:none;
-	}
-	#mega-menu-wrap-max_mega_menu .lsx-to-widget-item-wrap,#mega-menu-wrap-max_mega_menu .lsx-to-widget-item-wrap .lsx-to-widget-content {
-		margin:0!important;
-		padding: 0;
-	}
-}
 
 @media screen and (min-width: 1300px) and (max-width: 1400px) {
 	.homebanner{min-height: 80vh!important;}
@@ -3454,6 +3452,6 @@ legend {
 	.homebanner{min-height: 60vh!important;}
   }
 
-  @media screen and (min-width: 900px) and (max-width: 999px) {
+  @media screen and (min-width: 300px) and (max-width: 999px) {
 	.homebanner{min-height: 55vh!important;}
   }
