@@ -3283,7 +3283,7 @@ width:100%;
 }
 }
 
-@media (min-width: 500px) and (max-width:999px){
+@media (min-width: 500px) and (max-width:1200px){
 	.gutenberg-compatible-template.using-gutenberg .entry-content>div{
 		max-width: 92%!important;
 		width: 92%!important;
@@ -3306,9 +3306,7 @@ width:100%;
 			line-height: 14px!important;
 			margin-top: 11px!important;}
 		#mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile{display:block!important; width:176px!important; float:right!important;margin-right:18px!important;}
-}
 
-@media screen and (max-width:999px) {
 		.lsx-to-slider-inner .slick-arrow.slick-prev {
 			left:-10px;
 			width:20px!important;
