@@ -2908,6 +2908,7 @@ legend {
 	.mini-wizard-results .lsx-to-archive-thumb {
 		height:auto;
 	}
+	.lsx-to-slider-inner.slick-has-arrows { width: calc(100% - 0rem)!important;}
 
 	@media (max-width: 1199px){
 		#masthead .navbar-header {
@@ -3404,9 +3405,6 @@ width:100%;
 		margin:0!important;
 		padding: 0;
 	}
-}
-@media (max-width: 992px){
-.lsx-to-slider-inner.slick-has-arrows { width: calc(100% - 0rem)!important;}
 }
 
 @media screen and (max-width:500px) {
