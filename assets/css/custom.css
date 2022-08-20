@@ -3499,6 +3499,26 @@ width:100%;
 .home-txt h4 {
 display:none;
 }
+#mega-menu-wrap-primary {
+    position: absolute;
+    right: 0px;
+    top: 18px;
+    z-index: 9;
+    width: 100%;
+}
+#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
+    margin-right: 20px!important;
+}
+#masthead {
+    height: 120px;
+}
+#mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile {
+    display: fixed!important;
+	top:0;
+	left:0;
+    width: 100%!important;
+    margin: 0px!important;
+}
 h1 {
 	font-size:46px!important;
 	line-height:52px;
