@@ -368,6 +368,8 @@ legend {
 			padding:6px;
 			margin:10px 0;}
 
+		footer.content-info	{background-color: #2B3840!important;}
+
 @media (max-width: 1199px){
 #masthead .navbar-header {
     width: 215px;
@@ -3266,7 +3268,11 @@ legend {
 	
 		.page .entry-content>div:first-of-type {
 			width: 100%!important;
+    padding: 0!important;
+    max-width: 100%!important;
 		}	
+
+		#footer-widgets .col-md-3{width:50%!important;}
 }
 
 @media screen and (max-width:999px) {
