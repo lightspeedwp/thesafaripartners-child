@@ -3299,7 +3299,7 @@ width:100%;
 		#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848 > a.mega-menu-link{font-size:14px!important;}
 		#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block{margin-right: 112px!important;}
 		#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-item-align-right{margin:-20px 0px 0 5px!important;}
-		#mega-menu-wrap-primary #mega-menu-primary li.mega-hide-on-mobile, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-hide-on-mobile, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item.mega-hide-on-mobile{display:block!important; width:170px!important; float:right!important;margin-right:12px!important;}
+		#mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile{display:block!important; width:170px!important; float:right!important;margin-right:12px!important;}
 }
 
 @media screen and (max-width:999px) {
