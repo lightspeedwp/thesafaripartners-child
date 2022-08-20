@@ -3532,7 +3532,7 @@ h3 {
 	font-size:26px!important;
 	line-height:30px;
 }
-.gutenberg-compatible-template.using-gutenberg .alignfull.wp-block-cover{width:100%!important; max-width:100%!important;margin:0!important;}
+.gutenberg-compatible-template.using-gutenberg .alignfull.wp-block-cover{width:100%!important; max-width:100%!important;margin-left:0!important;margin-right:0!important;}
 .who-top {
     background-color: #fff;
     display: block;
