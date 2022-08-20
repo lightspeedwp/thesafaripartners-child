@@ -1145,12 +1145,6 @@ legend {
 	.archive .wizard-who,.single .wizard-who {
 		height:200px;
 	}
-	.archive .wizard-who,.archive .wizard-where,.archive .wizard-what,.archive .wizard-when,.archive .wizard-budget {
-		padding-top:50px!important;
-	}
-	.archive .wizard-who,.archive .wizard-where,.archive .wizard-what,.archive .wizard-when,.archive .wizard-budget {
-		padding-top:50px!important;
-	}
 	.page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 			overflow:hidden;
 			height:180px;
@@ -2944,7 +2938,12 @@ margin:5px 0px 20px 0px!important;
     margin-left:10px!important;
     margin:0 auto;
 }
-
+.archive .wizard-who,.archive .wizard-where,.archive .wizard-what,.archive .wizard-when,.archive .wizard-budget {
+	padding-top:50px!important;
+}
+.archive .wizard-who,.archive .wizard-where,.archive .wizard-what,.archive .wizard-when,.archive .wizard-budget {
+	padding-top:50px!important;
+}
 .archive .archive-intro {
     padding-bottom:80px!important;
     margin:60px 0px 40px 0px!important;
