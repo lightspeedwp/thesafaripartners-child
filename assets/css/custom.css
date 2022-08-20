@@ -1747,7 +1747,7 @@ legend {
 			text-rendering:auto;
 	}
 	.who-top {
-			margin-top:80px;
+			padding-top:80px;
 	}
 	.who-top h2.lsx-title {
 			max-width:98%!important;
@@ -3532,6 +3532,12 @@ h3 {
 	font-size:26px!important;
 	line-height:30px;
 }
+.who-top {
+    background-color: #fff;
+    display: block;
+    z-index: 99;
+    position: relative;
+}
 
 }
 
@@ -3565,5 +3571,10 @@ h3 {
   }
 
   @media screen and (min-width: 300px) and (max-width: 999px) {
-	.homebanner{min-height: 55vh!important;}
+	.homebanner{min-height: 72vh!important;
+		 z-index: 0;
+		margin-top: -52px;
+		margin-bottom: -56px;
+		padding: 0!important;
+		border-bottom: solid #fff;;}
   }
