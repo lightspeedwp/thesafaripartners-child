@@ -684,14 +684,7 @@ legend {
 	.archive .lsx-wizard-progress-buttons {
 		width:100%!important;
 	}
-	.archive .lsx-wizard-progress-buttons-wrapper {
-		position:absolute!important;
-		z-index:1;
-		left:48%!important;
-		margin:4px auto 6px!important;
-		width:500px;
-		bottom:20px;
-	}
+
 	.archive .lsx-wizard-progress-buttons .steps1 {
 		display:inline-block!important;
 	}
@@ -800,14 +793,7 @@ legend {
 	.single-lsx-to-destination .lsx-wizard-progress-buttons {
 		 width:100%!important;
 	}
-	.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
-		 position:absolute!important;
-		 z-index:1;
-		 left:48%!important;
-		 margin:4px auto 6px!important;
-		 width:500px;
-		 bottom:20px;
-	}
+	
 	.single-lsx-to-destination .lsx-wizard-progress-buttons .steps1 {
 		 display:inline-block!important;
 	}
@@ -923,14 +909,7 @@ legend {
 	.single-lsx-to-destination .lsx-wizard-progress-buttons {
 		width:100%!important;
 	}
-	.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
-		position:absolute!important;
-		z-index:1;
-		left:48%!important;
-		margin:4px auto 6px!important;
-		width:500px;
-		bottom:20px;
-	}
+	
 	.single-lsx-to-destination .lsx-wizard-progress-buttons .steps1 {
 		display:inline-block!important;
 	}
@@ -1110,14 +1089,7 @@ legend {
 		height:120px;
 		content:"";
 	}
-	.lsx-wizard-progress-buttons-wrapper {
-			position:absolute;
-		z-index:1;
-		width:569px;
-		margin:4px auto -46px;
-		bottom:40px;
-		right:25%;
-	}
+	
 	.lsx-wizard-progress-buttons .steps1 {
 			display:none!important;
 	}
@@ -1203,14 +1175,7 @@ legend {
 	.archive .lsx-wizard-progress-buttons {
 			width:100%!important;
 	}
-	.archive .lsx-wizard-progress-buttons-wrapper {
-			position:absolute!important;
-			z-index:1;
-			left:48%!important;
-			margin:4px auto 6px!important;
-			width:500px;
-		 bottom:20px;
-	}
+	
 	.archive .lsx-wizard-progress-buttons .steps1 {
 			display:inline-block!important;
 	}
@@ -2444,23 +2409,7 @@ legend {
 		margin-bottom:0!important;
 		margin-top:0!important;
 	}
-	.single-lsx-to-tour .lsx-wizard-progress-buttons-wrapper {
-		position:relative;
-		left:-4%;
-		z-index:9;
-		width:500px;
-		margin:0;
-		top:1px;
-	}
-	.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
-		width:534px;
-		padding:0 0px;
-		position:relative;
-		bottom:36px;
-		right:69px;
-		z-index:99;
-		float:right;
-	}
+	
 	.single-lsx-to-tour .lsx-wizard-steps-wrapper {
 		height: 500px!important;
 	}
@@ -3037,11 +2986,67 @@ margin:5px 0px 20px 0px!important;
     width:1204px!important;
     border-bottom:1px solid #262423;
 }
+.lsx-wizard-progress-buttons-wrapper {
+    position:absolute;
+z-index:1;
+width:569px;
+margin:4px auto -46px;
+bottom:40px;
+right:25%;
+}
 
 .lsx-wizard-progress-buttons-wrapper {
-    margin:0 auto;
-    width:1204px;
+			position:absolute;
+		z-index:1;
+		width:569px;
+		margin:4px auto -46px;
+		bottom:40px;
+		right:25%;
+	}.archive .lsx-wizard-progress-buttons-wrapper {
+    position:absolute!important;
+    z-index:1;
+    left:48%!important;
+    margin:4px auto 6px!important;
+    width:500px;
+    bottom:20px;
 }
+
+.single-lsx-to-tour .lsx-wizard-progress-buttons-wrapper {
+    position:relative;
+    left:-4%;
+    z-index:9;
+    width:500px;
+    margin:0;
+    top:1px;
+}
+.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
+    width:534px;
+    padding:0 0px;
+    position:relative;
+    bottom:36px;
+    right:69px;
+    z-index:99;
+    float:right;
+}
+
+.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
+    position:absolute!important;
+    z-index:1;
+    left:48%!important;
+    margin:4px auto 6px!important;
+    width:500px;
+    bottom:20px;
+}
+
+.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
+    position:absolute!important;
+    z-index:1;
+    left:48%!important;
+    margin:4px auto 6px!important;
+    width:500px;
+    bottom:20px;
+}
+
 
 .page-template-template-wizard .wizard-who {
     margin:0 auto;
