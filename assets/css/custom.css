@@ -3575,10 +3575,10 @@ h3 {
 	.homebanner{min-height: 60vh!important;}
   }
 
-  @media screen and (min-width: 788px) and (max-width: 999px) {
-	.homebanner{min-height: 52vh!important;
+  @media screen and (min-width: 768px) and (max-width: 999px) {
+	.homebanner{min-height: 60vh!important;
 		 z-index: 0;
-		margin-top: -52px;
-		margin-bottom: -56px;
+		margin-top: -52px!important;
+		margin-bottom: -56px!important;
 		padding: 0!important;}
   }
