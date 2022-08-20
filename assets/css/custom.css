@@ -3258,6 +3258,12 @@ legend {
 		height:auto;
 	}
 }
+
+@media (min-width: 568px) and (max-width:999px){
+	.gutenberg-compatible-template.using-gutenberg .entry-content>div{max-width: 92%!important;
+		width: 92%!important;}
+}
+
 @media screen and (max-width:999px) {
 		.lsx-to-slider-inner .slick-arrow.slick-prev {
 			left:-10px;
