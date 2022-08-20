@@ -3539,6 +3539,12 @@ h3 {
     z-index: 99;
     position: relative;
 }
+.homebanner{min-height: 71vh!important;
+	z-index: 0;
+   margin-top: -52px;
+   margin-bottom: -56px;
+   padding: 0!important;
+   border-bottom: solid #fff;}
 }
 
 @media (min-width: 900px) and (max-width:1200px){
