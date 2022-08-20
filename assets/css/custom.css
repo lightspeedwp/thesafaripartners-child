@@ -3539,7 +3539,6 @@ h3 {
     z-index: 99;
     position: relative;
 }
-.homebanner{min-height: 70vh!important;}
 }
 
 @media (min-width: 900px) and (max-width:1200px){
