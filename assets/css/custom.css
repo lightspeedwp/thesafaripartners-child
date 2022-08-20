@@ -3539,7 +3539,7 @@ h3 {
     z-index: 99;
     position: relative;
 }
-
+.homebanner{min-height: 70vh!important;}
 }
 
 @media (min-width: 900px) and (max-width:1200px){
@@ -3571,11 +3571,11 @@ h3 {
 	.homebanner{min-height: 60vh!important;}
   }
 
-  @media screen and (min-width: 300px) and (max-width: 999px) {
-	.homebanner{min-height: 72vh!important;
+  @media screen and (min-width: 788px) and (max-width: 999px) {
+	.homebanner{min-height: 52vh!important;
 		 z-index: 0;
 		margin-top: -52px;
 		margin-bottom: -56px;
 		padding: 0!important;
-		border-bottom: solid #fff;;}
+		border-bottom: solid #fff;}
   }
