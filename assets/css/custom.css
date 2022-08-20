@@ -370,19 +370,7 @@ legend {
 
 		footer.content-info	{background-color: #000!important;}
 
-@media (max-width: 1199px){
-#masthead .navbar-header {
-    width: 215px;
-    align-items: start;
-    float: left;
-    position: absolute;
-    left: 20px;
-    top: 4px;
-	z-index:999;
-}
-}
 
-@media screen and (min-width:1000px) {
 	.wp-block-cover video.wp-block-cover__video-background{width: 108%!important;}
 	#masthead {
 		background:#fff!important;
@@ -556,16 +544,6 @@ legend {
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right>ul.mega-sub-menu .nav-contact-bottom {
 			padding:8px 0;
 			border-top:1px solid #ccc;
-	}
-	#masthead>.container {
-			width:1204px;
-			margin:0 auto;
-			padding:0!important;
-	}
-	.blog .content-area {
-			width:1204px;
-			margin:30px auto!important;
-			float:none;
 	}
 	#gform_submit_button_1 {
 			padding:10px 20px!important;
@@ -2115,11 +2093,7 @@ legend {
 			object-fit:cover;
 			height:200px!important;
 	}
-	.toptours-posts .lsx-to-slider-inner {
-			max-width:1204px!important;
-		margin:5px 0px 20px 0px!important;
-		width:100%!important;
-	}
+
 	.page-template-template-contact .lsx-contact-module-image {
 			position:relative;
 			padding:0!important;
@@ -2314,11 +2288,6 @@ legend {
 			padding:0px 8px!important;
 	}
 	.archive .wrap.container {
-			width:1204px;
-		padding:0!important;
-			margin:0 auto;
-	}
-	.archive .wrap.container {
 			width:100%!important;
 			margin:0 auto;
 	}
@@ -2331,23 +2300,6 @@ legend {
 	}
 	.page #primary {
 		margin:0 auto;
-	}
-	.page .entry-content>div:not(:first-of-type) {
-			width:1204px;
-		padding:0!important;
-	}
-	.page-id-133119 #primary .notfull {
-			width:1204px!important;
-			padding:0!important;
-	}
-	.page-id-133119 .socialresponce {
-		gap:0em!important;
-	}
-	.page-id-133119 .entry-content>div:not(:first-of-type) {
-			width:1204px;
-			padding-left:20px;
-			margin:0 auto;
-			float:none;
 	}
 	#masthead .navbar-header .custom-logo-link>img {
 			margin:1px 0;z-index:999;
@@ -2378,14 +2330,6 @@ legend {
 	.page-template-template-contact #footer-widgets .container {
 			padding-right:0px!important;
 			padding-left:0px!important;
-	}
-	#colophon .container,#footer-sub .footer-sub-area {
-			width:1204px;
-			margin:auto;
-	}
-	#footer-widgets .container {
-			width:1204px;
-			margin:auto;
 	}
 	#footer-widgets {
 			background-color:#f0f0f0;
@@ -2643,22 +2587,13 @@ legend {
 	.single-lsx-to-tour .tabcontent .col-md-12 {
 			padding:0!important;
 	}
-	.single-lsx-to-tour .outer-container {
-		width:1204px;
-		margin:0 auto;
-		float:none;
-	}
 	.single-lsx-to-tour .lsx-to-tour-content {
 		padding-top:13vh!important;
 		width:550px;
 		padding-left:40px;
 	}
 	.single-lsx-to-tour .lsx-to-archive-wrapper{padding:0;margin:0;}
-	.single-lsx-to-tour #Price .lsx-to-tour-content {
-		padding-top:3vh!important;
-		width:774px;
-		padding-left:10px!important;
-	}
+	
 	.single-lsx-to-tour .itinerary-navigation button {
 		background:none;
 		color:#000;
@@ -3043,12 +2978,6 @@ legend {
 		margin:0 40px 0px 20px!important;
 		width:auto;
 	}
-	.archive .archive-intro {
-		padding-bottom:80px!important;
-		margin:60px 0px 40px 0px!important;
-		width:1204px!important;
-		border-bottom:1px solid #262423;
-	}
 	.archive #main .col-xs-1,.archive #main .col-sm-1,.archive #main .col-md-1,.archive #main .col-lg-1,.archive #main .col-xs-2,.archive #main .col-sm-2,.archive #main .col-md-2,.archive #main .col-lg-2,.archive #main .col-xs-3,.archive #main .col-sm-3,.archive #main .col-md-3,.archive #main .col-lg-3,.archive #main .col-xs-4,.archive #main .col-sm-4,.archive #main .col-md-4,.archive #main .col-lg-4,.archive #main .col-xs-5,.archive #main .col-sm-5,.archive #main .col-md-5,.archive #main .col-lg-5,.archive #main .col-xs-6,.archive #main .col-sm-6,.archive #main .col-md-6,.archive #main .col-lg-6,.archive #main .col-xs-7,.archive #main .col-sm-7,.archive #main .col-md-7,.archive #main .col-lg-7,.archive #main .col-xs-8,.archive #main .col-sm-8,.archive #main .col-md-8,.archive #main .col-lg-8,.archive #main .col-xs-9,.archive #main .col-sm-9,.archive #main .col-md-9,.archive #main .col-lg-9,.archive #main .col-xs-10,.archive #main .col-sm-10,.archive #main .col-md-10,.archive #main .col-lg-10,.archive #main .col-xs-11,.archive #main .col-sm-11,.archive #main .col-md-11,.archive #main .col-lg-11,.archive #main .col-xs-12,.archive #main .col-sm-12,.archive #main .col-md-12,.archive #main .col-lg-12 {
 		padding:0!important;
 	}
@@ -3260,9 +3189,85 @@ legend {
 	.mini-wizard-results .lsx-to-archive-thumb {
 		height:auto;
 	}
+
+	@media (max-width: 1199px){
+		#masthead .navbar-header {
+			width: 215px;
+			align-items: start;
+			float: left;
+			position: absolute;
+			left: 20px;
+			top: 4px;
+			z-index:999;
+		}
+		}
+		
+		@media screen and (min-width:1000px) {
+
+			#masthead>.container {
+				width:1204px;
+				margin:0 auto;
+				padding:0!important;
+		}
+		.blog .content-area {
+				width:1204px;
+				margin:30px auto!important;
+				float:none;
+		}
+
+		.archive .archive-intro {
+			padding-bottom:80px!important;
+			margin:60px 0px 40px 0px!important;
+			width:1204px!important;
+			border-bottom:1px solid #262423;
+		}
+
+		.single-lsx-to-tour #Price .lsx-to-tour-content {
+			padding-top:3vh!important;
+			width:774px;
+			padding-left:10px!important;
+		}
+
+		.single-lsx-to-tour .outer-container {
+			width:1204px;
+			margin:0 auto;
+			float:none;
+		}
+
+		#colophon .container,#footer-sub .footer-sub-area {
+			width:1204px;
+			margin:auto;
+	}
+	#footer-widgets .container {
+			width:1204px;
+			margin:auto;
+	}
+
+	.page .entry-content>div:not(:first-of-type) {
+		width:1204px;
+	padding:0!important;
+}
+.page-id-133119 #primary .notfull {
+		width:1204px!important;
+		padding:0!important;
+}
+.page-id-133119 .socialresponce {
+	gap:0em!important;
+}
+.page-id-133119 .entry-content>div:not(:first-of-type) {
+		width:1204px;
+		padding-left:20px;
+		margin:0 auto;
+		float:none;
+}
+.archive .wrap.container {
+	max-width:1204px;
+padding:0!important;
+	margin:0 auto;
+}
 }
 
-@media (min-width: 568px) and (max-width:999px){
+@media (min-width: 500px) and (max-width:999px){
 	.gutenberg-compatible-template.using-gutenberg .entry-content>div{max-width: 92%!important;
 		width: 92%!important;}
 	
