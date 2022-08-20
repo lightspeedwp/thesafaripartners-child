@@ -363,6 +363,11 @@ legend {
 			display:none;
 	}	
 
+	.wp-block-tour-operator-block-post-types .lsx-to-widget-content .tourslink .moretag {
+		display:block!important;
+			padding:6px;
+			margin:10px 0;}
+
 @media (max-width: 1199px){
 #masthead .navbar-header {
     width: 215px;
@@ -1993,11 +1998,7 @@ legend {
 	.ot-list .lsx-to-widget-content.bottom h4 {
 			display:none;
 	}
-	.wp-block-tour-operator-block-post-types .lsx-to-widget-content .tourslink .moretag {
-			display:block!important;
-			padding:6px;
-			margin:10px 0;
-	}
+
 	.safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 			overflow:hidden;
 			height:500px;
@@ -3262,6 +3263,10 @@ legend {
 @media (min-width: 568px) and (max-width:999px){
 	.gutenberg-compatible-template.using-gutenberg .entry-content>div{max-width: 92%!important;
 		width: 92%!important;}
+	
+		.page .entry-content>div:first-of-type {
+			width: 100%!important;
+		}	
 }
 
 @media screen and (max-width:999px) {
