@@ -3510,14 +3510,15 @@ display:none;
     margin-right: 20px!important;
 }
 #masthead {
-    height: 120px;
+    height: 72px;
 }
 #mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile {
-    display: fixed!important;
-	top:0;
-	left:0;
+    display: block!important;
+    top: -78px;
+    left: 0;
     width: 100%!important;
     margin: 0px!important;
+    position: absolute;
 }
 h1 {
 	font-size:46px!important;
