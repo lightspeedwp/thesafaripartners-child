@@ -3602,6 +3602,7 @@ height:200px;
     height: 30px;
     width: 30px;
     border: 2px solid #262423;
+	float: right;
 }
 
 .lsx-wizard .checkbox-wrapper>[type="checkbox"] {
@@ -3638,6 +3639,10 @@ height:200px;
     color: #ce9e57;
     font-size: 19px;
 }
+
+.checkbox-wrapper>[type="checkbox"]:checked+span {
+    border: 2px solid #ce9e57!important;}
+
 .checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
     color:#ce9e57!important;
 }
