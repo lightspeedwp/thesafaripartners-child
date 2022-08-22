@@ -3460,7 +3460,6 @@ height:200px;
 	
 	.lsx-wizard .checkbox-wrapper>[type="checkbox"] {
 		cursor: pointer;
-		border-radius: 50%;
 		height: 30px;
 		right: 0;
 		margin: 0;
@@ -3474,7 +3473,6 @@ height:200px;
 		position: relative!important;
 		display: block!important;
 		font-size: 14px;
-		border-radius: 50%;
 		top: 0px;
 		right: 0px;
 		height: 29px!important;
@@ -3617,7 +3615,6 @@ height:200px;
     position: relative!important;
     display: block!important;
     font-size: 14px;
-    border-radius: 50%;
     top: 0px;
     right: 0px;
     height: 38px!important;
