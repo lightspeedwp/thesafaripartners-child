@@ -1933,7 +1933,7 @@ legend {
 		padding:0;
 		margin:0;
 		width:100%;
-		margin-top:-25px;
+		margin-top:0px;
 	}
 	
 	.tour-accommodation-gallery .accomodation-nav .slick-list {
@@ -3280,10 +3280,9 @@ width:100%;
 }
 
 .tour-accommodation-gallery .accomodation-slider {
-    height:58vh;
+    height:62vh;
 }
 .tour-accommodation-gallery .accomodation-nav {
-    margin-bottom:70px!important;
     border-top:4px solid #fff;
 }
 
@@ -3296,6 +3295,8 @@ width:100%;
 .single-lsx-to-tour .lsx-to-slider-inner{margin: 0 0px!important;
     width: calc(100% + 0px)!important;}
 
+	.single-lsx-to-tour .intro-wrap{display:none!important;}
+
 .single-lsx-to-tour .lsx-single-contact {
     width:50%;
     position:fixed;
@@ -3304,7 +3305,7 @@ width:100%;
     margin-left:-16px;
     z-index:99;
 }
-
+.single-lsx-to-tour .slick-slide .lsx-to-widget-content p{display:none!important;}
 .single-lsx-to-destination .content {
     width:1204px!important;
     margin:20px auto!important;
