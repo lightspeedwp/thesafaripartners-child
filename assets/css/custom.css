@@ -3623,6 +3623,7 @@ height:200px;
     background: #fff!important;
     width: 100%;
 	border-bottom: 1px solid #ccc;
+	margin:5px 0!important;
 }
 
  .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -3635,8 +3636,19 @@ height:200px;
     font-size: 19px;
 }
 .wizard-when .travelwhen {
-    position: relative;
-    margin: 5px 0;}
+    position: relative;}
+
+	.lsx-wizard .lsx-to-content {
+		font-family: "moret",serif!important;
+		font-size: 19px;
+		line-height: 22px;
+		letter-spacing: 1px;
+		margin-top: -30px;
+		display: inline-block;
+		position: absolute;
+		z-index: 99;
+	}
+
 .checkbox-wrapper>[type="checkbox"]:checked+span {
     border: 2px solid #ce9e57!important;}
 
