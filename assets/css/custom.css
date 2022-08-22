@@ -694,7 +694,7 @@ legend {
 		max-height:290px;
 		overflow-y:scroll;
 	}
-	.lsx-readmore .read-more{font-family:"moret",serif!important;color:#ce9e57!important;text-transform: capitalize;
+	.lsx-readmore .read-more{color:#ce9e57!important;text-transform: capitalize!important;
 		letter-spacing:-0.1px!important;}
 	.archive .wizard-who,.single .wizard-who {
 		height:200px;
@@ -2314,7 +2314,7 @@ legend {
 			letter-spacing:0;
 			height:58px;
 	}
-	.lsx-to-single .tablinks {
+	.single-lsx-to-tour .tablinks {
 		padding:0;
 			background:#fff;
 			border:none!important;
@@ -2324,11 +2324,11 @@ legend {
 			font-size:16px;
 	}
 
-	.lsx-to-single #singlelink.tablinks {
+	.single-lsx-to-tour #singlelink.tablinks {
 		float: right;
 	}
 
-		.lsx-to-single .tablinks:after {
+	.single-lsx-to-tour .tablinks:after {
 		background-image:url('img/tsp-see-more-arrow.svg');
 				background-size:10px 10px;
 				display:inline-block;

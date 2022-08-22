@@ -42,8 +42,9 @@
 																	<?php the_content(); ?>
 
 																	<?php lsx_to_entry_content_bottom(); ?>
-																	<button id="singlelink" class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates &amp; Prices</button>
+																
 																</div>
+																<button id="singlelink" class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates &amp; Prices</button>
 															</div>
 														</div>
 													</div>
