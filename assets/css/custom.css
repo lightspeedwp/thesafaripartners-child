@@ -3339,6 +3339,7 @@ width:100%;
 }
 
 @media (min-width: 767px) and (max-width:1200px){
+	.row{padding:0!important}
 	.gutenberg-compatible-template.using-gutenberg .entry-content>div{
 		max-width: 92%!important;
 		width: 92%!important;
@@ -3439,10 +3440,60 @@ width:100%;
 	.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9{width:100%!important;padding:0!important;}
 	.lsx-wizard-step .col-md-9 .col-sm-2, .lsx-wizard-step .col-md-9 .col-md-2{width:20%!important; float:left!important; }
 	.lsx-wizard-step .col-md-9 .col-sm-2 img, .lsx-wizard-step .col-md-9 .col-md-2 img{height:120px!important;}
+
+	.lsx-wizard .checkbox-wrapper>[type="checkbox"]+span {
+		border-radius: 50%!important;
+		display: inline-block;
+		position: relative;
+		z-index: -1;
+		align-content: end;
+		height: 30px;
+		float: right!important;
+		width: 30px;
+	}
+	
+	.lsx-wizard .checkbox-wrapper>[type="checkbox"] {
+		cursor: pointer;
+		border-radius: 50%;
+		height: 30px;
+		right: 0;
+		margin: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 100%!important;
+		z-index: 0;
+	}
+	.lsx-wizard .checkbox-wrapper {
+		position: relative!important;
+		display: block!important;
+		font-size: 14px;
+		border-radius: 50%;
+		top: 0px;
+		right: 0px;
+		height: 29px!important;
+		z-index: 9;
+		background: #fff!important;
+		width: 100%;
+	}
+	
+	 .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+		content:"\f00c";
+		font-family:FontAwesome;
+		top:-0.2px;
+		left:3px;
+		font-weight:100;
+		color:#ce9e57;
+		font-size:19px;
+	}
+	.checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
+		color:#ce9e57!important;
+	}
 }
 
 @media screen and (max-width:767px) {
 
+	.row{padding:0!important;}
 	.content.role.row{padding:0!important;}
 	.lsx-to-slider-inner .slick-arrow.slick-prev {
 		left:-10px;
@@ -3566,6 +3617,19 @@ width:100%;
     z-index: 9;
     background: #fff!important;
     width: 100%;
+}
+
+ .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+    content:"\f00c";
+    font-family:FontAwesome;
+    top:-0.2px;
+    left:3px;
+    font-weight:100;
+    color:#ce9e57;
+    font-size:19px;
+}
+.checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
+    color:#ce9e57!important;
 }
 .lsx-wizard img{display:none;}
 #travel-footer {
