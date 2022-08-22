@@ -437,6 +437,18 @@ legend {
 			padding-bottom:4px;
 			font-size:16px;
 	}
+	.single #fast-facts .lsx-to-meta-data{
+		align-items: normal!important;
+    flex-flow: nowrap!important;
+    justify-content: normal!important;
+		padding-top: 4px;
+		width: auto!important;
+		float: none!important;
+		padding-right: 10px!important;
+		display: block!important;
+	}
+	.single #Maps #fast-facts{margin-bottom:16px;}
+	.single #Maps .slider-container.lsx-to-widget-items{margin-top: -20px!important;}
 	.single .lsx-related-posts-wrapper .entry-layout-content .entry-image img {
 			object-fit:cover;
 			height:240px!important;
@@ -483,7 +495,7 @@ legend {
 	}
 	.single-lsx-to-tour .itenary .lsx-wizard-buttons-wrapper{display:none;}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview {
-			height:78vh!important;
+			height:81vh!important;
 	}
 	.single-lsx-to-tour .lsx-to-meta-data {
 		font-family:"moret",serif!important;
