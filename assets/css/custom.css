@@ -493,7 +493,7 @@ legend {
 			padding:0!important;
 			display:inline-block;
 	}
-	.single-lsx-to-tour .itenary .lsx-wizard-buttons-wrapper{display:none;}
+	.single-lsx-to-tour .itenary .lsx-wizard-buttons-wrapper{display:none!important;}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview {
 			height:81vh!important;
 	}
@@ -3022,7 +3022,7 @@ body.page-template-template-contact,body.page-template-template-wizard,body.sing
     padding: 0 0px;
     position: absolute;
     top: 64px;
-    right: 108px;
+    left: 53.5%;
     z-index: 99;
 }
 
