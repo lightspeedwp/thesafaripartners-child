@@ -1980,7 +1980,7 @@ legend {
 	}
 	.table-striped>tbody>tr:nth-of-type(odd){background-color: #f2edea!important;}
 	.table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td{padding: 6px;}
-	.table>thead>tr>th{background: white;
+	.table>thead>tr{background: white;
 		position: sticky;
 		top: 0;}
 	.archive .wrap.container {
@@ -2283,7 +2283,7 @@ legend {
 			font-size:14px;
 	}
 	.single-lsx-to-tour #Price .table>tbody>tr>td.book-now-wrapper{width:80px!important;}
-	.single-lsx-to-tour #Price .table>tbody>tr>td.park-fees{width:130px!important;}
+	.single-lsx-to-tour #Price .table>tbody>tr>td.park-fees{width:102px!important;}
 
 	.single-lsx-to-tour .nav-pills {
 			display:none!important;
