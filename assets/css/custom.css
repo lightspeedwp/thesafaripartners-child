@@ -3603,6 +3603,7 @@ height:200px;
     height: 30px;
     float: right!important;
     width: 30px;
+	border: 2px solid #000;
 }
 
 .lsx-wizard .checkbox-wrapper>[type="checkbox"] {
@@ -3631,13 +3632,14 @@ height:200px;
 }
 
  .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-    content:"\f00c";
-    font-family:FontAwesome;
-    top:-0.2px;
-    left:3px;
-    font-weight:100;
-    color:#ce9e57;
-    font-size:19px;
+	border-radius: 50%!important;
+    display: inline-block;
+    position: relative;
+    z-index: -1;
+    align-content: end;
+    height: 30px;
+    float: right!important;
+    width: 30px;
 	border: 2px solid #ce9e57;
 }
 .checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
