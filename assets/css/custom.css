@@ -1965,9 +1965,10 @@ legend {
 			width:100%!important;
 	}
 	#dates-prices {
-			height:350px;
-			max-height:350px;
+			height:310px;
+			max-height:310px;
 			overflow-y:scroll;
+			margin-bottom:16px;
 	}
 	#dates-prices .btn {
 			background-color:#a55244!important;
