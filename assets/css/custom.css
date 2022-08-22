@@ -2276,6 +2276,8 @@ legend {
 			padding:2px!important;
 			font-size:14px;
 	}
+	.single-lsx-to-tour #Price .table>tbody>tr>td.book-now-wrapper{width:80px!important;}
+
 	.single-lsx-to-tour .nav-pills {
 			display:none!important;
 	}
@@ -2376,8 +2378,8 @@ legend {
 		margin-top:0!important;
 	}
 	.single-lsx-to-tour #Price .lsx-single-contact {
-		width:41%!important;
-		margin-left:-22px!important;
+		width:42%!important;
+		margin-left:-20px!important;
 	}
 	.single-lsx-to-tour #Maps .lsx-to-tour-content {
 		padding-top:5vh!important;
@@ -2872,7 +2874,7 @@ legend {
 
 		.single-lsx-to-tour #Price .lsx-to-tour-content {
 			padding-top:3vh!important;
-			width:774px;
+			width:690px;
 			padding-left:10px!important;
 		}
 
