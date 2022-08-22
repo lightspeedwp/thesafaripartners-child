@@ -1978,6 +1978,7 @@ legend {
 			box-shadow:none;
 			padding:0px 8px!important;
 	}
+	.table-striped>tbody>tr:nth-of-type(odd){background-color: #f2edea!important;}
 	.archive .wrap.container {
 			width:100%!important;
 			margin:0 auto;
