@@ -2589,7 +2589,6 @@ legend {
 	.checkbox-wrapper {
 		position:absolute;
 		font-size:1rem;
-		border-radius:50%;
 		top:10px;
 		right:10px;
 		height:4rem;
@@ -3344,7 +3343,6 @@ height:200px;
         background:#fff;
         width:200px;
 }
-
 }
 
 @media (min-width: 767px) and (max-width:1200px){
@@ -3624,10 +3622,11 @@ height:200px;
     border-radius: 50%;
     top: 0px;
     right: 0px;
-    height: 29px!important;
+    height: 38px!important;
     z-index: 9;
     background: #fff!important;
     width: 100%;
+	border-bottom: 1px solid #ccc;
 }
 
  .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -3639,7 +3638,9 @@ height:200px;
     color: #ce9e57;
     font-size: 19px;
 }
-
+.wizard-when .travelwhen {
+    position: relative;
+    margin: 5px 0;}
 .checkbox-wrapper>[type="checkbox"]:checked+span {
     border: 2px solid #ce9e57!important;}
 
