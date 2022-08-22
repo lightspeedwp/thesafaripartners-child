@@ -1166,9 +1166,6 @@ legend {
 	.when-wiz {
 		margin-top:30px;
 	}
-	.page-template-template-wizard .wizard-who .status-publish {
-		height: 240px;
-	}
 	/*Content */
 	.archive.category .post {
 			width:32%;
@@ -3152,6 +3149,10 @@ height:200px;
     object-fit:cover;
 }
 
+.page-template-template-wizard .wizard-who .status-publish {
+	height: 240px;
+}
+
 #who-single .checkbox-wrapper {
 	position:absolute;
 	font-size:1rem;
@@ -3623,7 +3624,7 @@ height:200px;
     background: #fff!important;
     width: 100%;
 	border-bottom: 1px solid #ccc;
-	margin:5px 0!important;
+	margin:8px 0!important;
 }
 
  .checkbox-wrapper>[type="checkbox"]:checked+span::after {
@@ -3643,7 +3644,7 @@ height:200px;
 		font-size: 19px;
 		line-height: 22px;
 		letter-spacing: 1px;
-		margin-top: -30px;
+		margin-top: -44px;
 		display: inline-block;
 		position: absolute;
 		z-index: 99;
