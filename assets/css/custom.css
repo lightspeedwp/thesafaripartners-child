@@ -2598,7 +2598,6 @@ legend {
 	}
 	.checkbox-wrapper>[type="checkbox"] {
 		cursor:pointer;
-		border-radius:50%;
 		height:100%;
 		left:0;
 		margin:0;
@@ -3605,7 +3604,6 @@ height:200px;
 
 .lsx-wizard .checkbox-wrapper>[type="checkbox"] {
     cursor: pointer;
-    border-radius: 50%;
     height: 30px;
     right: 0;
     margin: 0;
