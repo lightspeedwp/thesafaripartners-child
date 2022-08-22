@@ -3595,15 +3595,13 @@ height:200px;
 .lsx-wizard .lsx-to-widget-thumb{display:none;}
 
 .lsx-wizard .checkbox-wrapper>[type="checkbox"]+span {
-    border-radius: 50%!important;
+	border-radius: 50%;
     display: inline-block;
     position: relative;
     z-index: -1;
-    align-content: end;
     height: 30px;
-    float: right!important;
     width: 30px;
-	border: 2px solid #000;
+    border: 2px solid #262423;
 }
 
 .lsx-wizard .checkbox-wrapper>[type="checkbox"] {
@@ -3632,15 +3630,13 @@ height:200px;
 }
 
  .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-	border-radius: 50%!important;
-    display: inline-block;
-    position: relative;
-    z-index: -1;
-    align-content: end;
-    height: 30px;
-    float: right!important;
-    width: 30px;
-	border: 2px solid #ce9e57;
+	content: "\f00c";
+    font-family: FontAwesome;
+    top: -0.2px;
+    left: 3px;
+    font-weight: 100;
+    color: #ce9e57;
+    font-size: 19px;
 }
 .checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
     color:#ce9e57!important;
