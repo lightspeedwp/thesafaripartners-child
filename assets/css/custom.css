@@ -1127,12 +1127,7 @@ legend {
 			display:inline-block;
 			width:auto;
 	}
-	.wizard-what .col-md-2,.wizard-who .col-md-2,.wizard-where .col-md-2 {
-			padding-right:3px;
-			padding-left:3px;
-			margin-bottom:8px;
-		height:240px;
-	}
+
 	.wizard-what .lsx-to-widget-thumb {
 			display:contents;
 			justify-content:center;
@@ -1146,29 +1141,7 @@ legend {
 		letter-spacing:1px;
 			padding:4px 8px 2PX;
 	}
-	.wizard-what .lsx-to-widget-thumb img {
-			overflow:hidden;
-			height:180px;
-			object-fit:cover;
-	}
-	.archive .wizard-who,.single .wizard-who {
-		height:200px;
-	}
-	.page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
-			overflow:hidden;
-			height:180px;
-			object-fit:cover;
-	}
-	.page-template-template-wizard .wizard-where .lsx-to-widget-thumb img {
-			overflow:hidden;
-			height:180px;
-			object-fit:cover;
-	}
-	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
-			overflow:hidden;
-			height:174px!important;
-			object-fit:cover;
-	}
+
 	.archive .lsx-wizard-progress-buttons {
 			width:100%!important;
 	}
@@ -1183,6 +1156,11 @@ legend {
 	.wizard-when .travelwhen {
 			position:relative;
 			margin:15px 0;
+	}
+
+	.lsx-wizard .lsx-to-widget-thumb img {
+		overflow:hidden;
+		object-fit:cover;
 	}
 
 	.when-wiz {
@@ -3145,6 +3123,37 @@ width:100%;
     margin:20px auto!important;
 }
 
+.wizard-what .col-md-2,.wizard-who .col-md-2,.wizard-where .col-md-2 {
+    padding-right:3px;
+    padding-left:3px;
+    margin-bottom:8px;
+height:240px;
+}
+
+.wizard-what .lsx-to-widget-thumb img {
+    overflow:hidden;
+    height:180px;
+    object-fit:cover;
+}
+.archive .wizard-who,.single .wizard-who {
+height:200px;
+}
+.page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
+    overflow:hidden;
+    height:180px;
+    object-fit:cover;
+}
+.page-template-template-wizard .wizard-where .lsx-to-widget-thumb img {
+    overflow:hidden;
+    height:180px;
+    object-fit:cover;
+}
+.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
+    overflow:hidden;
+    height:174px!important;
+    object-fit:cover;
+}
+
 #who-single .checkbox-wrapper {
 	position:absolute;
 	font-size:1rem;
@@ -3485,6 +3494,7 @@ width:100%;
 		font-weight:100;
 		color:#ce9e57;
 		font-size:19px;
+		border: 2px solid #ce9e57;
 	}
 	.checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
 		color:#ce9e57!important;
@@ -3493,8 +3503,8 @@ width:100%;
 
 @media screen and (max-width:767px) {
 
-	.row{padding:0!important;}
-	.content.role.row{padding:0!important;}
+	.row{margin:0!important;}
+	.content.role.row{margin:0!important;padding:0!important}
 	.lsx-to-slider-inner .slick-arrow.slick-prev {
 		left:-10px;
 		width:20px!important;
@@ -3582,6 +3592,7 @@ width:100%;
     height: 30px;
     line-height: 30px;}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {padding: 4px; border-bottom:1px solid #ccc;}
+.lsx-wizard .lsx-to-widget-thumb{display:none;}
 
 .lsx-wizard .checkbox-wrapper>[type="checkbox"]+span {
     border-radius: 50%!important;
@@ -3627,6 +3638,7 @@ width:100%;
     font-weight:100;
     color:#ce9e57;
     font-size:19px;
+	border: 2px solid #ce9e57;
 }
 .checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
     color:#ce9e57!important;
