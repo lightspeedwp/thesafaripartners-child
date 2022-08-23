@@ -3780,7 +3780,7 @@ h3 {
 				font-size: 0px;
 				font-weight: normal;}
 
-				.lsx-wizard .lsx-button.primary{font-size: 19px!important;background: #a55244!important;}
+				.lsx-wizard .lsx-wizard-buttons-wrapper .lsx-button.primary{font-size: 19px!important;background: #a55244!important;}
 
 				.lsx-wizard .lsx-wizard-button-next span:after {
 					background-image: url(img/tsp-see-more-arrow.svg);
