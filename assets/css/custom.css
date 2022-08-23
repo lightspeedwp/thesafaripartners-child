@@ -3793,8 +3793,13 @@ h3 {
 				}
 
 			.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9, .lsx-wizard-step .col-md-2{padding:0!important;}
-			.lsx-wizard-step label{font-size:19px;font-weight:normal!important;}
+			.lsx-wizard-step label{font-weight:normal!important;font-family: "moret",serif!important;
+				font-size: 19px;
+				line-height: 22px;
+				letter-spacing: 1px;}
 			.lsx-wizard .nav-justified>li.steps1{display:none;}
+			.lsx-wizard-progress-buttons {
+				width: 88%!important;}
 
 }
 
