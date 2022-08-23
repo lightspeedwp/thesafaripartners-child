@@ -4023,7 +4023,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background:#a55244!important;
    }
    #footer-sub{padding:24px 30px 150px!important;}
-   #footer-sub form, #footer-sub .gform_body{width:100%!important;}
+   #footer-sub form{width:100%!important;}
+   #footer-sub .gform_body{width:100%!important;}
    #footer-sub .gform_footer {
     margin: 0 auto!important;
     width: 100%!important;
