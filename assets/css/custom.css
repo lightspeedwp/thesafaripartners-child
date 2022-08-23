@@ -3857,7 +3857,7 @@ h3 {
 
 	#wizard .lsx-wizard-buttons-wrapper .btn, #wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next {
 				padding: 0;
-				background: #fff!important;
+				background: #fff;
 				border: none!important;
 				-webkit-box-shadow: none;
 				box-shadow: none;
