@@ -55,10 +55,10 @@ get_header(); ?>
 		if ( have_posts() ) {
 
 			$panels = array(
-				0 => array( 'who' ),
-				1 => array( 'where' ),
-				2 => array( 'when' ),
-				3 => array( 'budget' ),
+				0 => array( 'who' , '1' ),
+				1 => array( 'where' , '2' ),
+				2 => array( 'when' , '3' ),
+				3 => array( 'budget'  , '4'),
 			);
 			tsp_mini_wizard( $panels );
 

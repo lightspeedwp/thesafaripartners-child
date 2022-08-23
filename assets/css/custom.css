@@ -3853,6 +3853,8 @@ h3 {
     left: 35%;
     z-index: 99999;}	
 
+	.archive .wizard-where .col-sm-2{height:40px!important;}
+
 	#wizard .lsx-wizard-buttons-wrapper .btn, #wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next {
 				padding: 0;
 				background: #fff!important;
