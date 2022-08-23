@@ -3800,6 +3800,7 @@ h3 {
 			.lsx-wizard .nav-justified>li.steps1{display:none;}
 			.lsx-wizard-progress-buttons {
 				width: 88%!important;}
+			.wizard-when .wp-block-spacer{display:none;}
 
 }
 
