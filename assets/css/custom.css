@@ -3916,6 +3916,8 @@ h3 {
 						.archive #main{padding:0 15px!important;}
 						.archive #wizard .step-content .col-md-3 {
 							padding-right: 0px!important;}		
+							.archive .lsx-wizard .lsx-wizard-button-next.btn-success {
+								background: #a55244!important;}					
 
 }
 
