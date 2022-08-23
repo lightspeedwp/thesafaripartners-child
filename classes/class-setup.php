@@ -77,6 +77,10 @@ class Setup {
 				'filter-menu' => esc_html__( 'Filter Menu', 'thesafaripartners-child' ),
 			)
 		);
+
+		add_filter( 'facetwp_api_can_access', function( $boolean ) {
+			return current_user_can( 'manage_options' );
+		});
 	}
 
 	// Register Custom Taxonomy

@@ -12,7 +12,7 @@ function tsp_init_wizard() {
 }
 
 
-function tsp_mini_wizard( $panels = array() ) {
+function tsp_mini_wizard( $panels = array(), $args = array() ) {
 	if ( empty( $panels ) ) {
 		return;
 	}
@@ -43,13 +43,13 @@ function tsp_mini_wizard( $panels = array() ) {
 					echo '<div class="lsx-wizard-step ' . $active . '">';
 					echo wp_kses_post( '<h4>' . implode( '-', $panel ) . '</h4>' );
 					foreach ( $panel as $panel_content ) {
-						get_template_part( 'partials/mini-wizard', $panel_content );
+						get_template_part( 'partials/mini-wizard', $panel_content, $args );
 					}
 					echo '</div>';
 				} else {
 					echo '<div class="lsx-wizard-step ' . $active . '">';
 					echo wp_kses_post( '<h4>' . $panel . '</h4>' );
-					get_template_part( 'partials/mini-wizard', $panel );
+					get_template_part( 'partials/mini-wizard', $panel, $args );
 					echo '</div>';
 				}
 
@@ -61,6 +61,63 @@ function tsp_mini_wizard( $panels = array() ) {
 		</div>
 	</form>
 	<?php
+}
+
+function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() ) {
+	if ( empty( $query_args ) ) {
+		return;
+	}
+	$tours = new WP_Query( $query_args );
+	if ( $tours->have_posts() ) {
+		global $lsx_to_archive;
+		$lsx_to_archive = 1;
+
+		$selected = array();
+		if ( ! empty( $panel_args ) && isset( $panel_args['selected'] ) && ! empty( $panel_args['selected'] ) ) {
+			$selected = $panel_args['selected'];
+		}
+
+		?>
+		<div class="facetwp-hidden-filters hidden">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'filter-menu',
+				)
+			);
+			?>
+		</div>
+
+		<div class="tsp-seperator"></div>
+
+		<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
+			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+			<div class="lsx-to-slider-wrap">
+				<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
+					<?php
+					while ( $tours->have_posts() ) {
+						$tours->the_post();
+
+						if ( ! empty( $selected ) && in_array( get_the_ID(), $selected ) ) {
+							continue;
+						}
+						?>
+						<div class="<?php echo esc_attr( lsx_to_archive_class( 'lsx-to-widget-item-wrap lsx-tour' ) ); ?>">
+							<?php lsx_to_content( 'content-widget', 'tour' ); ?>
+						</div>
+						<?php
+					}
+					?>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<?php
+	} else {
+	get_template_part( 'partials/content', 'none' );
+	} 
+	wp_reset_query();
 }
 
 /**

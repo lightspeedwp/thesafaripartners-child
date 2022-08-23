@@ -14,7 +14,7 @@
 						<div class="col-md-5 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 									<picture>
-										<?php echo get_the_post_thumbnail( $page->ID, 'full' ); ?>
+										<?php echo get_the_post_thumbnail($page->ID, 'full' ); ?>
 									<picture>
 							
 
@@ -43,7 +43,7 @@
 													// Grab all of the row data
 													$rc_num  = 1;
 													$rc_data = array();
-													$btn_val = '';
+													$btn_val     = '';
 
 													do {
 
