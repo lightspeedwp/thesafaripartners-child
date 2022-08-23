@@ -3630,11 +3630,11 @@ height:200px;
  .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	content: "\f00c";
     font-family: FontAwesome;
-    top: -0.2px;
-    left: 3px;
+    top: -3.2px;
+    left: 2px;
     font-weight: 100;
     color: #ce9e57;
-    font-size: 19px;
+    font-size: 15px;
 }
 .wizard-when .travelwhen {
     position: relative;}
@@ -3764,11 +3764,11 @@ h3 {
 
 		.lsx-wizard-progress-buttons-wrapper {
 			position: absolute;
-			z-index: 1;
-			width: 569px;
-			margin: 4px auto -46px;
-			bottom: 40px;
-			right: 25%;}	
+    z-index: 1;
+    width: 33%;
+    bottom: 0;
+    left: 35%;
+    z-index: 99999;}	
 
 			.lsx-wizard .lsx-wizard-buttons-wrapper .btn, .lsx-wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next {
 				padding: 0;
@@ -3792,8 +3792,9 @@ h3 {
 					margin-left: 9px;
 				}
 
-			.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9{padding:0!important;}
-			.lsx-wizard-step label{font-size:19px;}
+			.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9, .lsx-wizard-step .col-md-2{padding:0!important;}
+			.lsx-wizard-step label{font-size:19px;font-weight:normal!important;}
+			.lsx-wizard .nav-justified>li.steps1{display:none;}
 
 }
 
