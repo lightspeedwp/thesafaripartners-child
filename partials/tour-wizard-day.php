@@ -64,6 +64,7 @@
 																					<div class="entry-content lsx-readmore">
 																						<?php lsx_to_itinerary_description(); ?>
 																					</div>
+																					<button id="singlelink" class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
 																				</div>
 
 																				
@@ -85,6 +86,10 @@
 
 												<?php lsx_to_itinerary_read_more(); ?>
 											</div>
+											
+
+
+											
 										</div>
 									</div>
 								<?php

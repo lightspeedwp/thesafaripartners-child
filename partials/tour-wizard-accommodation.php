@@ -34,7 +34,7 @@
 													<div class="col-xs-12 col-sm-12 col-md-6">
 														<div class="lsx-to-archive-wrapper">
 															<div class="lsx-to-tour-content">
-																<h3 class="lsx-to-archive-content-title"><?php the_title(); ?></h3>
+																<h2 class="lsx-to-archive-content-title"><?php the_title(); ?></h2>
 	
 																<div class="entry-content lsx-readmore">
 																	<?php lsx_to_entry_content_top(); ?>
@@ -42,7 +42,9 @@
 																	<?php the_content(); ?>
 
 																	<?php lsx_to_entry_content_bottom(); ?>
+																
 																</div>
+																<button id="singlelink" class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates &amp; Prices</button>
 															</div>
 														</div>
 													</div>

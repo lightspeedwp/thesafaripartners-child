@@ -20,11 +20,11 @@
 										$the_query->the_post();
 										?>
 										<div class="col-md-2 status-publish hentry destination">
-											<div class="lsx-to-widget-thumb">
-												<div class="checkbox-wrapper">
+										<div class="checkbox-wrapper">
 													<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 													<span aria-hidden="true"></span>
 												</div>
+											<div class="lsx-to-widget-thumb">
 												<?php lsx_thumbnail( 'lsx-block-post-grid-square' ); ?>
 											</div>
 

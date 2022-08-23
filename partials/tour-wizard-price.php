@@ -148,6 +148,7 @@
 											}
 										}
 									?>
+									<button  id="singlelink" class="tablinks" id="page-5" onclick="openCity(event, 'Maps')">Maps &amp; More</button>
 								</div>
 							</div>
 						</div>
