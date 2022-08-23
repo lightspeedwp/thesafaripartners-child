@@ -3877,6 +3877,17 @@ h3 {
 					margin-left: 9px;
 				}
 
+				.archive .lsx-wizard-progress-buttons-wrapper ul {
+					list-style: none;
+					counter-reset: my-awesome-counter;
+				  }
+				  .archive .lsx-wizard-progress-buttons-wrapper ul li {
+					counter-increment: my-awesome-counter;
+				  }
+				  .archive .lsx-wizard-progress-buttons-wrapper ul li::before {
+					content: counter(my-awesome-counter) ". ";
+				  }
+
 			.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9, .lsx-wizard-step .col-md-2, .lsx-wizard-step .col-xs-3{padding:0!important;width:100%!important;}
 			.lsx-wizard-step label{font-weight:normal!important;font-family: "moret",serif!important;
 				font-size: 19px;
