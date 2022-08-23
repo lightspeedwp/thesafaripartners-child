@@ -79,7 +79,7 @@ class Setup {
 		);
 
 		add_filter( 'facetwp_api_can_access', function( $boolean ) {
-			return current_user_can( 'manage_options' );
+			return true;
 		});
 	}
 
