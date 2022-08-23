@@ -3812,7 +3812,7 @@ h3 {
 					margin-left: 9px;
 				}
 
-			.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9, .lsx-wizard-step .col-md-2{padding:0!important;width:100%;}
+			.lsx-wizard-step .col-md-3, .lsx-wizard-step .col-md-9, .lsx-wizard-step .col-md-2, .lsx-wizard-step .col-xs-3{padding:0!important;width:100%!important;}
 			.lsx-wizard-step label{font-weight:normal!important;font-family: "moret",serif!important;
 				font-size: 19px;
 				line-height: 22px;
