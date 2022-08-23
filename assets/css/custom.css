@@ -3761,6 +3761,8 @@ h3 {
 		position: relative;
 		max-height: 100vh;
 		overflow: hidden;}
+
+		.lsx-wizard .lsx-wizard-step:first-of-type	{max-height:500px;margin-bottom:-50px;z-index:999;}
 }
 
 @media (min-width: 900px) and (max-width:1200px){
