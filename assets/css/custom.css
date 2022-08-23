@@ -3801,6 +3801,13 @@ h3 {
 			.lsx-wizard-progress-buttons {
 				width: 88%!important;}
 			.wizard-when .wp-block-spacer{display:none;}
+			.page-template-template-wizard .wizard-budget .col-md-2{text-align:left;}
+			.lsx-wizard .lsx-wizard-button-next.btn-success{background: #a55244!important;
+				padding: 6px 12px!important;
+				color: #fff!important;
+				border-radius: 0!important;font-size:17px!important;}
+				.lsx-wizard .lsx-wizard-buttons-wrapper.lsx-wizard-button-next.btn-success span:after {
+					background-image: url(img/tsp-see-more-arrow-white.svg);}
 
 }
 
