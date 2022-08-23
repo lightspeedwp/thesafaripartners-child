@@ -3770,7 +3770,7 @@ h3 {
 			bottom: 40px;
 			right: 25%;}	
 
-			.lsx-wizard-buttons-wrapper .btn, .page-template-template-wizard .lsx-wizard-button-next {
+			.lsx-wizard .lsx-wizard-buttons-wrapper .btn, .lsx-wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next {
 				padding: 0;
 				background: #fff!important;
 				border: none!important;
@@ -3780,9 +3780,9 @@ h3 {
 				font-size: 0px;
 				font-weight: normal;}
 
-				.lsx-wizard .lsx-wizard-buttons-wrapper .lsx-button.primary{font-size: 19px!important;background: #a55244!important;}
+				.lsx-wizard .wizardstart .lsx-button.primary{font-size: 19px!important;background: #a55244!important;}
 
-				.lsx-wizard .lsx-wizard-button-next span:after {
+				.lsx-wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next span:after {
 					background-image: url(img/tsp-see-more-arrow.svg);
 					background-size: 20px 20px;
 					display: inline-block;
