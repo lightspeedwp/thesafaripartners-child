@@ -3748,6 +3748,11 @@ h3 {
    margin-top: -52px;
    margin-bottom: -56px;
    padding: 0!important;}
+
+   .lsx-wizard .alignfull.wp-block-cover{    min-height: auto!important;}
+   .lsx-wizard .wp-container-3 .wp-container-1 .lsx-banner-column{display:none;}
+   .lsx-wizard .wizardstart{position:relative!important; right:0; margin: 0; padding: 0;}
+   .lsx-wizard .wizardstart h2{font-size:38px!important;}
 }
 
 @media (min-width: 900px) and (max-width:1200px){
