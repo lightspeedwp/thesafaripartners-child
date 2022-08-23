@@ -3831,6 +3831,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
 		margin-right:10px!important;
    }
+   #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-item-align-right{padding:0px!important;}
    #mega-menu-wrap-primary #mega-menu-primary{padding:0px!important;}
 	#masthead {
 		height:72px;
