@@ -3772,13 +3772,25 @@ h3 {
 
 			.lsx-wizard-buttons-wrapper .btn, .page-template-template-wizard .lsx-wizard-button-next {
 				padding: 0;
-				background: #fff;
+				background: #fff!important;
 				border: none!important;
 				-webkit-box-shadow: none;
 				box-shadow: none;
 				color: #262423;
 				font-size: 0px;
 				font-weight: normal;}
+
+				.lsx-wizard .lsx-button.primary{font-size: 19px!important;}
+
+				.lsx-wizard .lsx-wizard-button-next span:after {
+					background-image: url(img/tsp-see-more-arrow-white.svg);
+					background-size: 20px 20px;
+					display: inline-block;
+					width: 20px;
+					height: 16px;
+					content: "";
+					margin-left: 9px;
+				}
 
 }
 
