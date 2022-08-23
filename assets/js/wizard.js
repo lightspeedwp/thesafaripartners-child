@@ -874,12 +874,8 @@
 	function facetwp_tester() {
 		var request_data = {
 			'data': {
-			  'facets': {
-				'make': ['audi'],
-				'vehicle_type': []
-			  },
 			  'query_args': {
-				'post_type': 'cars',
+				'post_type': 'tour',
 				'posts_per_page': 4,
 				'paged': 1
 			  }
