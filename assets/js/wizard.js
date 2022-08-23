@@ -871,8 +871,36 @@
 		}
 	};
 
+	function facetwp_tester() {
+		var request_data = {
+			'data': {
+			  'facets': {
+				'make': ['audi'],
+				'vehicle_type': []
+			  },
+			  'query_args': {
+				'post_type': 'cars',
+				'posts_per_page': 4,
+				'paged': 1
+			  }
+			}
+		  };
+		  var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/facetwp/v1/fetch', {
+			'method': 'POST',
+			'headers': {
+			  'Content-Type': 'application/json',
+			  'Authorization': 'Basic ' + btoa('lightspeed:d3vonstr@@t46') // base64-encoded
+			},
+			'body': JSON.stringify(request_data)
+		  })
+		  .then(response => response.json())
+		  .then(result => console.log(result));
+	}
+
 	$(document).ready(function () {
 		$("#wizard").lsxWizard();
+
+		facetwp_tester();
 	});
 
 })( jQuery, window, document );
