@@ -3905,11 +3905,17 @@ h3 {
 				#wizard .lsx-wizard-buttons-wrapper.lsx-wizard-button-next.btn-success span:after {
 					background-image: url(img/tsp-see-more-arrow-white.svg);}
 
+					.archive #wizard .wizard-who .lsx-to-content {
+						padding-top: 0!important;}
+
 					.mega-toggle-block.mega-search-block{display:none!important;}
 					#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135956 .mega-search-wrap{margin:35px 20px!important;width: 92%!important;}
 					#mega-menu-wrap-primary .mega-search-wrap form{border: 1px solid #ccc;
 						padding-top: 8px!important;
-						line-height: 35px!important;}			
+						line-height: 35px!important;}	
+						.archive #main{padding:0 15px!important;}
+						.archive #wizard .step-content .col-md-3 {
+							padding-right: 0px!important;}		
 
 }
 
