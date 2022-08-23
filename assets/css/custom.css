@@ -3836,22 +3836,30 @@ h3 {
    .lsx-wizard .wp-container-3 .wp-container-1 .lsx-banner-column{display:none;}
    .lsx-wizard .wizardstart{position:relative!important; right:0; margin: 30px 0 0; padding: 0;}
    .lsx-wizard .wizardstart h2{font-size:32px!important;}
-   .page-template-template-wizar .post-134126{    height: 102vh;
+   .page-template-template-wizard .post-134126{    height: 102vh;
     overflow: hidden;
     scroll-behavior: inherit;}
 
-	.page-template-template-wizar .lsx-wizard {
+	.page-template-template-wizard .lsx-wizard {
 		position: relative;
 		max-height: 100vh;
 		overflow: hidden;}
 
-		.page-template-template-wizar .lsx-wizard-progress-buttons-wrapper {
+		.page-template-template-wizard .lsx-wizard-progress-buttons-wrapper {
 			position: absolute;
     z-index: 1;
     width: 33%;
     bottom: 0;
     left: 35%;
     z-index: 99999;}	
+
+	.archive .lsx-wizard-progress-buttons-wrapper {
+		position: absolute;
+z-index: 1;
+width: 33%;
+bottom: 0;
+left: 35%;
+z-index: 99999;}
 
 	.archive .wizard-where .col-sm-2{height:40px!important;}
 
@@ -3893,7 +3901,7 @@ h3 {
 				font-size: 19px;
 				line-height: 22px;
 				letter-spacing: 1px;}
-				#wizard  .nav-justified>li.steps1{display:none!important}
+				.page-template-template-wizard .nav-justified>li.steps1{display:none!important}
 			.lsx-wizard-progress-buttons {
 				width: 88%!important;}
 			.wizard-when .wp-block-spacer{display:none;}
@@ -3908,6 +3916,11 @@ h3 {
 					.archive #wizard .wizard-who .lsx-to-content {
 						padding-top: 0!important;}
 
+						.archive h2.h2larger {
+							font-size: 36px!important;
+							width: 90%!important;
+							margin: 4px auto 4px;}
+							.archive .lsx-wizard-progress-buttons-wrapper ul li a{display:none;}
 					.mega-toggle-block.mega-search-block{display:none!important;}
 					#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-135956 .mega-search-wrap{margin:35px 20px!important;width: 92%!important;}
 					#mega-menu-wrap-primary .mega-search-wrap form{border: 1px solid #ccc;
