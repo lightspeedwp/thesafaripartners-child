@@ -165,7 +165,7 @@ class Frontend {
 		add_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ), 10, 2 );
 
 		// Rest Functions
-		add_filter( 'rest_prepare_post', array( $this, 'add_tour_archive_template_to_rest' ), 10, 2 );
+		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 2 );
 	}
 
 	/**
@@ -308,11 +308,11 @@ class Frontend {
 	}
 
 	/**
-	 * Undocumented function
+	 * Adds the archive template to the pages.
 	 *
-	 * @param [type] $response
-	 * @param [type] $post
-	 * @return void
+	 * @param object $response /WP_REST_Response
+	 * @param object $post WP_Post
+	 * @return object
 	 */
 	public function add_tour_archive_template_to_rest( $response, $post ) {
 		if ( isset( $response->data['post_type'] ) && 'tour' === $response->data['post_type'] ) {

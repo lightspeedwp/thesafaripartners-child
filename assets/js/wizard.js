@@ -343,9 +343,6 @@
 	}
 
 	function submitMiniWizard( selectedCheckboxes ) {
-
-		console.log(selectedCheckboxes);
-
 		if( typeof FWP === 'undefined' ) {
 			return '';
 		}
@@ -355,64 +352,51 @@
 			'posts_per_page': -1,
 			'paged': 1
 		};
-		let facets    = [];
+		let facets    = {};
 
-		let what = [];
-		let who = [];
-		let where = [];
-		let when = [];
-		let budget = [];
+		facets.what = {};
+		facets.who = {};
+		facets.where = {};
+		facets.when = {};
+		facets.budget = {};
 
 		selectedCheckboxes.forEach(function (value, index, array) {
 
 			switch(value.name) {
 				case 'fwp_who':
-					who.push(value.id);
+					facets.who[index] = value.id;
 					break;
 				case 'fwp_what':
-					what.push(value.id);
+					facets.what[index] = value.id;
 					break;
 				case 'fwp_where':
-					where.push(value.id);
+					facets.where[index] = value.id;
 					break;
 				case 'fwp_when':
-					when.push(value.id);
+					facets.when[index] = value.id;
 					break;
 				case 'fwp_budget':
-					budget.push(value.id);
+					facets.budget[index] = value.id;
 					break;
 				default:
 					// code block
 			}
 		});
 
-		if ( 0 < who.length ) {
-			facets['who'] = who;
-		}
-		if ( 0 < what.length ) {
-			facets['what'] = what;
-		}
-		if ( 0 < where.length ) {
-			facets['where'] = where;
-		}
-		if ( 0 < when.length ) {
-			facets['when'] = when;
-		}
-		if ( 0 < budget.length ) {
-			facets['budget'] = budget;
-		}
-
-		fetchSearchData( queryArgs, facets );
+		let searchResults = fetchSearchData( queryArgs, facets );
+		console.log(searchResults);
 
 		$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
-			//$(this).slick('unslick');
+			$(this).slick('unslick');
 		});
 	}
 
 	function fetchSearchData( queryArgs, facets ) {
+		var returnResults = false;
+
 		var request_data = {
 			'data': {
-				'facets': JSON.stringify(facets),
+				'facets': facets,
 				'query_args': queryArgs
 			}
 		};
@@ -426,7 +410,14 @@
 			'body': JSON.stringify(request_data)
 		  })
 		  .then(response => response.json())
-		  .then(result => console.log(result));
+		  .then( function(result) {
+			if ( undefined !== result && 0 < result.results.length ) {
+				returnResults = result.results;
+			}
+			return returnResults;
+		  });
+
+		  return returnResults;
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
