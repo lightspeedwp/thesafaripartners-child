@@ -4105,7 +4105,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			background: #fff;
 			width: 100%;
 			padding-top: 12%;
-			margin-top: -58px;}
+			margin-top: 0px;}
 			.page-template-template-contact .lsx-contact-module{min-height: 450px;
 				height: auto;
 				width: 100%;
@@ -4136,6 +4136,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			max-width: 100%;
 			display: block!important;
 		}
+		.page-template-template-contact .tab{display:none;}
 		.page-template-template-contact .contact-135619 .lsx-contact-module-image {
 			display: block!important;
 		}
