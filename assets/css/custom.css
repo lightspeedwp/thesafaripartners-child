@@ -1016,6 +1016,7 @@ th {
 	margin-bottom:10px;
 }
 .lsx-wizard-buttons-wrapper .btn {
+	font-family: "moret",serif!important;
 	padding:0;
 	background:#fff;
 	border:none!important;
@@ -3108,7 +3109,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.wizard-what .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:180px;
+		height:168px;
 		object-fit:cover;
    }
 	.archive .wizard-who,.single .wizard-who {
@@ -3116,12 +3117,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:180px;
+		height:168px;
 		object-fit:cover;
    }
 	.page-template-template-wizard .wizard-where .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:180px;
+		height:168px;
 		object-fit:cover;
    }
 	.wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
@@ -3130,7 +3131,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		object-fit:cover;
    }
 	.page-template-template-wizard .wizard-who .status-publish {
-		height:240px;
+		height:180px;
    }
 	#who-single .checkbox-wrapper {
 		position:absolute;
@@ -3164,11 +3165,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-size:0px;
    }
 	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-		border:1px solid #ce9e57;
-		width:142px;
-		height:240px;
-		margin-left:0;
-		padding-top:6px;
+		border: 1px solid #ce9e57;
+		width: 143px;
+		height: 208px;
+		margin-left: 0px;
+		padding-left: 120px;
+		padding-top: 6px;
    }
 	.wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		content:"\f00c";
@@ -3180,12 +3182,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-size:0px;
    }
 	.page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-		border:1px solid #ce9e57;
-		width:141px;
-		height:236px;
-		margin-left:0px;
-		padding-left:117px;
-		padding-top:6px;
+		border: 1px solid #ce9e57;
+		width: 143px;
+		height: 208px;
+		margin-left: 0px;
+		padding-left: 120px;
+		padding-top: 6px;
    }
 	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		content:"\f00c";
@@ -3197,12 +3199,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-size:0px;
    }
 	.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-		border:1px solid #ce9e57;
-		width:141px;
-		height:228px;
-		margin-left:0px;
-		padding-left:117px;
-		padding-top:6px;
+		border: 1px solid #ce9e57;
+		width: 143px;
+		height: 208px;
+		margin-left: 0px;
+		padding-left: 120px;
+		padding-top: 6px;
    }
 	.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border:1px solid #ce9e57;
