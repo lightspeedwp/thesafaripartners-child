@@ -439,6 +439,7 @@
 		for (var i = 0; i < arrayLength; i++) {
 			sliderHTML += tours[i].search_results;
 		}
+		console.log($('.slider-container.mini-wizard-results .lsx-to-slider-inner'));
 		$('.slider-container.mini-wizard-results .lsx-to-slider-inner').html(sliderHTML);
 	}
 
