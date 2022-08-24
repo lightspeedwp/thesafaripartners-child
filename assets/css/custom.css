@@ -3524,14 +3524,20 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     gap: 2em;
     width: 49%;
     margin-left: 8%;}
-	.page-template-template-contact .contact-133993 .lsx-contact-module{height:450px; background:#fff;z-index:99!important;width: 100%;
-		padding-top: 10%;}
+	.page-template-template-contact .contact-133993 .lsx-contact-module{height: 450px;
+		background: #fff;
+		width: 100%;
+		padding-top: 10%;
+		margin-top: -26px;}
 		.page-template-template-contact .lsx-contact-module{height:450px; width: 100%;
 			padding-top: 10%;}
-	.page-template-template-contact .contact-133993 .lsx-contact-module .col-md-6{padding:0!important;}
+	.page-template-template-contact .contact-133993 .col-md-6{padding:0!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module h3{font-size:20px!important;}
 	.page-template-template-contact .contact-134234 .lsx-contact-module{padding:10% 14% 0!important;}
 	.page-template-template-contact .contact-134234 .lsx-contact-module-image{display:none;}
+	.page-template-template-contact .contact-134309 .lsx-contact-module{padding:10% 14% 0!important;}
+	.page-template-template-contact .contact-134309 .lsx-contact-module-image{display:none;}
+	.page-template-template-contact .contact-134067 .lsx-contact-module-image{display:none;}
 	.page-template-template-contact .tab {
 		position: absolute;
 		left: 20px;
