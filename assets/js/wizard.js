@@ -350,6 +350,13 @@
 			return '';
 		}
 
+		let queryArgs = {
+			'post_type': 'tour',
+			'posts_per_page': -1,
+			'paged': 1
+		};
+		let facets    = [];
+
 		let what = [];
 		let who = [];
 		let where = [];
@@ -380,30 +387,46 @@
 		});
 
 		if ( 0 < who.length ) {
-			FWP.facets['who'] = who;
+			facets['who'] = who;
 		}
-
 		if ( 0 < what.length ) {
-			FWP.facets['what'] = what;
+			facets['what'] = what;
 		}
-
 		if ( 0 < where.length ) {
-			FWP.facets['where'] = where;
+			facets['where'] = where;
 		}
-
 		if ( 0 < when.length ) {
-			FWP.facets['when'] = when;
+			facets['when'] = when;
+		}
+		if ( 0 < budget.length ) {
+			facets['budget'] = budget;
 		}
 
-		if ( 0 < budget.length ) {
-			FWP.facets['budget'] = budget;
-		}
+		fetchSearchData( queryArgs, facets );
 
 		$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
-			$(this).slick('unslick');
+			//$(this).slick('unslick');
 		});
+	}
 
-		FWP.fetchData();
+	function fetchSearchData( queryArgs, facets ) {
+		var request_data = {
+			'data': {
+				'facets': facets,
+				'query_args': queryArgs
+			}
+		};
+		console.log(request_data);
+		  var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/facetwp/v1/fetch', {
+			'method': 'POST',
+			'headers': {
+			  'Content-Type': 'application/json',
+			  'Authorization': 'Basic ' + btoa('lightspeed:d3vonstr@@t46') // base64-encoded
+			},
+			'body': JSON.stringify(request_data)
+		  })
+		  .then(response => response.json())
+		  .then(result => console.log(result));
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
@@ -871,27 +894,6 @@
 		}
 	};
 
-	function facetwp_tester() {
-		var request_data = {
-			'data': {
-			  'query_args': {
-				'post_type': 'tour',
-				'posts_per_page': 4,
-				'paged': 1
-			  }
-			}
-		  };
-		  var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/facetwp/v1/fetch', {
-			'method': 'POST',
-			'headers': {
-			  'Content-Type': 'application/json',
-			  'Authorization': 'Basic ' + btoa('lightspeed:d3vonstr@@t46') // base64-encoded
-			},
-			'body': JSON.stringify(request_data)
-		  })
-		  .then(response => response.json())
-		  .then(result => console.log(result));
-	}
 
 	$(document).ready(function () {
 		$("#wizard").lsxWizard();
