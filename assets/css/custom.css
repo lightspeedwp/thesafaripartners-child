@@ -1688,14 +1688,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .page-template-template-contact .contact-135619 .lsx-contact-module-image {
 	display:block!important;
 }
-.page-template-template-contact .lsx-contact-module-image iframe {
-	display:none!important;
-}
 .page-template-template-contact .lsx-contact-module .wp-block-column {
 	position:relative;
 }
 .page-template-template-contact #page-134234,.page-template-template-contact #page-134309,.page-template-template-contact #page-133993 {
 	display:none;
+}
+.page-template-template-contact .lsx-contact-module-image iframe {
+	display:none!important;
 }
 .safari-styles .lsx-to-widget-title {
 	text-align:left;
@@ -3320,6 +3320,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {
 		padding:0!important 
    }
+   .page-template-template-contact .dropdown{display:none;}
 	.gutenberg-compatible-template.using-gutenberg .entry-content>div {
 		max-width:92%!important;
 		width:92%!important;
@@ -3524,14 +3525,22 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     gap: 2em;
     width: 49%;
     margin-left: 8%;}
-	.page-template-template-contact .contact-133993 .lsx-contact-module{height:450px; background:#fff;z-index:99!important;width: 100%;
-		padding-top: 10%;}
-		.page-template-template-contact .lsx-contact-module{height:450px; width: 100%;
+	.page-template-template-contact .contact-133993 .lsx-contact-module{height: 450px;
+		background: #fff;
+		width: 100%;
+		padding-top: 10%;
+		margin-top: -26px;}
+		.page-template-template-contact .lsx-contact-module{min-height: 450px;
+			height: auto;
+			width: 100%;
 			padding-top: 10%;}
-	.page-template-template-contact .contact-133993 .lsx-contact-module .col-md-6{padding:0!important;}
+	.page-template-template-contact .contact-133993 .col-md-6{padding:0!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module h3{font-size:20px!important;}
 	.page-template-template-contact .contact-134234 .lsx-contact-module{padding:10% 14% 0!important;}
 	.page-template-template-contact .contact-134234 .lsx-contact-module-image{display:none;}
+	.page-template-template-contact .contact-134309 .lsx-contact-module{padding:10% 14% 0!important;}
+	.page-template-template-contact .contact-134309 .lsx-contact-module-image{display:none;}
+	.page-template-template-contact .contact-134067 .lsx-contact-module-image{display:none;}
 	.page-template-template-contact .tab {
 		position: absolute;
 		left: 20px;
@@ -3543,6 +3552,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width: 100%;
 		max-height: 50vh;
 	}
+
+	.page-template-template-contact .contact-135619 .lsx-contact-module-image iframe {
+		height: 50vh;
+		max-height: 100%;
+		width: 100%;
+		max-width: 100%;
+		display: block!important;
+	}
+	.page-template-template-contact .contact-135619 .lsx-contact-module-image {
+		display: block!important;
+	}
+	.page-template-template-contact .dropdown{display:none;}
 }
 @media screen and (max-width:767px) {
 	.row {
@@ -3850,7 +3871,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:absolute;
 		right:0px;
 		top:18px;
-		z-index:999;
+		z-index:9;
 		width:100%;
    }
 	#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
@@ -4056,6 +4077,72 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     margin: 0 auto!important;
     width: 100%!important;
     float: none;}
+
+	.page-template-template-contact .wp-container-32{
+		display: inline-block;
+    gap: 2em;
+    width: 100%;
+    padding-left: 10px;}
+	   .page-template-template-contact .wp-container-27{
+		display: inline-block;
+    gap: 2em;
+    width: 100%;
+    padding-left: 10px;}
+	.page-template-template-contact .contact-133993  .wp-container-27 .wp-block-column {
+		width: 32%!important;
+		margin: 0;
+		padding: 0 2px!important;
+		display: inline-flex;}
+		.page-template-template-contact .contact-133993  .wp-container-32 .contact-left, .page-template-template-contact .contact-133993  .wp-container-32 .contact-right {
+			width: 38%!important;
+			margin: 0;
+			padding: 0 2px!important;
+			display: inline-flex;}
+			.page-template-template-contact .contact-133993 .wp-block-column{width: auto!important;}
+			.page-template-template-contact .contact-133993  .wp-container-32 .wp-container-30 {
+				display: block!important;}
+		.page-template-template-contact .contact-133993 .lsx-contact-module{height: 450px;
+			background: #fff;
+			width: 100%;
+			padding-top: 12%;
+			margin-top: 0px;}
+			.page-template-template-contact .lsx-contact-module{min-height: 450px;
+				height: auto;
+				width: 100%;
+				padding-top: 10%;}
+		.page-template-template-contact .contact-133993 .col-md-6{padding:0!important;}
+		.page-template-template-contact .contact-133993 .lsx-contact-module h3{font-size:20px!important;}
+		.page-template-template-contact .contact-134234 .lsx-contact-module{padding:10% 14% 0!important;}
+		.page-template-template-contact .contact-134234 .lsx-contact-module-image{display:none;}
+		.page-template-template-contact .contact-134309 .lsx-contact-module{padding:10% 14% 0!important;}
+		.page-template-template-contact .contact-134309 .lsx-contact-module-image{display:none;}
+		.page-template-template-contact .contact-134067 .lsx-contact-module-image{display:none;}
+		.page-template-template-contact .tab {
+			position: absolute;
+			left: 20px;
+			z-index: 9;}
+	
+		.page-template-template-contact .lsx-contact-module-image img {
+			object-fit: cover;
+			height: 50vh!important;
+			width: 100%;
+			max-height: 50vh;
+		}
+	
+		.page-template-template-contact .contact-135619 .lsx-contact-module-image iframe {
+			height: 50vh;
+			max-height: 100%;
+			width: 100%;
+			max-width: 100%;
+			display: block!important;
+		}
+		.page-template-template-contact .tab{display:none;}
+		.page-template-template-contact .contact-135619 .lsx-contact-module-image {
+			display: block!important;
+		}
+
+		  .page-template-default .col-sm-12{padding:0!important;}
+		  .page-template-default .entry-content>div:not(:first-of-type){padding:0 15px;}
 }
 @media (min-width:900px) and (max-width:1200px) {
 	body.single-lsx-to-tour {
