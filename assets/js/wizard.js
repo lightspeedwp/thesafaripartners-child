@@ -435,11 +435,11 @@
 
 	function replaceSliders( tours ) {
 		let sliderHTML = '';
-		$.tours.each(function(){
-			console.log($(this));
-			sliderHTML += $(this).attr('search_results');
-		});
-		console.log(sliderHTML);
+		let arrayLength = tours.length;
+		for (var i = 0; i < arrayLength; i++) {
+			sliderHTML += tours[i].search_results;
+		}
+		$('.slider-container.mini-wizard-results .lsx-to-slider-inner').html(sliderHTML);
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
