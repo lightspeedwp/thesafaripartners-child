@@ -3628,7 +3628,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	#masthead .navbar-header .custom-logo-link>img {
 		margin:1px 0;
-		z-index:99;
+		z-index:9;
    }
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848>a.mega-menu-link:before {
 		background-size:14px 14px;
@@ -3825,12 +3825,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:absolute;
 		right:0px;
 		top:18px;
-		z-index:9;
+		z-index:999;
 		width:100%;
    }
 	#mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
-		margin-right:20px!important;
+		margin-right:10px!important;
    }
+   #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-item-align-right{padding:0px!important;}
+   #mega-menu-wrap-primary #mega-menu-primary{padding:0px!important;}
 	#masthead {
 		height:72px;
    }
@@ -4023,7 +4025,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background:#a55244!important;
    }
    #footer-sub{padding:24px 30px 150px!important;}
-   #footer-sub form, #footer-sub .gform_body{width:100%!important;}
+   #footer-sub form{width:100%!important;}
+   #footer-sub .gform_body{width:100%!important;}
    #footer-sub .gform_footer {
     margin: 0 auto!important;
     width: 100%!important;
