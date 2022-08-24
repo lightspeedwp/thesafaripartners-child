@@ -383,8 +383,7 @@
 			}
 		});
 
-		let searchResults = fetchSearchData( queryArgs, facets );
-		console.log(searchResults);
+		fetchSearchData( queryArgs, facets );
 
 		$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
 			$(this).slick('unslick');
@@ -392,8 +391,6 @@
 	}
 
 	function fetchSearchData( queryArgs, facets ) {
-		var returnResults = false;
-
 		var request_data = {
 			'data': {
 				'facets': facets,
@@ -413,12 +410,24 @@
 		  .then( function(result) {
 			console.log(result);
 			if ( undefined !== result && 0 < result.results.length ) {
-				returnResults = result.results;
+				populateSearchResultsSlider( result.results );
 			}
-			return returnResults;
 		  });
+	}
 
-		  return returnResults;
+	function populateSearchResultsSlider( results ) {
+		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?include='+results.join(','), {
+			'method': 'GET',
+			'headers': {
+			  'Content-Type': 'application/json',
+			  'Authorization': 'Basic ' + btoa('lightspeed:d3vonstr@@t46') // base64-encoded
+			}
+		  })
+		  .then(response => response.json())
+		  .then( function(result) {
+			console.log('Search Result');
+			console.log(result);
+		  });
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
