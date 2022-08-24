@@ -3005,7 +3005,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:100%;
 		max-width:432px!important;
 		position:absolute;
-		right:20%!important;
+		right:15%!important;
 		z-index:4;
 		padding-top:16%;
    }
@@ -3515,6 +3515,23 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
 		color:#ce9e57!important;
    }
+
+   .page-template-template-contact .wp-container-32{
+	display: inline-flex!important;
+    gap: 2em;
+    width: 42%;}
+   .page-template-template-contact .wp-container-27{display: inline-flex!important;
+    gap: 2em;
+    width: 49%;
+    margin-left: 8%;}
+	.page-template-template-contact .contact-133993 .lsx-contact-module{height:450px; background:#fff;z-index:99;}
+
+	.page-template-template-contact .lsx-contact-module-image img {
+		object-fit: cover;
+		height: 50vh!important;
+		width: 100%;
+		max-height: 50vh;
+	}
 }
 @media screen and (max-width:767px) {
 	.row {
@@ -3613,8 +3630,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
 		font-size:16px!important;
 		text-align:left;
-		height:30px;
-		line-height:30px;
+		height:40px;
+		line-height:42px;
    }
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item {
 		padding:4px;
@@ -3635,10 +3652,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:14x;
 		height:14x;
 		line-height:14px;
-		margin:7px 20px 0px -20px!important;
-   }
-	.lsx-to-widget-thumb {
-		display:none;
+		margin:12px 20px 0px -20px!important;
    }
 	.archive .wizard-who,.archive .wizard-what,.archive .wizard-where,.archive .wizard-budget {
 		display:block!important;
