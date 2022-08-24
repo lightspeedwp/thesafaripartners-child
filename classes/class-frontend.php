@@ -163,6 +163,9 @@ class Frontend {
 		add_filter( 'gform_pre_submission_filter_4', array( $this, 'populate_prices_dropdown' ) );
 
 		add_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ), 10, 2 );
+
+		// Rest Functions
+		add_filter( 'rest_prepare_post', array( $this, 'add_tour_archive_template_to_rest' ), 10, 2 );
 	}
 
 	/**
@@ -302,5 +305,28 @@ class Frontend {
 		}
 	 
 		return $form;
+	}
+
+	/**
+	 * Undocumented function
+	 *
+	 * @param [type] $response
+	 * @param [type] $post
+	 * @return void
+	 */
+	public function add_tour_archive_template_to_rest( $response, $post ) {
+		if ( isset( $response['post_type'] ) && 'tour' === $response['post_type'] ) {
+			$response->data['search_results'] = '';
+
+			ob_start();
+			setup_postdata( $post );
+			echo '<div class="' . lsx_to_archive_class( 'lsx-to-widget-item-wrap lsx-tour' ). '">';
+			lsx_to_content( 'content-widget', 'tour' );
+			echo '</div>';
+			wp_reset_postdata();
+			$contents = ob_get_clean();
+			$response->data['search_results'] = $contents;
+		}
+		return $response;
 	}
 }
