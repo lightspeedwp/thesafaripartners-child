@@ -4077,18 +4077,30 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     float: none;}
 
 	.page-template-template-contact .wp-container-32{
-		display: inline-flex!important;
-		gap: 2em;
-		width: 100%;}
-	   .page-template-template-contact .wp-container-27{display: inline-flex!important;
-		gap: 2em;
-		width: 100%;
-		margin-left: 15px;}
+		display: inline-block;
+    gap: 2em;
+    width: 100%;
+    padding-left: 10px;}
+	   .page-template-template-contact .wp-container-27{
+		display: inline-block;
+    gap: 2em;
+    width: 100%;
+    padding-left: 10px;}
+	.page-template-template-contact .contact-133993  .wp-container-27 .wp-block-column {
+		width: 32%!important;
+		margin: 0;
+		padding: 0 2px!important;
+		display: inline-flex;}
+		.page-template-template-contact .contact-133993  .wp-container-32 .wp-block-column {
+			width: 48%!important;
+			margin: 0;
+			padding: 0 2px!important;
+			display: inline-flex;}
 		.page-template-template-contact .contact-133993 .lsx-contact-module{height: 450px;
 			background: #fff;
 			width: 100%;
 			padding-top: 10%;
-			margin-top: -26px;}
+			margin-top: -32px;}
 			.page-template-template-contact .lsx-contact-module{min-height: 450px;
 				height: auto;
 				width: 100%;
