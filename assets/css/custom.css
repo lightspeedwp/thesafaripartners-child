@@ -4092,10 +4092,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding: 0 2px!important;
 		display: inline-flex;}
 		.page-template-template-contact .contact-133993  .wp-container-32 .contact-left, .page-template-template-contact .contact-133993  .wp-container-32 .contact-right {
-			width: 48%!important;
+			width: 38%!important;
 			margin: 0;
 			padding: 0 2px!important;
 			display: inline-flex;}
+			.page-template-template-contact .contact-133993 .wp-block-column{width:auto;}
+			.page-template-template-contact .contact-133993  .wp-container-32 .wp-container-30 {
+				display: block!important;}
 		.page-template-template-contact .contact-133993 .lsx-contact-module{height: 450px;
 			background: #fff;
 			width: 100%;
