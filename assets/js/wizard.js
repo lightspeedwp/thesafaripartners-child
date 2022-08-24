@@ -412,7 +412,7 @@
 	function fetchSearchData( queryArgs, facets ) {
 		var request_data = {
 			'data': {
-				'facets': facets,
+				'facets': JSON.stringify(facets),
 				'query_args': queryArgs
 			}
 		};
