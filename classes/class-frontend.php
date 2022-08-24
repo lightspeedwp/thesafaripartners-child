@@ -315,7 +315,7 @@ class Frontend {
 	 * @return void
 	 */
 	public function add_tour_archive_template_to_rest( $response, $post ) {
-		if ( isset( $response['post_type'] ) && 'tour' === $response['post_type'] ) {
+		if ( isset( $response->data['post_type'] ) && 'tour' === $response->data['post_type'] ) {
 			$response->data['search_results'] = '';
 
 			ob_start();
