@@ -427,7 +427,19 @@
 		  .then( function(result) {
 			console.log('Search Result');
 			console.log(result);
+			if ( undefined !== result && 0 < result.length ) {
+				replaceSliders( result );
+			}
 		  });
+	}
+
+	function replaceSliders( tours ) {
+		let sliderHTML = '';
+		$.tours.each(function(){
+			console.log($(this));
+			sliderHTML += $(this).attr('search_results');
+		});
+		console.log(sliderHTML);
 	}
 
 	function submitInspireWizard( selectedCheckboxes ) {
