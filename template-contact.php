@@ -29,6 +29,12 @@ get_header(); ?>
     				if ( ! $content ) // Check for empty page
         		continue;
     				$content = apply_filters( 'the_content', $content );?>
+							<div class="dropdown">
+  								<button class="dropbtn">Contact Menu</button>
+  									<div class="dropdown-content">
+									  <a class="dropdownlinks" id="page-<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></a>
+  									</div>
+							</div>
 
 							<button class="tablinks" id="page-<?php echo $page->ID; ?>" onclick="openCity(event, '<?php echo $page->post_title; ?>')"><?php echo $page->post_title; ?></button>
 								<?php } ?>
