@@ -411,6 +411,7 @@
 		  })
 		  .then(response => response.json())
 		  .then( function(result) {
+			console.log(result);
 			if ( undefined !== result && 0 < result.results.length ) {
 				returnResults = result.results;
 			}
