@@ -1688,9 +1688,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .page-template-template-contact .contact-135619 .lsx-contact-module-image {
 	display:block!important;
 }
-.page-template-template-contact .lsx-contact-module-image iframe {
-	display:none!important;
-}
 .page-template-template-contact .lsx-contact-module .wp-block-column {
 	position:relative;
 }
@@ -3529,7 +3526,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width: 100%;
 		padding-top: 10%;
 		margin-top: -26px;}
-		.page-template-template-contact .lsx-contact-module{height:450px; width: 100%;
+		.page-template-template-contact .lsx-contact-module{min-height: 450px;
+			height: auto;
+			width: 100%;
 			padding-top: 10%;}
 	.page-template-template-contact .contact-133993 .col-md-6{padding:0!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module h3{font-size:20px!important;}
@@ -3548,6 +3547,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		height: 50vh!important;
 		width: 100%;
 		max-height: 50vh;
+	}
+
+	.page-template-template-contact .contact-135619 .lsx-contact-module-image iframe {
+		height: 50vh;
+		max-height: 100%;
+		width: 100%;
+		max-width: 100%;
+		display: block!important;
+	}
+	.page-template-template-contact .contact-135619 .lsx-contact-module-image {
+		display: block!important;
 	}
 }
 @media screen and (max-width:767px) {
