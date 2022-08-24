@@ -2662,6 +2662,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		float:none;
    }
+   .gutenberg-compatible-template.using-gutenberg.page-template-default:not(.has-block-banner):not(.has-block-media-text):not(.has-block-cover).lsx-disabled-hidden-title .entry-content, .gutenberg-compatible-template.using-gutenberg.page-template-template-cover:not(.has-block-banner):not(.has-block-media-text):not(.has-block-cover).lsx-disabled-hidden-title .entry-content{
+	width:1204px;
+		margin:0 auto;
+		float:none;
+   }
 	.who-top {
 		padding-top:80px!important;
    }
