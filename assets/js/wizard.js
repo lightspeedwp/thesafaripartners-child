@@ -894,11 +894,8 @@
 		}
 	};
 
-
 	$(document).ready(function () {
 		$("#wizard").lsxWizard();
-
-		facetwp_tester();
 	});
 
 })( jQuery, window, document );
