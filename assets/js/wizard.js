@@ -346,7 +346,7 @@
 				if ( 1200 < $(window).width() ) {
 					submitMiniWizard( selectedCheckboxes );
 				} else {
-					submitInspireWizard( selectedCheckboxes, '.mini-wizard-form' );
+					submitInspireWizard( selectedCheckboxes, '.mini-wizard-wrapper' );
 				}
 			}
 		}
