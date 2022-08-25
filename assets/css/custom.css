@@ -3151,7 +3151,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		left:2px;
 		font-weight:100;
 		color:#ce9e57;
-		;
 		font-size:1.7em;
 		position:absolute;
    }
@@ -3487,7 +3486,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.lsx-wizard-step .col-md-9 .col-sm-2 img,.lsx-wizard-step .col-md-9 .col-md-2 img {
 		height:120px!important;
    }
-	.lsx-wizard .checkbox-wrapper>[type="checkbox"]+span {
+	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]+span {
 		border-radius:50%!important;
 		display:inline-block;
 		position:relative;
@@ -3497,7 +3496,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		float:right!important;
 		width:30px;
    }
-	.lsx-wizard .checkbox-wrapper>[type="checkbox"] {
+	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"] {
 		cursor:pointer;
 		height:30px;
 		right:0;
@@ -3508,7 +3507,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:100%!important;
 		z-index:0;
    }
-	.lsx-wizard .checkbox-wrapper {
+	.lsx-wizard .wizard-when .checkbox-wrapper {
 		position:relative!important;
 		display:block!important;
 		font-size:14px;
@@ -3519,7 +3518,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background:#fff!important;
 		width:100%;
    }
-	.checkbox-wrapper>[type="checkbox"]:checked+span::after {
+   .wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		content:"\f00c";
 		font-family:FontAwesome;
 		top:-0.2px;
@@ -3539,7 +3538,116 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     background: none;
     opacity: 1;
    }
-
+   .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	content:"\f00c";
+	font-family:FontAwesome;
+	top:-8.2px;
+	left:0px;
+	font-weight:100;
+	color:#ce9e57;
+	font-size:0px;
+}
+.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	border: 1px solid #ce9e57;
+	width: 143px;
+	height: 208px;
+	margin-left: 0px;
+	padding-left: 120px;
+	padding-top: 6px;
+}
+.wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	content:"\f00c";
+	font-family:FontAwesome;
+	top:-8.2px;
+	left:0px;
+	font-weight:100;
+	color:#ce9e57;
+	font-size:0px;
+}
+.page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	border: 1px solid #ce9e57;
+	width: 143px;
+	height: 208px;
+	margin-left: 0px;
+	padding-left: 120px;
+	padding-top: 6px;
+}
+.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	content:"\f00c";
+	font-family:FontAwesome;
+	top:-8.2px;
+	left:0px;
+	font-weight:100;
+	color:#ce9e57;
+	font-size:0px;
+}
+.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	border: 1px solid #ce9e57;
+	width: 143px;
+	height: 208px;
+	margin-left: 0px;
+	padding-left: 120px;
+	padding-top: 6px;
+}
+.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	border:1px solid #ce9e57;
+	width:139px;
+	height:152px;
+	margin-left:0px;
+	padding-left:91px;
+	margin-top:-18px;
+}
+.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	content:"\f00c";
+	font-family:FontAwesome;
+	top:-0.2px;
+	left:3px;
+	font-weight:100;
+	color:#ce9e57;
+	font-size:19px;
+}
+.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+.whenlabel {
+	color:#ce9e57!important;
+}
+.page-template-template-wizard .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	content:"\f00c";
+	font-family:FontAwesome;
+	top:-8.2px;
+	left:0px;
+	font-weight:100;
+	color:#ce9e57;
+	font-size:0px;
+}
+.archive .wizard-who .lsx-to-widget-thumb,.archive .wizard-budget .lsx-to-widget-thumb {
+	margin:0 auto!important;
+	text-align:center;
+}
+.archive .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb {
+	height:216px;
+}
+.archive .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	border:1px solid #ce9e57;
+	width:148px;
+	height:210px;
+	margin-left:0px;
+	padding-left:124px;
+	padding-top:0px;
+	background:none;
+	opacity:1;
+}
+.archive #wizard .step-content .wizard-what .col-sm-2 {
+	height:250px!important;
+}
+.archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+	border:1px solid #ce9e57;
+	width:148px;
+	height:238px;
+	margin-left:0px;
+	padding-left:124px;
+	padding-top:0px;
+	background:none;
+	opacity:1;
+}
    .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 100%;
