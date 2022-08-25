@@ -398,11 +398,11 @@
 				'query_args': queryArgs
 			}
 		};
-		  var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/facetwp/v1/fetch', {
+		  var response = fetch( tsp_wizard_params.homeURL + 'wp-json/facetwp/v1/fetch', {
 			'method': 'POST',
 			'headers': {
 			  'Content-Type': 'application/json',
-			  'Authorization': 'Basic bGlnaHRzcGVlZDpkM3ZvbnN0ckBAdDQ2' // base64-encoded
+			  'Authorization': 'Basic ' + tsp_wizard_params.auth // base64-encoded
 			},
 			'body': JSON.stringify(request_data)
 		  })
@@ -415,11 +415,11 @@
 	}
 
 	function populateSearchResultsSlider( results ) {
-		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?posts_per_page=0&nopagin=true&include='+results.join(','), {
+		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=0&nopagin=true&include='+results.join(','), {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
-			  'Authorization': 'Basic bGlnaHRzcGVlZDpkM3ZvbnN0ckBAdDQ2' // base64-encoded
+			  'Authorization': 'Basic ' + tsp_wizard_params.auth // base64-encoded
 			}
 		  })
 		  .then(response => response.json())
@@ -822,6 +822,15 @@
 		} );
 	};
 
+	function whoSingleSelection() {
+		if ( 0 < $('.wizard-who').length ) {
+			$('.wizard-who .checkbox-clear input[type="checkbox"]:checked').each(function(event){
+				$(this).removeAttr( 'checked' );
+				console.log('who selection');
+			});
+		}
+	};
+
 	////////////////////////////////////////// Plugin definition
 
 	$.fn.lsxWizard = function (method) {
@@ -980,6 +989,7 @@
 	$(document).ready(function () {
 		wizardBuildSlider( window_width );
 		$("#wizard").lsxWizard();
+		whoSingleSelection();
 	});
 
 })( jQuery, window, document );
