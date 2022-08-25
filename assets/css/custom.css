@@ -3486,6 +3486,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.lsx-wizard-step .col-md-9 .col-sm-2 img,.lsx-wizard-step .col-md-9 .col-md-2 img {
 		height:120px!important;
    }
+   .lsx-wizard-progress-buttons-wrapper .nav>li>a{padding:0!important;}
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]+span {
 		border-radius:50%!important;
 		display:inline-block;
@@ -3861,6 +3862,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		overflow:hidden!important;
 		float:left!important;
 	}
+	.archive .wizard-where .col-sm-2 {
+		height: 156px!important;}
 }
 @media screen and (max-width:767px) {
 	.row {
