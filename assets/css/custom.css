@@ -122,6 +122,7 @@ legend {
 	color:#fff;
 	border-left:0px!important;
 }
+.blog .readmoresearch{display:none;}
 .lsx-to-meta-data.lsx-to-meta-data-duration:before {
 	background-image:url('img/tsp-duration.svg');
 	background-size:17px 17px;
@@ -2639,6 +2640,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .blog:not(.has-sidebar).blog:not(.lsx-body-full-width) .site-main{
+	width:1204px;
+	margin:0 auto;
+	padding:0!important;
+}
 	.blog .content-area {
 		width:1204px;
 		margin:30px auto!important;
