@@ -389,10 +389,6 @@
 		});
 
 		fetchSearchData( queryArgs, facets );
-
-		$( '.mini-wizard-results .lsx-to-slider-inner.slick-initialized' ).each( function() {
-			$(this).slick('unslick');
-		});
 	}
 
 	function fetchSearchData( queryArgs, facets ) {
@@ -406,7 +402,7 @@
 			'method': 'POST',
 			'headers': {
 			  'Content-Type': 'application/json',
-			  'Authorization': 'Basic ' + btoa('lightspeed:d3vonstr@@t46') // base64-encoded
+			  'Authorization': 'Basic bGlnaHRzcGVlZDpkM3ZvbnN0ckBAdDQ2' // base64-encoded
 			},
 			'body': JSON.stringify(request_data)
 		  })
@@ -420,11 +416,11 @@
 	}
 
 	function populateSearchResultsSlider( results ) {
-		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?posts_per_page=-1&include='+results.join(','), {
+		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?posts_per_page=-1&nopagin=true&include='+results.join(','), {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
-			  'Authorization': 'Basic ' + btoa('lightspeed:d3vonstr@@t46') // base64-encoded
+			  'Authorization': 'Basic bGlnaHRzcGVlZDpkM3ZvbnN0ckBAdDQ2' // base64-encoded
 			}
 		  })
 		  .then(response => response.json())
@@ -438,6 +434,11 @@
 	}
 
 	function replaceSliders( tours ) {
+		$( '.mini-wizard-results .lsx-to-slider-inner.slick-initialized' ).each( function() {
+			$(this).slick('unslick');
+			$(this).html(' ');
+		});
+
 		let sliderHTML = '';
 		let arrayLength = tours.length;
 		for (var i = 0; i < arrayLength; i++) {
