@@ -329,8 +329,6 @@
 
 		} else {
 
-			console.log($plugin);
-
 			let selectedCheckboxes = $plugin.find('input[type="checkbox"]:checked').map(
 				function(){
 					return {
@@ -344,7 +342,12 @@
 			}
 
 			if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
-				submitMiniWizard( selectedCheckboxes );
+
+				if ( 1200 < $(window).width() ) {
+					submitMiniWizard( selectedCheckboxes );
+				} else {
+					submitInspireWizard( selectedCheckboxes );
+				}
 			}
 		}
 
