@@ -778,6 +778,9 @@
 		$( '.mini-wizard-results .lsx-to-slider-inner:not(.slider-disabled,.slick-initialized)' ).each( function() {
 			var $this = $( this );
 
+			console.log($( this ));
+			console.log(window_width);
+
 			lsx_to.pre_build_slider( $this );
 
 			if ( 1 < $this.children.length ) {
