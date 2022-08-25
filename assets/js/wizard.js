@@ -338,7 +338,7 @@
 				}).get();
 
 			if ( $plugin.hasClass( 'insipre-wizard-form' ) ) {
-				submitInspireWizard( selectedCheckboxes );
+				submitInspireWizard( selectedCheckboxes, '.insipre-wizard-form' );
 			}
 
 			if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
@@ -346,7 +346,7 @@
 				if ( 1200 < $(window).width() ) {
 					submitMiniWizard( selectedCheckboxes );
 				} else {
-					submitInspireWizard( selectedCheckboxes );
+					submitInspireWizard( selectedCheckboxes, '.mini-wizard-form' );
 				}
 			}
 		}
@@ -453,7 +453,7 @@
 		$('.slider-container.mini-wizard-results .lsx-to-slider-inner').html(sliderHTML);
 	}
 
-	function submitInspireWizard( selectedCheckboxes ) {
+	function submitInspireWizard( selectedCheckboxes, targetEle ) {
 		let urlParams = '?s=';
 		let what = [];
 		let who = [];
@@ -504,7 +504,7 @@
 			urlParams = urlParams + '&fwp_budget=' + budget.join(',');
 		}
 
-		window.location.href = $('.insipre-wizard-form').attr('action') + urlParams;
+		window.location.href = $(targetEle).attr('action') + urlParams;
 	}
 
 	function slideRight($elementToSlide, settings, $plugin, goToFirst) {
