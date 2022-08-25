@@ -432,6 +432,7 @@
 		  .then(response => response.json())
 		  .then( function(result) {
 			if ( undefined !== result && 0 < result.length ) {
+				console.log(result);
 				replaceSliders( result );
 				wizardBuildSlider( window_width );
 			}

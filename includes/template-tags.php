@@ -82,16 +82,6 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
 		}
 
 		?>
-		<div class="facetwp-hidden-filters hidden">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'filter-menu',
-				)
-			);
-			?>
-		</div>
-
 		<div class="tsp-seperator"></div>
 
 		<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
