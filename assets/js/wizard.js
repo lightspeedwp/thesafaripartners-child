@@ -390,9 +390,8 @@
 
 		fetchSearchData( queryArgs, facets );
 
-		$( '.lsx-to-slider .lsx-to-slider-inner' ).each( function() {
+		$( '.mini-wizard-results .lsx-to-slider-inner.slick-initialized' ).each( function() {
 			$(this).slick('unslick');
-			$(this).removeClass('slick-initialized');
 		});
 	}
 
@@ -403,7 +402,6 @@
 				'query_args': queryArgs
 			}
 		};
-		console.log(request_data);
 		  var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/facetwp/v1/fetch', {
 			'method': 'POST',
 			'headers': {
@@ -417,7 +415,6 @@
 			console.log(result);
 			if ( undefined !== result && 0 < result.results.length ) {
 				populateSearchResultsSlider( result.results );
-				wizardBuildSlider( window_width );
 			}
 		  });
 	}
@@ -434,6 +431,8 @@
 		  .then( function(result) {
 			if ( undefined !== result && 0 < result.length ) {
 				replaceSliders( result );
+				console.log('populate slider');
+				wizardBuildSlider( window_width );
 			}
 		  });
 	}
