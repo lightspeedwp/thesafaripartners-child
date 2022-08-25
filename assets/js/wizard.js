@@ -503,9 +503,7 @@
 		if ( 0 < budget.length ) {
 			urlParams = urlParams + '&fwp_budget=' + budget.join(',');
 		}
-		console.log($(targetEle).attr('action'));
-		console.log($(targetEle).attr('action') + urlParams);
-		//window.location.href = $(targetEle).attr('action') + urlParams;
+		window.location.href = $(targetEle).attr('action') + urlParams;
 	}
 
 	function slideRight($elementToSlide, settings, $plugin, goToFirst) {
