@@ -773,7 +773,7 @@
 	 * @subpackage scripts
 	 */
 	 wizardBuildSlider = function( window_width ) {
-		$( '.mini-wizard-results .lsx-to-slider-inner:not(.slider-disabled)' ).each( function() {
+		$( '.mini-wizard-results .lsx-to-slider-inner:not(.slider-disabled,.slick-initialized)' ).each( function() {
 			var $this = $( this );
 
 			lsx_to.pre_build_slider( $this );
@@ -816,32 +816,6 @@
 				} );
 			}
 		} );
-
-		if ( window_width < 768 ) {
-			$( '.gallery' ).not('.slick-initialized').slick( {
-				slide: 'dl',
-				arrows: false,
-				draggable: true,
-				infinite: true,
-				swipe: true,
-				cssEase: 'ease-out',
-				dots: true,
-				autoplay: false,
-				responsive: [
-					{
-						breakpoint: 99999,
-						settings: 'unslick'
-					},
-					{
-						breakpoint: 768,
-						setting: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
-					}
-				]
-			} );
-		}
 	};
 
 	////////////////////////////////////////// Plugin definition
