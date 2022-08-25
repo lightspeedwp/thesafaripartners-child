@@ -177,6 +177,9 @@
 
 					$.isFunction(settings.onInitSuccess) && settings.onInitSuccess.call(this);
 					$this.trigger("initSuccess.lsxWizard", this);
+
+					console.log('done');
+					whoSingleSelection();
 				}
 				//#endregion
 			});
@@ -398,6 +401,7 @@
 				'query_args': queryArgs
 			}
 		};
+		console.log(request_data);
 		  var response = fetch( tsp_wizard_params.homeURL + 'wp-json/facetwp/v1/fetch', {
 			'method': 'POST',
 			'headers': {
@@ -776,12 +780,7 @@
 	 wizardBuildSlider = function( window_width ) {
 		$( '.mini-wizard-results .lsx-to-slider-inner:not(.slider-disabled,.slick-initialized)' ).each( function() {
 			var $this = $( this );
-
-			console.log($( this ));
-			console.log(window_width);
-
 			lsx_to.pre_build_slider( $this );
-
 			if ( 1 < $this.children.length ) {
 				$this.slick( {
 					draggable: false,
@@ -824,9 +823,18 @@
 
 	function whoSingleSelection() {
 		if ( 0 < $('.wizard-who').length ) {
-			$('.wizard-who .checkbox-clear input[type="checkbox"]:checked').each(function(event){
-				$(this).removeAttr( 'checked' );
-				console.log('who selection');
+			console.log($('.wizard-who .checkbox-clear input[type="checkbox"]'));
+
+			$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
+				$(this).on('click', function(){
+
+					$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
+						$(this).removeAttr( 'checked' );
+					});
+
+					$(this).prop( 'checked', true ).trigger("change");
+					console.log('22222');					
+				});
 			});
 		}
 	};
@@ -989,7 +997,6 @@
 	$(document).ready(function () {
 		wizardBuildSlider( window_width );
 		$("#wizard").lsxWizard();
-		whoSingleSelection();
 	});
 
 })( jQuery, window, document );
