@@ -427,7 +427,7 @@
 		  .then( function(result) {
 			if ( undefined !== result && 0 < result.length ) {
 				replaceSliders( result );
-				console.log('populate slider');
+				console.log(result);
 				wizardBuildSlider( window_width );
 			}
 		  });
