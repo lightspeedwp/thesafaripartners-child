@@ -416,6 +416,8 @@
 			console.log(result);
 			if ( undefined !== result && 0 < result.results.length ) {
 				populateSearchResultsSlider( result.results );
+				console.log(window_width);
+				wizardBuildSlider( window_width );
 			}
 		  });
 	}
