@@ -1121,8 +1121,9 @@ th {
 .lsx-wizard-progress-buttons {
 	width:80%;
 	background-color:inherit;
-	font-family:"moret",serif;
-	font-size:16px;
+	font-family:argesta_displayregular,serif!important;
+	font-weight:bold;
+	font-size:14px;
 	border:none;
 	outline:none;
 	cursor:pointer;
@@ -1233,8 +1234,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	left:0;
 }
 .bottom-contact a {
-	font-family:"moret",serif;
-	font-size:20px;
+	font-family:argesta_displayregular,serif!important;
+	font-weight:bold;
+	font-size:18px;
 }
 .bottom-contact a:after {
 	color:inherit;
@@ -1253,8 +1255,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 /* Style the buttons that are used to open the tab content */
 #primary .tab button {
 	background-color:inherit;
-	font-family:"moret",serif;
-	font-size:16px;
+	font-family:argesta_displayregular,serif!important;
+	font-weight:bold;
+	font-size:14px;
 	border:none;
 	outline:none;
 	cursor:pointer;
@@ -1293,8 +1296,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 /* Style the buttons that are used to open the tab content */
 .intab button {
 	background-color:inherit;
-	font-family:"moret",serif;
-	font-size:16px;
+	font-family:argesta_displayregular,serif!important;
+	font-weight:bold;
+	font-size:14px;
 	border:none;
 	outline:none;
 	cursor:pointer;
@@ -3256,13 +3260,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		height:250px!important;
    }
 	.archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
-		border: 1px solid #ce9e57;
-    width: 144px;
-    height: 228px;
-    margin-left: 0px;
-    padding-top: 0px;
-    background: none;
-    opacity: 1;
+		border:1px solid #ce9e57;
+		width:144px;
+		height:230px;
+		margin-left:0px;
+		padding-top:0px;
+		background:none;
+		opacity:1;
    }
 	.lsx-wizard .checkbox-wrapper {
 		position:absolute;
@@ -3278,8 +3282,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.lsx-wizard .wizard-when label {
 		width:160px;
-		font-family:"moret",serif;
-		font-size:19px;
+		font-family:argesta_displayregular,serif!important;
+		font-weight:bold;
+		font-size:17px;
 		display:inline-block;
 		padding-left:6px;
 		color:#262423;
@@ -3678,8 +3683,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
    .lsx-wizard .wizard-when label {
 	width:160px;
-	font-family:"moret",serif;
-	font-size:19px;
+	font-family:argesta_displayregular,serif!important;
+	font-weight:bold;
+	font-size:17px;
 	display:inline-block;
 	padding-left:6px;
 	color:#262423;
