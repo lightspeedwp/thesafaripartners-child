@@ -3508,6 +3508,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:100%!important;
 		z-index:0;
    }
+   .checkbox-wrapper{
+   position: absolute;
+    font-size: 14px;
+    border-radius: 0;
+    top: 8px;
+    right: -2px;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    opacity: 1;
+    background: none;
+   }
 	.lsx-wizard .wizard-when .checkbox-wrapper {
 		position:relative!important;
 		display:block!important;
