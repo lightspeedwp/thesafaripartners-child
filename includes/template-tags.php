@@ -91,7 +91,7 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
 		<div class="tsp-seperator"></div>
 
 		<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
-			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
+			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>">
 			<div class="lsx-to-slider-wrap">
 				<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 					<?php

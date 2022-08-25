@@ -2,6 +2,11 @@
 
 	var settings;
 
+	var $document    = $( document ),
+		$window      = $( window ),
+		window_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+		window_width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
 	////////////////////////////////////////// Public methods
 
 	var tspSliderFirstLoad = true;
@@ -416,7 +421,7 @@
 	}
 
 	function populateSearchResultsSlider( results ) {
-		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?include='+results.join(','), {
+		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?posts_per_page=-1&include='+results.join(','), {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
@@ -425,8 +430,6 @@
 		  })
 		  .then(response => response.json())
 		  .then( function(result) {
-			console.log('Search Result');
-			console.log(result);
 			if ( undefined !== result && 0 < result.length ) {
 				replaceSliders( result );
 			}
@@ -439,7 +442,6 @@
 		for (var i = 0; i < arrayLength; i++) {
 			sliderHTML += tours[i].search_results;
 		}
-		console.log($('.slider-container.mini-wizard-results .lsx-to-slider-inner'));
 		$('.slider-container.mini-wizard-results .lsx-to-slider-inner').html(sliderHTML);
 	}
 
@@ -764,6 +766,84 @@
 		}
 	}
 
+	/**
+	 * Slider.
+	 *
+	 * @package    tour-operator
+	 * @subpackage scripts
+	 */
+	 wizardBuildSlider = function( window_width ) {
+		$( '.mini-wizard-results .lsx-to-slider-inner:not(.slider-disabled)' ).each( function() {
+			var $this = $( this );
+
+			lsx_to.pre_build_slider( $this );
+
+			if ( 1 < $this.children.length ) {
+				$this.slick( {
+					draggable: false,
+					infinite: true,
+					swipe: false,
+					arrows: true,
+					dots: false,
+					cssEase: 'ease-out',
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					autoplay: false,
+					responsive: [
+						{
+							breakpoint: 1200,
+							settings: {
+								slidesToShow:   2,
+								slidesToScroll: 1,
+								draggable:      true,
+								arrows:         true,
+								swipe:          true,
+								dots: false
+							}
+						},
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow:   1,
+								slidesToScroll: 1,
+								draggable:      true,
+								arrows:         true,
+								swipe:          true,
+								dots: false
+							}
+						}
+					]
+				} );
+			}
+		} );
+
+		if ( window_width < 768 ) {
+			$( '.gallery' ).not('.slick-initialized').slick( {
+				slide: 'dl',
+				arrows: false,
+				draggable: true,
+				infinite: true,
+				swipe: true,
+				cssEase: 'ease-out',
+				dots: true,
+				autoplay: false,
+				responsive: [
+					{
+						breakpoint: 99999,
+						settings: 'unslick'
+					},
+					{
+						breakpoint: 768,
+						setting: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			} );
+		}
+	};
+
 	////////////////////////////////////////// Plugin definition
 
 	$.fn.lsxWizard = function (method) {
@@ -908,7 +988,19 @@
 		}
 	};
 
+	/**
+	 * On window resize.
+	 *
+	 * @package    lsx
+	 * @subpackage scripts
+	 */
+	 $window.resize( function() {
+		window_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		window_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	} );
+
 	$(document).ready(function () {
+		wizardBuildSlider( window_width );
 		$("#wizard").lsxWizard();
 	});
 
