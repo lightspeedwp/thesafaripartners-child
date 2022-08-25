@@ -408,7 +408,6 @@
 		  })
 		  .then(response => response.json())
 		  .then( function(result) {
-			console.log(result);
 			if ( undefined !== result && 0 < result.results.length ) {
 				populateSearchResultsSlider( result.results );
 			}
@@ -416,7 +415,7 @@
 	}
 
 	function populateSearchResultsSlider( results ) {
-		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?posts_per_page=-1&nopagin=true&include='+results.join(','), {
+		var response = fetch('https://thesafaripartners-upgraded.lightspeedwp.dev/wp-json/wp/v2/tour?posts_per_page=0&nopagin=true&include='+results.join(','), {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
