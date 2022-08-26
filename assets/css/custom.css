@@ -384,8 +384,8 @@ legend {
 #travel-footer {
 	background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 	background-color:#fff;
-	min-height:660px;
-	background-position:center;
+	min-height:720px;
+	background-position:bottom center;
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -2623,14 +2623,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .lsx-to-slider-inner.slick-has-arrows {
 	width:calc(100% - 0rem)!important;
 }
-#lsx-testimonials-slider .slick-arrow.slick-prev{left: -2rem!important;}
+#lsx-testimonials-slider .slick-arrow.slick-prev{left: -1rem!important;}
 #lsx-testimonials-slider .slick-arrow{border-width:0!important;}
 #lsx-testimonials-slider .slick-arrow:before{font-size: 2rem;}
 #lsx-testimonials-slider .lsx-testimonials-slot.slick-slide {
-    margin-left: 12px;
+    margin-left: 6px;
 }
+#lsx-testimonials-slider .slick-arrow{top: 96%!important;}
 	#lsx-testimonials-slider .slick-arrow.slick-next {
-		right: 0rem;
+		right: 2rem;
 	}
 	.wp-block-cover__video-background a{margin-top:20px!important;}
 	#lsx-testimonials-slider .slick-dots{display:none!important;}
