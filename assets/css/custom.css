@@ -2655,6 +2655,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin:0 auto;
 	padding:0!important;
 }
+.content-info>.container>.row>div[class*='col-']{padding:0!important;}
 	.blog .content-area {
 		width:1204px;
 		margin:30px auto!important;
@@ -2689,11 +2690,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	#colophon .container,#footer-sub .footer-sub-area {
 		width:1204px;
-		margin:auto;
+		margin:auto;padding:0;
    }
 	#footer-widgets .container {
 		width:1204px;
-		margin:auto;
+		margin:auto;padding:0;
    }
 	.page .entry-content>div:first-of-type {
 		width:100%!important;
