@@ -336,16 +336,11 @@
 					}
 				}).get();
 
-			console.log(selectedCheckboxes);
-			console.log($plugin.hasClass( 'insipre-wizard-form' ));
-			console.log($plugin.hasClass( 'mini-wizard-form' ));
-
 			if ( $plugin.hasClass( 'insipre-wizard-form' ) ) {
 				submitInspireWizard( selectedCheckboxes, '.insipre-wizard-form' );
 			}
 
 			if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
-				console.log($(window).width());
 				if ( 1200 < $(window).width() ) {
 					submitMiniWizard( selectedCheckboxes );
 				} else {
@@ -357,6 +352,8 @@
 	}
 
 	function submitMiniWizard( selectedCheckboxes ) {
+		console.log(selectedCheckboxes);
+		console.log(typeof FWP);
 		if( typeof FWP === 'undefined' ) {
 			return '';
 		}
@@ -401,6 +398,7 @@
 	}
 
 	function fetchSearchData( queryArgs, facets ) {
+		console.log(tsp_wizard_params);
 		var request_data = {
 			'data': {
 				'facets': facets,
