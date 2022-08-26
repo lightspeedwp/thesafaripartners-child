@@ -2633,13 +2633,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	#lsx-testimonials-slider .slick-arrow.slick-next {
 		right: 2rem;
 	}
-	.wp-block-cover__video-background a{margin-top:20px!important;}
+	.home .wp-block-cover__inner-container .wp-block-button a{margin-top:20px!important;}
 	#lsx-testimonials-slider .slick-dots{display:none!important;}
 	.lsx-testimonials-slot .lsx-testimonials-meta-wrap > .lsx-testimonials-meta {
 		margin: 0 4px;
 		display: none;}
 
-		#footer-widgets .nav_menu-7 h3, #footer-widgets .lsx-testimonials h3{font-size: 22px!important;}
+		#footer-widgets .nav_menu-7 h3, #footer-widgets .lsx-testimonials h3{font-size: 20px!important;}
 
 @media (max-width:1199px) {
 	#masthead .navbar-header {
