@@ -2633,7 +2633,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right: 0rem;
 	}
 	.wp-block-cover__video-background a{margin-top:20px!important;}
-	#lsx-testimonials-slider .slick-dots{display:none!important;;}
+	#lsx-testimonials-slider .slick-dots{display:none!important;}
+	.lsx-testimonials-slot .lsx-testimonials-meta-wrap > .lsx-testimonials-meta {
+		margin: 0 4px;
+		display: none;}
+
 @media (max-width:1199px) {
 	#masthead .navbar-header {
 		width:215px;
@@ -2651,6 +2655,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .lsx-testimonials-slot {
+    margin-top: 3rem!important;
+    min-height: 144px;
+}
+.lsx-testimonials-slot .lsx-testimonials-meta-wrap {
+    font-size: 13px;
+    position: absolute;
+    bottom: -8px;
+    margin-left: 85px;
+}
    .blog:not(.has-sidebar).blog:not(.lsx-body-full-width) .site-main{
 	width:1204px;
 	margin:0 auto;
