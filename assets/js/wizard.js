@@ -178,7 +178,6 @@
 					$.isFunction(settings.onInitSuccess) && settings.onInitSuccess.call(this);
 					$this.trigger("initSuccess.lsxWizard", this);
 
-					console.log('done');
 					whoSingleSelection();
 				}
 				//#endregion
@@ -337,12 +336,16 @@
 					}
 				}).get();
 
+			console.log(selectedCheckboxes);
+			console.log($plugin.hasClass( 'insipre-wizard-form' ));
+			console.log($plugin.hasClass( 'mini-wizard-form' ));
+
 			if ( $plugin.hasClass( 'insipre-wizard-form' ) ) {
 				submitInspireWizard( selectedCheckboxes, '.insipre-wizard-form' );
 			}
 
 			if ( $plugin.hasClass( 'mini-wizard-form' ) ) {
-
+				console.log($(window).width());
 				if ( 1200 < $(window).width() ) {
 					submitMiniWizard( selectedCheckboxes );
 				} else {
