@@ -2638,6 +2638,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin: 0 4px;
 		display: none;}
 
+		#footer-widgets .nav_menu-7 h3, #footer-widgets .lsx-testimonials h3{font-size: 22px!important;}
+
 @media (max-width:1199px) {
 	#masthead .navbar-header {
 		width:215px;
@@ -2654,6 +2656,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:1204px;
 		margin:0 auto;
 		padding:0!important;
+   }
+   #footer-widgets blockquote {
+    text-align: left!important;
    }
    .lsx-testimonials-slot {
     margin-top: 3rem!important;
