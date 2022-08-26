@@ -2899,7 +2899,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		border-bottom:1px solid #ccc;
 		margin-top:-8px;
    }
-   .page-template-template-no-sidebar article.page, .page-template-default:not(.has-sidebar) article.page{width:1204px!important;margin:0 auto; max-width:1204px;}
 	#mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right>ul.mega-sub-menu .nav-contact-bottom {
 		padding:8px 0;
 		border-top:1px solid #ccc;
