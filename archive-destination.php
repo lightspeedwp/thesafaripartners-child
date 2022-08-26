@@ -26,9 +26,7 @@ get_header(); ?>
 					3 => array( 'when' ),
 					4 => array( 'budget' ),
 				);
-				$args = array( 
-					'selected' => array( get_the_ID() ),
-				);
+				$args = array();
 				tsp_mini_wizard( $panels, $args );
 			?>
 
