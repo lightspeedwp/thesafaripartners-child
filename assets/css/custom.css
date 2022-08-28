@@ -352,7 +352,7 @@ legend {
 	color:#ce9e57!important;
 }
 .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover h4 a {
-	color:#ce9e57;
+	color:#ce9e57!important;
 }
 .lsx-to-slider-inner .lsx-to-widget-item-wrap .lsx-to-widget-content {
 	position:relative;
