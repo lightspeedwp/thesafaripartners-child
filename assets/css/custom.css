@@ -345,6 +345,9 @@ legend {
 .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover {
 	border:1px solid #ce9e57;
 }
+.lsx-to-slider-inner .lsx-to-widget-item-wrap:hover + .status-publish + .lsx-to-widget-content + h4{
+	color:#ce9e57!important;
+}
 .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover h4 a {
 	color:#ce9e57;
 }
@@ -1470,7 +1473,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .home .tours-posts .lsx-to-widget-content p,.home .style-posts .lsx-to-widget-content p {
 	display:none;
 }
-.home .tours-posts .lsx-to-widget-content h4,.home .style-posts .lsx-to-widget-content h4 {
+.home .tours-posts .lsx-to-widget-content h4,.home .style-posts .lsx-to-widget-content h4, .home .who-posts .lsx-to-widget-content h4{
 	margin-bottom:10px!important;
 }
 .lsx-block-banner:not(:first-child) {
