@@ -56,13 +56,3 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 	lsx_to_connected_panel_query( $args );
 }
 }
-
-add_filter('body_class','alter_search_classes');
-function alter_search_classes($classes) {
-    if(is_search()){
-       return array('my_body_class');
-    } else {
-       return $classes;
-    }
-
-}
