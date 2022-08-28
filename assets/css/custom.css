@@ -342,7 +342,7 @@ legend {
 	margin:1px;
 	border:1px solid #fff;
 }
-.tours-nav .col-md-6{width:100%!important;}
+.tours-nav .col-md-6{padding:0!important;}
 .lsx-to-slider-inner .lsx-to-widget-item-wrap:hover {
 	border:1px solid #ce9e57;
 }
