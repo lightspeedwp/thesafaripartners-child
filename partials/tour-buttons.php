@@ -10,7 +10,7 @@
     </div>
 
     <div class="col-md-4">
-        <button href="<?php the_field('download_itinerary'); ?>" download="true" class="btn lsx-btn">DOWNLOAD ITINERY</button>
+        <a href="<?php the_field('download_itinerary'); ?>" download="true" class="btn lsx-btn">DOWNLOAD ITINERY</a>
     </div>
   
     <div class="col-md-4 dropdown-share">
