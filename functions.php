@@ -60,9 +60,9 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 add_filter('body_class','alter_search_classes');
 function alter_search_classes($classes) {
     if(is_search()){
-       return array('search search-results');
+       return array('search search-results lsx-body-list-layout');
     } else {
-       return array('search search-results');
+       return $classes;
     }
 
 }
