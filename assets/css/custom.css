@@ -271,6 +271,11 @@ legend {
 	border:1px solid #ce9e57!important;
 	color:#262423!important;
 }
+.blog .entry-layout-content{background: #f2edea;}
+.single .alignright{float:right;}
+.blog article.post .entry-meta .post-meta, .archive article.post .entry-meta .post-meta, .search-results article.post .entry-meta .post-meta, .lsx-related-posts article.post .entry-meta .post-meta, .blog article.page .entry-meta .post-meta, .archive article.page .entry-meta .post-meta, .search-results article.page .entry-meta .post-meta, .lsx-related-posts article.page .entry-meta .post-meta, .blog article.lsx-slot .entry-meta .post-meta, .archive article.lsx-slot .entry-meta .post-meta, .search-results article.lsx-slot .entry-meta .post-meta, .lsx-related-posts article.lsx-slot .entry-meta .post-meta{color:#6a6d5b!important;}
+.single-post .lsx-related-posts .lsx-related-posts-wrapper article.post .entry-title, .single-post .lsx-related-posts .lsx-related-posts-wrapper article.page .entry-title, .single-post .lsx-related-posts .lsx-related-posts-wrapper article.lsx-slot .entry-title {
+    font-size: 22px!important;}
 .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag {
 	color:#262423!important;
 }
@@ -2639,7 +2644,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin: 0 4px;
 		display: none;}
 
-		#footer-widgets .nav_menu-7 h3, #footer-widgets .lsx-testimonials h3{font-size: 20px!important;}
+		#footer-widgets #nav_menu-7 h3, #footer-widgets .lsx-testimonials h3{font-size: 20px!important;}
 
 @media (max-width:1199px) {
 	#masthead .navbar-header {
