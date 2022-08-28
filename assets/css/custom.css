@@ -286,6 +286,7 @@ legend {
     width: 100%;
 	padding:0!important;
 }
+.single-post:not(.using-gutenberg).page-has-banner:not(.page-has-no-banner) .content-area, .single-post:not(.using-gutenberg).page-has-banner:not(.page-has-no-banner) .widget-area{padding-left:0!important;padding-right:0!important;}
 .lsx-body-grid-layout.archive .post-wrapper > .post, .lsx-body-grid-layout.archive .post-wrapper > .page, .lsx-body-grid-layout.archive .post-wrapper > .lsx-slot{margin:0!important;}
 .lsx-to-widget-item-wrap .lsx-to-widget-content a.moretag {
 	color:#262423!important;
