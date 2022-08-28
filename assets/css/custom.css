@@ -606,18 +606,6 @@ legend {
 	margin:0 auto;
 	padding:80px 0px 0px 24px;
 }
-.single-lsx-to-destination .wizard-who,.single-lsx-to-destination .wizard-what,.single-lsx-to-destination .wizard-where,.single-lsx-to-destination .wizard-budget {
-	margin:0 auto;
-	display:flex;
-	padding:80px 0px 0px 24px;
-}
-.single-lsx-to-destination .wizard-when {
-	margin:0 auto;
-	padding:80px 0px 0px 24px;
-}
-.lsx-wizard .whereintro {
-	margin-left:30px;
-}
 .lsx-wizard {
 	position:relative;
 }
@@ -3030,6 +3018,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background:#6a6d5b;
 		padding:4px 12px;
    }
+   .single-lsx-to-destination .wizard-who,.single-lsx-to-destination .wizard-what,.single-lsx-to-destination .wizard-where,.single-lsx-to-destination .wizard-budget {
+	margin:0 auto;
+	display:flex;
+	padding:80px 0px 0px 0px;
+}
+.single-lsx-to-destination .wizard-when {
+	margin:0 auto;
+	padding:80px 0px 0px 0px;
+}
+.lsx-wizard .whereintro {
+	margin-left:30px;
+}
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search .search-icon {
 		right:18px;
    }
