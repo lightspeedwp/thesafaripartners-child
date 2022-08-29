@@ -105,7 +105,14 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
 	if ( empty( $query_args ) ) {
 		return;
 	}
+
 	$tours = new WP_Query( $query_args );
+	if ( isset( $_GET['debug2'] ) ) {
+		print_r('<pre>');
+		print_r($query_args);
+		print_r($tours);
+		print_r('</pre>');
+	}
 	if ( $tours->have_posts() ) {
 		global $lsx_to_archive;
 		$lsx_to_archive = 1;

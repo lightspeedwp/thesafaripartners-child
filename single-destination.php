@@ -58,13 +58,6 @@ get_header(); ?>
 				$current_destination = get_the_ID();
 				$tours               = get_post_meta( get_the_ID(), 'tour_to_destination', false );
 
-				if ( isset( $_GET['debug'] ) ) {
-					print_r('<pre>');
-					print_r($current_destination);
-					print_r($tours);
-					print_r('</pre>');
-				}
-
 				if ( false !== $tours && ! empty( $tours ) && '' !== $tours ) {
 					$query_args = array(
 						'post_type' => 'tour',
