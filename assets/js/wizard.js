@@ -840,10 +840,10 @@
 
 	function budgetSingleSelection() {
 		if ( 0 < $('.wizard-budget').length ) {
-			$('.wizard-budget .checkbox-clear input[type="checkbox"]').each(function(event){
+			$('.wizard-budget .checkbox-wrapper input[type="checkbox"]').each(function(event){
 				$(this).on('click', function(){
 
-					$('.wizard-budget .checkbox-clear input[type="checkbox"]').each(function(event){
+					$('.wizard-budget .checkbox-wrapper input[type="checkbox"]').each(function(event){
 						$(this).removeAttr( 'checked' );
 					});
 
