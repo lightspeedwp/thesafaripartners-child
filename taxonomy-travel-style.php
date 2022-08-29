@@ -52,56 +52,32 @@ get_header(); ?>
 	<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
 	<?php 
-		if ( have_posts() ) {
-
-			$panels = array(
-				0 => array( 'who' ),
-				1 => array( 'what' ),
-				2 => array( 'where' ),
-				3 => array( 'when' ),
-				4 => array( 'budget' ),
-			);
-			$args = array( 
-				'selected' => array( get_queried_object_id() ),
-			);
-			tsp_mini_wizard( $panels, $args );
-
-			?>
-			<div class="facetwp-hidden-filters hidden">
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'filter-menu',
-						)
-					);
-				?>
-			</div>
-			<div class="tsp-seperator"></div>
-			<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
-			<h3><?php esc_html_e( 'Our picks for', 'thesafaripartners-child' ); ?> <span style="text-transform:lowercase;"><?php echo $term->name; ?></span></h3>
-				<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
-					<div class="lsx-to-slider-wrap">
-						<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
-						<?php
-						while ( have_posts() ) {
-							the_post();
-							?>
-							<div class="lsx-to-widget-item-wrap lsx-tour slick-slide">
-								<?php lsx_to_content( 'content-widget', 'tour' ); ?>
-							</div>
-						<?php
-						}
-						?>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<?php
-		} else {
-			get_template_part( 'partials/content', 'none' );
-		}
-		?>
+		$panels = array(
+			0 => array( 'who' ),
+			1 => array( 'what' ),
+			2 => array( 'where' ),
+			3 => array( 'when' ),
+			4 => array( 'budget' ),
+		);
+		$args = array( 
+			'selected' => array( get_queried_object_id() ),
+		);
+		tsp_mini_wizard( $panels, $args );
+		
+		$query_args = array(
+			'post_type' => 'tour',
+			'post_status' => 'publish',
+			'facetwp' => true,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'who',
+					'field'    => 'term_id',
+					'terms'    => array( get_queried_object_id() ),
+				),
+			),
+		);
+		tsp_mini_wizard_results( $query_args, $args );
+	?>
 </main><!-- #main -->
 
 <?php lsx_content_after(); ?>
