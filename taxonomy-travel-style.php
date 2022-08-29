@@ -56,11 +56,15 @@ get_header(); ?>
 
 			$panels = array(
 				0 => array( 'who' ),
-				1 => array( 'where' ),
-				2 => array( 'when' ),
-				3 => array( 'budget' ),
+				1 => array( 'what' ),
+				2 => array( 'where' ),
+				3 => array( 'when' ),
+				4 => array( 'budget' ),
 			);
-			tsp_mini_wizard( $panels );
+			$args = array( 
+				'selected' => array( get_queried_object_id() ),
+			);
+			tsp_mini_wizard( $panels, $args );
 
 			?>
 			<div class="facetwp-hidden-filters hidden">
