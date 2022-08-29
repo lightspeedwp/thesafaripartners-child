@@ -57,12 +57,21 @@ get_header(); ?>
 			<?php
 				$current_destination = get_the_ID();
 				$tours               = get_post_meta( get_the_ID(), 'tour_to_destination', false );
-				if ( false !== $tours && ! empty( $tours ) ) {
+
+				if ( isset( $_GET['debug'] ) ) {
+					print_r('<pre>');
+					print_r($current_destination);
+					print_r($tours);
+					print_r('</pre>');
+				}
+
+				if ( false !== $tours && ! empty( $tours ) && '' !== $tours ) {
 					$query_args = array(
 						'post_type' => 'tour',
 						'post_status' => 'publish',
 						'facetwp' => true,
 						'post__id' => $tours,
+						'posts_per_page' => 100,
 					);
 					tsp_mini_wizard_results( $query_args, $args );
 				}
