@@ -179,6 +179,7 @@
 					$this.trigger("initSuccess.lsxWizard", this);
 
 					whoSingleSelection();
+					budgetSingleSelection();
 				}
 				//#endregion
 			});
@@ -826,17 +827,27 @@
 
 	function whoSingleSelection() {
 		if ( 0 < $('.wizard-who').length ) {
-			console.log($('.wizard-who .checkbox-clear input[type="checkbox"]'));
-
 			$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
 				$(this).on('click', function(){
-
 					$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
 						$(this).removeAttr( 'checked' );
 					});
+					$(this).prop( 'checked', true ).trigger("change");				
+				});
+			});
+		}
+	};
 
-					$(this).prop( 'checked', true ).trigger("change");
-					console.log('22222');					
+	function budgetSingleSelection() {
+		if ( 0 < $('.wizard-budget').length ) {
+			$('.wizard-budget .checkbox-clear input[type="checkbox"]').each(function(event){
+				$(this).on('click', function(){
+
+					$('.wizard-budget .checkbox-clear input[type="checkbox"]').each(function(event){
+						$(this).removeAttr( 'checked' );
+					});
+
+					$(this).prop( 'checked', true ).trigger("change");				
 				});
 			});
 		}
