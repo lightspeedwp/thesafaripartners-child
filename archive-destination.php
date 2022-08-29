@@ -40,17 +40,6 @@ get_header(); ?>
 				tsp_mini_wizard_results( $query_args, $args );
 			?>
 
-			<?php 
-				$panels = array(
-					0 => array( 'who' ),
-					1 => array( 'what' ),
-					3 => array( 'where' ),
-					3 => array( 'when' ),
-					4 => array( 'budget' ),
-				);
-				tsp_mini_wizard( $panels );
-			?>
-
 			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->
