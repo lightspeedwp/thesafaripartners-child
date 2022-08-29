@@ -16,7 +16,13 @@
 				<!-- post -->
 				<article class="col-md-2 status-publish hentry">
 					<div class="checkbox-wrapper">
-						<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check"  type="checkbox" name="fwp_budget" value="<?php echo esc_html( $value ); ?>" />
+						<?php
+						$checked = '';
+						if ( ! empty( $args ) && isset( $args['selected'] ) && ( in_array( $term->term_id, $args['selected'] ) || in_array( $term->slug, $args['selected'] ) ) ) {
+							$checked = 'checked';
+						}
+						?>
+						<input id="budget-<?php echo esc_html( $value ); ?>" class="btn-check" <?php echo esc_attr( $checked ); ?> type="checkbox" name="fwp_budget" value="<?php echo esc_html( $value ); ?>" />
 						<span aria-hidden="true"></span>
 					</div>
 

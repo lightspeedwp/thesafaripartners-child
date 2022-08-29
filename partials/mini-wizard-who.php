@@ -17,7 +17,7 @@
 
 						<?php
 						$checked = '';
-						if ( ! empty( $args ) && isset( $args['selected'] ) && in_array( $term->term_id, $args['selected'] ) ) {
+						if ( ! empty( $args ) && isset( $args['selected'] ) && ( in_array( $term->term_id, $args['selected'] ) || in_array( $term->slug, $args['selected'] ) ) ) {
 							$checked = 'checked';
 						}
 						?>

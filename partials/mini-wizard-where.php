@@ -22,7 +22,13 @@
 					<div class="lsx-to-widget-item-wrap col-xs-3 col-sm-2 lsx-travel-style destinations-archive lsx-to-archive-item">
 						<div class="lsx-to-widget-thumb">
 							<div class="checkbox-wrapper">
-								<input class="btn-check"  type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
+								<?php
+								$checked = '';
+								if ( ! empty( $args ) && isset( $args['selected'] ) && ( in_array( $post->ID, $args['selected'] ) || in_array( $post->post_name, $args['selected'] ) ) ) {
+									$checked = 'checked';
+								}
+								?>
+								<input class="btn-check" <?php echo esc_attr( $checked ); ?> type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 								<span aria-hidden="true"></span>
 							</div>
 							<?php lsx_thumbnail( 'medium' ); ?>

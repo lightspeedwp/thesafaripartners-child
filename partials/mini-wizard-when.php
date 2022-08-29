@@ -26,7 +26,13 @@
 					?>
 					<article class="col-md-3 travelwhen">
 						<div class="checkbox-wrapper">
-							<input class="btn-check"  type="checkbox" name="fwp_when" value="<?php echo esc_html( $key ); ?>" />
+							<?php
+								$checked = '';
+								if ( ! empty( $args ) && isset( $args['selected'] ) && ( in_array( $key, $args['selected'] ) || in_array( $key, $args['selected'] ) ) ) {
+									$checked = 'checked';
+								}
+							?>
+							<input class="btn-check" <?php echo esc_attr( $checked ); ?> type="checkbox" name="fwp_when" value="<?php echo esc_html( $key ); ?>" />
 							<span aria-hidden="true"></span>
 							<label class="whenlabel"><?php echo esc_html( $month ); ?></label>
 						</div>

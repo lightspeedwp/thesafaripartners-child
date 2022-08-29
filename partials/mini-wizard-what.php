@@ -15,7 +15,13 @@
 				<!-- post -->
 				<article class="col-xs-3 col-sm-2 status-publish hentry">
 					<div class="checkbox-wrapper">
-						<input class="btn-check"  type="checkbox" name="fwp_what" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
+						<?php
+						$checked = '';
+						if ( ! empty( $args ) && isset( $args['selected'] ) && ( in_array( $term->term_id, $args['selected'] ) || in_array( $term->slug, $args['selected'] ) ) ) {
+							$checked = 'checked';
+						}
+						?>
+						<input class="btn-check"  type="checkbox" <?php echo esc_attr( $checked ); ?> name="fwp_what" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 						<span aria-hidden="true"></span>
 					</div>
 
