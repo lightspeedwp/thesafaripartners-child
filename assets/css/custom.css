@@ -211,7 +211,24 @@ legend {
 	margin-left:10px;
 	text-transform: uppercase!important;
 }
-.type-lsx-to-review a.moretag{color: #262423!important;}
+.post-type-archive-lsx-to-review .lsx-to-archive-wrapper {
+	    display: block!important;
+}
+.post-type-archive-lsx-to-review .lsx-to-archive-content {
+    flex-grow: 1;
+    padding-right: 15px;
+    width: 100%!important;
+}
+.post-type-archive-lsx-to-review .lsx-to-archive-meta-data {
+    width: 100%!important;
+}
+.post-type-archive-lsx-to-review .lsx-to-archive-thumb {
+    flex-shrink: 0;
+    position: relative;
+    width: 25%!important;
+	height:120px!important;
+}
+.type-lsx-to-review a.moretag, .type-lsx-to-review .review a.moretag{color: #262423!important;}
 #footer-sub form input {
 	border-top:0;
 	border-right:0;
