@@ -63,7 +63,7 @@ get_header(); ?>
 						'post_type' => 'tour',
 						'post_status' => 'publish',
 						'facetwp' => true,
-						'post__id' => $tours,
+						'post__in' => $tours,
 						'posts_per_page' => 100,
 					);
 					tsp_mini_wizard_results( $query_args, $args );
