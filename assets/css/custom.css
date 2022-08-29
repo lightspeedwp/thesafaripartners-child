@@ -225,16 +225,16 @@ legend {
 .post-type-archive-lsx-to-special .lsx-to-archive-thumb {
     flex-shrink: 0;
     position: relative;
-    width: 33%!important;
-	height:200px!important;
-	display: contents;
+    width: 35%!important;
+	height:250px!important;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
+.post-type-archive-lsx-to-special .lsx-to-archive-items{margin-top: -1.25rem;}
 .post-type-archive-lsx-to-special .lsx-to-archive-thumb  img {
     object-fit: cover;
-    height: 200px!important;
+    height: 250px!important;
 }
 .type-lsx-to-review a.moretag, .type-lsx-to-review .review a.moretag{color: #262423!important;}
 #footer-sub form input {
