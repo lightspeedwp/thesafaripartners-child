@@ -16,6 +16,40 @@ function tsp_init_wizard() {
 }
 
 
+
+/**
+ * Calls the wizard results and the wizard js
+ *
+ * @param array $args
+ * @param string $content
+ * @return string
+ */
+function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
+	$defaults = array(
+		'taxonomy' => '',
+		'post_type' => 'tour',
+		'post_status' => 'publish',
+		'panels' => 'who,what,where,when,budget',
+		'selected' => '',
+	);
+	$args   = wp_parse_args( $args, $defaults );
+	$panels = explode( ',', $args['panels'] );
+
+	$panel_args = array();
+	if ( isset( $arg['selected'] ) ) {
+		$panel_args = array( $arg['selected'] );
+	}
+
+	ob_start();
+	tsp_mini_wizard( $panels, $args = array() );
+	tsp_mini_wizard_results( $args, $panel_args );
+
+	$return = ob_get_clean();
+
+	return $content . $return;
+}
+add_shortcode( 'mini_wizard', 'tsp_mini_wizard_shortcode' );
+
 function tsp_mini_wizard( $panels = array(), $args = array() ) {
 	if ( empty( $panels ) ) {
 		return;

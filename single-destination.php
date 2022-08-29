@@ -44,8 +44,9 @@ get_header(); ?>
 				$panels = array(
 					0 => array( 'who' ),
 					1 => array( 'what' ),
-					2 => array( 'when' ),
-					3 => array( 'budget' ),
+					2 => array( 'where' ),
+					3 => array( 'when' ),
+					4 => array( 'budget' ),
 				);
 				$args = array( 
 					'selected' => array( get_the_ID() ),
