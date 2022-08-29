@@ -2754,7 +2754,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    .special-template-default .content-area {
 	width:1204px;
-	margin:0px auto!important;
+	margin:30px auto!important;
 	float:none;
 	padding:0!important;
 }
