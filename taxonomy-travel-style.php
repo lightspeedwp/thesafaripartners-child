@@ -70,7 +70,7 @@ get_header(); ?>
 			'facetwp' => true,
 			'tax_query' => array(
 				array(
-					'taxonomy' => 'who',
+					'taxonomy' => 'travel-style',
 					'field'    => 'term_id',
 					'terms'    => array( get_queried_object_id() ),
 				),
