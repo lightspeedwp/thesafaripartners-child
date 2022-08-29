@@ -2752,6 +2752,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		float:none;
 		padding:0!important;
    }
+   .special-template-default .content-area {
+	width:1204px;
+	margin:0px auto!important;
+	float:none;
+	padding:0!important;
+}
 	.archive .archive-intro h2 {
 		padding-right:46%;
    }
