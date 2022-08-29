@@ -2651,7 +2651,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.lsx-testimonials-slot .lsx-testimonials-meta-wrap > .lsx-testimonials-meta {
 		margin: 0 4px;
 		display: none;}
-		.lsx-to-slider-inner .lsx-review{border:none;}
+		.lsx-to-slider-inner .lsx-review{border:none!important;}
+		.lsx-to-slider-inner .lsx-review:hover{border:none!important;}
+		.lsx-to-widget-item-wrap.lsx-review .lsx-to-widget-thumb{display:none;}
 
 		#footer-widgets #nav_menu-7 h3, #footer-widgets .lsx-testimonials h3{font-size: 20px!important;}
 
