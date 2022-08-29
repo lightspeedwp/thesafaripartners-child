@@ -201,6 +201,7 @@ legend {
 	display:none!important;
 }
 .post-type-archive-lsx-to-review .lsx-to-archive-thumb{display:none;}
+.lsx-to-archive-item > .lsx-to-archive-container > a.moretag{color: #262423!important;}
 
 .post-type-archive-lsx-to-review .type-lsx-to-review .moretag {
     background: #f5ecdd!important;
