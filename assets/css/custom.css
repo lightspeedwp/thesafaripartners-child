@@ -232,6 +232,7 @@ legend {
     overflow: hidden;
 }
 .post-type-archive-lsx-to-special .lsx-to-archive-items{margin-top: -1.25rem;}
+.post-type-archive-lsx-to-special .row{margin-left:0!important; margin-right:0!important;}
 .post-type-archive-lsx-to-special .lsx-to-archive-thumb  img {
     object-fit: cover;
     height: 250px!important;
