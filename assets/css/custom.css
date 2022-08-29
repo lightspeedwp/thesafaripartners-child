@@ -225,8 +225,16 @@ legend {
 .post-type-archive-lsx-to-special .lsx-to-archive-thumb {
     flex-shrink: 0;
     position: relative;
-    width: 25%!important;
-	height:120px!important;
+    width: 33%!important;
+	height:200px!important;
+	display: contents;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.post-type-archive-lsx-to-special .lsx-to-archive-thumb  img {
+    object-fit: cover;
+    height: 200px!important;
 }
 .type-lsx-to-review a.moretag, .type-lsx-to-review .review a.moretag{color: #262423!important;}
 #footer-sub form input {
