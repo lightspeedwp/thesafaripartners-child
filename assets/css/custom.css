@@ -205,10 +205,11 @@ legend {
 .post-type-archive-lsx-to-review .type-lsx-to-review .moretag {
     background: #f5ecdd!important;
     color: #262423!important;
-    text-transform: uppaercase;
+    text-transform: uppercase!important;
     border: 1px solid #262423!important;
 	margin-right:10px;margin-left:10px;
 }
+.type-lsx-to-review > .lsx-to-archive-container > a.moretag{color: #262423!important;}
 #footer-sub form input {
 	border-top:0;
 	border-right:0;
