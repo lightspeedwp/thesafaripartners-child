@@ -202,7 +202,7 @@ legend {
 }
 .post-type-archive-lsx-to-review .lsx-to-archive-thumb{display:none;}
 
-.post-type-archive-lsx-to-review .lsx-to-widget-content .moretag {
+.post-type-archive-lsx-to-review .type-lsx-to-review .moretag {
     background: #f5ecdd!important;
     color: #262423!important;
     text-transform: uppaercase;
