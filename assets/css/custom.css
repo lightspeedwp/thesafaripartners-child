@@ -211,18 +211,18 @@ legend {
 	margin-left:10px;
 	text-transform: uppercase!important;
 }
-.post-type-archive-lsx-to-review .lsx-to-archive-wrapper {
+.post-type-archive-lsx-to-special .lsx-to-archive-wrapper {
 	    display: block!important;
 }
-.post-type-archive-lsx-to-review .lsx-to-archive-content {
+.post-type-archive-lsx-to-special .lsx-to-archive-content {
     flex-grow: 1;
     padding-right: 15px;
     width: 100%!important;
 }
-.post-type-archive-lsx-to-review .lsx-to-archive-meta-data {
+.post-type-archive-lsx-to-special .lsx-to-archive-meta-data {
     width: 100%!important;
 }
-.post-type-archive-lsx-to-review .lsx-to-archive-thumb {
+.post-type-archive-lsx-to-special .lsx-to-archive-thumb {
     flex-shrink: 0;
     position: relative;
     width: 25%!important;
