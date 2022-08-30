@@ -2831,6 +2831,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:flex;
 		padding:0!important;
    }
+   .page-template #primary {
+	width:1204px!important;
+	margin:0 auto;
+	float:none!important;
+	display:flex;
+	padding:0!important;
+}
 	.tours-posts .lsx-to-slider-inner {
 		max-width:1204px!important;
 		margin:20px 0px 10px 0px!important;
