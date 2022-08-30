@@ -2835,7 +2835,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width:1204px!important;
 	margin:0 auto;
 	float:none!important;
-	display:flex;
+	display:block;
 	padding:0!important;
 }
 .page-template .archive-intro {
