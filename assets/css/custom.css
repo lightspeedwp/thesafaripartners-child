@@ -844,9 +844,11 @@ th {
 		height: 10px;margin: 9px 0 0 7px;
 		content: "";}
 		.single-lsx-to-destination .lsx-block-accordion details summary:hover{background:none;color:#000;}
+		.lsx-block-accordion details[open] summary{background:none;color:#000;}
 		.single-lsx-to-destination .lsx-block-accordion .lsx-accordion-text {
 			padding: 10px 1px;
 		}
+		.lsx-wizard-buttons-wrapper .btn:hover,.lsx-wizard-buttons-wrapper .btn:hover:active, .lsx-wizard-buttons-wrapper .btn:focus{background:#fff;}
 .archive #wizard .wizard-budget .lsx-to-content {
 	text-align:center;
 }
