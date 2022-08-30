@@ -31,17 +31,24 @@ $tag = get_field('tagline', $term);
 				</div>
 
 				<div class="col-sm-4">
-					<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
-						<div class="lsx-to-widget-thumb">
-							<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-block-post-grid-square' ); ?>
-						</div>
-					<?php } else { ?>
-						<div class="lsx-to-widget-thumb">
-							<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
-						</div>
-					<?php } ?>
-					<?php wp_reset_query(); ?>
+			<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) { ?>
+				<div class="lsx-to-widget-thumb">
+				<?php
+
+					$image_id = get_field('page_image', $term, false); 
+					$size = 'medium';
+					$image = wp_get_attachment_image_src($image_id, $size);
+
+		?>
+  		<img src="<?php echo $image[0]; ?>" />
 				</div>
+			<?php } else { ?>
+				<div class="lsx-to-widget-thumb">
+					<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
+				</div>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		</div>
 			</div>
 
 			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
