@@ -698,13 +698,13 @@ th {
 	border-radius:0!important;
 	box-shadow:none;
 }
-.page-template .lsx-wizard-button-next,.page-template-template-wizard .lsx-wizard-button-next {
+.page-template-template-travel-style .lsx-wizard-button-next,.page-template-template-wizard .lsx-wizard-button-next {
 	background:#a55244!important;
 	padding:10px 24px!important;
 	color:#fff!important;
 	border-radius:0!important;
 }
-.page-template .lsx-wizard-button-next:hover,.page-template-template-wizard .lsx-wizard-button-next:hover {
+.page-template-template-travel-style .lsx-wizard-button-next:hover,.page-template-template-wizard .lsx-wizard-button-next:hover {
 	background:#262423!important;
 }
 .archive .lsx-wizard-button-next {
@@ -1756,63 +1756,63 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .page-template-template-contact .lsx-contact-module-image iframe {
 	display:none!important;
 }
-.page-template #wizard .wizard-who .lsx-to-content {
+.page-template-template-travel-style #wizard .wizard-who .lsx-to-content {
 	font-family:"moret",serif!important;
 	font-size:18px!important;
 	text-align:center;
 }
-.page-template #wizard {
+.page-template-template-travel-style #wizard {
 	padding-bottom:10px;
 }
-.page-template #wizard .step-content .col-md-3 {
+.page-template-template-travel-style #wizard .step-content .col-md-3 {
 	padding-right:35px!important;
 }
-.page-template #wizard .step-content .col-sm-2 {
+.page-template-template-travel-style #wizard .step-content .col-sm-2 {
 	padding:0 2px!important;
 }
-.page-template .wizard-where .col-sm-2 {
+.page-template-template-travel-style .wizard-where .col-sm-2 {
 	height:210px;
 }
-.page-template .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb {
+.page-template-template-travel-style .wizard-where .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb {
 	margin-bottom:10px;
 }
-.page-template .safari-styles {
+.page-template-template-travel-style .safari-styles {
 	margin-top:0!important;
 }
-.page-template #main .col-xs-1,.page-template #main .col-sm-1,.page-template #main .col-md-1,.page-template #main .col-lg-1,.page-template #main .col-xs-2,.page-template #main .col-sm-2,.page-template #main .col-md-2,.page-template #main .col-lg-2,.page-template #main .col-xs-3,.page-template #main .col-sm-3,.page-template #main .col-md-3,.page-template #main .col-lg-3,.page-template #main .col-xs-4,.page-template #main .col-sm-4,.page-template #main .col-md-4,.page-template #main .col-lg-4,.page-template #main .col-xs-5,.page-template #main .col-sm-5,.page-template #main .col-md-5,.page-template #main .col-lg-5,.page-template #main .col-xs-6,.page-template #main .col-sm-6,.page-template #main .col-md-6,.page-template #main .col-lg-6,.page-template #main .col-xs-7,.page-template #main .col-sm-7,.page-template #main .col-md-7,.page-template #main .col-lg-7,.page-template #main .col-xs-8,.page-template #main .col-sm-8,.page-template #main .col-md-8,.page-template #main .col-lg-8,.page-template #main .col-xs-9,.page-template #main .col-sm-9,.page-template #main .col-md-9,.page-template #main .col-lg-9,.page-template #main .col-xs-10,.page-template #main .col-sm-10,.page-template #main .col-md-10,.page-template #main .col-lg-10,.page-template #main .col-xs-11,.page-template #main .col-sm-11,.page-template #main .col-md-11,.page-template #main .col-lg-11,.page-template #main .col-xs-12,.page-template #main .col-sm-12,.page-template #main .col-md-12,.page-template #main .col-lg-12 {
+.page-template-template-travel-style #main .col-xs-1,.page-template-template-travel-style #main .col-sm-1,.page-template-template-travel-style #main .col-md-1,.page-template-template-travel-style #main .col-lg-1,.page-template-template-travel-style #main .col-xs-2,.page-template-template-travel-style #main .col-sm-2,.page-template-template-travel-style #main .col-md-2,.page-template-template-travel-style #main .col-lg-2,.page-template-template-travel-style #main .col-xs-3,.page-template-template-travel-style #main .col-sm-3,.page-template-template-travel-style #main .col-md-3,.page-template-template-travel-style #main .col-lg-3,.page-template-template-travel-style #main .col-xs-4,.page-template-template-travel-style #main .col-sm-4,.page-template-template-travel-style #main .col-md-4,.page-template-template-travel-style #main .col-lg-4,.page-template-template-travel-style #main .col-xs-5,.page-template-template-travel-style #main .col-sm-5,.page-template-template-travel-style #main .col-md-5,.page-template-template-travel-style #main .col-lg-5,.page-template-template-travel-style #main .col-xs-6,.page-template-template-travel-style #main .col-sm-6,.page-template-template-travel-style #main .col-md-6,.page-template-template-travel-style #main .col-lg-6,.page-template-template-travel-style #main .col-xs-7,.page-template-template-travel-style #main .col-sm-7,.page-template-template-travel-style #main .col-md-7,.page-template-template-travel-style #main .col-lg-7,.page-template-template-travel-style #main .col-xs-8,.page-template-template-travel-style #main .col-sm-8,.page-template-template-travel-style #main .col-md-8,.page-template-template-travel-style #main .col-lg-8,.page-template-template-travel-style #main .col-xs-9,.page-template-template-travel-style #main .col-sm-9,.page-template-template-travel-style #main .col-md-9,.page-template-template-travel-style #main .col-lg-9,.page-template-template-travel-style #main .col-xs-10,.page-template-template-travel-style #main .col-sm-10,.page-template-template-travel-style #main .col-md-10,.page-template-template-travel-style #main .col-lg-10,.page-template-template-travel-style #main .col-xs-11,.page-template-template-travel-style #main .col-sm-11,.page-template-template-travel-style #main .col-md-11,.page-template-template-travel-style #main .col-lg-11,.page-template-template-travel-style #main .col-xs-12,.page-template-template-travel-style #main .col-sm-12,.page-template-template-travel-style #main .col-md-12,.page-template-template-travel-style #main .col-lg-12 {
 	padding:0!important;
 }
-.page-template .lsx-wizard-progress-buttons {
+.page-template-template-travel-style .lsx-wizard-progress-buttons {
 	width:100%!important;
 }
-.page-template .lsx-wizard-progress-buttons .steps1 {
+.page-template-template-travel-style .lsx-wizard-progress-buttons .steps1 {
 	display:inline-block!important;
 }
-.page-template .lsx-wizard-progress-buttons {
+.page-template-template-travel-style .lsx-wizard-progress-buttons {
 	text-transform:capitalize;
 }
-.page-template .wizard-who .lsx-to-widget-thumb {
+.page-template-template-travel-style .wizard-who .lsx-to-widget-thumb {
 	margin:0 auto!important;
 	text-align:center;
 }
-.page-template #wizard .lsx-to-content {
+.page-template-template-travel-style #wizard .lsx-to-content {
 	font-family:"moret",serif!important;
 	font-size:22px!important;
 }
-.page-template #wizard .wizard-budget .lsx-to-content {
+.page-template-template-travel-style #wizard .wizard-budget .lsx-to-content {
 	text-align:center;
 }
-.page-template #wizard .wizard-budget {
+.page-template-template-travel-style #wizard .wizard-budget {
 	margin-top:10px;
 }
-.page-template #wizard .wizard-who .lsx-to-content {
+.page-template-template-travel-style #wizard .wizard-who .lsx-to-content {
 	font-family:"moret",serif!important;
 	font-size:18px!important;
 	text-align:center;
 	padding-top:30px;
 }
-.page-template #wizard .step-content .wizard-what .col-sm-2 {
-    height:250px!important;
+.page-template-template-travel-style #wizard .step-content .wizard-what .col-sm-2 {
+    height:230px!important;
 }
 .safari-styles .lsx-to-widget-title {
 	text-align:left;
@@ -2773,6 +2773,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			color: #fff!important;
 			padding: 3px;}	
 
+			.page-template-template-travel-style .wizard-budget .lsx-to-widget-thumb {
+				margin: 0 auto!important;
+				text-align: center;
+			   }
+
 @media (max-width:1199px) {
 	#masthead .navbar-header {
 		width:215px;
@@ -2790,8 +2795,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
-   .page-template .step-content, .archive .step-content{min-height:400px!important;}
-   .page-template .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+   .page-template-template-travel-style .step-content, .archive .step-content{min-height:400px!important;}
+   .page-template-template-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 147px!important;
     height: 205px!important;
@@ -2799,15 +2804,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     padding-left: 120px;
     padding-top: 6px;
    }
-   .page-template .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
+   .page-template-template-travel-style .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 147px!important;
-    height: 215px!important;
+    height: 222px!important;
     margin-left: 0px;
     padding-left: 120px;
     padding-top: 6px;
    }
-   .page-template .lsx-wizard-progress-buttons-wrapper {
+  
+   .page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper {
     position: absolute;
     z-index: 1;
     width: 569px;
@@ -2919,23 +2925,23 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:flex;
 		padding:0!important;
    }
-   .page-template .notfull {
+   .page-template-template-travel-style .notfull {
 	width:1204px!important;
 	margin:0 auto;
 	float:none!important;
 	display:block;
 	padding:0!important;
 }
-.page-template .row{padding:0!important;margin:0!important;}
-.page-template p .moretag {
+.page-template-template-travel-style .row{padding:0!important;margin:0!important;}
+.page-template-template-travel-style p .moretag {
     display: none!important;}
-	.page-template .tourslink .moretag {
+	.page-template-template-travel-style .tourslink .moretag {
 		display: block!important;
 		width: 100%!important;
 		margin: 6px 0 0 0px!important;
 		color: #262423!important;
 	}	
-	.page-template .toptours-posts .lsx-to-slider-inner {
+	.page-template-template-travel-style .toptours-posts .lsx-to-slider-inner {
 		width: 1204px!important;
 		margin: 5px 0px 20px 0px!important;
 		max-width: 1204px!important;
@@ -2946,7 +2952,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .page-template-template-travel-style #primary{padding-right:0!important;padding-left:0!important;}
 .page-template-template-travel-style .notfull{border-top: 1px solid #262423;padding-top:40px!important;}
-.page-template-template-travel-style .shaman-intro{margin-bottom:20px;}
+.page-template-template-travel-style .shaman-intro{margin-bottom:40px!important;}
 	.tours-posts .lsx-to-slider-inner {
 		max-width:1204px!important;
 		margin:20px 0px 10px 0px!important;
@@ -3718,12 +3724,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding:0!important;
 		margin:0!important 
    }
-   .page-template .wizard-who,.page-template .wizard-what,.page-template .wizard-where,.page-template .wizard-budget {
+   .page-template-template-travel-style .wizard-who,.page-template-template-travel-style .wizard-what,.page-template-template-travel-style .wizard-where,.page-template-template-travel-style .wizard-budget {
 	display:block!important;
 	padding:0!important;
 	margin:0!important 
 }
-.page-template .wizard-who,.page-template .wizard-where,.page-template .wizard-what,.page-template .wizard-when,.page-template .wizard-budget {
+.page-template-template-travel-style .wizard-who,.page-template-template-travel-style .wizard-where,.page-template-template-travel-style .wizard-what,.page-template-template-travel-style .wizard-when,.page-template-template-travel-style .wizard-budget {
 	padding:0!important;
 	margin:0!important 
 }
@@ -3732,8 +3738,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:100%!important;
 		padding:0!important;
    }
-   .page-template #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
-   .page-template #wizard .step-content .col-md-9 {
+   .page-template-template-travel-style #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
+   .page-template-template-travel-style #wizard .step-content .col-md-9 {
 	   width:100%!important;
 	   padding:0!important;
   }
