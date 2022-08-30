@@ -2915,9 +2915,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	}
 .page-template-template-travel-style .entry-content {
     padding-bottom: 80px!important;
-    margin: 0px 0px 40px 0px!important;
-    border-bottom: 1px solid #262423;
+    margin: 0px!important;
 }
+.page-template-template-travel-style .notfull{border-top: 1px solid #262423;margin-top:40px;}
 	.tours-posts .lsx-to-slider-inner {
 		max-width:1204px!important;
 		margin:20px 0px 10px 0px!important;
