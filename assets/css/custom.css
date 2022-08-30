@@ -2833,6 +2833,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				.archive .nav>li{margin-right:10px;}
 				.archive .lsx-wizard-progress-buttons-wrapper{bottom: 15px!important;
 					right: 16%!important;}
+	
 
 @media (max-width:1199px) {
 	#masthead .navbar-header {
@@ -2851,6 +2852,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .mini-wizard-wrapper{margin-bottom:50px;}
+   .mini-wizard-results{margin-top:50px!important;}
    .page-template-template-travel-style .step-content, .archive .step-content{min-height:400px!important;}
    .page-template-template-travel-style .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
