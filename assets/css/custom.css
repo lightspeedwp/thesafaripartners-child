@@ -2778,6 +2778,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				text-align: center;
 			   }
 
+			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul {
+				list-style:none;
+				counter-reset:my-awesome-counter;
+			}
+			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li {
+				counter-increment:my-awesome-counter;
+			}
+			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li::before {
+				content:counter(my-awesome-counter) ". ";
+			}
+
 @media (max-width:1199px) {
 	#masthead .navbar-header {
 		width:215px;
@@ -4159,6 +4170,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	}
 	.archive .wizard-where .col-sm-2 {
 		height: 156px!important;}
+
+		.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul {
+			list-style:none;
+			counter-reset:my-awesome-counter;
+		}
+		.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li {
+			counter-increment:my-awesome-counter;
+		}
+		.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li::before {
+			content:counter(my-awesome-counter) ". ";
+		}
 }
 @media screen and (max-width:767px) {
 	.row {
@@ -4593,6 +4615,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.archive .lsx-wizard-progress-buttons-wrapper ul li::before {
 		content:counter(my-awesome-counter) ". ";
    }
+   .page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul {
+	list-style:none;
+	counter-reset:my-awesome-counter;
+}
+.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li {
+	counter-increment:my-awesome-counter;
+}
+.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li::before {
+	content:counter(my-awesome-counter) ". ";
+}
 	.lsx-wizard-step .col-md-3,.lsx-wizard-step .col-md-9,.lsx-wizard-step .col-md-2,.lsx-wizard-step .col-xs-3 {
 		padding:0!important;
 		width:100%!important;
