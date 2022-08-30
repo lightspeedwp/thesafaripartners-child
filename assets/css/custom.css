@@ -2804,20 +2804,35 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				text-align: center;
 			   }
 
-			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul {
+			.page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper ul {
 				list-style:none;
 				counter-reset:my-awesome-counter;
 			}
-			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li {
+			.page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper ul li {
 				counter-increment:my-awesome-counter;
 			}
-			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li::before {
+			.page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper ul li::before {
 				content:counter(my-awesome-counter) ". ";
 			}
 			.page-template-template-travel-style .nav>li>a{display:inline-block;padding:10px 15px 10px 0;}
 			.page-template-template-travel-style .nav>li{margin-right:10px;}
 			.page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper{bottom: 15px!important;
 				right: 16%!important;}
+
+				.archive .lsx-wizard-progress-buttons-wrapper ul {
+					list-style:none;
+					counter-reset:my-awesome-counter;
+				}
+				.archive .lsx-wizard-progress-buttons-wrapper ul li {
+					counter-increment:my-awesome-counter;
+				}
+				.archive .lsx-wizard-progress-buttons-wrapper ul li::before {
+					content:counter(my-awesome-counter) ". ";
+				}
+				.archive .nav>li>a{display:inline-block;padding:10px 15px 10px 0;}
+				.archive .nav>li{margin-right:10px;}
+				.archive .lsx-wizard-progress-buttons-wrapper{bottom: 15px!important;
+					right: 16%!important;}
 
 @media (max-width:1199px) {
 	#masthead .navbar-header {
