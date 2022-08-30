@@ -2831,12 +2831,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:flex;
 		padding:0!important;
    }
-   .page-template #main {
+   .page-template .notfull {
 	width:1204px!important;
 	margin:0 auto;
 	float:none!important;
 	display:flex;
 	padding:0!important;
+}
+.page-template .archive-intro {
+    padding-bottom: 80px!important;
+    margin: 60px 0px 40px 0px!important;
+    width: 1204px!important;
+    border-bottom: 1px solid #262423;
 }
 	.tours-posts .lsx-to-slider-inner {
 		max-width:1204px!important;

@@ -13,6 +13,8 @@ get_header(); ?>
 
 		<?php lsx_content_before(); ?>
 
+		<main id="main" class="site-main" role="main">
+
 		<?php lsx_content_top(); ?>
 
 		<?php if ( have_posts() ) : ?>
@@ -29,7 +31,7 @@ get_header(); ?>
 		<?php endif; ?>
 		<?php wp_reset_query(); ?>
 
-		<main id="main" class="site-main" role="main">
+		<div class="notfull">
 
 		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
@@ -53,7 +55,7 @@ get_header(); ?>
 				tsp_mini_wizard_results( $query_args, $args ); ?>
 
 			<?php lsx_content_bottom(); ?>
-
+			</div>
 		</main><!-- #main -->
 
 		<?php lsx_content_after(); ?>
