@@ -2788,6 +2788,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			.page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li::before {
 				content:counter(my-awesome-counter) ". ";
 			}
+			.page-template-template-travel-style .nav>li>a{display:inline-block;padding:10px 15px 10px 0;}
+			.page-template-template-travel-style .nav>li{margin-right:10px;}
+			.page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper{bottom: 15px!important;
+				right: 16%!important;}
 
 @media (max-width:1199px) {
 	#masthead .navbar-header {
@@ -3365,7 +3369,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding-right:3px;
 		padding-left:3px;
 		margin-bottom:8px;
-		height:240px;
+		height:220px;
    }
 	.wizard-what .lsx-to-widget-thumb img {
 		overflow:hidden;
@@ -3425,8 +3429,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.page-template-template-wizard .wizard-who .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border: 1px solid #ce9e57;
-		width: 143px;
-		height: 208px;
+		width: 142px;
+		height: 222px;
 		margin-left: 0px;
 		padding-left: 120px;
 		padding-top: 6px;
@@ -3442,8 +3446,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border: 1px solid #ce9e57;
-		width: 143px;
-		height: 208px;
+		width: 142px;
+		height: 222px;
 		margin-left: 0px;
 		padding-left: 120px;
 		padding-top: 6px;
