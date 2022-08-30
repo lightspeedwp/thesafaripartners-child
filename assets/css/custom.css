@@ -829,11 +829,11 @@ th {
     background: transparent;
     border: 0px solid #e0e0e0;
     border-radius: 0px;
-    color: #262423;}
+    color: #ce9e57;}
 	.single-lsx-to-destination .lsx-block-accordion details summary{display:inline;}
 	.single-lsx-to-destination .lsx-block-accordion .lsx-accordion-title {
 		padding: 10px 0px;
-		font-weight: bold;
+		font-weight: normal;
 		font-family:"moret",serif!important;
 		color: #262423;
 	}
@@ -841,8 +841,12 @@ th {
 		background-size: 10px 10px;
 		display: inline-block;
 		width: 10px;
-		height: 10px;
+		height: 10px;margin: 9px 0 0 7px;
 		content: "";}
+		.single-lsx-to-destination .lsx-block-accordion details summary:hover{background:none;color:#000;}
+		.single-lsx-to-destination .lsx-block-accordion .lsx-accordion-text {
+			padding: 10px 1px;
+		}
 .archive #wizard .wizard-budget .lsx-to-content {
 	text-align:center;
 }
