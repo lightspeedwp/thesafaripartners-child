@@ -2831,7 +2831,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:flex;
 		padding:0!important;
    }
-   .page-template #primary {
+   .page-template #main {
 	width:1204px!important;
 	margin:0 auto;
 	float:none!important;

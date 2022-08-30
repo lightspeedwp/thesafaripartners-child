@@ -13,8 +13,6 @@ get_header(); ?>
 
 		<?php lsx_content_before(); ?>
 
-		<main id="main" class="site-main" role="main">
-
 		<?php lsx_content_top(); ?>
 
 		<?php if ( have_posts() ) : ?>
@@ -30,6 +28,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 		<?php wp_reset_query(); ?>
+
+		<main id="main" class="site-main" role="main">
 
 		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
