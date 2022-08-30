@@ -3078,12 +3078,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right:25%;
    }
 	.archive .lsx-wizard-progress-buttons-wrapper {
-		position:absolute!important;
-		z-index:1;
-		left:48%!important;
-		margin:4px auto 6px!important;
-		width:500px;
-		bottom:20px;
+			position: absolute!important;
+			z-index: 1;
+			left: 36%!important;
+			margin: 4px auto 6px!important;
+			width: 500px;
+			bottom: 6px!important;
    }
 	.single-lsx-to-tour .lsx-wizard-progress-buttons-wrapper {
 		position:relative;
@@ -3100,14 +3100,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		top:64px;
 		left:53.5%;
 		z-index:99;
-   }
-	.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
-		position:absolute!important;
-		z-index:1;
-		left:48%!important;
-		margin:4px auto 6px!important;
-		width:500px;
-		bottom:20px;
    }
 	.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
 		position:absolute!important;
