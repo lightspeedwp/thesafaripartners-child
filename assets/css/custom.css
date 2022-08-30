@@ -2838,6 +2838,20 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display:block;
 	padding:0!important;
 }
+.page-template .row{padding:0!important;}
+.page-template p .moretag {
+    display: none!important;}
+	.page-template .tourslink .moretag {
+		display: block!important;
+		width: 100%!important;
+		margin: 6px 0 0 0px!important;
+		color: #262423!important;
+	}	
+	.page-template .toptours-posts .lsx-to-slider-inner {
+		width: 1204px!important;
+		margin: 5px 0px 20px 0px!important;
+		max-width: 1204px!important;
+	}
 .page-template .archive-intro {
     padding-bottom: 80px!important;
     margin: 60px 0px 40px 0px!important;
