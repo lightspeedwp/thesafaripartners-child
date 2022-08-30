@@ -2785,6 +2785,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .page-template .step-content, .archive .step-content{min-height:450px!important;}
    #footer-widgets blockquote {
     text-align: left!important;
    }
@@ -2896,7 +2897,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display:block;
 	padding:0!important;
 }
-.page-template .row{padding:0!important;}
+.page-template .row{padding:0!important;margin:0!important;}
 .page-template p .moretag {
     display: none!important;}
 	.page-template .tourslink .moretag {
@@ -2910,7 +2911,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin: 5px 0px 20px 0px!important;
 		max-width: 1204px!important;
 	}
-.page-template .archive-intro {
+.page-template-template-travel-style .entry-content {
     padding-bottom: 80px!important;
     margin: 60px 0px 40px 0px!important;
     width: 1204px!important;
