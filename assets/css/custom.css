@@ -825,6 +825,24 @@ th {
 	font-family:"moret",serif!important;
 	font-size:22px!important;
 }
+.single-lsx-to-destination .lsx-block-accordion{
+    background: transparent;
+    border: 0px solid #e0e0e0;
+    border-radius: 0px;
+    color: #262423;}
+	.single-lsx-to-destination .lsx-block-accordion details summary{display:inline;}
+	.single-lsx-to-destination .lsx-block-accordion .lsx-accordion-title {
+		padding: 10px 0px;
+		font-weight: bold;
+		font-family:"moret",serif!important;
+		color: #262423;
+	}
+	.single-lsx-to-destination .lsx-block-accordion details summary:after{background-image: url(img/tsp-see-more-arrow.svg);
+		background-size: 10px 10px;
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		content: "";}
 .archive #wizard .wizard-budget .lsx-to-content {
 	text-align:center;
 }
