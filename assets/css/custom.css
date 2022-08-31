@@ -916,14 +916,13 @@ th {
 	opacity:1;
 }
 .single-lsx-to-destination #wizard .step-content .wizard-what .col-sm-2 {
-	height:250px!important;
+	height:232px!important;
 }
 .single-lsx-to-destination .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border:1px solid #ce9e57;
 	width:148px;
-	height:238px;
+	height:228px;
 	margin-left:0px;
-	padding-left:124px;
 	padding-top:0px;
 	background:none;
 	opacity:1;
@@ -1067,7 +1066,7 @@ th {
 }
 .single-lsx-to-destination #wizard .lsx-to-content {
 	font-family:"moret",serif!important;
-	font-size:22px!important;
+	font-size:19px!important;
 }
 .single-lsx-to-destination #wizard .wizard-budget .lsx-to-content {
 	text-align:center;
