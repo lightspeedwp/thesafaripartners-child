@@ -823,7 +823,7 @@ th {
 }
 .archive #wizard .lsx-to-content {
 	font-family:"moret",serif!important;
-	font-size:22px!important;
+	font-size:19px!important;
 }
 .single-lsx-to-destination .lsx-block-accordion{
     background: transparent;
@@ -837,12 +837,13 @@ th {
 		font-family:"moret",serif!important;
 		color: #ce9e57;
 	}
-	.single-lsx-to-destination .lsx-block-accordion details summary:after{background-image: url(img/tsp-see-more-arrow.svg);
+	.single-lsx-to-destination .lsx-block-accordion details summary:after{background-image: url(img/tsp-see-more-arrow-down-gold.svg);
 		background-size: 10px 10px;color: #ce9e57;
 		display: inline-block;
 		width: 10px;
 		height: 10px;margin: 9px 0 0 7px;
 		content: "";}
+		.single-lsx-to-destination .lsx-block-accordion details[open] summary:after{background-image: url(img/tsp-see-more-arrow-up-black.svg);}
 		.single-lsx-to-destination .lsx-block-accordion details summary:hover{background:none;color:#000;}
 		.lsx-block-accordion details[open] summary{background:none;color:#000;}
 		.single-lsx-to-destination .lsx-block-accordion .lsx-accordion-text {
@@ -3551,12 +3552,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     opacity: 1;
    }
 	.archive #wizard .step-content .wizard-what .col-sm-2 {
-		height:250px!important;
+		height:232px!important;
    }
 	.archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border:1px solid #ce9e57;
 		width:144px;
-		height:230px;
+		height:226px;
 		margin-left:0px;
 		padding-top:0px;
 		background:none;
@@ -3581,6 +3582,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:inline-block;
 		padding-left:6px;
 		color:#262423;
+		font-weight:normal;
    }
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]+span {
 		border-radius:50%;
@@ -4003,6 +4005,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display:inline-block;
 	padding-left:6px;
 	color:#262423;
+	font-weight:normal;
 }
 .lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]+span {
 	border-radius:50%;
