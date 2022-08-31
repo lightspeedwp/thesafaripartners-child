@@ -375,6 +375,7 @@ legend {
 	margin-top:4px;
 	margin-bottom:2px;
 }
+#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content{display:none;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4{font-size:22px!important;margin-bottom:-4px;
 }
 .lsx-to-slider-inner .lsx-to-widget-item-wrap {
