@@ -950,6 +950,7 @@ th {
 	font-size:18px!important;
 	text-align:center;
 }
+.single-lsx-to-review #accommodation, .single-lsx-to-review #tours, .single-lsx-to-review #destinations{display:none;}
 .lsx-cta {
 	background:#a55244!important;
 	padding:10px 24px!important;
@@ -2863,6 +2864,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     padding-left: 120px;
     padding-top: 6px;
    }
+   .single-lsx-to-review .content-area{
+	width:1204px;
+	margin:0 auto;
+	padding:0!important;
+}
    .page-template-template-travel-style .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
     border: 1px solid #ce9e57;
     width: 147px!important;
