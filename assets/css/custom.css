@@ -3288,7 +3288,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin-left:-14px;
 		color:#000;
    }
-   #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu li:hover .lsx-to-widget-item-wrap a{color: #ce9e57!important;}
+   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item:hover .lsx-to-widget-item-wrap a{color: #ce9e57!important;}
 	#mega-menu-wrap-primary #mega-menu-item-lsx_to_taxonomy_widget-4 .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 		height:274px!important;
    }
