@@ -381,6 +381,7 @@ legend {
 }
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4 a{color:#262423!important;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap:hover h4 a{color:#ce9e57!important;}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item{color:#262423;}
 .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 	padding:0!important;
 	margin:1px;
@@ -2624,8 +2625,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .right-align {
 	float:right;
-	margin:4px -6px 0px 0!important;
-	height:10px;
+	margin:-3px -6px 0px 0!important;
+	height:17px;
 }
 .wizardstart {
 	position:absolute!important;
