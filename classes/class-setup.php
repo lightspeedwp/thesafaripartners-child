@@ -39,6 +39,7 @@ class Setup {
 		add_action( 'init', array( $this, 'who_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'budget_taxonomy_setup' ), 90 );
+		add_action( 'init', array( $this, 'tour_type_setup' ), 100 );
 		add_filter( 'register_taxonomy_args', array( $this, 'change_taxonomies_slug' ), 10, 2 );
 		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
@@ -204,6 +205,43 @@ class Setup {
 		register_taxonomy( 'budget', array( 'tour' ), $args );
 	}
 
+	public function tour_type_setup() {
+		$labels = array(
+			'name'                       => _x( 'Tour Type', 'Taxonomy General Name', 'thesafaripartners-child' ),
+			'singular_name'              => _x( 'Tour Type', 'Taxonomy Singular Name', 'thesafaripartners-child' ),
+			'menu_name'                  => __( 'Tour Types', 'thesafaripartners-child' ),
+			'all_items'                  => __( 'All Types', 'thesafaripartners-child' ),
+			'parent_item'                => __( 'Parent Type', 'thesafaripartners-child' ),
+			'parent_item_colon'          => __( 'Parent Type:', 'thesafaripartners-child' ),
+			'new_item_name'              => __( 'New Type Name', 'thesafaripartners-child' ),
+			'add_new_item'               => __( 'Add New Type', 'thesafaripartners-child' ),
+			'edit_item'                  => __( 'Edit Type', 'thesafaripartners-child' ),
+			'update_item'                => __( 'Update Type', 'thesafaripartners-child' ),
+			'view_item'                  => __( 'View Type', 'thesafaripartners-child' ),
+			'separate_items_with_commas' => __( 'Separate types with commas', 'thesafaripartners-child' ),
+			'add_or_remove_items'        => __( 'Add or remove types', 'thesafaripartners-child' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'thesafaripartners-child' ),
+			'popular_items'              => __( 'Popular Types', 'thesafaripartners-child' ),
+			'search_items'               => __( 'Search Types', 'thesafaripartners-child' ),
+			'not_found'                  => __( 'Not Found', 'thesafaripartners-child' ),
+			'no_terms'                   => __( 'No items', 'thesafaripartners-child' ),
+			'items_list'                 => __( 'Types list', 'thesafaripartners-child' ),
+			'items_list_navigation'      => __( 'Types list navigation', 'thesafaripartners-child' ),
+		);
+		$args = array(
+			'labels'                     => $labels,
+			'hierarchical'               => false,
+			'public'                     => false,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => false,
+			'show_tagcloud'              => false,
+			'rewrite'             		 => false,
+			'show_in_rest'               => true,
+		);
+		register_taxonomy( 'tour-type', array( 'tour' ), $args );
+	}
+
 	/**
 	 * Register the taxonomy menus.
 	 *
@@ -213,6 +251,7 @@ class Setup {
 		add_submenu_page( 'tour-operator', __( 'Who', 'thesafaripartners-child' ), __( 'Who', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=who' );
 		add_submenu_page( 'tour-operator', __( 'When', 'thesafaripartners-child' ), __( 'When', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=when' );
 		add_submenu_page( 'tour-operator', __( 'Budget', 'thesafaripartners-child' ), __( 'Budget', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=budget' );
+		add_submenu_page( 'tour-operator', __( 'Tour Type', 'thesafaripartners-child' ), __( 'Tour Type', 'thesafaripartners-child' ), 'edit_posts', 'edit-tags.php?taxonomy=tour-type' );
 	}
 
 	public function admin_menu_position( $position, $config ) {
