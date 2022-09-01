@@ -2785,13 +2785,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.lsx-testimonials-slot .lsx-testimonials-meta-wrap > .lsx-testimonials-meta {
 		margin: 0 4px;
 		display: none;}
+		.lsx-testimonials-slider .lsx-to-slider-inner{margin:0!important;}	
 		.lsx-to-slider-inner .lsx-review{border:none!important;}
-		.lsx-to-slider-inner .lsx-review h4{ine-height: 21px;
+		.lsx-to-slider-inner .lsx-review h4{
 			position: absolute;
 			bottom: -70px;
 			left: 0;
 			width: 88%;}
 		.lsx-to-slider-inner .lsx-review h4 a{line-height: 22px!important;}
+		.lsx-testimonials-slider{min-height:250px;}
 		.lsx-to-slider-inner .lsx-review:hover{border:none!important;}
 		.lsx-to-slider-inner .lsx-review .type-lsx-to-review{position:relative;}
 		.lsx-to-widget-item-wrap.lsx-review .lsx-to-widget-thumb{display:none;}
