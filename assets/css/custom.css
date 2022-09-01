@@ -379,7 +379,7 @@ legend {
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover p{display:block!important;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4{font-size:22px!important;margin-bottom:-4px;color:#ce9e57!important
 }
-#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4{color:#ce9e57!important;}
+#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4 a{color:#262423!important;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap:hover h4 a{color:#ce9e57!important;}
 .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 	padding:0!important;
@@ -644,11 +644,11 @@ legend {
 .archive .wizard-who,.archive .wizard-what,.archive .wizard-where,.archive .wizard-budget {
 	margin:0 auto;
 	display:flex;
-	padding:80px 0px 0px 24px;
+	padding:50px 0px 0px 24px;
 }
 .archive .wizard-when {
 	margin:0 auto;
-	padding:80px 0px 0px 24px;
+	padding:50px 0px 0px 24px;
 }
 .lsx-wizard {
 	position:relative;
@@ -3154,36 +3154,37 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		width:1240px;
 		display:flex;
-		padding:80px 0px 0px 24px;
+		padding:50px 0px 0px 24px;
    }
 	.page-template-template-wizard .wizard-what {
 		margin:0 auto;
 		width:1240px;
 		display:flex;
-		padding:80px 0px 0px 24px;
+		padding:50px 0px 0px 24px;
    }
 	.page-template-template-wizard .wizard-where {
 		margin:0 auto;
 		width:1240px;
 		display:flex;
-		padding:80px 0px 0px 24px;
+		padding:50px 0px 0px 24px;
    }
 	.page-template-template-wizard .wizard-when {
 		margin:0 auto;
 		width:1240px;
-		padding:80px 0px 0px 24px;
+		padding:50px 0px 0px 24px;
    }
 	.page-template-template-wizard .wizard-budget {
 		margin:0 auto;
 		width:1240px;
 		display:flex;
-		padding:80px 0px 0px 24px;
+		padding:50px 0px 0px 24px;
    }
 	.lsx-wizard-buttons-wrapper {
 		margin:0 auto;
 		width:1204px;
-		padding:0 9px;
+		padding:0px;
    }
+   .lsx-wizard-buttons-wrapper .col-md-12{padding:0!important;}
 	.post-template-default .content {
 		margin:0 auto;
 		width:1204px;
