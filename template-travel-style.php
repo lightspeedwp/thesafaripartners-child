@@ -31,6 +31,8 @@ get_header(); ?>
 		<?php endif; ?>
 		<?php wp_reset_query(); ?>
 
+		<div class="notfull">
+
 		<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
 			<?php 
@@ -53,7 +55,7 @@ get_header(); ?>
 				tsp_mini_wizard_results( $query_args, $args ); ?>
 
 			<?php lsx_content_bottom(); ?>
-
+			</div>
 		</main><!-- #main -->
 
 		<?php lsx_content_after(); ?>
