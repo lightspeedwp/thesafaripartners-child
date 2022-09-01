@@ -377,8 +377,9 @@ legend {
 }
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content p{display:none;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover p{display:block!important;}
-#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4{font-size:22px!important;margin-bottom:-4px;
+#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4{font-size:22px!important;margin-bottom:-4px;color:#ce9e57!important
 }
+#mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-content .destinationhover h4{color:#ce9e57!important;}
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap:hover h4 a{color:#ce9e57!important;}
 .lsx-to-slider-inner .lsx-to-widget-item-wrap {
 	padding:0!important;
@@ -2850,6 +2851,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		z-index:999;
    }
 }
+@media (min-width: 1280px){
+.lsx-to-slider-inner {
+    margin: 0 -15px;
+    width: calc(100% + 0px);
+}
+}
 @media screen and (min-width:1200px) {
 	#masthead>.container {
 		width:1204px;
@@ -3216,10 +3223,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-family:"moret",serif!important;
    }
 	#mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu li a {
-		color:#262423!important;
+		color:#262423;
    }
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a {
-		color:#262423!important;
+		color:#ce9e57!important;
    }
 	#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-ancestor>a.mega-menu-link,#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-page-ancestor>a.mega-menu-link {
 		font-family:"moret",serif!important;
@@ -3383,7 +3390,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:block!important;
    }
 	.tour-accommodation-gallery .accomodation-slider {
-		height:62vh;
+		height:60vh;
    }
 	.tour-accommodation-gallery .accomodation-nav {
 		border-top:4px solid #fff;
