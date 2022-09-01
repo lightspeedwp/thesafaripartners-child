@@ -2789,9 +2789,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		.lsx-to-slider-inner .lsx-review{border:none!important;}
 		.lsx-to-slider-inner .lsx-review h4{
 			position: absolute;
-			bottom: -70px;
+			bottom: -30px;
 			left: 0;
-			width: 88%;}
+			width: 96%;}
 		.lsx-to-slider-inner .lsx-review h4 a{line-height: 22px!important;}
 		.lsx-testimonials-slider .lsx-to-widget-items{margin-top:-14px!important;}
 		.lsx-testimonials-slider .lsx-to-widget-items .slick-track
@@ -2922,6 +2922,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     padding: 0!important;}
    #footer-widgets blockquote {
     text-align: left!important;
+	min-height:172px;
    }
    .lsx-testimonials-slot {
     margin-top: 3rem!important;
