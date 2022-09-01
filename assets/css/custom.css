@@ -3551,10 +3551,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border:1px solid #ce9e57;
 		width:139px;
-		height:152px;
+		height:216px;
 		margin-left:0px;
-		padding-left:91px;
-		margin-top:-18px;
+		margin-top:-4px;
    }
 	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		content:"\f00c";
@@ -3968,11 +3967,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border: 1px solid #ce9e57;
     width: 140px;
-    height: 176px;
+    height: 216px;
     left: 0;
     margin-left: 0px;
     margin-left: 20px;
-    margin-top: -20px;
+    margin-top: -4px;
 }
 .wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	content:"\f00c";
