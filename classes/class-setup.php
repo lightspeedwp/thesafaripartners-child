@@ -39,6 +39,7 @@ class Setup {
 		add_action( 'init', array( $this, 'who_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'budget_taxonomy_setup' ), 90 );
+		add_filter( 'register_taxonomy_args', array( $this, 'change_taxonomies_slug' ), 10, 2 );
 		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
@@ -233,5 +234,23 @@ class Setup {
 			$disable = true;
 		}
 		return $disable;
+	}
+
+	/**
+	 * CHanges the slugs of the taxonomies
+	 *
+	 * @param array $args
+	 * @param string $taxonomy
+	 * @return array
+	 */
+	public function change_taxonomies_slug( $args, $taxonomy ) {
+   
+		/*item category*/
+		if ( 'travel-style' === $taxonomy ) {
+		   $args['rewrite']['slug'] = 'safari-style';
+		   $args['labels']['menu_name'] = 'Safari Styles';
+		}
+		
+		return $args;
 	}
 }
