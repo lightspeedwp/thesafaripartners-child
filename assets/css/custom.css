@@ -2786,7 +2786,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin: 0 4px;
 		display: none;}
 		.lsx-to-slider-inner .lsx-review{border:none!important;}
-		.lsx-to-slider-inner .lsx-review h4{line-height: 22px;position:absolute; bottom:0; left:0;}
+		.lsx-to-slider-inner .lsx-review h4{ine-height: 21px;
+			position: absolute;
+			bottom: -70px;
+			left: 0;
+			width: 88%;}
+		.lsx-to-slider-inner .lsx-review h4 a{line-height: 22px!important;}
 		.lsx-to-slider-inner .lsx-review:hover{border:none!important;}
 		.lsx-to-slider-inner .lsx-review .type-lsx-to-review{position:relative;}
 		.lsx-to-widget-item-wrap.lsx-review .lsx-to-widget-thumb{display:none;}
