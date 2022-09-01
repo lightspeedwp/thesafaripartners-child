@@ -88,6 +88,9 @@ class Core {
 		require_once get_stylesheet_directory() . '/classes/class-dates-prices-admin.php';
 		$this->dates_prices = Dates_Prices_Admin::get_instance();
 
+		require_once get_stylesheet_directory() . '/classes/class-wetu-importer.php';
+		$this->wetu_importer = WETU_Importer::get_instance();
+
 		require_once get_stylesheet_directory() . '/includes/template-tags.php';
 	}
 

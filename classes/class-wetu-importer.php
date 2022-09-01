@@ -1,0 +1,123 @@
+<?php
+/**
+ * Class Setup
+ *
+ * @package   tsp_child\classes
+ * @author    LightSpeed
+ * @license   GPL-2.0+
+ * @link
+ * @copyright 2020 LightSpeed
+ */
+
+namespace tsp_child\classes;
+
+/**
+ * Class Setup
+ *
+ * @package tsp_child\classes
+ */
+class WETU_Importer {
+
+	/**
+	 * Holds class instance
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var      object tsp_child\classes\WETU_Importer()
+	 */
+	protected static $instance = null;
+
+	public $tag_mapping = array(
+		'who' => array(
+			'Seasoned Travellers',
+			'Group of Friends',
+			'Romance Seekers',
+			'Solo Travellers',
+			'Family Experiences',
+		),
+		'travel-styles' => array(
+			'Wildlife Safaris',
+			'Epic Luxury',
+			'Rail Journeys',
+			'Flying Safaris',
+			'Water Based Safari',
+			'Walking Safaris',
+			'Cultural',
+			'Romantic & Private',
+			'Group Travel',
+			'Migration Experiences',
+			'Gorillas Trekking',
+			'Beach & Relaxation',
+		),
+		'tour-type' => array(
+			'Tailored Tours',
+			'Group Tours',
+		),
+		'budget' => array(
+			'Low',
+			'Medium',
+			'High',
+		),
+		'when' => array(
+			'January',
+			'February',
+			'March',
+			'April',
+			'May',
+			'June',
+			'July',
+			'August',
+			'September',
+			'October',
+			'November',
+			'December',
+		),
+	);
+
+	/**
+	 * Initialize the plugin by setting localization, filters, and administration functions.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access private
+	 */
+	private function __construct() {
+		add_filter( 'lsx_wetu_importer_tour_travel_styles', array( $this, 'filter_travel_styles' ), 10, 3 );
+	}
+
+	/**
+	 * Return an instance of this class.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return    object \tsp_child\classes\Setup()    A single instance of this class.
+	 */
+	public static function get_instance() {
+		// If the single instance hasn't been set, set it now.
+		if ( null === self::$instance ) {
+			self::$instance = new self();
+		}
+		return self::$instance;
+	}
+
+	/**
+	 * Filters the travel style tags and assigns the items.
+	 *
+	 * @param array $tags
+	 * @return array
+	 */
+	public function filter_travel_styles( $tags = array(), $id, $importer ) {
+		if ( ! empty( $tags ) ) {
+			foreach ( $this->tag_mapping as $key => $terms ) {
+				$found_terms = array_intersect( $tags, $terms );
+				if ( ! empty( $found_terms ) ) {
+					foreach ( $found_terms as $found_term ) {
+						$importer->set_term( $id, $found_term, $key );
+					}
+				}
+			}
+		}
+		return array();
+	}
+	
+}
