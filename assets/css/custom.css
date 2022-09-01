@@ -2793,7 +2793,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			left: 0;
 			width: 88%;}
 		.lsx-to-slider-inner .lsx-review h4 a{line-height: 22px!important;}
-		.lsx-testimonials-slider .lsx-to-widget-items{min-height:200px;margin-top:-14px!important;}
+		.lsx-testimonials-slider .lsx-to-widget-items{margin-top:-14px!important;}
+		.lsx-testimonials-slider .lsx-to-widget-items .slick-track
 		.lsx-to-slider-inner .lsx-review:hover{border:none!important;}
 		.lsx-to-slider-inner .lsx-review .type-lsx-to-review{position:relative;}
 		.lsx-to-widget-item-wrap.lsx-review .lsx-to-widget-thumb{display:none;}
@@ -2806,7 +2807,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 			.lsx-testimonials-slider .slick-arrow.slick-next:before {
 				content: "\f105"!important;
-				left: 1.5rem!important;font-family:FontAwesome;background-image:none!important;font-size:16px!important;}
+				left: 5.5rem!important;font-family:FontAwesome;background-image:none!important;font-size:16px!important;}
 				.lsx-testimonials-slider .lsx-to-slider-inner .slick-arrow{border: 0px solid #ce9e57!important;
 			background: transparent!important;
 			border-radius: 0;
