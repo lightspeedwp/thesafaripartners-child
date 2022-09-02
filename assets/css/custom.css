@@ -1474,6 +1474,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	height:380px!important;
 	flex-basis:51%!important;
 }
+.wizard-who img {
+    overflow: hidden;
+    width: 100%!important;
+    object-fit: none!important;
+    text-align: center;
+}
 .search-results .lsx-slot .entry-layout-content {
 	margin-left:6%;
 	margin-right:10%;
@@ -3669,9 +3675,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 @media (min-width:767px) and (max-width:1200px) {
 	.row {padding:0!important; margin:0 !important;}
    .col-md-3.travelwhen{width:25%!important; float:left!important;}
-   .step-content.introslide{min-height: 900px;position:relative;}
+   .step-content.introslide{min-height: 900px;position:relative;padding:0px!important;}
    .page-template-template-wizard #primary{padding:0!important;}
-   .page-template-template-wizard .lsx-wizard-step{padding:0 15px!important;}
+   .page-template-template-wizard .lsx-wizard-step .step-content{padding:0 15px;}
    .wizardstart{position:relative!important;right:0; width:100%!important;}
    .page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;display:block;}
    .page-template-template-wizard .introslide .lsx-banner-column{height: 8%;}
