@@ -3680,6 +3680,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:92%!important;
 		margin:2% 4%;
    }
+  .lsx-wizard-progress-buttons-wrapper ul {
+	list-style:none;
+	counter-reset:my-awesome-counter;
+}
+.lsx-wizard-progress-buttons-wrapper ul li {
+	counter-increment:my-awesome-counter;
+}
+.lsx-wizard-progress-buttons-wrapper ul li::before {
+	content:counter(my-awesome-counter) ". ";
+}
    .page-id-133119 .socialresponce {
     gap: 0em!important;
    }
@@ -3835,6 +3845,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin:0!important 
 }
    .archive #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
+  .page-template-template-wizard #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
+  #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
 	.archive #wizard .step-content .col-md-9 {
 		width:100%!important;
 		padding:0!important;
@@ -3966,10 +3978,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border: 1px solid #ce9e57;
-	width: 218px;
-    height: 156px;
+	width: 218px!important;
+    height: 156px!important;
     padding-top: 6px;
-    margin-left: -1px;
+    margin-left: -1px!important;
 }
 .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border: 1px solid #ce9e57;
