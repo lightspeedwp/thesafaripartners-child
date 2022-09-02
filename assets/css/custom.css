@@ -3083,7 +3083,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.single-lsx-to-destination .archive-intro {
 		padding-bottom:80px!important;
-		margin:60px 0px 40px 0px!important;
+		margin:0px 0px 40px 0px!important;
 		width:1204px!important;
 		border-bottom:1px solid #262423;
    }
@@ -4181,9 +4181,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 object-fit: none;
 	 float: right;
 	}
+	
 	.archive .archive-intro, .single-lsx-to-destination .archive-intro{
 	 padding-bottom: 20px!important;
-	 margin: 20px 0px 20px 0px!important;
+	 margin: 40px 20% 20px 0px!important;
 	 width:100%;
 	 border-bottom: 1px solid #262423;
 	}
