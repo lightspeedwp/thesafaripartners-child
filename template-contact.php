@@ -62,11 +62,11 @@ get_header(); ?>
 						if ( ( $page->ID === $current_page && $contact_id->ID !== $current_page ) ||
 						( $contact_id->ID === $current_page && 0 === $counter ) ) {
 							$active = 'active';
-							$style = 'style="display:block;"';
+							$style = 'display:block;';
 						}
 						?>
 
-						<div id="<?php echo $page->post_title; ?>" <?php echo esc_attr( $style  ); ?> class="contact-<?php echo $page->ID; ?> tabcontent <?php echo esc_attr( $active  ); ?>">
+						<div id="<?php echo $page->post_title; ?>" style="<?php echo esc_attr( $style  ); ?>" class="contact-<?php echo $page->ID; ?> tabcontent <?php echo esc_attr( $active  ); ?>">
 							<div class="col-md-6">
 								<div class="lsx-contact-module">
 									<?php echo $content; ?>
