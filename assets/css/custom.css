@@ -4883,6 +4883,298 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:fixed;
 		width:100%;
    }
+   .single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content {
+	padding:2px!important;
+}
+.single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content .lsx-to-widget-meta-data,.single-lsx-to-tour #Maps .lsx-to-section-title {
+	display:none;
+}
+.single-lsx-to-tour #Maps .lsx-to-slider-inner .lsx-to-widget-item-wrap {
+	padding:0 1px!important;
+}
+.single-lsx-to-tour #Maps .lsx-to-widget-thumb img {
+	object-fit:cover;
+	height:200px!important;
+}
+.single-lsx-to-tour #Maps .lsx-to-widget-thumb {
+	display:contents;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+}
+.single-lsx-to-tour #Maps .lsx-to-section-inner {
+	padding:0!important;
+	display:inline-block;
+}
+.single-lsx-to-tour .itenary .lsx-wizard-buttons-wrapper {
+	display:none!important;
+}
+.single-lsx-to-tour .lsx-map .lsx-map-preview {
+	height:81vh!important;
+}
+.single-lsx-to-tour .lsx-to-meta-data {
+	font-family:"moret",serif!important;
+	font-size:16px!important;
+	color:#6a6d5b;
+}
+.single-lsx-to-tour .heading-destinations {
+	font-size:28px!important;
+	line-height:34px;
+	font-family:"moret",serif!important;
+	letter-spacing:-0.1px!important;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+.single-lsx-to-tour .itinerary-item .lsx-to-meta-data {
+	font-size:22px!important;
+}
+.single-lsx-to-tour .lsx-to-meta-data.lsx-to-meta-data-style {
+	display:none;
+}
+.single-lsx-to-tour .lsx-to-single-meta-data .lsx-to-meta-data {
+	width:auto;
+	float:left;
+	padding-right:10px;
+	display:inline;
+}
+.single #fast-facts .lsx-to-meta-data {
+	align-items:normal!important;
+	flex-flow:nowrap!important;
+	justify-content:normal!important;
+	padding-top:4px;
+	width:auto!important;
+	float:none!important;
+	padding-right:10px!important;
+	display:block!important;
+}
+.single #Maps #fast-facts {
+	margin-bottom:16px;
+}
+.single #Maps .slider-container.lsx-to-widget-items {
+	margin-top:-20px!important;
+}
+.single .lsx-related-posts-wrapper .entry-layout-content .entry-image img {
+	object-fit:cover;
+	height:240px!important;
+}
+.single .lsx-related-posts-wrapper .entry-layout-content .entry-image {
+	display:contents;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+}
+.single .lsx-related-posts-wrapper .entry-layout-content {
+	background:#ededed;
+}
+.single .lsx-related-posts-wrapper .entry-layout-content .moretag {
+	float:right;
+	padding-bottom:4px;
+	font-size:16px;
+}
+.single-lsx-to-tour .lsx-wizard-button-next span:after {
+	background-image:url('img/tsp-see-more-arrow.svg');
+	background-size:10px 10px;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	content:"";
+}
+.single-lsx-to-tour #lsx-banner {
+	display:none!important;
+}
+.single-lsx-to-tour .archive-header-wrapper {
+	display:none!important;
+}
+.single-lsx-to-tour .container {
+	padding:0!important;
+}
+.single-lsx-to-tour .content {
+	width:100%!important;
+	padding:0px !important;
+	margin:0px auto!important;
+}
+.single-lsx-to-tour .zsiq_floatmain {
+	display:none!important;
+}
+.single-lsx-to-tour .tabcontent .col-md-12 {
+	padding:0!important;
+}
+.single-lsx-to-tour .lsx-to-tour-content {
+	padding-top:13vh!important;
+	width:550px;
+	padding-left:40px;
+	position:relative;
+}
+.single-lsx-to-tour .lsx-to-archive-wrapper {
+	padding:0;
+	margin:0;
+}
+.single-lsx-to-tour .itinerary-navigation button {
+	background:none;
+	color:#262423;
+	font-size:22px;
+	border:none;
+}
+.single-lsx-to-tour .itinerary-navigation .lsx-wizard-button-next {
+	float:right;
+}
+.single-lsx-to-tour .itinerary-item .lsx-to-meta-data .lsx-to-meta-data-key {
+	font-size:15px;
+	color:#6a6d5b;
+}
+.single-lsx-to-tour #Price .table>tbody>tr>td {
+	padding:2px!important;
+	font-size:14px;
+}
+.single-lsx-to-tour #Price .table>tbody>tr>td.book-now-wrapper {
+	width:80px!important;
+}
+.single-lsx-to-tour #Price .table>tbody>tr>td.park-fees {
+	width:102px!important;
+}
+.single-lsx-to-tour .nav-pills {
+	display:none!important;
+}
+.single-lsx-to-tour .step-content {
+	display:block;
+	position:relative;
+	height:auto;
+}
+.single-lsx-to-tour .lsx-to-archive-item {
+	margin-top:0px;
+	padding:0!important;
+}
+.single-lsx-to-tour .tab {
+	z-index:99;
+	overflow:hidden;
+	right:0%;
+	margin-top:1%;
+	position:absolute;
+}
+.single-lsx-to-tour .tours-nav {
+	position:absolute;
+	bottom:0;
+	left:15px;
+	width:100%;
+	border-right:1px solid #ce9e57;
+	border-left:1px solid #ce9e57;
+}
+.single-lsx-to-tour .tours-nav .col-md-4 {
+	padding:0!important;
+}
+.tours-nav .btn {
+	background:#fff;
+	color:#262423;
+	border-right:1px solid #ce9e57;
+	border-left:1px solid #ce9e57;
+	border-top:2px solid #ce9e57;
+	border-bottom:2px solid #ce9e57;
+	font-family:"moret",serif!important;
+	width:100%;
+	border-radius:0!important;
+	box-shadow:none;
+	font-size:20px;
+	font-weight:normal;
+	letter-spacing:0;
+	height:58px;
+}
+.single-lsx-to-tour .tablinks {
+	padding:0;
+	background:#fff;
+	border:none!important;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	color:#262423;
+	font-size:16px;
+}
+.single-lsx-to-tour #singlelink.tablinks {
+	text-transform:uppercase;
+	font-size:20px;
+	position:absolute;
+	right:0;
+	bottom:-10rem;
+}
+.single-lsx-to-tour #singlelink.tablinks:after {
+	background-image:url('img/tsp-see-more-arrow.svg');
+	background-size:10px 10px;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	content:"";
+}
+.tours-nav .btn.popup-inquire {
+	background:#ce9e57!important;
+}
+.single-lsx-to-tour h2 {
+	font-size:42px!important;
+}
+.single-lsx-to-tour .lsx-banner-image-wrap {
+	display:contents;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+}
+.single-lsx-to-tour .lsx-tour-module-map {
+	padding:0 !important;
+}
+.single-lsx-to-tour .lsx-contact-module-image {
+	padding:0!important;
+}
+.single-lsx-to-tour #accommodation {
+	margin-top:0!important;
+}
+.single-lsx-to-tour #Price .lsx-single-contact {
+	width:42%!important;
+	margin-left:-20px!important;
+}
+.single-lsx-to-tour #Maps .lsx-to-tour-content {
+	padding-top:5vh!important;
+}
+.single-lsx-to-tour #Maps .lsx-to-meta-data-style,.single-lsx-to-tour #Maps .lsx-to-meta-data-price,.single-lsx-to-tour #Maps .lsx-to-meta-data-destinations {
+	display:none;
+}
+.single-lsx-to-tour .content-area {
+	margin-bottom:0!important;
+	margin-top:0!important;
+}
+.single-lsx-to-tour .lsx-wizard-steps-wrapper {
+	height: 500px!important;
+}
+.single-lsx-to-tour .outer-container {
+    width:96%;
+    margin:0 auto;
+    float:none;
+}
+.single-lsx-to-tour .lsx-banner-image-wrap img {
+    object-fit:cover;
+    height:90vh!important;
+    width:100%;
+}
+.single-lsx-to-tour .lsx-to-slider-inner {
+    margin:0 0px!important;
+    width:calc(100%+0px)!important;
+}
+.single-lsx-to-tour .intro-wrap {
+    display:none!important;
+}
+.single-lsx-to-tour .lsx-single-contact {
+    width:50%;
+    position:fixed;
+    bottom:0px;
+    left:1px;
+    margin-left:-16px;
+    z-index:99;
+}
+.tour-accommodation-gallery .accomodation-slider {
+    height:60vh;
+}
+.tour-accommodation-gallery .accomodation-nav {
+    border-top:4px solid #fff;
+}
+.single-lsx-to-tour .slick-slide .lsx-to-widget-content p {
+    display:none!important;
+}
 }
 @media screen and (min-width:1300px) and (max-width:1400px) {
 	.homebanner {
