@@ -3670,7 +3670,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {
 		padding:0!important; margin:0 !important;
    }
-   .page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;}
+   .col-md-3.travelwhen{width:25%!important; float:left!important;}
+   .wizardstart{position:relative;right:0; width:100%!important;}
+   .page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;display:block;}
    .page-template-template-wizard .introslide .lsx-banner-column{height: 8%;}
    .blocktitle{width:100%!important;}
    .page-template-template-contact .dropdown{display:none;}
@@ -3949,11 +3951,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .page-template-template-wizard .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border: 1px solid #ce9e57;
-	width: 143px;
-	height: 208px;
-	margin-left: 0px;
-	padding-left: 120px;
-	padding-top: 6px;
+    width: 218px;
+    height: 156px;
+    padding-top: 6px;
+    margin-left: -1px;
 }
 .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	content:"\f00c";
@@ -3966,11 +3967,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border: 1px solid #ce9e57;
-	width: 143px;
-	height: 208px;
-	margin-left: 0px;
-	padding-left: 120px;
-	padding-top: 6px;
+	width: 218px;
+    height: 156px;
+    padding-top: 6px;
+    margin-left: -1px;
 }
 .wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border: 1px solid #ce9e57;
