@@ -1479,6 +1479,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     width: 100%!important;
     object-fit: none!important;
     text-align: center;
+	height:86px;
 }
 .search-results .lsx-slot .entry-layout-content {
 	margin-left:6%;
@@ -3678,9 +3679,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    .step-content.introslide{min-height: 900px;position:relative;padding:0px!important;}
    .page-template-template-wizard #primary{padding:0!important;}
    .page-template-template-wizard .lsx-wizard-step .step-content{padding:0 15px;}
+   .page-template-template-wizard .lsx-wizard-steps-wrapper{overflow: unset!important;}
    .wizardstart{position:relative!important;right:0; width:100%!important;}
    .page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;display:block;}
    .page-template-template-wizard .introslide .lsx-banner-column{height: 8%;}
+   .wizard-what .col-md-2{height:}
    .blocktitle{width:100%!important;}
    .wizard-who .col-md-9 .col-md-2 img {height: 92px!important;
     overflow: hidden;
