@@ -26,13 +26,11 @@ get_header(); ?>
 				<section class="lsx-to-section-new <?php lsx_to_collapsible_class( 'destination', false ); ?>">
 					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
 
-					<div id="collapse-summary" class="collapse in">
-						<div class="collapse-inner">
-							<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
+					
+							<div class="content-area col-sm-12 col-sm-12">
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
-						</div>
-					</div>
+						
 				</section>
 
 			<?php endwhile; ?>

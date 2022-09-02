@@ -3685,7 +3685,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.wizardstart{position:relative!important;right:0; width:100%!important;}
 	.page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;display:block;}
 	.page-template-template-wizard .introslide .lsx-banner-column{height: 8%;}
-	.wizard-what .col-md-2{height:}
 	.blocktitle{width:100%!important;}
 	.wizard-who .col-md-9 .col-md-2 img {height: 92px!important;
 	 overflow: hidden;
@@ -3901,7 +3900,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		 z-index:-1;
 		 align-content:end;
 		 height:30px;
-		 float:right!important;
 		 width:30px;
 	}
 	 .lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"] {
