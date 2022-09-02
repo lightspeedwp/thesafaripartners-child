@@ -35,7 +35,7 @@ class WETU_Importer {
 			'Solo Travellers',
 			'Family Experiences',
 		),
-		'travel-styles' => array(
+		'travel-style' => array(
 			'Wildlife Safaris',
 			'Epic Luxury',
 			'Rail Journeys',
@@ -50,13 +50,14 @@ class WETU_Importer {
 			'Beach & Relaxation',
 		),
 		'tour-type' => array(
-			'Tailored Tours',
-			'Group Tours',
+			'Tailored Tour',
+			'Group Tour',
+			'Scheduled Tour',
 		),
 		'budget' => array(
-			'Low',
-			'Medium',
-			'High',
+			'Budget-low',
+			'Budget-medium',
+			'Budget-high',
 		),
 		'when' => array(
 			'January',
@@ -109,9 +110,15 @@ class WETU_Importer {
 	public function filter_travel_styles( $tags = array(), $id, $importer ) {
 		if ( ! empty( $tags ) ) {
 			foreach ( $this->tag_mapping as $key => $terms ) {
+				if ( ! taxonomy_exists( $key ) ) {
+					continue;
+				}
 				$found_terms = array_intersect( $tags, $terms );
 				if ( ! empty( $found_terms ) ) {
 					foreach ( $found_terms as $found_term ) {
+						if ( 'budget' === $key ) {
+							$found_term = ucwords( str_replace( 'Budget-', '', $found_term ) );
+						}
 						$importer->set_term( $id, $found_term, $key );
 					}
 				}
