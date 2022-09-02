@@ -21,7 +21,8 @@ get_header(); ?>
 			<div class="lsx-container-content">
 
 				<?php
-				$contact_id = get_page_by_title( 'Contact' );
+				$current_page = get_the_ID();
+				$contact_id   = get_page_by_title( 'Contact' );
 				if ( null !== $contact_id ) {
 					?>
 					<div class="tab">
@@ -36,8 +37,8 @@ get_header(); ?>
 								$content = apply_filters( 'the_content', $content );
 								
 								$active = '';
-								if ( ( $page->ID === get_the_ID() && $contact_id->ID !== get_the_ID() ) ||
-								( $contact_id->ID === get_the_ID() && 0 === $counter ) ) {
+								if ( ( $page->ID === $current_page && $contact_id->ID !== $current_page ) ||
+								( $contact_id->ID === $current_page && 0 === $counter ) ) {
 									$active = 'active';
 									$style = 'style="display:block;';
 								}
@@ -58,8 +59,8 @@ get_header(); ?>
 						$content = apply_filters( 'the_content', $content );
 						$active = '';
 						$style = '';
-						if ( ( $page->ID === get_the_ID() && $contact_id->ID !== get_the_ID() ) ||
-						( $contact_id->ID === get_the_ID() && 0 === $counter ) ) {
+						if ( ( $page->ID === $current_page && $contact_id->ID !== $current_page ) ||
+						( $contact_id->ID === $current_page && 0 === $counter ) ) {
 							$active = 'active';
 							$style = 'style="display:block;';
 						}
