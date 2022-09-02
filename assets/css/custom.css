@@ -3667,11 +3667,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 }
 @media (min-width:767px) and (max-width:1200px) {
-	.row {
-		padding:0!important; margin:0 !important;
-   }
+	.row {padding:0!important; margin:0 !important;}
    .col-md-3.travelwhen{width:25%!important; float:left!important;}
-   .wizardstart{position:relative;right:0; width:100%!important;}
+   .step-content.introslide{min-height: 900px;position:relative;}
+   .wizardstart{position:relative!important;right:0; width:100%!important;}
    .page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;display:block;}
    .page-template-template-wizard .introslide .lsx-banner-column{height: 8%;}
    .blocktitle{width:100%!important;}
