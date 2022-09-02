@@ -28,7 +28,7 @@ get_header(); ?>
 
 					<div id="collapse-summary" class="collapse in">
 						<div class="collapse-inner">
-							<div class="<?php lsx_to_entry_class( 'entry-content' ); ?>">
+							<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
 						</div>
