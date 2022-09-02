@@ -3677,8 +3677,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {padding:0!important; margin:0 !important;}
    .col-md-3.travelwhen{width:25%!important; float:left!important;}
    .step-content.introslide{min-height: 900px;position:relative;padding:0px!important;}
-   .page-template-template-wizard #primary{padding:0!important;}
+   .page-template-template-wizard #primary{padding:0!important;max-height: 1100px;
+    overflow-y: hidden;}
    .page-template-template-wizard .lsx-wizard-step .step-content{padding:0 15px;}
+   .archive #wizard .lsx-to-content {font-size: 18px!important;}
    .page-template-template-wizard .lsx-wizard-steps-wrapper{overflow: unset!important;}
    .wizardstart{position:relative!important;right:0; width:100%!important;}
    .page-template-template-wizard .introslide .wp-block-columns{flex-wrap: wrap!important;display:block;}
@@ -4053,14 +4055,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .lsx-wizard-progress-buttons-wrapper ul li a {
     display: none!important;}
 .archive #wizard .step-content .wizard-what .col-sm-2 {
-	height:232px!important;
+	height: 150px!important;
+    margin-bottom: 10px;
 }
+.archive .lsx-wizard-steps-wrapper{min-height:630px;}
 .archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	border:1px solid #ce9e57;
 	width:99%;
-	height:238px;
+	height:152px;
 	margin-left:0px;
-	padding-left:124px;
 	padding-top:0px;
 	background:none;
 	opacity:1;
