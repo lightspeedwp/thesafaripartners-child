@@ -27,6 +27,7 @@ get_header(); ?>
 					<div class="tab">
 						<?php
 							$mypages = get_pages( array( 'child_of' => $contact_id->ID, 'sort_column' => 'post_date', 'sort_order' => 'ASC' ) );
+							$counter = 0;
 
 							foreach( $mypages as $page ) {
 								$content = $page->post_content;
@@ -35,12 +36,14 @@ get_header(); ?>
 								$content = apply_filters( 'the_content', $content );
 								
 								$active = '';
-								if ( $page->ID === get_the_ID() && $contact_id->ID !== get_the_ID() ) {
+								if ( ( $page->ID === get_the_ID() && $contact_id->ID !== get_the_ID() ) ||
+								( $contact_id->ID === get_the_ID() && 0 === $counter ) ) {
 									$active = 'active';
 								}
 								?>
 								<a class="tablinks <?php echo esc_attr( $active  ); ?>" id="page-<?php echo $page->ID; ?>" href="<?php echo get_permalink( $page->ID ); ?>"><?php echo $page->post_title; ?></a>
 								<?php
+								$counter++;
 							}
 							wp_reset_query();
 						?>
@@ -51,9 +54,15 @@ get_header(); ?>
 						if ( ! $content ) // Check for empty page
 						continue;
 
-						$content = apply_filters( 'the_content', $content );?>
+						$content = apply_filters( 'the_content', $content );
+						$active = '';
+						if ( ( $page->ID === get_the_ID() && $contact_id->ID !== get_the_ID() ) ||
+						( $contact_id->ID === get_the_ID() && 0 === $counter ) ) {
+							$active = 'active';
+						}
+						?>
 
-						<div id="<?php echo $page->post_title; ?>" class="contact-<?php echo $page->ID; ?> tabcontent">
+						<div id="<?php echo $page->post_title; ?>" class="contact-<?php echo $page->ID; ?> tabcontent <?php echo esc_attr( $active  ); ?>">
 							<div class="col-md-6">
 								<div class="lsx-contact-module">
 									<?php echo $content; ?>
