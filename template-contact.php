@@ -51,6 +51,7 @@ get_header(); ?>
 						?>
 					</div>
 					<?php
+					$counter = 0;
 					foreach( $mypages as $page ) {
 						$content = $page->post_content;
 						if ( ! $content ) // Check for empty page
