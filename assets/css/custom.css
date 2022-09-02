@@ -829,10 +829,7 @@ th {
 .archive .archive-intro p {
 	width:686px;
 }
-.archive #wizard .lsx-to-content {
-	font-family:"moret",serif!important;
-	font-size:19px!important;
-}
+
 .single-lsx-to-destination .lsx-block-accordion{
     background: transparent;
     border: 0px solid #e0e0e0;
@@ -1238,7 +1235,7 @@ th {
 	font-family:"moret",serif!important;
 	font-size:19px;
 	line-height:22px;
-	letter-spacing:1px;
+	letter-spacing:0px;
 	padding:4px 8px 2PX;
 }
 .archive .lsx-wizard-progress-buttons {
@@ -2894,6 +2891,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .archive #wizard .lsx-to-content {
+	font-family:"moret",serif!important;
+	font-size:19px!important;
+}
    #mega-menu-wrap-primary .lsx-to-widget-item-wrap article{border: 1px solid #fff;}
    #mega-menu-wrap-primary .lsx-to-widget-item-wrap{margin-bottom:10px;}
    #mega-menu-wrap-primary .lsx-to-widget-item-wrap:hover article{border: 1px solid #ce9e57;}
@@ -3700,7 +3701,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		 margin:2% 4%;
 	}
 	.lsx-wizard .lsx-to-content {
-	 font-size: 18px!important;
+	 font-size: 18px!important;letter-spacing:0px;
 	}
 	.lsx-wizard-progress-buttons-wrapper ul {
 	 list-style:none;
@@ -4070,7 +4071,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 height: 150px!important;
 	 margin-bottom: 10px;
 	}
-	.archive .lsx-wizard-steps-wrapper, .single-lsx-to-destination .lsx-wizard-steps-wrapper{min-height:630px;}
 	.single-lsx-to-destination .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border:1px solid #ce9e57;
 		width:99%;
@@ -4177,10 +4177,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 font-weight:normal;
 	}
 	.archive .archive-intro .lsx-to-widget-thumb img, .single-lsx-to-destination .archive-intro .lsx-to-widget-thumb img{
-	 height: 220px;
-	 object-fit: none;
-	 float: left;
-	 width:auto!important;
+		height: 165px!important;
+		object-fit: none;
+		float: left!important;
+		width: 300px!important;
 	}
 	.single-lsx-to-destination .archive-intro h2 {
 		padding-right: 0%;
