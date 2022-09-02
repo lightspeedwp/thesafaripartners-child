@@ -14,14 +14,18 @@
 				<?php foreach ( $terms as $term ) : ?>
 					<!-- post -->
 					<article class="col-md-2 status-publish hentry">
-						<div class="checkbox-wrapper">
-							<input class="btn-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
+						<div class="checkbox-clear">
+							<input class="clear-check"  type="checkbox" name="fwp_who" value="<?php echo esc_html( apply_filters( 'the_title', $term->slug ) ); ?>" />
 							<span aria-hidden="true"></span>
 						</div>
 
 						<?php if ( lsx_to_has_term_thumbnail( $term->term_id ) ) : ?>
 							<div class="lsx-to-widget-thumb">
-								<?php lsx_to_term_thumbnail( $term->term_id, 'lsx-block-post-grid-square' ); ?>
+							<?php
+						$image_id = get_field('wizard_image', $term, false); 
+						$image = wp_get_attachment_image_src($image_id);
+						?>
+						<img src="<?php echo $image[0]; ?>" />
 							</div>
 						<?php else : ?>
 							<div class="lsx-to-widget-thumb">
