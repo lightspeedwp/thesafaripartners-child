@@ -40,7 +40,6 @@ get_header(); ?>
 								if ( ( $page->ID === $current_page && $contact_id->ID !== $current_page ) ||
 								( $contact_id->ID === $current_page && 0 === $counter ) ) {
 									$active = 'active';
-									$style = 'style="display:block;';
 								}
 								?>
 								<a class="tablinks <?php echo esc_attr( $active  ); ?>" id="page-<?php echo $page->ID; ?>" href="<?php echo get_permalink( $page->ID ); ?>"><?php echo $page->post_title; ?></a>
@@ -63,11 +62,11 @@ get_header(); ?>
 						if ( ( $page->ID === $current_page && $contact_id->ID !== $current_page ) ||
 						( $contact_id->ID === $current_page && 0 === $counter ) ) {
 							$active = 'active';
-							$style = 'style="display:block;';
+							$style = 'style="display:block;"';
 						}
 						?>
 
-						<div id="<?php echo $page->post_title; ?>"  <?php echo esc_attr( $style  ); ?> class="contact-<?php echo $page->ID; ?> tabcontent <?php echo esc_attr( $active  ); ?>">
+						<div id="<?php echo $page->post_title; ?>" <?php echo esc_attr( $style  ); ?> class="contact-<?php echo $page->ID; ?> tabcontent <?php echo esc_attr( $active  ); ?>">
 							<div class="col-md-6">
 								<div class="lsx-contact-module">
 									<?php echo $content; ?>
@@ -89,6 +88,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<?php
+						$counter++;
 					}
 				}
 				?>
