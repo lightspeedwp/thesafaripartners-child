@@ -29,10 +29,10 @@ class WETU_Importer {
 
 	public $tag_mapping = array(
 		'who' => array(
-			'Seasoned Travellers',
+			'Seasoned Traveller',
 			'Group of Friends',
 			'Romance Seekers',
-			'Solo Travellers',
+			'Solo Traveller',
 			'Family Experiences',
 		),
 		'travel-style' => array(
