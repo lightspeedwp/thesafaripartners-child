@@ -44,7 +44,7 @@ h4 {
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family:"moret",serif!important;
-	letter-spacing:-0.1px!important;
+	letter-spacing:-0.2px!important;
 }
 body,p,ul,li,em {
 	font-family:argesta_displayregular,serif!important;
@@ -52,11 +52,11 @@ body,p,ul,li,em {
 	line-height:26px;
 	letter-spacing:-0.1px!important;
 }
-.lsx-to-widget-meta-data span {
+.lsx-to-widget-meta-data span, .lsx-to-widget-meta-data span a {
 	font-family:"moret",serif!important;
 	font-size:15px!important;
-	color:#6a6d5b;
-	letter-spacing:-0.1px!important;
+	color:#6a6d5b!important;
+	letter-spacing:-0.2px!important;
 }
 th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
@@ -64,7 +64,7 @@ th,tr,td,table,legend,label {
 }
 .btn,button {
 	font-family:"moret",serif!important;
-	letter-spacing:-0.1px!important;
+	letter-spacing:-0.2px!important;
 }
 .gfield input::-webkit-input-placeholder {
 	color:#262423!important;
@@ -475,7 +475,7 @@ legend {
 	transition:1s;
 }
 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item h4 {
-	font-family:"moret",serif!important;
+	font-family:"moret",serif!important;letter-spacing: 0.2px;
 }
 #masthead {
 	z-index:1000;
@@ -577,7 +577,7 @@ legend {
 	height:81vh!important;
 }
 .single-lsx-to-tour .lsx-to-meta-data {
-	font-family:"moret",serif!important;
+	font-family:"moret",serif!important;letter-spacing:0.2px;
 	font-size:16px!important;
 	color:#6a6d5b;
 }
@@ -4230,7 +4230,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 font-family:"moret",serif!important;
 	 font-size:22px;
 	 line-height:22px;
-	 letter-spacing:1px;
+	 letter-spacing:0px;
 	}
 	.page-template-template-wizard .nav-justified>li.steps1 {
 	 display:none!important;
@@ -4518,7 +4518,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-family:"moret",serif!important;
 		font-size:19px;
 		line-height:22px;
-		letter-spacing:1px;
+		letter-spacing:0.3px;
 		margin-top:-38px;
 		display:inline-block;
 		position:absolute;
@@ -4790,7 +4790,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-family:"moret",serif!important;
 		font-size:22px;
 		line-height:22px;
-		letter-spacing:1px;
+		letter-spacing:0.3px;
    }
 	.page-template-template-wizard .nav-justified>li.steps1 {
 		display:none!important;
@@ -4984,7 +4984,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	height:81vh!important;
 }
 .single-lsx-to-tour .lsx-to-meta-data {
-	font-family:"moret",serif!important;
+	font-family:"moret",serif!important;letter-spacing: 0.3px;
 	font-size:16px!important;
 	color:#6a6d5b;
 }
@@ -4992,7 +4992,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-size:28px!important;
 	line-height:34px;
 	font-family:"moret",serif!important;
-	letter-spacing:-0.1px!important;
+	letter-spacing:-0.2px!important;
 	width:100%;
 	padding:0;
 	margin:0;
@@ -5160,7 +5160,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	box-shadow:none;
 	font-size:20px;
 	font-weight:normal;
-	letter-spacing:0;
+	letter-spacing:0.2px;
 	height:58px;
 }
 .single-lsx-to-tour .tablinks {
