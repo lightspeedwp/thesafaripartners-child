@@ -544,6 +544,9 @@ legend {
 #primary .destinationhover {
 	display:none;
 }
+.hidden-lg {
+    display: none !important;
+}
 .single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content {
 	padding:2px!important;
 }
@@ -3665,7 +3668,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 @media (min-width:767px) and (max-width:1200px) {
 	.row {
-		padding:0!important 
+		padding:0!important; margin:0 !important;
    }
    .blocktitle{width:100%!important;}
    .page-template-template-contact .dropdown{display:none;}
@@ -3843,11 +3846,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding:0!important;
    }
 	.lsx-wizard-step .col-md-9 .col-sm-2,.lsx-wizard-step .col-md-9 .col-md-2 {
-		width:20%!important;
+		width:20%!important;padding: 0 1px;margin-bottom:10px;
 		float:left!important;
    }
 	.lsx-wizard-step .col-md-9 .col-sm-2 img,.lsx-wizard-step .col-md-9 .col-md-2 img {
 		height:120px!important;
+		overflow: hidden;
+    	object-fit: cover;
    }
    .lsx-wizard-progress-buttons-wrapper .nav>li>a{padding:0!important;}
 	.lsx-wizard .wizard-when .checkbox-wrapper>[type="checkbox"]+span {
