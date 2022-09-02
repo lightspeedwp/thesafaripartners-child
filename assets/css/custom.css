@@ -4179,13 +4179,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.archive .archive-intro .lsx-to-widget-thumb img, .single-lsx-to-destination .archive-intro .lsx-to-widget-thumb img{
 	 height: 220px;
 	 object-fit: none;
-	 float: right;
+	 float: left;
+	 width:auto!important;
 	}
-	
+	.single-lsx-to-destination .archive-intro h2 {
+		padding-right: 0%;
+	}
 	.archive .archive-intro, .single-lsx-to-destination .archive-intro{
 	 padding-bottom: 20px!important;
-	 margin: 40px 20% 20px 0px!important;
+	 margin: 20px 0px 20px 0px!important;
 	 width:100%;
+	 padding-right:20%!important;
 	 border-bottom: 1px solid #262423;
 	}
 	.archive .wizard-who, .archive .wizard-where, .archive .wizard-what, .archive .wizard-when, .archive .wizard-budget {
