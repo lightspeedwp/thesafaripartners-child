@@ -3862,7 +3862,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.page-template-template-travel-style .wizard-who,.page-template-template-travel-style .wizard-what,.page-template-template-travel-style .wizard-where,.page-template-template-travel-style .wizard-budget {
 	 display:block!important;
 	 padding:0!important;
-	 margin:0!important 
+	 margin:0!important;
 	}
 	.page-template-template-travel-style .wizard-who,.page-template-template-travel-style .wizard-where,.page-template-template-travel-style .wizard-what,.page-template-template-travel-style .wizard-when,.page-template-template-travel-style .wizard-budget {
 	 padding:0!important;
@@ -3871,6 +3871,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.archive #wizard .step-content .wizard-when .col-md-3, .single-lsx-to-destination #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
 	.page-template-template-wizard #wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
 	#wizard .step-content .wizard-when .col-md-3{width:25%!important;float:left!important;}
+	.lsx-wizard-button-next:hover{
+		background: #262423!important;
+	}
 	 .archive #wizard .step-content .col-md-9, .single-lsx-to-destination #wizard .step-content .col-md-9{
 		 width:100%!important;
 		 padding:0!important;
@@ -4082,7 +4085,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	   }
 	.archive .wizard-what .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 	 border:1px solid #ce9e57;
-	 width:99%;
+	 width:98%;
 	 height:152px;
 	 margin-left:0px;
 	 padding-top:0px;
@@ -4202,6 +4205,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 font-size:19px!important;
 	 background:#a55244!important;
 	}
+	.lsx-wizard-button-next{
+		padding: 10px 24px!important;}
 	#wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next span:after {
 	 background-image:url(img/tsp-see-more-arrow.svg);
 	 background-size:20px 20px;
