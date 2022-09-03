@@ -4206,7 +4206,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 background:#a55244!important;
 	 padding:10px 20px!important;
 	}
-	#wizard .wizardstart .lsx-button.primary:hover, #wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next:hover{color:#262423!important;}
+	#wizard .wizardstart .lsx-button.primary:hover, #wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next:hover{background:#262423!important;}
 	#wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next span:after {
 	 background-image:url(img/tsp-see-more-arrow.svg);
 	 background-size:20px 20px;
