@@ -4203,10 +4203,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	   }
 	#wizard .wizardstart .lsx-button.primary, #wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next{
 	 font-size:19px!important;
-	 background:#a55244!important;
+	 background:#a55244;
+	 padding:10px 20px!important;
 	}
-	.lsx-wizard-button-next{
-		padding: 10px 24px!important;}
 	#wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next span:after {
 	 background-image:url(img/tsp-see-more-arrow.svg);
 	 background-size:20px 20px;
