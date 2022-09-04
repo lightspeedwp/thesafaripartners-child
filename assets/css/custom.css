@@ -624,7 +624,7 @@ legend {
 	background-color:#ddd;
 }
 .dropdown-share:hover .dropdown-content {
-	display: block;
+	visibility: visible;
 }
 /*Bread crumbs */
 .breadcrumbs-container {
