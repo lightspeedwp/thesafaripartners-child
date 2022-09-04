@@ -4358,6 +4358,20 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		 .page-template-template-travel-style  .lsx-wizard-progress-buttons-wrapper ul li::before {
 			 content:counter(my-awesome-counter) ". ";
 		 }
+		 #footer-sub{padding: 70px 6% 150px!important;}
+		 #footer-sub .gform_heading {
+			width: 25%;
+			float: left;
+			padding-left: 3px;}
+			#footer-sub form {
+				width: 74%;
+				float: left;
+			}	
+			#footer-sub .gform_footer {
+				margin: 20px 0 0 12px;
+				width: 20%;
+				float: left;
+			}	
 }
 @media screen and (max-width:767px) {
 	.row {
