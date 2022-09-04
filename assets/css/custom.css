@@ -5007,9 +5007,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.single-lsx-to-destination .archive-intro h2{ padding-right: 8%;
 		margin-top: 50px;}	
 		.single-lsx-to-destination #wizard .step-content .wizard-what .col-sm-2 {
-			height: 30px;}
+			height: 30px!important;}
 		.single-lsx-to-destination #wizard .step-content .col-sm-2{
-				height: 30px;}
+				height: 30px!important;}
 				.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
 					position: absolute;
 					z-index: 1;
