@@ -613,15 +613,25 @@ legend {
 	text-align: center;
 	padding: 5px 0;
 	border-radius: 6px;
-	bottom: 100%;
+	bottom: 110%;
 	left: 50%;
-	margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+	margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
 	/* Position the tooltip text - see examples below! */
 	position: absolute;
 	z-index: 1;
 }
 .dropdown-content a:hover {
 	background-color:#ddd;
+}
+.dropdown-content::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #f1f1f1 transparent transparent transparent;
 }
 .dropdown-share:hover .dropdown-content {
 	visibility: visible;
