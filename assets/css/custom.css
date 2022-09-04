@@ -607,13 +607,18 @@ legend {
 	display:inline-block;
 }
 .dropdown-content {
-	display:none;
-	position:absolute;
 	background-color:#f1f1f1;
-	min-width:200px;
-	bottom:50px;
-	box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index:1;
+	visibility: hidden;
+	width: 200px;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
 }
 .dropdown-content a:hover {
 	background-color:#ddd;
@@ -3692,7 +3697,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 width: 100%!important;
 	 object-fit: none!important;
 	 text-align: center;}
-	
+	.single-lsx-to-tour .primary{padding:0!important;}
 	.lsx-wizard-step .wizard-who .col-md-9 .col-sm-2, .lsx-wizard-step .wizard-who .col-md-9 .col-md-2{text-align:center;}
 	.page-template-template-contact .dropdown{display:none;}
 	 .gutenberg-compatible-template.using-gutenberg .entry-content>div {
