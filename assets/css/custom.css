@@ -5004,6 +5004,20 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				.page-id-133119 .wp-block-media-text.is-stacked-on-mobile{display:block!important;}
 				.page-id-133119 .wp-block-media-text__content p {
 					margin-left: 10px!important;}
+	.single-lsx-to-destination .archive-intro h2{ padding-right: 8%;
+		margin-top: 50px;}	
+		.single-lsx-to-destination #wizard .step-content .wizard-what .col-sm-2 {
+			height: 30px;}
+		.single-lsx-to-destination #wizard .step-content .col-sm-2{
+				height: 30px;}
+				.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
+					position: absolute;
+					z-index: 1;
+					width: 33%;
+					bottom: 13px;
+					left: 40%;
+					z-index: 99999;
+				}		
 }
 
 @media (min-width:780px) and (max-width:1200px) {
