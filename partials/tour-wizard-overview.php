@@ -12,9 +12,8 @@
 <div class="tour-label"><?php $post_type = get_post_type(get_the_ID());   
     $taxonomies = get_object_taxonomies($post_type);   
     $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "tour-type")); 
-    if(!empty($taxonomy_names)) :
-       foreach($taxonomy_names as $tax_name) : ?>              
-          <?php echo $tax_name; ?> 
+          
+		echo $tax_name; ?> 
          
 </div>
 		<div class="col-md-6 lsx-contact-module-image">
