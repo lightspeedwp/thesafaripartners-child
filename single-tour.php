@@ -22,22 +22,6 @@ get_header(); ?>
 				<div class="collapse-inner">
 					<div class="row">
 						<div class="col-md-12 outer-container">
-						<nav role="navigation" class="mobile-tournav">
-  						<ul>
-   							 <li><a class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</a>
-
-								<ul class="dropdown">
-								<li><a class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</a></li>
-								<li><a class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</a></li>
-								<li><a class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</a></li>
-								<li><a class="tablinks" id="page-5" onclick="openCity(event, 'Maps')">Maps & More</a></li>
-      							</ul>
-  							  </li>
-								
-  						</ul>
-						</nav>
-
-
 							<div class="tab">
 								<button class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
 								<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
@@ -57,7 +41,20 @@ get_header(); ?>
 
 						<?php get_template_part( 'partials/tour-wizard', 'maps' ); ?>
 										
-						
+						<nav role="navigation" class="mobile-tournav">
+  						<ul>
+   							 <li><a class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</a>
+
+								<ul class="dropdown">
+								<li><a class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</a></li>
+								<li><a class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</a></li>
+								<li><a class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</a></li>
+								<li><a class="tablinks" id="page-5" onclick="openCity(event, 'Maps')">Maps & More</a></li>
+      							</ul>
+  							  </li>
+								
+  						</ul>
+						</nav>
 					</div>
 				</div>
 			</div>
