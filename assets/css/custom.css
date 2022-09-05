@@ -1590,9 +1590,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	background:none;
 	padding:8px 8px 0 8px!important;
 }
-.home .wp-block-tour-operator-block-post-types {
-	padding:10px;
-}
 .home .tour-styles-top-info {
 	display:block!important;
 }
@@ -4466,9 +4463,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		z-index:10;
 		background:none;
 		padding:8px 8px 0 8px!important;
-   }
-	.home .wp-block-tour-operator-block-post-types {
-		padding:0px!important;
    }
 	.home .tour-styles-top-info {
 		display:block!important;
