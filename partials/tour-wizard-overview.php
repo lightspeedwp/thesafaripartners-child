@@ -9,7 +9,7 @@
 					lsx_entry_before();
 					?>
 			<?php $term = get_queried_object();  ?>		
-<div class="tour-label"><?php $terms = get_the_terms($page->ID, 'tour-type'); ?>
+<div class="tour-label"><?php $terms = wp_get_post_terms($post->ID, 'tour-type'); ?>
 </div>
 		<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
