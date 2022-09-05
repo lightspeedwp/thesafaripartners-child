@@ -5059,9 +5059,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width: 100%;
 	}
 	.tours-nav .col-md-6{width:50%!important; float:left;}
-	.single-lsx-to-tour .tours-nav {
+	.single-lsx-to-tour #Overview .tours-nav {
 		top: 46%!important;
 		left: 0px!important;
+	}
+	.single-lsx-to-tour #Day .tours-nav {
+		top: 56%!important;
+		left: 0px!important;
+		z-index: 999;
 	}
 
 	.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
@@ -5078,6 +5083,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width:100%;
 	padding-left:0px;
 }
+.single-lsx-to-tour .lsx-wizard-steps-wrapper{overflow: auto!important; height: auto!important;}
 .single-lsx-to-tour #wizard img{display:inline-block!important;}
 	.single-lsx-to-tour .mobile-tournav	ul li:hover > ul,
 	.single-lsx-to-tour .mobile-tournav ul li:focus-within > ul, /* this is the line we add */
