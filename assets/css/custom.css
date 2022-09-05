@@ -5068,7 +5068,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display: block!important;
 		position: absolute;
 		margin-top: 99%;
+		margin-left:-15px;
 	}
+	.single-lsx-to-tour .mobile-tournav	ul{
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	width:100%;
+	padding-left:20px;
+}
 	.single-lsx-to-tour .mobile-tournav	ul li:hover > ul,
 	.single-lsx-to-tour .mobile-tournav ul li:focus-within > ul, /* this is the line we add */
 	.single-lsx-to-tour .mobile-tournav ul li ul:hover {
@@ -5137,6 +5145,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin-top: 1rem;
 	left: 0;
 	display: none;
+  }
+
+  .single-lsx-to-tour .lsx-to-tour-content {
+    padding-top: 20px;
+	width: auto!important;
+    padding-left: 15px!important;
+    position: relative;
   }
 
 	.single-lsx-to-tour .tab{display:none;}
