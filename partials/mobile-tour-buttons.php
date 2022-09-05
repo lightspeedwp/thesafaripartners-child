@@ -26,6 +26,7 @@ sharing_display( '', true );
 }
 ?>
  </div>
+</div>
  <?php else : ?>
          
 
@@ -47,6 +48,7 @@ sharing_display( '', true );
 }
 ?>
           </div>
+</div>
           <?php endif; ?>
 
           </div>
