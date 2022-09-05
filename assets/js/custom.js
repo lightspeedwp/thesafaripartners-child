@@ -8,7 +8,7 @@
 
 	$(function() {
 
-		var $slider = $(".slick-slider");
+		var $slider = $(".lsx-to-slider");
 	  
 		var slickOptions = {
 		  slidesToShow: 1,
@@ -22,7 +22,7 @@
 			  breakpoint: 480,
 			  settings: {
 				slidesToShow: 1,
-				prevArrow: $(".slick-next"),
+				prevArrow: $(".slick-prev"),
 				nextArrow: $(".slick-next"),
 				mobileFirst: true,
 				arrows: true,
