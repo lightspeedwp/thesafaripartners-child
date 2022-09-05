@@ -444,9 +444,6 @@ legend {
 #masthead {
 	background:#fff!important;
 }
-.mobile {
-	display:none;
-}
 .page.safari-styles {
 	margin-top:0px;
 }
@@ -3780,12 +3777,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		 line-height:14px!important;
 		 margin-top:11px!important;
 	}
+
 	 #mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile {
 		 display:block!important;
 		 width:176px!important;
 		 float:right!important;
 		 margin-right:18px!important;
 	}
+
 	 #travel-footer {
 		 background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 		 background-color:#262423;
@@ -4704,6 +4703,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	#masthead {
 		height:72px;
    }
+   /*
 	#mega-menu-wrap-primary.contactnavtab #mega-menu-primary li.mega-hide-on-mobile {
 		display:block!important;
 		top:-78px;
@@ -4712,6 +4712,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0px!important;
 		position:absolute;
    }
+   */
 	h1 {
 		font-size:46px!important;
 		line-height:52px;
