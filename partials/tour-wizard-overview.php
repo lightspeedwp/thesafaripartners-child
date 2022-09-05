@@ -7,8 +7,8 @@
 					the_post();
 					lsx_entry_before();
 					?>
-					<div class="tour-label"><?php $terms = get_terms($taxonomy->['tour-type']); ?></div>
-					<div class="col-md-6 lsx-contact-module-image">
+<div class="tour-label"><?php get_terms( "tour-type", array( "hide_empty" => 0 ) ); ?></div>
+<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 							<picture>
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
