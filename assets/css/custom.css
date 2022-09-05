@@ -5042,6 +5042,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 					left: 40%;
 					z-index: 99999;
 				}		
+	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848{display:none!important;}		
 }
 
 @media (min-width:780px) and (max-width:1200px) {
@@ -5356,7 +5357,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .slick-slide .lsx-to-widget-content p {
     display:none!important;
 }
-#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848{display:none!important;}
 }
 @media screen and (min-width:1300px) and (max-width:1400px) {
 	.homebanner {
