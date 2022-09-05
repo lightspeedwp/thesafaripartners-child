@@ -4713,6 +4713,24 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:absolute;
    }
    */
+   #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1{z-index:99999;}
+   #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item {
+	display:block!important;
+	top:-78px;
+	left:0;
+	width:100%!important;
+	margin:0px!important;
+	position:absolute;
+}
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link {
+    background: #ce9e57;
+    color: #000;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: #ce9e57;
+    border-style: solid;
+}
 	h1 {
 		font-size:46px!important;
 		line-height:52px;
