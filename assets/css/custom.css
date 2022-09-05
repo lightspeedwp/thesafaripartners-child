@@ -2912,6 +2912,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .mobileonly{display:none!important;}
    .single-lsx-to-tour .mobile-tournav{display:none;}
    .archive #wizard .lsx-to-content {
 	font-family:"moret",serif!important;
@@ -3698,6 +3699,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 }
 @media (min-width:767px) and (max-width:1200px) {
+	.mobileonly{display:none!important;}
 	.row {padding:0!important; margin:0 !important;}
 	.col-md-3.travelwhen{width:25%!important; float:left!important;}
 	.step-content.introslide{min-height: 900px;position:relative;padding:0px!important;}
@@ -5167,6 +5169,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:fixed;
 		width:100%;
    }
+   .mobileonly{display:none!important;}
    .single-lsx-to-tour .mobile-tournav{display:none;}
    .home .col-sm-12{padding:0!important;}
    .single-lsx-to-tour .lsx-tour-module .lsx-to-widget-item-wrap .lsx-to-widget-content {

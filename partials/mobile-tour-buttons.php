@@ -1,4 +1,4 @@
-<div class="lsx-single-contact">
+<div class="lsx-single-contact mobileonly">
 
 <?php
         $file = get_field('download_itinerary');
