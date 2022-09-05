@@ -5152,10 +5152,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
   .single-lsx-to-tour .lsx-single-contact {
 	display:none!important;
 }
+.single-lsx-to-tour .tours-nav{left:0!important;}
 .single-lsx-to-tour .lsx-single-contact{display:block;}
-.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
-	display: block!important;
-	width: 100%;
+.single-lsx-to-tour .mobile-tournav{    z-index: 99999999;
+    display: block!important;
+    width: 100%;
+    margin-top: 20p;
+    top: 37px;
+    position: relative;
 }
 
 	.single-lsx-to-tour .tab{display:none;}
