@@ -5060,7 +5060,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	}
 	.tours-nav .col-md-6{width:50%!important; float:left;}
 	.single-lsx-to-tour #Overview .tours-nav {
-		top: 46%!important;
+		top: 39%!important;
 		left: 0px!important;
 	}
 	.single-lsx-to-tour #Day .tours-nav {
@@ -5068,11 +5068,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		left: 0px!important;
 		z-index: 999;
 	}
-
+	.single-lsx-to-tour .lsx-single-contact{position:absolute; display:block;top:50%;}
 	.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
 		display: block!important;
 		position: absolute;
-		margin-top: 103%;
+		margin-top: 60px;
 		margin-left: 11px;
 		width: 100%;
 	}
