@@ -9,14 +9,8 @@
 					lsx_entry_before();
 					?>
 			<?php $term = get_queried_object();  ?>		
-<div class="tour-label"><?php $terms = get_terms( array(
-  'taxonomy' => 'tour-type',
-  'hide_empty' => true,
-) );
-foreach ($terms as $term){
-  echo $term->name;
-  echo "";
-} ?></div>
+<div class="tour-label"><?php $term = get_term_by('slug', 'tour-type', 'category'); $name = $term->name; ?>
+</div>
 		<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 							<picture>
