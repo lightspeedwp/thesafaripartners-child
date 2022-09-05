@@ -1,6 +1,7 @@
 <div id="Overview" class="tabcontent tours-wizard" style="display: block;">
 	<div class="col-md-12 col-sm-12">
 		<div class="lsx-tour-module">
+		<?php $term = get_queried_object();  ?>
 			<?php 
 			if ( have_posts() ) {
 				while ( have_posts() ) {
