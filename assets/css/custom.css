@@ -4716,7 +4716,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1{z-index:99999;}
    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item {
 	display:block!important;
-	top:-78px;
+	top:-2px;
 	left:0;
 	width:100%!important;
 	margin:0px!important;
@@ -4725,11 +4725,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link {
     background: #ce9e57;
     color: #000;
-    font-size: 20px;
+    font-size: 16px!important;
     padding-left: 10px;
     padding-right: 10px;
     border-color: #ce9e57;
     border-style: solid;
+		text-align: center!important;
+}
+#masthead {
+    height: 72px;
+    margin-top: 30px;
 }
 	h1 {
 		font-size:46px!important;
