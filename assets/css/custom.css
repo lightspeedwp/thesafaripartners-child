@@ -5151,6 +5151,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
   }
   .single-lsx-to-tour .lsx-single-contact {
 	display:none!important;
+	position:relative;
 }
 .single-lsx-to-tour .tours-nav{left:0!important;}
 .single-lsx-to-tour .lsx-single-contact{display:block;}
