@@ -4721,6 +4721,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width:100%!important;
 	margin:0px!important;
 	position:absolute;
+	background: #ce9e57;
 }
 #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link {
     background: #ce9e57;
@@ -4732,6 +4733,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     border-style: solid;
 		text-align: center!important;
 }
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1[data-effect="fade_up"] li.mega-menu-item.mega-toggle-on > ul.mega-sub-menu{width:100%; text-align:center;}
+.intro-wrap{display:none;}
 #masthead {
     height: 72px;
     margin-top: 30px;
