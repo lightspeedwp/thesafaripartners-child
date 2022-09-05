@@ -238,12 +238,6 @@ class Frontend {
 				$query->set( 'nopagin', true );
 				$query->set( 'post_type', 'tour' );
 			}
-
-			if ( $query->is_post_type_archive( 'destination' )  ) {
-				$query->set( 'post_type', 'tour' );
-				$query->set( 'posts_per_page', -1 );
-				$query->set( 'nopagin', true );
-			}
 		}
 	}
 

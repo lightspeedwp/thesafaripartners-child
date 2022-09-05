@@ -41,6 +41,7 @@ class Setup {
 		add_action( 'init', array( $this, 'budget_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'tour_type_setup' ), 100 );
 		add_filter( 'register_taxonomy_args', array( $this, 'change_taxonomies_slug' ), 10, 2 );
+		add_filter( 'register_post_type_args', array( $this, 'change_post_types' ), 10, 2 );
 		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
@@ -290,6 +291,20 @@ class Setup {
 		   $args['labels']['menu_name'] = 'Safari Styles';
 		}
 		
+		return $args;
+	}
+
+	/**
+	 * CHanges the slugs of the taxonomies
+	 *
+	 * @param array $args
+	 * @param string $taxonomy
+	 * @return array
+	 */
+	public function change_post_types( $args, $post_type ) {
+		if ( 'destination' === $post_type ) {
+		   $args['has_archive'] = false;
+		}
 		return $args;
 	}
 }
