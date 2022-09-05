@@ -5067,16 +5067,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
 		display: block!important;
 		position: absolute;
-		margin-top: 99%;
-		margin-left:-15px;
+		margin-top: 103%;
+		margin-left: 11px;
+		width: 100%;
 	}
 	.single-lsx-to-tour .mobile-tournav	ul{
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	width:100%;
-	padding-left:20px;
+	padding-left:0px;
 }
+.single-lsx-to-tour #wizard img{display:inline-block!important;}
 	.single-lsx-to-tour .mobile-tournav	ul li:hover > ul,
 	.single-lsx-to-tour .mobile-tournav ul li:focus-within > ul, /* this is the line we add */
 	.single-lsx-to-tour .mobile-tournav ul li ul:hover {
@@ -5084,7 +5086,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
   opacity: 1;
   display: block;
 }
-
+.single-lsx-to-tour .mobile-tournav ul li ul li a{width:100%;}
 .single-lsx-to-tour .mobile-tournav ul li ul li {
   clear: both;
   width: 100%;
@@ -5148,7 +5150,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
   }
 
   .single-lsx-to-tour .lsx-to-tour-content {
-    padding-top: 20px;
+	padding-top: 100px!important;
 	width: auto!important;
     padding-left: 15px!important;
     position: relative;
