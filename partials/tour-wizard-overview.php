@@ -9,7 +9,12 @@
 					lsx_entry_before();
 					?>
 			<?php $term = get_queried_object();  ?>		
-<div class="tour-label"><?php $terms = wp_get_post_terms($post->ID, 'tour-type'); ?>
+<div class="tour-label"><?php $args = array('taxonomy' => 'tour-type'); ?>
+            <?php $tax_menu_items = get_categories( $args );
+            foreach ( $tax_menu_items as $tax_menu_item ):?>
+              
+                    <?php echo $tax_menu_item->name; ?>
+            <?php endforeach; ?>
 </div>
 		<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
