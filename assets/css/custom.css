@@ -5061,17 +5061,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width: 100%;
 	}
 	.tours-nav .col-md-6{width:50%!important; float:left;}
-	.single-lsx-to-tour .lsx-single-contact {
-		display:none!important;
-	}
-	.single-lsx-to-tour .lsx-single-contact{position:absolute; display:block;top:50%;}
-	.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
-		display: block!important;
-		position: absolute;
-		margin-top: 60px;
-		margin-left: 11px;
-		width: 100%;
-	}
+
 	.tabdesk{display:none;}
 	.single-lsx-to-tour .mobile-tournav	ul{
 	list-style: none;
@@ -5151,6 +5141,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	left: 0;
 	display: none;
   }
+  .single-lsx-to-tour .lsx-single-contact.mobileonly{display:block!important;}
 
   .single-lsx-to-tour .lsx-to-tour-content {
 	padding-top: 100px!important;
@@ -5158,6 +5149,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     padding-left: 15px!important;
     position: relative;
   }
+  .single-lsx-to-tour .lsx-single-contact {
+	display:none!important;
+}
+.single-lsx-to-tour .lsx-single-contact{display:block;}
+.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
+	display: block!important;
+	width: 100%;
+}
 
 	.single-lsx-to-tour .tab{display:none;}
 }
