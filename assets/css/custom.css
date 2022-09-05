@@ -5060,7 +5060,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	}
 	.tours-nav .col-md-6{width:50%!important; float:left;}
 	.single-lsx-to-tour .lsx-single-contact {
-		display:none;
+		display:none!important;
 	}
 	.single-lsx-to-tour .lsx-single-contact{position:absolute; display:block;top:50%;}
 	.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
@@ -5070,6 +5070,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin-left: 11px;
 		width: 100%;
 	}
+	.tabdesk{display:none;}
 	.single-lsx-to-tour .mobile-tournav	ul{
 	list-style: none;
 	margin: 0;

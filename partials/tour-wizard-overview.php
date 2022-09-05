@@ -13,6 +13,10 @@
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 							<picture>
 						</div>
+						<?php if ( wp_is_mobile() ){
+        get_template_part( 'partials/mobile-tour-buttons' );
+    } ?>
+
 					</div>
 
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-single' ); ?>>
