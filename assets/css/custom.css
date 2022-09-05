@@ -5046,6 +5046,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 					z-index: 99999;
 				}		
 				.checkbox-wrapper>[type="checkbox"]:checked+span::after{border:none!important;}
+				.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after{padding-left: 0px!important;}
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848{display:none!important;}		
 	.mobilepad{padding:0 15px;}
 	.home .popup-inquire{margin:0 20px;}
@@ -5167,6 +5168,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     top: 37px;
     position: relative;
 }
+#colophon p{text-align:center;}
+.footer-navigation>ul{width:100%; margin:0 auto;}
 
 	.single-lsx-to-tour .tab{display:none;}
 }
