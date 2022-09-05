@@ -9,16 +9,12 @@
 					lsx_entry_before();
 					?>
 			<?php $term = get_queried_object();  ?>		
-<div class="tour-label"><?php if(have_posts()) : the_post();  
-    $post_type = get_post_type(get_the_ID());   
+<div class="tour-label"><?php $post_type = get_post_type(get_the_ID());   
     $taxonomies = get_object_taxonomies($post_type);   
     $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "tour-type")); 
     if(!empty($taxonomy_names)) :
        foreach($taxonomy_names as $tax_name) : ?>              
-          <?php echo $tax_name; ?>
-       <?php endforeach;
-    endif;
-endif;  ?> 
+          <?php echo $tax_name; ?> 
          
 </div>
 		<div class="col-md-6 lsx-contact-module-image">
