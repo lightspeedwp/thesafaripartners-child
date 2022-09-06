@@ -5196,7 +5196,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display: none;
 		position: absolute;
 		background-color: #f9f9f9;
-		min-width: 160px;
+		min-width: 100%;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		z-index: 1;
 	  }
@@ -5204,8 +5204,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	  /* Links inside the dropdown */
 	  .dropdown-content2 a {
 		color: #262423;
-		padding: 12px 16px;
+		padding: 10px 10px!important;
+		text-align: center;
 		text-decoration: none;
+		border-bottom:1px solid #ccc;
 		display: block;
 	  }
 	  
