@@ -53,14 +53,15 @@ sharing_display( '', true );
 
           </div>
 
-          <nav role="navigation" class="mobile-tournav tab">
-          <select>     
-    <option class="tablinks" onchange="openCity(event, 'Overview')">Overview</option> 
-    <option class="tablinks" onchange="openCity(event, 'Day')">Day by Day</option> 
-    <option class="tablinks" onchange="openCity(event, 'Accommodation')">Accommodation</option> 
-    <option class="tablinks" onchange="openCity(event, 'Price')">Dates & Prices</option> 
-    <option class="tablinks" onchange="openCity(event, 'Maps')">Maps & More</option> 
-  </select> 
-						</nav>
+          <div class="dropdown">
+  <button class="dropbtn">Select Info</button>
+  <div class="dropdown-content">
+  <a class="tablinks" onchange="openCity(event, 'Overview')">Overview</a> 
+  <a class="tablinks" onchange="openCity(event, 'Day')">Day by Day</a>  
+  <a class="tablinks" onchange="openCity(event, 'Accommodation')">Accommodation</a>  
+  <a class="tablinks" onchange="openCity(event, 'Price')">Dates & Prices</a>  
+  <a class="tablinks" onchange="openCity(event, 'Maps')">Maps & More</a>  
+  </div>
+</div>
 
                         </div>
