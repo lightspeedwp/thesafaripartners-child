@@ -18,8 +18,12 @@ get_header(); ?>
 
 			<?php lsx_content_top(); ?>
 
-		
+			<div id="collapse-summary" class="collapse in">
+				<div class="collapse-inner">
+					<div class="row">
 						<div class="col-md-12 outer-container">
+						
+
 							<div class="tab">
 								<button class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
 								<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
@@ -39,10 +43,19 @@ get_header(); ?>
 
 						<?php get_template_part( 'partials/tour-wizard', 'maps' ); ?>
 										
+						
+					</div>
+				</div>
+			</div>
+
+			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->
 
+		<?php lsx_content_after(); ?>
+
 	</div><!-- #primary -->
 
+<?php lsx_content_wrap_after(); ?>
 <?php
 get_footer('new');
