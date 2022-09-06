@@ -140,6 +140,10 @@ class WETU_Importer {
 								case 'Gorillas':
 									$found_term = 'Gorillas Trekking';
 								break;
+
+								case 'Seasoned Traveller':
+									$found_term = 'Seasoned Travellers';
+								break;
 							}
 						}
 
