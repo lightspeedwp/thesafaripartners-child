@@ -4395,26 +4395,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0!important;
 		padding:0!important 
    }
-   .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
-    width: 100%;
-    padding: 0 0px;
-    position: absolute;
-    top: 4px;
-    left: 1px;
-    z-index: 99;
-   }
 	.home.page #primary {
 		padding:0!important;
    }
 	.lsx-to-slider-inner .slick-arrow.slick-prev {
 		left:-10px;
-		width:20px!important;
-		height:20px!important;
+		width:30px!important;
+		height:30px!important;
    }
 	.lsx-to-slider-inner .slick-arrow.slick-next {
 		right:-10px;
-		width:20px!important;
-		height:20px!important;
+		width:30px!important;
+		height:30px!important;
    }
 	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
 		border:1px solid #ce9e57!important;
@@ -5171,7 +5163,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #wizard .wizard-budget .lsx-to-content{margin-top: -66px;}
 .single-lsx-to-tour .tours-nav{left:0!important;}
 .single-lsx-to-tour .lsx-single-contact{display:block;}
-.single-lsx-to-tour .mobile-tournav{    z-index: 99999999;
+.single-lsx-to-tour .mobile-tournav{z-index: 99999999;
     display: block!important;
     width: 100%;
     margin-top: 20p;
@@ -5182,6 +5174,25 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .footer-navigation>ul{width:100%; margin:0 auto;}
 .single-lsx-to-tour #accommodation .accomodation-nav{display:none!important;}
 .single-lsx-to-tour .body-wrap{margin-bottom:100px!important;}
+.single-lsx-to-tour .lsx-to-archive-item > .lsx-to-archive-container{display:block!important;}
+.single-lsx-to-tour  .tour-accommodation-gallery{height: 279px;}
+.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 32%;}
+.tour-accommodation-gallery .slick-arrow.slick-prev {
+    left: 0px!important;}
+	.tour-accommodation-gallery .slick-arrow.slick-next{
+		right: 0px!important;
+	}
+.single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour #itinerary .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
+.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
+    width: 90%;
+    padding: 0 0px;
+    position: absolute;
+    top: 47%;
+    left: 5%;
+    z-index: 99;
+}
 
 	.dropbtn2 {
 		background-color: #fff;
