@@ -18,6 +18,7 @@
 									<?php lsx_to_map(); ?>
 								</div>
 							</div>
+							<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 						</div>
 
 						<div class="col-xs-12 col-sm-12 col-md-6">
