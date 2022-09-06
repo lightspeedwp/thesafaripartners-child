@@ -5074,7 +5074,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width:100%;
 	padding-left:0px;
 }
-.single-lsx-to-tour .lsx-wizard-steps-wrapper{ height: auto!important;}
 .single-lsx-to-tour #wizard img{display:inline-block!important;}
 	.single-lsx-to-tour .mobile-tournav	ul li:hover > ul,
 	.single-lsx-to-tour .mobile-tournav ul li:focus-within > ul, /* this is the line we add */
@@ -5254,6 +5253,23 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	  /* Change the background color of the dropdown button when the dropdown content is shown */
 	  .dropdown2:hover .dropbtn {
 		background-color: #fff;
+	  }
+	  #Overview .dropbtn2 {
+		font-size: 0;
+	  }
+	  
+	  #Overview .dropbtn2:after {
+		content: 'Overview';
+		font-size: initial;
+	  }
+
+	  #Day .dropbtn2 {
+		font-size: 0;
+	  }
+	  
+	  #Day .dropbtn2:after {
+		content: 'Day by Day';
+		font-size: initial;
 	  }
 }
 
