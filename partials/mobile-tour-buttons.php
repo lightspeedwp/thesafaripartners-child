@@ -20,6 +20,7 @@
 			</div>
 		</div>
         </div> 
+
 		<?php else : ?>
 		<div class="tours-nav">
 			<div class="col-md-6">
@@ -38,9 +39,10 @@ sharing_display( '', true );
 }
 ?>
 				</div>
-			</div>
 			<?php endif; ?>
+            </div>
 		</div>
+
 		<div class="dropdown2">
 			<button class="dropbtn2">Select Info</button>
 			<div class="dropdown-content2">
