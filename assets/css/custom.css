@@ -4395,6 +4395,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0!important;
 		padding:0!important 
    }
+   .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
+    width: 100%;
+    padding: 0 0px;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    z-index: 99;
+   }
 	.home.page #primary {
 		padding:0!important;
    }
