@@ -123,7 +123,7 @@ class Setup {
 			),
 			'show_in_rest'               => true,
 		);
-		register_taxonomy( 'who', array( 'tour', 'destination' ), $args );
+		register_taxonomy( 'who', array( 'tour' ), $args );
 	}
 
 	public function when_taxonomy_setup() {

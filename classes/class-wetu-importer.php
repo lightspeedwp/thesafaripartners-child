@@ -148,14 +148,17 @@ class WETU_Importer {
 
 							switch ( $found_term ) {
 								case 'low':
+								case 'Low':
 									$found_term = 'On a budget';
 								break;
 
 								case 'medium':
+								case 'Medium':	
 									$found_term = 'I am flexible';
 								break;
 
 								case 'high':
+								case 'High':
 									$found_term = 'Going all out';
 								break;
 							}
