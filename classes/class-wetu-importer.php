@@ -31,16 +31,16 @@ class WETU_Importer {
 		'who' => array(
 			'Seasoned Traveller',
 			'Group of Friends',
-			'Romance Seekers',
+			'Romance Seekers', //Romance Seeker
 			'Solo Traveller',
-			'Family Experiences',
+			'Family Experiences', // Family
 		),
 		'travel-style' => array(
 			'Wildlife Safaris',
 			'Epic Luxury',
 			'Rail Journeys',
 			'Flying Safaris',
-			'Water Based Safari',
+			'Water Based Safaris',
 			'Walking Safaris',
 			'Cultural',
 			'Romantic & Private',
@@ -116,8 +116,49 @@ class WETU_Importer {
 				$found_terms = array_intersect( $tags, $terms );
 				if ( ! empty( $found_terms ) ) {
 					foreach ( $found_terms as $found_term ) {
+
+
+
+						if ( 'Family' === $found_term ) {
+							$found_term = 'Family Experiences';
+						}
+
+						if ( 'travel-style' === $key ) {
+							switch ( $found_term ) {
+								case 'Flying':
+									$found_term = 'Flying Safaris';
+								break;
+
+								case 'Romance Seeker':
+									$found_term = 'Romance Seekers';
+								break;
+
+								case 'Water Based Safaris':
+									$found_term = 'Water Based Safari';
+								break;
+
+								case 'Gorillas':
+									$found_term = 'Gorillas Trekking';
+								break;
+							}
+						}
+
 						if ( 'budget' === $key ) {
 							$found_term = ucwords( str_replace( 'Budget-', '', $found_term ) );
+
+							switch ( $found_term ) {
+								case 'low':
+									$found_term = 'On a budget';
+								break;
+
+								case 'medium':
+									$found_term = 'I am flexible';
+								break;
+
+								case 'high':
+									$found_term = 'Going all out';
+								break;
+							}
 						}
 						$importer->set_term( $id, $found_term, $key );
 					}
