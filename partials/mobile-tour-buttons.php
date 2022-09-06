@@ -53,4 +53,3 @@ sharing_display( '', true );
 				<a class="tablinks" onclick="openCity(event, 'Maps')">Maps & More</a>
 			</div>
 		</div>
-</div>
