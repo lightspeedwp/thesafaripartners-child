@@ -1,18 +1,20 @@
 <div id="Overview" class="tabcontent tours-wizard" style="display: block;">
 	<div class="col-md-12 col-sm-12">
 		<div class="lsx-tour-module">
+		
 			<?php 
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();
 					lsx_entry_before();
 					?>
-					<div class="col-md-6 lsx-contact-module-image">
+		<div class="col-md-6 lsx-contact-module-image">
 					<div class="lsx-banner-image-wrap">
 							<picture>
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 							<picture>
 						</div>
+						<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 					</div>
 
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-single' ); ?>>

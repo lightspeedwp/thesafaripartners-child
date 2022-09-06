@@ -1,4 +1,4 @@
-<div class="lsx-single-contact">
+<div class="lsx-single-contact tabdesk">
 
 <?php
         $file = get_field('download_itinerary');
@@ -26,6 +26,7 @@ sharing_display( '', true );
 }
 ?>
  </div>
+ </div>
  <?php else : ?>
          
 
@@ -46,6 +47,7 @@ sharing_display( '', true );
 }
 }
 ?>
+          </div>
           </div>
           <?php endif; ?>
 

@@ -29,6 +29,7 @@
 												<div class="lsx-to-archive-container">
 													<div class="col-md-6 lsx-contact-module-image">
 														<?php tsp_accommodation_gallery( get_the_ID() ); ?>
+														<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 													</div>
 	
 													<div class="col-xs-12 col-sm-12 col-md-6">

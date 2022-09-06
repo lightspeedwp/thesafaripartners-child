@@ -38,10 +38,10 @@
 																	<div class="lsx-to-archive-container">
 																	<div class="col-md-6 lsx-contact-module-image">
 																			<div class="lsx-banner-image-wrap">
-																			<picture>
+																			
 																					<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
-																			</picture>
 																			</div>
+																			<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 																		</div>
 
 																		<div class="col-xs-12 col-sm-12 col-md-6">
