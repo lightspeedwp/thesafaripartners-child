@@ -66,8 +66,10 @@ sharing_display( '', true );
 
   </select> 
 
-  <div class="select-selected select-arrow-active">Select car:</div>
-  <div class="select-items"><div onclick="openCity(event, 'Day')">Day by Day</div><div>BMW</div><div>Citroen</div><div>Ford</div><div>Honda</div><div>Jaguar</div><div>Land Rover</div><div>Mercedes</div><div>Mini</div><div>Nissan</div><div>Toyota</div><div>Volvo</div></div>
+  <div class="custom-select" style="width:100%;">
+
+<div class="select-selected select-arrow-active">Select car:</div><div class="select-items"><div onclick="openCity(event, 'Day')">Day by Day</div><div>BMW</div><div>Citroen</div><div>Ford</div><div>Honda</div><div>Jaguar</div><div>Land Rover</div><div>Mercedes</div><div>Mini</div><div>Nissan</div><div>Toyota</div><div>Volvo</div></div></div>
+  
 						</nav>
 
                         </div>
