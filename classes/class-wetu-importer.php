@@ -117,10 +117,20 @@ class WETU_Importer {
 				if ( ! empty( $found_terms ) ) {
 					foreach ( $found_terms as $found_term ) {
 
-
-
 						if ( 'Family' === $found_term ) {
 							$found_term = 'Family Experiences';
+						}
+
+						if ( 'who' === $key ) {
+							switch ( $found_term ) {
+								case 'Romance Seeker':
+									$found_term = 'Romance Seekers';
+								break;
+
+								case 'Seasoned Traveller':
+									$found_term = 'Seasoned Travellers';
+								break;
+							}
 						}
 
 						if ( 'travel-style' === $key ) {
@@ -129,20 +139,12 @@ class WETU_Importer {
 									$found_term = 'Flying Safaris';
 								break;
 
-								case 'Romance Seeker':
-									$found_term = 'Romance Seekers';
-								break;
-
 								case 'Water Based Safaris':
 									$found_term = 'Water Based Safari';
 								break;
 
 								case 'Gorillas':
 									$found_term = 'Gorillas Trekking';
-								break;
-
-								case 'Seasoned Traveller':
-									$found_term = 'Seasoned Travellers';
 								break;
 							}
 						}
