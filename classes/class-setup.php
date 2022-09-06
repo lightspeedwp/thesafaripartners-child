@@ -320,6 +320,7 @@ class Setup {
 		$args['slickSlider']['tablet']['slidesToScroll'] = 2;
 		$args['slickSlider']['tablet']['arrows'] = true;
 		$args['slickSlider']['mobile']['arrows'] = true;
+		$args['slickSlider']['mobile']['breakpoint'] = 600;
 		return $args;
 	}
 }
