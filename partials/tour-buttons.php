@@ -27,8 +27,9 @@ sharing_display( '', true );
 ?>
  </div>
  </div>
+ </div>
  <?php else : ?>
-    </div>        
+         
 
           <div class="tours-nav">
     <div class="col-md-6">
@@ -49,7 +50,6 @@ sharing_display( '', true );
 ?>
           </div>
           </div>
-
-          </div>
           <?php endif; ?>
-        </div>
+          </div>
+          </div>
