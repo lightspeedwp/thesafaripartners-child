@@ -6,7 +6,7 @@
  * @category    tour
  */
 
-get_header(); ?>
+get_header('new'); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
