@@ -42,7 +42,7 @@ class Setup {
 		add_action( 'init', array( $this, 'tour_type_setup' ), 100 );
 		add_filter( 'register_taxonomy_args', array( $this, 'change_taxonomies_slug' ), 10, 2 );
 		add_filter( 'register_post_type_args', array( $this, 'change_post_types' ), 10, 2 );
-		
+		add_filter( 'lsx_to_js_params', array( $this, 'slider_variables' ), 10, 1 );
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
 		$this->menu_position = 100;
@@ -305,6 +305,21 @@ class Setup {
 		if ( 'destination' === $post_type ) {
 		   $args['has_archive'] = false;
 		}
+		return $args;
+	}
+
+	/**
+	 * Alter the slider parameters.
+	 *
+	 * @param array $args
+	 * @return array
+	 */
+	public function slider_variables( $args = array() ) {
+		$args['slickSlider']['tablet']['breakpoint'] = 900;
+		$args['slickSlider']['tablet']['slidesToShow'] = 2;
+		$args['slickSlider']['tablet']['slidesToScroll'] = 2;
+		$args['slickSlider']['tablet']['arrows'] = true;
+		$args['slickSlider']['mobile']['arrows'] = true;
 		return $args;
 	}
 }
