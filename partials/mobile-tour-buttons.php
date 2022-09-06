@@ -54,24 +54,20 @@ sharing_display( '', true );
           </div>
 
           <nav role="navigation" class="mobile-tournav tab">
-          <select onchange="changeLanguage(this.value)"> 
+          <select> 
     <option class="tablinks" value="" selected="selected">Select</option> 
     
-    <option class="tablinks" value="Overview">Overview</option> 
-    <option class="tablinks" value="Day">Day by Day</option> 
-    <option class="tablinks" value="Accommodation">Accommodation</option> 
+    <option class="tablinks" value="openCity(event, 'Overview')">Overview</option> 
+    <option class="tablinks" onclick="openCity(event, 'Day')">Day by Day</option> 
+    <option class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</option> 
     <option class="tablinks" value="openCity(event, 'Price')">Dates & Prices</option> 
     <option class="tablinks" value="openCity(event, 'Maps')">Maps & More</option> 
 
 
   </select> 
-  <a style="display:none;" id="url" onclick="openCity(event, 'Day')">IT</a>
+
+  <div class="select-selected select-arrow-active">Select car:</div>
+  <div class="select-items"><div onclick="openCity(event, 'Day')">Day by Day</div><div>BMW</div><div>Citroen</div><div>Ford</div><div>Honda</div><div>Jaguar</div><div>Land Rover</div><div>Mercedes</div><div>Mini</div><div>Nissan</div><div>Toyota</div><div>Volvo</div></div>
 						</nav>
-                        <script>
-  function changeLanguage(language) {
-   var element = document.getElementById("url");
-   element.value = language;
-   element.innerHTML = language;
-  }
- </script>
+
                         </div>
