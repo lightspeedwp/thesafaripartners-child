@@ -315,11 +315,11 @@ class Setup {
 	 * @return array
 	 */
 	public function slider_variables( $args = array() ) {
-		$args['tablet']['breakpoint'] = 900;
-		$args['tablet']['slidesToShow'] = 2;
-		$args['tablet']['slidesToScroll'] = 2;
-		$args['tablet']['arrows'] = true;
-		$args['mobile']['arrows'] = true;
+		$args['slickSlider']['tablet']['breakpoint'] = 900;
+		$args['slickSlider']['tablet']['slidesToShow'] = 2;
+		$args['slickSlider']['tablet']['slidesToScroll'] = 2;
+		$args['slickSlider']['tablet']['arrows'] = true;
+		$args['slickSlider']['mobile']['arrows'] = true;
 		return $args;
 	}
 }
