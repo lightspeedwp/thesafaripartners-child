@@ -54,7 +54,8 @@ sharing_display( '', true );
           </div>
 
 
-          <nav role="navigation" class="mobile-tournav custom-select">
+          <div class="custom-select" style="width:100%;">
+
           <select> 
     <option value="" selected="selected">Select</option> 
     
@@ -65,5 +66,5 @@ sharing_display( '', true );
     <option value="openCity(event, 'Maps')">Maps & More</option> 
 
   </select> 
-						</nav>
+</div>
                         </div>
