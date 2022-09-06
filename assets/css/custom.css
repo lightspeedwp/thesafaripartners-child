@@ -5172,6 +5172,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #colophon p{text-align:center;}
 .footer-navigation>ul{width:100%; margin:0 auto;}
 
+.single-lsx-to-tour #accommodation{overflow-x: hidden;}
+.single-lsx-to-tour #accommodation .slider-content{display:none;}}
+
 	.single-lsx-to-tour .tab{display:none;}
 
 	.dropbtn2 {
