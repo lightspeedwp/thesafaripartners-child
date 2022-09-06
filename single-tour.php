@@ -6,7 +6,7 @@
  * @category    tour
  */
 
-get_header('new'); ?>
+get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
@@ -39,17 +39,10 @@ get_header('new'); ?>
 
 						<?php get_template_part( 'partials/tour-wizard', 'maps' ); ?>
 										
-						
-				
-
-			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->
 
-		<?php lsx_content_after(); ?>
-
 	</div><!-- #primary -->
 
-<?php lsx_content_wrap_after(); ?>
 <?php
 get_footer('new');
