@@ -54,7 +54,7 @@ sharing_display( '', true );
           </div>
 
 
-          <nav role="navigation" class="mobile-tournav">
+          <nav role="navigation" class="mobile-tournav custom-select">
           <select> 
     <option value="" selected="selected">Select</option> 
     
