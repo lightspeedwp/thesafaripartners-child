@@ -5160,7 +5160,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     height: 30px!important;
 }
 #wizard .wizard-budget .lsx-to-content{margin-top: -66px;}
-.single-lsx-to-tour .tours-nav{left:0!important;}
+.single-lsx-to-tour .tours-nav{left:0!important;bottom:6px!important;}
 .single-lsx-to-tour .lsx-single-contact{display:block;}
 .single-lsx-to-tour .mobile-tournav{z-index: 99999999;
     display: block!important;
@@ -5182,7 +5182,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right: 0px!important;
 	}
 .single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
-.single-lsx-to-tour #itinerary .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour .itinerary .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
     width: 90%;
@@ -5214,10 +5214,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	  }
 
 	  .dropbtn2::after {background-image:url('img/tsp-see-more-arrow-down-black.svg');
-		background-size:16px 16px;
+		background-size:12px 12px;
 		display:inline-block;
-		width:16px;
-		height:16px;
+		width:12px;
+		height:12px;
 		content:"";
 		margin-left:20px;
 	  }
@@ -5259,35 +5259,35 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	  }
 	  #Overview .dropbtn2::before {
 		content: 'Overview';
-		font-size: initial;
+		font-size: 16px;
 	  }
 	  #Day .dropbtn2 {
 		font-size: 0;
 	  }
 	  #Day .dropbtn2::before  {
 		content: 'Day by Day';
-		font-size: initial;
+		font-size: 16px;
 	  }
 	  #Accommodation .dropbtn2 {
 		font-size: 0;
 	  }
 	  #Accommodation .dropbtn2::before  {
 		content: 'Accommodation';
-		font-size: initial;
+		font-size: 16px;
 	  }
 	  #Price .dropbtn2 {
 		font-size: 0;
 	  }
 	  #Price .dropbtn2::before  {
 		content: 'Dates & Prices';
-		font-size: initial;
+		font-size: 16px;
 	  }
 	  #Maps .dropbtn2 {
 		font-size: 0;
 	  }
 	  #Maps .dropbtn2::before  {
 		content: 'Maps & More';
-		font-size: initial;
+		font-size: 16px;
 	  }
 }
 
