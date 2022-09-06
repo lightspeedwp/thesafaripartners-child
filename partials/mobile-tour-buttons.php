@@ -57,11 +57,11 @@ sharing_display( '', true );
           <div class="custom-select" style="width:100%;">
 
           <select> 
-    <option value="Overview">Overview</option> 
-    <option value="Day">Day by Day</option> 
-    <option value="Accommodation">Accommodation</option> 
-    <option value="Price">Dates & Prices</option> 
-    <option value="Maps">Maps & More</option> 
+    <option value="1">Overview</option> 
+    <option value="2">Day by Day</option> 
+    <option value="3">Accommodation</option> 
+    <option value="4">Dates & Prices</option> 
+    <option value="5">Maps & More</option> 
   </select> 
 </div>
                         </div>
