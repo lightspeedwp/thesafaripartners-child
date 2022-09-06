@@ -54,14 +54,12 @@ sharing_display( '', true );
           </div>
 
           <nav role="navigation" class="mobile-tournav tab">
-          <select> 
-    <option class="tablinks" value="" selected="selected">Select</option> 
-    
-    <option class="tablinks" value="openCity(event, 'Overview')">Overview</option> 
-    <option class="tablinks" onclick="openCity(event, 'Day')">Day by Day</option> 
-    <option class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</option> 
-    <option class="tablinks" value="openCity(event, 'Price')">Dates & Prices</option> 
-    <option class="tablinks" value="openCity(event, 'Maps')">Maps & More</option> 
+          <select>     
+    <option class="tablinks" onchange="openCity(event, 'Overview')">Overview</option> 
+    <option class="tablinks" onchange="openCity(event, 'Day')">Day by Day</option> 
+    <option class="tablinks" onchange="openCity(event, 'Accommodation')">Accommodation</option> 
+    <option class="tablinks" onchange="openCity(event, 'Price')">Dates & Prices</option> 
+    <option class="tablinks" onchange="openCity(event, 'Maps')">Maps & More</option> 
   </select> 
 						</nav>
 
