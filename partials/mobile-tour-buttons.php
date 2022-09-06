@@ -53,14 +53,16 @@ sharing_display( '', true );
 
           </div>
 
+          <nav role="navigation" class="mobile-tournav tab">
+          <select> 
+    <option class="tablinks" value="" selected="selected">Select</option> 
+    
+    <option class="tablinks" value="openCity(event, 'Overview')">Overview</option> 
+    <option class="tablinks" onclick="openCity(event, 'Day')">Day by Day</option> 
+    <option class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</option> 
+    <option class="tablinks" value="openCity(event, 'Price')">Dates & Prices</option> 
+    <option class="tablinks" value="openCity(event, 'Maps')">Maps & More</option> 
+  </select> 
+						</nav>
 
-
-  <div class="custom-select" style="width:100%;">
-
-<div class="select-selected select-arrow-active">Select</div>
-<button class="tablinks tours-wizard select-items" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
-								<button class="tablinks select-items" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
-								<button class="tablinks select-items" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
-								<button class="tablinks select-items" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</button>
-								<button class="tablinks select-items" id="page-5" onclick="openCity(event, 'Maps')">Maps & More</button></div>
                         </div>
