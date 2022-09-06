@@ -12,7 +12,7 @@
 					<div class="lsx-banner-image-wrap">
 							<picture>
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
-							<picture>
+				</picture>
 						</div>
 						<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 					</div>
