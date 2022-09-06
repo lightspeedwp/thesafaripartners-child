@@ -123,7 +123,7 @@ class Setup {
 			),
 			'show_in_rest'               => true,
 		);
-		register_taxonomy( 'who', array( 'tour' ), $args );
+		register_taxonomy( 'who', 'tour', $args );
 	}
 
 	public function when_taxonomy_setup() {
@@ -163,7 +163,7 @@ class Setup {
 			),
 			'show_in_rest'               => true,
 		);
-		register_taxonomy( 'when', array( 'tour' ), $args );
+		register_taxonomy( 'when', 'tour', $args );
 	}
 
 	public function budget_taxonomy_setup() {
@@ -203,7 +203,7 @@ class Setup {
 			),
 			'show_in_rest'               => true,
 		);
-		register_taxonomy( 'budget', array( 'tour' ), $args );
+		register_taxonomy( 'budget', 'tour', $args );
 	}
 
 	public function tour_type_setup() {
