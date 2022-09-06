@@ -5180,7 +5180,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 #colophon p{text-align:center;}
 .footer-navigation>ul{width:100%; margin:0 auto;}
-.single-lsx-to-tour #accommodation .slider-content{display:none;}
+.single-lsx-to-tour #accommodation .accomodation-nav{display:none!important;}
 .single-lsx-to-tour .body-wrap{margin-bottom:100px!important;}
 
 	.dropbtn2 {
