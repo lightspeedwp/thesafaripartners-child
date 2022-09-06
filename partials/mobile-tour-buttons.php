@@ -53,6 +53,7 @@ sharing_display( '', true );
 
           </div>
 
+
           <nav role="navigation" class="mobile-tournav">
           <select> 
     <option value="" selected="selected">Select</option> 
@@ -65,3 +66,4 @@ sharing_display( '', true );
 
   </select> 
 						</nav>
+                        </div>
