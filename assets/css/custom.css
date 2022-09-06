@@ -4400,13 +4400,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.lsx-to-slider-inner .slick-arrow.slick-prev {
 		left:-10px;
-		width:20px!important;
-		height:20px!important;
+		width:30px!important;
+		height:30px!important;
    }
 	.lsx-to-slider-inner .slick-arrow.slick-next {
 		right:-10px;
-		width:20px!important;
-		height:20px!important;
+		width:30px!important;
+		height:30px!important;
    }
 	.lsx-to-slider-inner .slick-arrow,.gallery .slick-arrow {
 		border:1px solid #ce9e57!important;
@@ -5177,14 +5177,20 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .lsx-to-archive-item > .lsx-to-archive-container{display:block!important;}
 .single-lsx-to-tour  .tour-accommodation-gallery{height: 279px;}
 .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 32%;}
-.single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 132vh!important;}
+.tour-accommodation-gallery .slick-arrow.slick-prev {
+    left: 0px!important;}
+	.tour-accommodation-gallery .slick-arrow.slick-next{
+		right: 0px!important;
+	}
+.single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour #itinerary .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
-    width: 96%;
+    width: 90%;
     padding: 0 0px;
     position: absolute;
-    top: 49%;
-    left: 2%;
+    top: 47%;
+    left: 5%;
     z-index: 99;
 }
 
