@@ -4725,7 +4725,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	background: #ce9e57;
 }
 #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link {
-    background: #ce9e57;
+    background: #ce9e57!important;
     color: #000;
     font-size: 16px!important;
     padding-left: 10px;
@@ -4965,7 +4965,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding: 0 2px!important;
 		display: inline-flex;}
 		.page-template-template-contact .contact-133993  .wp-container-32 .contact-left, .page-template-template-contact .contact-133993  .wp-container-32 .contact-right {
-			width: 38%!important;
+			width: 36%!important;
 			margin: 0;
 			padding: 0 2px!important;
 			display: inline-flex;}
@@ -4977,15 +4977,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			width: 100%;
 			padding-top: 12%;
 			margin-top: 0px;}
-			.page-template-template-contact .lsx-contact-module{min-height: 450px;
+			.page-template-template-contact .lsx-contact-module{min-height:340px;
 				height: auto;
 				width: 100%;
-				padding-top: 10%;}
+				padding-top: 2%;}
 		.page-template-template-contact .contact-133993 .col-md-6{padding:0!important;}
 		.page-template-template-contact .contact-133993 .lsx-contact-module h3{font-size:20px!important;}
-		.page-template-template-contact .contact-134234 .lsx-contact-module{padding:10% 14% 0!important;}
+		.page-template-template-contact .contact-134234 .lsx-contact-module{padding:6% 10% 0!important;}
 		.page-template-template-contact .contact-134234 .lsx-contact-module-image{display:none;}
-		.page-template-template-contact .contact-134309 .lsx-contact-module{padding:10% 14% 0!important;}
+		.page-template-template-contact .contact-134309 .lsx-contact-module{padding:6% 10% 0!important;}
 		.page-template-template-contact .contact-134309 .lsx-contact-module-image{display:none;}
 		.page-template-template-contact .contact-134067 .lsx-contact-module-image{display:none;}
 		.page-template-template-contact .tab {
@@ -5174,7 +5174,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour #accommodation .accomodation-nav{display:none!important;}
 .single-lsx-to-tour .body-wrap{margin-bottom:100px!important;}
 .single-lsx-to-tour .lsx-to-archive-item > .lsx-to-archive-container{display:block!important;}
-.single-lsx-to-tour  .tour-accommodation-gallery{height: 279px;}
+.single-lsx-to-tour  .tour-accommodation-gallery{height: 340px;}
 .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 32%;}
 .tour-accommodation-gallery .slick-arrow.slick-prev {
     left: 0px!important;}
