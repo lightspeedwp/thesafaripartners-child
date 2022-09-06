@@ -5189,28 +5189,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position: relative;
     display: block;
     width: 100%;
-    top: 59px;
+    top: 60px;
     z-index: 9999;
 	border-bottom: 1px solid #ccc;
 	  }
 
-	  .dropdown2::after {
-		content: '\f140';
-		font-family: dashicons;
-		font-weight: normal;
-		display: inline-block;
-		margin: 0 0 0 6px;
-		vertical-align: top;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		transform: rotate(0);
-		color: inherit;
-		position: relative;
-		background: transparent;
-		height: auto;
-		width: auto;
-		right: auto;
-		line-height: inherit;
+	  .dropbtn2::after {background-image:url('img/tsp-see-more-arrow.svg');
+		background-size:16px 16px;
+		display:inline-block;
+		width:16px;
+		height:16px;
+		content:"";
+		margin-left:20px;
 	  }
 	  
 	  /* Dropdown Content (Hidden by Default) */
