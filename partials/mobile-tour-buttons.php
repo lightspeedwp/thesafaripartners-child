@@ -54,19 +54,25 @@ sharing_display( '', true );
           </div>
 
 
-          <div class="custom-select" style="width:100%;">
-
-          <select> 
-    <option value="1">Overview</option> 
-    <option value="2">Day by Day</option> 
-    <option value="3">Accommodation</option> 
-    <option value="4">Dates & Prices</option> 
-    <option value="5">Maps & More</option> 
-  </select> 
+          <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Select car:</option>
+    <option value="1">Audi</option>
+    <option value="2">BMW</option>
+    <option value="3">Citroen</option>
+    <option value="4">Ford</option>
+    <option value="5">Honda</option>
+    <option value="6">Jaguar</option>
+    <option value="7">Land Rover</option>
+    <option value="8">Mercedes</option>
+    <option value="9">Mini</option>
+    <option value="10">Nissan</option>
+    <option value="11">Toyota</option>
+    <option value="12">Volvo</option>
+  </select>
 </div>
-                        </div>
 
-                        <script>
+<script>
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
@@ -146,3 +152,4 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 </script>
+                        </div>
