@@ -58,9 +58,9 @@ sharing_display( '', true );
           <select> 
     <option value="" selected="selected">Select</option> 
     
-    <option value="openCity(event, 'Overview')">Overview</option> 
-    <option value="openCity(event, 'Day')">Day by Day</option> 
-    <option value="openCity(event, 'Accommodation')">Accommodation</option> 
+    <option onclick="openCity(event, 'Overview')" value="Overview">Overview</option> 
+    <option onclick="openCity(event, 'Day')" value="Day">Day by Day</option> 
+    <option onclick="openCity(event, 'Accommodation')" value="openCity(event, 'Accommodation')">Accommodation</option> 
     <option value="openCity(event, 'Price')">Dates & Prices</option> 
     <option value="openCity(event, 'Maps')">Maps & More</option> 
 
