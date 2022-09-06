@@ -5182,7 +5182,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right: 0px!important;
 	}
 .single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
-.single-lsx-to-tour .itinerary .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
     width: 90%;
@@ -5196,7 +5196,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.dropbtn2 {
 		background-color: #fff;
 		color: #262423;
-		padding: 16px;
+		padding: 7px;
 		font-size: 16px;
 		border: none;
 		cursor: pointer;
@@ -5208,7 +5208,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position: relative;
     	display: block;
     	width: 100%;
-   		top: 60px;
+   		top: 46px;
     	z-index: 9999;
 		border-bottom: 1px solid #ccc;
 	  }
