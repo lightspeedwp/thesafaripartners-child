@@ -57,11 +57,11 @@ sharing_display( '', true );
           <div class="custom-select" style="width:100%;">
 
           <select> 
-    <option onclick="openCity(event, 'Overview')" value="Overview">Overview</option> 
-    <option onclick="openCity(event, 'Day')" value="Day">Day by Day</option> 
-    <option onclick="openCity(event, 'Accommodation')" value="openCity(event, 'Accommodation')">Accommodation</option> 
-    <option value="openCity(event, 'Price')">Dates & Prices</option> 
-    <option value="openCity(event, 'Maps')">Maps & More</option> 
+    <option value="Overview">Overview</option> 
+    <option value="Day">Day by Day</option> 
+    <option value="Accommodation">Accommodation</option> 
+    <option value="Price">Dates & Prices</option> 
+    <option value="Maps">Maps & More</option> 
   </select> 
 </div>
                         </div>
