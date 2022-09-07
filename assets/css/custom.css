@@ -1381,21 +1381,22 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	transition:0.5s;
 	margin: 0 4px;
 }
-#primary .tab a.active:after{background-image:url('img/fulltab.png');
+
+ .tab a.active:after{background-image:url('img/fulltab.png');
 	background-size:140px 4px;
 	display:inline-block;
 	width:140px;
 	height:4px;
 	content:"";}
 
-	.page-id-133998 #primary .tab a.active:after{background-image:url('img/halftab.png');
+	.page-id-133998 .tab a.active:after{background-image:url('img/halftab.png');
 		background-size:140px 4px;
 		display:inline-block;
 		width:140px;
 		height:4px;
 		content:"";}
 
-	.page-template-template-contact.page-id-133998 #primary .tab a.activepage-133998:after{background-image:url('img/halftab.png');
+.page-id-133998  a.activepage-133998:after{background-image:url('img/halftab.png');
 		background-size: 86px 5px;
     width: 78px;
     margin-left: 7px;
