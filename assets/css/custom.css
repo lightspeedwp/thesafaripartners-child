@@ -136,13 +136,13 @@ legend {
 }
 .lsx-to-meta-data.lsx-to-meta-data-destinations:before {
 	background-image:url('img/tsp-country.svg');
-	background-size:17px 17px;
+	background-size:16px 16px;
 	display:inline-block;
-	width:17px;
-	height:17px;
+	width:16px;
+	height:16px;
 	content:"";
 	margin-right:17px;
-	margin-top:3px;
+	margin-top:2px;
 }
 .page-template-template-contact .gform_body [type="radio"]:checked+label:after, .page-template-template-contact .gform_body [type="radio"]:not(:checked)+label:after {
 	content:'';
@@ -585,7 +585,7 @@ legend {
 .single-lsx-to-tour .lsx-to-meta-data .lsx-to-meta-data-key{font-weight:normal; color:#6a6d5b;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data:before{display:none!important;margin-right:0!important;}
 .single-lsx-to-tour .itinerary-navigation .last-day{display:none!important;}
-.single-lsx-to-tour #fast-facts .lsx-to-meta-data{padding:0!important;}
+.single-lsx-to-tour #fast-facts .lsx-to-meta-data{padding:0 15px 0 0!important;}
 .single-lsx-to-tour .heading-destinations {
 	font-size:28px!important;
 	line-height:34px;
@@ -1311,6 +1311,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	text-align:center;
 }
 .single-lsx-to-tour .lsx-to-tour-content .lsx-cta{margin:-20px 0 24px;}
+.single-lsx-to-tour .itenary .entry-conten{padding-top:2%;}
 .pum form input,.pum form input[type="email"],.pum form input[type="date"],.pum form input[type="datetime"],.pum form input[type="datetime-local"],.pum form input[type="month"],.pum form input[type="number"],.pum form input[type="password"],.pum form input[type="search"],.pum form input[type="tel"],.pum form input[type="text"],.pum form input[type="time"],.pum form input[type="week"],.pum form input[type="url"],.pum .pum-form--style-default input,.pum .pum-form--style-default input[type="email"],.pum .pum-form--style-default input[type="date"],.pum .pum-form--style-default input[type="datetime"],.pum .pum-form--style-default input[type="datetime-local"],.pum .pum-form--style-default input[type="month"],.pum .pum-form--style-default input[type="number"],.pum .pum-form--style-default input[type="password"],.pum .pum-form--style-default input[type="search"],.pum .pum-form--style-default input[type="tel"],.pum .pum-form--style-default input[type="text"],.pum .pum-form--style-default input[type="time"],.pum .pum-form--style-default input[type="week"],.pum .pum-form--style-default input[type="url"],.pum .pum-age-form input,.pum .pum-age-form input[type="email"],.pum .pum-age-form input[type="date"],.pum .pum-age-form input[type="datetime"],.pum .pum-age-form input[type="datetime-local"],.pum .pum-age-form input[type="month"],.pum .pum-age-form input[type="number"],.pum .pum-age-form input[type="password"],.pum .pum-age-form input[type="search"],.pum .pum-age-form input[type="tel"],.pum .pum-age-form input[type="text"],.pum .pum-age-form input[type="time"],.pum .pum-age-form input[type="week"],.pum .pum-age-form input[type="url"],.pum .gform_wrapper.gravity-theme select {
 	border:none;
 	padding:1px!important;
@@ -1635,6 +1636,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .ot-list .lsx-to-widget-content.bottom h4 {
 	display:none;
+}
+.single-lsx-to-tour #mapslink.tablinks {
+    text-transform: uppercase;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -2rem!important;
 }
 .safari-styles .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 	overflow:hidden;
@@ -3343,6 +3351,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background-color: #fff;
     letter-spacing: -0.7px;
     font-size: 15px;
+	padding: 0 4px;
     color: #262423!important;
    }
 	.mega-search.expand-to-left {
@@ -5390,7 +5399,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding:0;margin:0;
 }
 .single-lsx-to-tour .itinerary-item .lsx-to-meta-data {
-	font-size:22px!important;
+	font-size:19px!important;
 }
 .single-lsx-to-tour .lsx-to-meta-data.lsx-to-meta-data-style {
 	display:none;
@@ -5565,13 +5574,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	position:absolute;
 	right:0;
 	bottom:-5rem;
-}
-.single-lsx-to-tour #mapslink.tablinks {
-    text-transform: uppercase;
-    font-size: 20px;
-    position: absolute;
-    right: 0;
-    bottom: -2rem!important;
 }
 .single-lsx-to-tour #singlelink.tablinks:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
