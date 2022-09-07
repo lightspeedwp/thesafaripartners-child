@@ -1391,7 +1391,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     height: 4px;}
 
 
-	.page-id-133998 .tab .page-133993::after{background-image:url('img/halftab.png')!important;
+	.page-id-133998 #primary .tab a.page-133993::after{background-image:url('img/halftab.png');
 		background-size: 86px 5px;
     width: 78px;
     margin-left: 7px;
@@ -1400,7 +1400,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     position: absolute;
     height: 4px;}
 
-	.page-id-134234 .tab .page-133993::after{background-image:url('img/fulltab.png')!important;
+	.page-id-134234 #primary .tab a.page-133993::after{background-image:url('img/fulltab.png');
 		background-size: 86px 5px;
 		width: 78px;
 		margin-left: 7px;
