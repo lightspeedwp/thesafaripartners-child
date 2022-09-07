@@ -3206,7 +3206,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:536px;
 		padding:0 0px;
 		position:absolute;
-		top:64px;
+		top:50px;
 		left:53.5%;
 		z-index:99;
    }
@@ -5556,7 +5556,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-size:20px;
 	position:absolute;
 	right:0;
-	bottom:-8rem;
+	bottom:-5rem;
+}
+.single-lsx-to-tour #singlelink.tablinks {
+    text-transform: uppercase;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -2rem!important;
 }
 .single-lsx-to-tour #singlelink.tablinks:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
