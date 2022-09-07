@@ -3008,7 +3008,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    .lsx-body-grid-layout.category .post-wrapper{display:flex!important;}
    .archive.category:not(.has-sidebar).archive.category:not(.lsx-body-full-width) .site-main{width:100%!important;}
-   .category.archive .content-area {
+   .category.archive #primary {
 	width: 1260px!important;
     margin: 0 auto!important;
     float: none;
