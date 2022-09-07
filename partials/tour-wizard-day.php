@@ -111,5 +111,4 @@
 	</div>
 	<?php get_template_part( 'partials/tour-buttons' ); ?>
 						</div>
-						</div>
-</div>
+						
