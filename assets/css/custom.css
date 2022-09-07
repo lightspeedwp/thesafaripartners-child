@@ -1642,7 +1642,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     font-size: 20px;
     position: absolute;
     right: 0;
-    bottom: -2rem!important;
+    bottom: -4rem!important;
 }
 .single-lsx-to-tour #mapslink.tablinks:after {
     background-image: url(img/tsp-see-more-arrow.svg);

@@ -103,10 +103,10 @@
 				</h4>
 
 				<div class="entry-meta">
-					<?php lsx_post_meta_list_top(); ?>
+					<?php lsx_post_meta_list_top(); ?> <?php esc_html_e( 'on this Date: ', 'lsx' ); ?><?php lsx_post_meta_category(); ?>
 				</div><!-- .entry-meta -->
 
-				<?php lsx_post_meta_category(); ?>
+				
 
 			</header><!-- .entry-header -->
 
