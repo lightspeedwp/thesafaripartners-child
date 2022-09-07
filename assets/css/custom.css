@@ -590,7 +590,8 @@ legend {
 	letter-spacing:-0.1px!important;
 	width:100%;
 	padding:0;
-	margin:0;
+	float: left;
+	margin:0 0 26px;
 }
 .single-lsx-to-tour .itinerary-item .lsx-to-meta-data {
 	font-size:22px!important;
@@ -5370,9 +5371,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-family:"moret",serif!important;
 	letter-spacing:-0.2px!important;
 	width:100%;
-	padding:0;
-	float: left;
-	margin:0 0 26px;
+	padding:0;margin:0;
 }
 .single-lsx-to-tour .itinerary-item .lsx-to-meta-data {
 	font-size:22px!important;
