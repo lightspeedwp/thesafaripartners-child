@@ -1390,7 +1390,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     position: absolute;
     height: 4px;}
 
-	.page-id-133998 #primary .tab a.active:after{background-image:url('img/halftab.png');
+
+	.page-id-133998 #primary .tab a.page-133993:after{background-image:url('img/halftab.png')!important;
 		background-size: 86px 5px;
     width: 78px;
     margin-left: 7px;
@@ -1398,6 +1399,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     bottom: 1px;
     position: absolute;
     height: 4px;}
+
+	.page-id-134234 #primary .tab a.page-133993:after{background-image:url('img/fulltab.png')!important;
+		background-size: 86px 5px;
+		width: 78px;
+		margin-left: 7px;
+		left: 4p;
+		bottom: 1px;
+		position: absolute;
+		height: 4px;}
 
 
 /* Style the tab content */
