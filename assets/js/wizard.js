@@ -159,6 +159,25 @@
 
 					});
 
+					// Stepper navigation
+					$this.find('.lsx-wizard-progress-buttons a:not(.active)').click(function (e) {
+						e.preventDefault();
+
+						var eleSelector = jQuery(this).parent().attr('data-position');
+						console.log(eleSelector);
+						console.log(jQuery(this).parent());
+						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
+
+						if ($.isFunction(settings.onButtonNextClick)) {
+							// Trigger the override callback it the callback is set at the plugin initialization...
+							settings.onButtonNextClick.call(this);
+						} else {
+							// ...slide left imediatelly otherwise.
+							slideMeTo($elementToSlide, settings, $this);
+						}
+
+					});
+
 					if ( $this.hasClass( 'mini-wizard-form' ) ) {
 						refreshMiniWizardResults();
 					}
@@ -285,6 +304,46 @@
 		$wizardStepsWrapper.clearQueue().animate({
 			"height": $activeStep.height() + "px"
 		});
+	}
+
+	function slideMeTo($elementToSlide, settings, $plugin, slideSuccessCallback) {
+
+		if ($elementToSlide.next().length) {
+
+			jQuery('html, body').animate({
+				scrollTop: $plugin.offset().top - 100
+			}, 100);
+
+			$elementToSlide.clearQueue().animate({
+				'margin-left': '-100%'
+			});
+
+			var $next = $elementToSlide.next();
+
+			$next.clearQueue().animate({
+				'margin-left': 0
+			}, function () {
+
+				$(".lsx-wizard-step").removeClass("active");
+				$next.addClass("active");
+
+				var activeElementPosition = highlightActiveElement($plugin);
+				var stepsCount = $plugin.find(".lsx-wizard-step").length;
+
+				markStepAsCompleted(activeElementPosition, $plugin, settings);
+
+				if (activeElementPosition === stepsCount) {
+					setFinishButton($plugin);
+					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
+					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
+				} else {
+					$plugin.find('.lsx-wizard-button-previous').show();
+				}
+
+				$plugin.trigger("slideMeToSuccess.lsxWizard", this);
+			});
+
+		}
 	}
 
 	function slideLeft($elementToSlide, settings, $plugin, slideSuccessCallback) {
