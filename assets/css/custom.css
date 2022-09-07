@@ -577,9 +577,11 @@ legend {
 }
 .single-lsx-to-tour .lsx-to-meta-data {
 	font-family:"moret",serif!important;letter-spacing:0.2px;
-	font-size:16px!important;
+	font-size:14px!important;
 	color:#6a6d5b;
+	line-height:20px;
 }
+.single-lsx-to-tour .itinerary-navigation .last-day{display:none!important;}
 .single-lsx-to-tour .heading-destinations {
 	font-size:28px!important;
 	line-height:34px;
@@ -2924,7 +2926,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    .single-lsx-to-tour .first-day{background: none;
     color: #262423;
     font-size: 22px;
-    border: none;}
+    border: none;
+    font-family: "moret",serif!important;
+    letter-spacing: -0.2px!important;}
    .mobileonly{display:none!important;}
    .single-lsx-to-tour .mobile-tournav{display:none;}
    .archive #wizard .lsx-to-content {
@@ -5583,8 +5587,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin-left:-20px!important;
 }
 .single-lsx-to-tour #Maps .lsx-to-tour-content {
-	padding-top:5vh!important;
+	padding-top:4vh!important;
 }
+.single-lsx-to-tour #Maps .lsx-to-tour-content .lsx-cta{margin-top:-10px}
 .single-lsx-to-tour #Maps .lsx-to-meta-data-style,.single-lsx-to-tour #Maps .lsx-to-meta-data-price,.single-lsx-to-tour #Maps .lsx-to-meta-data-destinations {
 	display:none;
 }
