@@ -4456,13 +4456,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		 display:inline-block!important;
 		 width:14px!important;
 		 overflow:hidden!important;
-		 float:left!important;
 	 }
 	 .mini-wizard-wrapper .nav-justified>li,.mini-wizard-wrapper .nav-tabs.nav-justified>li {
 		 display:inline-block!important;
 		 width:14px!important;
 		 overflow:hidden!important;
-		 float:left!important;
 	 }
 	 .archive .wizard-where .col-sm-2, .single-lsx-to-destination .wizard-where .col-sm-2{
 		 height: 156px!important;}
@@ -4760,13 +4758,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:inline-block!important;
 		width:11px!important;
 		overflow:hidden!important;
-		float:left!important;
    }
 	.mini-wizard-wrapper .nav-justified>li,.mini-wizard-wrapper .nav-tabs.nav-justified>li {
 		display:inline-block!important;
 		width:11px!important;
 		overflow:hidden!important;
-		float:left!important;
    }
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
