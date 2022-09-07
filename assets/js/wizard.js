@@ -335,6 +335,7 @@
 				}
 
 				$plugin.trigger("slideMeToSuccess.lsxWizard", this);
+				$plugin.trigger("slideLeftSuccess.lsxWizard", this);
 			});
 
 		}

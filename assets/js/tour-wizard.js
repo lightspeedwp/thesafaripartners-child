@@ -392,6 +392,7 @@ function openinCity(evt, eventName) {
 				}
 
 				$plugin.trigger("slideMeToSuccess.lsxWizard", this);
+				$plugin.trigger("slideLeftSuccess.lsxWizard", this);
 			});
 
 		}
