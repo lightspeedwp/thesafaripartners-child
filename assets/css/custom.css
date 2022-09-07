@@ -3560,9 +3560,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.page-template-template-wizard .wizard-who .lsx-to-widget-thumb img {
 		overflow:hidden;
-		height:168px;
+		height:126px;
 		object-fit:cover;
    }
+   .lsx-wizard .wizard-who .lsx-to-content{text-align: center!important;}
 	.page-template-template-wizard .wizard-where .lsx-to-widget-thumb img {
 		overflow:hidden;
 		height:168px;
