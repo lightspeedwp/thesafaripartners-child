@@ -503,9 +503,10 @@ legend {
 }
 .blog .entry-layout-content .moretag, .category.archive .entry-layout-content .moretag{
 	float:right;
-	padding-bottom:10px!important;
+	padding-bottom:30px!important;
 	font-size:16px;
 }
+.page-template-template-wizard .step-content{min-height:500px;}
 .single #fast-facts .lsx-to-meta-data {
 	align-items:normal!important;
 	flex-flow:nowrap!important;
