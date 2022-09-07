@@ -1645,7 +1645,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     bottom: -4rem!important;
 }
 .lsx-body-grid-layout.blog .post-wrapper > .post .post-meta-categories{padding:0 3px 0 0!important;}
-.blog article.post .entry-meta .post-meta.post-meta-top{padding:0 3px 0 0!important;}
+.blog article.post .entry-meta .post-meta.post-meta-top{padding:0 0 0 3px!important;}
 .blog article.lsx-slot .entry-meta{display:flex;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
 .single-lsx-to-tour #mapslink.tablinks:after {
