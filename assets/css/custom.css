@@ -1372,8 +1372,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 /* Style the buttons that are used to open the tab content */
 #primary .tab button, #primary .tab a {
 	background-color:inherit;
-	font-family:argesta_displayregular,serif!important;
-	font-size:14px;
+	font-family:"moret",serif!important;
+	font-size:15px;
 	border:none;
 	outline:none;
 	cursor:pointer;
@@ -1381,15 +1381,21 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	transition:0.5s;
 	margin: 0 4px;
 }
-/* Create an active/current tablink class */
-#primary .tab button.active, #primary .tab a.active {
-	border-bottom:5px solid #262423!important;
-}
-#primary .tab button.active::after {
-	height:5px;
-	border:1px solid #262423;
-	margin-top: 12px;
-}
+#primary .tab a.active:after{background-image:url('img/fulltab.png');
+	background-size:140px 4px;
+	display:inline-block;
+	width:140px;
+	height:4px;
+	content:"";}
+
+	.page-id-133998 #primary .tab a.active:after{background-image:url('img/halftab.png');
+		background-size:140px 4px;
+		display:inline-block;
+		width:140px;
+		height:4px;
+		content:"";}
+
+
 /* Style the tab content */
 .tabcontent {
 	display:none;
