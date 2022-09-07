@@ -162,20 +162,9 @@
 					// Stepper navigation
 					$this.find('.lsx-wizard-progress-buttons a:not(.active)').click(function (e) {
 						e.preventDefault();
-
-						var eleSelector = jQuery(this).parent().attr('data-position');
-						console.log(eleSelector);
-						console.log(jQuery(this).parent());
+						var nextElement = jQuery(this).parent().attr('data-position');
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
-
-						if ($.isFunction(settings.onButtonNextClick)) {
-							// Trigger the override callback it the callback is set at the plugin initialization...
-							settings.onButtonNextClick.call(this);
-						} else {
-							// ...slide left imediatelly otherwise.
-							slideMeTo($elementToSlide, settings, $this);
-						}
-
+						slideMeTo($elementToSlide, nextElement , settings, $this);
 					});
 
 					if ( $this.hasClass( 'mini-wizard-form' ) ) {
@@ -306,9 +295,11 @@
 		});
 	}
 
-	function slideMeTo($elementToSlide, settings, $plugin, slideSuccessCallback) {
+	function slideMeTo($elementToSlide, $nextSelector, settings, $plugin, slideSuccessCallback) {
 
-		if ($elementToSlide.next().length) {
+		var nextElement = $plugin.find('.lsx-wizard-step[data-position="'+$nextSelector+'"]');
+
+		if (nextElement.length) {
 
 			jQuery('html, body').animate({
 				scrollTop: $plugin.offset().top - 100
@@ -318,7 +309,7 @@
 				'margin-left': '-100%'
 			});
 
-			var $next = $elementToSlide.next();
+			var $next = nextElement;
 
 			$next.clearQueue().animate({
 				'margin-left': 0
@@ -337,6 +328,9 @@
 					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
 					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
 				} else {
+					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
+						unsetFinishButton($plugin, settings);
+					}
 					$plugin.find('.lsx-wizard-button-previous').show();
 				}
 

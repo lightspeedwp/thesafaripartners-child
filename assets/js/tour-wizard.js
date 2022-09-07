@@ -182,6 +182,14 @@ function openinCity(evt, eventName) {
 
 					});
 
+					// Stepper navigation
+					$this.find('.lsx-wizard-progress-buttons a:not(.active)').click(function (e) {
+						e.preventDefault();
+						var nextElement = jQuery(this).parent().attr('data-position');
+						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
+						slideMeTo($elementToSlide, nextElement , settings, $this);
+					});
+
 					/////////////////////////// Testing Success Icon
 
 					var $progressButtonsPlaceholder = $progressButtonsTemplate.find(".lsx-wizard-progress-buttons");
@@ -339,6 +347,51 @@ function openinCity(evt, eventName) {
 
 				$.isFunction(settings.onSlideRightFinished) && settings.onSlideRightFinished.call($plugin);
 				$plugin.trigger("slideRightSuccess.lsxWizard", goToFirst);
+			});
+
+		}
+	}
+
+	function slideMeTo($elementToSlide, $nextSelector, settings, $plugin, slideSuccessCallback) {
+
+		var nextElement = $plugin.find('.lsx-wizard-step[data-position="'+$nextSelector+'"]');
+
+		if (nextElement.length) {
+
+			jQuery('html, body').animate({
+				scrollTop: $plugin.offset().top - 100
+			}, 100);
+
+			$elementToSlide.clearQueue().animate({
+				'margin-left': '-100%'
+			});
+
+			var $next = nextElement;
+
+			$next.clearQueue().animate({
+				'margin-left': 0
+			}, function () {
+
+				$(".lsx-wizard-step").removeClass("active");
+				$next.addClass("active");
+
+				var activeElementPosition = highlightActiveElement($plugin);
+				var stepsCount = $plugin.find(".lsx-wizard-step").length;
+
+				markStepAsCompleted(activeElementPosition, $plugin, settings);
+
+				if (activeElementPosition === stepsCount) {
+					setFinishButton($plugin);
+					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
+					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
+				} else {
+					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
+						unsetFinishButton($plugin, settings);
+					}
+					$plugin.find('.lsx-wizard-button-previous').show();
+				}
+
+				$plugin.trigger("slideMeToSuccess.lsxWizard", this);
 			});
 
 		}
