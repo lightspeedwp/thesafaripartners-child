@@ -2987,6 +2987,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin:0 auto;
 	padding:0!important;
 }
+.archive.category p .moretag{display:block!important;}
 .content-info>.container>.row>div[class*='col-']{padding:0!important;}
 	.blog .content-area {
 		width:1204px;
@@ -2994,6 +2995,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		float:none;
 		padding:0!important;
    }
+   .archive.category:not(.has-sidebar).archive.category:not(.lsx-body-full-width) .site-main{width:100%!important;}
    .category.archive .content-area {
 	width:1204px;
 	margin:30px auto!important;
