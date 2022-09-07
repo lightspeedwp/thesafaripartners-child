@@ -297,7 +297,7 @@
 
 	function slideMeTo($elementToSlide, $nextSelector, settings, $plugin, slideSuccessCallback) {
 
-		var nextElement = $this.find('.lsx-wizard-step[data-position="'+$nextSelector+'"]');
+		var nextElement = $plugin.find('.lsx-wizard-step[data-position="'+$nextSelector+'"]');
 		console.log($nextSelector);
 		console.log(nextElement);
 
