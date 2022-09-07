@@ -3009,14 +3009,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    .lsx-body-grid-layout.category .post-wrapper{display:flex!important;}
    .archive.category:not(.has-sidebar).archive.category:not(.lsx-body-full-width) .site-main{width:100%!important;}
    .category.archive .content-area {
-	width:1204px;
-	margin:30px auto!important;
-	float:none;
-	padding:0!important;
+	width: 1260px!important;
+    margin: 0 auto!important;
+    float: none;
+    padding: 30px 0 30px 30px!important;
 }
    .special-template-default .content-area {
-	width:1204px;
-	margin:30px auto!important;
+	width: 1232px!important;
+    margin: 30px 0 30px 51px!important;
 	float:none;
 	padding:0!important;
 }
@@ -5558,7 +5558,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	right:0;
 	bottom:-5rem;
 }
-.single-lsx-to-tour #singlelink.tablinks {
+.single-lsx-to-tour #mapslink.tablinks {
     text-transform: uppercase;
     font-size: 20px;
     position: absolute;
