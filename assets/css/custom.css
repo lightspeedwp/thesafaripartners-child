@@ -1373,7 +1373,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #primary .tab button, #primary .tab a {
 	background-color:inherit;
 	font-family:"moret",serif!important;
-	font-size:15px;
+	font-size:16px;
 	border:none;
 	outline:none;
 	cursor:pointer;
@@ -1382,18 +1382,22 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin: 0 4px;
 }
 #primary .tab a.active:after{background-image:url('img/fulltab.png');
-	background-size:140px 4px;
-	display:inline-block;
-	width:140px;
-	height:4px;
-	content:"";}
+	background-size: 86px 5px;
+    width: 78px;
+    margin-left: 7px;
+    left: 4p;
+    bottom: 1px;
+    position: absolute;
+    height: 4px;}
 
 	.page-id-133998 #primary .tab a.active:after{background-image:url('img/halftab.png');
-		background-size:140px 4px;
-		display:inline-block;
-		width:140px;
-		height:4px;
-		content:"";}
+		background-size: 86px 5px;
+    width: 78px;
+    margin-left: 7px;
+    left: 4p;
+    bottom: 1px;
+    position: absolute;
+    height: 4px;}
 
 
 /* Style the tab content */
@@ -3494,9 +3498,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	#primary .tab {
 		overflow:hidden;
-		right:51.5%;
+		right:57.5%;
 		z-index:9;
 		margin-top:1%;
+		height: 32px;
    }
 	.single-lsx-to-tour #primary .tab {
 		overflow:hidden;
