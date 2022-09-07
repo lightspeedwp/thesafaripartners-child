@@ -298,8 +298,6 @@
 	function slideMeTo($elementToSlide, $nextSelector, settings, $plugin, slideSuccessCallback) {
 
 		var nextElement = $plugin.find('.lsx-wizard-step[data-position="'+$nextSelector+'"]');
-		console.log($nextSelector);
-		console.log(nextElement);
 
 		if (nextElement.length) {
 
@@ -330,6 +328,9 @@
 					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
 					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
 				} else {
+					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
+						unsetFinishButton($plugin, settings);
+					}
 					$plugin.find('.lsx-wizard-button-previous').show();
 				}
 
