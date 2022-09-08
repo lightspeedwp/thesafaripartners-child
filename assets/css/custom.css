@@ -2948,10 +2948,23 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
-   .single-lsx-to-tour .tax-title{display:none;}
-   .single-lsx-to-tour .tax-title span{display:block!important;
-position:absolute; z-index: 20;padding: 10px; background-color: #ce9e57; color: #262423;font-family:"moret",serif!important;
-letter-spacing:-0.2px!important;font-size:18px;}
+   .single-lsx-to-tour .tax-title{visibility: hidden;
+    position: absolute;
+    width: 100%;}
+   
+   .single-lsx-to-tour .tax-title span{visibility: visible;
+    position: absolute;
+    z-index: 9999999;
+    top: 7px;
+    width: 120px;
+    left: 87%;
+    text-align: center;
+    padding: 5px;
+    background-color: #ce9e57;
+    color: #262423;
+    font-family: "moret",serif!important;
+    letter-spacing: -0.2px!important;
+    font-size: 18px;}
    .pum-container.pum-responsive.pum-responsive-medium {
     margin-left: -36%!important;
     width: 72%!important;
@@ -5697,6 +5710,7 @@ letter-spacing:-0.2px!important;font-size:18px;}
 }
 .single-lsx-to-tour .lsx-contact-module-image {
 	padding:0!important;
+	margin-top: -15px!important;
 }
 .single-lsx-to-tour #accommodation {
 	margin-top:0!important;
