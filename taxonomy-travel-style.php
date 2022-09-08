@@ -61,7 +61,8 @@ get_header(); ?>
 		);
 		$args = array( 
 			'selected' => array( get_queried_object_id() ),
-			'title' => get_term_meta( get_the_ID(), 'shaman_title', true ),
+			'title'    => get_term_meta( get_the_ID(), 'shaman_title', true ),
+			'tagline'  => get_term_meta( get_the_ID(), 'shaman_tagline', true ),
 		);
 		tsp_mini_wizard( $panels, $args );
 		

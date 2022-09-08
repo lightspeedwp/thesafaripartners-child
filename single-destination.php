@@ -48,7 +48,8 @@ get_header(); ?>
 				);
 				$args = array( 
 					'selected' => array( get_the_ID() ),
-					'title' => get_post_meta( get_the_ID(), 'shaman_title', true ),
+					'title'    => get_post_meta( get_the_ID(), 'shaman_title', true ),
+					'tagline'  => get_post_meta( get_the_ID(), 'shaman_tagline', true ),
 				);
 				tsp_mini_wizard( $panels, $args );
 			?>
