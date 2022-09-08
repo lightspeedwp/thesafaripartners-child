@@ -63,6 +63,7 @@ $tag = get_field('tagline', $term);
 				);
 				$args = array( 
 					'selected' => array( get_queried_object_id() ),
+					'title' => get_term_meta( get_the_ID(), 'shaman_title', true ),
 				);
 				tsp_mini_wizard( $panels, $args );
 

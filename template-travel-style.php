@@ -43,7 +43,9 @@ get_header(); ?>
 					3 => array( 'when' ),
 					4 => array( 'budget' ),
 				);
-				$args = array();
+				$args = array(
+					'title' => get_post_meta( get_the_ID(), 'shaman_title', true ),
+				);
 				tsp_mini_wizard( $panels, $args );
 
 				$query_args = array(

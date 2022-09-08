@@ -38,7 +38,7 @@ get_header(); ?>
 			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
 
 
-			<?php 
+			<?php
 				$panels = array(
 					0 => array( 'who' ),
 					1 => array( 'what' ),
@@ -48,6 +48,7 @@ get_header(); ?>
 				);
 				$args = array( 
 					'selected' => array( get_the_ID() ),
+					'title' => get_post_meta( get_the_ID(), 'shaman_title', true ),
 				);
 				tsp_mini_wizard( $panels, $args );
 			?>
