@@ -2948,6 +2948,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .single-lsx-to-tour .lsx-contact-module-image {
+	padding:0!important;
+	margin-top: -15px!important;
+   }
    .single-lsx-to-tour .tax-title{visibility: hidden;
     position: absolute;
     width: 100%;}
