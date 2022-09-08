@@ -580,15 +580,15 @@ legend {
 }
 .single-lsx-to-tour .lsx-to-meta-data {
 	font-family:"moret",serif!important;letter-spacing:0.2px;
-	font-size:14px!important;
+	font-size:15px!important;
 	color:#6a6d5b;
-	line-height:20px;
+	line-height:22px;
 	padding-bottom:0px;
 }
 .single-lsx-to-tour .lsx-to-meta-data .lsx-to-meta-data-key{font-weight:normal; color:#6a6d5b;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data:before{display:none!important;margin-right:0!important;}
 .single-lsx-to-tour .itinerary-navigation .last-day{display:none!important;}
-.single-lsx-to-tour #fast-facts .lsx-to-meta-data{padding:0 15px 0 0!important;}
+.single-lsx-to-tour #fast-facts .lsx-to-meta-data{padding:0 20px 0 0!important;}
 .single-lsx-to-tour .heading-destinations {
 	font-size:28px!important;
 	line-height:34px;
@@ -1640,6 +1640,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     right: 0;
     bottom: -4rem!important;
 }
+.single-lsx-to-tour #Maps .lsx-to-meta-data-duration{display:none;}
 .lsx-body-grid-layout.blog .post-wrapper > .post .post-meta-categories{padding:0 3px 0 0!important;float:left;}
 .blog article.post .entry-meta .post-meta.post-meta-top{padding:0px!important;display: inherit;}
 .blog article.lsx-slot .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
@@ -1650,9 +1651,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.archive.category .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
 	.single-post .post .post-meta-categories{padding:0 3px 0 0!important;float:left;}
-	.single-post .entry-meta .post-meta.post-meta-top{padding:0px!important;display: inherit;}
+	.single-post .entry-meta .post-meta.post-meta-top{padding: 0px!important;
+		display: inherit!important;
+		margin: 0!important;}
 	.single-post .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
+	.single-post #main .entry-meta{text-align:center;}
 .single-lsx-to-tour #mapslink.tablinks:after {
     background-image: url(img/tsp-see-more-arrow.svg);
     background-size: 10px 10px;
