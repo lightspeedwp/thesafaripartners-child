@@ -1644,6 +1644,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .blog article.post .entry-meta .post-meta.post-meta-top{padding:0 0 0 3px!important;display: inherit;}
 .blog article.lsx-slot .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
+
+	.archive.category .post-wrapper > .post .post-meta-categories{padding:0 3px 0 0!important;float:left;}
+	.archive.category .entry-meta .post-meta.post-meta-top{padding:0 0 0 3px!important;display: inherit;}
+	.archive.category .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
+    text-align: left;}
 .single-lsx-to-tour #mapslink.tablinks:after {
     background-image: url(img/tsp-see-more-arrow.svg);
     background-size: 10px 10px;
