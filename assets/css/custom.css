@@ -2233,7 +2233,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width: 90%;
 }
 /*Tours */
-.single-lsx-to-tour #primary .tab button.active{border-bottom: 4px solid #6a6d5b; color:#6a6d5b!important;padding-bottom:5px;}
+.single-lsx-to-tour #primary .tab button.active{border-bottom: solid 4px #6a6d5b!important;
+    color: #6a6d5b!important;
+    padding-bottom: 1px;}
 .single-lsx-to-tour .archive-header-wrapper {
 	display:none!important;
 }
@@ -3604,6 +3606,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right:0;
 		margin-bottom:-30px;
 		width:476px;
+		height:32px;
    }
    .gutenberg-compatible-template.using-gutenberg .entry-content figure.wp-block-embed, .gutenberg-compatible-template.using-gutenberg .entry-content .navbar, .gutenberg-compatible-template.using-gutenberg .entry-content p, .gutenberg-compatible-template.using-gutenberg .entry-content .envira-gallery-wrap, .gutenberg-compatible-template.using-gutenberg .entry-content form, .gutenberg-compatible-template.using-gutenberg .entry-content blockquote, .gutenberg-compatible-template.using-gutenberg .entry-content h1, .gutenberg-compatible-template.using-gutenberg .entry-content h2, .gutenberg-compatible-template.using-gutenberg .entry-content h3, .gutenberg-compatible-template.using-gutenberg .entry-content h4, .gutenberg-compatible-template.using-gutenberg .entry-content h5, .gutenberg-compatible-template.using-gutenberg .entry-content h6, .gutenberg-compatible-template.using-gutenberg .entry-content ul, .gutenberg-compatible-template.using-gutenberg .entry-content pre, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-image:not(.alignfull), .gutenberg-compatible-template.using-gutenberg .entry-content ol, .gutenberg-compatible-template.using-gutenberg .entry-content table, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-button, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-buttons:not(.alignfull), .gutenberg-compatible-template.using-gutenberg .entry-content .slick-slider, .gutenberg-compatible-template.using-gutenberg .entry-content #lsx-projects-slider.slick-slider, .gutenberg-compatible-template.using-gutenberg .entry-content #lsx-team-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content figure.wp-block-embed, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .navbar, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content p, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .envira-gallery-wrap, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content form, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content blockquote, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h1, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h2, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h3, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h4, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h5, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h6, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content ul, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content pre, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-image:not(.alignfull), .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content ol, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content table, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-button, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-buttons:not(.alignfull), .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .slick-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content #lsx-projects-slider.slick-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content #lsx-team-slider{max-width:1204px!important;}
 	.page-template-template-wizard .body-wrap {
@@ -3880,6 +3883,23 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width: 72%!important;
 		margin-top: 40px!important;
 	}
+	.single-lsx-to-tour .tax-title{visibility: hidden;
+		position: absolute;
+		width: 100%;}
+	   
+	   .single-lsx-to-tour .tax-title span{visibility: visible;
+		position: absolute;
+		z-index: 9999999;
+		top: 7px;
+		width: 120px;
+		left: 87%;
+		text-align: center;
+		padding: 5px;
+		background-color: #ce9e57;
+		color: #262423;
+		font-family: "moret",serif!important;
+		letter-spacing: -0.2px!important;
+		font-size: 18px;}
 	.page-template-template-wizard .lsx-wizard-step .step-content{padding:0 15px;}
 	#wizard .lsx-to-content {font-size: 18px!important;}
 	.page-template-template-wizard .lsx-wizard-steps-wrapper{overflow: unset!important;}
@@ -4567,6 +4587,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0!important;
 		padding:0!important 
    }
+   .single-lsx-to-tour .tax-title{visibility: hidden;
+    position: absolute;
+    width: 100%;}
+   
+   .single-lsx-to-tour .tax-title span{visibility: hidden;}
 	.home.page #primary {
 		padding:0!important;
    }
