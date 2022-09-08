@@ -10,10 +10,9 @@
 					?>
 		<div class="col-md-6 lsx-contact-module-image">
 		<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
-        the_title();
 
         // create the span element, and write out the date this post was created.
-        echo "<span>" . the_date();
+        echo "<span>" . 
 
         foreach ( $terms as $term ) {
             echo $term->name;
