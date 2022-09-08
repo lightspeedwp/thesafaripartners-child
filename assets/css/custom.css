@@ -62,35 +62,7 @@ th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
 	letter-spacing:-0.1px!important;
 }
-/*
-.tab a.active::after{background-image:url('img/fulltab.png');
-	background-size:140px 4px;
-	display:inline-block;
-	width:140px;
-	height:4px;
-	content:"";}
-	*/
-	.page-id-133998 .link133998{background-image:url('img/halftab.png');
-		background-size: 103px 9px;
-		background-position: 5px 21px;
-		width: 79px;
-		bottom: 1px;
-		height: 40px;
-		position: relative;
-		padding-bottom: 10px;
-		/* height: 4px; */
-		background-repeat: no-repeat;}
-
-	.page-id-134234 .link133998{background-image:url('img/fulltab.png');
-		background-size: 103px 9px;
-		background-position: 5px 21px;
-		width: 79px;
-		bottom: 1px;
-		height: 40px;
-		position: relative;
-		padding-bottom: 10px;
-		/* height: 4px; */
-		background-repeat: no-repeat;}
+.gform_required_legend{display:none;}
 
 .btn,button {
 	font-family:"moret",serif!important;
@@ -2981,6 +2953,90 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     width: 72%!important;
     margin-top: 40px!important;
 }
+.page-id-133998 .link133998{background-image:url('img/halftab.png');
+	background-size: 103px 9px;
+	background-position: 5px 21px;
+	width: 79px;
+	bottom: 1px;
+	height: 40px;
+	position: relative;
+	padding-bottom: 10px;
+	/* height: 4px; */
+	background-repeat: no-repeat;}
+	.page-id-133998 .link133998 a{color: #6a6d5b!important;}
+
+.page-id-134234 .link133998{background-image:url('img/fulltab.png');
+	background-size: 103px 9px;
+	background-position: 5px 21px;
+	width: 79px;
+	bottom: 1px;
+	height: 40px;
+	position: relative;
+	padding-bottom: 10px;
+	/* height: 4px; */
+	background-repeat: no-repeat;}
+	.page-id-134234 .link133998 a{color: #6a6d5b!important;}
+
+.page-id-134004 .link134004{background-image:url('img/halftab.png');
+	background-size: 103px 9px;
+	background-position: 5px 21px;
+	width: 79px;
+	bottom: 1px;
+	height: 40px;
+	position: relative;
+	padding-bottom: 10px;
+	/* height: 4px; */
+	background-repeat: no-repeat;}
+	.page-id-134004 .link13400 a{color: #6a6d5b!important;}
+
+	.page-id-134309 .link134004{background-image:url('img/fulltab.png');
+		background-size: 103px 9px;
+		background-position: 5px 21px;
+		width: 79px;
+		bottom: 1px;
+		height: 40px;
+		position: relative;
+		padding-bottom: 10px;
+		/* height: 4px; */
+		background-repeat: no-repeat;}
+		.page-id-134309 .link134004 a{color: #6a6d5b!important;}
+
+		.page-id-134067 .link134067{background-image:url('img/fulltab.png');
+			background-size: 103px 9px;
+			background-position: 5px 21px;
+			width: 79px;
+			bottom: 1px;
+			height: 40px;
+			position: relative;
+			padding-bottom: 10px;
+			/* height: 4px; */
+			background-repeat: no-repeat;}
+			.page-id-134067 .link134067 a{color: #6a6d5b!important;}
+
+	.page-id-134413 .link134413{background-image:url('img/fulltab.png');
+		background-size: 103px 9px;
+		background-position: 5px 21px;
+		width: 79px;
+		bottom: 1px;
+		height: 40px;
+		position: relative;
+		padding-bottom: 10px;
+		/* height: 4px; */
+		background-repeat: no-repeat;}
+		.page-id-134067 .link134413 a{color: #6a6d5b!important;}
+
+		.page-id-135619 .link134413{background-image:url('img/fulltab.png');
+			background-size: 103px 9px;
+			background-position: 5px 21px;
+			width: 79px;
+			bottom: 1px;
+			height: 40px;
+			position: relative;
+			padding-bottom: 10px;
+			/* height: 4px; */
+			background-repeat: no-repeat;}
+			.page-id-135619 .link134413 a{color: #6a6d5b!important;}
+
    .single-lsx-to-tour .first-day{background: none;
     color: #262423;
     font-size: 22px;
@@ -3474,6 +3530,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		z-index:4;
 		padding-top:15%;
    }
+   .page-template-template-contact .page-id-134309 .lsx-contact-module{padding-top: 9%!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module {
 		width:100%;
 		max-width:432px!important;
