@@ -3238,7 +3238,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.who-posts .lsx-to-slider-inner {
 		width:100%!important;
 		max-width:1204px!important;
-		margin:5px 0px 20px 0px!important;
    }
 	.style-posts .lsx-to-slider-inner {
 		max-width:1204px!important;
@@ -4591,7 +4590,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.who-top h2.lsx-title {
 		max-width:98%!important;
-		margin-bottom:80px!important;
+		margin-bottom:94px!important;
 		font-size:38px!important;
 		padding-top:40px;
    }
