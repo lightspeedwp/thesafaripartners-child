@@ -81,42 +81,16 @@ th,tr,td,table,legend,label {
 		/* height: 4px; */
 		background-repeat: no-repeat;}
 
-	.page-template-template-contact .tab .link133998:after{background-image:url('img/halftab.png');
-	background-size: 86px 5px;
-    width: 78px;
-    margin-left: 7px;
-    left: 4px;
-    bottom: 1px;
-    position: absolute;
-    height: 4px;}
-
-
-.page-id-133998 .activepage-133998::after{background-image:url('img/halftab.png');
-		background-size: 86px 5px;
-    width: 78px;
-    margin-left: 7px;
-    left: 4px;
-    bottom: 1px;
-    position: absolute;
-    height: 4px;}
-
-	.page-template-template-contact.page-id-133998 #primary .tab a.page-133993::before{background-image:url('img/halftab.png');
-		background-size: 86px 5px;
-    width: 78px;
-    margin-left: 7px;
-    left: 4px;
-    bottom: 1px;
-    position: absolute;
-    height: 4px;}
-
-	.page-template-template-contact.page-id-134234 #primary .tab a.page-133993::after{background-image:url('img/fulltab.png');
-		background-size: 86px 5px;
-		width: 78px;
-		margin-left: 7px;
-		left: 4px;
+	.page-id-134234 .link133998{background-image:url('img/fulltab.png');
+		background-size: 103px 9px;
+		background-position: 5px 21px;
+		width: 79px;
 		bottom: 1px;
-		position: absolute;
-		height: 4px;}
+		height: 40px;
+		position: relative;
+		padding-bottom: 10px;
+		/* height: 4px; */
+		background-repeat: no-repeat;}
 
 .btn,button {
 	font-family:"moret",serif!important;
