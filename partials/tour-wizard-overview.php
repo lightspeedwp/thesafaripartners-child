@@ -9,19 +9,18 @@
 					lsx_entry_before();
 					?>
 		<div class="col-md-6 lsx-contact-module-image">
-
- 
- <span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
+		<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
+        the_title();
 
         // create the span element, and write out the date this post was created.
-        echo "<span>" . 
+        echo "<span>" . the_date();
 
         foreach ( $terms as $term ) {
             echo $term->name;
         }
 
         echo "</span>";?></span><span>
-					<div class="lsx-banner-image-wrap">
+								<div class="lsx-banner-image-wrap">
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 						</div>
 						<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
