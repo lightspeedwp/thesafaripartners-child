@@ -54,7 +54,7 @@ body,p,ul,li,em {
 }
 .lsx-to-widget-meta-data span, .lsx-to-widget-meta-data span a {
 	font-family:"moret",serif!important;
-	font-size:15px!important;
+	font-size:16px!important;
 	color:#6a6d5b!important;
 	letter-spacing:-0.2px!important;
 }
@@ -138,13 +138,13 @@ legend {
 }
 .lsx-to-meta-data.lsx-to-meta-data-destinations:before {
 	background-image:url('img/tsp-country.svg');
-	background-size:16px 16px;
-	display:inline-block;
-	width:16px;
-	height:16px;
-	content:"";
-	margin-right:17px;
-	margin-top:2px;
+	background-size: 16px 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    margin-left: 2px;
+    margin-top: 5px;
 }
 .page-template-template-contact .gform_body [type="radio"]:checked+label:after, .page-template-template-contact .gform_body [type="radio"]:not(:checked)+label:after {
 	content:'';
@@ -522,6 +522,7 @@ legend {
 .single #Maps #fast-facts {
 	margin-bottom:16px;
 }
+.tour-accommodation-gallery{margin-top:-20px!important;}
 .single #Maps .slider-container.lsx-to-widget-items {
 	margin-top:-20px!important;
 }
@@ -580,15 +581,16 @@ legend {
 }
 .single-lsx-to-tour .lsx-to-meta-data {
 	font-family:"moret",serif!important;letter-spacing:0.2px;
-	font-size:14px!important;
+	font-size:15px!important;
 	color:#6a6d5b;
-	line-height:20px;
+	line-height:25px;
 	padding-bottom:0px;
 }
+.single-lsx-to-tour #Day .lsx-to-archive-meta-data{margin-top:0!important;}
 .single-lsx-to-tour .lsx-to-meta-data .lsx-to-meta-data-key{font-weight:normal; color:#6a6d5b;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data:before{display:none!important;margin-right:0!important;}
 .single-lsx-to-tour .itinerary-navigation .last-day{display:none!important;}
-.single-lsx-to-tour #fast-facts .lsx-to-meta-data{padding:0 15px 0 0!important;}
+.single-lsx-to-tour #fast-facts .lsx-to-meta-data{padding:0 20px 0 0!important;}
 .single-lsx-to-tour .heading-destinations {
 	font-size:28px!important;
 	line-height:34px;
@@ -1173,11 +1175,20 @@ th {
 }
 .single-lsx-to-tour .lsx-wizard-button-next span:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
-	background-size:10px 10px;
+	background-size:14px 14px;
 	display:inline-block;
-	width:10px;
-	height:10px;
+	width:14px;
+	height:14px;
 	content:"";
+}
+.single-lsx-to-tour .lsx-wizard-button-previous span:before {
+	background-image:url('img/tsp-see-more-arrow-left.svg');
+	background-size:14px 14px;
+	display:inline-block;
+	width:14px;
+	height:14px;
+	content:"";
+	margin-right:9px;
 }
 .lsx-to-slider-inner .slick-prev:before {
 	background-image:url('img/tsp-carousel-arrow-left.svg');
@@ -1313,11 +1324,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .form-center {
 	text-align:center;
 }
+.page-template-template-contact .gform_wrapper.gravity-theme .gfield-choice-input+label{padding-top:0!important;}
 .single-lsx-to-tour .lsx-to-tour-content .lsx-cta{margin:-20px 0 24px;}
 .single-lsx-to-tour .itenary .entry-content.lsx-readmore{padding-top:5%!important;}
-.pum form input,.pum form input[type="email"],.pum form input[type="date"],.pum form input[type="datetime"],.pum form input[type="datetime-local"],.pum form input[type="month"],.pum form input[type="number"],.pum form input[type="password"],.pum form input[type="search"],.pum form input[type="tel"],.pum form input[type="text"],.pum form input[type="time"],.pum form input[type="week"],.pum form input[type="url"],.pum .pum-form--style-default input,.pum .pum-form--style-default input[type="email"],.pum .pum-form--style-default input[type="date"],.pum .pum-form--style-default input[type="datetime"],.pum .pum-form--style-default input[type="datetime-local"],.pum .pum-form--style-default input[type="month"],.pum .pum-form--style-default input[type="number"],.pum .pum-form--style-default input[type="password"],.pum .pum-form--style-default input[type="search"],.pum .pum-form--style-default input[type="tel"],.pum .pum-form--style-default input[type="text"],.pum .pum-form--style-default input[type="time"],.pum .pum-form--style-default input[type="week"],.pum .pum-form--style-default input[type="url"],.pum .pum-age-form input,.pum .pum-age-form input[type="email"],.pum .pum-age-form input[type="date"],.pum .pum-age-form input[type="datetime"],.pum .pum-age-form input[type="datetime-local"],.pum .pum-age-form input[type="month"],.pum .pum-age-form input[type="number"],.pum .pum-age-form input[type="password"],.pum .pum-age-form input[type="search"],.pum .pum-age-form input[type="tel"],.pum .pum-age-form input[type="text"],.pum .pum-age-form input[type="time"],.pum .pum-age-form input[type="week"],.pum .pum-age-form input[type="url"],.pum .gform_wrapper.gravity-theme select {
+.pum form input,.pum form input[type="email"],.pum form input[type="date"],.pum form input[type="datetime"],.pum form input[type="datetime-local"],.pum form input[type="month"],.pum form input[type="number"],.pum form input[type="password"],.pum form input[type="search"],.pum form input[type="tel"],.pum form input[type="text"],.pum form input[type="time"],.pum form input[type="week"],.pum form input[type="url"],.pum .pum-form--style-default input,.pum .pum-form--style-default input[type="email"],.pum .pum-form--style-default input[type="date"],.pum .pum-form--style-default input[type="datetime"],.pum .pum-form--style-default input[type="datetime-local"],.pum .pum-form--style-default input[type="month"],.pum .pum-form--style-default input[type="number"],.pum .pum-form--style-default input[type="password"],.pum .pum-form--style-default input[type="search"],.pum .pum-form--style-default input[type="tel"],.pum .pum-form--style-default input[type="text"],.pum .pum-form--style-default input[type="time"],.pum .pum-form--style-default input[type="week"],.pum .pum-form--style-default input[type="url"],.pum .pum-age-form input,.pum .pum-age-form input[type="email"],.pum .pum-age-form input[type="date"],.pum .pum-age-form input[type="datetime"],.pum .pum-age-form input[type="datetime-local"],.pum .pum-age-form input[type="month"],.pum .pum-age-form input[type="number"],.pum .pum-age-form input[type="password"],.pum .pum-age-form input[type="search"],.pum .pum-age-form input[type="tel"],.pum .pum-age-form input[type="text"],.pum .pum-age-form input[type="time"],.pum .pum-age-form input[type="week"],.pum .pum-age-form input[type="url"],.pum{
 	border:none;
-	padding:1px!important;
+	padding:1px 10px!important;
+	min-height:32px!important;
+	height:32px!important;
+}
+.gform_wrapper.gravity-theme select{border:none;
+	padding:1px 9px!important;
 	min-height:32px!important;
 	height:32px!important;
 }
@@ -1640,6 +1657,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     right: 0;
     bottom: -4rem!important;
 }
+.single-lsx-to-tour #Maps .lsx-to-meta-data-duration{display:none!important;}
 .lsx-body-grid-layout.blog .post-wrapper > .post .post-meta-categories{padding:0 3px 0 0!important;float:left;}
 .blog article.post .entry-meta .post-meta.post-meta-top{padding:0px!important;display: inherit;}
 .blog article.lsx-slot .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
@@ -1650,9 +1668,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.archive.category .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
 	.single-post .post .post-meta-categories{padding:0 3px 0 0!important;float:left;}
-	.single-post .entry-meta .post-meta.post-meta-top{padding:0px!important;display: inherit;}
+	.single-post .entry-meta .post-meta.post-meta-top{padding: 0px!important;
+		display: inherit!important;
+		margin: 0!important;}
 	.single-post .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
+	.single-post #main .entry-meta{text-align:center;width:100%;}
 .single-lsx-to-tour #mapslink.tablinks:after {
     background-image: url(img/tsp-see-more-arrow.svg);
     background-size: 10px 10px;
