@@ -1705,7 +1705,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .who-top h2.lsx-title {
 	max-width:98%!important;
-	margin-bottom:80px!important;
+	margin-bottom:92px!important;
 	font-size:46px!important;
 }
 .who-posts .lsx-to-widget-thumb img {
@@ -2233,6 +2233,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width: 90%;
 }
 /*Tours */
+.single-lsx-to-tour #primary .tab button.active{border-bottom: 4px solid #6a6d5b; color:#6a6d5b!important;padding-bottom:5px;}
 .single-lsx-to-tour .archive-header-wrapper {
 	display:none!important;
 }
