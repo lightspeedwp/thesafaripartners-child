@@ -66,7 +66,7 @@ $tag = get_field('tagline', $term);
 				);
 
 				// Call the intro
-				get_template_part( 'partials/shaman-intro', $args );
+				get_template_part( 'partials/shaman', 'intro', $args );
 
 				// Call the wizard
 				tsp_mini_wizard( $panels, $args );
