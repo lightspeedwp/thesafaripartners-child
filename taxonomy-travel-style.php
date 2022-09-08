@@ -58,12 +58,12 @@ get_header(); ?>
 		);
 		$args = array( 
 			'selected' => array( get_queried_object_id() ),
-			'title'    => get_term_meta( get_the_ID(), 'shaman_title', true ),
-			'tagline'  => get_term_meta( get_the_ID(), 'shaman_tagline', true ),
+			'title'    => get_term_meta( get_queried_object_id(), 'shaman_title', true ),
+			'tagline'  => get_term_meta( get_queried_object_id(), 'shaman_tagline', true ),
 		);
 
 		// Call the intro
-		get_template_part( 'partials/shaman-intro', $args );
+		get_template_part( 'partials/shaman', 'intro', $args );
 
 		// Call the wizard
 		tsp_mini_wizard( $panels, $args );
