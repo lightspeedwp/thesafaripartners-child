@@ -70,7 +70,7 @@ th,tr,td,table,legend,label {
 	height:4px;
 	content:"";}
 	*/
-	.page-template-template-contact .tab span.page-133998::after{background-image:url('img/halftab.png');
+	.page-template-template-contact .tab .link133998:after{background-image:url('img/halftab.png');
 	background-size: 86px 5px;
     width: 78px;
     margin-left: 7px;

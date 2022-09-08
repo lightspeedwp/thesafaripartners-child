@@ -42,7 +42,7 @@ get_header(); ?>
 									$active = 'active';
 								}
 								?>
-								<span class="page-<?php echo $page->ID; ?>"><a class="tablinks <?php echo esc_attr( $active  ); ?>" id="page-<?php echo $page->ID; ?>" href="<?php echo get_permalink( $page->ID ); ?>"><?php echo $page->post_title; ?></a></span>
+								<span class="link<?php echo $page->ID; ?>"><a class="tablinks <?php echo esc_attr( $active  ); ?>" id="page-<?php echo $page->ID; ?>" href="<?php echo get_permalink( $page->ID ); ?>"><?php echo $page->post_title; ?></a></span>
 								<?php
 								$counter++;
 							}
