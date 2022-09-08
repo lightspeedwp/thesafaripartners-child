@@ -70,8 +70,8 @@ th,tr,td,table,legend,label {
 	height:4px;
 	content:"";}
 	*/
-	.page.page-id-133998 .tab .page-133998 a:after{background-image:url('img/halftab.png');
-		background-size: 86px 5px;
+	.page-template-template-contact .tab span.page-133998::after{background-image:url('img/halftab.png');
+	background-size: 86px 5px;
     width: 78px;
     margin-left: 7px;
     left: 4px;
