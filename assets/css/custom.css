@@ -1640,7 +1640,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     right: 0;
     bottom: -4rem!important;
 }
-.single-lsx-to-tour #Maps .lsx-to-meta-data-duration{display:none;}
+.single-lsx-to-tour #Maps .lsx-to-meta-data-duration{display:none!important;}
 .lsx-body-grid-layout.blog .post-wrapper > .post .post-meta-categories{padding:0 3px 0 0!important;float:left;}
 .blog article.post .entry-meta .post-meta.post-meta-top{padding:0px!important;display: inherit;}
 .blog article.lsx-slot .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
@@ -1656,7 +1656,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin: 0!important;}
 	.single-post .entry-meta{display:inline-block;color: #6a6d5b!important;font-size: 13px!important;
     text-align: left;}
-	.single-post #main .entry-meta{text-align:center;}
+	.single-post #main .entry-meta{text-align:center;width:100%;}
 .single-lsx-to-tour #mapslink.tablinks:after {
     background-image: url(img/tsp-see-more-arrow.svg);
     background-size: 10px 10px;
