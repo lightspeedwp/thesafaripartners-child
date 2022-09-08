@@ -2948,6 +2948,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .single-lsx-to-tour .tax-title{display:none;}
+   .single-lsx-to-tour .tax-title span{display:block!important;
+position:absolute; z-index: 20;padding: 10px; background-color: #ce9e57; color: #262423;font-family:"moret",serif!important;
+letter-spacing:-0.2px!important;font-size:18px;}
    .pum-container.pum-responsive.pum-responsive-medium {
     margin-left: -36%!important;
     width: 72%!important;
