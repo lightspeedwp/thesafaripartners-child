@@ -54,7 +54,7 @@ body,p,ul,li,em {
 }
 .lsx-to-widget-meta-data span, .lsx-to-widget-meta-data span a {
 	font-family:"moret",serif!important;
-	font-size:15px!important;
+	font-size:16px!important;
 	color:#6a6d5b!important;
 	letter-spacing:-0.2px!important;
 }
@@ -138,13 +138,13 @@ legend {
 }
 .lsx-to-meta-data.lsx-to-meta-data-destinations:before {
 	background-image:url('img/tsp-country.svg');
-	background-size:16px 16px;
-	display:inline-block;
-	width:16px;
-	height:16px;
-	content:"";
-	margin-right:17px;
-	margin-top:2px;
+	background-size: 16px 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    margin-left: 2px;
+    margin-top: 5px;
 }
 .page-template-template-contact .gform_body [type="radio"]:checked+label:after, .page-template-template-contact .gform_body [type="radio"]:not(:checked)+label:after {
 	content:'';
