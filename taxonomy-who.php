@@ -51,8 +51,6 @@ $tag = get_field('tagline', $term);
 		</div>
 			</div>
 
-			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
-
 			<?php 
 				$panels = array(
 					0 => array( 'who' ),
@@ -66,6 +64,11 @@ $tag = get_field('tagline', $term);
 					'title'    => get_term_meta( get_the_ID(), 'shaman_title', true ),
 					'tagline'  => get_term_meta( get_the_ID(), 'shaman_tagline', true ),
 				);
+
+				// Call the intro
+				get_template_part( 'partials/shaman-intro', $args );
+
+				// Call the wizard
 				tsp_mini_wizard( $panels, $args );
 
 				$query_args = array(

@@ -35,9 +35,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php get_template_part( 'partials/shaman-intro', '1' ); ?>
-
-
 			<?php
 				$panels = array(
 					0 => array( 'who' ),
@@ -46,11 +43,15 @@ get_header(); ?>
 					3 => array( 'when' ),
 					4 => array( 'budget' ),
 				);
-				$args = array( 
-					'selected' => array( get_the_ID() ),
+				$args = array(
 					'title'    => get_post_meta( get_the_ID(), 'shaman_title', true ),
 					'tagline'  => get_post_meta( get_the_ID(), 'shaman_tagline', true ),
 				);
+
+				// Call the intro
+				get_template_part( 'partials/shaman-intro', $args );
+
+				// Call the wizard
 				tsp_mini_wizard( $panels, $args );
 			?>
 
