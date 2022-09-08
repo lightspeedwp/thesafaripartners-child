@@ -11,10 +11,16 @@
 		<div class="col-md-6 lsx-contact-module-image">
 
  
- <span class="tax-title"><?php $terms = wp_get_post_terms( $query->post->ID, array( 'tour-type' ) ); ?>
-<?php foreach ( $terms as $term ) : ?>
-<p><?php echo $term->taxonomy; ?>: <?php echo $term->name; ?></p>
-<?php endforeach; ?></span><span>
+ <span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
+
+        // create the span element, and write out the date this post was created.
+        echo "<span>" . 
+
+        foreach ( $terms as $term ) {
+            echo $term->name;
+        }
+
+        echo "</span>";?></span><span>
 					<div class="lsx-banner-image-wrap">
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 						</div>
