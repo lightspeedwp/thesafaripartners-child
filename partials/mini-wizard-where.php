@@ -10,8 +10,11 @@
 				<?php
 				$the_query = new WP_Query(
 					array(
-						'post_type'   => 'destination',
-						'post_parent' => 0,
+						'post_type'      => 'destination',
+						'post_parent'    => 0,
+						'posts_per_page' => -1,
+						'order' => 'ASC',
+						'orderby' => 'title',
 					)
 				);
 
