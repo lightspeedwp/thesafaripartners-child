@@ -70,7 +70,7 @@ th,tr,td,table,legend,label {
 	height:4px;
 	content:"";}
 	*/
-	.link133998:after{background-image:url('img/halftab.png');
+	.link133998{background-image:url('img/halftab.png');
 		background-size: 86px 5px;
 		width: 78px;
 		margin-left: 7px;
@@ -78,7 +78,15 @@ th,tr,td,table,legend,label {
 		bottom: 1px;
 		position: absolute;
 		height: 4px;}
-		
+	.link133998::after{background-image:url('img/halftab.png');
+		background-size: 86px 5px;
+		width: 78px;
+		margin-left: 7px;
+		left: 4px;
+		bottom: 1px;
+		position: absolute;
+		height: 4px;}
+
 	.page-template-template-contact .tab .link133998:after{background-image:url('img/halftab.png');
 	background-size: 86px 5px;
     width: 78px;
