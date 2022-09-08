@@ -9,6 +9,9 @@
 					lsx_entry_before();
 					?>
 		<div class="col-md-6 lsx-contact-module-image">
+		<?php $term = get_queried_object();  ?>
+ 
+ <span class="tax-title"><?php echo $term->name; ?><span class="taxonomy-label"><?php echo $term->taxonomy; ?></span><span>
 					<div class="lsx-banner-image-wrap">
 							<?php echo get_the_post_thumbnail($page->ID,'full'); ?>
 						</div>
