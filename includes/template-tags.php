@@ -39,6 +39,12 @@ function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
 	if ( isset( $arg['selected'] ) ) {
 		$panel_args = array( $arg['selected'] );
 	}
+	if ( isset( $arg['title'] ) ) {
+		$panel_args = array( $arg['title'] );
+	}
+	if ( isset( $arg['tagline'] ) ) {
+		$panel_args = array( $arg['tagline'] );
+	}
 
 	ob_start();
 	tsp_mini_wizard( $panels, $args = array() );
