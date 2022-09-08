@@ -582,9 +582,10 @@ legend {
 	font-family:"moret",serif!important;letter-spacing:0.2px;
 	font-size:15px!important;
 	color:#6a6d5b;
-	line-height:22px;
+	line-height:25px;
 	padding-bottom:0px;
 }
+.single-lsx-to-tour #Day .lsx-to-archive-meta-data{margin-top:0!important;}
 .single-lsx-to-tour .lsx-to-meta-data .lsx-to-meta-data-key{font-weight:normal; color:#6a6d5b;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data:before{display:none!important;margin-right:0!important;}
 .single-lsx-to-tour .itinerary-navigation .last-day{display:none!important;}
@@ -1173,11 +1174,20 @@ th {
 }
 .single-lsx-to-tour .lsx-wizard-button-next span:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
-	background-size:10px 10px;
+	background-size:14px 14px;
 	display:inline-block;
-	width:10px;
-	height:10px;
+	width:14px;
+	height:14px;
 	content:"";
+}
+.single-lsx-to-tour .lsx-wizard-button-previous span:before {
+	background-image:url('img/tsp-see-more-arrow-left.svg');
+	background-size:14px 14px;
+	display:inline-block;
+	width:14px;
+	height:14px;
+	content:"";
+	margin-right:9px;
 }
 .lsx-to-slider-inner .slick-prev:before {
 	background-image:url('img/tsp-carousel-arrow-left.svg');
