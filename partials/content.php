@@ -126,7 +126,7 @@
 								the_excerpt();
 							}
 						} else {
-							$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+							$excerpt_more = '';
 							echo wp_kses_post( $excerpt_more );
 						}
 						?>
