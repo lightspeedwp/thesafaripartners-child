@@ -2474,10 +2474,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .single-lsx-to-tour #singlelink.tablinks:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
-	background-size:10px 10px;
+	background-size:13px 13px;
 	display:inline-block;
-	width:10px;
-	height:10px;
+	width:13px;
+	height:13px;
 	content:"";
 	margin-left: 9px;
 }
