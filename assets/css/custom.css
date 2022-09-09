@@ -3589,12 +3589,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    .page-id-134309 .lsx-contact-module{padding-top: 9%!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module {
-		width:100%;
-		max-width:432px!important;
-		position:absolute;
-		right:15%!important;
-		z-index:4;
-		padding-top:16%;
+		max-width: 507px!important;
+		position: absolute;
+		right: 13%!important;
+		padding: 16% 20px 0;
+		background: #fff;
+		z-index: 999;
    }
 	.safari-styles .lsx-to-slider-inner {
 		width:100%!important;
