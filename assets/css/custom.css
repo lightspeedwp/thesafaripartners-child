@@ -4683,6 +4683,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-size:38px!important;
 		padding-top:50px;
    }
+   .lsx-wizard .lsx-to-content{padding: 4px 1px 2px!important;}
+   .gutenberg-compatible-template.page-has-banner .breadcrumbs-container + #lsx-banner, .using-gutenberg.page-has-banner .breadcrumbs-container + #lsx-banner, .archive.page-has-banner .breadcrumbs-container + #lsx-banner{margin-top:0!important;}
 	.who-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
 		height:320px!important;
@@ -5169,12 +5171,19 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding-top:8px!important;
 		line-height:35px!important;
    }
-	.archive #main, .single-lsx-to-destination #main, .page-template-template-travel-style #main{
+	.archive #main, .page-template-template-travel-style #main{
 		padding:0 15px!important;
    }
+   .single-lsx-to-destination #main{padding:0 5px!important;}
 	.archive #wizard .step-content .col-md-3, .single-lsx-to-destination #wizard .step-content .col-md-3, .page-template-template-travel-style #wizard .step-content .col-md-3{
 		padding-right:0px!important;
    }
+   .single-lsx-to-destination .wizard-who, .single-lsx-to-destination .wizard-where, .single-lsx-to-destination .wizard-what, .single-lsx-to-destination .wizard-when, .single-lsx-to-destination .wizard-budget {
+    padding-top: 20px!important;
+}
+
+.mini-wizard-results{margin-top:50px!important; border-top:1px solid #262423; padding-top:40px!important;}
+
 	#wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next.btn-success {
 		background:#a55244!important;
    }
