@@ -2495,7 +2495,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .single-lsx-to-tour .lsx-tour-module-map {
 	padding:0 !important;
-	margin-top:-20px;
+	margin-top:-24px;
 }
 .single-lsx-to-tour .lsx-contact-module-image {
 	padding:0!important;
@@ -5624,7 +5624,7 @@ body.page-template-template-contact, body.page-template-template-wizard, body.si
 	display:none!important;
 }
 .single-lsx-to-tour .lsx-map .lsx-map-preview {
-	height:81vh!important;
+	height:82vh!important;
 }
 .single-lsx-to-tour .lsx-to-meta-data {
 	font-family:"moret",serif!important;letter-spacing: 0.3px;
