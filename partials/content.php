@@ -118,7 +118,7 @@
 						<?php
 						if ( false === apply_filters( 'lsx_disable_content_excerpt', false ) ) {
 							if ( ! has_excerpt() ) {
-								$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
+								$excerpt_more = '<p><a class="moretag readmoresearch" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
 								$content      = wp_trim_words( strip_shortcodes( get_the_content() ), 30 );
 								$content      = '<p>' . $content . '</p>';
 								echo wp_kses_post( $content );
