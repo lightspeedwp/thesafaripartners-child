@@ -2495,6 +2495,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .single-lsx-to-tour .lsx-tour-module-map {
 	padding:0 !important;
+	margin-top:-20px;
 }
 .single-lsx-to-tour .lsx-contact-module-image {
 	padding:0!important;
@@ -2522,7 +2523,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	min-height: 93vh!important;
 
 }
-.single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper, .single-lsx-to-tour #Maps .lsx-wizard-steps-wrapper{overflow:inherit!important;}
+.single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper, .single-lsx-to-tour #Maps{overflow:inherit!important;}
 .single-lsx-to-tour .lsx-wizard-steps-wrapper {
 	height: 500px!important;
 }
