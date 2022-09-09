@@ -5287,6 +5287,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			.tax-travel-style #wizard .step-content .wizard-what .col-sm-2 {
 				height: 30px!important;padding: 0 2px!important;
 				margin-bottom: 10px;}
+				.tax-travel-style #wizard .step-content .col-sm-2 {
+					height: 30px!important;padding: 0 2px!important;
+					margin-bottom: 10px;}
 		.single-lsx-to-destination #wizard .step-content .col-sm-2{
 				height: 30px!important;}
 				.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
