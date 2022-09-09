@@ -4618,7 +4618,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {
 		margin:0!important;
    }
-   .mobilepadtop{padding-top:20px!important;}
+   .mobilepadtop{padding-top:30px!important;}
+   .mobilepadside{padding:0 15px;}
    .single-lsx-to-tour .tab{display:none;}
 	.content.role.row {
 		margin:0!important;
