@@ -42,7 +42,7 @@
 									?>
 								</div>	
 								<?php the_content(); ?>
-								<button id="singlelink" class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
+								<div class="tab tourbuttonlink"><button id="singlelink" class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button></div>
 							</div>
 						</div>
 						<?php lsx_entry_bottom(); ?>
