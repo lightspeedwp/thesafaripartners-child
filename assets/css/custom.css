@@ -2518,6 +2518,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin-top:0!important;
 	padding:0!important;
 }
+.single-lsx-to-tour .body-wrap{height:100%;}
+.single-lsx-to-tour .collapse-inner .row{padding:0!important;}
 
 .single-lsx-to-tour .itenary .lsx-wizard-steps-wrapper {
 	min-height: 93vh!important;
