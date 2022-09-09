@@ -5049,7 +5049,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		z-index:1;
 		width:33%;
 		bottom:13px;
-		left:40%;
+		left:35%;
 		z-index:99999;
    }
 	.archive .wizard-where .col-sm-2 {
@@ -5287,9 +5287,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			.tax-travel-style #wizard .step-content .wizard-what .col-sm-2 {
 				height: 30px!important;padding: 0 2px!important;
 				margin-bottom: 10px;}
+				.lsx-wizard .nav-pills li.active {
+					border-bottom: 6px solid #999;
+					top: 6px;
+				}
 				.tax-travel-style #wizard .step-content .col-sm-2 {
 					height: 30px!important;padding: 0 2px!important;
 					margin-bottom: 10px;}
+					.wizard-when .travelwhen {
+						position: relative;
+						margin: 10px 0;
+					}				
 		.single-lsx-to-destination #wizard .step-content .col-sm-2{
 				height: 30px!important;}
 				.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
