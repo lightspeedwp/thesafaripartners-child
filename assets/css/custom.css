@@ -4634,12 +4634,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding:0!important;
    }
 	.lsx-to-slider-inner .slick-arrow.slick-prev {
-		left:-11px;
+		left:-15px;
 		width:35px!important;
 		height:35px!important;
    }
 	.lsx-to-slider-inner .slick-arrow.slick-next {
-		right:-15px;
+		right:-11px;
 		width:35px!important;
 		height:35px!important;
    }
@@ -4679,9 +4679,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.who-top h2.lsx-title {
 		max-width:98%!important;
-		margin-bottom:94px!important;
+		margin-bottom:70px!important;
 		font-size:38px!important;
-		padding-top:40px;
+		padding-top:50px;
    }
 	.who-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
@@ -5288,11 +5288,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				.wizard-where .checkbox-wrapper>[type="checkbox"]:checked+span::after{padding-left: 0px!important;}
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848{display:none!important;}		
 	.mobilepad{padding:0 15px;}
-	.home .popup-inquire{margin:0 20px;}
+	.home .popup-inquire{margin:0 20%;}
 	.lsx-to-slider-inner .lsx-review h4{text-align: center!important;}
 	#footer-widgets blockquote {
 		font-size: 15px!important;
 		text-align: center!important;
+	}
+	#footer-sub .gform_footer #gform_submit_button_1 {
+		margin: 0 20%!important;
+		width: 100%!important;
 	}
 
 	.single-lsx-to-tour .content-area{padding:0!important;}
