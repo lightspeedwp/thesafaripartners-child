@@ -2276,7 +2276,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			/* height: 4px; */
 			background-repeat: no-repeat;}
 			.page-id-135619 .link135619 a{color: #6a6d5b!important;}
-			
+
 #whostraveling .marker-number {
 	font-size:14px;
 }
@@ -2479,6 +2479,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width:10px;
 	height:10px;
 	content:"";
+	margin-left: 9px;
 }
 .tours-nav .btn.popup-inquire {
 	background:#ce9e57!important;
@@ -5576,6 +5577,19 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:fixed;
 		width:100%;
    }
+
+element.style {
+}
+body.custom-background {
+    background-color: #ffffff;
+}
+@media screen and (min-width: 1200px){
+body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
+    height: 100%;
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%;
+}
    .mobileonly{display:none!important;}
    .single-lsx-to-tour .mobile-tournav{display:none;}
    .home .col-sm-12{padding:0!important;}
