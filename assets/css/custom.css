@@ -4624,6 +4624,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {
 		margin:0!important;
    }
+   .single-lsx-to-tour #Price .lsx-single-contact {
+    width: 100%!important;
+ margin-left: 0px!important;}
+.lsx-testimonials-slider h3.widget-title{text-align:center;}
+#footer-widgets blockquote{font-size: 14px!important;
+    line-height: 20px!important;
+    letter-spacing: -0.1px!important;}
    .pum-overlay {
     top: 0px!important;}
    .mobilepadtop{padding-top:30px!important;}
