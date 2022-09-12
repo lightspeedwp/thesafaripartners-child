@@ -5582,7 +5582,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 body.custom-background {
     background-color: #ffffff;
 }}
-@media screen and (min-width:780px) and (max-width:1199px) {
+@media screen and (min-width:900px) and (max-width:1199px) {
 body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
     height: 100%;
     overflow-y: hidden;
@@ -5597,7 +5597,7 @@ body.page-template-template-contact, body.page-template-template-wizard, body.si
     position: absolute;
     width: 100%;}
 	.col-md-6 {
-		width: 50%!important;
+		width: 50%!important;float: left!important;
 	}
    
    .single-lsx-to-tour .tax-title span{visibility: visible;
@@ -5692,9 +5692,9 @@ body.page-template-template-contact, body.page-template-template-wizard, body.si
    .single-lsx-to-tour .tax-title span{visibility: visible;
     position: absolute;
     z-index: 9999999;
-    top: 7px;
+    top: 18px;
     width: 120px;
-    left: 87%;
+    left: 80%;
     text-align: center;
     padding: 5px;
     background-color: #ce9e57;
@@ -6006,6 +6006,128 @@ body.page-template-template-contact, body.page-template-template-wizard, body.si
     display:none!important;
 }
 }
+
+
+@media screen and (min-width:200px) and (max-width:899px) {
+	.single-lsx-to-tour .lsx-contact-module-image {
+		padding:0!important;
+		margin-top: -15px!important;
+	   }
+	   .single-lsx-to-tour .tax-title{visibility: hidden;
+		position: absolute;
+		width: 100%;}
+	   
+	   .single-lsx-to-tour .tax-title span{visibility: visible;
+		position: absolute;
+		z-index: 9999999;
+		top: 7px;
+		width: 120px;
+		left: 87%;
+		text-align: center;
+		padding: 5px;
+		background-color: #ce9e57;
+		color: #262423;
+		font-family: "moret",serif!important;
+		letter-spacing: -0.2px!important;
+		font-size: 18px;}
+	
+		.single-lsx-to-tour .first-day{background: none;
+			color: #262423;
+			font-size: 22px;
+			border: none;
+			font-family: "moret",serif!important;
+			letter-spacing: -0.2px!important;}
+		   .mobileonly{display:none!important;}
+		   .single-lsx-to-tour .mobile-tournav{display:none;}
+		   .single-lsx-to-tour #Price .lsx-to-tour-content {
+			padding-top:3vh!important;
+			width:690px;
+			padding-left:10px!important;
+	   }
+		.single-lsx-to-tour .outer-container {
+			width:1204px;
+			margin:0 auto;
+			float:none;
+	   }
+	   body.single-lsx-to-tour {
+		height:100%;
+		overflow-y:hidden;
+		position:fixed;
+		width:100%;
+	}
+	.single-lsx-to-tour .lsx-wizard-progress-buttons-wrapper {
+		position:relative;
+		left:-4%;
+		z-index:9;
+		width:500px;
+		margin:0;
+		top:1px;
+	}
+	.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
+		width:536px;
+		padding:0 0px;
+		position:absolute;
+		top:50px;
+		left:53.5%;
+		z-index:99;
+	}
+	.single-lsx-to-tour #primary .tab {
+		overflow:hidden;
+		left:54%!important;
+		z-index:9;
+		position:relative;
+		margin-top:1%;
+		right:0;
+		margin-bottom:-30px;
+		width:476px;
+		height:32px;
+	}
+	.single-lsx-to-tour .lsx-banner-image-wrap img {
+		object-fit:cover;
+		height:90vh!important;
+		width:100%;
+	}
+	.single-lsx-to-tour .lsx-to-slider-inner {
+		margin:0 0px!important;
+		width:calc(100%+0px)!important;
+	}
+	.single-lsx-to-tour .intro-wrap {
+		display:none!important;
+	}
+	.single-lsx-to-tour .lsx-single-contact {
+		width:50%;
+		position:fixed;
+		bottom:0px;
+		left:1px;
+		margin-left:-16px;
+		z-index:99;
+	}
+	.single-lsx-to-tour .slick-slide .lsx-to-widget-content p {
+		display:none!important;
+	}
+	.single-lsx-to-tour .lsx-contact-module-image {
+		padding:0!important;
+		margin-top: -15px!important;
+	   }
+	   .single-lsx-to-tour .tax-title{visibility: hidden;
+		position: absolute;
+		width: 100%;}
+	   
+	   .single-lsx-to-tour .tax-title span{visibility: visible;
+		position: absolute;
+		z-index: 9999999;
+		top: 7px;
+		width: 120px;
+		left: 87%;
+		text-align: center;
+		padding: 5px;
+		background-color: #ce9e57;
+		color: #262423;
+		font-family: "moret",serif!important;
+		letter-spacing: -0.2px!important;
+		font-size: 18px;}
+}
+
 @media screen and (min-width:1300px) and (max-width:1400px) {
 	.homebanner {
 		min-height:80vh!important;
