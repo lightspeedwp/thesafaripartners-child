@@ -5599,7 +5599,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	  }
 }
 @media (max-width:900px) {
-	.search-results #mega-menu-wrap-filter-menu{display:none!important;}
+	.search-results #mega-menu-wrap-filter-menu .mega-menu-toggle{display:none!important;}
 	.row {margin:0!important; }
 	.gutenberg-compatible-template.page-has-banner .breadcrumbs-container + #lsx-banner, .using-gutenberg.page-has-banner .breadcrumbs-container + #lsx-banner, .archive.page-has-banner .breadcrumbs-container + #lsx-banner {
 		margin-top: 0px!important;
