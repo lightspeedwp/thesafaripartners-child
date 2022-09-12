@@ -3964,11 +3964,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			   .single-lsx-to-tour .mobile-tournav{display:none;}
 			   .single-lsx-to-tour #Price .lsx-to-tour-content {
 				padding-top:3vh!important;
-				width:690px;
+				width:97%;
 				padding-left:10px!important;
 		   }
 			.single-lsx-to-tour .outer-container {
-				width:1204px;
+				width:100%;
 				margin:0 auto;
 				float:none;
 		   }
@@ -3982,12 +3982,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			position:relative;
 			left:-4%;
 			z-index:9;
-			width:500px;
+			width:97%;
 			margin:0;
 			top:1px;
 		}
 		.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
-			width:536px;
+			width:96%;
 			padding:0 0px;
 			position:absolute;
 			top:50px;
@@ -3996,7 +3996,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		}
 		.single-lsx-to-tour #primary .tab {
 			overflow:hidden;
-			left:54%!important;
+			left:44%!important;
 			z-index:9;
 			position:relative;
 			margin-top:1%;
