@@ -5196,7 +5196,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	h2.h2larger {
 		font-size:26px!important;
 		width:94%!important;
-		margin:4px auto 4px;
+		margin:4px auto 4px!important;
+		line-height:32px;
    }
 	.archive .lsx-wizard-progress-buttons-wrapper ul li a, .single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper ul li a, .page-template-template-travel-style .lsx-wizard-progress-buttons-wrapper ul li a{
 		display:none!important;
@@ -5598,10 +5599,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	  }
 }
 @media (max-width:900px) {
-
-	.row {
-		margin:0!important;
-   }
+	.search-results #mega-menu-wrap-filter-menu{display:none!important;}
+	.row {margin:0!important; }
+	.gutenberg-compatible-template.page-has-banner .breadcrumbs-container + #lsx-banner, .using-gutenberg.page-has-banner .breadcrumbs-container + #lsx-banner, .archive.page-has-banner .breadcrumbs-container + #lsx-banner {
+		margin-top: 0px!important;
+	}
    .mobilepadtop{padding-top:30px!important;}
    .mobilepadside{padding:0 15px;}
    .single-lsx-to-tour .tab{display:none;}
