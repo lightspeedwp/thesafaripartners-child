@@ -4621,9 +4621,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			}	
 }
 @media (max-width:767px) {
-	.row {
-		margin:0!important;
-   }
+	.row {margin:0!important;}
+   #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary{-webkit-box-shadow: 0px 4px 29px -3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 29px -3px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 29px -3px rgba(0,0,0,0.75);}
+
   .introslide .lsx-banner-column {
     height: 8%!important;}
    .single-lsx-to-tour #Price .lsx-single-contact {
