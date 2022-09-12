@@ -158,10 +158,15 @@ class Frontend {
 		add_action( 'wp_head', array( $this, 'wp_head' ), 200 );
 		add_action( 'pre_get_posts', array( $this, 'set_main_query_arguments' ), 200, 1 );
 
+		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_submission_filter_4', array( $this, 'populate_prices_dropdown' ) );
 
+		// LSX Sharing function
+		add_filter( 'lsx_sharing_additional_buttons', array( $this, 'display_email_sharing' ), 10, 2 );
+
+		// Search functions
 		add_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ), 10, 2 );
 
 		// Rest Functions
@@ -321,5 +326,10 @@ class Frontend {
 			$response->data['search_results'] = $contents;
 		}
 		return $response;
+	}
+
+	public function display_email_sharing( $sharing_html = '', $sharing_obj ) {
+		$sharing_html .= '<span class="lsx-sharing-button lsx-sharing-button-email"><a href="#lsx-sharing-email"><span class="fa fa-email" aria-hidden="true"></span></a></span>';
+		return $sharing_html;
 	}
 }
