@@ -5875,6 +5875,9 @@ body.page-template-template-contact, body.page-template-template-wizard, body.si
     position: fixed;
     width: 100%;
 }
+#mega-menu-wrap-filter-menu .mega-menu-toggle + #mega-menu-filter-menu{display:block;}
+#mega-menu-wrap-filter-menu #mega-menu-filter-menu > li.mega-menu-megamenu.mega-menu-item{width:16%; float:left;clear:none; padding-right:15px;display:block; }
+
 .lsx-to-slider-inner .slick-arrow.slick-prev {
 	left:-15px;
 	width:35px!important;
