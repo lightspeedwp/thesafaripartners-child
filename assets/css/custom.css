@@ -4934,9 +4934,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.mini-wizard-wrapper .nav-justified>li,.mini-wizard-wrapper .nav-tabs.nav-justified>li {
 		display:inline-block!important;
-		width:11px!important;
+		width:9px!important;
 		overflow:hidden!important;
    }
+   .archive .nav>li, .single-lsx-to-destination .nav>li{margin-right: 3px;}
 	#travel-footer {
 		background-image:url("https://thesafaripartners-upgraded.lightspeedwp.dev/wp-content/uploads/2022/06/tsp-footer.jpg");
 		background-color:#262423;
