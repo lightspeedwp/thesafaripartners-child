@@ -4709,7 +4709,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding-top:80px;
    }
 	.who-top h2.lsx-title {
-		max-width:98%!important;
+		max-width:86%!important;
 		margin-bottom:70px!important;
 		font-size:38px!important;
 		padding-top:50px;
@@ -5038,7 +5038,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.homebanner {
 		min-height: 88vh!important;
     z-index: 0;
-    margin-top: -60px;
+    margin-top: -72px;
     margin-bottom: -120px;
     padding: 0!important;
    }
