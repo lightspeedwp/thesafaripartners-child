@@ -4624,6 +4624,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {
 		margin:0!important;
    }
+  .introslide .lsx-banner-column {
+    height: 8%!important;}
    .single-lsx-to-tour #Price .lsx-single-contact {
     width: 100%!important;
  margin-left: 0px!important;}
@@ -5061,6 +5063,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:relative;
 		max-height:100vh;
 		overflow:hidden;
+		margin-bottom:70px;
    }
 	.page-template-template-wizard .lsx-wizard-progress-buttons-wrapper {
 		position:absolute;
