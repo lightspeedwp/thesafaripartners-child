@@ -5714,7 +5714,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 body.custom-background {
     background-color: #ffffff;
 }}
-@media screen and (min-width: 1200px){
+@media screen and (min-width:780px) and (max-width:1199px) {
 body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
     height: 100%;
     overflow-y: hidden;
