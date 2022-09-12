@@ -57,6 +57,7 @@ body,p,ul,li,em {
 	font-size:16px!important;
 	color:#6a6d5b!important;
 	letter-spacing:-0.2px!important;
+	text-transform: capitalize;
 }
 th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
@@ -1740,7 +1741,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding-top:80px;
 }
 .who-top h2.lsx-title {
-	max-width:98%!important;
+	max-width:86%!important;
 	margin-bottom:92px!important;
 	font-size:46px!important;
 }
@@ -4669,7 +4670,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		height:35px!important;
    }
 	.lsx-to-slider-inner .slick-arrow.slick-next {
-		right:-11px;
+		right:-15px;
 		width:35px!important;
 		height:35px!important;
    }
@@ -5035,10 +5036,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		position:relative;
    }
 	.homebanner {
-		min-height: 98vh!important;
+		min-height: 88vh!important;
     z-index: 0;
     margin-top: -60px;
-    margin-bottom: -102px;
+    margin-bottom: -120px;
     padding: 0!important;
    }
 	.lsx-wizard .alignfull.wp-block-cover {
