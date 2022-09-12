@@ -5085,6 +5085,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.archive .wizard-where .col-sm-2 {
 		height:40px!important;
    }
+   .page-template-template-wizard .wizard-when .col-md-6, .page-template-template-wizard .wizard-when .col-md-12{padding:0!important;}
    .single-post .site-main{padding:0 15px;}
    .tax-travel-style .content-area{margin-top:50px;}
 	#wizard .lsx-wizard-buttons-wrapper .btn,#wizard .lsx-wizard-buttons-wrapper .lsx-wizard-button-next {
