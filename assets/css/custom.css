@@ -62,6 +62,7 @@ th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
 	letter-spacing:-0.1px!important;
 }
+.dropdown-content2 a{font-family:"moret",serif!important;}
 .gform_required_legend{display:none;}
 
 .btn,button {
@@ -5442,7 +5443,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	position:relative;
 }
 #wizard .step-content .col-sm-2, #wizard .step-content .col-md-2{
-    height: 30px!important;
+    height: 38px!important;
 }
 #wizard .wizard-budget .lsx-to-content{margin-top: -66px;}
 .single-lsx-to-tour .tours-nav{left:0!important;bottom:6px!important;}
@@ -6298,6 +6299,12 @@ left: 11px!important;}
 	padding:0!important;
 	margin-top: -15px!important;
    }
+   .single-lsx-to-tour .first-day{background: none;
+	color: #262423;
+	font-size: 22px;
+	border: none;
+	font-family: "moret",serif!important;
+	letter-spacing: -0.2px!important;}
    .single-lsx-to-tour .tax-title{visibility: hidden;
     position: absolute;
     width: 100%;}
