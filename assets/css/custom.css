@@ -3910,8 +3910,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background:#fff;
 		width:200px;
    }
+   #mega-menu-wrap-max_mega_menu_1{display:none;}
 }
 @media (min-width:767px) and (max-width:1200px) {
+	#mega-menu-wrap-max_mega_menu_1{display:none;}
 	.mobileonly{display:none!important;}
 	.col-sm-12{padding:0!important;}
 	.page-id-133119 .wp-block-media-text .wp-block-media-text__content p{margin-left: -45px!important;}
@@ -5924,7 +5926,7 @@ body.page-template-template-contact, body.page-template-template-wizard, body.si
    }
 }
 @media screen and (min-width:768px) and (max-width:999px) {
-	.homebanner {
+	.home .homebanner {
 		min-height:60vh!important;
 		z-index:0;
 		margin-top:-52px!important;
