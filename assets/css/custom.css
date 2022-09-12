@@ -3985,6 +3985,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 width: 92%!important;
 	 margin: 0 auto;
 	}
+	.whyus{display:block!important;}
+	.cta-home{text-align:center;}
 	.whyus .wp-block-column{width:50%!important;}
 	 .mini-wizard-wrapper .row{margin:0!important;}
 	 #footer-widgets .col-md-3 {
