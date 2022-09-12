@@ -5072,7 +5072,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:33%;
 		bottom:0;
 		left:35%;
-		z-index:99999;
+		z-index:99;
    }
 	.archive .lsx-wizard-progress-buttons-wrapper {
 		position:absolute;
@@ -5080,7 +5080,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		width:33%;
 		bottom:13px;
 		left:35%;
-		z-index:99999;
+		z-index:99;
    }
 	.archive .wizard-where .col-sm-2 {
 		height:40px!important;
