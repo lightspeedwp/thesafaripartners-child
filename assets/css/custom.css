@@ -4623,13 +4623,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.row {
 		margin:0!important;
    }
+   .pum-overlay {
+    top: 0px!important;}
    .mobilepadtop{padding-top:30px!important;}
+   .pum-theme-133244 .pum-container, .pum-theme-lightbox .pum-container{padding-top:80px;margin-bottom:40px;}
    .mobilepadside{padding:0 15px;}
    .single-lsx-to-tour .tab{display:none;}
 	.content.role.row {
 		margin:0!important;
 		padding:0!important 
    }
+   .pum .gform_wrapper .button{left:0!important;width:100%;}
    .tour-accommodation-gallery .accomodation-slider .slick-slide img{object-fit: cover;
     height: 522px;
     width: 100%;
