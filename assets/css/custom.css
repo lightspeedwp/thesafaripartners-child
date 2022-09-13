@@ -3176,7 +3176,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
-   .pum .gform_wrapper.gravity-theme .gfield.gfield--width-five-twelfths{margin-left:-20px; margin-top:14px;}
+   .pum .gform_wrapper.gravity-theme .gfield.gfield--width-five-twelfths{margin-left: -32px;
+    margin-top: 26px;}
    .page-template-template-travel-style .notfull{width: 1204px!important;
     margin: 0 auto;
     float: none!important;
@@ -3704,12 +3705,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    .page-id-134309 .lsx-contact-module{padding-top: 9%!important;}
 	.page-template-template-contact .contact-133993 .lsx-contact-module {
-		max-width: 507px!important;
-		position: absolute;
-		right: 13%!important;
-		padding: 16% 20px 0;
-		background: #fff;
-		z-index: 999;
+		max-width: 550px;
+    position: absolute;
+    right: 8%!important;
+    padding: 16% 70px 0;
+    background: #fff;
+    z-index: 999;
    }
 	.safari-styles .lsx-to-slider-inner {
 		width:100%!important;
