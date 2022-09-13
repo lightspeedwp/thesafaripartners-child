@@ -708,7 +708,7 @@ function openinCity(evt, eventName) {
 				$( this ).parent('.entry-content.lsx-readmore').children().each( function(){
 					counter++;
 					if ( true === collapse ) {
-						if ( 2 < counter && ! $( this ).hasClass('read-more' ) ) {
+						if ( 1 < counter && ! $( this ).hasClass('read-more' ) ) {
 							$( this ).hide();
 						}
 					} else {
