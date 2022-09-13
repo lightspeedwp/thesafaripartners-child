@@ -921,8 +921,9 @@ th {
 	padding: 10px 0px;
 		font-weight: normal;
 		font-family:"moret",serif!important;
-		color: #ce9e57;
+		color: #ce9e57!important;
 		text-transform: uppercase;
+		font-size:19px;
 	letter-spacing:-0.1px!important;
 }
 .archive .wizard-who,.single .wizard-who {
@@ -3166,7 +3167,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				}
 				.archive .nav>li>a, .single-lsx-to-destination .nav>li>a{display:inline-block;padding:10px 15px 10px 0;}
 				.archive .nav>li, .single-lsx-to-destination .nav>li{margin-right:10px;}
-				.archive .lsx-wizard-progress-buttons-wrapper, .single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper{bottom: 15px!important;
+				.archive .lsx-wizard-progress-buttons-wrapper, .single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper{bottom: 0px!important;
 					right: 16%!important;}
 	
 
@@ -3514,7 +3515,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
 		position:absolute!important;
 		z-index:1;
-		left:48%!important;
+		left:32%!important;
 		margin:4px auto 6px!important;
 		width:500px;
 		bottom:20px;
@@ -3927,10 +3928,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.wizard-budget .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		border:1px solid #ce9e57;
-		width:139px;
-		height:216px;
-		margin-left:0px;
-		margin-top:-4px;
+		width: 144px;
+    height: 216px;
+    margin-left: 0px;
+    margin-top: -13px;
    }
 	.wizard-when .checkbox-wrapper>[type="checkbox"]:checked+span::after {
 		content:"\f00c";
