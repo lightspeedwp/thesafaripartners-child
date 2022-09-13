@@ -3079,6 +3079,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .page-template-template-travel-style #primary{width:100%!important;}
+
+   .page-template-template-travel-style .notfull{width: 1204px!important;
+    margin: 0 auto;
+    float: none!important;
+    display: flex;
+    padding: 0!important;}
+	.page-template-template-travel-style .entry-content{padding:0!important;}
    .single-lsx-to-tour .lsx-contact-module-image {
 	padding:0!important;
 	margin-top: -15px!important;
