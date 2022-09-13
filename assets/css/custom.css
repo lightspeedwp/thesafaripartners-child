@@ -533,10 +533,18 @@ legend {
 .single #Maps #fast-facts {
 	margin-bottom:16px;
 }
-.tour-accommodation-gallery{margin-top:-20px!important;}
+.tour-accommodation-gallery{margin-top:-20px!important;height:90vh;}
 .single #Maps .slider-container.lsx-to-widget-items {
 	margin-top:-20px!important;
 }
+.tour-accommodation-gallery .image-slide{
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;height:90vh;}
+	.tour-accommodation-gallery .image-slide img{
+		object-fit:cover;
+		height:100%!important;
+	}
 .single .lsx-related-posts-wrapper .entry-layout-content .entry-image img {
 	object-fit:cover;
 	height:240px!important;
@@ -588,7 +596,7 @@ legend {
 	display:none!important;
 }
 .single-lsx-to-tour .lsx-map .lsx-map-preview {
-	height:82vh!important;
+	height:87vh!important;
 }
 .single-lsx-to-tour .lsx-to-meta-data {
 	font-family:"moret",serif!important;letter-spacing:0.2px;
@@ -1949,20 +1957,20 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	height:60px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-prev {
-	left:15px!important;
+	left:0px!important;
 	width:30px!important;
 	height:30px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-prev:before {
 	background-size:10px 10px!important;
 	width:10px!important;
-	left:8px;
+	left:15px;
 	height:10px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-next:before {
 	background-size:10px 10px!important;
 	width:10px!important;
-	left:12px;
+	left:15px;
 	height:10px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-next {
@@ -1980,6 +1988,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	width:100%;
 	margin-top:0px;
 }
+.btn:hover, .gform_wrapper .button:hover, .gform_wrapper button:hover, .btn:hover:active, .gform_wrapper .button:hover:active, .gform_wrapper button:hover:active, .btn:focus, .gform_wrapper .button:focus, .gform_wrapper button:focus{background:#f5ecdd; color:#262423;}
 .tour-accommodation-gallery .accomodation-nav .slick-list {
 	padding:0!important;
 }
@@ -6065,7 +6074,7 @@ left: 11px!important;}
 	display:none!important;
 }
 .single-lsx-to-tour .lsx-map .lsx-map-preview {
-	height:82vh!important;
+	height:87vh!important;
 }
 .single-lsx-to-tour .lsx-to-meta-data {
 	font-family:"moret",serif!important;letter-spacing: 0.3px;
