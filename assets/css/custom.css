@@ -203,6 +203,67 @@ legend {
 	border-radius:35%;
 	background:#fff;
 }
+.pum.pum-overlay .gform_fields input[type='radio'], .pum.pum-overlay .gform_fields input[type='checkbox'] {
+	display:none;
+	height:12px;
+	width:14px;
+}
+.pum.pum-overlay .gform_body [type="radio"]:checked+label:after, .pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label:after {
+	content:'';
+	width:11px;
+	height:11px;
+	background:#fff;
+	position:absolute;
+	top:4px;
+	left:4px;
+	border-radius:0;
+	-webkit-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.pum.pum-overlay .gform_body [type="checkbox"]:checked+label:after, .pum.pum-overlay .gform_body [type="checkbox"]:not(:checked)+label:after {
+	content:'';
+	width:11px;
+	height:11px;
+	background:#fff;
+	position:absolute;
+	top:4px;
+	left:4px;
+	border-radius:0;
+	-webkit-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label:after, .pum.pum-overlay .gform_body [type="checkbox"]:not(:checked)+label:after{
+	opacity:0;
+	-webkit-transform:scale(0);
+	transform:scale(0);
+}
+.pum.pum-overlay .gform_body [type="radio"]:checked+label:after, .pum.pum-overlay .gform_body [type="checkbox"]:checked+label:after{
+	opacity:1;
+	-webkit-transform:scale(1);
+	transform:scale(1);
+}
+.pum.pum-overlay .gform_body [type="radio"]:checked+label:before,.pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:18px;
+	height:18px;
+	border:1px solid #fff;
+	border-radius:0;
+	background:#fff;
+}
+.pum.pum-overlay .gform_body [type="checkbox"]:checked+label:before,.pum.pum-overlay .gform_body [type="checkbox"]:not(:checked)+label:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:18px;
+	height:18px;
+	border:1px solid #fff;
+	border-radius:0;
+	background:#fff;
+}
 .who-posts .moretag-wrapper {
 	display:none;
 }
@@ -1338,6 +1399,7 @@ th {
 	background-color:#f2edeb!important;
 	opacity:0.8;
 }
+.pum.pum-theme-lightbox h2, .pum.pum-theme-lightbox h3{margin:0 0 4px!important;padding:0!important;}
 html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding:0!important;
 }
@@ -3656,7 +3718,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	#primary .tab {
 		overflow:hidden;
-		right:56.5%;
+		right:54.5%;
 		z-index:9;
 		margin-top:1%;
 		height: 32px;
