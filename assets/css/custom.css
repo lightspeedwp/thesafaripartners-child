@@ -52,6 +52,9 @@ body,p,ul,li,em {
 	line-height:26px;
 	letter-spacing:-0.1px!important;
 }
+.pum-theme-133244 .pum-title, .pum-theme-lightbox .pum-title{font-family:"moret",serif!important;
+	letter-spacing:-0.2px!important;text-transform: capitalize;}
+	.pum-theme-lightbox .gform_wrapper textarea{border:0!important;}
 .lsx-to-widget-meta-data span, .lsx-to-widget-meta-data span a {
 	font-family:"moret",serif!important;
 	font-size:16px!important;
