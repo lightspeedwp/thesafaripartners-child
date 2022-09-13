@@ -823,8 +823,8 @@ th {
 	height:216px;
 }
 .lsx-readmore {
-	height:290px;
-	max-height:290px;
+	height:250px;
+	max-height:250px;
 	overflow-y:auto;
 }
 .lsx-readmore .read-more {
