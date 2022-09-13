@@ -44,7 +44,7 @@ class Setup {
 		add_filter( 'register_post_type_args', array( $this, 'change_post_types' ), 10, 2 );
 		add_filter( 'lsx_to_js_params', array( $this, 'slider_variables' ), 10, 1 );
 
-		add_filter( 'lsx_to_related_slider_attributes', array( $this, 'related_slider_variables' ), 10, 1 );
+		add_filter( 'lsx_to_widget_slider_attributes', array( $this, 'related_slider_variables' ), 10, 2 );
 		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
@@ -332,9 +332,18 @@ class Setup {
 		return $args;
 	}
 
-	public function related_slider_variables( $args = array() ) {
-		$args['tablet']['slidesToShow'] = 1;
-		$args['tablet']['slidesToScroll'] = 1;
+	/**
+	 * Undocumented function
+	 *
+	 * @param array $args
+	 * @param string $post_type
+	 * @return void
+	 */
+	public function related_slider_variables( $args = array(), $post_type = '' ) {
+		if ( 'review' === $post_type ) {
+			$args['tablet']['slidesToShow'] = 1;
+			$args['tablet']['slidesToScroll'] = 1;
+		}
 		return $args;
 	}
 }
