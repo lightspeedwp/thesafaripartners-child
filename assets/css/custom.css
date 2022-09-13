@@ -1781,8 +1781,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .style-posts {
 	margin-top:20px;
 }
-.single-post .post-meta-time.updated{padding-left:16px;}
-.single-post .post-meta-time.updated:before{ content:"on";}
+.single-post .post-meta-time.updated:before{ content:"on";padding: 0 2px;}
 .style-posts .lsx-to-widget-thumb img {
 	object-fit:cover;
 	height:410px!important;
