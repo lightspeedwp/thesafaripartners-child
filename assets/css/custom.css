@@ -1399,7 +1399,7 @@ th {
 	background-color:#f2edeb!important;
 	opacity:0.8;
 }
-.pum.pum-theme-lightbox h2, .pum.pum-theme-lightbox h3{margin:0 0 4px!important;padding:0!important;}
+.pum.pum-theme-lightbox h2, .pum.pum-theme-lightbox h3{margin:0 0 -14px!important;padding:0!important;}
 html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding:0!important;
 }
@@ -3185,7 +3185,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    .pum-container.pum-responsive.pum-responsive-medium {
     margin-left: -36%!important;
     width: 72%!important;
-    margin-top: 40px!important;
+    margin-top: 10px!important;
 }
 
    .single-lsx-to-tour .first-day{background: none;
@@ -4014,7 +4014,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 .pum-container.pum-responsive.pum-responsive-medium {
 		margin-left: -40%;
     width: 99%!important;
-    margin-top: 21px!important;
+    margin-top: 10px!important;
 	}
 	body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
 		height: 100%;
