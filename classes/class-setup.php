@@ -290,6 +290,11 @@ class Setup {
 		   $args['rewrite']['slug'] = 'safari-style';
 		   $args['labels']['menu_name'] = 'Safari Styles';
 		}
+
+		if ( 'continent' === $taxonomy ) {
+			$args['rewrite'] = false;
+			$args['public'] = false;
+		 }
 		
 		return $args;
 	}
