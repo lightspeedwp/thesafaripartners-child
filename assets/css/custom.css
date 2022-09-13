@@ -226,25 +226,27 @@ legend {
 	color:#262423;padding-top: 10px!important;
 }
 .pum.pum-overlay .gform_body [type="radio"]:checked+label:after, .pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label:after {
-	content:'';
+	content:"\f00c";
+	font-family:FontAwesome;
 	width:11px;
 	height:11px;
 	background:#ce9e57;
 	position:absolute;
-	top:4px;
-	left:4px;
+	top:7px;
+	left:3px;
 	border-radius:0;
 	-webkit-transition:all 0.2s ease;
 	transition:all 0.2s ease;
 }
 .pum.pum-overlay .gform_body [type="checkbox"]:checked+label:after, .pum.pum-overlay .gform_body [type="checkbox"]:not(:checked)+label:after {
-	content:'';
-	width:11px;
-	height:11px;
+	content:"\f00c";
+	font-family:FontAwesome;
+	width:27px;
+	height:27px;
 	background:#ce9e57;
 	position:absolute;
-	top:4px;
-	left:4px;
+	top:7px;
+	left:3px;
 	border-radius:0;
 	-webkit-transition:all 0.2s ease;
 	transition:all 0.2s ease;
@@ -263,7 +265,7 @@ legend {
 	content:'';
 	position:absolute;
 	left:0;
-	top:5;
+	top:5px;
 	width:32px;
 	height:32px;
 	border:1px solid #fff;
@@ -274,7 +276,7 @@ legend {
 	content:'';
 	position:absolute;
 	left:0;
-	top:5;
+	top:5px;
 	width:32px;
 	height:32px;
 	border:1px solid #fff;
