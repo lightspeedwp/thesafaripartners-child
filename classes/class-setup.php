@@ -43,6 +43,9 @@ class Setup {
 		add_filter( 'register_taxonomy_args', array( $this, 'change_taxonomies_slug' ), 10, 2 );
 		add_filter( 'register_post_type_args', array( $this, 'change_post_types' ), 10, 2 );
 		add_filter( 'lsx_to_js_params', array( $this, 'slider_variables' ), 10, 1 );
+
+		add_filter( 'lsx_to_related_slider_attributes', array( $this, 'related_slider_variables' ), 10, 1 );
+		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
 		$this->menu_position = 100;
@@ -326,6 +329,12 @@ class Setup {
 		$args['slickSlider']['tablet']['arrows'] = true;
 		$args['slickSlider']['mobile']['arrows'] = true;
 		$args['slickSlider']['mobile']['breakpoint'] = 600;
+		return $args;
+	}
+
+	public function related_slider_variables( $args = array() ) {
+		$args['tablet']['slidesToShow'] = 1;
+		$args['tablet']['slidesToScroll'] = 1;
 		return $args;
 	}
 }
