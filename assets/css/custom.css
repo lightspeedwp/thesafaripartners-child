@@ -206,6 +206,8 @@ legend {
 .who-posts .lsx-to-slider-inner .slick-dots {
 	display:none!important;
 }
+.search-results .content-area h3{margin-bottom: 3.4rem;}
+.search-results article.lsx-slot .entry-title{ padding: 2rem 3rem 0;}
 .post-type-archive-lsx-to-review .lsx-to-archive-thumb{display:none;}
 .lsx-to-archive-item > .lsx-to-archive-container > a.moretag{color: #262423!important;}
 
@@ -1524,8 +1526,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	height:86px;
 }
 .search-results .lsx-slot .entry-layout-content {
-	margin-left:6%;
-	margin-right:10%;
+	margin-left:4%;
+	margin-right:6%;
 }
 .page-id-133965 .type-lsx-to-tour {
 	display:flex;
