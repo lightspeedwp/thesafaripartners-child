@@ -3206,7 +3206,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    .pum-container.pum-responsive.pum-responsive-medium {
     margin-left: -36%!important;
     width: 72%!important;
-    margin-top: 10px!important;
+    margin-top: 20px!important;
 }
 
    .single-lsx-to-tour .first-day{background: none;
@@ -4035,7 +4035,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	 .pum-container.pum-responsive.pum-responsive-medium {
 		margin-left: -40%;
     width: 99%!important;
-    margin-top: 10px!important;
+    margin-top: 20px!important;
 	}
 	body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
 		height: 100%;
