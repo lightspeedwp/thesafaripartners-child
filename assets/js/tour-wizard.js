@@ -682,7 +682,7 @@ function openinCity(evt, eventName) {
 				$( this ).children().each( function() {
 					counter++;
 
-					if ( 2 < counter ) {
+					if ( 1 < counter ) {
 						$( this ).hide();
 					}
 				} );
