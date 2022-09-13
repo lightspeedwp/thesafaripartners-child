@@ -10,6 +10,14 @@ define( 'TSP_CHILD_VER', '1.0' );
 require get_stylesheet_directory() . '/classes/class-core.php';
 $theme_instance = \tsp_child\classes\Core::get_instance();
 
+function prefix_conditional_body_class( $classes ) {
+    if( is_page_template('template-travel-style.php') )
+        $classes[] = 'archive';
+
+    return $classes;
+}
+add_filter( 'body_class', 'prefix_conditional_body_class' );
+
 if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
 		return false;
 	}
