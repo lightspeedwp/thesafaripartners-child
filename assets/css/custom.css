@@ -52,6 +52,7 @@ body,p,ul,li,em {
 	line-height:26px;
 	letter-spacing:-0.1px!important;
 }
+.page-id-1454 .tab{display:none;}
 .pum-theme-133244 .pum-title, .pum-theme-lightbox .pum-title{font-family:"moret",serif!important;
 	letter-spacing:-0.2px!important;text-transform: capitalize;}
 	.pum-theme-lightbox .gform_wrapper textarea{border:0!important;}
@@ -601,6 +602,11 @@ legend {
 	padding-bottom:30px!important;
 	font-size:16px;
 }
+
+element.style {
+}
+.content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus {
+    color: #fff!important;}
 .page-template-template-wizard .step-content{min-height:510px;}
 .single #fast-facts .lsx-to-meta-data {
 	align-items:normal!important;
