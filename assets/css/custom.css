@@ -216,6 +216,7 @@ legend {
 	display:inline-block;
 	color:#262423;padding-top: 10px!important;
 }
+.pum.pum-overlay .modal-info{font-size:12px; line-height: 13px;}
 .pum.pum-overlay .gform_body [type="checkbox"]:checked+label,.pum.pum-overlay .gform_body [type="checkbox"]:not(:checked)+label {
 	position:relative;
 	padding-left:38px;
