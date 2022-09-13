@@ -607,6 +607,8 @@ element.style {
 }
 .lsx-pagination a:hover, .lsx-pagination a:focus {
     color: #fff!important;}
+	#terms-and-conditions h2{font-size: 28px!important;
+		line-height: 34px;}
 .page-template-template-wizard .step-content{min-height:510px;}
 .single #fast-facts .lsx-to-meta-data {
 	align-items:normal!important;
@@ -911,13 +913,16 @@ th {
 	height:216px;
 }
 .lsx-readmore {
-	height:250px;
-	max-height:250px;
+	height:285px;
+	max-height:285px;
 	overflow-y:auto;
 }
 .lsx-readmore .read-more {
-	color:#ce9e57!important;
-	text-transform:capitalize!important;
+	padding: 10px 0px;
+		font-weight: normal;
+		font-family:"moret",serif!important;
+		color: #ce9e57;
+		text-transform: uppercase;
 	letter-spacing:-0.1px!important;
 }
 .archive .wizard-who,.single .wizard-who {
@@ -975,7 +980,14 @@ th {
 		font-weight: normal;
 		font-family:"moret",serif!important;
 		color: #ce9e57;
+		text-transform: uppercase;
 	}
+	.lsx-readmore .read-more:after{background-image: url(img/tsp-see-more-arrow-down-gold.svg);
+		background-size: 10px 10px;color: #ce9e57;
+		display: inline-block; 
+		width: 10px;
+		height: 10px;margin: 9px 0 0 7px;
+		content: "";}
 	.single-lsx-to-destination .lsx-block-accordion details summary:after{background-image: url(img/tsp-see-more-arrow-down-gold.svg);
 		background-size: 10px 10px;color: #ce9e57;
 		display: inline-block; 
@@ -3766,7 +3778,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    .gutenberg-compatible-template.using-gutenberg .entry-content figure.wp-block-embed, .gutenberg-compatible-template.using-gutenberg .entry-content .navbar, .gutenberg-compatible-template.using-gutenberg .entry-content p, .gutenberg-compatible-template.using-gutenberg .entry-content .envira-gallery-wrap, .gutenberg-compatible-template.using-gutenberg .entry-content form, .gutenberg-compatible-template.using-gutenberg .entry-content blockquote, .gutenberg-compatible-template.using-gutenberg .entry-content h1, .gutenberg-compatible-template.using-gutenberg .entry-content h2, .gutenberg-compatible-template.using-gutenberg .entry-content h3, .gutenberg-compatible-template.using-gutenberg .entry-content h4, .gutenberg-compatible-template.using-gutenberg .entry-content h5, .gutenberg-compatible-template.using-gutenberg .entry-content h6, .gutenberg-compatible-template.using-gutenberg .entry-content ul, .gutenberg-compatible-template.using-gutenberg .entry-content pre, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-image:not(.alignfull), .gutenberg-compatible-template.using-gutenberg .entry-content ol, .gutenberg-compatible-template.using-gutenberg .entry-content table, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-button, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-buttons:not(.alignfull), .gutenberg-compatible-template.using-gutenberg .entry-content .slick-slider, .gutenberg-compatible-template.using-gutenberg .entry-content #lsx-projects-slider.slick-slider, .gutenberg-compatible-template.using-gutenberg .entry-content #lsx-team-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content figure.wp-block-embed, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .navbar, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content p, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .envira-gallery-wrap, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content form, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content blockquote, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h1, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h2, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h3, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h4, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h5, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h6, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content ul, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content pre, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-image:not(.alignfull), .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content ol, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content table, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-button, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-buttons:not(.alignfull), .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .slick-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content #lsx-projects-slider.slick-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content #lsx-team-slider{max-width:1204px!important;}
 	.page-template-template-wizard .body-wrap {
-		height:90vh!important;
+		height:97vh!important;
    }
 	.page-template-template-contact .contact-135619 .lsx-contact-module-image iframe {
 		height:90vh;
