@@ -12,7 +12,7 @@ $theme_instance = \tsp_child\classes\Core::get_instance();
 
 function prefix_conditional_body_class( $classes ) {
     if( is_page_template('template-travel-style.php') )
-        $classes[] = 'single-lsx-to-destination';
+        $classes[] = 'archive';
 
     return $classes;
 }
