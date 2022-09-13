@@ -1404,7 +1404,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #primary .tab button, #primary .tab a {
 	background-color:inherit;
 	font-family:"moret",serif!important;
-	font-size:16px;
+	font-size:17px;
 	border:none;
 	outline:none;
 	cursor:pointer;
@@ -3674,7 +3674,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display:block!important;
    }
 	.tour-accommodation-gallery .accomodation-slider {
-		height:62vh;
+		height:90vh;
    }
 	.tour-accommodation-gallery .accomodation-nav {
 		border-top:4px solid #fff;
@@ -4683,9 +4683,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    .pum .gform_wrapper .button{left:0!important;width:100%;}
    .tour-accommodation-gallery .accomodation-slider .slick-slide img{object-fit: cover;
-    height: 522px;
+    height: 100%;
     width: 100%;
-    max-height: 379px;
+    max-height:100%;
     overflow: hidden;}
 	.tour-accommodation-gallery .accomodation-slider .slick-slide{
 		justify-content: center;
@@ -5512,7 +5512,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour #accommodation .accomodation-nav{display:none!important;}
 .single-lsx-to-tour .body-wrap{margin-bottom:100px!important;}
 .single-lsx-to-tour .lsx-to-archive-item > .lsx-to-archive-container{display:block!important;}
-.single-lsx-to-tour  .tour-accommodation-gallery{height: 340px;}
+.single-lsx-to-tour  .tour-accommodation-gallery{height: 100%;}
 .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 32%;}
 .tour-accommodation-gallery .slick-arrow.slick-prev {
     left: 0px!important;}
@@ -5642,9 +5642,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding:0!important 
    }
    .tour-accommodation-gallery .accomodation-slider .slick-slide img{object-fit: cover;
-    height: 522px;
+    height: 100%;
     width: 100%;
-    max-height: 379px;
+    max-height: 100%;
     overflow: hidden;}
 	.tour-accommodation-gallery .accomodation-slider .slick-slide{
 		justify-content: center;
@@ -5778,7 +5778,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour #accommodation .accomodation-nav{display:none!important;}
 .single-lsx-to-tour .body-wrap{margin-bottom:100px!important;}
 .single-lsx-to-tour .lsx-to-archive-item > .lsx-to-archive-container{display:block!important;}
-.single-lsx-to-tour  .tour-accommodation-gallery{height: 340px;}
+.single-lsx-to-tour  .tour-accommodation-gallery{height: 100%;}
 .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 32%;}
 .tour-accommodation-gallery .slick-arrow.slick-prev {
     left: 0px!important;}
@@ -6330,7 +6330,7 @@ left: 11px!important;}
     z-index:99;
 }
 .tour-accommodation-gallery .accomodation-slider {
-    height:60vh;
+    height:90vh;
 }
 .tour-accommodation-gallery .accomodation-nav {
     border-top:4px solid #fff;
