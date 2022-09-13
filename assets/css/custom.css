@@ -228,12 +228,13 @@ legend {
 .pum.pum-overlay .gform_body [type="radio"]:checked+label:after, .pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label:after {
 	content:"\f00c";
 	font-family:FontAwesome;
-	width:11px;
-	height:11px;
-	background:#ce9e57;
+	width:27px;
+	height:27px;
+	color:#ce9e57;
 	position:absolute;
-	top:7px;
-	left:3px;
+	top: 11px;
+    left: 6px;
+    font-size: 19px;
 	border-radius:0;
 	-webkit-transition:all 0.2s ease;
 	transition:all 0.2s ease;
@@ -243,10 +244,11 @@ legend {
 	font-family:FontAwesome;
 	width:27px;
 	height:27px;
-	background:#ce9e57;
+	color:#ce9e57;
 	position:absolute;
-	top:7px;
-	left:3px;
+	top: 11px;
+    left: 6px;
+    font-size: 19px;
 	border-radius:0;
 	-webkit-transition:all 0.2s ease;
 	transition:all 0.2s ease;
