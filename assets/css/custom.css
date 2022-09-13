@@ -537,6 +537,15 @@ legend {
 .single #Maps .slider-container.lsx-to-widget-items {
 	margin-top:-20px!important;
 }
+.tour-accommodation-gallery .image-slide
+{display:contents;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;height:100%;}
+	.tour-accommodation-gallery .image-slide img{
+		object-fit:cover;
+		height:100%!important;
+	}
 .single .lsx-related-posts-wrapper .entry-layout-content .entry-image img {
 	object-fit:cover;
 	height:240px!important;
