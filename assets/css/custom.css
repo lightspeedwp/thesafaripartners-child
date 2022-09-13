@@ -2006,9 +2006,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .page .entry-content>div:first-of-type {
 	width:100%!important;
 }
+#collapse-terms-and-conditions p{text-align: center;}
 #dates-prices {
-	height:318px;
-	max-height:318px;
+	height:300px;
+	max-height:300px;
 	overflow-y:scroll;
 	margin-bottom:24px;
 }
