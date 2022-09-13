@@ -3279,7 +3279,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display:block;
 	padding:0!important;
 }
-.page-template-template-travel-style .row{padding:0!important;margin:0!important;}
+.page-template-template-travel-style .wrap.container .row{padding:0!important;margin:0!important;}
 .page-template-template-travel-style p .moretag {
     display: none!important;}
 	.page-template-template-travel-style .tourslink .moretag {
