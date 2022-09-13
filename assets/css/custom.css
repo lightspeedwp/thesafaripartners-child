@@ -605,7 +605,7 @@ legend {
 
 element.style {
 }
-.content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .content-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .widget-area a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .modal-content a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus, .remodal-wrapper a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus {
+.lsx-pagination a:hover, .lsx-pagination a:focus {
     color: #fff!important;}
 .page-template-template-wizard .step-content{min-height:510px;}
 .single #fast-facts .lsx-to-meta-data {
