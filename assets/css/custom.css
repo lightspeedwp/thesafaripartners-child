@@ -2061,25 +2061,25 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .tour-accommodation-gallery .slick-arrow.slick-prev {
 	left:0px!important;
-	width:30px!important;
-	height:30px!important;
+	width:50px!important;
+	height:50px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-prev:before {
-	background-size:10px 10px!important;
-	width:10px!important;
+	background-size:16px 16px!important;
+	width:16px!important;
 	left:15px;
-	height:10px!important;
+	height:16px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-next:before {
-	background-size:10px 10px!important;
-	width:10px!important;
+	background-size:16px 16px!important;
+	width:16px!important;
 	left:15px;
-	height:10px!important;
+	height:16px!important;
 }
 .tour-accommodation-gallery .slick-arrow.slick-next {
 	right:0px!important;
-	width:30px!important;
-	height:30px!important;
+	width:50px!important;
+	height:50px!important;
 }
 .tour-accommodation-gallery .accomodation-slider {
 	width:100%;
