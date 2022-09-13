@@ -630,10 +630,10 @@ function openinCity(evt, eventName) {
 			$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				arrows: false,
+				arrows: true,
 				fade: true,
 				dots: false,
-				asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
+				//asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
 				responsive: [
 					{
 						breakpoint: 1280,
@@ -646,7 +646,7 @@ function openinCity(evt, eventName) {
 					}
 				]
 			});
-			$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
+			/*$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
@@ -655,7 +655,7 @@ function openinCity(evt, eventName) {
 				focusOnSelect: true,
 				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
 				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
-			});
+			});*/
 		}
 	}
 
@@ -677,7 +677,7 @@ function openinCity(evt, eventName) {
 
 	let setReadMoreDescriptions = function() {
 		$( '.entry-content.lsx-readmore' ).each( function() {
-			if ( 2 < $( this ).children().length ) {
+			if ( 1 < $( this ).children().length ) {
 				let counter = 0;
 				$( this ).children().each( function() {
 					counter++;
