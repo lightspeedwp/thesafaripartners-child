@@ -533,15 +533,14 @@ legend {
 .single #Maps #fast-facts {
 	margin-bottom:16px;
 }
-.tour-accommodation-gallery{margin-top:-20px!important;}
+.tour-accommodation-gallery{margin-top:-20px!important;height:90vh;}
 .single #Maps .slider-container.lsx-to-widget-items {
 	margin-top:-20px!important;
 }
-.tour-accommodation-gallery .image-slide
-{display:contents;
+.tour-accommodation-gallery .image-slide{display:contents;
 	justify-content:center;
 	align-items:center;
-	overflow:hidden;height:100%;}
+	overflow:hidden;height:90vh;}
 	.tour-accommodation-gallery .image-slide img{
 		object-fit:cover;
 		height:100%!important;
