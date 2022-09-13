@@ -37,8 +37,7 @@
 															<div class="lsx-to-tour-content">
 																<h2 class="lsx-to-archive-content-title"><?php the_title(); ?></h2>
 	
-																<div class="entry-content lsx-readmore" onmouseover="this.style.overflow='scroll'"
-onmouseout="this.style.overflow='hidden'">
+																<div class="entry-content lsx-readmore" onmouseover="this.style.overflow-y='auto'" onmouseout="this.style.overflow='hidden'">
 																	<?php lsx_to_entry_content_top(); ?>
 
 																	<?php the_content(); ?>
