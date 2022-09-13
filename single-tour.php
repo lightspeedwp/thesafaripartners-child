@@ -23,13 +23,12 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-md-12 outer-container">
 						
-
 							<div class="tab">
-								<button class="tablinks tours-wizard" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
-								<button class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
-								<button class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
-								<button class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</button>
-								<button class="tablinks" id="page-5" onclick="openCity(event, 'Maps')">Maps & More</button>
+								<button class="tablinks tours-wizard" data-wrapper="Overview" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
+								<button class="tablinks" data-wrapper="Day" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
+								<button class="tablinks" data-wrapper="Accommodation" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
+								<button class="tablinks" data-wrapper="Price" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</button>
+								<button class="tablinks" data-wrapper="Maps" id="page-5" onclick="openCity(event, 'Maps')">Maps & More</button>
 							</div>
 						</div>
 

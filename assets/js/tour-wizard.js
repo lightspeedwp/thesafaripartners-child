@@ -11,6 +11,9 @@ function openCity(evt, cityName) {
 	}
 	document.getElementById(cityName).style.display = "block";
 	evt.currentTarget.className += " active";
+
+	console.log(jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ));
+	jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ).addClass('active');
 }
 function openinCity(evt, eventName) {
 	var i, intabcontent, intablink;
