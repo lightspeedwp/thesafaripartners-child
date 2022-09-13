@@ -208,6 +208,22 @@ legend {
 	height:12px;
 	width:14px;
 }
+.pum.pum-overlay .gform_body [type="radio"]:checked+label,.pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label {
+	position:relative;
+	padding-left:28px;
+	cursor:pointer;
+	line-height:20px;
+	display:inline-block;
+	color:#262423;
+}
+.pum.pum-overlay .gform_body [type="checkbox"]:checked+label,.pum.pum-overlay .gform_body [type="checkbox"]:not(:checked)+label {
+	position:relative;
+	padding-left:28px;
+	cursor:pointer;
+	line-height:20px;
+	display:inline-block;
+	color:#262423;
+}
 .pum.pum-overlay .gform_body [type="radio"]:checked+label:after, .pum.pum-overlay .gform_body [type="radio"]:not(:checked)+label:after {
 	content:'';
 	width:11px;
