@@ -601,7 +601,7 @@ legend {
 	overflow:hidden;
 }
 .lsx-to-meta-data.lsx-to-meta-data-duration .values{}
-.lsx-to-meta-data.lsx-to-meta-data-duration .values::after{content: 'Days';
+.lsx-to-meta-data.lsx-to-meta-data-duration .values::after{content: 'days';
     font-size: 16px;
     padding-left: 3px;}
 .blog .entry-layout-content, .category.archive .entry-layout-content{
