@@ -595,12 +595,16 @@ legend {
 	align-items:center;
 	overflow:hidden;
 }
+.lsx-to-meta-data.lsx-to-meta-data-duration .lsx-to-meta-data-key .values{padding-right:1px;}
+.lsx-to-meta-data.lsx-to-meta-data-duration .lsx-to-meta-data-key .values::after{content: 'Days';
+    font-size: 14px;}
 .blog .entry-layout-content, .category.archive .entry-layout-content{
 	background:#ededed;
 }
 .blog .entry-layout-content .moretag, .category.archive .entry-layout-content .moretag{
 	float:right;
 	padding-bottom:30px!important;
+	padding-right:10px;
 	font-size:16px;
 }
 
