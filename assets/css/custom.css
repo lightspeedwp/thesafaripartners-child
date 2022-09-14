@@ -139,7 +139,7 @@ legend {
 	width:17px;
 	height:17px;
 	content:"";
-	margin-right:17px;
+	left:2px!important;
 	margin-top:3px;
 }
 .lsx-to-meta-data.lsx-to-meta-data-destinations:before {
@@ -2026,7 +2026,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .page-template-template-travel-style #wizard .lsx-to-content {
 	font-family:"moret",serif!important;
-	font-size:22px!important;
+	font-size:22px;
 }
 .page-template-template-travel-style #wizard .wizard-budget .lsx-to-content {
 	text-align:center;
@@ -2036,7 +2036,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .page-template-template-travel-style #wizard .wizard-who .lsx-to-content {
 	font-family:"moret",serif!important;
-	font-size:18px!important;
+	font-size:18px;
 	text-align:center;
 	padding-top:30px;
 }
@@ -4047,6 +4047,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.mobileonly{display:none!important;}
 	.col-sm-12{padding:0!important;}
 	.lsx-wizard .nav-pills li.active{top:6px;}
+	.lsx-to-tour-content .lovetrip{margin-bottom: 3.4rem;}
 	.single-lsx-to-tour .first-day{background: none;
 		color: #262423;
 		font-size: 22px;
@@ -4526,8 +4527,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	
 	.lsx-wizard .wizard-when label {
 	 width:160px;
-	 font-family:argesta_displayregular,serif!important;
-	 font-size:17px;
+	 font-family: "moret",serif!important;
+    font-size: 19px;
 	 display:inline-block;
 	 padding-left:6px;
 	 color:#262423;
@@ -4788,6 +4789,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     z-index:-1;
     transform:scale(.9);
     box-shadow: 0px 0px 8px 2px #000000;}
+	.single-lsx-to-tour .lsx-map .lsx-map-preview{height: 52vh!important;}
+	.single-lsx-to-tour .itinerary-navigation{margin: 0 -10px 0 -10px;}
+
+	.single-lsx-to-tour .related-tours-wrapper .lsx-tour p{display:none;}
+	.lsx-to-tour-content .lovetrip{margin-bottom: 3.4rem;}
 	.single-lsx-to-tour .first-day{background: none;
         color: #262423;
         font-size: 22px;
@@ -5011,7 +5017,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	#wizard .lsx-to-content {
 		font-family:"moret",serif!important;
-		font-size:19px;
+		font-size:19px!important;
 		line-height:22px;
 		letter-spacing:0.3px;
 		margin-top:-38px;
@@ -5900,7 +5906,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
   .single-lsx-to-tour .lsx-to-tour-content {
 	padding-top: 100px!important;
 	width: auto!important;
-    padding-left: 15px!important;
+    padding-left: 5px!important;
     position: relative;
   }
   .single-lsx-to-tour .lsx-single-contact {
