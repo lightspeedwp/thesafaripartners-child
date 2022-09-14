@@ -379,7 +379,7 @@ class Setup {
 
 					if ( isset( $images[ $random ] ) ) {
 						$post_thumbnail_id = $images[ $random ];
-						$this->used_images = $images[ $random ];
+						$this->used_images[] = $images[ $random ];
 					}
 				}
 			}
