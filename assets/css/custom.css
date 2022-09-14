@@ -2502,11 +2502,18 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding:0;
 	margin:0;
 }
+.single-lsx-to-tour .itinerary-navigation {
+	display: flex;
+}
 .single-lsx-to-tour .itinerary-navigation button {
 	background:none;
 	color:#262423;
 	font-size:22px;
 	border:none;
+}
+.single-lsx-to-tour .current-day {
+	margin-left: auto;
+	margin-right: auto;
 }
 .single-lsx-to-tour .itinerary-navigation .lsx-wizard-button-next {
 	float:right;
@@ -6313,41 +6320,7 @@ left: 11px!important;}
 	padding:0;
 	margin:0;
 }
-.single-lsx-to-tour .itinerary-navigation button {
-	background:none;
-	color:#262423;
-	font-size:22px;
-	border:none;
-}
-.single-lsx-to-tour .itinerary-navigation .lsx-wizard-button-next {
-	float:right;
-}
-.single-lsx-to-tour .itinerary-item .lsx-to-meta-data .lsx-to-meta-data-key {
-	font-size:15px;
-	color:#6a6d5b;
-}
-.single-lsx-to-tour #Price .table>tbody>tr>td {
-	padding:2px!important;
-	font-size:14px;
-}
-.single-lsx-to-tour #Price .table>tbody>tr>td.book-now-wrapper {
-	width:80px!important;
-}
-.single-lsx-to-tour #Price .table>tbody>tr>td.park-fees {
-	width:102px!important;
-}
-.single-lsx-to-tour .nav-pills {
-	display:none!important;
-}
-.single-lsx-to-tour .step-content {
-	display:block;
-	position:relative;
-	height:auto;
-}
-.single-lsx-to-tour .lsx-to-archive-item {
-	margin-top:0px;
-	padding:0!important;
-}
+
 .single-lsx-to-tour .tab {
 	z-index:99;
 	overflow:hidden;

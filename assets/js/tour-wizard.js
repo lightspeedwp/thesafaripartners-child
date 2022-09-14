@@ -73,7 +73,7 @@ function checkForSliders( $next ) {
 		$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick('unslick');
 		let settings = {
 			"draggable": false,
-			"infinite": true,
+			"infinite": false,
 			"swipe": false,
 			"cssEase": "ease-out",
 			"dots": true,
@@ -788,6 +788,10 @@ function checkForSliders( $next ) {
 				navEle += '<button class="lsx-wizard-button-previous ignore-text"><span>' + itineraryItems[prevIndex] + '</span></button>';
 			} else {
 				navEle += '<span class="first-day ignore-text">' + itineraryItems[counter] + '</span>';
+			}
+
+			if (  0 != counter && counter != ( itineraryItems.length - 1 ) ) {
+				navEle += '<span class="current-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
 
 			if ( counter != ( itineraryItems.length - 1 ) ) {
