@@ -20,14 +20,6 @@
 	);
 	$no_thumb_post_formats = apply_filters( 'lsx_no_thumb_post_formats', $no_thumb_post_types );
 
-	$has_thumb = has_post_thumbnail() && ! has_post_format( $no_thumb_post_formats );
-
-	if ( $has_thumb ) {
-		$thumb_class = 'has-thumb';
-	} else {
-		$thumb_class = 'no-thumb';
-	}
-
 	$blog_layout = apply_filters( 'lsx_blog_layout', 'default' );
 
 	$image_class = '';
@@ -39,6 +31,14 @@
 	$image_arr    = wp_get_attachment_image_src( $thumbnail_id, 'lsx-thumbnail-single' );
 	$image_src    = '';
 
+	$has_thumb = '' !== $image_src && ! has_post_format( $no_thumb_post_formats );
+
+	if ( $has_thumb ) {
+		$thumb_class = 'has-thumb';
+	} else {
+		$thumb_class = 'no-thumb';
+	}
+
 	if ( is_array( $image_arr ) ) {
 		$image_src = $image_arr[0];
 	}
@@ -48,7 +48,7 @@
 	<?php lsx_entry_top(); ?>
 
 	<div class="entry-layout">
-		<div class="entry-layout-content entry-layout-content-<?php echo has_post_thumbnail() ? '67' : '100'; ?>">
+		<div class="entry-layout-content entry-layout-content-<?php '' !== $image_src ? '67' : '100'; ?>">
 			<header class="entry-header">
 				<?php if ( $has_thumb ) : ?>
 					<div class="entry-image <?php echo esc_attr( $image_class ); ?>">
