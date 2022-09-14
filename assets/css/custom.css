@@ -139,7 +139,7 @@ legend {
 	width:17px;
 	height:17px;
 	content:"";
-	margin-right:17px;
+	left:2px!important;
 	margin-top:3px;
 }
 .lsx-to-meta-data.lsx-to-meta-data-destinations:before {
