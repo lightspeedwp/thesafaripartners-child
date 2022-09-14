@@ -6089,6 +6089,9 @@ body.custom-background {
     padding-left: 5px!important;
     position: relative;
   }
+  .tour-accommodation-gallery .image-slide {
+    height: 83vh!important;
+}
 }
 
 @media (min-width:900px) and (max-width:1199px) {
