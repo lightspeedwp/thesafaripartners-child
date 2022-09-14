@@ -357,7 +357,7 @@ class Setup {
 	}
 
 	function accommodation_to_tour_placeholder( $post_thumbnail_id, $post_id ) {
-		if ( 'tour' === get_post_type( $post_id ) && isset( $_GET['debug2'] ) ) {
+		if ( 'tour' === get_post_type( $post_id ) ) {
 			$images = array();
 			$accommodation = get_post_meta( $post_id, 'accommodation_to_tour', false );
 			if ( ! empty( $accommodation ) && false !== $accommodation ) {
