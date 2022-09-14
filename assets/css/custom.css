@@ -90,6 +90,7 @@ th,tr,td,table,legend,label {
 legend {
 	border-bottom:none;
 }
+#mega-menu-wrap-filter-menu .mega-toggle-blocks-right{display:none;}
 .gform_wrapper input[type="email"],.gform_wrapper input[type="date"],.gform_wrapper input[type="datetime"],.gform_wrapper input[type="datetime-local"],.gform_wrapper input[type="month"],.gform_wrapper input[type="number"],.gform_wrapper input[type="password"],.gform_wrapper input[type="search"],.gform_wrapper input[type="tel"],.gform_wrapper input[type="text"],.gform_wrapper input[type="time"],.gform_wrapper input[type="week"],.gform_wrapper input[type="url"],.gform_wrapper select,.gform_wrapper textarea {
 	opacity:0.6 
 }
@@ -4051,6 +4052,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    #mega-menu-wrap-max_mega_menu_1{display:none;}
 }
 @media (min-width:767px) and (max-width:1200px) {
+	.pum-overlay {z-index: 99999999!important;
+		top: 0px!important;}
 	#mega-menu-wrap-max_mega_menu_1{display:none;}
 	.tour-accommodation-gallery .image-slide{height: 54vh!important;}
 	#mega-menu-wrap-primary #mega-menu-primary{padding:0!important;}
@@ -4832,7 +4835,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #footer-widgets blockquote{font-size: 14px!important;
     line-height: 20px!important;
     letter-spacing: -0.1px!important;}
-   .pum-overlay {
+   .pum-overlay {z-index: 99999999!important;
     top: 0px!important;}
    .mobilepadtop{padding-top:30px!important;}
    .pum-theme-133244 .pum-container, .pum-theme-lightbox .pum-container{padding-top:80px;margin-bottom:40px;}
