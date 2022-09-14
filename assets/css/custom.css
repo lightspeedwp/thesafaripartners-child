@@ -4795,6 +4795,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     z-index:-1;
     transform:scale(.9);
     box-shadow: 0px 0px 8px 2px #000000;}
+
+	.single-lsx-to-tour .related-tours-wrapper .lsx-tour p{display:none;}
+	.lsx-to-tour-content .lovetrip{margin-bottom: 3.4rem;}
 	.single-lsx-to-tour .first-day{background: none;
         color: #262423;
         font-size: 22px;
@@ -5018,7 +5021,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	#wizard .lsx-to-content {
 		font-family:"moret",serif!important;
-		font-size:19px;
+		font-size:19px!important;
 		line-height:22px;
 		letter-spacing:0.3px;
 		margin-top:-38px;

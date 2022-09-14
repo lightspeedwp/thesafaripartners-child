@@ -35,7 +35,7 @@
 									<button class="btn lsx-cta popup-inquire">MAKE AN INQUIRY</button>
 
 									<div class="related-tours-wrapper">
-										<h4>You may also like:</h4>
+										<h4 class="lovetrip">You may also like:</h4>
 										<?php
 										$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
 										if ( empty( $connected_tours ) ) {
