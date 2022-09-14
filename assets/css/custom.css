@@ -728,7 +728,7 @@ element.style {
 }
 .dropdown-content {
 	background-color:#f1f1f1;
-	visibility: hidden;
+	display: none;
 	width: 200px;
 	text-align: center;
 	padding: 5px 0;
@@ -754,7 +754,7 @@ element.style {
 	border-color: #f1f1f1 transparent transparent transparent;
 }
 .dropdown-share:hover .dropdown-content {
-	visibility: visible;
+	display:block;
 }
 /*Bread crumbs */
 .breadcrumbs-container {
@@ -5259,7 +5259,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.page-template-template-wizard .lsx-wizard {
 		position:relative;
-		max-height:100vh;
 		overflow:hidden;
 		margin-bottom:70px;
    }
@@ -5658,6 +5657,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #wizard .step-content .col-sm-2, #wizard .step-content .col-md-2{
     height: 38px!important;
 }
+#wizard .step-content .col-sm-2.destination, #wizard .step-content .col-md-2.destination{height: 28px!important;}
 #wizard .wizard-budget .lsx-to-content{margin-top: -66px;}
 .single-lsx-to-tour .tours-nav{left:0!important;bottom:6px!important;}
 .single-lsx-to-tour .lsx-single-contact{display:block;}
