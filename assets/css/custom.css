@@ -3232,6 +3232,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 
    .single-lsx-to-tour .first-day{background: none;
+	display:none;
     color: #262423;
     font-size: 22px;
     border: none;
@@ -4050,7 +4051,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.col-sm-12{padding:0!important;}
 	.lsx-wizard .nav-pills li.active{top:6px;}
 	.lsx-to-tour-content .lovetrip{margin-bottom: 3.4rem;}
-	.single-lsx-to-tour .first-day{background: none;
+	.single-lsx-to-tour .first-day{background: none;display:none;
 		color: #262423;
 		font-size: 22px;
 		border: none;
@@ -5927,12 +5928,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .body-wrap{margin-bottom:100px!important;}
 .single-lsx-to-tour .lsx-to-archive-item > .lsx-to-archive-container{display:block!important;}
 .single-lsx-to-tour  .tour-accommodation-gallery{height: 100%;}
-.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 32%;}
+.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev, .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next{top: 50%;}
 .tour-accommodation-gallery .slick-arrow.slick-prev {
     left: 0px!important;}
 	.tour-accommodation-gallery .slick-arrow.slick-next{
 		right: 0px!important;
 	}
+	.single-lsx-to-tour .slick-slide .lsx-to-widget-content p {
+		display: none!important;}
 .single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
 .single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh!important}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
@@ -6104,7 +6107,7 @@ left: 11px!important;}
 		padding: 0!important;
 		margin-top: -15px!important;}
 
-    .single-lsx-to-tour .first-day{background: none;
+    .single-lsx-to-tour .first-day{background: none;display:none;
         color: #262423;
         font-size: 22px;
         border: none;
@@ -6500,7 +6503,7 @@ left: 11px!important;}
 	padding:0!important;
 	margin-top: -15px!important;
    }
-   .single-lsx-to-tour .first-day{background: none;
+   .single-lsx-to-tour .first-day{background: none;display:none;
 	color: #262423;
 	font-size: 22px;
 	border: none;
