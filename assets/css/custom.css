@@ -4068,12 +4068,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     width: 99%!important;
     margin-top: 20px!important;
 	}
-	body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
-		height: 100%;
-		overflow-y: hidden;
-		position: fixed;
-		width: 100%;
-	}
 	#mega-menu-wrap-filter-menu .mega-menu-toggle + #mega-menu-filter-menu{display:block;}
 	#mega-menu-wrap-filter-menu #mega-menu-filter-menu > li.mega-menu-megamenu.mega-menu-item{width:auto; float:left;clear:none; padding-right:15px;display:block; }
 	
@@ -4796,11 +4790,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		max-height: 300px;
 		overflow-y: auto;}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview{height: 52vh!important;}
-	.single-lsx-to-tour .itinerary-navigation{margin: 0 -10px 0 -10px;}
+	.single-lsx-to-tour .itinerary-navigation{margin: 0 -10px 0 -6px;}
 
 	.single-lsx-to-tour .related-tours-wrapper .lsx-tour p{display:none;}
 	.lsx-to-tour-content .lovetrip{margin-bottom: 3.4rem;}
-	.single-lsx-to-tour .first-day{background: none;
+	.single-lsx-to-tour .first-day{background: none;display:none;
         color: #262423;
         font-size: 22px;
         border: none;
@@ -6056,6 +6050,12 @@ body.custom-background {
 	left:-15px;
 	width:35px!important;
 	height:35px!important;
+}
+body.page-template-template-contact, body.page-template-template-wizard, body.single-lsx-to-tour {
+	height: 100%;
+	overflow-y: hidden;
+	position: fixed;
+	width: 100%;
 }
 .lsx-to-slider-inner .slick-arrow.slick-next {
 	right:-11px;
