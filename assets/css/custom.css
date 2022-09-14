@@ -4061,6 +4061,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
    #mega-menu-wrap-max_mega_menu_1{display:none;}
 }
+@media (min-width:767px) and (max-width:899px) {
+.tour-accommodation-gallery .image-slide{height: 54vh!important;}
+}
 @media (min-width:767px) and (max-width:1200px) {
 	.pum-overlay {z-index: 99999999!important;
 		top: 0px!important;}
@@ -4075,7 +4078,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			margin: 0 auto;
 		}
 	#mega-menu-wrap-max_mega_menu_1{display:none;}
-	.tour-accommodation-gallery .image-slide{height: 54vh!important;}
 	#mega-menu-wrap-primary #mega-menu-primary{padding:0!important;}
 	.mobileonly{display:none!important;}
 	.pum-overlay{top:0!important;}
