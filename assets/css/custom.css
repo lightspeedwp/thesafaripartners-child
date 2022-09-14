@@ -6665,12 +6665,14 @@ left: 11px!important;}
 		min-height:60vh!important;
    }
 }
-@media screen and (min-width:768px) and (max-width:999px) {
+@media screen and (min-width:768px) and (max-width:900px) {
 	.page .entry-content>div.homebanner{
 		height: calc((100vw*9) /16);
 		z-index:0;
-		margin-top:-52px!important;
+		margin-top:-114px!important;
 		margin-bottom:-56px!important;
 		padding: 0!important;
    }
+   .wp-block-cover video.wp-block-cover__video-background{top:-60px;}
+   .intro-wrap{z-index:999;}
 }
