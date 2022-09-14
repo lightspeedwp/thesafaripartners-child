@@ -4788,6 +4788,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 				float: none;
 			}	
 }
+
+@media (min-width:767px) and (max-width:900px) {
+.homebanner {
+	min-height: 88vh!important;
+z-index: 0;
+margin-top: -72px!important;
+margin-bottom: -120px!important;
+padding: 0!important;
+}
+}
 @media (max-width:767px) {
 	.row {margin:0!important;}
    #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary:after {
@@ -5657,6 +5667,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #wizard .step-content .col-sm-2, #wizard .step-content .col-md-2{
     height: 32px!important;
 }
+.travelwhen .checkbox-wrapper{ height: 29px!important;}
 #wizard .step-content .col-sm-2.destination, #wizard .step-content .col-md-2.destination{height: 28px!important;}
 #wizard .wizard-budget .lsx-to-content{margin-top: -66px;}
 .single-lsx-to-tour .tours-nav{left:0!important;bottom:6px!important;}
