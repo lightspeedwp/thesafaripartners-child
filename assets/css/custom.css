@@ -6669,10 +6669,10 @@ left: 11px!important;}
 	.page .entry-content>div.homebanner{
 		height: calc((100vw*9) /16);
 		z-index:0;
-		margin-top:-114px!important;
-		margin-bottom:-56px!important;
+		margin-top:-54px!important;
+		margin-bottom:-6px!important;
 		padding: 0!important;
    }
-   .wp-block-cover video.wp-block-cover__video-background{top:-60px;}
+   .wp-block-cover video.wp-block-cover__video-background{top:20px;}
    .intro-wrap{z-index:999;}
 }
