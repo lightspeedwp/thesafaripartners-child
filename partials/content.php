@@ -215,15 +215,11 @@
 			<?php } ?>
 		</div>
 
-		<?php if ( has_post_thumbnail() ) : ?>
-
-			<div class="entry-image hidden-xs">
-				<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
-					<?php lsx_thumbnail( 'medium_large' ); ?>
-				</a>
-			</div>
-
-		<?php endif; ?>
+		<div class="entry-image hidden-xs">
+			<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
+				<?php lsx_thumbnail( 'medium_large' ); ?>
+			</a>
+		</div>
 	</div>
 
 	<?php lsx_entry_bottom(); ?>
