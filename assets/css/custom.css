@@ -4108,6 +4108,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.lsx-wizard .lsx-to-content {
 	 font-size: 18px!important;letter-spacing:-0.3px;padding: 4px 0px 2px 6px;
 	}
+	.page-template-template-travel-style #wizard .lsx-to-content{
+		font-size: 18px!important;letter-spacing:-0.3px;padding: 4px 0px 2px 6px;
+	   }
 	.lsx-wizard-progress-buttons-wrapper ul {
 	 list-style:none;
 	 counter-reset:my-awesome-counter;
@@ -4785,8 +4788,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     z-index:-1;
     transform:scale(.9);
     box-shadow: 0px 0px 8px 2px #000000;}
-	.page-template-template-travel-style #wizard .step-content .wizard-what .col-sm-2 {
+	.single-lsx-to-tour .first-day{background: none;
+        color: #262423;
+        font-size: 22px;
+        border: none;
+        font-family: "moret",serif!important;
+        letter-spacing: -0.2px!important;}
+		.tour-accommodation-gallery .image-slide {height: 53vh!important;
+		}
+		.page-template-template-travel-style #wizard .step-content .wizard-what .col-sm-2 {
 		height: 40px!important;}
+		.single-lsx-to-tour h2{font-size: 36px!important;}
 	.page-template-template-contact .lsx-contact-module-image img:nth-child(2){display:none;}
   .introslide .lsx-banner-column {
     height: 8%!important;}
