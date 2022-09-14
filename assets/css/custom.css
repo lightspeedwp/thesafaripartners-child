@@ -4783,6 +4783,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     z-index:-1;
     transform:scale(.9);
     box-shadow: 0px 0px 8px 2px #000000;}
+	.page-template-template-travel-style #wizard .step-content .wizard-what .col-sm-2 {
+		height: 40px!important;}
 	.page-template-template-contact .lsx-contact-module-image img:nth-child(2){display:none;}
   .introslide .lsx-banner-column {
     height: 8%!important;}
@@ -5366,9 +5368,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		padding-top:8px!important;
 		line-height:35px!important;
    }
-	.archive #main, .page-template-template-travel-style #main{
+	.archive #main{
 		padding:0 15px!important;
    }
+   .page-template-template-travel-style #main, .page-template-template-travel-style .entry-content{padding:0!important;}
+   .page-template-template-travel-style .notfull, .page-template-template-travel-style .mobilenotfull{padding:0 15px!important;}
    .single-lsx-to-destination #main{padding:0 5px!important;}
 	.archive #wizard .step-content .col-md-3, .single-lsx-to-destination #wizard .step-content .col-md-3, .page-template-template-travel-style #wizard .step-content .col-md-3{
 		padding-right:0px!important;
