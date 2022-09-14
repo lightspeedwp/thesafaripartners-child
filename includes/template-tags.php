@@ -199,7 +199,7 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 		?>
 		<div class="tour-accommodation-gallery" data-slider-id="<?php echo esc_attr( $post_id ); ?>">
 			<div class="lsx-banner-image-wrap placeholder-image">
-				<?php echo get_the_post_thumbnail( $post_id, 'full' ); ?>
+				<?php //echo get_the_post_thumbnail( $post_id, 'full' ); ?>
 			</div>
 			<div class="slider-content accom-slider-<?php echo esc_attr( $post_id ); ?>" style="display:none;">
 				<?php
