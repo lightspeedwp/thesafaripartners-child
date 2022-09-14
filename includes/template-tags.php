@@ -172,19 +172,65 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
  */
 function tsp_get_search_relevance( $post_id = 0 ) {
 	global $search_relevance;
-	$return = '';
-	if ( 0 !== $post_id && null !== $search_relevance && isset( $search_relevance[ $post_id ] ) ) {
-		switch ( $search_relevance[ $post_id ] ) {
-			case $search_relevance[ $post_id ] > 80 :
-				$relevance_class = 'red';
-				break;
-			default:
-				$relevance_class = 'orange';
-				break;
+	$return          = '';
+	$relevance_class = '';
+
+	if ( is_search() && 0 !== $post_id ) {
+		if (null !== $search_relevance && isset( $search_relevance[ $post_id ] ) ) {
+			switch ( $search_relevance[ $post_id ] ) {
+				case $search_relevance[ $post_id ] > 80 :
+					$relevance_class = 'red';
+					break;
+				default:
+					$relevance_class = 'orange';
+					break;
+			}
+			$return = $search_relevance[ $post_id ];
+		} else {
+			$return = tsp_facet_relevance( $post_id );
 		}
-		$return = '<span class="' . $relevance_class . '">' . $search_relevance[ $post_id ] . '%</span>';
+	}
+	if ( '' !== $return ) {
+		$return = '<span class="' . $relevance_class . '">' . $return . '%</span>';
 	}
 	return $return;
+}
+
+function tsp_facet_relevance( $post_id ) {
+	$relevance = '';
+	if ( isset( $_GET['fwp_who'] ) || isset( $_GET['fwp_what'] ) || isset( $_GET['fwp_where'] ) || isset( $_GET['fwp_when'] ) || isset( $_GET['fwp_budget'] ) ) {
+
+		$hits  = 0;
+		$total = 0;
+
+		$taxonomies = array(
+			'who'          => 'fwp_who',
+			'travel-style' => 'fwp_what',
+			'who'          => 'fwp_when',
+			'who'          => 'fwp_budget',
+		);
+		foreach ( $taxonomies as $taxonomy => $facet ) {
+			if ( isset( $_GET[ $facet ] ) && '' !== $_GET[ $facet ] ) {
+				$string = urldecode( $_GET[ $facet ] );
+				$parts  = explode( ',', $string );
+				if ( ! is_array( $parts ) ) {
+					$parts = array( $parts );
+				}
+	
+				foreach ( $parts as $part ) {
+					if ( has_term( $part, $taxonomy, $post_id ) ) {
+						$hits++;
+					}
+					$total++;
+				}
+			}
+		}
+
+		if ( 0 !== $hits ) {
+			$relevance = ( $hits / $total ) * 100;
+		}
+	}
+	return $relevance;
 }
 
 /**

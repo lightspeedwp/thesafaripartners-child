@@ -253,27 +253,29 @@ class Frontend {
 			return $results;
 		}
 		$search_relevance = array();
-	
-		remove_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ) );
-		$max_relevance_query = new \SearchWP\Query( $query->get_keywords( true ),
-			[
-				'engine' => $query->get_engine()->get_name(),
-				'per_page' => 1
-			]
-		);
-		$max_relevance = (int)$max_relevance_query->results[0]->relevance;
-		$posts_relevance = wp_list_pluck( $query->get_raw_results(), 'relevance', 'id' );
-		
-		foreach( $results as $index => $result ){
-			if ( isset( $posts_relevance[$result] ) ) {
-				$relevance = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
-				$search_relevance[$result] = $relevance;
 
-				if ( (int) $relevance < 50 ) {
-					unset( $results[ $index ] );
+		if ( class_exists( 'SearchWP' ) ) {
+			remove_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ) );
+			$max_relevance_query = new \SearchWP\Query( $query->get_keywords( true ),
+				[
+					'engine' => $query->get_engine()->get_name(),
+					'per_page' => 1
+				]
+			);
+			$max_relevance = (int)$max_relevance_query->results[0]->relevance;
+			$posts_relevance = wp_list_pluck( $query->get_raw_results(), 'relevance', 'id' );
+			
+			foreach( $results as $index => $result ){
+				if ( isset( $posts_relevance[$result] ) ) {
+					$relevance = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
+					$search_relevance[$result] = $relevance;
+	
+					if ( (int) $relevance < 50 ) {
+						unset( $results[ $index ] );
+					}
 				}
 			}
-		}		
+		}
 	
 		return $results;
 	}
