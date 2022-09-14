@@ -20,8 +20,8 @@
 
         echo "</span>";?></span><span>
 								<div class="lsx-banner-image-wrap">
-							<?php //echo get_the_post_thumbnail($page->ID,'full');
-								lsx_thumbnail( 'full' );
+							<?php echo get_the_post_thumbnail($page->ID,'full');
+								//lsx_thumbnail( 'full' );
 							?>
 
 						</div>
