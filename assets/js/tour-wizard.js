@@ -14,6 +14,9 @@ function openCity(evt, cityName) {
 
 	console.log(jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ));
 	jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ).addClass('active');
+
+	console.log(jQuery( '#'+cityName ));
+	checkForSliders( jQuery( '#'+cityName ) );
 }
 function openinCity(evt, eventName) {
 	var i, intabcontent, intablink;
@@ -27,6 +30,86 @@ function openinCity(evt, eventName) {
 	}
 	document.getElementById(eventName).style.display = "block";
 	evt.currentTarget.className += " active";
+}
+
+function checkForSliders( $next ) {
+	if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
+		console.log('accommodation');
+		var currentID = $next.find( '.tour-accommodation-gallery').attr('data-slider-id');
+
+		$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
+		$next.find( '.tour-accommodation-gallery .slider-content').show();
+
+		$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			fade: true,
+			dots: false,
+			//asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
+			responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						arrows: true,
+						dots: false,
+						prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
+						nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
+					}
+				}
+			]
+		});
+		/*$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
+			dots: false,
+			centerMode: true,
+			focusOnSelect: true,
+			prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
+			nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
+		});*/
+	}
+
+	if ( 0 < $next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).length ) {
+		console.log('related');
+		$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick('unslick');
+		let settings = {
+			"draggable": false,
+			"infinite": true,
+			"swipe": false,
+			"cssEase": "ease-out",
+			"dots": true,
+			"slidesToShow": 2,
+			"slidesToScroll": 2,
+			"autoplay": true,
+			"autoplaySpeed": 6000,
+			"responsive": [
+				{
+					"breakpoint": 900,
+					"settings": {
+						"slidesToShow": 2,
+						"slidesToScroll": 2,
+						"draggable": true,
+						"arrows": true,
+						"swipe": true
+					}
+				},
+				{
+					"breakpoint": 600,
+					"settings": {
+						"slidesToShow": 1,
+						"slidesToScroll": 1,
+						"draggable": true,
+						"arrows": true,
+						"swipe": true
+					}
+				}
+			]
+		};
+		$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick(settings);
+		console.log('triggered');
+	}
 }
 
 ;(function ($, window, document, undefined) {
@@ -623,85 +706,6 @@ function openinCity(evt, eventName) {
 		}
 	}
 
-	function checkForSliders( $next ) {
-		if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
-			var currentID = $next.find( '.tour-accommodation-gallery').attr('data-slider-id');
-
-			$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
-			$next.find( '.tour-accommodation-gallery .slider-content').show();
-
-			$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: true,
-				fade: true,
-				dots: false,
-				//asNavFor: '.accom-slider-' + currentID + ' .accomodation-nav',
-				responsive: [
-					{
-						breakpoint: 1280,
-						settings: {
-							arrows: true,
-							dots: false,
-							prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
-							nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
-						}
-					}
-				]
-			});
-			/*$next.find( '.tour-accommodation-gallery .accomodation-nav').slick({
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				asNavFor: '.accom-slider-' + currentID + ' .accomodation-slider',
-				dots: false,
-				centerMode: true,
-				focusOnSelect: true,
-				prevArrow : '<button type="button" class="slick-prev">&laquo;</button>',
-				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
-			});*/
-		}
-
-		if ( 0 < $next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).length ) {
-			$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick('unslick');
-			let settings = {
-				"draggable": false,
-				"infinite": true,
-				"swipe": false,
-				"cssEase": "ease-out",
-				"dots": true,
-				"slidesToShow": 2,
-				"slidesToScroll": 2,
-				"autoplay": true,
-				"autoplaySpeed": 6000,
-				"responsive": [
-					{
-						"breakpoint": 900,
-						"settings": {
-							"slidesToShow": 2,
-							"slidesToScroll": 2,
-							"draggable": true,
-							"arrows": true,
-							"swipe": true
-						}
-					},
-					{
-						"breakpoint": 600,
-						"settings": {
-							"slidesToShow": 1,
-							"slidesToScroll": 1,
-							"draggable": true,
-							"arrows": true,
-							"swipe": true
-						}
-					}
-				]
-			};
-			$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick(settings);
-			console.log('triggered');
-		}
-
-	}
-
 	////////////////////////////////////////// Plugin definition
 
 	$.fn.lsxWizard = function (method) {
@@ -769,9 +773,13 @@ function openinCity(evt, eventName) {
 		let itineraryItems = [];
 		let counter = 0;
 
+		
+
 		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
 			itineraryItems.push($(this).html());
 		});
+
+		console.log(itineraryItems);
 
 		// Run through and inject the new text.
 		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
