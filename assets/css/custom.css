@@ -4044,6 +4044,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 @media (min-width:767px) and (max-width:1200px) {
 	#mega-menu-wrap-max_mega_menu_1{display:none;}
+	.tour-accommodation-gallery .image-slide{height: 54vh!important;}
 	#mega-menu-wrap-primary #mega-menu-primary{padding:0!important;}
 	.mobileonly{display:none!important;}
 	.col-sm-12{padding:0!important;}
@@ -4790,6 +4791,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     z-index:-1;
     transform:scale(.9);
     box-shadow: 0px 0px 8px 2px #000000;}
+	.lsx-readmore {
+		height: 300px;
+		max-height: 300px;
+		overflow-y: auto;}
 	.single-lsx-to-tour .lsx-map .lsx-map-preview{height: 52vh!important;}
 	.single-lsx-to-tour .itinerary-navigation{margin: 0 -10px 0 -10px;}
 
