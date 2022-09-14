@@ -660,6 +660,46 @@ function openinCity(evt, eventName) {
 				nextArrow : '<button type="button" class="slick-next">&raquo;</button>',
 			});*/
 		}
+
+		if ( 0 < $next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).length ) {
+			$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick('unslick');
+			let settings = {
+				"draggable": false,
+				"infinite": true,
+				"swipe": false,
+				"cssEase": "ease-out",
+				"dots": true,
+				"slidesToShow": 2,
+				"slidesToScroll": 2,
+				"autoplay": true,
+				"autoplaySpeed": 6000,
+				"responsive": [
+					{
+						"breakpoint": 900,
+						"settings": {
+							"slidesToShow": 2,
+							"slidesToScroll": 2,
+							"draggable": true,
+							"arrows": true,
+							"swipe": true
+						}
+					},
+					{
+						"breakpoint": 600,
+						"settings": {
+							"slidesToShow": 1,
+							"slidesToScroll": 1,
+							"draggable": true,
+							"arrows": true,
+							"swipe": true
+						}
+					}
+				]
+			};
+			$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick(settings);
+			console.log('triggered');
+		}
+
 	}
 
 	////////////////////////////////////////// Plugin definition

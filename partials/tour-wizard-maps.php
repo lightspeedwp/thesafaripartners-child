@@ -34,16 +34,18 @@
 									<h4>Love this trip?</h4>
 									<button class="btn lsx-cta popup-inquire">MAKE AN INQUIRY</button>
 
-									<h4>You may also like:</h4>
-									<?php
-									$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
-									if ( empty( $connected_tours ) ) {
-										$connected_tours = 'travel-style';
-									}
-									global $columns;
-									$columns = 2;
-									lsx_to_related_items( $connected_tours, '', '' , true, 'tour' );
-									?>
+									<div class="related-tours-wrapper">
+										<h4>You may also like:</h4>
+										<?php
+										$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
+										if ( empty( $connected_tours ) ) {
+											$connected_tours = 'travel-style';
+										}
+										global $columns;
+										$columns = 2;
+										lsx_to_related_items( $connected_tours, '', '' , true, 'tour' );
+										?>
+									</div>
 								</div>
 							</div>
 						</div>
