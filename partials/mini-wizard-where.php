@@ -13,6 +13,8 @@
 						'post_type'      => 'destination',
 						'post_parent'    => 0,
 						'posts_per_page' => -1,
+						'orderby' => 'title',
+						'meta_key' => 'featured',
 						'order' => 'ASC',
 						'orderby' => 'title',
 					)
