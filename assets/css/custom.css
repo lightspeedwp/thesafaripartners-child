@@ -5034,7 +5034,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-size:19px!important;
 		line-height:22px;
 		letter-spacing:0.3px;
-		margin-top:-38px;
+		margin-top:-40px;
 		display:inline-block;
 		position:absolute;
 		z-index:99;
@@ -5655,7 +5655,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	position:relative;
 }
 #wizard .step-content .col-sm-2, #wizard .step-content .col-md-2{
-    height: 38px!important;
+    height: 32px!important;
 }
 #wizard .step-content .col-sm-2.destination, #wizard .step-content .col-md-2.destination{height: 28px!important;}
 #wizard .wizard-budget .lsx-to-content{margin-top: -66px;}
