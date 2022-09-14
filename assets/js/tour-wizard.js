@@ -12,10 +12,7 @@ function openCity(evt, cityName) {
 	document.getElementById(cityName).style.display = "block";
 	evt.currentTarget.className += " active";
 
-	console.log(jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ));
 	jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ).addClass('active');
-
-	console.log(jQuery( '#'+cityName ));
 	checkForSliders( jQuery( '#'+cityName ) );
 }
 function openinCity(evt, eventName) {
@@ -34,13 +31,13 @@ function openinCity(evt, eventName) {
 
 function checkForSliders( $next ) {
 	if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
-		console.log('accommodation');
+		console.log($next);
 		var currentID = $next.find( '.tour-accommodation-gallery').attr('data-slider-id');
 
 		$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
 		$next.find( '.tour-accommodation-gallery .slider-content').show();
 
-		$next.find( '.tour-accommodation-gallery .accomodation-slider').slick({
+		$next.find( '.tour-accommodation-gallery .accomodation-slider:not(.slick-initialized )').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: true,
