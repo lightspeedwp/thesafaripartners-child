@@ -47,7 +47,7 @@ get_header(); ?>
 			<div class="clear"></div>
 				</div>
 
-			<div class="post-wrapper col-md-12 <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
+			<div class="post-wrapper facetwp-template col-md-12 <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php
 				while ( have_posts() ) :
 					the_post();
