@@ -4046,6 +4046,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	.mobileonly{display:none!important;}
 	.col-sm-12{padding:0!important;}
 	.lsx-wizard .nav-pills li.active{top:6px;}
+	.single-lsx-to-tour .first-day{background: none;
+		color: #262423;
+		font-size: 22px;
+		border: none;
+		font-family: "moret",serif!important;
+		letter-spacing: -0.2px!important;}
 	.page-id-133119 .wp-block-media-text .wp-block-media-text__content p{margin-left: -45px!important;}
 	.row {padding:0!important; margin:0 !important;}
 	.col-md-3.travelwhen{width:25%!important; float:left!important;}
@@ -6369,7 +6375,7 @@ left: 11px!important;}
 	text-transform:uppercase;
 	font-size:20px;
 	position:absolute;
-	right:0;
+	right:12px;
 	bottom:-5rem;
 }
 .single-lsx-to-tour #singlelink.tablinks:after {
@@ -6495,7 +6501,7 @@ left: 11px!important;}
        .single-lsx-to-tour .mobile-tournav{display:none;}
        .single-lsx-to-tour #Price .lsx-to-tour-content {
 		padding-top:3vh!important;
-		width:690px;
+		width:95%;
 		padding-left:10px!important;
    }
 	.single-lsx-to-tour .outer-container {
