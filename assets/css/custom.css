@@ -4097,6 +4097,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		 width:92%!important;
 		 margin:2% 4%;
 	}
+	#masthead>.container{padding:0!important;}
 	.page-template-template-travel-style #primary{padding-right:0!important;padding-left:0!important;width:100%!important;}
 .page-template-template-travel-style .notfull{width: 94%!important;
     margin: 0 auto;
