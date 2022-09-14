@@ -5903,14 +5903,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display: none;
   }
   .single-lsx-to-tour .lsx-single-contact.mobileonly{display:block!important;}
-
-  .single-lsx-to-tour .lsx-to-tour-content {
-	padding-top: 100px!important;
-	width: 96%!important;
-	margin: 0 auto;
-    padding-left: 5px!important;
-    position: relative;
-  }
   .single-lsx-to-tour .lsx-single-contact {
 	display:none!important;
 	position:relative;
@@ -6049,6 +6041,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 body.custom-background {
     background-color: #ffffff;
 }}
+@media (min-width:768px) and (max-width:900px) {
+.single-lsx-to-tour .lsx-to-tour-content {
+	padding-top: 100px!important;
+	width: 90%!important;
+	margin: 0 auto;
+    padding-left: 5px!important;
+    position: relative;
+  }
+}
+
 @media (min-width:900px) and (max-width:1199px) {
 .lsx-to-slider-inner .slick-arrow.slick-prev {
 	left:-15px;
