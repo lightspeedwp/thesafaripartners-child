@@ -28,6 +28,13 @@ class Setup {
 	protected static $instance = null;
 
 	/**
+	 * Holds a list of the current used image on the site.
+	 *
+	 * @var array
+	 */
+	public $used_images = array();
+
+	/**
 	 * Initialize the plugin by setting localization, filters, and administration functions.
 	 *
 	 * @since 1.0.0
@@ -53,6 +60,8 @@ class Setup {
 
 		//remove the filters we need
 		add_filter( 'lsx_to_disable_map', array( $this, 'disable_map' ), 10, 1 );
+
+		add_filter( 'lsx_get_thumbnail_post_placeholder_id', array( $this, 'accommodation_to_tour_placeholder' ), 10, 2 );
 	}
 
 	/**
@@ -345,5 +354,21 @@ class Setup {
 			$args['tablet']['slidesToScroll'] = 1;
 		}
 		return $args;
+	}
+
+	function accommodation_to_tour_placeholder( $post_thumbnail_id, $post_id ) {
+		if ( 'tour' === get_post_type( $post_id ) ) {
+			$images = array();
+			$accommodation = get_post_meta( $post_id, 'accommodation_to_tour', false );
+			if ( ! empty( $accommodation ) && false !== $accommodation ) {
+				foreach ( $accommodation as $accom ) {
+					$temp_images = get_post_meta( $post_id, 'gallery', false );
+					if ( ! empty( $temp_images ) && false !== $temp_images ) {
+						$images = array_merge( $images, $temp_images );
+					}
+				}
+			}
+		}
+		return $post_thumbnail_id;
 	}
 }

@@ -790,10 +790,6 @@ function checkForSliders( $next ) {
 				navEle += '<span class="first-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
 
-			if (  0 != counter && counter != ( itineraryItems.length - 1 ) ) {
-				navEle += '<span class="current-day ignore-text">' + itineraryItems[counter] + '</span>';
-			}
-
 			if ( counter != ( itineraryItems.length - 1 ) ) {
 				navEle += '<button class="lsx-wizard-button-next ignore-text"><span>' + itineraryItems[nextIndex] + '</span></button>';
 			} else {
