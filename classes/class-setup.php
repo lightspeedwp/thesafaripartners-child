@@ -357,23 +357,29 @@ class Setup {
 	}
 
 	function accommodation_to_tour_placeholder( $post_thumbnail_id, $post_id ) {
-		if ( 'tour' === get_post_type( $post_id ) && isset( $_GET['debug2'] ) ) {
+		if ( 'tour' === get_post_type( $post_id ) ) {
 			$images = array();
 			$accommodation = get_post_meta( $post_id, 'accommodation_to_tour', false );
 			if ( ! empty( $accommodation ) && false !== $accommodation ) {
 				foreach ( $accommodation as $accom ) {
-					$temp_images = get_post_meta( $post_id, 'gallery', false );
+					$temp_images = get_post_meta( $accom, 'gallery', false );
 					if ( ! empty( $temp_images ) && false !== $temp_images ) {
 						$images = array_merge( $images, $temp_images );
 					}
 				}
 
 				if ( ! empty( $images ) ) {
+					// remove the used image from the pool
+					if ( ! empty( $this->used_images ) ) {
+						$images = array_diff( $images, $this->used_images );
+					}
+
 					$length = count( $images );
 					$random = rand( 0, $length - 1 );
 
 					if ( isset( $images[ $random ] ) ) {
 						$post_thumbnail_id = $images[ $random ];
+						$this->used_images = $images[ $random ];
 					}
 				}
 			}
