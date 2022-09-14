@@ -206,8 +206,8 @@ function tsp_facet_relevance( $post_id ) {
 		$taxonomies = array(
 			'who'          => 'fwp_who',
 			'travel-style' => 'fwp_what',
-			'who'          => 'fwp_when',
-			'who'          => 'fwp_budget',
+			'when'          => 'fwp_when',
+			'budget'          => 'fwp_budget',
 		);
 		foreach ( $taxonomies as $taxonomy => $facet ) {
 			if ( isset( $_GET[ $facet ] ) && '' !== $_GET[ $facet ] ) {
