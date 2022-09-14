@@ -1987,7 +1987,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .page-template-template-travel-style #wizard .wizard-who .lsx-to-content {
 	font-family:"moret",serif!important;
-	font-size:18px!important;
+	font-size:19px!important;
 	text-align:center;
 }
 .page-template-template-travel-style #wizard {
@@ -4887,7 +4887,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		font-size:38px!important;
 		padding-top:50px;
    }
-   .lsx-wizard .lsx-to-content{padding: 4px 1px 2px!important;}
+   .lsx-wizard .lsx-to-content{padding: 4px 1px 2px!important;font-family: "moret",serif!important;
+    font-size: 18px!important;}
    .gutenberg-compatible-template.page-has-banner .breadcrumbs-container + #lsx-banner, .using-gutenberg.page-has-banner .breadcrumbs-container + #lsx-banner, .archive.page-has-banner .breadcrumbs-container + #lsx-banner{margin-top:0!important;}
 	.who-posts .lsx-to-widget-thumb img {
 		object-fit:cover;
@@ -5660,7 +5661,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right: 0px!important;
 	}
 .single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
-.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 155vh!important;}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
     width: 90%;
@@ -5926,7 +5927,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right: 0px!important;
 	}
 .single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
-.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
+.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh;}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
     width: 90%;
