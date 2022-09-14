@@ -357,7 +357,7 @@ class Setup {
 	}
 
 	function accommodation_to_tour_placeholder( $post_thumbnail_id, $post_id ) {
-		if ( 'tour' === get_post_type( $post_id ) ) {
+		if ( 'tour' === get_post_type( $post_id ) && isset( $_GET['debug'] ) ) {
 			$images = array();
 			$accommodation = get_post_meta( $post_id, 'accommodation_to_tour', false );
 			if ( ! empty( $accommodation ) && false !== $accommodation ) {
@@ -365,6 +365,15 @@ class Setup {
 					$temp_images = get_post_meta( $post_id, 'gallery', false );
 					if ( ! empty( $temp_images ) && false !== $temp_images ) {
 						$images = array_merge( $images, $temp_images );
+					}
+				}
+
+				if ( ! empty( $images ) ) {
+					$length = count( $images );
+					$random = rand( 0, $length - 1 );
+
+					if ( isset( $images[ $random ] ) ) {
+						$post_thumbnail_id = $images[ $random ];
 					}
 				}
 			}
