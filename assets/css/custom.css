@@ -1249,6 +1249,8 @@ th {
 .single-lsx-to-destination .lsx-wizard-button-next:hover,.page-template-template-wizard .lsx-wizard-button-next:hover {
 	background:#262423!important;
 }
+.lsx-to-meta-data.lsx-to-meta-data-style:before {
+    padding-left: 4px;}
 .lsx-wizard .nav-pills li.active {
 	border-bottom:6px solid #999;
 }
@@ -1256,6 +1258,7 @@ th {
 	margin-top:0px;
 	margin-bottom:10px;
 }
+.search-results .relevance{padding-left: 15px;}
 .lsx-wizard-buttons-wrapper .btn {
 	font-family: "moret",serif!important;
 	padding:0;
@@ -5646,7 +5649,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
   .single-lsx-to-tour .lsx-to-tour-content {
 	padding-top: 100px!important;
-	width: auto!important;
+	width: 96%!important;
     padding-left: 15px!important;
     position: relative;
   }
@@ -5949,7 +5952,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     width: 90%;
     padding: 0 0px;
     position: absolute;
-    top: 47%;
+    top: 46%;
     left: 5%;
     z-index: 99;
 }
