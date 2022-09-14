@@ -856,7 +856,7 @@ th {
 	color:#fff!important;
 	border-radius:0!important;
 }
-.single-lsx-to-tour .lsx-wizard-button-next:hover{background:#fff!important;}
+.single-lsx-to-tour .lsx-wizard-button-next:hover{background:transparent!important;}
 .archive .lsx-wizard-button-next:hover {
 	background:#262423!important;
 }
@@ -4798,6 +4798,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     z-index:-1;
     transform:scale(.9);
     box-shadow: 0px 0px 8px 2px #000000;}
+	.single #Maps .slider-container.lsx-to-widget-items{margin-left:-15px!important;}
 	.lsx-readmore {
 		height: 300px;
 		max-height: 300px;
