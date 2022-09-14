@@ -5905,7 +5905,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
   .single-lsx-to-tour .lsx-to-tour-content {
 	padding-top: 100px!important;
-	width: auto!important;
+	width: 96%!important;
+	margin: 0 auto;
     padding-left: 5px!important;
     position: relative;
   }
@@ -5933,7 +5934,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		right: 0px!important;
 	}
 .single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper{min-height: 146vh!important;}
-.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh;}
+.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper{min-height: 146vh!important}
 .single-lsx-to-tour #Accommodation .lsx-to-tour-content{padding-top: 136px!important;}
 .single-lsx-to-tour .lsx-wizard-buttons-wrapper {
     width: 90%;
