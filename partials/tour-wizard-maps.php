@@ -31,11 +31,11 @@
 									<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
 									<?php lsx_to_tour_single_fast_facts(); ?>
 
-									<h4>Love this trip?</h4>
+									<h4 class="lovetrip">Love this trip?</h4>
 									<button class="btn lsx-cta popup-inquire">MAKE AN INQUIRY</button>
 
 									<div class="related-tours-wrapper">
-										<h4 class="lovetrip">You may also like:</h4>
+										<h4>You may also like:</h4>
 										<?php
 										$connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
 										if ( empty( $connected_tours ) ) {
