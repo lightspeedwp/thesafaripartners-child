@@ -1362,15 +1362,17 @@ th {
 	margin:0 auto;
 }
 .search-results .lsx-slot .tax-title{display:none;}
-.search-results .lsx-slot.tour .tax-title{display:bloack!important;}
-.search-results .relevance{padding-left:26px;}
+.search-results .lsx-slot.tour .tax-title{display:block!important;}
+.search-results .relevance{padding-left: 40px;}
 .search-results .relevance::before {
-	background-image:url('img/safari-shaman.svg');
-	background-size:12px 20px;
-	display:inline-block;
-	width:12px;
-	height:20px;
-	content:"";}
+	background-image: url(img/safari-shaman.svg);
+    background-size: 20px 30px;
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    content: "";
+    position: absolute;
+    margin-left: -26px;}
 .shaman-icon:after {
 	background-image:url('img/safari-shaman.svg');
 	background-size:98px 120px;
