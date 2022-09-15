@@ -488,7 +488,7 @@ class Post_Connections {
         $value = empty( $value ) ? '' : stripslashes( $value[0] );
         $placeholder = $params['facet']['placeholder'] ?? __( 'Enter keywords', 'fwp-front' );
         $placeholder = facetwp_i18n( $placeholder );
-        $output .= '<div class="facetwp-input-wrap mega-search expand-to-left mega-search-closed">';
+        $output .= '<div class="facetwp-input-wrap mega-search expand-to-left mega-search-open">';
         $output .= '<span class="dashicons dashicons-search search-icon"></span>';
 		$output .= '<input type="submit" value="Search">';
         $output .= '<input type="text" class="facetwp-search" value="' . esc_attr( $value ) . '" placeholder="' . esc_attr( $placeholder ) . '" autocomplete="off" />';
