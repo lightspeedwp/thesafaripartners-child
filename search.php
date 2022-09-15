@@ -28,24 +28,16 @@ get_header(); ?>
 			?>
 			<div class="search-header col-md-12">
 			
-			<p>Click above to change your answers and show different results</p>
-			
-			<div class="col-md-6">
-				<h3>The Shaman Says...</h3>
+				<p>Click above to change your answers and show different results</p>
+				
+				<div class="col-md-6">
+					<h3>The Shaman Says...</h3>
+				</div>
+				<div class="col-md-6">
+					<div class="right-align"><?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?> </div>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="col-md-6">
-			<p class="right-align"> <?php
-  				global $wp_query;
- 				 if($wp_query->found_posts < 2) {
-    				$result = "trip";
-  					} else {
-   					 $result = "trips";
-  					}
-   				 echo $wp_query->found_posts . " " . $result . " found.";
-   				 ?> </p>
-				</div>
-			<div class="clear"></div>
-				</div>
 
 			<div class="post-wrapper facetwp-template col-md-12 <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php
