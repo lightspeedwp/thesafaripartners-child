@@ -2976,6 +2976,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	color:#262423!important;
 	text-transform:uppaercase;
 }
+.search-results .entry-layout{display:block!important;}
 .mega-menu-item-custom_html-2,.mega-menu-item-custom_html-3 {
 	padding:0!important;
 }
