@@ -3259,9 +3259,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
-   .search-results .entry-layout{flex-direction: row-reverse!important;}
-   .search-results .entry-layout .entry-image{order:1;}
-   .search-results .entry-layout .entry-layout-content{order:2;}
    .pum .gform_wrapper.gravity-theme .gfield.gfield--width-five-twelfths{margin-left: -32px;
     margin-top: 26px;}
    .page-template-template-travel-style .notfull{width: 1204px!important;
