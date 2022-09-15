@@ -168,6 +168,8 @@ class Frontend {
 
 		// Search functions
 		add_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ), 10, 2 );
+		add_filter( 'facetwp_filtered_post_ids', array( $this, 'sort_serch_results' ) , 10, 2 );
+		add_filter( 'facetwp_query_args', array( $this, 'facetwp_filtered_query_args' ) , 10, 2 );
 
 		// Rest Functions
 		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 2 );
@@ -339,5 +341,41 @@ class Frontend {
 	public function display_email_sharing( $sharing_html = '', $sharing_obj ) {
 		$sharing_html .= '<span class="lsx-sharing-button lsx-sharing-button-email"><a href="#lsx-sharing-email"><span class="fa fa-email" aria-hidden="true"></span></a></span>';
 		return $sharing_html;
+	}
+
+
+	/**
+	 * Sorts the facet search by the relevance score.
+	 *
+	 * @param array $post_ids
+	 * @param obj $class
+	 * @return array
+	 */
+	public function sort_serch_results( $post_ids, $class ) {
+		global $relevance_scores;
+		$relevance_scores = array();
+
+		foreach ( $post_ids as $post_id ) {
+			$relevance_scores[ $post_id ] = tsp_facet_relevance( $post_id );
+		}
+
+		if ( ! empty( $relevance_scores ) ) {
+			arsort( $relevance_scores );
+			$post_ids = array_keys( $relevance_scores );
+		}
+
+		return $post_ids;
+	}
+
+	/**
+	 * Sets the facetWP query args.
+	 *
+	 * @param array $query_args
+	 * @param obj $class
+	 * @return array
+	 */
+	public function facetwp_filtered_query_args( $query_args, $class ) {
+		$query_args['orderby'] = 'post__in';
+		return $query_args;
 	}
 }
