@@ -1361,6 +1361,25 @@ th {
 	width:98px;
 	margin:0 auto;
 }
+.search-results .tax-title {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;}
+	.search-results .tax-title span {
+		visibility: visible;
+		position: absolute;
+		z-index: 9999;
+		top: 7px;
+		width: 120px;
+		left: 87%;
+		text-align: center;
+		background-color: #ce9e57;
+		color: #262423;
+		font-family: "moret",serif!important;
+		letter-spacing: -0.2px!important;
+		line-height: 40px;
+		font-size: 18px;
+	}
 .search-results .lsx-slot .tax-title{display:none;}
 .search-results .lsx-slot.tour .tax-title{display:block!important;}
 .search-results .relevance{padding-left: 40px;}
