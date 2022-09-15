@@ -105,6 +105,13 @@
 												}
 											}
 											?>
+											<span class="<?php $terms = get_the_terms( $post->ID, 'tour-type' );
+
+											foreach ( $terms as $term ) {
+												echo $term->name;
+											};?>">
+											<p class="tailored-msg">Dates reflect seasonality, please enquire for spesific availability.</p>
+										</span>
 										</div>
 
 										<?php
