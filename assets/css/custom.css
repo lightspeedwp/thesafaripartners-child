@@ -2163,6 +2163,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	top:0;
 	z-index:999;
 }
+.tailor-made-tour, .tailored-tour{display:block!important;}
+.scheduled-tour{display:none;}
+
 .archive .wrap.container {
 	width:100%!important;
 	margin:0 auto;
