@@ -1680,10 +1680,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .search-results .moretag,.search-results .entry-meta {
 	display:none;
 }
-.search-results .lsx-slot .entry-layout>.entry-image {
-	height:380px!important;
-	flex-basis:51%!important;
-}
 .wizard-who img {
     overflow: hidden;
     width: 100%!important;
@@ -3261,10 +3257,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 .search-results .entry-image{display: contents;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;}
+    align-items: center;}
 	.search-results .entry-image img{object-fit: cover;
-    height: 400px!important;}
+    height: 380px!important;}
+	.search-results .lsx-slot .entry-layout {
+		padding-bottom:10px;}
    .pum .gform_wrapper.gravity-theme .gfield.gfield--width-five-twelfths{margin-left: -32px;
     margin-top: 26px;}
    .page-template-template-travel-style .notfull{width: 1204px!important;
