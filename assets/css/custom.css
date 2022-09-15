@@ -4202,6 +4202,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		align-items: center;}
 		.search-results .entry-image img{object-fit: cover;
 		height: 300px!important;}
+		.search-header .col-md-6{width:50%; float:left;}
 		.search-results .lsx-slot .entry-layout {
 			padding-bottom:10px;}
 			.search-results .tax-title span{ left: 75%!important;}
