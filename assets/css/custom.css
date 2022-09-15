@@ -2161,6 +2161,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	background:white;
 	position:sticky;
 	top:0;
+	z-index:999;
 }
 .archive .wrap.container {
 	width:100%!important;
