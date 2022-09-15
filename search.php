@@ -34,11 +34,7 @@ get_header(); ?>
 				<h3>The Shaman Says...</h3>
 			</div>
 			<div class="col-md-6">
-			<div class="right-align"> <?php
-  				global $wp_query;
-				$trips_found = do_shortcode('[facetwp counts="true"]' );
-   				echo  "Results " . $trips_found;
-   				?> </div>
+			<div class="right-align"> <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?> </div>
 				</div>
 			<div class="clear"></div>
 				</div>
