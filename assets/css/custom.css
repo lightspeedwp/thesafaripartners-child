@@ -3255,6 +3255,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .search-results .lsx-slot .entry-layout>.entry-image {
+	flex-basis:51%!important;
+}
 .search-results .entry-image{display: contents;
     justify-content: center;
     align-items: center;}
