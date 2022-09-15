@@ -4132,9 +4132,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 			width: 98px;
 			margin: 0 auto;
 		}
-		.search-results .entry-layout{flex-direction: row-reverse!important;}
-   .search-results .entry-layout .entry-image{order:1;}
-   .search-results .entry-layout .entry-layout-content{order:2;}
 	#mega-menu-wrap-max_mega_menu_1{display:none;}
 	#mega-menu-wrap-primary #mega-menu-primary{padding:0!important;}
 	.mobileonly{display:none!important;}
