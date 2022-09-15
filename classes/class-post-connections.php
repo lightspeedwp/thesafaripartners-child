@@ -199,6 +199,11 @@ class Post_Connections {
 		if ( in_array( $params['facet']['source'], $possible_taxonomies ) ) {
 			$output = $this->taxonomy_facet_render( $params );
 		}
+
+		if ( 'search' === $params['facet']['type'] ) {
+			$output = $this->search_facet_render( $params );
+		}
+		
 		return $output;
 	}
 
@@ -473,6 +478,29 @@ class Post_Connections {
 				$output = lsx_to_get_term_thumbnail( $term_id,'thumbnail' );
 			}
 		}
+		return $output;
+	}
+
+
+	public function search_facet_render( $params ) {
+		$facet = $params['facet'];
+
+		$output          = '';
+		$values          = (array) $params['values'];
+		$selected_values = (array) $params['selected_values'];
+		$soft_limit      = empty( $facet['soft_limit'] ) ? 0 : (int) $facet['soft_limit'];
+		$options         = array();
+
+		$this->set_current_terms( $params['facet']['source'] );
+
+		foreach ( $values as $key => $facet ) {
+			$options[] = $this->format_taxonomy_facet( $key, $facet, $selected_values, '' );
+		}
+		
+		if ( ! empty( $options ) ) {
+			$output = implode( '', $options );
+		}
+
 		return $output;
 	}
 }
