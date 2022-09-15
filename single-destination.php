@@ -22,16 +22,12 @@ get_header(); ?>
 			while ( have_posts() ) :
 				the_post();
 				?>
-
-				<section class="lsx-to-section-new <?php lsx_to_collapsible_class( 'destination', false ); ?>">
-					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-summary' ); ?>><?php esc_html_e( 'Summary', 'tour-operator' ); ?></h2>
-
 					
 							<div class="content-area col-sm-12 col-sm-12">
 								<?php lsx_to_content( 'content', 'destination' ); ?>
 							</div>
 						
-				</section>
+		
 
 			<?php endwhile; ?>
 
