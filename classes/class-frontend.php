@@ -382,14 +382,8 @@ class Frontend {
 
 	public function search_header_html( $html ) {
 		if ( is_search() ) {
-
-			
 			$html = '<div class="mega-search-wrap">';
-			$html .= '<div class="facetwp-facet facetwp-facet-search facetwp-type-search mega-search expand-to-left mega-search-closed" data-name="search" data-type="search" siq_id="autopick_1577">';
-			$html .= '<span class="dashicons dashicons-search search-icon"></span>';
-			$html .= '<input type="submit" value="Search">';
-			$html .= '<input class="facetwp-search" type="text" aria-label="Search..." data-placeholder="Search..." placeholder="Search...">';
-			$html .= '</div>';
+			$html .= do_shortcode( '[facetwp facet="search"]' );
 			$html .= '</div>';
 		} else {
 			$html = '<div class="mega-search-wrap">';

@@ -483,23 +483,16 @@ class Post_Connections {
 
 
 	public function search_facet_render( $params ) {
-		$facet = $params['facet'];
-
-		$output          = '';
-		$values          = (array) $params['values'];
-		$selected_values = (array) $params['selected_values'];
-		$soft_limit      = empty( $facet['soft_limit'] ) ? 0 : (int) $facet['soft_limit'];
-		$options         = array();
-
-		$this->set_current_terms( $params['facet']['source'] );
-
-		foreach ( $values as $key => $facet ) {
-			$options[] = $this->format_taxonomy_facet( $key, $facet, $selected_values, '' );
-		}
-		
-		if ( ! empty( $options ) ) {
-			$output = implode( '', $options );
-		}
+		$output = '';
+        $value = (array) $params['selected_values'];
+        $value = empty( $value ) ? '' : stripslashes( $value[0] );
+        $placeholder = $params['facet']['placeholder'] ?? __( 'Enter keywords', 'fwp-front' );
+        $placeholder = facetwp_i18n( $placeholder );
+        $output .= '<div class="facetwp-input-wrap mega-search expand-to-left mega-search-closed">';
+        $output .= '<span class="dashicons dashicons-search search-icon"></span>';
+		$output .= '<input type="submit" value="Search">';
+        $output .= '<input type="text" class="facetwp-search" value="' . esc_attr( $value ) . '" placeholder="' . esc_attr( $placeholder ) . '" autocomplete="off" />';
+        $output .= '</div>';
 
 		return $output;
 	}
