@@ -60,7 +60,7 @@ class Core {
 	/**
 	 * Holds the FaceWP instances
 	 *
-	 * @var object tsp_child\classes\facetwp\Post_Connections();
+	 * @var object tsp_child\classes\facetwp;
 	 */
 	public $facetwp;
 
@@ -81,9 +81,12 @@ class Core {
 		require_once get_stylesheet_directory() . '/classes/class-frontend.php';
 		$this->frontend = Frontend::get_instance();
 
-		require_once get_stylesheet_directory() . '/classes/class-post-connections.php';
 		$this->facetwp = new stdClass();
+		require_once get_stylesheet_directory() . '/classes/class-post-connections.php';
 		$this->facetwp->post_connections = \tsp_child\classes\facetwp\Post_Connections::get_instance();
+
+		require_once get_stylesheet_directory() . '/classes/class-hierarchy.php';
+		$this->facetwp->hierarchy = \tsp_child\classes\facetwp\Hierarchy::get_instance();
 
 		require_once get_stylesheet_directory() . '/classes/class-dates-prices-admin.php';
 		$this->dates_prices = Dates_Prices_Admin::get_instance();

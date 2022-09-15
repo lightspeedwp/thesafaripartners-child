@@ -199,6 +199,11 @@ class Post_Connections {
 		if ( in_array( $params['facet']['source'], $possible_taxonomies ) ) {
 			$output = $this->taxonomy_facet_render( $params );
 		}
+
+		if ( 'search' === $params['facet']['type'] ) {
+			$output = $this->search_facet_render( $params );
+		}
+		
 		return $output;
 	}
 
@@ -473,6 +478,22 @@ class Post_Connections {
 				$output = lsx_to_get_term_thumbnail( $term_id,'thumbnail' );
 			}
 		}
+		return $output;
+	}
+
+
+	public function search_facet_render( $params ) {
+		$output = '';
+        $value = (array) $params['selected_values'];
+        $value = empty( $value ) ? '' : stripslashes( $value[0] );
+        $placeholder = $params['facet']['placeholder'] ?? __( 'Enter keywords', 'fwp-front' );
+        $placeholder = facetwp_i18n( $placeholder );
+        $output .= '<div class="facetwp-input-wrap mega-search expand-to-left mega-search-open">';
+        $output .= '<span class="dashicons dashicons-search search-icon"></span>';
+		$output .= '<input type="submit" value="Search">';
+        $output .= '<input type="text" class="facetwp-search" value="' . esc_attr( $value ) . '" placeholder="' . esc_attr( $placeholder ) . '" autocomplete="off" />';
+        $output .= '</div>';
+
 		return $output;
 	}
 }

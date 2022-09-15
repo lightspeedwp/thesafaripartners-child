@@ -170,6 +170,7 @@ class Frontend {
 		add_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ), 10, 2 );
 		add_filter( 'facetwp_filtered_post_ids', array( $this, 'sort_serch_results' ) , 10, 2 );
 		add_filter( 'facetwp_query_args', array( $this, 'facetwp_filtered_query_args' ) , 10, 2 );
+		add_filter( 'megamenu_search_replacement_html', array( $this, 'search_header_html' ), 10, 1 );
 
 		// Rest Functions
 		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 2 );
@@ -377,5 +378,23 @@ class Frontend {
 	public function facetwp_filtered_query_args( $query_args, $class ) {
 		$query_args['orderby'] = 'post__in';
 		return $query_args;
+	}
+
+	public function search_header_html( $html ) {
+		if ( is_search() ) {
+			$html = '<div class="mega-search-wrap">';
+			$html .= do_shortcode( '[facetwp facet="search"]' );
+			$html .= '</div>';
+		} else {
+			$html = '<div class="mega-search-wrap">';
+			$html .= '<form class="mega-search expand-to-left mega-search-closed" role="search" action="' . home_url() . '" siq_id="autopick_1577">';
+			$html .= '<span class="dashicons dashicons-search search-icon"></span>';
+			$html .= '<input type="submit" value="Search">';
+			$html .= '<input type="hidden" name="s" value="">';
+			$html .= '<input type="text" aria-label="Search..." data-placeholder="Search..." placeholder="Search..." name="fwp_search">';
+			$html .= '</form>';
+			$html .= '</div>';
+		}
+		return $html;
 	}
 }
