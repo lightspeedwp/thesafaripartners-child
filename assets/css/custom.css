@@ -69,7 +69,8 @@ th,tr,td,table,legend,label {
 }
 .dropdown-content2 a{font-family:"moret",serif!important;}
 .gform_required_legend{display:none;}
-
+.single .lsx-hero-banner-block{background-color: #fff!important;}
+.lsx-hero-banner-init .lsx-hero-banner-block.wp-block-cover .wp-block-cover__inner-container{text-align: center!important;;}
 .btn,button {
 	font-family:"moret",serif!important;
 	letter-spacing:-0.2px!important;
