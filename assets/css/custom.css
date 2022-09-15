@@ -3260,7 +3260,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
-   .search-results .entry-layout .entry-image{display:block!important;float:left;width:52%;}
+   .search-results .entry-layout .entry-image{display:inline!important;float:left;width:52%;}
+   .search-results .entry-layout .entry-image .thumbnail{display:none;}
 
    .pum .gform_wrapper.gravity-theme .gfield.gfield--width-five-twelfths{margin-left: -32px;
     margin-top: 26px;}
