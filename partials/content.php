@@ -52,20 +52,6 @@
 	<?php lsx_entry_top(); ?>
 
 	<div class="entry-layout">
-	<div class="entry-image hidden-xs">
-		<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
-
-echo "<span>" . the_date();
-
-foreach ( $terms as $term ) {
-	echo $term->name;
-}
-
-echo "</span>";?></span><span>
-			<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
-				<?php lsx_thumbnail( 'medium_large' ); ?>
-			</a>
-		</div>
 		<div class="entry-layout-content entry-layout-content-<?php if ( $has_thumb ) { echo '67'; } else { echo '100'; } ?>">
 			<header class="entry-header">
 				<?php if ( $has_thumb ) : ?>
@@ -233,7 +219,20 @@ echo "</span>";?></span><span>
 			<?php } ?>
 		</div>
 
-		
+		<div class="entry-image hidden-xs">
+		<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
+
+echo "<span>" . the_date();
+
+foreach ( $terms as $term ) {
+	echo $term->name;
+}
+
+echo "</span>";?></span><span>
+			<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
+				<?php lsx_thumbnail( 'medium_large' ); ?>
+			</a>
+		</div>
 	</div>
 
 	<?php lsx_entry_bottom(); ?>
