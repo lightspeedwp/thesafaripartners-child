@@ -4175,6 +4175,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		height: 300px!important;}
 		.search-results .lsx-slot .entry-layout {
 			padding-bottom:10px;}
+			.search-results .tax-title span{ left: 75%!important;}
+			.search-results .lsx-slot .entry-layout-content{margin:15px 0!important;padding: 0 15px!important;}
 	.lsx-body-grid-layout.search-results .post-wrapper .lsx-slot{ width:50%!important;float: left;}
 	.lsx-body-grid-layout.search-results .post-wrapper .lsx-slot .entry-layout{display: flex;flex-direction: column!important;}
 	.lsx-body-grid-layout.search-results .lsx-slot .entry-layout .entry-image{order: 1!important;width:100%;}
