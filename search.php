@@ -56,7 +56,9 @@ get_header(); ?>
 				?>
 			</div>
 
-			<?php lsx_paging_nav(); ?>
+			<div class="lsx-pagination">
+				<?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
+			</div>
 
 		<?php else : ?>
 

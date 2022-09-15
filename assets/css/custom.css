@@ -2115,6 +2115,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	max-height:300px;
 	overflow-y:scroll;
 	margin-bottom:24px;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 }
 #dates-prices .btn {
 	background-color:#a55244!important;
@@ -2124,6 +2126,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	box-shadow:none;
 	padding:0px 8px!important;
 }
+#dates-prices::-webkit-scrollbar {
+	display: none;
+}
+
 .table-striped>tbody>tr:nth-of-type(odd) {
 	background-color:#f2edea!important;
 }
