@@ -92,7 +92,7 @@
 																		foreach( $column_titles as $column_index ) {
 																			echo '<th>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
 																		}
-																		echo '<th></th>';
+																		echo '<th class="whitebg">Book Now</th>';
 																		?>
 																	</tr>
 																</thead>
@@ -105,6 +105,13 @@
 												}
 											}
 											?>
+											<span class="<?php $terms = get_the_terms( $post->ID, 'tour-type' );
+
+											foreach ( $terms as $term ) {
+												echo $term->name;
+											};?>">
+											<p class="tailored-msg">Dates reflect seasonality, please enquire for spesific availability.</p>
+										</span>
 										</div>
 
 										<?php
