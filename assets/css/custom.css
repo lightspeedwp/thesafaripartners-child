@@ -3259,6 +3259,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+.search-results .entry-image{display: contents;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;}
+	.search-results .entry-image img{object-fit: cover;
+    height: 400px!important;}
    .pum .gform_wrapper.gravity-theme .gfield.gfield--width-five-twelfths{margin-left: -32px;
     margin-top: 26px;}
    .page-template-template-travel-style .notfull{width: 1204px!important;
