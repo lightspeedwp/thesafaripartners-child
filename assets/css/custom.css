@@ -1361,6 +1361,8 @@ th {
 	width:98px;
 	margin:0 auto;
 }
+.search-results .lsx-slot .tax-title{display:none;}
+.search-results .lsx-slot.tour .tax-title{display:bloack!important;}
 .search-results .relevance{padding-left:26px;}
 .search-results .relevance::before {
 	background-image:url('img/safari-shaman.svg');

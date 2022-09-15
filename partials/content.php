@@ -220,6 +220,15 @@
 		</div>
 
 		<div class="entry-image hidden-xs">
+		<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
+
+echo "<span>" . the_date();
+
+foreach ( $terms as $term ) {
+	echo $term->name;
+}
+
+echo "</span>";?></span><span>
 			<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
 				<?php lsx_thumbnail( 'medium_large' ); ?>
 			</a>
