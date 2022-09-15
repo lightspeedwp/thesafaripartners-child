@@ -2941,6 +2941,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin:-3px -6px 0px 0!important;
 	height:17px;
 }
+.search-results .lsx-pagination-wrapper{position:inherit!important;}
+.search-header .right-align{margin: -3px 7px 0px 0!important;}
 .wizardstart {
 	position:absolute!important;
 	width:604px!important;
