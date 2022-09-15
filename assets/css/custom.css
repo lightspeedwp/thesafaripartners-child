@@ -1361,6 +1361,14 @@ th {
 	width:98px;
 	margin:0 auto;
 }
+.search-results .relevance{padding-left:26px;}
+.search-results .relevance::before {
+	background-image:url('img/safari-shaman.svg');
+	background-size:12px 20px;
+	display:inline-block;
+	width:12px;
+	height:20px;
+	content:"";}
 .shaman-icon:after {
 	background-image:url('img/safari-shaman.svg');
 	background-size:98px 120px;
