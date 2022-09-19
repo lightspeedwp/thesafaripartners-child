@@ -3285,6 +3285,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
+   .mini-wizard-results::before {
+	content: 'A selection of our tours:';
+	font-size: 26px;
+	width:100%; margin-bottom:20px;
+  }
    .parent-pageid-1454 .lsx-contact-module {
     min-height: 500px;
     height: 90vh;
