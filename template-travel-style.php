@@ -59,6 +59,7 @@ get_header(); ?>
 					'facetwp' => true,
 					'posts_per_page' => -1,
 				);
+				echo "<h2>A selection of our tours:</h2>";
 				tsp_mini_wizard_results( $query_args, $args ); ?>
 
 			<?php lsx_content_bottom(); ?>
