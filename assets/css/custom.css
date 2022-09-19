@@ -3291,6 +3291,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-family:"moret",serif;
 	width:100%;
   }
+  .single-lsx-to-destination #wizard{padding-right: 12px;}
+  .single-lsx-to-destination .tsp-seperator {
+    padding: 0px;
+    height: 2px;
+    border-bottom: 1px solid #262423;
+    width: 100%;
+    padding:0 13px!important;
+    margin: 0 auto;}
    .parent-pageid-1454 .lsx-contact-module {
     min-height: 500px;
     height: 90vh;
