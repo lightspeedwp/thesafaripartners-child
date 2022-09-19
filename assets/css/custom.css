@@ -3176,7 +3176,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		display: none;}
 		.lsx-testimonials-slider .lsx-to-slider-inner{margin:0!important;}	
 		.lsx-to-slider-inner .lsx-review{border:none!important;}
-		.lsx-to-slider-inner .lsx-review h4{
+		.lsx-to-slider-inner .lsx-review h4{display:none;
 			position: absolute;
 			bottom: -40px;
 			left: 0;
@@ -5737,7 +5737,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	#mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-132848{display:none!important;}		
 	.mobilepad{padding:0 15px;}
 	.home .popup-inquire{margin:0 20%;}
-	.lsx-to-slider-inner .lsx-review h4{text-align: center!important;}
+	.lsx-to-slider-inner .lsx-review h4{display:none;text-align: center!important;}
 	#footer-widgets blockquote {
 		font-size: 15px!important;
 		text-align: center!important;
@@ -6011,7 +6011,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		
 	.mobilepad{padding:0 15px;}
 	.home .popup-inquire{margin:0 20%;}
-	.lsx-to-slider-inner .lsx-review h4{text-align: center!important;}
+	.lsx-to-slider-inner .lsx-review h4{display:none;text-align: center!important;}
 	#footer-widgets blockquote {
 		font-size: 15px!important;
 		text-align: center!important;
