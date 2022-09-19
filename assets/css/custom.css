@@ -393,7 +393,6 @@ legend {
 }
 .safari-styles .lsx-to-widget-thumb img {
 	overflow:hidden;
-	height:auto;
 	object-fit:cover;
 }
 .safari-styles .lsx-to-widget-item-wrap a.moretag,.toptours-posts .lsx-to-widget-item-wrap a.moretag:visited {
