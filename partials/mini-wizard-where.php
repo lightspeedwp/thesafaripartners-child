@@ -36,7 +36,7 @@
 								<input class="btn-check" <?php echo esc_attr( $checked ); ?> type="checkbox" value="<?php echo get_the_ID(); ?>" name="fwp_where" />
 								<span aria-hidden="true"></span>
 							</div>
-							<?php lsx_thumbnail( 'medium' ); ?>
+							<?php lsx_thumbnail( 'large' ); ?>
 						</div>
 
 						<div class="lsx-to-content">

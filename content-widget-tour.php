@@ -29,7 +29,7 @@ if ( $has_single ) {
 			if ( false !== $has_single ) {
 				?>
 <a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
-				<?php lsx_thumbnail( 'lsx-thumbnail-wide' ); ?>
+				<?php lsx_thumbnail( 'large' ); ?>
 			<?php
 			if ( false !== $has_single ) {
 				?>
