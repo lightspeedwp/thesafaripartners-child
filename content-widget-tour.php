@@ -38,7 +38,7 @@ if ( $has_single ) {
 	<?php } ?>
 
 	<div class="lsx-to-widget-content">
-
+				<div class="tourheight">
 		<?php lsx_widget_entry_content_top(); ?>
 
 		<h4 class="lsx-to-widget-title text-center">
@@ -69,6 +69,7 @@ if ( $has_single ) {
 
 			echo wp_kses_post( $excerpt );
 		?>
+		</div>
 			<div class="lsx-to-widget-meta-data">
 				<?php
 				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
