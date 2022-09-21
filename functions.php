@@ -69,8 +69,8 @@ add_filter( 'wpseo_sitemap_exclude_post_type', 'your_prefix_exclude_cpt_from_sit
 
 function your_prefix_exclude_cpt_from_sitemap( $value, $post_type ) {
     $post_types_to_exclude = [
-        'popups',
-        'accommodation'
+        'accommodation',
+        'special'
     ];
     
     if ( in_array($post_type, $post_types_to_exclude) ) {
