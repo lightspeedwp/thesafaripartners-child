@@ -14,7 +14,7 @@
 						'post_parent'    => 0,
 						'posts_per_page' => -1,
 						'order' => 'ASC',
-						'orderby' => 'title',
+						'orderby'=>'menu_order',
 						'meta_key' => 'featured',
 						'meta_value' => 1,
 					)
