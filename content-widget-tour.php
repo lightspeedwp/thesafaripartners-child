@@ -71,6 +71,7 @@ if ( $has_single ) {
 		?>
 		</div>
 			<div class="lsx-to-widget-meta-data">
+				<div class="tourmeta-height">
 				<?php
 				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
@@ -83,6 +84,7 @@ if ( $has_single ) {
 					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
 				}
 				?>
+				</div>
 				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
 			</div>
 
