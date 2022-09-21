@@ -2183,7 +2183,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	background-color:#f2edea!important;
 }
 .table>thead>tr>th,.table>thead>tr>td,.table>tbody>tr>th,.table>tbody>tr>td,.table>tfoot>tr>th,.table>tfoot>tr>td {
-	padding:6px;
+	padding:7px;
 }
 .table>thead>tr {
 	background:white;
