@@ -746,13 +746,13 @@ element.style {
 	display:inline-block;
 }
 .dropdown-content {
-	background-color:#f1f1f1;
+	background-color:#ce9e57;
 	display: none;
 	width: 200px;
 	text-align: center;
-	padding: 5px 0;
+	padding: 8px;
 	border-radius: 6px;
-	bottom: 110%;
+	bottom: 80%;
 	left: 50%;
 	margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
 	/* Position the tooltip text - see examples below! */
@@ -770,7 +770,7 @@ element.style {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: #f1f1f1 transparent transparent transparent;
+	border-color: #ce9e57 transparent transparent transparent;
 }
 .dropdown-share:hover .dropdown-content {
 	display:block;
