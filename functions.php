@@ -65,20 +65,9 @@ if ( post_type_exists( 'tour' ) && is_singular( 'destination' ) ) {
 }
 }
 
-add_filter( 'wpseo_sitemap_exclude_post_type', 'your_prefix_exclude_cpt_from_sitemap', 10, 2 );
-
-function your_prefix_exclude_cpt_from_sitemap( $value, $post_type ) {
-    $post_types_to_exclude = [
-        'accommodation',
-        'special'
-    ];
-    
-    if ( in_array($post_type, $post_types_to_exclude) ) {
-        return true;
-    }
-}
-
-add_filter( 'wp_sitemaps_post_types', 'remove_post_type_from_wp_sitemap' );
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function () {
+	return array( 138455, 133252 );
+  } );
 
 add_filter('body_class','alter_search_classes');
 function alter_search_classes($classes) {
