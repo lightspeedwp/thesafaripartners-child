@@ -2663,6 +2663,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .tours-nav .btn.popup-inquire {
 	background:#a55244!important;color:#fff!important;
+	border-right: 1px solid #a55244!important;
+    border-left: 1px solid #a55244!important;
+    border-top: 2px solid #a55244!important;
+    border-bottom: 2px solid #a55244!important;
 }
 .single-lsx-to-tour h2 {
 	font-size:40px!important;
