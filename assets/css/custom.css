@@ -2614,8 +2614,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	bottom:0;
 	left:15px;
 	width:100%;
-	border-right:1px solid #ce9e57;
-	border-left:1px solid #ce9e57;
 }
 .single-lsx-to-tour .tours-nav .col-md-4 {
 	padding:0!important;
@@ -2623,7 +2621,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .tours-nav .btn {
 	background:#fff;
 	color:#262423;
-	border-right:1px solid #ce9e57;
+	border-right:2px solid #ce9e57;
 	border-left:1px solid #ce9e57;
 	border-top:2px solid #ce9e57;
 	border-bottom:2px solid #ce9e57;
@@ -2663,7 +2661,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .tours-nav .btn.popup-inquire {
 	background:#a55244!important;color:#fff!important;
-	border-right: 1px solid #a55244!important;
+	border-right: 2px solid #a55244!important;
     border-left: 1px solid #a55244!important;
     border-top: 2px solid #a55244!important;
     border-bottom: 2px solid #a55244!important;
@@ -6589,8 +6587,6 @@ left: 11px!important;}
 	bottom:0;
 	left:15px;
 	width:100%;
-	border-right:1px solid #ce9e57;
-	border-left:1px solid #ce9e57;
 }
 .single-lsx-to-tour .tours-nav .col-md-4 {
 	padding:0!important;
@@ -6598,7 +6594,7 @@ left: 11px!important;}
 .tours-nav .btn {
 	background:#fff;
 	color:#262423;
-	border-right:1px solid #ce9e57;
+	border-right:2px solid #ce9e57;
 	border-left:1px solid #ce9e57;
 	border-top:2px solid #ce9e57;
 	border-bottom:2px solid #ce9e57;
