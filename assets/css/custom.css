@@ -58,7 +58,7 @@ body,p,ul,li,em {
 	.pum-theme-lightbox .gform_wrapper textarea{border:0!important;}
 .lsx-to-widget-meta-data span, .lsx-to-widget-meta-data span a {
 	font-family:"moret",serif!important;
-	font-size:16px!important;
+	font-size:16px!important;line-height:18px;
 	color:#6a6d5b!important;
 	letter-spacing:-0.2px!important;
 	text-transform: capitalize;
@@ -70,8 +70,8 @@ th,tr,td,table,legend,label {
 .single-post article.post .lsx-hero-banner-block .post-meta{color:#262423!important;}
 .lsx-hero-banner-block .lsx-title-block h1 {
    color:#262423!important;}
-   .tourheight{min-height:182px;}
-   .tourmeta-height{min-height:42px;}
+   .tourheight{min-height:202px;}
+   .tourmeta-height{min-height:66px;}
 .lsx-hero-banner-init .lsx-hero-banner-block.wp-block-cover .wp-block-cover__inner-container{padding:0!important;margin:0!important;}
 .dropdown-content2 a{font-family:"moret",serif!important;}
 .gform_required_legend{display:none;}
