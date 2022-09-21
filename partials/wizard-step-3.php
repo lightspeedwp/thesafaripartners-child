@@ -15,8 +15,6 @@
 						'posts_per_page' => -1,
 						'order' => 'ASC',
 						'orderby'=>'menu_order',
-						'meta_key' => 'featured',
-						'meta_value' => 1,
 					)
 				);
 
