@@ -13,6 +13,12 @@ function openCity(evt, cityName) {
 	evt.currentTarget.className += " active";
 
 	jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ).addClass('active');
+
+	if ( 'Maps' === cityName ) {
+		console.log(cityName);
+		jQuery(".lsx-map-placeholder").click();
+	}
+
 	checkForSliders( jQuery( '#'+cityName ) );
 }
 function openinCity(evt, eventName) {
@@ -950,10 +956,6 @@ function checkForSliders( $next ) {
 
 		$("#wizard").lsxWizard();
 		$("#wizard2").lsxWizard();
-
-		$("#page-5").on('click',function(){
-			$(".lsx-map-placeholder").click();
-		});
 
 		setReadMoreDescriptions();
 		populatePrefferedDatesField();
