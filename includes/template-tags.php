@@ -36,18 +36,18 @@ function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
 	$panels = explode( ',', $args['panels'] );
 
 	$panel_args = array();
-	if ( isset( $arg['selected'] ) ) {
-		$panel_args = array( $arg['selected'] );
+	if ( isset( $args['selected'] ) ) {
+		$panel_args = array( $args['selected'] );
 	}
-	if ( isset( $arg['title'] ) ) {
-		$panel_args = array( $arg['title'] );
+	if ( isset( $args['title'] ) ) {
+		$panel_args = array( $args['title'] );
 	}
-	if ( isset( $arg['tagline'] ) ) {
-		$panel_args = array( $arg['tagline'] );
+	if ( isset( $args['tagline'] ) ) {
+		$panel_args = array( $args['tagline'] );
 	}
 
 	ob_start();
-	tsp_mini_wizard( $panels, $args = array() );
+	tsp_mini_wizard( $panels, $args );
 	tsp_mini_wizard_results( $args, $panel_args );
 
 	$return = ob_get_clean();
