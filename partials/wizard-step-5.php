@@ -14,8 +14,6 @@
 				<?php foreach ( $terms as $term ) : 
 					
 					$value = apply_filters( 'the_title', $term->slug );
-					'orderby'=>'title',
-						'order' => 'DESC',
 					?>
 					<!-- post -->
 					<article class="col-md-2 status-publish hentry">
