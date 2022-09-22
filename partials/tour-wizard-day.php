@@ -17,7 +17,8 @@
 							<div id="wizard" class="lsx-wizard" style="display: none;">
 								<?php
 								if ( lsx_to_has_itinerary() ) {
-									$itinerary_count = 1;
+									$itinerary_count   = 1;
+									$total_itineraries = lsx_to_itinerary_count( false );
 									?>
 									<div id="itinerary" class="<?php lsx_to_collapsible_class( 'tour', false ); ?>">
 										<div id="collapse-itinerary" class="collapse in">
@@ -53,13 +54,13 @@
 																					<div class="lsx-to-archive-meta-data">
 																					<?php
 																					$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
-
-																					$itin_title = lsx_to_itinerary_title( false );
-																					if ( '' === $itin_title ) {
-																						$itin_title = 'Departure Day';
+																					if ( $total_itineraries === $itinerary_count ) {
+																						echo '<span class="heading-destinations">Departure Day</span><br/>';
+																					} else {
+																						echo strip_tags( lsx_to_itinerary_destinations( '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' - ' , '</span><br/>', false ), array( 'span', 'br' ) );
 																					}
 
-																					echo strip_tags( lsx_to_itinerary_destinations( '<span class="heading-destinations">' . $itin_title . ' - ' , '</span><br/>', false ), array( 'span', 'br' ) );
+																					
 																					echo strip_tags( lsx_to_itinerary_accommodation( '<span class="' . $meta_class . 'accommodations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>', false ), array( 'span', 'br' ) );
 																					echo strip_tags( lsx_to_itinerary_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>', false ), array( 'span', 'br' ) );
 																					lsx_to_itinerary_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
@@ -72,8 +73,6 @@
 																					</div>
 																					<button id="singlelink" class="tablinks" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
 																				</div>
-
-																				
 																			</div>
 																		</div>
 																	</div>
