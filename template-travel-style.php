@@ -44,6 +44,7 @@ get_header(); ?>
 				$args = array(
 					'title'    => get_post_meta( get_the_ID(), 'shaman_title', true ),
 					'tagline'  => get_post_meta( get_the_ID(), 'shaman_tagline', true ),
+					'selected' => array( get_queried_object_id() ),
 				);
 
 				// Call the intro
