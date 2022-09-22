@@ -70,7 +70,7 @@
 														}
 														$rc_num++;
 
-													} while ( 7 > $rc_num );
+													} while ( 8 > $rc_num );
 
 													$column_titles              = array_keys( $rc_data );
 
