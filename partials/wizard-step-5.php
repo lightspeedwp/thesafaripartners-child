@@ -8,7 +8,13 @@
 			</div>
 			<div class="col-md-9">
 				<?php
-				$terms = get_terms( 'budget', array( 'hide_empty' => 0 ) );
+				$args = array(
+					'meta_key' => 'inspire_order',
+					'orderby' => 'meta_key',
+					'order' => 'ASC',
+					'hide_empty' => 0,
+				);
+				$terms = get_terms( 'budget', $args );
 				?>
 <article class="col-md-2 status-publish hentry"></article>
 				<?php foreach ( $terms as $term ) : 
