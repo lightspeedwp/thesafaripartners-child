@@ -214,7 +214,7 @@ class Frontend {
 		// Google Fonts. Add these lines if your website will use a different font.
 		// wp_enqueue_style( 'thesafaripartners-child-quattrocento-sans', 'https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i' );
 
-		wp_enqueue_script( 'thesafaripartners-child-scripts', get_stylesheet_directory_uri() . '/assets/js/' . $prefix . 'custom' . $suffix . '.js', array( 'jquery' ) );
+		wp_enqueue_script( 'thesafaripartners-child-scripts', get_stylesheet_directory_uri() . '/assets/js/' . $prefix . 'custom' . $suffix . '.js', array( 'jquery', 'jquery-ui-core' ) );
 
 		if ( is_singular( array( 'tour' ) ) ) {
 			wp_enqueue_script( 'thesafaripartners-child-tour-wizard', get_stylesheet_directory_uri() . '/assets/js/tour-wizard.js', array( 'jquery' ), TSP_CHILD_VER, true );
