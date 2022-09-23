@@ -11,7 +11,7 @@
 				$args = array(
 					'meta_key' => 'inspire_order',
 					'orderby' => 'meta_key',
-					'order' => 'ASC',
+					'order' => 'DESC',
 					'hide_empty' => 0,
 				);
 				$terms = get_terms( 'budget', $args );
