@@ -2,7 +2,7 @@
 	<div class="wizard-what row">
 		<div class="col-md-3">
 			<h3><?php esc_html_e( 'What interests you?', 'thesafaripartners-child' ); ?></h3>
-			<p><?php esc_html_e( 'Let us what interests you', 'thesafaripartners-child' ); ?></p>
+			<p><?php esc_html_e( 'Select all the experiences you would enjoy. Choose as many as you like.', 'thesafaripartners-child' ); ?></p>
 		</div>
 
 		<div class="col-md-9">
