@@ -453,14 +453,12 @@
 	}
 
 	function fetchSearchData( queryArgs, facets ) {
-		console.log(tsp_wizard_params);
 		var request_data = {
 			'data': {
 				'facets': facets,
 				'query_args': queryArgs
 			}
 		};
-		console.log(request_data);
 		  var response = fetch( tsp_wizard_params.homeURL + 'wp-json/facetwp/v1/fetch', {
 			'method': 'POST',
 			'headers': {
@@ -473,6 +471,11 @@
 		  .then( function(result) {
 			if ( undefined !== result && 0 < result.results.length ) {
 				populateSearchResultsSlider( result.results );
+			}
+
+			if ( $(window).width() > 1200 && $(window).width() < 1500 ) {
+				console.log('scrollgin to the results');
+				$('body').scrollTo('.mini-wizard-results');
 			}
 		  });
 	}
