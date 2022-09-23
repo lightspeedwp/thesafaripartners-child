@@ -475,7 +475,7 @@
 
 			if ( $(window).width() > 1200 && $(window).width() < 1500 ) {
 				console.log('scrollgin to the results');
-				$('body').scrollTo('.mini-wizard-results');
+				jQuery('body').scrollTo('.mini-wizard-results');
 			}
 		  });
 	}

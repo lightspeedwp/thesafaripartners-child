@@ -7,7 +7,7 @@
 
 
 function tsp_init_wizard() {
-	wp_enqueue_script( 'thesafaripartners-child-wizard', get_stylesheet_directory_uri() . '/assets/js/wizard.js', array( 'jquery' ), TSP_CHILD_VER, true );
+	wp_enqueue_script( 'thesafaripartners-child-wizard', get_stylesheet_directory_uri() . '/assets/js/wizard.js', array( 'jquery', 'jquery-ui-core' ), TSP_CHILD_VER, true );
 	$param_array = array(
 		'auth'    => 'bGlnaHRzcGVlZDpkM3ZvbnN0ckBAdDQ2',
 		'homeURL' => home_url('/'),
