@@ -70,6 +70,7 @@ th,tr,td,table,legend,label {
 .single-post article.post .lsx-hero-banner-block .post-meta{color:#262423!important;}
 .lsx-hero-banner-block .lsx-title-block h1 {
    color:#262423!important;}
+   .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow{top:35%!important;}
    .single-lsx-to-tour .tourheight{min-height:2px!important;}
    .single-lsx-to-tour .tourmeta-height{min-height:6px!important;}
    .tourheight{min-height:202px;}
