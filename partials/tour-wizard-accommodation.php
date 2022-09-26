@@ -9,6 +9,7 @@
 					'post_status'    => 'publish',
 					'post__in'       => $accommodation,
 					'posts_per_page' => -1,
+					'orderby'        => 'post__in',
 				);
 				$accom_query = new WP_Query( $accommodation_args );
 				if ( $accom_query->have_posts() ) {
