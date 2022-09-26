@@ -292,6 +292,6 @@ function tsp_to_tour_single_fast_facts() {
 	$return = ob_get_clean();
 
 	//replacements
-	$return = str_replace( 'Travel Style', 'Safari style', $return );
+	$return = str_replace( 'Travel Style', 'Safari Style', $return );
 	echo $return;
 }
