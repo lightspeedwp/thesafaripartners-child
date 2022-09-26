@@ -70,6 +70,8 @@ th,tr,td,table,legend,label {
 .single-post article.post .lsx-hero-banner-block .post-meta{color:#262423!important;}
 .lsx-hero-banner-block .lsx-title-block h1 {
    color:#262423!important;}
+   .single-lsx-to-tour .tourheight{min-height:2px!important;}
+   .single-lsx-to-tour .tourmeta-height{min-height:6px!important;}
    .tourheight{min-height:202px;}
    .tourmeta-height{min-height:66px;}
 .lsx-hero-banner-init .lsx-hero-banner-block.wp-block-cover .wp-block-cover__inner-container{padding:0!important;margin:0!important;}
