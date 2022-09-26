@@ -396,7 +396,9 @@ class Setup {
 	 * @return void
 	 */
 	function scpo_engine_objects( $post_types = array( 'none' ) ) {
-		$post_types = array_diff( $post_types, array( 'destination' ) );
+		if ( isset( $post_types['destination'] ) ) {
+			unset( $post_types['destination'] );
+		}
 		return $post_types;
 	}
 }
