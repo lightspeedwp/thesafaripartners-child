@@ -112,7 +112,7 @@
 											foreach ( $terms as $term ) {
 												echo $term->slug;
 											};?>">
-											<p class="tailored-msg">Dates reflect seasonality, please enquire for spesific availability.</p>
+											<p class="tailored-msg">Dates reflect seasonality, please enquire for specific availability.</p>
 										</span>
 
 										<?php
