@@ -52,6 +52,8 @@ class Setup {
 		add_filter( 'lsx_to_js_params', array( $this, 'slider_variables' ), 10, 1 );
 
 		add_filter( 'lsx_to_widget_slider_attributes', array( $this, 'related_slider_variables' ), 10, 2 );
+		add_filter( 'lsx_to_scpo_engine_objects', array( $this, 'scpo_engine_objects' ), 10, 1 );
+		
 		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
 
@@ -385,5 +387,16 @@ class Setup {
 			}
 		}
 		return $post_thumbnail_id;
+	}
+
+	/**
+	 * Disable the destination ordering.
+	 *
+	 * @param array $post_types
+	 * @return void
+	 */
+	function scpo_engine_objects( $post_types = array( 'none' ) ) {
+		$post_types = array_diff( $post_types, array( 'destination' ) );
+		return $post_types;
 	}
 }
