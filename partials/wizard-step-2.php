@@ -12,7 +12,7 @@
 				<?php
 				$args = array(
 					'meta_key' => 'inspire_order',
-					'orderby' => 'meta_key',
+					'orderby' => 'meta_key_num',
 					'order' => 'DESC',
 					'hide_empty' => 0,
 				);
