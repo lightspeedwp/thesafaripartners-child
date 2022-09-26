@@ -10,7 +10,13 @@
 			<div class="col-md-9">
 
 				<?php
-				$terms = get_terms( 'travel-style' );
+				$args = array(
+					'meta_key' => 'inspire_order',
+					'orderby' => 'meta_key',
+					'order' => 'DESC',
+					'hide_empty' => 0,
+				);
+				$terms = get_terms( 'travel-style', $args );
 				?>
 
 				<?php foreach ( $terms as $term ) : ?>
