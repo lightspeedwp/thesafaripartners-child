@@ -41,7 +41,7 @@ if ( empty( $disable_single_link ) ) {
 						<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 										<div class="lsx-to-widget-thumb">
 										<a href="/who/seasoned-travellers/" tabindex="0">
-									<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-seasoned-travellers-1024x576.jpg">
+									<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/09/seasonded-travelers-new-e1664179916771.png">
 									</a></div>
 
 					<div class="lsx-to-widget-content bottom">

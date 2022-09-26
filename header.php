@@ -23,7 +23,7 @@
 		<?php lsx_body_top(); ?>
 <div class="body-wrap">
 		<div class="header-wrap">
-			<div class="intro-wrap"><p>Chat to an expert on 1.888.71SAFARI (72327)</p></div>
+			<div class="intro-wrap"><p>Chat to an expert, call us at 1.888.71SAFARI (72327)</p></div>
 			<?php if ( wp_is_mobile() ) { wp_nav_menu( array('container_class' => 'primary-navbar', 'theme_location' => 'max_mega_menu_1') );} ?>
 			<?php lsx_header_before(); ?>
 			<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">

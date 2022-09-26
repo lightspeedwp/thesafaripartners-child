@@ -70,6 +70,9 @@ th,tr,td,table,legend,label {
 .single-post article.post .lsx-hero-banner-block .post-meta{color:#262423!important;}
 .lsx-hero-banner-block .lsx-title-block h1 {
    color:#262423!important;}
+   .single-lsx-to-tour #Maps .lsx-to-slider-inner .slick-arrow{top:35%!important;}
+   .single-lsx-to-tour .tourheight{min-height:2px!important;}
+   .single-lsx-to-tour .tourmeta-height{min-height:6px!important;}
    .tourheight{min-height:202px;}
    .tourmeta-height{min-height:66px;}
 .lsx-hero-banner-init .lsx-hero-banner-block.wp-block-cover .wp-block-cover__inner-container{padding:0!important;margin:0!important;}
@@ -141,6 +144,7 @@ legend {
 }
 .blog .readmoresearch{display:none;}
 .category .readmoresearch{display:none;}
+.home .term-11095
 .lsx-to-meta-data.lsx-to-meta-data-duration:before {
 	background-image:url('img/tsp-duration.svg');
 	background-size:17px 17px;
@@ -689,7 +693,7 @@ element.style {
 }
 .single-lsx-to-tour #Maps .lsx-to-widget-thumb img {
 	object-fit:cover;
-	height:200px!important;
+	height:170px!important;
 }
 .single-lsx-to-tour #Maps .lsx-to-widget-thumb {
 	display:contents;
@@ -1628,6 +1632,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	transition-timing-function:ease-in;
 	transition:1s;
 }
+
+#Price .intabcontent{max-height: 144px;
+    overflow: scroll;}
 .intabcontent p {
 	margin-top:10px;
 	padding-left: 10px;
@@ -2692,8 +2699,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin-left:-20px!important;
 }
 .single-lsx-to-tour #Maps .lsx-to-tour-content {
-	padding-top:5vh!important;
+	padding-top:4vh!important;
 }
+.single-lsx-to-tour #Maps .lsx-to-tour-content h3.lsx-to-summary-title{margin-bottom:18px!important;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data-style,.single-lsx-to-tour #Maps .lsx-to-meta-data-price,.single-lsx-to-tour #Maps .lsx-to-meta-data-destinations {
 	display:none;
 }
