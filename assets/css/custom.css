@@ -693,7 +693,7 @@ element.style {
 }
 .single-lsx-to-tour #Maps .lsx-to-widget-thumb img {
 	object-fit:cover;
-	height:200px!important;
+	height:170px!important;
 }
 .single-lsx-to-tour #Maps .lsx-to-widget-thumb {
 	display:contents;
@@ -2699,8 +2699,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin-left:-20px!important;
 }
 .single-lsx-to-tour #Maps .lsx-to-tour-content {
-	padding-top:5vh!important;
+	padding-top:4vh!important;
 }
+.single-lsx-to-tour #Maps .lsx-to-tour-content h3.lsx-to-summary-title{margin-bottom:18px!important;}
 .single-lsx-to-tour #Maps .lsx-to-meta-data-style,.single-lsx-to-tour #Maps .lsx-to-meta-data-price,.single-lsx-to-tour #Maps .lsx-to-meta-data-destinations {
 	display:none;
 }
