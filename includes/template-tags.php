@@ -285,3 +285,13 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 	}
 	return $return;
 }
+
+function tsp_to_tour_single_fast_facts() {
+	ob_start();
+	lsx_to_tour_single_fast_facts();
+	$return = ob_get_clean();
+
+	//replacements
+	$return = str_replace( 'Travel Style', 'Safari style', $return );
+	echo $return;
+}

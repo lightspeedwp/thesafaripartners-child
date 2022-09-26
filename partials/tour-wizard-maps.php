@@ -29,7 +29,7 @@
 									</div>
 
 									<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
-									<?php lsx_to_tour_single_fast_facts(); ?>
+									<?php tsp_to_tour_single_fast_facts(); ?>
 
 									<h4 class="lovetrip">Love this trip?</h4>
 									<button class="btn lsx-cta popup-inquire">MAKE AN INQUIRY</button>
