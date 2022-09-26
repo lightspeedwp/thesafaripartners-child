@@ -144,6 +144,7 @@ legend {
 }
 .blog .readmoresearch{display:none;}
 .category .readmoresearch{display:none;}
+.home .term-11095
 .lsx-to-meta-data.lsx-to-meta-data-duration:before {
 	background-image:url('img/tsp-duration.svg');
 	background-size:17px 17px;
@@ -1631,6 +1632,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	transition-timing-function:ease-in;
 	transition:1s;
 }
+
+#Price .intabcontent{max-height: 144px;
+    overflow: scroll;}
 .intabcontent p {
 	margin-top:10px;
 	padding-left: 10px;
