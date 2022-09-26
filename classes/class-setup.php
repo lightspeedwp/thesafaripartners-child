@@ -53,6 +53,7 @@ class Setup {
 
 		add_filter( 'lsx_to_widget_slider_attributes', array( $this, 'related_slider_variables' ), 10, 2 );
 		add_filter( 'lsx_to_scpo_engine_objects', array( $this, 'scpo_engine_objects' ), 10, 1 );
+		add_filter( 'lsx_to_scpo_engine_taxonomies', array( $this, 'scpo_engine_taxonomies' ), 10, 1 );
 		
 		
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
@@ -400,5 +401,18 @@ class Setup {
 			unset( $post_types['destination'] );
 		}
 		return $post_types;
+	}
+
+	/**
+	 * Disable the destination ordering.
+	 *
+	 * @param array $post_types
+	 * @return void
+	 */
+	function scpo_engine_taxonomies( $taxonomies = array( 'none' ) ) {
+		if ( isset( $taxonomies['travel-style'] ) ) {
+			unset( $taxonomies['travel-style'] );
+		}
+		return $taxonomies;
 	}
 }
