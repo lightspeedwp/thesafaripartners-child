@@ -55,7 +55,7 @@
 																					<?php
 																					$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 																					if ( $total_itineraries === $itinerary_count ) {
-																						echo '<span class="heading-destinations">Day ' . lsx_to_itinerary_title( false ) . '</span><br/>';
+																						echo '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . '</span><br/>';
 																					} else {
 																						echo strip_tags( lsx_to_itinerary_destinations( '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' - ' , '</span><br/>', false ), array( 'span', 'br' ) );
 																					}
