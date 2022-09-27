@@ -114,6 +114,15 @@ legend {
 #mega-menu-wrap-primary .moretag {
 	display:none;
 }
+.banner-easing .fa-angle-down:before{display:none;}
+.banner-easing .fa-angle-down::after{background-image:url('img/down-button-tsp.svg');
+	background-size:17px 17px;
+	display:inline-block;
+	width:17px;
+	height:17px;
+	content:"";
+	left:2px!important;
+	margin-top:3px;}
 .page-template-template-contact #primary form .gform_fields input[type='radio'] {
 	display:none;
 	height:12px;
