@@ -114,12 +114,13 @@ legend {
 #mega-menu-wrap-primary .moretag {
 	display:none;
 }
-.banner-easing .fa-angle-down:before,.banner-easing .btn-scroll-to{display:none;}
+.banner-easing .fa-angle-down:before{display:none;}
+.banner-easing .btn-scroll-to{border:none;border-radius:0!important;}
 .banner-easing .banner-easing::after{background-image:url('img/down-button-tsp.svg');
-	background-size:30px 30px;
+	background-size:40px 40px;
 	display:inline-block;
-	width:30px;
-	height:30px;
+	width:40px;
+	height:40px;
 	content:"";
 	left:0px!important;
 	margin-top:0px;}
