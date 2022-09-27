@@ -114,15 +114,15 @@ legend {
 #mega-menu-wrap-primary .moretag {
 	display:none;
 }
-.banner-easing .fa-angle-down:before{display:none;}
-.banner-easing .fa-angle-down::after{background-image:url('img/down-button-tsp.svg');
-	background-size:17px 17px;
+.banner-easing .fa-angle-down:before,.banner-easing .btn-scroll-to{display:none;}
+.banner-easing .banner-easing::after{background-image:url('img/down-button-tsp.svg');
+	background-size:30px 30px;
 	display:inline-block;
-	width:17px;
-	height:17px;
+	width:30px;
+	height:30px;
 	content:"";
-	left:2px!important;
-	margin-top:3px;}
+	left:0px!important;
+	margin-top:0px;}
 .page-template-template-contact #primary form .gform_fields input[type='radio'] {
 	display:none;
 	height:12px;
