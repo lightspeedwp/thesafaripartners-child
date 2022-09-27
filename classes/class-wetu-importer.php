@@ -48,6 +48,7 @@ class WETU_Importer {
 			'Migration Experiences',
 			'Gorillas Trekking',
 			'Beach & Relaxation',
+			'Flying',
 		),
 		'tour-type' => array(
 			'Tailored Tour',
