@@ -116,7 +116,7 @@ legend {
 }
 .banner-easing .fa-angle-down:before{display:none;}
 .banner-easing .btn-scroll-to{border:none;border-radius:0!important;}
-.banner-easing .banner-easing .fa-angle-down::after{background-image:url('img/down-button-tsp.svg');
+.banner-easing .banner-easing::before{background-image:url('img/down-button-tsp.svg');
 	background-size:40px 40px;
 	display:inline-block;
 	width:40px;
