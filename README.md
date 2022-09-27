@@ -1,9 +1,6 @@
 # thesafaripartners-child
 
-## Install NPM
-https://nodejs.org/en/
-
-## Install Gulp
+## Install NPM Mopdule
 `npm install`
 
 This will run the package.json file and download the list of modules to a "node_modules" folder in the theme.
