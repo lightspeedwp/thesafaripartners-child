@@ -888,6 +888,7 @@
 				$(this).on('click', function(){
 					$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
 						$(this).removeAttr( 'checked' );
+						$(this).prop( 'checked', false );
 					});
 					$(this).prop( 'checked', true ).trigger("change");				
 				});
@@ -902,6 +903,7 @@
 
 					$('.wizard-budget .checkbox-wrapper input[type="checkbox"]').each(function(event){
 						$(this).removeAttr( 'checked' );
+						$(this).prop( 'checked', false );
 					});
 
 					$(this).prop( 'checked', true ).trigger("change");				

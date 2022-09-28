@@ -292,6 +292,9 @@ function checkForSliders( $next ) {
 
 					resizeWizardStepsWrapper($this);
 
+					whoSingleSelection();
+					budgetSingleSelection();
+
 					$.isFunction(settings.onInitSuccess) && settings.onInitSuccess.call(this);
 					$this.trigger("initSuccess.lsxWizard", this);
 				}
@@ -820,6 +823,36 @@ function checkForSliders( $next ) {
 				}
 			}
 		});
+	};
+
+	function whoSingleSelection() {
+		if ( 0 < $('.wizard-who').length ) {
+			$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
+				$(this).on('click', function(){
+					$('.wizard-who .checkbox-clear input[type="checkbox"]').each(function(event){
+						$(this).removeAttr( 'checked' );
+						$(this).prop( 'checked', false );
+					});
+					$(this).prop( 'checked', true ).trigger("change");				
+				});
+			});
+		}
+	};
+
+	function budgetSingleSelection() {
+		if ( 0 < $('.wizard-budget').length ) {
+			$('.wizard-budget .checkbox-wrapper input[type="checkbox"]').each(function(event){
+				$(this).on('click', function(){
+
+					$('.wizard-budget .checkbox-wrapper input[type="checkbox"]').each(function(event){
+						$(this).removeAttr( 'checked' );
+						$(this).prop( 'checked', false );
+					});
+
+					$(this).prop( 'checked', true ).trigger("change");				
+				});
+			});
+		}
 	};
 
 	$.fn.lsxWizard.defaults = {
