@@ -406,7 +406,7 @@ class Frontend {
 			echo do_shortcode( '[banner_navigation selector="#main" mobile-top="-100"]' );
 		}
 		if ( is_tax( 'travel-style' ) ) {
-			echo do_shortcode( '[banner_navigation selector="#main" mobile-top="-50"]' );
+			echo do_shortcode( '[banner_navigation extra-top="-70" selector="#main" mobile-top="-50"]' );
 		}
 	}
 }
