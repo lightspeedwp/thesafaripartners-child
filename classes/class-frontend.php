@@ -158,6 +158,9 @@ class Frontend {
 		add_action( 'wp_head', array( $this, 'wp_head' ), 200 );
 		add_action( 'pre_get_posts', array( $this, 'set_main_query_arguments' ), 200, 1 );
 
+		// Frontend general
+		add_action( 'lsx_banner_container_bottom', array( $this, 'archive_banner_navigation' ), 200 );
+
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
@@ -396,5 +399,11 @@ class Frontend {
 			$html .= '</div>';
 		}
 		return $html;
+	}
+
+	public function archive_banner_navigation() {
+		if ( is_singular( array( 'destination' ) ) || is_tax( 'travel-style' )) {
+			echo do_shortcode( '[banner_navigation selector="#main"]' );
+		}
 	}
 }
