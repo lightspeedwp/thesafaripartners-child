@@ -423,13 +423,17 @@ function checkForSliders( $next ) {
 				var activeElementPosition = highlightActiveElement($plugin);
 				unmarkStepAsCompleted(activeElementPosition, $plugin);
 
+				console.log(activeElementPosition);
+
 				if (activeElementPosition === 1) {
 					$plugin.find('.lsx-wizard-button-previous').hide();
 
 					$.isFunction(settings.onSlideRightLimitReached) && settings.onSlideRightLimitReached.call($plugin);
 					$plugin.trigger("slideRightLimitReached.lsxWizard", this);
 				} else {
+					console.log($plugin.find('.lsx-wizard-button-next'));
 					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
+						console.log('');
 						unsetFinishButton($plugin, settings);
 					}
 				}
@@ -670,6 +674,7 @@ function checkForSliders( $next ) {
 			.addClass('btn-primary')
 			.html("")
 			.append($iconNextText)
+			.show()
 			//.append($iconNext)
 	}
 
@@ -781,8 +786,6 @@ function checkForSliders( $next ) {
 		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
 			itineraryItems.push($(this).html());
 		});
-
-		console.log(itineraryItems);
 
 		// Run through and inject the new text.
 		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
