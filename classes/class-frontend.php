@@ -403,10 +403,10 @@ class Frontend {
 
 	public function archive_banner_navigation() {
 		if ( is_singular( array( 'destination' ) ) ) {
-			echo do_shortcode( '[banner_navigation selector="#main" extra-top="-50"]' );
+			echo do_shortcode( '[banner_navigation selector="#main" mobile-top="-100"]' );
 		}
 		if ( is_tax( 'travel-style' ) ) {
-			echo do_shortcode( '[banner_navigation selector="#main" extra-top="-100"]' );
+			echo do_shortcode( '[banner_navigation selector="#main" mobile-top="-50"]' );
 		}
 	}
 }
