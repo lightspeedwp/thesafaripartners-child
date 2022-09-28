@@ -115,7 +115,7 @@ legend {
 	display:none;
 }
 .banner-easing .fa-angle-down:before{display:none;}
-.banner-easing .btn-scroll-to{border:none;border-radius:0!important;}
+.banner-easing .btn-scroll-to{border:none;border-radius:0!important;border-color: transparent;}
 .banner-easing .btn-scroll-to::before{background-image:url('img/down-button-tsp.svg');
 	background-size:55px 55px;
 	display:inline-block;
