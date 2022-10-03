@@ -29,7 +29,7 @@
 													while ( lsx_to_itinerary_loop() ) {
 														
 														lsx_to_itinerary_loop_item();
-														$thumb = lsx_to_itinerary_thumbnail('large');
+														$thumb = lsx_to_itinerary_thumbnail( 'large','destination_to_tour');
 														?>
 
 														<div class="lsx-wizard-step <?php echo esc_attr( $active ); ?>">
