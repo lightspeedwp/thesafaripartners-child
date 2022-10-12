@@ -8,24 +8,24 @@
 					the_post();
 					lsx_entry_before();
 					?>
-		<div class="col-md-6 lsx-contact-module-image">
-		<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
+						<div class="col-md-6 lsx-contact-module-image">
+							<span class="tax-title"><?php $terms = get_the_terms( $post->ID, 'tour-type' );
 
-        echo "<span>" . the_date();
+							echo "<span>" . the_date();
 
-        foreach ( $terms as $term ) {
-            echo $term->name;
-        }
+							foreach ( $terms as $term ) {
+								echo $term->name;
+							}
 
-        echo "</span>";?></span><span>
-								<div class="lsx-banner-image-wrap">
-							<?php //echo get_the_post_thumbnail($page->ID,'full');
-								lsx_thumbnail( 'full' );
-							?>
+							echo "</span>";?></span><span>
+									<div class="lsx-banner-image-wrap">
+								<?php //echo get_the_post_thumbnail($page->ID,'full');
+									lsx_thumbnail( 'full' );
+								?>
 
+							</div>
+							<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 						</div>
-						<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
-					</div>
 
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-single' ); ?>>
 						<?php lsx_entry_top(); ?>

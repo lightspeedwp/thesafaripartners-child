@@ -287,11 +287,21 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 }
 
 function tsp_to_tour_single_fast_facts() {
-	ob_start();
-	lsx_to_tour_single_fast_facts();
-	$return = ob_get_clean();
-
-	//replacements
-	$return = str_replace( 'Travel Style', 'Safari Style', $return );
-	echo $return;
+	if ( is_singular( 'tour' ) ) {
+		?>
+		<section style="display: none;" id="fast-facts">
+			<div class="lsx-to-section-inner">
+				<div class="lsx-to-single-meta-data">
+					<?php
+						$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+						lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key">' . esc_html__( 'Duration', 'tour-operator' ) . ':</span> ', '</span>' );
+						lsx_to_departure_point( '<span class="' . $meta_class . 'pin"><span class="lsx-to-meta-data-key">' . esc_html__( 'Departs from', 'tour-operator' ) . ':</span> ', '</span>' );
+						lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Destinations', 'tour-operator' ) . ':</span> ', '</span>' );
+						the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key">' . esc_html__( 'Safari Style', 'tour-operator' ) . ':</span> ', ', ', '</span>' );
+					?>
+				</div>
+			</div>
+		</section>
+	<?php 
+    }
 }
