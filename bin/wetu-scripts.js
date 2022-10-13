@@ -14,7 +14,6 @@
 
 		let items = [];
 		let names = [];
-		let id = 
 		jQuery( '#grid .customRow' ).each(function(){
 			let idTag = jQuery(this).attr('data-identifier');
 			let title = jQuery(this).attr('data-name');
