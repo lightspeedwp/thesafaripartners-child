@@ -28,7 +28,7 @@ get_header(); ?>
 			?>
 			<div class="search-header col-md-12">
 			
-			<p>Click above to change your answers and show different results</p>
+			<p>Click above to change your answers and show different results.</p>
 			
 			<div class="col-md-6">
 				<h3>The Shaman Says...</h3>
