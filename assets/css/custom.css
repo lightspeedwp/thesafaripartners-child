@@ -2198,6 +2198,30 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display: none;
 }
 
+#dates-prices #menu-currency-selector{
+	padding: 0;
+	margin: 0;
+}
+
+#dates-prices #menu-currency-selector .sub-menu{
+	right: 0;
+}
+
+#dates-prices #menu-currency-selector li.menu-item:hover .sub-menu{
+	display: block;
+}
+
+
+#dates-prices #menu-currency-selector .sub-menu li.menu-item {
+	text-align: center !important;
+}
+
+#dates-prices #menu-currency-selector .sub-menu li.menu-item a {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
 .table-striped>tbody>tr:nth-of-type(odd) {
 	background-color:#f2edea!important;
 }
