@@ -100,7 +100,8 @@
 																		echo '<th class="whitebg">' . wp_nav_menu(
 																			array(
 																				'theme_location' => 'currency-selector',
-																			)
+																				'echo' => false,
+																			), 
 																		) . '</th>';
 																		?>
 																	</tr>
