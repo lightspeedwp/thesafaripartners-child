@@ -97,12 +97,12 @@
 																			echo '<th>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
 																		}
 																		
-																		echo '<th class="whitebg">' . /*wp_nav_menu(
+																		echo '<th class="whitebg">' . wp_nav_menu(
 																			array(
 																				'theme_location' => 'currency-selector',
 																				'echo' => false,
 																			), 
-																		) . */'</th>';
+																		) . '</th>';
 																		?>
 																	</tr>
 																</thead>
