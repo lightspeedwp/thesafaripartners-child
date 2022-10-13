@@ -64,7 +64,11 @@
 																	break;
 
 																default:
-																	$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $value . '</span></td>';
+																	if ( function_exists( 'lsx_currencies_get_price_html' ) ) {
+																		$rc_data[ $rc_num - 1 ] = '<td class="park-fees">' . lsx_currencies_get_price_html( $value ) . '</td>';
+																	} else {
+																		$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $value . '</span></td>';
+																	}
 																	break;
 															}
 														}
@@ -92,7 +96,12 @@
 																		foreach( $column_titles as $column_index ) {
 																			echo '<th>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
 																		}
-																		echo '<th class="whitebg">Book Now</th>';
+																		
+																		echo '<th class="whitebg">' . wp_nav_menu(
+																			array(
+																				'theme_location' => 'currency-selector',
+																			)
+																		) . '</th>';
 																		?>
 																	</tr>
 																</thead>
@@ -121,11 +130,6 @@
 										$tour_not_included = lsx_to_not_included( '', '', false );
 
 										if ( null !== $tour_included || null !== $tour_not_included ) {
-											$class = 'col-xs-12 col-sm-6';
-
-											if ( ( null === $tour_included && null !== $tour_not_included ) || ( null !== $tour_included && null === $tour_not_included ) ) {
-												$class = 'col-xs-12';
-											}
 											?>
 
 											<div class="intab">

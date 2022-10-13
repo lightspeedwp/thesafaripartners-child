@@ -47,6 +47,7 @@ class Setup {
 		add_action( 'init', array( $this, 'when_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'budget_taxonomy_setup' ), 90 );
 		add_action( 'init', array( $this, 'tour_type_setup' ), 100 );
+		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 		add_filter( 'register_taxonomy_args', array( $this, 'change_taxonomies_slug' ), 10, 2 );
 		add_filter( 'register_post_type_args', array( $this, 'change_post_types' ), 10, 2 );
 		add_filter( 'lsx_to_js_params', array( $this, 'slider_variables' ), 10, 1 );
@@ -93,6 +94,7 @@ class Setup {
 		register_nav_menus(
 			array(
 				'filter-menu' => esc_html__( 'Filter Menu', 'thesafaripartners-child' ),
+				'currency-selector' => esc_html__( 'Currency Selector', 'thesafaripartners-child' ),
 			)
 		);
 
@@ -414,5 +416,22 @@ class Setup {
 			unset( $taxonomies['travel-style'] );
 		}
 		return $taxonomies;
+	}
+
+	/**
+	 * Register our sidebars and widgetized areas.
+	 */
+	public function widgets_init() {
+		register_sidebar(
+			array(
+				'name'          => 'Footer Subscribe',
+				'id'            => 'footer_sub',
+				'before_widget' => '<div>',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="rounded">',
+				'after_title'   => '</h2>',
+			)
+		);
+
 	}
 }
