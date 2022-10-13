@@ -136,6 +136,7 @@
 											<div class="intab">
 												<button class="intablink" id="includes" onclick="openinCity(event, 'Include')"><?php esc_html_e( 'Included', 'tour-operator' ); ?></button>
 												<button class="intablink" id="excludes" onclick="openinCity(event, 'Exclude')"><?php esc_html_e( 'Excluded', 'tour-operator' ); ?></button>
+												<button class="intablink" onclick="openinCity(event, 'price-included')"><?php esc_html_e( 'Price', 'tour-operator' ); ?></button>
 											</div>
 											<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-included-excluded' ); ?>><?php esc_html_e( 'Included / Not Included', 'tour-operator' ); ?></h2>
 
@@ -161,6 +162,16 @@
 													</div>
 												</div>
 											<?php
+											?>
+											<div id="price-included" class="intabcontent" >
+												<div class="price-included">
+													<div class="entry-content">
+													<?php esc_html_e( 'The prices displayed are converted from USD. Conversion rates could be slightly outdated.', 'thesafaripartners-child' ); ?>
+													</div>
+												</div>
+											</div>
+											<?php
+
 											}
 										}
 									?>
