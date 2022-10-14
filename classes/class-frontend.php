@@ -419,7 +419,7 @@ class Frontend {
 	 * @return string
 	 */
 	public function mobile_map_keys( $key ) {
-		if ( is_tax( 'tour-type', array( 'mobile-train', 'mobile-boat' ) ) ) {
+		if ( has_term( array( 'mobile-train', 'mobile-boat' ), 'tour-type' ) ) {
 			$key = 'destination_to_tour';
 		}
 		return $key;
@@ -433,7 +433,7 @@ class Frontend {
 	 * @return string
 	 */
 	public function mobile_itinerary_title( $title, $tour_itinerary ) {
-		if ( is_tax( 'tour-type', array( 'mobile-train', 'mobile-boat' ) ) ) {
+		if ( has_term( array( 'mobile-train', 'mobile-boat' ), 'tour-type' ) ) {
 			if ( ! isset( $tour_itinerary->itinerary['destination_to_tour'] ) || ( isset( $tour_itinerary->itinerary['destination_to_tour'] ) && '' === $tour_itinerary->itinerary['destination_to_tour'] ) ) {
 				$title = esc_html__( 'On train', 'thesafaripartners-child' );
 			}

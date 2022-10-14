@@ -57,7 +57,14 @@
 																					if ( $total_itineraries === $itinerary_count ) {
 																						echo '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . '</span><br/>';
 																					} else {
-																						echo strip_tags( lsx_to_itinerary_destinations( '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' - ' , '</span><br/>', false ), array( 'span', 'br' ) );
+
+																						$itinerary_title = strip_tags( lsx_to_itinerary_destinations( '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' - ' , '</span><br/>', false ), array( 'span', 'br' ) );
+																						if ( has_term( array( 'mobile-train', 'mobile-boat' ), 'tour-type' ) && '' === $itinerary_title ) {
+																							$itinerary_title = esc_html__( 'On train', 'thesafaripartners-child' );
+																						}
+
+																						echo $itinerary_title;
+
 																					}
 																					echo strip_tags( lsx_to_itinerary_accommodation( '<span class="' . $meta_class . 'accommodations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>', false ), array( 'span', 'br' ) );
 																					echo strip_tags( lsx_to_itinerary_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>', false ), array( 'span', 'br' ) );
