@@ -160,7 +160,7 @@ class Frontend {
 
 		// Frontend general
 		add_action( 'lsx_banner_container_bottom', array( $this, 'archive_banner_navigation' ), 200 );
-		//lsx_to_get_itinerary_ids_meta_key
+		add_filter( 'lsx_to_get_itinerary_ids_meta_key', array( $this, 'mobile_map_keys' ), 10, 1 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
@@ -409,5 +409,18 @@ class Frontend {
 		if ( is_tax( 'travel-style' ) ) {
 			echo do_shortcode( '[banner_navigation extra-top="-70" selector="#main" mobile-top="-50"]' );
 		}
+	}
+
+	/**
+	 * Changing the map key for mobile tours.
+	 *
+	 * @param string $key
+	 * @return string
+	 */
+	public function mobile_map_keys( $key ) {
+		if ( is_tax( 'tour-type', array( 'mobile-train', 'mobile-boat' ) ) ) {
+			$key = 'destination_to_tour';
+		}
+		return $key;
 	}
 }
