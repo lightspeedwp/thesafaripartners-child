@@ -166,7 +166,7 @@
 											<div id="price-included" class="intabcontent" >
 												<div class="price-included">
 													<div class="entry-content">
-													<?php esc_html_e( 'The prices displayed are converted from USD. Conversion rates could be slightly outdated.', 'thesafaripartners-child' ); ?>
+													<?php esc_html_e( 'Prices are based on current exchange rates. The selling currency may be different from the one displayed.', 'thesafaripartners-child' ); ?>
 													</div>
 												</div>
 											</div>
