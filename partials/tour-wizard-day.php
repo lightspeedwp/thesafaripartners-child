@@ -60,7 +60,11 @@
 
 																						$itinerary_title = strip_tags( lsx_to_itinerary_destinations( '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' - ' , '</span><br/>', false ), array( 'span', 'br' ) );
 																						if ( has_term( array( 'mobile-train', 'mobile-boat' ), 'tour-type' ) && '' === $itinerary_title ) {
-																							$itinerary_title = esc_html__( 'On train', 'thesafaripartners-child' );
+																							if ( has_term( array( 'mobile-train' ), 'tour-type' ) ) {
+																								$itinerary_title = esc_html__( 'On train', 'thesafaripartners-child' );
+																							} else {
+																								$itinerary_title = esc_html__( 'On boat', 'thesafaripartners-child' );
+																							}
 																						}
 
 																						echo $itinerary_title;
