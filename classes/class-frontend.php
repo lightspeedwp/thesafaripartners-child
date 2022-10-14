@@ -161,6 +161,7 @@ class Frontend {
 		// Frontend general
 		add_action( 'lsx_banner_container_bottom', array( $this, 'archive_banner_navigation' ), 200 );
 		add_filter( 'lsx_to_get_itinerary_ids_meta_key', array( $this, 'mobile_map_keys' ), 10, 1 );
+		add_filter( 'lsx_to_itinerary_title', array( $this, 'mobile_itinerary_title' ), 10, 2 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
@@ -422,5 +423,21 @@ class Frontend {
 			$key = 'destination_to_tour';
 		}
 		return $key;
+	}
+
+	/**
+	 * Adds in the mobile "On Train" heading.
+	 *
+	 * @param string $title
+	 * @param object $tour_itinerary
+	 * @return string
+	 */
+	public function mobile_itinerary_title( $title, $tour_itinerary ) {
+		if ( is_tax( 'tour-type', array( 'mobile-train', 'mobile-boat' ) ) ) {
+			if ( ! isset( $tour_itinerary->itinerary['destination_to_tour'] ) || ( isset( $tour_itinerary->itinerary['destination_to_tour'] ) && '' === $tour_itinerary->itinerary['destination_to_tour'] ) ) {
+				$title = esc_html__( 'On train', 'thesafaripartners-child' );
+			}
+		}
+		return $title;
 	}
 }
