@@ -65,7 +65,7 @@
 																							} else {
 																								$itinerary_title = esc_html__( 'On boat', 'thesafaripartners-child' );
 																							}
-																							$itinerary_title = '<span class="heading-destinations">' . $itinerary_title . '</span>';
+																							$itinerary_title = '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' ' . $itinerary_title . '</span>';
 																						}
 
 																						echo $itinerary_title;
