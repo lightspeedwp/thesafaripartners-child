@@ -14,6 +14,7 @@
 							echo "<span>" . the_date();
 
 							foreach ( $terms as $term ) {
+								if ( in_array( $term->name, array( 'Mobile-train', 'Mobile-boat' ) ) ) { continue; }
 								echo $term->name;
 							}
 
