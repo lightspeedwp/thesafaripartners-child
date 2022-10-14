@@ -160,6 +160,7 @@ class Frontend {
 
 		// Frontend general
 		add_action( 'lsx_banner_container_bottom', array( $this, 'archive_banner_navigation' ), 200 );
+		//lsx_to_get_itinerary_ids_meta_key
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );

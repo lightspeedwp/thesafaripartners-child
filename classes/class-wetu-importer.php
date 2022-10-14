@@ -54,6 +54,8 @@ class WETU_Importer {
 			'Tailored Tour',
 			'Group Tour',
 			'Scheduled Tour',
+			'Mobile-train',
+			'Mobile-boat',
 		),
 		'budget' => array(
 			'Budget-low',
