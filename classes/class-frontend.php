@@ -162,6 +162,7 @@ class Frontend {
 		add_action( 'lsx_banner_container_bottom', array( $this, 'archive_banner_navigation' ), 200 );
 		add_filter( 'lsx_to_get_itinerary_ids_meta_key', array( $this, 'mobile_map_keys' ), 10, 1 );
 		add_filter( 'lsx_to_itinerary_title', array( $this, 'mobile_itinerary_title' ), 10, 2 );
+		add_filter( 'lsx_to_parents_only', array( $this, 'order_tour_countries' ), 20, 2 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
@@ -439,5 +440,29 @@ class Frontend {
 			}
 		}
 		return $title;
+	}
+
+	/**
+	 * Returns an original country order.
+	 *
+	 * @param array $connected_ids
+	 * @param string $meta_key
+	 * @return array
+	 */
+	public function order_tour_countries( $connected_ids, $meta_key ) {
+		global $tour_itinerary;
+		if ( !empty( $connected_ids ) && 'destination_to_tour' === $meta_key ) {
+			$countries = lsx_to_get_tour_itinerary_ids( 'destination_to_tour' );
+
+			$new_items = array();
+			foreach ( $countries as $country ) {
+				$temp_parent = wp_get_post_parent_id( $country );
+				if ( 0 === $temp_parent || '0' === $temp_parent ) {
+					$new_items[] = $country;
+				}
+			}
+			$connected_ids = $new_items;
+		}
+		return $connected_ids;
 	}
 }
