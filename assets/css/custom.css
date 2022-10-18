@@ -3154,9 +3154,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	border: 1px solid #ce9e57;
 	background:#FFF;
 	position:absolute;
-	width:152px;
-	height:100px;
-	opacity:0.4;
+	width: 149px;
+    height: 159px;
+    margin-top: -10px;
 }
 .checkbox-wrapper {
 	position:absolute;
