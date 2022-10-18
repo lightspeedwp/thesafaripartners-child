@@ -3151,6 +3151,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-weight:100;
 	color:#ce9e57;
 	font-size:0;
+	border: 1px solid #ce9e57;
 	background:#FFF;
 	position:absolute;
 	width:152px;
