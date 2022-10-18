@@ -44,45 +44,6 @@
 
 				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
 			?>
-			<?php
-				//This is the sections for Days
-				$day_args = array(
-					'connected_type' => 'itinerary_to_day',
-					'connected_items' => get_the_ID(),
-					'orderby' => 'title',
-					'order' => 'ASC'
-					);
-				$days = new WP_Query( $day_args );
-				
-				$drinks_array = false;
-				$rooms_array = false;
-				if ( $days->have_posts() ) : 
-					while ( $days->have_posts() ) : $days->the_post();
-		
-						$day = get_post_meta( get_the_ID(), 'bs_day_day', true );
-						$room_basis = get_post_meta( get_the_ID(), 'bs_day_room_basis', true );
-						if(false != $room_basis && 'None'){
-							$rooms_array[0] = $room_basis;
-						}
-						
-						$drinks_basis = get_post_meta( get_the_ID(), 'bs_day_drinks_basis', true );
-						if(false != $drinks_basis && 'None'){
-							$drinks_array[0] = $drinks_basis;
-						}				
-					
-					endwhile; 
-					
-					
-					if(false != $rooms_array) {
-						echo '<div class="room-basis"><strong>Rooms Basis: </strong>'.str_replace('And',' And ',implode(',',$rooms_array)).'</div>';
-					}
-					
-					if(false != $drinks_array) {
-						echo '<div class="drinks-basis"><strong>Drinks Basis: </strong>'.str_replace('And',' And ',implode(',',$drinks_array)).'</div>';
-					}
-					
-				endif;
-				?>
 		</div>
 	
 																<div class="entry-content lsx-readmore">
