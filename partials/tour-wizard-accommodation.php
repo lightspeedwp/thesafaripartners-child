@@ -37,6 +37,15 @@
 														<div class="lsx-to-archive-wrapper">
 															<div class="lsx-to-tour-content">
 																<h2 class="lsx-to-archive-content-title"><?php the_title(); ?></h2>
+
+																<div class="lsx-to-widget-meta-data">
+			<?php
+				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
+
+			?>
+		</div>
 	
 																<div class="entry-content lsx-readmore">
 																	<?php lsx_to_entry_content_top(); ?>
