@@ -453,12 +453,11 @@ class Frontend {
 		global $tour_itinerary;
 		if ( !empty( $connected_ids ) && 'destination_to_tour' === $meta_key ) {
 			$countries = lsx_to_get_tour_itinerary_ids( 'destination_to_tour' );
-
 			$new_items = array();
 			foreach ( $countries as $country ) {
 				$temp_parent = wp_get_post_parent_id( $country );
-				if ( 0 === $temp_parent || '0' === $temp_parent ) {
-					$new_items[] = $country;
+				if ( 0 !== $temp_parent && '0' !== $temp_parent && false !== $temp_parent ) {
+					$new_items[] = $temp_parent;
 				}
 			}
 			$connected_ids = $new_items;
