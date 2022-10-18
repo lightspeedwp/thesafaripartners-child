@@ -56,8 +56,7 @@
 				
 				$drinks_array = false;
 				$rooms_array = false;
-				if ( $days->have_posts() ) : 
-					while ( $days->have_posts() ) : $days->the_post();
+			
 		
 						$day = get_post_meta( get_the_ID(), 'bs_day_day', true );
 						$room_basis = get_post_meta( get_the_ID(), 'bs_day_room_basis', true );
@@ -70,7 +69,7 @@
 							$drinks_array[0] = $drinks_basis;
 						}				
 					
-					endwhile; 
+					
 					
 					
 					if(false != $rooms_array) {
