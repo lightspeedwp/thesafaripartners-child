@@ -12,14 +12,12 @@
 					<article id="tour-<?php echo esc_attr( $post->post_name ); ?>" <?php post_class( 'lsx-to-archive-container' ); ?>>
 						<?php lsx_entry_top(); ?>
 						<div class="col-md-5 lsx-contact-module-image">
-					<div class="lsx-banner-image-wrap">
-									<picture>
-									<?php //echo get_the_post_thumbnail($page->ID,'full');
-								lsx_thumbnail( 'full' );
-							?>
-				</picture>
-							
-
+							<div class="lsx-banner-image-wrap">
+								<picture>
+								<?php //echo get_the_post_thumbnail($page->ID,'full');
+									lsx_thumbnail( 'full' );
+								?>
+								</picture>
 							</div>
 							<?php get_template_part( 'partials/mobile-tour-buttons' ); ?>
 						</div>

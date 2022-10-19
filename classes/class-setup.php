@@ -56,9 +56,8 @@ class Setup {
 		add_filter( 'lsx_to_scpo_engine_objects', array( $this, 'scpo_engine_objects' ), 10, 1 );
 		add_filter( 'lsx_to_scpo_engine_taxonomies', array( $this, 'scpo_engine_taxonomies' ), 10, 1 );
 		
-		
+		// Admin Menus
 		add_action( 'admin_menu', array( $this, 'register_sub_menus' ) );
-
 		$this->menu_position = 100;
 		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );
 
@@ -66,6 +65,9 @@ class Setup {
 		add_filter( 'lsx_to_disable_map', array( $this, 'disable_map' ), 10, 1 );
 
 		add_filter( 'lsx_get_thumbnail_post_placeholder_id', array( $this, 'accommodation_to_tour_placeholder' ), 10, 2 );
+
+		//Geo Content
+		add_action( 'init', array( $this, 'set_default_currency' ), 1 );
 	}
 
 	/**
@@ -433,5 +435,20 @@ class Setup {
 			)
 		);
 
+	}
+
+	/**
+	 * Sets the default currency based on the users location
+	 */
+	public function set_default_currency() {
+		if ( function_exists( 'lsx_geo_content' ) && ! isset( $_COOKIE['lsx_currencies_choice'] ) ) {
+			$users_country = lsx_geo_get_user_meta( 'country_code' );
+
+			if ( 'CA' === $users_country ) {
+				$test = setcookie( 'lsx_currencies_choice', 'CAD', 0, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), false );
+			} else {
+				$test = setcookie( 'lsx_currencies_choice', 'USD', 0, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), false );
+			}
+		}
 	}
 }

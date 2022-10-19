@@ -18,6 +18,14 @@
 		<?php wp_head(); ?>
 	</head>
 
+
+	<?php
+		if ( function_exists( 'lsx_geo_content' ) ) {
+			$users_country = lsx_geo_get_user_meta( 'country_code' );
+			$extra_class = 'country-'.$users_country;
+		}
+	?>
+
 	<body <?php body_class( 'lsx' ); ?>>
 		<?php wp_body_open(); ?>
 		<?php lsx_body_top(); ?>
