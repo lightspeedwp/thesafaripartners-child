@@ -446,8 +446,10 @@ class Setup {
 
 			if ( 'CA' === $users_country ) {
 				$test = setcookie( 'lsx_currencies_choice', 'CAD', 0, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), false );
+				$_COOKIE['lsx_currencies_choice'] = 'CAD';
 			} else {
 				$test = setcookie( 'lsx_currencies_choice', 'USD', 0, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), false );
+				$_COOKIE['lsx_currencies_choice'] = 'USD';
 			}
 		}
 	}
