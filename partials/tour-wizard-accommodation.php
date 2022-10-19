@@ -42,7 +42,7 @@
 			<?php
 				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
+				lsx_to_connected_countries( '<span class="' . $meta_class . 'data-day-includes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
 
 			?>
 		</div>
