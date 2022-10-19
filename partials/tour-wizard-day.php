@@ -74,6 +74,13 @@
 																					echo strip_tags( lsx_to_itinerary_accommodation( '<span class="' . $meta_class . 'accommodations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>', false ), array( 'span', 'br' ) );
 																					echo strip_tags( lsx_to_itinerary_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span><br/>', false ), array( 'span', 'br' ) );
 																					?>
+																					<?php
+				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+				lsx_to_itinerary_room_basis( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Room Basis', 'tour-operator' ) . ':</span> ', '</span>' );
+
+			?>
+		</div>
 																				</div>
 																					<div class="entry-content lsx-readmore">
 																						<?php lsx_to_itinerary_description(); ?>
