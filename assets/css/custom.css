@@ -100,7 +100,7 @@ th,tr,td,table,legend,label {
 legend {
 	border-bottom:none;
 }
-.whitebg{background:#fff;color:#fff;width:96px;}
+.whitebg{background:#fff;color:#fff;width:96px;padding:0 0px 7px!important}
 #mega-menu-wrap-filter-menu .mega-menu-toggle{display:none!important;}
 .archive .lsx-to-section#destination-map .lsx-map-preview{display:none!important;}
 .no-results.not-found{padding-top:30px;}
@@ -2207,7 +2207,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #dates-prices #menu-currency-selector:before{content: "Currency Selector ";font-size:10px;color:#000;}
 #menu-currency-selector{border-radius: none!important; }
 .submenu-currency{z-index:999;margin:0!important;background:#f2edea!important;}
-#menu-currency-selector .menu-item-currency{background:#f2edea!important;}
+#menu-currency-selector .menu-item-currency{background:#f2edea!important;padding:1px 2px;}
 .submenu-currency>li>a{padding:1px 15px!important;}
 
 #dates-prices #menu-currency-selector .sub-menu{
