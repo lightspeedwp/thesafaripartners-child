@@ -67,7 +67,7 @@ class Setup {
 		add_filter( 'lsx_get_thumbnail_post_placeholder_id', array( $this, 'accommodation_to_tour_placeholder' ), 10, 2 );
 
 		//Geo Content
-		add_action( 'plugins_loaded', array( $this, 'set_default_currency' ), 10 );
+		add_action( 'after_setup_theme', array( $this, 'set_default_currency' ), 10 );
 	}
 
 	/**
