@@ -3163,6 +3163,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     height: 159px;
     margin-top: -10px;
 }
+.page-template-template-wizard .checkbox-clear>[type="checkbox"]:checked+span::after{
+	width: 145px!important;
+    height: 186px!important;
+    margin-top: 9px!important;
+}
 .checkbox-wrapper {
 	position:absolute;
 	font-size:1rem;
