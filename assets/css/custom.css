@@ -2205,9 +2205,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	margin: 0;
 }
 #dates-prices #menu-currency-selector:before{content: "Currency Selector ";font-size:10px;color:#000;}
-#menu-currency-selector{background:#f2edea!important;border-radius: 0!important; }
-.submenu-currency{z-index:999;}
-#menu-currency-selector a{background:#f2edea!important;}
+#menu-currency-selector{border-radius: none!important; }
+.submenu-currency{z-index:999;margin:0!important;background:#f2edea!important;}
+#menu-currency-selector .menu-item-currency{background:#f2edea!important;}
+.submenu-currency>li>a{padding:1px 15px!important;}
 
 #dates-prices #menu-currency-selector .sub-menu{
 	right: 0;
