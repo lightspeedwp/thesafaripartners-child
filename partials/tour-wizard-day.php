@@ -77,7 +77,7 @@
 																					<?php
 				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-				lsx_to_itinerary_room_basis( '<span class="' . $meta_class . 'data-day-includes"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span>' );
+				lsx_to_itinerary_room_basis( '<span class="' . $meta_class . 'day-includes"><span class="lsx-to-meta-data-key">' . esc_html__( '', 'tour-operator' ) . '</span> ', '</span>' );
 
 			?>
 																				</div>
