@@ -2204,6 +2204,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding: 0;
 	margin: 0;
 }
+#dates-prices #menu-currency-selector:before{content: "Currency Selector ";font-size:12px;}
+.menu-currency-selector{background:#f2edea;border-radius: 0; }
+.submenu-currency{z-index:999;}
 
 #dates-prices #menu-currency-selector .sub-menu{
 	right: 0;
