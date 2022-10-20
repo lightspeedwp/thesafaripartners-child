@@ -2612,7 +2612,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	padding:0;
 	margin:0;
 }
-.single-lsx-to-tour .itinerary-navigation button {
+.single-lsx-to-tour .itinerary-navigation button,
+.single-lsx-to-tour .itinerary-navigation .current-title {
 	background:none;
 	color:#262423;
 	font-size:22px;
@@ -6598,7 +6599,8 @@ left: 11px!important;}
 	padding:0;
 	margin:0;
 }
-.single-lsx-to-tour .itinerary-navigation button {
+.single-lsx-to-tour .itinerary-navigation button,
+.single-lsx-to-tour .itinerary-navigation .current-title {
 	background:none;
 	color:#262423;
 	font-size:22px;

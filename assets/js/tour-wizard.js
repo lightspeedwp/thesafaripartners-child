@@ -782,12 +782,13 @@ function checkForSliders( $next ) {
 
 	let createItineraryNavigation = function( $itinerary ) {
 		let itineraryItems = [];
+		let current_days   = [];
 		let counter = 0;
 
-		
-
-		$itinerary.find(".itinerary-item .lsx-to-tour-content .lsx-to-archive-content-title").each(function(){
-			itineraryItems.push($(this).html());
+		$itinerary.find(".itinerary-item .lsx-to-tour-content").each(function(){
+			itineraryItems.push($(this).find('.lsx-to-archive-content-title').html());
+			current_days.push($(this).find('.heading-destinations').html());
+			$(this).find('.heading-destinations').remove();
 		});
 
 		// Run through and inject the new text.
@@ -797,10 +798,12 @@ function checkForSliders( $next ) {
 
 			let navEle    = '<div class="itinerary-navigation">';
 			if ( 0 != counter ) {
-				navEle += '<button class="lsx-wizard-button-previous ignore-text"><span>' + itineraryItems[prevIndex] + '</span></button>';
+				navEle += '<button class="lsx-wizard-button-previous ignore-text"><span></span></button>';
 			} else {
 				navEle += '<span class="first-day ignore-text">' + itineraryItems[counter] + '</span>';
 			}
+
+			navEle += '<span class="current-title">' + current_days[counter] + '</span>';
 
 			if ( counter != ( itineraryItems.length - 1 ) ) {
 				navEle += '<button class="lsx-wizard-button-next ignore-text"><span>' + itineraryItems[nextIndex] + '</span></button>';
