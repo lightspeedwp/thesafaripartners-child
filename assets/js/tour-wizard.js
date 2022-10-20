@@ -15,7 +15,6 @@ function openCity(evt, cityName) {
 	jQuery( '.tablinks[data-wrapper="'+cityName+'"]' ).addClass('active');
 
 	if ( 'Maps' === cityName ) {
-		console.log(cityName);
 		jQuery(".lsx-map-placeholder").click();
 	}
 
@@ -37,7 +36,6 @@ function openinCity(evt, eventName) {
 
 function checkForSliders( $next ) {
 	if ( 0 < $next.find( '.tour-accommodation-gallery .slider-content' ).length ) {
-		console.log($next);
 		var currentID = $next.find( '.tour-accommodation-gallery').attr('data-slider-id');
 
 		$next.find( '.tour-accommodation-gallery .placeholder-image').hide();
@@ -75,7 +73,6 @@ function checkForSliders( $next ) {
 	}
 
 	if ( 0 < $next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).length ) {
-		console.log('related');
 		$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick('unslick');
 		let settings = {
 			"draggable": false,
@@ -111,7 +108,6 @@ function checkForSliders( $next ) {
 			]
 		};
 		$next.find( '.related-tours-wrapper .lsx-to-slider-inner' ).slick(settings);
-		console.log('triggered');
 	}
 }
 
@@ -319,8 +315,6 @@ function checkForSliders( $next ) {
 			$plugin = $(this);
 			var settings = $plugin.data('lsxWizard').settings;
 			var $elementToSlide = $plugin.find(".lsx-wizard-steps-wrapper .active");
-			console.log($elementToSlide);
-			console.log(settings);
 			slideLeft($elementToSlide, settings, $plugin);
 		},
 		first: function (a) {
@@ -423,17 +417,13 @@ function checkForSliders( $next ) {
 				var activeElementPosition = highlightActiveElement($plugin);
 				unmarkStepAsCompleted(activeElementPosition, $plugin);
 
-				console.log(activeElementPosition);
-
 				if (activeElementPosition === 1) {
 					$plugin.find('.lsx-wizard-button-previous').hide();
 
 					$.isFunction(settings.onSlideRightLimitReached) && settings.onSlideRightLimitReached.call($plugin);
 					$plugin.trigger("slideRightLimitReached.lsxWizard", this);
 				} else {
-					console.log($plugin.find('.lsx-wizard-button-next'));
 					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
-						console.log('');
 						unsetFinishButton($plugin, settings);
 					}
 				}
