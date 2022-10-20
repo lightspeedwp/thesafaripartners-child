@@ -259,8 +259,6 @@ function checkForSliders( $next ) {
 						e.preventDefault();
 						var $elementToSlide = $this.find(".lsx-wizard-steps-wrapper .active");
 
-						console.log($elementToSlide);
-
 						if ($.isFunction(settings.onButtonNextClick)) {
 							// Trigger the override callback it the callback is set at the plugin initialization...
 							settings.onButtonNextClick.call(this);
@@ -268,7 +266,6 @@ function checkForSliders( $next ) {
 							// ...slide left imediatelly otherwise.
 							slideLeft($elementToSlide, settings, $this);
 						}
-
 					});
 
 					// Stepper navigation
@@ -657,6 +654,8 @@ function checkForSliders( $next ) {
 
 		$finishButton.css(settings.lsxWizard.buttons.finish.text.css);
 
+		$('.tablinks.accommodation-tablink').show();
+
 		$finishButton
 			.removeClass('btn-primary')
 			.addClass('btn-success')
@@ -671,6 +670,8 @@ function checkForSliders( $next ) {
 		$iconNext.css(settings.lsxWizard.buttons.next.icon.css);
 
 		$iconNextText.css(settings.lsxWizard.buttons.next.text.css);
+
+		$('.tablinks.accommodation-tablink').hide();
 
 		$finishButton
 			.removeClass('btn-success')
