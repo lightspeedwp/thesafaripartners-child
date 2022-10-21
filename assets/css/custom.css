@@ -953,22 +953,22 @@ th {
 	height:285px;
 	max-height:285px;
 	overflow-y:auto;
-	background:-moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 24%); 
+	background:-moz-linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%); 
 
     /* safari 5.1+,chrome 10+ */
-    background:-webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 24%);
+    background:-webkit-linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
 
     /* opera 11.10+ */
-    background:-o-linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 24%);
+    background:-o-linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
 
     /* ie 6-9 */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=1 );
 
     /* ie 10+ */
-    background:-ms-linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 24%);
+    background:-ms-linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
 
     /* global 94%+ browsers support */
-    background:linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 24%);
+    background:linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
 }
 .lsx-readmore .read-more {
 	padding: 10px 0px;
