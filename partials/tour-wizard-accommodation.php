@@ -53,8 +53,8 @@
 																		if ( ! empty( $titles ) ) {
 																			?>
 																			<span class="lsx-to-meta-data lsx-to-meta-data-destinations">
-																				<span class="lsx-to-meta-data-key"><?php esc_html_e( 'Location:', 'thesafaripartners-child' ); ?></span>
-																				<?php echo implode( ',', $titles ); ?>
+																				<span class="lsx-to-meta-data-key"><?php esc_html_e( 'Location:', 'thesafaripartners-child' ); ?> <?php echo implode( ',', $titles ); ?></span>
+																				
 																			</span>
 																			<?php
 																		}
