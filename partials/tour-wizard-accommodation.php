@@ -39,13 +39,28 @@
 																<h2 class="lsx-to-archive-content-title"><?php the_title(); ?></h2>
 
 																<div class="lsx-to-widget-meta-data">
-			<?php
-				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+																<?php
+																	$accommodation_location = get_post_meta( get_the_ID(), 'destination_to_accommodation', false );
+																	if ( ! empty( $accommodation_location ) && false !== $accommodation_location ) {
 
-				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
-
-			?>
-		</div>
+																		$titles = array();
+																		foreach ( $accommodation_location as $a_local ) {
+																			$a_parent = wp_get_post_parent_id( $a_local );
+																			if ( 0 !== $a_parent && '0' !== $a_parent && null !== $a_parent ) {
+																				$titles[] = get_the_title( $a_parent );
+																			}
+																		}
+																		if ( ! empty( $titles ) ) {
+																			?>
+																			<span class="lsx-to-meta-data lsx-to-meta-data-destinations">
+																				<span class="lsx-to-meta-data-key"><?php esc_html_e( 'Location:', 'thesafaripartners-child' ); ?></span>
+																				<?php echo implode( ',', $titles ); ?>
+																			</span>
+																			<?php
+																		}
+																	}
+																?>
+																</div>
 	
 																<div class="entry-content lsx-readmore">
 																	<?php lsx_to_entry_content_top(); ?>
