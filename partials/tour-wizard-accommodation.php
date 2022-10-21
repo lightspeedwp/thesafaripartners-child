@@ -47,7 +47,7 @@
 																		foreach ( $accommodation_location as $a_local ) {
 																			$a_parent = wp_get_post_parent_id( $a_local );
 																			if ( 0 !== $a_parent && '0' !== $a_parent && null !== $a_parent ) {
-																				$titles[] = get_the_title( $a_parent );
+																				$titles[] = get_the_title( $a_local );
 																			}
 																		}
 																		if ( ! empty( $titles ) ) {
