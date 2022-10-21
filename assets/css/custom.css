@@ -968,7 +968,7 @@ th {
     background:-ms-linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
 
     /* global 94%+ browsers support */
-    background:linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
+    background-image:linear-gradient(0deg, #FFFFFF 1%, #FFFFFF00 24%);
 }
 .lsx-readmore .read-more {
 	padding: 10px 0px;
