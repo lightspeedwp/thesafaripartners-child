@@ -112,11 +112,18 @@ class WETU_Importer {
 	 */
 	public function filter_travel_styles( $tags = array(), $id, $importer ) {
 		if ( ! empty( $tags ) ) {
+			wp_set_object_terms( $id, array(), 'travel-style' );
+			wp_set_object_terms( $id, array(), 'who' );
+			wp_set_object_terms( $id, array(), 'tour-type' );
+			wp_set_object_terms( $id, array(), 'budget' );
+			wp_set_object_terms( $id, array(), 'when' );
+
 			foreach ( $this->tag_mapping as $key => $terms ) {
 				if ( ! taxonomy_exists( $key ) ) {
 					continue;
 				}
 				$found_terms = array_intersect( $tags, $terms );
+
 				if ( ! empty( $found_terms ) ) {
 					foreach ( $found_terms as $found_term ) {
 
