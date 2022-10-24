@@ -142,8 +142,8 @@ class Itinerary_Images {
 
 			global $tour_itinerary;
 			// Then look for a second use image.
-			if ( false === $next_image && 0 !== $tour_itinerary->post_id && '' !== $tour_itinerary->post_id ) {
-				$next_image = $this->find_next_image( $tour_itinerary->post_id, $tour_itinerary );
+			if ( false === $next_image && 0 !== $tour_itinerary->last_item_id && '' !== $tour_itinerary->last_item_id ) {
+				$next_image = $this->find_next_image( $tour_itinerary->last_item_id, $tour_itinerary );
 			}
 
 			// Then look for a second use image.
@@ -153,7 +153,7 @@ class Itinerary_Images {
 
 			// If there is one use it.
 			if ( false !== $next_image ) {
-				$temp_src_array   = wp_get_attachment_image_src( $next_image, $size );
+				$temp_src_array   = wp_get_attachment_image_src( $next_image, 'large' );
 				if ( is_array( $temp_src_array ) ) {
 					$thumbnail_src = $temp_src_array[0];
 				}
