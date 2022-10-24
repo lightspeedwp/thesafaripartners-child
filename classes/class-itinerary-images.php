@@ -64,6 +64,7 @@ class Itinerary_Images {
 	private function __construct() {
 		add_filter( 'lsx_to_itinerary_empty_attachments', array( $this, 'find_next_image' ), 10, 2 );
 		add_filter( 'lsx_to_itinerary_thumbnail_src', array( $this, 'departure_day_image' ), 11, 3 );
+		add_filter( 'tsp_date_prices_image', array( $this, 'date_prices_image' ), 10, 1 );
 	}
 
 	/**
@@ -144,15 +145,23 @@ class Itinerary_Images {
 			// Then look for a second use image.
 			if ( false === $next_image && 0 !== $tour_itinerary->last_item_id && '' !== $tour_itinerary->last_item_id ) {
 				$next_image = $this->find_next_image( $tour_itinerary->last_item_id, $tour_itinerary );
+				if ( false !== $next_image ) {
+					$tour_itinerary->save_used_image( $next_image );
+					$this->save_used_image( $next_image );
+				}
 			}
 
 			// Then look for a second use image.
 			if ( false === $next_image && 0 !== $this->last_post_id && '' !== $this->last_post_id ) {
 				$next_image = $this->find_next_image( $this->last_post_id, $tour_itinerary );
+				if ( false !== $next_image ) {
+					$this->save_used_image( $next_image );
+				}
 			}
 
 			// If there is one use it.
 			if ( false !== $next_image ) {
+				
 				$temp_src_array   = wp_get_attachment_image_src( $next_image, 'large' );
 				if ( is_array( $temp_src_array ) ) {
 					$thumbnail_src = $temp_src_array[0];
@@ -160,5 +169,21 @@ class Itinerary_Images {
 			}
 		}
 		return $thumbnail_src;
+	}
+
+	public function date_prices_image( $thumbnail_src = false ) {
+		$thumbnail_src = $this->departure_day_image( $thumbnail_src, 1, 1 );
+		return $thumbnail_src;
+	}
+
+	/**
+	 * Save the id of the images that have already been displayed.
+	 *
+	 * @param   $image_id   | string
+	 */
+	public function save_used_image( $image_id = false ) {
+		if ( false !== $image_id ) {
+			$this->images_used[] = $image_id;
+		}
 	}
 }

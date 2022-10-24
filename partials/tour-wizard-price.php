@@ -14,8 +14,11 @@
 						<div class="col-md-5 lsx-contact-module-image">
 							<div class="lsx-banner-image-wrap">
 								<picture>
-								<?php //echo get_the_post_thumbnail($page->ID,'full');
-									lsx_thumbnail( 'full' );
+								<?php
+									$prices_image = apply_filters( 'tsp_date_prices_image', false );
+									if ( false !== $prices_image ) {
+										echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $prices_image . '">' );
+									}
 								?>
 								</picture>
 							</div>
