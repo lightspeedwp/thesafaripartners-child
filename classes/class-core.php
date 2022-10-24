@@ -51,6 +51,13 @@ class Core {
 	public $frontend;
 
 	/**
+	 * FrontEnd
+	 *
+	 * @var object tsp_child\classes\Itinerary_Images();
+	 */
+	public $itinerary_images;
+
+	/**
 	 * Search
 	 *
 	 * @var object tsp_child\classes\Search();
@@ -80,6 +87,9 @@ class Core {
 
 		require_once get_stylesheet_directory() . '/classes/class-frontend.php';
 		$this->frontend = Frontend::get_instance();
+
+		require_once get_stylesheet_directory() . '/classes/class-itinerary-images.php';
+		$this->itinerary_images = Itinerary_Images::get_instance();
 
 		$this->facetwp = new stdClass();
 		require_once get_stylesheet_directory() . '/classes/class-post-connections.php';
