@@ -61,11 +61,12 @@ class Setup {
 		$this->menu_position = 100;
 		add_filter( 'tour-operator-menu-position', array( $this, 'admin_menu_position' ), 10, 2 );
 
-		//remove the filters we need
+		//Enabled and disable functions
 		add_filter( 'lsx_to_disable_map', array( $this, 'disable_map' ), 10, 1 );
-
 		add_filter( 'lsx_get_thumbnail_post_placeholder_id', array( $this, 'accommodation_to_tour_placeholder' ), 10, 2 );
-
+		add_filter( 'lsx_get_thumbnail_post_placeholder_id', array( $this, 'accommodation_to_tour_placeholder' ), 10, 2 );
+		add_filter( 'lsx_to_itinerary_append_parent_destinations', array( $this, 'enable_itinerary_detination_parent_images' ), 10, 1 );
+		
 		//Geo Content
 		add_action( 'after_setup_theme', array( $this, 'set_default_currency' ), 10 );
 	}
@@ -452,5 +453,16 @@ class Setup {
 				$_COOKIE['lsx_currencies_choice'] = 'USD';
 			}
 		}
+	}
+
+	/**
+	 * Allow the itinterary to pull images from the parent country
+	 *
+	 * @param boolean $disable
+	 * @return boolean
+	 */
+	public function enable_itinerary_detination_parent_images( $disable = false ) {
+		$disable = true;
+		return $disable;
 	}
 }
