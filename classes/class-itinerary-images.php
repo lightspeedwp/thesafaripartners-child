@@ -32,7 +32,7 @@ class Itinerary_Images {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var      array
+	 * @var array
 	 */
 	public $current_attachments = array();
 
@@ -41,9 +41,18 @@ class Itinerary_Images {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var      string
+	 * @var array
 	 */
 	public $images_used = array(0);
+
+	/**
+	 * Holds the last postID used
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	public $last_post_id = false;
 
 	/**
 	 * Initialize the plugin by setting localization, filters, and administration functions.
@@ -54,6 +63,7 @@ class Itinerary_Images {
 	 */
 	private function __construct() {
 		add_filter( 'lsx_to_itinerary_empty_attachments', array( $this, 'find_next_image' ), 10, 2 );
+		add_filter( 'lsx_to_itinerary_thumbnail_src', array( $this, 'departure_day_image' ), 11, 3 );
 	}
 
 	/**
@@ -80,7 +90,9 @@ class Itinerary_Images {
 	 */
 	public function find_next_image( $item_id, $itinerary_query ) {
 		$return = false;
-		if ( false !== $item_id ) {
+		if ( false !== $item_id && 0 !== $item_id && '' !== $item_id ) {
+			$this->last_post_id    = $item_id;
+
 			$this->register_current_gallery( $item_id, $itinerary_query );
 
 			if ( isset( $this->current_attachments[ $item_id ] ) && ! empty( $this->current_attachments[ $item_id ] ) ) {
@@ -105,12 +117,48 @@ class Itinerary_Images {
 		if ( false !== $item_id && ! isset( $this->current_attachments[ $item_id ] ) ) {
 			if ( ! empty( $itinerary_query->current_attachments[ $item_id ] ) ) {
 				$this->current_attachments[ $item_id ] = $itinerary_query->current_attachments[ $item_id ];
+				shuffle( $this->current_attachments[ $item_id ] );
 			} else {
 				$gallery = get_post_meta( $item_id, 'gallery', false );
 				if ( false !== $gallery && ! empty( $gallery ) ) {
 					$this->current_attachments[ $item_id ] = $gallery;
+					shuffle( $this->current_attachments[ $item_id ] );
 				}
 			}
 		}
+	}
+
+	/**
+	 * Overwrites the departure days thumbanil with the tours featured image.
+	 *
+	 * @param $thumbnail_src string
+	 * @param $index string
+	 * @param $count string
+	 * @return string
+	 */
+	function departure_day_image( $thumbnail_src = false, $index = 1, $count = 0, $size = 'lsx-thumbnail-square' ) {
+		if ( $count <= $index ) {
+			$next_image = false;
+
+			global $tour_itinerary;
+			// Then look for a second use image.
+			if ( false === $next_image && 0 !== $tour_itinerary->post_id && '' !== $tour_itinerary->post_id ) {
+				$next_image = $this->find_next_image( $tour_itinerary->post_id, $tour_itinerary );
+			}
+
+			// Then look for a second use image.
+			if ( false === $next_image && 0 !== $this->last_post_id && '' !== $this->last_post_id ) {
+				$next_image = $this->find_next_image( $this->last_post_id, $tour_itinerary );
+			}
+
+			// If there is one use it.
+			if ( false !== $next_image ) {
+				$temp_src_array   = wp_get_attachment_image_src( $next_image, $size );
+				if ( is_array( $temp_src_array ) ) {
+					$thumbnail_src = $temp_src_array[0];
+				}
+			}
+		}
+		return $thumbnail_src;
 	}
 }
