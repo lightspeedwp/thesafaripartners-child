@@ -46,7 +46,7 @@ class WETU_Importer {
 			'Romantic & Private',
 			'Group Travel',
 			'Migration Experiences',
-			'Gorillas Trekking',
+			'Gorillas',
 			'Beach & Relaxation',
 			'Flying',
 		),
