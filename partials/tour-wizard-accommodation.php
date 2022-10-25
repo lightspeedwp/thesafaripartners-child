@@ -3,7 +3,8 @@
 		<div class="lsx-tour-module">
 			<?php 
 			//$accommodation = get_post_meta( get_the_ID(), 'accommodation_to_tour', false );
-			$accommodation = lsx_to_get_tour_itinerary_ids( 'accommodation_to_tour' );
+			$accommodation   = lsx_to_get_tour_itinerary_ids( 'accommodation_to_tour' );
+			$locations_array = tsp_itinerary_accommodation_locations();
 
 			if ( ! empty( $accommodation ) && false !== $accommodation ) {
 				$accommodation_args = array(
@@ -42,11 +43,10 @@
 
 																<div class="lsx-to-widget-meta-data">
 																<?php
-																	$accommodation_location = get_post_meta( get_the_ID(), 'destination_to_accommodation', false );
-																	if ( ! empty( $accommodation_location ) && false !== $accommodation_location ) {
+																	if ( isset( $locations_array[ get_the_ID() ] ) ) {
 
 																		$titles = array();
-																		foreach ( $accommodation_location as $a_local ) {
+																		foreach ( $locations_array[ get_the_ID() ] as $a_local ) {
 																			$a_parent = wp_get_post_parent_id( $a_local );
 																			if ( 0 !== $a_parent && '0' !== $a_parent && null !== $a_parent ) {
 																				$titles[] = get_the_title( $a_local );

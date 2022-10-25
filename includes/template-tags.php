@@ -305,3 +305,51 @@ function tsp_to_tour_single_fast_facts() {
 	<?php 
     }
 }
+
+/**
+ * Retrieves the accommodations location from its itinerary day.
+ * the itinerary loop.
+ *
+ * @package       tour-operator
+ * @subpackage    template-tags
+ * @category      itinerary
+ *
+ * @param string $item_id
+ * @param string $meta_key
+ * @return array
+ */
+function tsp_itinerary_accommodation_locations() {
+	$tour_itinerary = new \lsx\legacy\Itinerary_Query();
+	
+	$locations = array();
+	$a_ids     = array();
+	$d_ids     = array();
+	if ( $tour_itinerary->has_itinerary() ) {
+		while ( $tour_itinerary->while_itinerary() ) {
+			$tour_itinerary->current_itinerary_item();
+
+			if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) && '' !== $tour_itinerary->itinerary['destination_to_tour'] ) {				
+				if ( ! is_array( $tour_itinerary->itinerary['destination_to_tour'] ) ) {
+					$d_ids = array( $tour_itinerary->itinerary['destination_to_tour'] );
+				} else {
+					$d_ids = $tour_itinerary->itinerary['destination_to_tour'];
+				}
+			}
+
+			if ( ! empty( $tour_itinerary->itinerary['accommodation_to_tour'] ) && '' !== $tour_itinerary->itinerary['accommodation_to_tour'] ) {				
+				if ( ! is_array( $tour_itinerary->itinerary['accommodation_to_tour'] ) ) {
+					$a_ids = array( $tour_itinerary->itinerary['accommodation_to_tour'] );
+				} else {
+					$a_ids = $tour_itinerary->itinerary['accommodation_to_tour'];
+				}
+			}
+
+			if ( ! empty( $d_ids ) && ! empty( $a_ids ) ) {				
+				foreach ( $a_ids as $a_id ) {
+					$locations[ $a_id ] = $d_ids;
+				}
+			}
+		}
+	}
+	return $locations;
+}
