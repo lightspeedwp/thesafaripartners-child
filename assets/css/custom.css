@@ -3224,6 +3224,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .lsx-testimonials-slider .lsx-testimonials-slot.slick-slide {
     margin-left: 6px;
 }
+.lsx-to-widget-view-all > span:before, .lsx-to-widget-view-all > span:after{display:none!important;}
+.lsx-to-widget-view-all .fa{display:none;}
+.lsx-to-widget-view-all .btn{border:none;background:none!important;color:#fff!important;}
+.lsx-to-widget-view-all{margin-top:0!important;}
 .lsx-testimonials-slider .slick-arrow{top: 96%!important;}
 	.lsx-testimonials-slider .slick-arrow.slick-next {
 		right: 2rem;
