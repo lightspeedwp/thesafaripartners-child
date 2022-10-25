@@ -3227,7 +3227,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .lsx-to-widget-view-all > span:before, .lsx-to-widget-view-all > span:after{display:none!important;}
 .lsx-to-widget-view-all .fa{display:none;}
 .lsx-to-widget-view-all .btn{border:none;background:none!important;color:#fff!important;}
-.lsx-to-widget-view-all{margin-top:0!important;}
+.lsx-to-widget-view-all .btn:hover{color:#ce9e57!important;}
+.lsx-to-widget-view-all{margin-top:-38px!important;}
 .lsx-testimonials-slider .slick-arrow{top: 96%!important;}
 	.lsx-testimonials-slider .slick-arrow.slick-next {
 		right: 2rem;
