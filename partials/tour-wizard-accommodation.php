@@ -2,7 +2,9 @@
 	<div class="col-md-12 col-sm-12">
 		<div class="lsx-tour-module">
 			<?php 
-			$accommodation = get_post_meta( get_the_ID(), 'accommodation_to_tour', false );
+			//$accommodation = get_post_meta( get_the_ID(), 'accommodation_to_tour', false );
+			$accommodation = lsx_to_get_tour_itinerary_ids( 'accommodation_to_tour' );
+
 			if ( ! empty( $accommodation ) && false !== $accommodation ) {
 				$accommodation_args = array(
 					'post_type'      => 'accommodation',
