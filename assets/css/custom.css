@@ -953,9 +953,18 @@ th {
 	height:285px;
 	max-height:285px;
 	overflow-y:auto;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 85%);
 }
 
+.lsx-readmore::after {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 85%);
+	bottom: 0;
+	content: '';
+	display: inline-block;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	width: 100%;
+  }
 .lsx-readmore .read-more {
 	padding: 10px 0px;
 		font-weight: normal;
