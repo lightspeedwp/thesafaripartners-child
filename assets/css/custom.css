@@ -967,13 +967,16 @@ th {
   }
   .lsx-readmore p{padding-bottom:80px;}
 .lsx-readmore .read-more {
-	padding: 10px 0px;
+		padding: 10px 0px;
 		font-weight: normal;
-		font-family:"moret",serif!important;
+		font-family: "moret",serif!important;
+		position: absolute;
 		color: #ce9e57!important;
 		text-transform: uppercase;
-		font-size:19px;
-	letter-spacing:-0.1px!important;
+		font-size: 19px;
+		bottom: -24px;
+		z-index: 99999;
+		letter-spacing: -0.1px!important;
 }
 .archive .wizard-who,.single .wizard-who {
 	height:200px;
