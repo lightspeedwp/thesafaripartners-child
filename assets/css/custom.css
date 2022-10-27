@@ -3843,7 +3843,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		background-color: #fff;
     letter-spacing: -0.7px;
     font-size: 15px;
-	padding: 0px;
+	padding: 4px 0 4px 10px;
     color: #262423!important;
    }
 	.mega-search.expand-to-left {
