@@ -104,6 +104,9 @@ class Core {
 		require_once get_stylesheet_directory() . '/classes/class-wetu-importer.php';
 		$this->wetu_importer = WETU_Importer::get_instance();
 
+		require_once get_stylesheet_directory() . '/classes/class-wetu-automation.php';
+		$this->wetu_automation = WETU_Automation::get_instance();
+
 		require_once get_stylesheet_directory() . '/includes/template-tags.php';
 	}
 

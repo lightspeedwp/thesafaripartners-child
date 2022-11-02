@@ -1,0 +1,177 @@
+<?php
+/**
+ * Class Admin
+ *
+ * @package   tsp_child\classes
+ * @author    LightSpeed
+ * @license   GPL-2.0+
+ * @link
+ * @copyright 2020 LightSpeed
+ */
+
+namespace tsp_child\classes;
+
+use WP_Query;
+
+/**
+ * Class Admin
+ *
+ * @package tsp_child\classes
+ */
+class WETU_Automation {
+
+	/**
+	 * Holds class instance
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var      object tsp_child\classes\WETU_Automation()
+	 */
+	protected static $instance = null;
+
+	/**
+	 * Initialize the plugin by setting localization, filters, and administration functions.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access private
+	 */
+	private function __construct() {
+		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'init', array( $this, 'tester_init' ) );
+	}
+
+	/**
+	 * Return an instance of this class.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return    object \tsp_child\classes\WETU_Automation()    A single instance of this class.
+	 */
+	public static function get_instance() {
+		// If the single instance hasn't been set, set it now.
+		if ( null === self::$instance ) {
+			self::$instance = new self();
+		}
+		return self::$instance;
+	}
+
+	/**
+	 * Register the initian functions
+	 *
+	 * @return void
+	 */
+	public function init() {
+		if ( function_exists( 'as_enqueue_async_action' ) ) {
+			$this->schedule_main_action();
+			add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
+
+			// These are the actions which sync the individual items.
+			add_action( 'lsx_wetu_sync_tour', array( $this, 'tour_sync_action' ), 10, 2 );
+		}
+	}
+
+	/**
+	 * Register the test functions.
+	 *
+	 * @return void
+	 */
+	public function tester_init() {
+		if ( isset( $_GET['wetu_debug'] ) ) {
+			$this->run_main_actions();
+		}
+	}
+
+	/**
+	 * This will schedule our main action if it is not found.
+	 * It will run daily.
+	 *
+	 * @return void
+	 */
+	public function schedule_main_action() {
+		//master scheduled actions
+		if ( ! wp_next_scheduled( 'lsx_wetu_master_sync' ) ) {
+			$master_sync_scheduler = strtotime( '01:00:00' );
+			wp_schedule_event( $master_sync_scheduler, 'daily', 'lsx_wetu_master_sync' );
+		}
+	}
+
+	/**
+	 * Grab the tours and compare them to the 
+	 *
+	 * @return void
+	 */
+	public function run_main_actions() {
+		$tours      = $this->get_current_tours();
+		$wetu_tours = $this->get_wetu_tours();
+
+		print_r('<pre>');
+		print_r($wetu_tours);
+		print_r('</pre>');
+
+		die();
+
+		if ( ! empty( $tours ) ) {
+			foreach ( $tours as $tour ) {
+				$action_id = as_enqueue_async_action(
+					'lsx_wetu_sync_tour', 
+					array(
+						'tour_id' => $tour,
+					),
+					'lsx_wetu_sync' // . date('dmy')
+				);
+				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
+			}
+		}
+	}
+
+	/**
+	 * Gets the current tours in the system.
+	 *
+	 * @return array
+	 */
+	public function get_current_tours() {
+		$tours = array();
+		$args = array(
+			'post_type' => 'tour',
+			'post_status' => 'publish',
+			//'posts_per_page' => -1,
+			'posts_per_page' => 5,
+			'meta_key' => 'lsx_wetu_id',
+			'meta_compare' => 'EXISTS',
+			'fields' => 'ids',
+		);
+		$tour_query = new \WP_Query( $args );
+		if ( $tour_query->have_posts() ) {
+			$tours = $tour_query->posts;
+		}
+
+		return $tours;
+	}
+
+	public function get_wetu_tours() {
+		$tours = array();
+
+		$data = wp_remote_get( 'https://wetu.com/API/Itinerary/ROARLEMOUP5IENOE/V8/List?type=Personal&own=true' );
+		print_r('<pre>');
+		print_r($data);
+		print_r('</pre>');
+		if ( ! is_wp_error( $data ) && ! empty( $data ) && isset( $data['response'] ) && isset( $data['response']['code'] ) && 200 === $data['response']['code'] ) {
+			$jdata  = json_decode( $data['body'], true );
+			var_dump('here');
+			foreach ( $jdata as $data ) {
+				if ( isset( $data->operator_id ) && '3487' === (string) $data->operator_id ) {
+					$tours[] = $data;
+				}
+			}
+		}
+		return $tours;
+	}
+
+	public function tour_sync_action( $tour_id ) {
+		$lsx_wetu_importer = \LSX_WETU_Importer::get_instance();
+
+		update_post_meta( $tour_id, 'lsx_wetu_sync_date', strtotime( 'now' ) );
+		return true;
+	}
+}
