@@ -77,8 +77,12 @@ class WETU_Automation {
 	 * @return void
 	 */
 	public function tester_init() {
-		if ( isset( $_GET['wetu_debug'] ) ) {
+		if ( isset( $_GET['wetu_main_debug'] ) ) {
 			$this->run_main_actions();
+		}
+
+		if ( isset( $_GET['wetu_tour_debug'] ) ) {
+			$this->tour_sync_action( $_GET['wetu_tour_debug'] );
 		}
 	}
 
@@ -103,15 +107,20 @@ class WETU_Automation {
 	 */
 	public function run_main_actions() {
 		$tours      = $this->get_current_tours();
-		$wetu_tours = $this->get_wetu_tours();
+		//$wetu_tours = $this->get_wetu_tours();
 
-		print_r('<pre>');
+		/*print_r('<pre>');
 		print_r($wetu_tours);
 		print_r('</pre>');
+		die();*/
 
-		die();
+		if ( ! empty( $wetu_tours ) ) {
 
-		if ( ! empty( $tours ) ) {
+			/*print_r('<pre>');
+			print_r($wetu_tours);
+			print_r('</pre>');
+			die();*/
+
 			foreach ( $tours as $tour ) {
 				$action_id = as_enqueue_async_action(
 					'lsx_wetu_sync_tour', 
@@ -122,6 +131,8 @@ class WETU_Automation {
 				);
 				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
 			}
+		} else {
+			// Reschedule the main actions till it runs.
 		}
 	}
 
@@ -145,23 +156,20 @@ class WETU_Automation {
 		if ( $tour_query->have_posts() ) {
 			$tours = $tour_query->posts;
 		}
-
 		return $tours;
 	}
 
 	public function get_wetu_tours() {
 		$tours = array();
-
 		$data = wp_remote_get( 'https://wetu.com/API/Itinerary/ROARLEMOUP5IENOE/V8/List?type=Personal&own=true' );
-		print_r('<pre>');
-		print_r($data);
-		print_r('</pre>');
 		if ( ! is_wp_error( $data ) && ! empty( $data ) && isset( $data['response'] ) && isset( $data['response']['code'] ) && 200 === $data['response']['code'] ) {
 			$jdata  = json_decode( $data['body'], true );
 			var_dump('here');
-			foreach ( $jdata as $data ) {
-				if ( isset( $data->operator_id ) && '3487' === (string) $data->operator_id ) {
-					$tours[] = $data;
+			if ( isset( $jdata['itineraries'] ) && ! empty( $jdata['itineraries'] ) ) {
+				foreach ( $jdata['itineraries'] as $jata ) {
+					if ( isset( $jata['operator_id'] ) && '3487' === (string) $jata['operator_id'] ) {
+						$tours[] = $jata;
+					}
 				}
 			}
 		}
@@ -169,9 +177,52 @@ class WETU_Automation {
 	}
 
 	public function tour_sync_action( $tour_id ) {
-		$lsx_wetu_importer = \LSX_WETU_Importer::get_instance();
+		$return = false;
 
-		update_post_meta( $tour_id, 'lsx_wetu_sync_date', strtotime( 'now' ) );
-		return true;
+		$wetu_id = get_post_meta( $tour_id, 'lsx_wetu_id', true );
+
+		$importable = array(
+			'price',
+			'duration',
+			'group_size',
+			'category',
+			'itineraries',
+			'start_end_point',
+			'itinerary_description',
+			'itinerary_included',
+			'itinerary_excluded',
+			'room_basis',
+			'drinks_basis',
+			'accommodation',
+			'destination',
+		);
+
+		if ( false !== $wetu_id && '' !== $wetu_id ) {
+			$jdata = wp_remote_get( 'https://wetu.com/API/Itinerary/V8/Get?id=' . $wetu_id );
+	
+			if ( ! is_wp_error( $jdata ) && ! empty( $jdata ) && isset( $jdata['response'] ) && isset( $jdata['response']['code'] ) && 200 === $jdata['response']['code'] ) {
+				$jdata             = json_decode( $jdata['body'], true );
+				$lsx_wetu_importer = new \LSX_WETU_Importer_Tours();
+				$response          = $lsx_wetu_importer->import_row( $jdata, $wetu_id, $tour_id, array(), $importable );
+
+			}
+			if ( null !== $response ) {
+				$return = true;
+				update_post_meta( $tour_id, 'lsx_wetu_sync_date', strtotime( 'now' ) );
+			} else {
+
+				// If the above didnt complete, run the action again.
+				$action_id = as_enqueue_async_action(
+					'lsx_wetu_sync_tour', 
+					array(
+						'tour_id' => $tour_id,
+					),
+					'lsx_wetu_sync' // . date('dmy')
+				);
+				update_post_meta( $tour_id, 'lsx_wetu_sync_action_id', $action_id);
+			}
+		}
+
+		return $return;
 	}
 }

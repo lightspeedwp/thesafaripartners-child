@@ -61,11 +61,7 @@ class Admin {
 	 */
 	public function set_importer_defaults( $url ) {
 		$url = str_replace( '&type=Sample', '&type=personal', $url );
-
 		$url = str_replace( '&type', '&operatorid=3487&type', $url );
-		
-
-		var_dump($url);
 		return $url;
 	}
 }
