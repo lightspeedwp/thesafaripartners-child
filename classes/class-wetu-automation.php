@@ -86,10 +86,6 @@ class WETU_Automation {
 		if ( isset( $_GET['wetu_tour_debug'] ) ) {
 			$this->tour_sync_action( $_GET['wetu_tour_debug'] );
 		}
-
-		if ( isset( $_GET['wetu_tour_image_debug'] ) ) {
-			$this->tour_sync_action( $_GET['wetu_tour_image_debug'], array( 'featured_image', 'banner_image' ) );
-		}
 	}
 
 	/**
@@ -113,11 +109,24 @@ class WETU_Automation {
 	 */
 	public function run_main_actions() {
 		$tours      = $this->get_current_tours();
-		//$wetu_tours = $this->get_wetu_tours();
+		$wetu_tours = $this->get_wetu_tours();
+
+		var_dump( count( $wetu_tours ) );
+		print_r('<pre>');
+		print_r($wetu_tours);
+		print_r('</pre>');
+		die();
 
 		if ( ! empty( $tours ) ) {
 
 			foreach ( $tours as $tour ) {
+
+				// Remove our current tours from the que.
+				$wetu_id = get_post_meta( $tour, 'lsx_wetu_id', true );
+				if ( ! empty( $wetu_tours ) && isset( $wetu_tours[ $wetu_id ] ) ) {
+					unset( $wetu_tours[ $wetu_id ] );
+				}
+
 				$action_id = as_enqueue_async_action(
 					'lsx_wetu_sync_tour', 
 					array(
@@ -127,6 +136,31 @@ class WETU_Automation {
 					'lsx_wetu_sync' // . date('dmy')
 				);
 				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
+			}
+
+			// Let run through our new tours and import those.
+			if ( ! empty( $wetu_tours ) ) {
+				foreach ( $wetu_tours as $key => $tour_info ) {
+					$post['post_title']  = $tour_info['name'];
+					$post['post_status'] = 'publish';
+					$id                  = wp_insert_post( $post );
+		
+					// Save the WETU ID and the Last date it was modified.
+					if ( false !== $id ) {
+						add_post_meta( $id, 'lsx_wetu_id', $key );
+						add_post_meta( $id, 'lsx_wetu_modified_date', strtotime( $tour_info['last_modified'] ) );
+					}
+
+					$action_id = as_enqueue_async_action(
+						'lsx_wetu_sync_tour', 
+						array(
+							'tour_id' => $id,
+							'overrides' => array(),
+						),
+						'lsx_wetu_sync' // . date('dmy')
+					);
+					update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
+				}
 			}
 
 			$action_id = as_enqueue_async_action(
@@ -165,7 +199,7 @@ class WETU_Automation {
 			'post_type' => 'tour',
 			'post_status' => 'publish',
 			//'posts_per_page' => -1,
-			'posts_per_page' => 5,
+			'posts_per_page' => 1,
 			'meta_key' => 'lsx_wetu_id',
 			'meta_compare' => 'EXISTS',
 			'fields' => 'ids',
@@ -217,7 +251,7 @@ class WETU_Automation {
 
 				if ( isset( $jdata['itineraries'] ) && ! empty( $jdata['itineraries'] ) ) {
 					foreach ( $jdata['itineraries'] as $jata ) {
-						$tours[ $jata['identifier_key'] ] = $jata;
+						$tours[ $jata['identifier'] ] = $jata;
 					}
 				}
 			}
@@ -306,18 +340,74 @@ class WETU_Automation {
 	}
 
 	public function pins_sync_action( $item_id = '', $gallery = false ) {
-		$return = false;
+		$return     = false;
+		$importable = array(
+			'description',
+			'excerpt',
+		);
 
 		if ( '' !== $item_id && false !== $item_id ) {
 			$post_type = get_post_type( $item_id );
+			$wetu_id   = get_post_meta( $item_id, 'lsx_wetu_id', true );
+			
+			if ( false !== $wetu_id && '' !== $wetu_id ) {
+				$jdata = wp_remote_get( 'https://wetu.com/API/Pins/ROARLEMOUP5IENOE/Get?ids=' . $wetu_id );
 
-			if ( 'accommodation' === $post_type ) {
+				if ( ! empty( $jdata ) && isset( $jdata['response'] ) && isset( $jdata['response']['code'] ) && 200 === $jdata['response']['code'] ) {
+					$jata  = json_decode( $jdata['body'], true );
+					$return = true;
 
-			} else if ( 'destination' === $post_type ) {
+					// Check for a thumbnail.
+					if ( ! has_post_thumbnail( $item_id ) ) {
+						$importable[] = 'featured_image';
+						$importable[] = 'banner_image';
+					}
 
+					if ( 'accommodation' === $post_type ) {
+						$importable = $this->get_accommodation_flags( $importable );
+						$importer = new \LSX_WETU_Importer_Accommodation();
+						$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
+						$importer->remove_from_queue( $response );
+					} else if ( 'destination' === $post_type ) {
+						$importable = $this->get_destination_flags( $importable );
+						$importer = new \LSX_WETU_Importer_Destination();
+						$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
+						$importer->remove_from_queue( $response );
+					}
+				}
 			}
 		}
-
 		return $return;
-	}	
+	}
+	
+	public function get_destination_flags( $flags = array() ) {
+		$flags[] = 'location';
+		$flags[] = 'country';
+		$flags[] = 'continent';
+		$flags[] = 'electricity';
+		$flags[] = 'banking';
+		$flags[] = 'cuisine';
+		$flags[] = 'climate';
+		$flags[] = 'transport';
+		$flags[] = 'dress';
+		$flags[] = 'health';
+		$flags[] = 'safety';
+		$flags[] = 'visa';
+		$flags[] = 'additional_info';
+		return $flags;
+	}
+
+	public function get_accommodation_flags( $flags = array() ) {
+		$flags[] = 'category';
+		$flags[] = 'location';
+		$flags[] = 'destination';
+		$flags[] = 'rating';
+		$flags[] = 'rooms';
+		$flags[] = 'checkin';
+		$flags[] = 'facilities';
+		$flags[] = 'friendly';
+		$flags[] = 'special_interests';
+		$flags[] = 'spoken_languages';
+		return $flags;
+	}
 }
