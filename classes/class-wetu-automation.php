@@ -67,7 +67,9 @@ class WETU_Automation {
 			add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
 
 			// These are the actions which sync the individual items.
-			add_action( 'lsx_wetu_sync_tour', array( $this, 'tour_sync_action' ), 10, 2 );
+			add_action( 'lsx_wetu_sync_tour', array( $this, 'tour_sync_action' ), 10, 1 );
+			add_action( 'lsx_wetu_sync_que', array( $this, 'que_sync_action' ), 10 );
+			add_action( 'lsx_wetu_sync_pin', array( $this, 'pins_sync_action' ), 10, 2 );
 		}
 	}
 
@@ -83,6 +85,10 @@ class WETU_Automation {
 
 		if ( isset( $_GET['wetu_tour_debug'] ) ) {
 			$this->tour_sync_action( $_GET['wetu_tour_debug'] );
+		}
+
+		if ( isset( $_GET['wetu_tour_image_debug'] ) ) {
+			$this->tour_sync_action( $_GET['wetu_tour_image_debug'], array( 'featured_image', 'banner_image' ) );
 		}
 	}
 
@@ -109,30 +115,42 @@ class WETU_Automation {
 		$tours      = $this->get_current_tours();
 		//$wetu_tours = $this->get_wetu_tours();
 
-		/*print_r('<pre>');
-		print_r($wetu_tours);
-		print_r('</pre>');
-		die();*/
-
-		if ( ! empty( $wetu_tours ) ) {
-
-			/*print_r('<pre>');
-			print_r($wetu_tours);
-			print_r('</pre>');
-			die();*/
+		if ( ! empty( $tours ) ) {
 
 			foreach ( $tours as $tour ) {
 				$action_id = as_enqueue_async_action(
 					'lsx_wetu_sync_tour', 
 					array(
 						'tour_id' => $tour,
+						'overrides' => array(),
 					),
 					'lsx_wetu_sync' // . date('dmy')
 				);
 				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
 			}
-		} else {
-			// Reschedule the main actions till it runs.
+
+			$action_id = as_enqueue_async_action(
+				'lsx_wetu_sync_que',
+				array(),
+				'lsx_wetu_sync'
+			);
+		}
+
+		return true;
+
+		$items = $this->get_pins();
+		if ( ! empty( $items ) ) {
+			foreach ( $items as $item ) {
+				$action_id = as_enqueue_async_action(
+					'lsx_wetu_sync_pin', 
+					array(
+						'item_id' => $item,
+						'gallery' => false
+					),
+					'lsx_wetu_sync' // . date('dmy')
+				);
+				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
+			}
 		}
 	}
 
@@ -159,24 +177,56 @@ class WETU_Automation {
 		return $tours;
 	}
 
+	/**
+	 * Gets the accommodation and destinations.
+	 *
+	 * @return array
+	 */
+	public function get_pins() {
+		$items = array();
+		$args = array(
+			'post_type' => array( 'accommodation', 'destination' ),
+			'post_status' => 'publish',
+			//'posts_per_page' => -1,
+			'posts_per_page' => 10,
+			'meta_key' => 'lsx_wetu_id',
+			'meta_compare' => 'EXISTS',
+			'fields' => 'ids',
+		);
+		$item_query = new \WP_Query( $args );
+		if ( $item_query->have_posts() ) {
+			$items = $item_query->posts;
+		}
+		return $items;
+	}
+
 	public function get_wetu_tours() {
 		$tours = array();
-		$data = wp_remote_get( 'https://wetu.com/API/Itinerary/ROARLEMOUP5IENOE/V8/List?type=Personal&own=true' );
-		if ( ! is_wp_error( $data ) && ! empty( $data ) && isset( $data['response'] ) && isset( $data['response']['code'] ) && 200 === $data['response']['code'] ) {
-			$jdata  = json_decode( $data['body'], true );
-			var_dump('here');
-			if ( isset( $jdata['itineraries'] ) && ! empty( $jdata['itineraries'] ) ) {
-				foreach ( $jdata['itineraries'] as $jata ) {
-					if ( isset( $jata['operator_id'] ) && '3487' === (string) $jata['operator_id'] ) {
-						$tours[] = $jata;
+
+		$tags = array(
+			'Budget-low',
+			'Budget-medium',
+			'Budget-high',
+		);
+
+		foreach ( $tags as $tag ) {
+			$data = wp_remote_get( 'https://wetu.com/API/Itinerary/ROARLEMOUP5IENOE/V8/List?type=Personal&own=true&tags=' . $tag );
+
+			if ( ! is_wp_error( $data ) && ! empty( $data ) && isset( $data['response'] ) && isset( $data['response']['code'] ) && 200 === $data['response']['code'] ) {
+				$jdata  = json_decode( $data['body'], true );
+
+				if ( isset( $jdata['itineraries'] ) && ! empty( $jdata['itineraries'] ) ) {
+					foreach ( $jdata['itineraries'] as $jata ) {
+						$tours[ $jata['identifier_key'] ] = $jata;
 					}
 				}
 			}
 		}
+
 		return $tours;
 	}
 
-	public function tour_sync_action( $tour_id ) {
+	public function tour_sync_action( $tour_id, $overrides = array() ) {
 		$return = false;
 
 		$wetu_id = get_post_meta( $tour_id, 'lsx_wetu_id', true );
@@ -197,6 +247,16 @@ class WETU_Automation {
 			'destination',
 		);
 
+		// Check for a thumbnail.
+		if ( ! has_post_thumbnail( $tour_id ) ) {
+			$importable[] = 'featured_image';
+			$importable[] = 'banner_image';
+		}
+
+		if ( ! empty( $overrides ) ) {
+			$importable = $overrides;
+		}
+
 		if ( false !== $wetu_id && '' !== $wetu_id ) {
 			$jdata = wp_remote_get( 'https://wetu.com/API/Itinerary/V8/Get?id=' . $wetu_id );
 	
@@ -204,25 +264,60 @@ class WETU_Automation {
 				$jdata             = json_decode( $jdata['body'], true );
 				$lsx_wetu_importer = new \LSX_WETU_Importer_Tours();
 				$response          = $lsx_wetu_importer->import_row( $jdata, $wetu_id, $tour_id, array(), $importable );
-
+				$lsx_wetu_importer->attach_destination_images( $importable );
 			}
 			if ( null !== $response ) {
 				$return = true;
+				$lsx_wetu_importer->save_queue();
 				update_post_meta( $tour_id, 'lsx_wetu_sync_date', strtotime( 'now' ) );
 			} else {
-
 				// If the above didnt complete, run the action again.
 				$action_id = as_enqueue_async_action(
-					'lsx_wetu_sync_tour', 
+					'lsx_wetu_sync_tour',
 					array(
 						'tour_id' => $tour_id,
+						'overrides' => array(),
 					),
 					'lsx_wetu_sync' // . date('dmy')
 				);
 				update_post_meta( $tour_id, 'lsx_wetu_sync_action_id', $action_id);
 			}
 		}
-
 		return $return;
 	}
+
+	
+	public function que_sync_action() {
+		$que = get_option( 'lsx_wetu_importer_que', array() );
+		if ( ! empty( $que ) ) {
+			foreach ( $que as $q ) {
+				// Register the pin sync action
+				$action_id = as_enqueue_async_action(
+					'lsx_wetu_sync_pin', 
+					array(
+						'item_id' => $q,
+						'gallery' => false,
+					),
+					'lsx_wetu_sync' // . date('dmy')
+				);
+				update_post_meta( $q, 'lsx_wetu_sync_action_id', $action_id );
+			}
+		}
+	}
+
+	public function pins_sync_action( $item_id = '', $gallery = false ) {
+		$return = false;
+
+		if ( '' !== $item_id && false !== $item_id ) {
+			$post_type = get_post_type( $item_id );
+
+			if ( 'accommodation' === $post_type ) {
+
+			} else if ( 'destination' === $post_type ) {
+
+			}
+		}
+
+		return $return;
+	}	
 }
