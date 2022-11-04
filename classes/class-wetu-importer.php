@@ -135,7 +135,8 @@ class WETU_Importer {
 							} else {
 								$currency = 'USD';
 							}
-							update_post_meta( $id, 'currency', $currency );
+							delete_post_meta( $id, 'currency' );
+							add_post_meta( $id, 'currency', $currency );
 						}
 
 						if ( 'Family' === $found_term ) {
