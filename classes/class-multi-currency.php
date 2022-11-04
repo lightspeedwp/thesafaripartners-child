@@ -74,11 +74,6 @@ class Multi_Currency {
 							'type' => 'text',
 						);
 						$new_boxes[] = array(
-							'id' => 'price',
-							'name' => 'Price',
-							'type' => 'text',
-						);
-						$new_boxes[] = array(
 							'id' => 'currency',
 							'name' => 'Currency',
 							'type' => 'select',
