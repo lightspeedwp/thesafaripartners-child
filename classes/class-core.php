@@ -107,6 +107,9 @@ class Core {
 		require_once get_stylesheet_directory() . '/classes/class-wetu-automation.php';
 		$this->wetu_automation = WETU_Automation::get_instance();
 
+		require_once get_stylesheet_directory() . '/classes/class-multi-currency.php';
+		$this->multi_currency = Multi_Currency::get_instance();
+
 		require_once get_stylesheet_directory() . '/includes/template-tags.php';
 	}
 

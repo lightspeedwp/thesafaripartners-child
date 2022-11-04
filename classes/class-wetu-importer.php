@@ -127,6 +127,17 @@ class WETU_Importer {
 				if ( ! empty( $found_terms ) ) {
 					foreach ( $found_terms as $found_term ) {
 
+						if ( in_array( $found_term, array( 'Currency-ZAR', 'Currency-USD', 'Currency-EUR' ) ) ) {
+							if ( 'Currency-ZAR' === $found_term ) {
+								$currency = 'ZAR';
+							} else if ( 'Currency-EUR' === $found_term ) {
+								$currency = 'EUR';
+							} else {
+								$currency = 'USD';
+							}
+							update_post_meta( $id, 'currency', $currency );
+						}
+
 						if ( 'Family' === $found_term ) {
 							$found_term = 'Family Experiences';
 						}

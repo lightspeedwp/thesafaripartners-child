@@ -86,6 +86,10 @@ class WETU_Automation {
 		if ( isset( $_GET['wetu_tour_debug'] ) ) {
 			$this->tour_sync_action( $_GET['wetu_tour_debug'] );
 		}
+
+		if ( isset( $_GET['wetu_pin_debug'] ) ) {
+			$this->tour_sync_action( $_GET['wetu_pin_debug'] );
+		}
 	}
 
 	/**
@@ -238,9 +242,7 @@ class WETU_Automation {
 		$tours = array();
 
 		$tags = array(
-			'Budget-low',
-			'Budget-medium',
-			'Budget-high',
+			'Website',
 		);
 
 		foreach ( $tags as $tag ) {
@@ -361,6 +363,12 @@ class WETU_Automation {
 					if ( ! has_post_thumbnail( $item_id ) ) {
 						$importable[] = 'featured_image';
 						$importable[] = 'banner_image';
+					}
+
+					// Look for an empty gallery
+					$gallery = get_post_meta( $item_id, 'gallery', false );
+					if ( false === $gallery || empty( $gallery ) ) {
+						$importable[] = 'gallery';
 					}
 
 					if ( 'accommodation' === $post_type ) {
