@@ -64,7 +64,7 @@ class WETU_Automation {
 	public function init() {
 		if ( function_exists( 'as_enqueue_async_action' ) ) {
 			$this->schedule_main_action();
-			//add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
+			add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
 
 			// These are the actions which sync the individual items.
 			add_action( 'lsx_wetu_sync_tour', array( $this, 'tour_sync_action' ), 10, 1 );
@@ -88,7 +88,7 @@ class WETU_Automation {
 		}
 
 		if ( isset( $_GET['wetu_pin_debug'] ) ) {
-			$this->tour_sync_action( $_GET['wetu_pin_debug'] );
+			$this->pins_sync_action( $_GET['wetu_pin_debug'], false );
 		}
 	}
 
@@ -102,7 +102,7 @@ class WETU_Automation {
 		//master scheduled actions
 		if ( ! wp_next_scheduled( 'lsx_wetu_master_sync' ) ) {
 			$master_sync_scheduler = strtotime( '01:00:00' );
-			wp_schedule_event( $master_sync_scheduler, 'daily', 'lsx_wetu_master_sync' );
+			wp_schedule_event( $master_sync_scheduler, 'weekly', 'lsx_wetu_master_sync' );
 		}
 	}
 
@@ -115,19 +115,31 @@ class WETU_Automation {
 		$tours      = $this->get_current_tours();
 		$wetu_tours = $this->get_wetu_tours();
 
-		var_dump( count( $wetu_tours ) );
-		print_r('<pre>');
-		print_r($wetu_tours);
-		print_r('</pre>');
-		die();
-
 		if ( ! empty( $tours ) ) {
 
 			foreach ( $tours as $tour ) {
-
 				// Remove our current tours from the que.
 				$wetu_id = get_post_meta( $tour, 'lsx_wetu_id', true );
+
 				if ( ! empty( $wetu_tours ) && isset( $wetu_tours[ $wetu_id ] ) ) {
+					
+					// Next lets make sure the tour has been updated on the WETU side.
+					$tour_date = get_post_meta( $tour, 'lsx_wetu_modified_date', true );
+
+					if ( false !== $tour_date && '' !== $tour_date ) {
+						$tour_mod = strtotime( $tour_date );
+						$wetu_mod = strtotime( $wetu_tours[ $wetu_id ]['last_modified'] );
+
+						if ( $wetu_mod <= $tour_mod ) {
+							continue;
+						}
+						delete_post_meta( $tour, 'lsx_wetu_modified_date' );
+						update_post_meta( $tour, 'lsx_wetu_modified_date', $wetu_tours[ $wetu_id ]['last_modified'] );
+					} else {
+						delete_post_meta( $tour, 'lsx_wetu_modified_date' );
+						update_post_meta( $tour, 'lsx_wetu_modified_date', $wetu_tours[ $wetu_id ]['last_modified'] );
+					}
+					
 					unset( $wetu_tours[ $wetu_id ] );
 				}
 
@@ -143,7 +155,7 @@ class WETU_Automation {
 			}
 
 			// Let run through our new tours and import those.
-			if ( ! empty( $wetu_tours ) ) {
+			if ( ! empty( $wetu_tours ) && ! isset( $_GET['wetu_main_debug'] ) ) {
 				foreach ( $wetu_tours as $key => $tour_info ) {
 					$post['post_title']  = $tour_info['name'];
 					$post['post_status'] = 'publish';
@@ -202,8 +214,8 @@ class WETU_Automation {
 		$args = array(
 			'post_type' => 'tour',
 			'post_status' => 'publish',
-			//'posts_per_page' => -1,
-			'posts_per_page' => 1,
+			'posts_per_page' => -1,
+			//'posts_per_page' => 1,
 			'meta_key' => 'lsx_wetu_id',
 			'meta_compare' => 'EXISTS',
 			'fields' => 'ids',
@@ -317,6 +329,11 @@ class WETU_Automation {
 					'lsx_wetu_sync' // . date('dmy')
 				);
 				update_post_meta( $tour_id, 'lsx_wetu_sync_action_id', $action_id);
+				$action_id = as_enqueue_async_action(
+					'lsx_wetu_sync_que',
+					array(),
+					'lsx_wetu_sync'
+				);
 			}
 		}
 		return $return;
@@ -332,12 +349,13 @@ class WETU_Automation {
 					'lsx_wetu_sync_pin', 
 					array(
 						'item_id' => $q,
-						'gallery' => false,
+						'gallery' => true,
 					),
 					'lsx_wetu_sync' // . date('dmy')
 				);
 				update_post_meta( $q, 'lsx_wetu_sync_action_id', $action_id );
 			}
+			delete_option( 'lsx_wetu_importer_que' );
 		}
 	}
 
@@ -349,38 +367,79 @@ class WETU_Automation {
 		);
 
 		if ( '' !== $item_id && false !== $item_id ) {
-			$post_type = get_post_type( $item_id );
-			$wetu_id   = get_post_meta( $item_id, 'lsx_wetu_id', true );
+			$post_type   = get_post_type( $item_id );
+			$wetu_id     = get_post_meta( $item_id, 'lsx_wetu_id', true );
+			$skip_import = false;
 			
 			if ( false !== $wetu_id && '' !== $wetu_id ) {
 				$jdata = wp_remote_get( 'https://wetu.com/API/Pins/ROARLEMOUP5IENOE/Get?ids=' . $wetu_id );
+				
 
-				if ( ! empty( $jdata ) && isset( $jdata['response'] ) && isset( $jdata['response']['code'] ) && 200 === $jdata['response']['code'] ) {
+				if ( ! is_wp_error( $jdata ) && ! empty( $jdata ) && isset( $jdata['response'] ) && isset( $jdata['response']['code'] ) && 200 === $jdata['response']['code'] ) {
 					$jata  = json_decode( $jdata['body'], true );
 					$return = true;
 
-					// Check for a thumbnail.
-					if ( ! has_post_thumbnail( $item_id ) ) {
-						$importable[] = 'featured_image';
-						$importable[] = 'banner_image';
+					// Next lets make sure the tour has been updated on the WETU side.
+					$tour_date = get_post_meta( $item_id, 'lsx_wetu_modified_date', true );
+
+					if ( false !== $tour_date && '' !== $tour_date ) {
+						$tour_mod = strtotime( $tour_date );
+						$wetu_mod = strtotime( $jata['last_modified'] );
+
+						if ( $wetu_mod <= $tour_mod ) {
+
+							if ( class_exists( 'ActionScheduler_Logger' ) ) {
+								\ActionScheduler_Logger::instance()->log(
+									'wetu_skipped',
+									'WETU Date - ' . $jata['last_modified'],
+								);
+							}
+							$skip_import = true;
+							delete_post_meta( $item_id, 'lsx_wetu_modified_date' );
+							update_post_meta( $item_id, 'lsx_wetu_modified_date', $jata['last_modified'] );
+						}
+					} else {
+						delete_post_meta( $item_id, 'lsx_wetu_modified_date' );
+						update_post_meta( $item_id, 'lsx_wetu_modified_date', $jata['last_modified'] );
 					}
 
-					// Look for an empty gallery
-					$gallery = get_post_meta( $item_id, 'gallery', false );
-					if ( false === $gallery || empty( $gallery ) ) {
+					if ( false === $skip_import ) {
+						// Check for a thumbnail.
+						if ( ! has_post_thumbnail( $item_id ) ) {
+							$importable[] = 'featured_image';
+							$importable[] = 'banner_image';
+						}
+
+						// Look for an empty gallery
+						//$gallery = get_post_meta( $item_id, 'gallery', false );
+						//if ( false === $gallery || empty( $gallery ) ) {
+							
+						//}
 						$importable[] = 'gallery';
-					}
 
-					if ( 'accommodation' === $post_type ) {
-						$importable = $this->get_accommodation_flags( $importable );
-						$importer = new \LSX_WETU_Importer_Accommodation();
-						$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
-						$importer->remove_from_queue( $response );
-					} else if ( 'destination' === $post_type ) {
-						$importable = $this->get_destination_flags( $importable );
-						$importer = new \LSX_WETU_Importer_Destination();
-						$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
-						$importer->remove_from_queue( $response );
+						if ( 'accommodation' === $post_type ) {
+							$importable = $this->get_accommodation_flags( $importable );
+							if ( class_exists( 'ActionScheduler_Logger' ) ) {
+								\ActionScheduler_Logger::instance()->log(
+									'wetu_parameters',
+									print_r( $importable, true ),
+								);
+							}
+							$importer = new \LSX_WETU_Importer_Accommodation();
+							$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
+							$importer->remove_from_queue( $response );
+						} else if ( 'destination' === $post_type ) {
+							$importable = $this->get_destination_flags( $importable );
+							if ( class_exists( 'ActionScheduler_Logger' ) ) {
+								\ActionScheduler_Logger::instance()->log(
+									'wetu_parameters',
+									print_r( $importable, true ),
+								);
+							}
+							$importer = new \LSX_WETU_Importer_Destination();
+							$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
+							$importer->remove_from_queue( $response );
+						}
 					}
 				}
 			}

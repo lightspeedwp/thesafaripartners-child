@@ -57,7 +57,6 @@ class Multi_Currency {
 	 *  adds in our multiple prices field
 	 */
 	public function fields( $meta_boxes ) {
-		if ( true === lsx_currencies()->multi_prices && ! empty( lsx_currencies()->additional_currencies ) ) {
 			$currency_options = array(
 				'ZAR' => 'ZAR',
 				'USD' => 'USD',
@@ -94,7 +93,6 @@ class Multi_Currency {
 			if ( true === $injected ) {
 				$meta_boxes = $new_boxes;
 			}
-		}
 		return $meta_boxes;
 	}
 }
