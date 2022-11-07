@@ -89,6 +89,7 @@ class WETU_Automation {
 
 		if ( isset( $_GET['wetu_pin_debug'] ) ) {
 			$this->pins_sync_action( $_GET['wetu_pin_debug'], false );
+			die();
 		}
 	}
 
@@ -313,6 +314,7 @@ class WETU_Automation {
 				$lsx_wetu_importer = new \LSX_WETU_Importer_Tours();
 				$response          = $lsx_wetu_importer->import_row( $jdata, $wetu_id, $tour_id, array(), $importable );
 				$lsx_wetu_importer->attach_destination_images( $importable );
+				$lsx_wetu_importer->cleanup_posts();
 			}
 			if ( null !== $response ) {
 				$return = true;
@@ -361,10 +363,7 @@ class WETU_Automation {
 
 	public function pins_sync_action( $item_id = '', $gallery = false ) {
 		$return     = false;
-		$importable = array(
-			'description',
-			'excerpt',
-		);
+		$importable = array();
 
 		if ( '' !== $item_id && false !== $item_id ) {
 			$post_type   = get_post_type( $item_id );
@@ -409,12 +408,7 @@ class WETU_Automation {
 							$importable[] = 'featured_image';
 							$importable[] = 'banner_image';
 						}
-
-						// Look for an empty gallery
-						//$gallery = get_post_meta( $item_id, 'gallery', false );
-						//if ( false === $gallery || empty( $gallery ) ) {
-							
-						//}
+						$importer     = false;
 						$importable[] = 'gallery';
 
 						if ( 'accommodation' === $post_type ) {
@@ -439,6 +433,10 @@ class WETU_Automation {
 							$importer = new \LSX_WETU_Importer_Destination();
 							$response = $importer->import_row( $jata, $wetu_id, $item_id, array(), $importable, array() );
 							$importer->remove_from_queue( $response );
+						}
+
+						if ( false !== $importer ) {
+							$importer->cleanup_posts();
 						}
 					}
 				}
@@ -465,6 +463,8 @@ class WETU_Automation {
 	}
 
 	public function get_accommodation_flags( $flags = array() ) {
+		$flags[] = 'description';
+		$flags[] = 'excerpt';
 		$flags[] = 'category';
 		$flags[] = 'location';
 		$flags[] = 'destination';
