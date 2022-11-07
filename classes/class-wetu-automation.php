@@ -322,7 +322,7 @@ class WETU_Automation {
 				update_post_meta( $tour_id, 'lsx_wetu_sync_date', strtotime( 'now' ) );
 			} else {
 				// If the above didnt complete, run the action again.
-				$action_id = as_enqueue_async_action(
+				/*$action_id = as_enqueue_async_action(
 					'lsx_wetu_sync_tour',
 					array(
 						'tour_id' => $tour_id,
@@ -330,12 +330,7 @@ class WETU_Automation {
 					),
 					'lsx_wetu_sync' // . date('dmy')
 				);
-				update_post_meta( $tour_id, 'lsx_wetu_sync_action_id', $action_id);
-				$action_id = as_enqueue_async_action(
-					'lsx_wetu_sync_que',
-					array(),
-					'lsx_wetu_sync'
-				);
+				update_post_meta( $tour_id, 'lsx_wetu_sync_action_id', $action_id);*/
 			}
 		}
 		return $return;
