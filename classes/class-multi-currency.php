@@ -58,6 +58,7 @@ class Multi_Currency {
 	 */
 	public function fields( $meta_boxes ) {
 			$currency_options = array(
+				'' => 'Default',
 				'ZAR' => 'ZAR',
 				'USD' => 'USD',
 				'EUR' => 'EUR',
