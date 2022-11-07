@@ -63,7 +63,7 @@ class WETU_Automation {
 	 */
 	public function init() {
 		if ( function_exists( 'as_enqueue_async_action' ) ) {
-			$this->schedule_main_action();
+			//$this->schedule_main_action();
 			//add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
 
 			// These are the actions which sync the individual items.
