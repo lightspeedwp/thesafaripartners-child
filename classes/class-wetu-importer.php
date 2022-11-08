@@ -31,9 +31,9 @@ class WETU_Importer {
 		'who' => array(
 			'Seasoned Traveller',
 			'Group of Friends',
-			'Romance Seekers', //Romance Seeker
+			'Romance Seeker', //Romance Seeker
 			'Solo Traveller',
-			'Family Experiences', // Family
+			'Family', // Family
 		),
 		'travel-style' => array(
 			'Wildlife Safaris',
