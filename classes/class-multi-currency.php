@@ -36,6 +36,8 @@ class Multi_Currency {
 	 */
 	private function __construct() {
 		add_filter( 'lsx_to_tour_custom_fields', array( $this, 'fields' ), 80, 1 );
+		add_filter( 'lsx_currencies_nav_additional_items', array( $this, 'unset_zar' ), 10, 1 );
+		
 	}
 
 	/**
@@ -90,5 +92,16 @@ class Multi_Currency {
 				$meta_boxes = $new_boxes;
 			}
 		return $meta_boxes;
+	}
+
+	public function unset_zar( $currencies ) {
+		if ( isset( $currencies['zar'] ) ) {
+			unset( $currencies['zar'] );
+		}
+		if ( isset( $currencies['ZAR'] ) ) {
+			unset( $currencies['ZAR'] );
+		}
+		
+		return $currencies;
 	}
 }
