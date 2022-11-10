@@ -3,10 +3,10 @@
 		<div class="lsx-tour-module">
 			<?php 
 			//$accommodation = get_post_meta( get_the_ID(), 'accommodation_to_tour', false );
-			$accommodation   = lsx_to_get_tour_itinerary_ids( 'accommodation_to_tour' );
+			$accommodation   = lsx_to_get_tour_itinerary_ids( 'accommodation_to_tour', true );
 			$locations_array = tsp_itinerary_accommodation_locations();
 
-			if ( ! empty( $accommodation ) && false !== $accommodation ) {
+			if ( ! empty( $accommodation ) && false !== $accommodation ) {	
 				$accommodation_args = array(
 					'post_type'      => 'accommodation',
 					'post_status'    => 'publish',
