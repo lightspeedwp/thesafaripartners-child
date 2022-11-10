@@ -116,7 +116,12 @@
 												}
 											}
 											?>
-											
+											<?php
+												$footnote = get_post_meta( get_the_ID(), 'footnote', true );
+												if ( false !== $footnote && '' !== $footnote ) {
+													echo '<p class="footnote"><small>' . $footnote . '</small></p>';
+												}
+											?>
 										</div>
 										<span class="<?php $terms = get_the_terms( $post->ID, 'tour-type' );
 
