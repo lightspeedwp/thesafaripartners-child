@@ -748,9 +748,11 @@ function checkForSliders( $next ) {
 					collapse = true;
 					$( this ).html('Read More');
 					$( this ).removeClass( 'open' );
+					$( this ).parents( '.entry-content.lsx-readmore' ).removeClass( 'open' );
 				} else {
 					$( this ).html('Read Less');
 					$( this ).addClass( 'open' );
+					$( this ).parents( '.entry-content.lsx-readmore' ).addClass( 'open' );
 				}
 
 				let counter = 0;
