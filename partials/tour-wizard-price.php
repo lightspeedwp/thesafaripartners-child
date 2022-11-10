@@ -117,7 +117,7 @@
 											}
 											?>
 											<?php
-												$footnote = get_post_meta( get_the_ID(), 'footnote', true );
+												$footnote = get_post_meta( get_the_ID(), 'prices_footnote', true );
 												if ( false !== $footnote && '' !== $footnote ) {
 													echo '<p class="footnote"><small>' . $footnote . '</small></p>';
 												}
