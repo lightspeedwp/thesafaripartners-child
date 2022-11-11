@@ -978,6 +978,9 @@ th {
 		z-index: 99999;
 		letter-spacing: -0.1px!important;
 }
+.lsx-readmore.open .read-more {
+	display: none;
+}
 .archive .wizard-who,.single .wizard-who {
 	height:200px;
 }
