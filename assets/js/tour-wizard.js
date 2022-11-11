@@ -726,6 +726,7 @@ function checkForSliders( $next ) {
 
 	let setReadMoreDescriptions = function() {
 		$( '.entry-content.lsx-readmore' ).each( function() {
+			let word_limit = 25;
 			if ( 1 < $( this ).children().length ) {
 				let counter = 0;
 				$( this ).children().each( function() {
@@ -736,8 +737,15 @@ function checkForSliders( $next ) {
 					} else {
 						counter++;
 
-						if ( 1 < counter ) {
+						p_words = $.trim( $(this).html() );
+						var subtract = p_words.split(" ");
+
+						console.log(word_limit);
+
+						if ( 1 < counter && 0 > word_limit ) {
 							$( this ).hide();
+						} else {
+							word_limit = word_limit - subtract.length;
 						}
 					}
 				} );
