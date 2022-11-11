@@ -726,7 +726,7 @@ function checkForSliders( $next ) {
 
 	let setReadMoreDescriptions = function() {
 		$( '.entry-content.lsx-readmore' ).each( function() {
-			let word_limit = 25;
+			let word_limit = 35;
 			if ( 1 < $( this ).children().length ) {
 				let counter = 0;
 				$( this ).children().each( function() {
