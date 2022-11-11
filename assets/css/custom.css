@@ -965,7 +965,7 @@ th {
 	right: 0;
 	width: 100%;
   }
-  .lsx-readmore:not(.open) p{padding-bottom:80px;}
+  .lsx-readmore:not(.open) p{padding-bottom:0px;}
 .lsx-readmore .read-more {
 		padding: 10px 0px;
 		font-weight: normal;
