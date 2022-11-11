@@ -473,7 +473,6 @@ class Frontend {
 	 * @return string
 	 */
 	public function the_content( $content ) {
-		$content = str_replace( '<p style="">&nbsp;</p>', '', $content );
 		return $content;
 	}
 }
