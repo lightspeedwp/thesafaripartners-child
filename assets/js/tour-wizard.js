@@ -729,10 +729,16 @@ function checkForSliders( $next ) {
 			if ( 1 < $( this ).children().length ) {
 				let counter = 0;
 				$( this ).children().each( function() {
-					counter++;
 
-					if ( 1 < counter ) {
-						$( this ).hide();
+					//check for an empty P
+					if ( '&nbsp;' === $(this).html() ) {
+						$(this).remove();
+					} else {
+						counter++;
+
+						if ( 1 < counter ) {
+							$( this ).hide();
+						}
 					}
 				} );
 
@@ -758,6 +764,12 @@ function checkForSliders( $next ) {
 				let counter = 0;
 				$( this ).parent('.entry-content.lsx-readmore').children().each( function(){
 					counter++;
+
+					//check for an empty P
+					if ( $(this).html() ) {
+						console.log( $(this).html() );
+					}
+
 					if ( true === collapse ) {
 						if ( 1 < counter && ! $( this ).hasClass('read-more' ) ) {
 							$( this ).hide();
