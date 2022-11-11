@@ -163,6 +163,7 @@ class Frontend {
 		add_filter( 'lsx_to_get_itinerary_ids_meta_key', array( $this, 'mobile_map_keys' ), 10, 1 );
 		add_filter( 'lsx_to_itinerary_title', array( $this, 'mobile_itinerary_title' ), 10, 2 );
 		add_filter( 'lsx_to_parents_only', array( $this, 'order_tour_countries' ), 20, 2 );
+		add_filter( 'the_content', array( $this, 'the_content' ), 100 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
@@ -463,5 +464,16 @@ class Frontend {
 			$connected_ids = $new_items;
 		}
 		return $connected_ids;
+	}
+
+	/**
+	 * Stip any unwanted code from our text.
+	 *
+	 * @param string $content
+	 * @return string
+	 */
+	public function the_content( $content ) {
+		$content = str_replace( '<p style="">&nbsp;</p>', '', $content );
+		return $content;
 	}
 }
