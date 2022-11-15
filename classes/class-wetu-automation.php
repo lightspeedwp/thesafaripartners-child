@@ -282,6 +282,7 @@ class WETU_Automation {
 
 		$importable = array(
 			'price',
+			'description',
 			'duration',
 			'group_size',
 			'category',
