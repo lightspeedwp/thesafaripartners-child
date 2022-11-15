@@ -171,6 +171,18 @@ class Itinerary_Images {
 					$thumbnail_src = $temp_src_array[0];
 				}
 			}
+		} else if ( false === $thumbnail_src ) {
+			$next_image = apply_filters( 'lsx_get_thumbnail_post_placeholder_id', false, get_the_ID() );
+			
+			// If there is one use it.
+			if ( false !== $next_image ) {
+				
+				$temp_src_array   = wp_get_attachment_image_src( $next_image, 'large' );
+				if ( is_array( $temp_src_array ) ) {
+					$thumbnail_src = $temp_src_array[0];
+				}
+			}
+
 		}
 		return $thumbnail_src;
 	}
