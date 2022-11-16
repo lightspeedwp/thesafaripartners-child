@@ -170,7 +170,7 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
  * @param integer $post_id
  * @return string
  */
-function tsp_get_search_relevance( $post_id = 0 ) {
+function tsp_get_search_relevance( $post_id = 0, $overrides = array() ) {
 	global $search_relevance, $relevance_scores;
 	$return          = '';
 	$relevance_class = '';
@@ -197,7 +197,7 @@ function tsp_get_search_relevance( $post_id = 0 ) {
 			}
 			$return = $relevance_scores[ $post_id ];
 		} else {
-			$return = tsp_facet_relevance( $post_id );
+			$return = tsp_facet_relevance( $post_id, $overrides );
 		}
 	}
 	if ( '' !== $return ) {
