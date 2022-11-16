@@ -328,11 +328,15 @@ class Frontend {
 	 *
 	 * @param object $response /WP_REST_Response
 	 * @param object $post WP_Post
+	 * @param object $request WP_REST_Request
 	 * @return object
 	 */
 	public function add_tour_archive_template_to_rest( $response, $post, $request ) {
 		if ( isset( $response->data['type'] ) && 'tour' === $response->data['type'] ) {
 			$response->data['search_results'] = '';
+
+			global $search_request_vars;
+			$search_request_vars = $request->get_query_params();
 
 			ob_start();
 			setup_postdata( $post );

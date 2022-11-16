@@ -207,8 +207,15 @@ function tsp_get_search_relevance( $post_id = 0 ) {
 }
 
 function tsp_facet_relevance( $post_id ) {
+	global $search_request_vars;
+	
+	$request = $_REQUEST;
+	if ( null !== $search_request_vars && false !== $search_request_vars && ! empty( $search_request_vars ) ) {
+		$request = $search_request_vars;
+	}
+
 	$relevance = '';
-	if ( isset( $_REQUEST['fwp_who'] ) || isset( $_REQUEST['fwp_what'] ) || isset( $_REQUEST['fwp_where'] ) || isset( $_REQUEST['fwp_when'] ) || isset( $_REQUEST['fwp_budget'] ) ) {
+	if ( isset( $request['fwp_who'] ) || isset( $request['fwp_what'] ) || isset( $request['fwp_where'] ) || isset( $request['fwp_when'] ) || isset( $request['fwp_budget'] ) ) {
 
 		$hits  = 0;
 		$total = 0;
@@ -220,8 +227,8 @@ function tsp_facet_relevance( $post_id ) {
 			'budget'          => 'fwp_budget',
 		);
 		foreach ( $taxonomies as $taxonomy => $facet ) {
-			if ( isset( $_REQUEST[ $facet ] ) && '' !== $_REQUEST[ $facet ] ) {
-				$string = urldecode( $_REQUEST[ $facet ] );
+			if ( isset( $request[ $facet ] ) && '' !== $request[ $facet ] ) {
+				$string = urldecode( $request[ $facet ] );
 				$parts  = explode( ',', $string );
 				if ( ! is_array( $parts ) ) {
 					$parts = array( $parts );
