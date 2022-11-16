@@ -175,7 +175,7 @@ function tsp_get_search_relevance( $post_id = 0, $overrides = array() ) {
 	$return          = '';
 	$relevance_class = '';
 
-	if ( is_search() && 0 !== $post_id ) {
+	if ( ( is_search() || ! empty( $overrides ) ) && 0 !== $post_id ) {
 		if ( null !== $search_relevance && isset( $search_relevance[ $post_id ] ) ) {
 			switch ( $search_relevance[ $post_id ] ) {
 				case $search_relevance[ $post_id ] > 80 :
