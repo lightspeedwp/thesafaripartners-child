@@ -511,6 +511,11 @@
 		}
 		$('.slider-container.mini-wizard-results').addClass( 'lsx-body-list-layout search-results' );
 		$('.slider-container.mini-wizard-results').removeClass( 'lsx-to-archive-template-grid' );
+
+		let searchHeader = '<div class="search-header col-md-12"><div class="col-md-6"><h3>The Shaman Says...</h3></div>';
+		searchHeader += '<div class="col-md-6"><div class="right-align"> <div class="facetwp-facet facetwp-facet-results_count facetwp-type-pager" data-name="results_count" data-type="pager">' + arrayLength + ' trips found</div> </div></div>';
+		searchHeader += '<div class="clear"></div></div>';
+
 		$('.slider-container.mini-wizard-results').html(sliderHTML);
 	}
 

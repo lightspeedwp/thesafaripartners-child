@@ -3382,9 +3382,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-family:"moret",serif;
 	width:100%;
   }
-  .mini-wizard-results.search-results::before {
-	content: 'The Shaman Says...';
-  }
   
   .single-lsx-to-destination #wizard{padding-right: 12px;}
   .single-lsx-to-destination .tsp-seperator {
