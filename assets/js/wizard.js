@@ -481,7 +481,7 @@
 	}
 
 	function populateSearchResultsSlider( results ) {
-		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=100&nopagin=true&include='+results.join(','), {
+		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=1000&nopagin=true&include='+results.join(','), {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
@@ -493,7 +493,7 @@
 			if ( undefined !== result && 0 < result.length ) {
 				console.log(result);
 				replaceSliders( result );
-				wizardBuildSlider( window_width );
+				//wizardBuildSlider( window_width );
 			}
 		  });
 	}

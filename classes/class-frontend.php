@@ -337,7 +337,7 @@ class Frontend {
 			ob_start();
 			setup_postdata( $post );
 			echo '<div class="' . lsx_to_archive_class( 'lsx-to-widget-item-wrap lsx-tour' ). '">';
-			lsx_to_content( 'content-widget', 'tour' );
+			lsx_get_template_part();
 			echo '</div>';
 			wp_reset_postdata();
 			$contents = ob_get_clean();
