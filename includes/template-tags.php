@@ -208,7 +208,7 @@ function tsp_get_search_relevance( $post_id = 0 ) {
 
 function tsp_facet_relevance( $post_id ) {
 	$relevance = '';
-	if ( isset( $_GET['fwp_who'] ) || isset( $_GET['fwp_what'] ) || isset( $_GET['fwp_where'] ) || isset( $_GET['fwp_when'] ) || isset( $_GET['fwp_budget'] ) ) {
+	if ( isset( $_REQUEST['fwp_who'] ) || isset( $_REQUEST['fwp_what'] ) || isset( $_REQUEST['fwp_where'] ) || isset( $_REQUEST['fwp_when'] ) || isset( $_REQUEST['fwp_budget'] ) ) {
 
 		$hits  = 0;
 		$total = 0;
@@ -220,8 +220,8 @@ function tsp_facet_relevance( $post_id ) {
 			'budget'          => 'fwp_budget',
 		);
 		foreach ( $taxonomies as $taxonomy => $facet ) {
-			if ( isset( $_GET[ $facet ] ) && '' !== $_GET[ $facet ] ) {
-				$string = urldecode( $_GET[ $facet ] );
+			if ( isset( $_REQUEST[ $facet ] ) && '' !== $_REQUEST[ $facet ] ) {
+				$string = urldecode( $_REQUEST[ $facet ] );
 				$parts  = explode( ',', $string );
 				if ( ! is_array( $parts ) ) {
 					$parts = array( $parts );

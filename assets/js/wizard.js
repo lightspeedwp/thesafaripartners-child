@@ -485,12 +485,16 @@
 		const keys = Object.keys(facets);
 		console.log(keys);	
 		keys.forEach((key, index) => {
-			facetString += '&' + key + '=' + facets[key];
+			console.log(facets[key]);
+			if ( 0 < Object.keys(facets[key]).length ) {
+				let terms = Object.values(facets[key]);
+				facetString += '&fwp_' + key + '=' + terms.join(',');
+			}
 		});
 
 		console.log(facetString);	
 
-		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=1000&nopagin=true&include='+results.join(','), {
+		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=1000&nopagin=true&include='+results.join(',') + facetString, {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
