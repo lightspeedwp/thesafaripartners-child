@@ -377,44 +377,46 @@ legend {
 	height:30px;
 	background:transparent;
 }
-.toptours-posts .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
+.toptours-posts:not(.search-results) .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
 	overflow:hidden;
 	height:200px;
 }
-.toptours-posts .lsx-to-widget-content {
+.toptours-posts:not(.search-results) .lsx-to-widget-content {
 	padding:10px;
 }
-.toptours-posts .lsx-to-meta-data-style {
+.toptours-posts:not(.search-results) .lsx-to-meta-data-style {
 	display:none;
 }
-.toptours-posts h4 {
+.toptours-posts:not(.search-results) h4 {
 	margin:4px 0 14px!important;
 }
-.toptours-posts .lsx-to-widget-thumb,.tours-posts .lsx-to-widget-thumb {
+.toptours-posts:not(.search-results) .lsx-to-widget-thumb,.tours-posts .lsx-to-widget-thumb {
 	display:contents;
 	justify-content:center;
 	align-items:center;
 	overflow:hidden;
 }
-.toptours-posts .lsx-to-widget-thumb img {
+.toptours-posts:not(.search-results) .lsx-to-widget-thumb img {
 	object-fit:cover;
 	height:200px!important;
 }
-.toptours-posts .lsx-to-widget-item-wrap a.moretag,.toptours-posts .lsx-to-widget-item-wrap a.moretag:visited {
+.toptours-posts:not(.search-results) .lsx-to-widget-item-wrap a.moretag,
+.toptours-posts:not(.search-results) .lsx-to-widget-item-wrap a.moretag:visited {
 	border:1px solid #262423!important;
 	background:#fff;
 	color:#262423!important;
 	font-family:argesta_displayregular,serif;
 	padding:10px;
 }
-.toptours-posts .lsx-to-widget-title {
+.toptours-posts:not(.search-results) .lsx-to-widget-title {
 	text-align:left;
 }
 .safari-styles .lsx-to-widget-thumb img {
 	overflow:hidden;
 	object-fit:cover;
 }
-.safari-styles .lsx-to-widget-item-wrap a.moretag,.toptours-posts .lsx-to-widget-item-wrap a.moretag:visited {
+.safari-styles .lsx-to-widget-item-wrap a.moretag,
+.toptours-posts:not(.search-results) .lsx-to-widget-item-wrap a.moretag:visited {
 	border:1px solid #262423!important;
 	background:#fff;
 	color:#262423!important;
@@ -1328,6 +1330,12 @@ th {
 .mini-wizard-results h3 {
 	margin-left:10px;
 }
+
+.mini-wizard-results.search-results article {
+	margin-bottom: 30px;
+}
+
+
 .lsx-to-widget-meta-data {
 	margin:20px 0 10px;
 }
