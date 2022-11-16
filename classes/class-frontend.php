@@ -180,7 +180,7 @@ class Frontend {
 		add_filter( 'megamenu_search_replacement_html', array( $this, 'search_header_html' ), 10, 1 );
 
 		// Rest Functions
-		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 2 );
+		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 3 );
 	}
 
 	/**
@@ -330,7 +330,7 @@ class Frontend {
 	 * @param object $post WP_Post
 	 * @return object
 	 */
-	public function add_tour_archive_template_to_rest( $response, $post ) {
+	public function add_tour_archive_template_to_rest( $response, $post, $request ) {
 		if ( isset( $response->data['type'] ) && 'tour' === $response->data['type'] ) {
 			$response->data['search_results'] = '';
 
