@@ -3376,12 +3376,16 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		margin:0 auto;
 		padding:0!important;
    }
-   .mini-wizard-results::before {
+   .mini-wizard-results:not(.search-results)::before {
 	content: 'A selection of our tours:';
 	font-size: 30px;
 	font-family:"moret",serif;
 	width:100%;
   }
+  .mini-wizard-results.search-results::before {
+	content: 'The Shaman Says...';
+  }
+  
   .single-lsx-to-destination #wizard{padding-right: 12px;}
   .single-lsx-to-destination .tsp-seperator {
     padding: 0px;
