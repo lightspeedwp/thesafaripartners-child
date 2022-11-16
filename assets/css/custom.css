@@ -1428,6 +1428,8 @@ th {
 .search-results .lsx-slot .tax-title{display:none;}
 .search-results .lsx-slot.tour .tax-title{display:block!important;}
 .search-results .relevance{padding-left: 40px;}
+.mini-wizard-results.search-results .relevance{padding-left: 52px;}
+
 .search-results .relevance::before {
 	background-image: url(img/safari-shaman.svg);
     background-size: 20px 30px;
