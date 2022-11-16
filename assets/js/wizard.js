@@ -509,7 +509,7 @@
 		for (var i = 0; i < arrayLength; i++) {
 			sliderHTML += tours[i].search_results;
 		}
-		$('.slider-container.mini-wizard-results .lsx-to-slider-inner').html(sliderHTML);
+		$('.slider-container.mini-wizard-results').html(sliderHTML);
 	}
 
 	function submitInspireWizard( selectedCheckboxes, targetEle ) {
