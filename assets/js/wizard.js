@@ -516,7 +516,7 @@
 		searchHeader += '<div class="col-md-6"><div class="right-align"> <div class="facetwp-facet facetwp-facet-results_count facetwp-type-pager" data-name="results_count" data-type="pager">' + arrayLength + ' trips found</div> </div></div>';
 		searchHeader += '<div class="clear"></div></div>';
 
-		$('.slider-container.mini-wizard-results').html(sliderHTML);
+		$('.slider-container.mini-wizard-results').html(searchHeader + sliderHTML);
 	}
 
 	function submitInspireWizard( selectedCheckboxes, targetEle ) {
