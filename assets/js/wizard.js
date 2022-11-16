@@ -509,7 +509,7 @@
 		for (var i = 0; i < arrayLength; i++) {
 			sliderHTML += tours[i].search_results;
 		}
-		$('.slider-container.mini-wizard-results').addClass( 'lsx-body-list-layout' );
+		$('.slider-container.mini-wizard-results').addClass( 'lsx-body-list-layout search-results' );
 		$('.slider-container.mini-wizard-results').removeClass( 'lsx-to-archive-template-grid' );
 		$('.slider-container.mini-wizard-results').html(sliderHTML);
 	}
