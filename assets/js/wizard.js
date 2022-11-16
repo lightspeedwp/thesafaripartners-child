@@ -470,7 +470,7 @@
 		  .then(response => response.json())
 		  .then( function(result) {
 			if ( undefined !== result && 0 < result.results.length ) {
-				populateSearchResultsSlider( result.results );
+				populateSearchResultsSlider( result.results, queryArgs );
 			}
 
 			if ( $(window).width() > 1200 && $(window).width() < 1500 ) {
@@ -480,7 +480,8 @@
 		  });
 	}
 
-	function populateSearchResultsSlider( results ) {
+	function populateSearchResultsSlider( results, queryArgs ) {
+		console.log(queryArgs);
 		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=1000&nopagin=true&include='+results.join(','), {
 			'method': 'GET',
 			'headers': {
