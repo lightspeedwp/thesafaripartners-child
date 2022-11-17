@@ -365,6 +365,6 @@ function tsp_itinerary_accommodation_locations() {
 function tsp_map_meta() {
 	if ( 'accommodation' === get_post_type() ) {
 		$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
-		lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
+		lsx_to_connected_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
 	}
 }
