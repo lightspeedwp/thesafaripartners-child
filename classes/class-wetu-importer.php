@@ -34,6 +34,9 @@ class WETU_Importer {
 			'Romance Seeker', //Romance Seeker
 			'Solo Traveller',
 			'Family', // Family
+			'Currency-ZAR',
+			'Currency-EUR',
+			'Currency-USD',
 		),
 		'travel-style' => array(
 			'Wildlife Safaris',
@@ -137,6 +140,7 @@ class WETU_Importer {
 							}
 							delete_post_meta( $id, 'currency' );
 							add_post_meta( $id, 'currency', $currency );
+							continue;
 						}
 
 						if ( 'Family' === $found_term ) {
