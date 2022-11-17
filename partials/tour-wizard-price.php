@@ -49,8 +49,17 @@
 													$rc_data = array();
 													$btn_val     = '';
 
-													do {
+													//date check
+													$start_date = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_1', true );
+													if ( '' !== $value && false !== $value ) {
+														$now        = strtotime( 'now' );
+														$start_date = strtotime( $start_date );
+														if ( $start_date < $now ) {
+															continue;
+														}
+													}
 
+													do {
 														$value = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true );
 														if ( '' !== $value && false !== $value ) {
 															switch( $rc_num ) {
@@ -94,8 +103,13 @@
 																	<tr>
 																		<?php
 																		// Format the column Titles
+																		$counter = 1;
 																		foreach( $column_titles as $column_index ) {
-																			echo '<th>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
+																			$style = '';
+																			if ( 1 === $counter || 2 === $counter ) {
+																				$style = 'style="min-width: 100px;"';
+																			}
+																			echo '<th ' . $style . '>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
 																		}
 																		
 																		echo '<th class="whitebg">' . wp_nav_menu(
