@@ -45,58 +45,61 @@
 												// Grab the rows and process the data
 												do {
 													// Grab all of the row data
-													$rc_num  = 1;
-													$rc_data = array();
-													$btn_val     = '';
+													$rc_num   = 1;
+													$rc_data  = array();
+													$btn_val  = '';
+													$skip_row = false;
 
 													//date check
 													$start_date = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_1', true );
-													/*if ( '' !== $value && false !== $value ) {
-														$now        = strtotime( 'now' );
-														$start_date = strtotime( $start_date );
-														if ( $start_date < $now ) {
-															$row_counter++;
-															continue;
+													if ( '' !== $value && false !== $value ) {
+														$now         = strtotime( 'now' );
+														$start_date2 = strtotime( $start_date );
+														if ( $start_date2 < $now ) {
+															$skip_row = true;
 														}
-													}*/
+													}
 
-													do {
-														$value = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true );
-														if ( '' !== $value && false !== $value ) {
-															switch( $rc_num ) {
-																case 1:
-																	$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
-																	$btn_val                = date( 'm/d/Y', strtotime( $value ) );
-																	break;
-
-																case 2:
-																	$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
-																	$btn_val                .= '-' . date( 'm/d/Y', strtotime( $value ) );
-																	break;
-
-																default:
-																	if ( function_exists( 'lsx_currencies_get_price_html' ) ) {
-																		$rc_data[ $rc_num - 1 ] = '<td class="park-fees">' . lsx_currencies_get_price_html( $value ) . '</td>';
-																	} else {
-																		$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $value . '</span></td>';
-																	}
-																	break;
+													if ( false === $skip_row ) {
+														do {
+															$value = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true );
+															if ( '' !== $value && false !== $value ) {
+																switch( $rc_num ) {
+																	case 1:
+																		$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
+																		$btn_val                = date( 'm/d/Y', strtotime( $value ) );
+																		break;
+	
+																	case 2:
+																		$rc_data[ $rc_num - 1 ] = '<td class="date" data-gform-date="' . date( 'm/d/Y', strtotime( $value ) ) . '">' . date( 'd M Y', strtotime( $value ) ) . '</td>';
+																		$btn_val                .= '-' . date( 'm/d/Y', strtotime( $value ) );
+																		break;
+	
+																	default:
+																		if ( function_exists( 'lsx_currencies_get_price_html' ) ) {
+																			$rc_data[ $rc_num - 1 ] = '<td class="park-fees">' . lsx_currencies_get_price_html( $value ) . '</td>';
+																		} else {
+																			$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $value . '</span></td>';
+																		}
+																		break;
+																}
 															}
-														}
-														$rc_num++;
-
-													} while ( 8 > $rc_num );
-
-													$column_titles              = array_keys( $rc_data );
-
-													$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">Book Now</button></td>';
-
-													$table_data[ $row_counter ] = implode( '', $rc_data );
+															$rc_num++;
+	
+														} while ( 8 > $rc_num );
+	
+														$column_titles              = array_keys( $rc_data );
+	
+														$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">Book Now</button></td>';
+	
+														$table_data[ $row_counter ] = implode( '', $rc_data );
+													}
 													$row_counter++;
+
 												} while ( $row_counter < $price_row_amount );
 
 
-												if ( ! empty( $table_data ) && isset( $table_data[0] ) && ! empty( $table_data[0] ) ) {
+												if ( ! empty( $table_data ) ) {
 													?>
 														<article id="post-<?php the_ID(); ?>" class="dates-prices hentry">
 															<table class="table table-striped">
