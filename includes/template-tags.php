@@ -275,9 +275,6 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 						$slider_content = array( '<div class="accomodation-slider lsx-to-slider-inner">' );
 						//$slider_nav     = array( '<div class="accomodation-nav lsx-to-slider-inner">' );
 
-						$slider_content[] = '<div class="image-slide">' .get_the_post_thumbnail( $post_id, 'large' ) . '</div>';
-						//$slider_nav[]     = '<div class="nav-slide">' . get_the_post_thumbnail( $post_id, 'thumbnail-wide' ) . '</div>';
-
 						foreach ( $gallery_images as $gallery_image ) {
 							$slider_content[] = '<div class="image-slide">' . wp_get_attachment_image( $gallery_image, 'large' ) . '</div>';
 							//$slider_nav[]     = '<div class="nav-slide">' . wp_get_attachment_image( $gallery_image, 'thumbnail-wide' ) . '</div>';
