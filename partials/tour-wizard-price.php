@@ -77,9 +77,12 @@
 	
 																	default:
 																		if ( function_exists( 'lsx_currencies_get_price_html' ) ) {
+																			$args = array(
+																				'currency_tag' => false,
+																			);
 																			$rc_data[ $rc_num - 1 ] = '<td class="park-fees">' . lsx_currencies_get_price_html( $value ) . '</td>';
 																		} else {
-																			$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . $currency_letter . ' ' . $symbol . $value . '</span></td>';
+																			$rc_data[ $rc_num - 1 ] = '<td class="park-fees"><span class="amount" data-currency="' . $currency . '">' . ' ' . $symbol . $value . '</span></td>';
 																		}
 																		break;
 																}
