@@ -147,7 +147,10 @@
 											foreach ( $terms as $term ) {
 												echo $term->slug;
 											};?>">
-											<p class="tailored-msg">Dates reflect seasonality, please enquire for specific availability.</p>
+
+											<?php if ( has_term( 'tailored-tour', 'tour-type' ) ) { ?>
+												<p class="tailored-msg">Dates reflect seasonality, please enquire for specific availability.</p>
+											<?php } ?>
 										</span>
 
 										<?php
