@@ -472,7 +472,11 @@ legend {
 	padding:6px;
 	margin:10px 0;
 }
-.lsx-to-map-marker-content .type-lsx-to-accommodation{display:none!important;}
+ 
+.lsx-to-map-marker-content .type-lsx-to-accommodation .entry-content{
+	display:none!important;
+}
+
 #masthead .wrapper-toggle {
 	display:none;
 }

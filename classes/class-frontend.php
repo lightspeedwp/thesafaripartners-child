@@ -237,6 +237,8 @@ class Frontend {
 		add_action( 'lsx_content_bottom', 'lsx_to_destination_tours_tsp' );
 		add_action( 'lsx-thumbnail-single', 'lsx_to_destination_single_fast_facts' );
 
+		remove_action( 'lsx_to_map_meta', 'lsx_to_accommodation_meta' );
+		add_action( 'lsx_to_map_meta', 'tsp_map_meta' );
 	}
 
 
