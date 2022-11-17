@@ -111,9 +111,10 @@
 																		foreach( $column_titles as $column_index ) {
 																			$style = '';
 																			if ( 1 === $counter || 2 === $counter ) {
-																				$style = 'style="min-width: 100px;"';
+																				$style = 'style="min-width: 80px;"';
 																			}
 																			echo '<th ' . $style . '>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
+																			$counter++;
 																		}
 																		
 																		echo '<th class="whitebg">' . wp_nav_menu(
