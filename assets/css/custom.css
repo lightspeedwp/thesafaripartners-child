@@ -477,6 +477,10 @@ legend {
 	display:none!important;
 }
 
+body.single-lsx-to-tour #Maps .lsx-to-meta-data-destinations {
+    display: inherit;
+}
+
 #masthead .wrapper-toggle {
 	display:none;
 }
