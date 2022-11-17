@@ -51,14 +51,14 @@
 
 													//date check
 													$start_date = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_1', true );
-													if ( '' !== $value && false !== $value ) {
+													/*if ( '' !== $value && false !== $value ) {
 														$now        = strtotime( 'now' );
 														$start_date = strtotime( $start_date );
 														if ( $start_date < $now ) {
 															$row_counter++;
 															continue;
 														}
-													}
+													}*/
 
 													do {
 														$value = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true );
