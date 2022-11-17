@@ -55,6 +55,7 @@
 														$now        = strtotime( 'now' );
 														$start_date = strtotime( $start_date );
 														if ( $start_date < $now ) {
+															$row_counter++;
 															continue;
 														}
 													}
