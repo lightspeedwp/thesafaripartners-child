@@ -15,6 +15,7 @@
 					'orderby' => 'meta_value_num',
 					'order' => 'ASC',
 					'hide_empty' => 0,
+					'exclude' => '11218',
 				);
 				$terms = get_terms( 'travel-style', $args );
 				?>
