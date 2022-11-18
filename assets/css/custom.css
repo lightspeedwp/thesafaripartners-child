@@ -2247,7 +2247,23 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #dates-prices #menu-currency-selector:before{content: "Currency Selector ";font-size:10px;color:#000;}
 #menu-currency-selector{border-radius: none!important; }
 .submenu-currency{z-index:999;margin:0!important;background:#f2edea!important;}
+
 #menu-currency-selector .menu-item-currency{background:#f2edea!important;padding:1px 2px;}
+
+#menu-currency-selector .menu-item-currency .current.symbol-right {
+	display: flex;
+	width: 100%;
+}
+
+#menu-currency-selector .menu-item-currency .current.symbol-right .currency-icon {
+	flex-grow: 1;
+}
+
+#menu-currency-selector .menu-item-currency .current.symbol-right .caret {
+	align-self: center;
+	justify-self: flex-end;
+}
+
 .submenu-currency>li>a{padding:1px 15px!important;}
 
 #dates-prices #menu-currency-selector .sub-menu{
