@@ -484,7 +484,16 @@ class Frontend {
 	}
 
 	public function order_currency_dropdown( $additional_currencies ) {
-		
+		$additional_currencies = array(
+			'USD' => 'on',
+			'CAD' => 'on',
+			'EUR' => 'on',
+			'GBP' => 'on',
+			'AUD' => 'on',
+			'NZD' => 'on',
+			'JPY' => 'on',
+			'AED' => 'on',
+		);
 		return $additional_currencies;
 	}
 }
