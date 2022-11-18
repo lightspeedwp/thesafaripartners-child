@@ -477,6 +477,10 @@ legend {
 	display:none!important;
 }
 
+article.dates-prices table tr th{
+	padding-left: 0
+}
+
 body.single-lsx-to-tour #Maps .lsx-to-meta-data-destinations {
     display: inherit;
 }
