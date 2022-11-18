@@ -736,21 +736,11 @@ function checkForSliders( $next ) {
 						$(this).remove();
 					} else {
 						counter++;
-
 						p_words = $.trim( $(this).html() );
-						var subtract = p_words.split(" ");
-
-						console.log(word_limit);
-
-						if ( 1 < counter && 0 > word_limit ) {
-							$( this ).hide();
-						} else {
-							word_limit = word_limit - subtract.length;
-						}
 					}
 				} );
 
-				$( this ).append( '<a class="read-more">Read More</a>' )
+				//$( this ).append( '<a class="read-more">Read More</a>' )
 			}
 		} );
 

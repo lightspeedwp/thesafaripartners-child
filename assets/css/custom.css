@@ -964,8 +964,8 @@ th {
 	height:216px;
 }
 .lsx-readmore {
-	height:285px;
-	max-height:285px;
+    height: 40vh;
+    max-height: 40vh;
 	overflow-y:auto;
 }
 
@@ -6387,8 +6387,8 @@ left: 11px!important;}
 .lsx-to-slider-inner .slick-arrow.slick-next:before, .gallery .slick-arrow.slick-next:before, .slick-lightbox-inner .slick-arrow.slick-next:before {
 	left: 13px!important;}
 .lsx-readmore {
-    height: 230px;
-    max-height: 230px;
+	height: 40vh;
+    max-height: 40vh;
 }
 #mega-menu-wrap-primary .lsx-to-widget-item-wrap .lsx-to-widget-thumb img{    overflow: hidden;
     height: 114px;
