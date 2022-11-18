@@ -164,6 +164,7 @@ class Frontend {
 		add_filter( 'lsx_to_itinerary_title', array( $this, 'mobile_itinerary_title' ), 10, 2 );
 		add_filter( 'lsx_to_parents_only', array( $this, 'order_tour_countries' ), 20, 2 );
 		add_filter( 'the_content', array( $this, 'the_content' ), 100 );
+		add_filter( 'lsx_currencies_nav_additional_items', array( $this, 'order_currency_dropdown' ), 10, 1 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
@@ -480,5 +481,10 @@ class Frontend {
 	 */
 	public function the_content( $content ) {
 		return $content;
+	}
+
+	public function order_currency_dropdown( $additional_currencies ) {
+		
+		return $additional_currencies;
 	}
 }
