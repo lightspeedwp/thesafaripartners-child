@@ -2248,7 +2248,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #menu-currency-selector{border-radius: none!important; }
 .submenu-currency{z-index:999;margin:0!important;background:#f2edea!important;}
 
-#menu-currency-selector .menu-item-currency{background:#f2edea!important;padding:1px 2px;}
+#menu-currency-selector .menu-item-currency{background:#f2edea!important;padding:1px 2px;list-style: none;}
 
 #menu-currency-selector .menu-item-currency .current.symbol-right {
 	display: flex;

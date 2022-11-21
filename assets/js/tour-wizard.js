@@ -379,8 +379,12 @@ function checkForSliders( $next ) {
 					setFinishButton($plugin);
 					$.isFunction(settings.onSlideLeftLimitReached) && settings.onSlideLeftLimitReached.call($plugin);
 					$plugin.trigger("slideLeftLimitReached.lsxWizard", this);
-				} else {
+				}
+
+				if ( 1 < activeElementPosition ) {
 					$plugin.find('.lsx-wizard-button-previous').show();
+				} else if (activeElementPosition === stepsCount) {
+					$plugin.find('.lsx-wizard-button-previous').hide();
 				}
 
 				// Check for any sliders that need initializing
@@ -419,10 +423,15 @@ function checkForSliders( $next ) {
 
 				if (activeElementPosition === 1) {
 					$plugin.find('.lsx-wizard-button-previous').hide();
+					$plugin.find('.lsx-wizard-button-next').show();
 
 					$.isFunction(settings.onSlideRightLimitReached) && settings.onSlideRightLimitReached.call($plugin);
 					$plugin.trigger("slideRightLimitReached.lsxWizard", this);
 				} else {
+					
+					$plugin.find('.lsx-wizard-button-previous').show();
+					$plugin.find('.lsx-wizard-button-next').show();
+
 					if ($plugin.find('.lsx-wizard-button-next').hasClass('btn-success')) {
 						unsetFinishButton($plugin, settings);
 					}
@@ -646,10 +655,12 @@ function checkForSliders( $next ) {
 
 		$('.tablinks.accommodation-tablink').show();
 
-		$finishButton
+		if ( 'wizard2' !== $pluginElement.prop('id') ) {
+			$finishButton
 			.removeClass('btn-primary')
 			.addClass('btn-success')
-			.html(txt);
+			.html(txt);	
+		}
 	}
 
 	function unsetFinishButton($pluginElement, settings) {
@@ -663,13 +674,15 @@ function checkForSliders( $next ) {
 
 		$('.tablinks.accommodation-tablink').hide();
 
-		$finishButton
-			.removeClass('btn-success')
-			.addClass('btn-primary')
-			.html("")
-			.append($iconNextText)
-			.show()
-			//.append($iconNext)
+		if ( 'wizard2' !== $pluginElement.prop('id') ) {
+			$finishButton
+				.removeClass('btn-success')
+				.addClass('btn-primary')
+				.html("")
+				.append($iconNextText)
+				.show();
+				//.append($iconNext)
+		}
 	}
 
 	function markStepAsCompleted(activeElementPosition, $plugin, settings) {
@@ -765,7 +778,7 @@ function checkForSliders( $next ) {
 
 					//check for an empty P
 					if ( $(this).html() ) {
-						console.log( $(this).html() );
+						$(this).remove();
 					}
 
 					if ( true === collapse ) {

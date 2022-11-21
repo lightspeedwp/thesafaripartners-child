@@ -120,7 +120,7 @@
 																			$counter++;
 																		}
 																		
-																		echo '<th class="whitebg">' . wp_nav_menu(
+																		echo '<th class="whitebg" style="min-width: 100px;">' . wp_nav_menu(
 																			array(
 																				'theme_location' => 'currency-selector',
 																				'echo' => false,
