@@ -8,13 +8,13 @@
 		<div class="col-md-9">
 
 			<?php
-			$args = array(
+			$style_args = array(
 				'meta_key' => 'inspire_order',
 				'orderby' => 'meta_value_num',
 				'order' => 'ASC',
 				'hide_empty' => 0,
 			);
-			$terms = get_terms( 'travel-style', $args );
+			$terms = get_terms( 'travel-style', $style_args );
 			?>
 
 			<?php foreach ( $terms as $term ) : ?>
