@@ -116,6 +116,11 @@ legend {
 #mega-menu-wrap-primary .moretag {
 	display:none;
 }
+
+body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 .mega-search.mega-search-closed input[type=text] {
+	display:none;
+}
+
 .banner-easing .fa-angle-down:before{display:none;}
 .banner-easing .btn-scroll-to{border:none;border-radius:0!important;border-color: transparent !important;}
 .banner-easing .btn-scroll-to::before{background-image:url('img/down-button-tsp.svg');

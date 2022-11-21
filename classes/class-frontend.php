@@ -179,6 +179,7 @@ class Frontend {
 		add_filter( 'facetwp_filtered_post_ids', array( $this, 'sort_serch_results' ) , 10, 2 );
 		add_filter( 'facetwp_query_args', array( $this, 'facetwp_filtered_query_args' ) , 10, 2 );
 		add_filter( 'megamenu_search_replacement_html', array( $this, 'search_header_html' ), 10, 1 );
+		add_filter( 'rest_post_collection_params', array( $this, 'rest_params' ) , 10, 2 );
 
 		// Rest Functions
 		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 3 );
@@ -495,5 +496,13 @@ class Frontend {
 			'AED' => 'on',
 		);
 		return $additional_currencies;
+	}
+
+	public function rest_params( $params, $post_type ) {
+		if ( isset( $params['per_page'] ) ) {
+			$params['per_page']['maximum'] = 100;
+			$params['per_page']['default'] = 100;
+		}
+		return $params;
 	}
 }
