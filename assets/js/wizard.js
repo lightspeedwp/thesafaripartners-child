@@ -415,7 +415,7 @@
 
 		let queryArgs = {
 			'post_type': 'tour',
-			'posts_per_page': -1,
+			'posts_per_page': 100,
 			'paged': 1
 		};
 		let facets    = {};
@@ -483,7 +483,7 @@
 	function populateSearchResultsSlider( results, facets ) {
 		let facetString = '';
 		const keys = Object.keys(facets);
-		console.log(keys);	
+
 		keys.forEach((key, index) => {
 			console.log(facets[key]);
 			if ( 0 < Object.keys(facets[key]).length ) {
@@ -492,9 +492,9 @@
 			}
 		});
 
-		console.log(facetString);	
+		console.log(results);	
 
-		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?posts_per_page=1000&nopagin=true&include='+results.join(',') + facetString, {
+		var response = fetch( tsp_wizard_params.homeURL + 'wp-json/wp/v2/tour?per_page=100&nopagin=true&include='+results.join(',') + facetString, {
 			'method': 'GET',
 			'headers': {
 			  'Content-Type': 'application/json',
