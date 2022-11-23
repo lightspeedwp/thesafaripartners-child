@@ -3230,7 +3230,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .page-template-template-wizard .checkbox-clear>[type="checkbox"]:checked+span::after{
 	width: 145px!important;
     height: 186px!important;
-    margin-top: 9px!important;
+    margin-top: 0px!important;
 }
 .checkbox-wrapper {
 	position:absolute;
@@ -5417,9 +5417,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 		top:-3.2px;
 		left:2px;
 		font-weight:100;
+		border:none!important;
 		color:#ce9e57;
 		font-size:15px;
    }
+   #mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-block-1 img{width:40px;}
 	.checkbox-clear>[type="checkbox"]:checked+span {
 		border:2px solid #ce9e57!important;
    }
@@ -6674,6 +6676,8 @@ left: 11px!important;}
 	color:#262423;
 	font-size:22px;
 	border:none;
+	font-family: "moret",serif!important;
+    letter-spacing: -0.2px!important;
 }
 .single-lsx-to-tour .itinerary-navigation .lsx-wizard-button-next {
 	float:right;
