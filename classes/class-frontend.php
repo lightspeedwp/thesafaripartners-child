@@ -170,6 +170,7 @@ class Frontend {
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_submission_filter_4', array( $this, 'populate_prices_dropdown' ) );
+		add_filter( 'gform_field_value_tour_type', array( $this, 'populate_tour_type' ) );
 
 		// LSX Sharing function
 		add_filter( 'lsx_sharing_additional_buttons', array( $this, 'display_email_sharing' ), 10, 2 );
@@ -504,5 +505,22 @@ class Frontend {
 			$params['per_page']['default'] = 100;
 		}
 		return $params;
+	}
+
+	/**
+	 * Undocumented function
+	 *
+	 * @param [type] $value
+	 * @return void
+	 */
+	public function populate_tour_type($value){
+		global $post; 
+		$terms = get_the_terms( $post->ID, 'tour-type' );
+		if ( ! empty( $terms ) ) {
+			foreach ( $terms as $term ) {
+				$value = $term->name;
+			}
+		}
+		return $value;
 	}
 }
