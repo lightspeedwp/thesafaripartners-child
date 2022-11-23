@@ -316,6 +316,15 @@ body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item
 	border-radius:0;
 	background:#fff;
 }
+
+.gform_wrapper.gravity-theme .gfield.tsp-width-third {
+	grid-column: span 3;
+}
+
+.gform_wrapper.gravity-theme .gfield.tsp-width-third {
+	grid-column: span 2;
+}
+
 .who-posts .moretag-wrapper {
 	display:none;
 }
