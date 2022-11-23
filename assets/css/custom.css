@@ -318,10 +318,10 @@ body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item
 }
 
 .gform_wrapper.gravity-theme .gfield.tsp-width-third {
-	grid-column: span 3;
+	grid-column: span 4;
 }
 
-.gform_wrapper.gravity-theme .gfield.tsp-width-third {
+.gform_wrapper.gravity-theme .gfield.tsp-width-half {
 	grid-column: span 2;
 }
 
