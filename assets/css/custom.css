@@ -317,12 +317,14 @@ body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item
 	background:#fff;
 }
 
-.gform_wrapper.gravity-theme .gfield.tsp-width-third {
-	grid-column: span 4;
-}
+@media (min-width: 641px) {
+	.gform_wrapper.gravity-theme .gfield.tsp-width-third {
+		grid-column: span 4;
+	}
 
-.gform_wrapper.gravity-theme .gfield.tsp-width-half {
-	grid-column: span 2;
+	.gform_wrapper.gravity-theme .gfield.tsp-width-half {
+		grid-column: span 2;
+	}
 }
 
 .who-posts .moretag-wrapper {
