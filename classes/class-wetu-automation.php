@@ -63,8 +63,8 @@ class WETU_Automation {
 	 */
 	public function init() {
 		if ( function_exists( 'as_enqueue_async_action' ) ) {
-			//$this->schedule_main_action();
-			//add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
+			$this->schedule_main_action();
+			add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
 
 			// These are the actions which sync the individual items.
 			add_action( 'lsx_wetu_sync_tour', array( $this, 'tour_sync_action' ), 10, 1 );
@@ -81,10 +81,12 @@ class WETU_Automation {
 	public function tester_init() {
 		if ( isset( $_GET['wetu_main_debug'] ) ) {
 			$this->run_main_actions();
+			die();
 		}
 
 		if ( isset( $_GET['wetu_tour_debug'] ) ) {
 			$this->tour_sync_action( $_GET['wetu_tour_debug'] );
+			die();
 		}
 
 		if ( isset( $_GET['wetu_pin_debug'] ) ) {
@@ -103,7 +105,7 @@ class WETU_Automation {
 		//master scheduled actions
 		if ( ! wp_next_scheduled( 'lsx_wetu_master_sync' ) ) {
 			$master_sync_scheduler = strtotime( '01:00:00' );
-			wp_schedule_event( $master_sync_scheduler, 'weekly', 'lsx_wetu_master_sync' );
+			wp_schedule_event( $master_sync_scheduler, 'daily', 'lsx_wetu_master_sync' );
 		}
 	}
 
@@ -131,7 +133,22 @@ class WETU_Automation {
 						$tour_mod = strtotime( $tour_date );
 						$wetu_mod = strtotime( $wetu_tours[ $wetu_id ]['last_modified'] );
 
+						/*print_r('<pre>');
+						print_r($tour_date);
+						print_r('-');
+						print_r($wetu_tours[ $wetu_id ]['last_modified']);
+						print_r('</pre>');*/
+
 						if ( $wetu_mod <= $tour_mod ) {
+							if ( class_exists( 'ActionScheduler_Logger' ) ) {
+								\ActionScheduler_Logger::instance()->log(
+									'wetu_skipped',
+									$wetu_id . 'Tour Skipped Date - ' . $wetu_tours[ $wetu_id ]['last_modified'],
+								);
+							}
+
+							unset( $wetu_tours[ $wetu_id ] );
+							// Skip the tour import if it is 
 							continue;
 						}
 						delete_post_meta( $tour, 'lsx_wetu_modified_date' );
@@ -144,6 +161,10 @@ class WETU_Automation {
 					unset( $wetu_tours[ $wetu_id ] );
 				}
 
+				/*print_r('<pre>');
+				print_r($tour);print_r('-');print_r(get_the_title( $tour ));
+				print_r('</pre>');*/
+
 				$action_id = as_enqueue_async_action(
 					'lsx_wetu_sync_tour', 
 					array(
@@ -154,6 +175,13 @@ class WETU_Automation {
 				);
 				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
 			}
+
+			//To be removed 
+			/*var_dump( count($wetu_tours) );
+			print_r('<pre>');
+			print_r($wetu_tours);
+			print_r('</pre>');
+			return true;*/
 
 			// Let run through our new tours and import those.
 			if ( ! empty( $wetu_tours ) && ! isset( $_GET['wetu_main_debug'] ) ) {
@@ -189,7 +217,7 @@ class WETU_Automation {
 
 		return true;
 
-		$items = $this->get_pins();
+		/*$items = $this->get_pins();
 		if ( ! empty( $items ) ) {
 			foreach ( $items as $item ) {
 				$action_id = as_enqueue_async_action(
@@ -202,7 +230,7 @@ class WETU_Automation {
 				);
 				update_post_meta( $tour, 'lsx_wetu_sync_action_id', $action_id);
 			}
-		}
+		}*/
 	}
 
 	/**
@@ -320,6 +348,7 @@ class WETU_Automation {
 			if ( null !== $response ) {
 				$return = true;
 				$lsx_wetu_importer->save_queue();
+				delete_post_meta( $tour_id, 'lsx_wetu_modified_date' );
 				update_post_meta( $tour_id, 'lsx_wetu_sync_date', strtotime( 'now' ) );
 			} else {
 				// If the above didnt complete, run the action again.
@@ -368,7 +397,6 @@ class WETU_Automation {
 			
 			if ( false !== $wetu_id && '' !== $wetu_id ) {
 				$jdata = wp_remote_get( 'https://wetu.com/API/Pins/ROARLEMOUP5IENOE/Get?ids=' . $wetu_id );
-				
 
 				if ( ! is_wp_error( $jdata ) && ! empty( $jdata ) && isset( $jdata['response'] ) && isset( $jdata['response']['code'] ) && 200 === $jdata['response']['code'] ) {
 					$jata  = json_decode( $jdata['body'], true );
@@ -405,7 +433,10 @@ class WETU_Automation {
 							$importable[] = 'banner_image';
 						}
 						$importer     = false;
-						$importable[] = 'gallery';
+						$has_gallery = get_post_meta( $item_id, 'gallery', false );
+						if ( false === $has_gallery || empty( $has_gallery ) ) {
+							$importable[] = 'gallery';
+						}
 
 						if ( 'accommodation' === $post_type ) {
 							$importable = $this->get_accommodation_flags( $importable );
