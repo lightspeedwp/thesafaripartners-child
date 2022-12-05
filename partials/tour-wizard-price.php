@@ -116,7 +116,7 @@
 																			if ( 1 === $counter || 2 === $counter ) {
 																				$style = 'style="min-width: 85px;"';
 																			}
-																			echo '<th ' . $style . '>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $column_index+1, true ) . '</th>';
+																			echo '<th ' . $style . '>' . get_post_meta( get_the_ID(), 'column_titles_column_' . $counter, true ) . '</th>';
 																			$counter++;
 																		}
 																		
