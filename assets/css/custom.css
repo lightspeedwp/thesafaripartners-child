@@ -985,6 +985,11 @@ th {
 	overflow-y:auto;
 }
 
+.single-lsx-to-tour .itenary .entry-content.lsx-readmore {
+    height: 55vh;
+    max-height: 55vh;
+}
+
 .lsx-readmore::after {
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 85%);
 	bottom: 0;
