@@ -32,7 +32,7 @@ class Post_Connections {
 		add_filter( 'facetwp_index_row', array( $this, 'facetwp_index_row' ), 10, 2 );
 		add_filter( 'facetwp_facet_html', array( $this, 'destination_facet_html' ), 10, 2 );
 
-		add_filter( 'searchwp_custom_fields', array( $this, 'searchwp_custom_fields' ), 10, 3 );
+		add_filter( 'searchwp\source\post\attributes\meta', array( $this, 'searchwp_custom_fields' ), 10, 2 );
 	}
 
 	/**
@@ -507,15 +507,16 @@ class Post_Connections {
 	 * @param [type] $post_obj
 	 * @return void
 	 */
-	public function searchwp_custom_fields( $value, $name, $post_obj ) {
+	public function searchwp_custom_fields( $value, $args = array() ) {
+		$return = '';
 
-		if ( 'destination_to_tour' === $name ) {
-			$value = $this->format_related_types( $value );
+		if ( 'destination_to_tour' === $args['meta_key'] ) {
+			$return = $this->format_related_types( $args['meta_value'] );
 		}
 
-		if ( 'itinerary' === $name ) {
+		if ( 'itinerary' === $args['meta_key'] ) {
 			$new_string = array();
-			$values     = maybe_unserialize( $value );
+			$values     = maybe_unserialize( $args['meta_value'] );
 			if ( ! is_array( $values ) ) {
 				$values = array( $values );
 			}
@@ -524,9 +525,14 @@ class Post_Connections {
 			}
 
 			if ( ! empty( $new_string ) ) {
-				$value = implode( ',', $new_string );
+				$return = implode( ',', $new_string );
 			}
 		}
+
+		if ( '' !== $return ) {
+			$value = $return;
+		}
+
 		return $value;
 	}
 
