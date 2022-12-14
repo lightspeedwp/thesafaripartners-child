@@ -3601,7 +3601,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
    }
 	.single-lsx-to-tour #Price .lsx-to-tour-content {
 		padding-top:3vh!important;
-		width: 880px;
+		width: 780px;
 		padding-left:10px!important;
    }
 	.single-lsx-to-tour .outer-container {
@@ -7017,4 +7017,16 @@ left: 11px!important;}
    }
    .wp-block-cover video.wp-block-cover__video-background{top:20px;}
    .intro-wrap{z-index:999;}
+}
+
+
+@media screen and (min-width:1300px) {
+	.single-lsx-to-tour #Price .lsx-to-tour-content {
+		width: 800px;
+	}
+}
+@media screen and (min-width:1400px) {
+	.single-lsx-to-tour #Price .lsx-to-tour-content {
+		width: 880px;
+	}
 }
