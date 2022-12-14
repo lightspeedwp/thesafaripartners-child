@@ -2750,6 +2750,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .tours-nav .col-md-4 {
 	padding:0!important;
 }
+
+@media (min-width: 1200px) {
+	.single-lsx-to-tour #price .tours-nav {
+		width: 80%;
+	}
+}
+
 .tours-nav .btn {
 	background:#fff;
 	color:#262423;
