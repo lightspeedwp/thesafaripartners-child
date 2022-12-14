@@ -382,8 +382,9 @@ function tsp_map_meta() {
  */
 function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false ) {
 	if ( false !== $taxonomy ) {
-		$return = false;
-		$filters = array();
+		$return     = false;
+		$filters    = array();
+		$current_id = get_the_ID();
 
 		if ( false === $post_type ) {
 			$post_type = get_post_type();
@@ -402,7 +403,10 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 
 			// Destinations
 			$destinations = get_post_meta( get_the_ID(), 'destination_to_tour', true );
-			if ( false !== $destinations && is_array( $destinations ) ) {
+			if ( false !== $destinations && '' !== $destinations ) {
+				if ( ! is_array( $destinations ) ) {
+					$destinations = array( $destinations );
+				}
 				$filters['meta_query'] = array(
 					array(
 						'key'     => 'destination_to_tour',
@@ -414,22 +418,29 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 			// Budget Level
 			// Traveller Type
 
-			$terms = wp_get_object_terms( get_the_ID(), $taxonomy );
-			
+			$terms = wp_get_object_terms( get_the_ID(), array( 'budget', 'who' ) );
 			//only allow relation by 1 property type term
-			/*if ( is_array( $terms ) && ! empty( $terms ) ) {
-				$filters['tax_query'] = array(
-					array(
-						'taxonomy' => $taxonomy,
-						'field'    => 'slug',
-						'terms'    => array(),
-					),
-				);
+			if ( is_array( $terms ) && ! empty( $terms ) ) {
+
+				$query_terms = array();
 
 				foreach ( $terms as $term ) {
-					$filters['tax_query'][0]['terms'][] = $term->slug;
+					$query_terms[ $term->taxonomy ][] = $term->slug;
 				}
-			}*/
+
+				if ( 1 < count( $query_terms ) ) {
+					$filters['tax_query']['relation'] = 'OR';
+				}
+
+				foreach ( $query_terms as $qt_key => $qt_vals ) {
+					$filters['tax_query'][] = 
+						array(
+						'taxonomy' => $qt_key,
+						'field'    => 'slug',
+						'terms'    => $qt_vals,
+					);
+				}
+			}
 		}
 
 		$related_query = new WP_Query( $filters );
