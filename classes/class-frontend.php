@@ -263,6 +263,7 @@ class Frontend {
 				$query->set( 'posts_per_page', -1 );
 				$query->set( 'nopagin', true );
 				$query->set( 'post_type', 'tour' );
+				$query->set( 'orderby', 'relevance' );
 			}
 		}
 	}
@@ -296,6 +297,12 @@ class Frontend {
 					}
 				}
 			}
+		}
+
+		//sort the results by the relevance.
+		if ( ! empty( $results ) ) {
+			arsort( $search_relevance );
+			$results = array_keys( $search_relevance );
 		}
 	
 		return $results;
@@ -373,9 +380,8 @@ class Frontend {
 		$relevance_scores = array();
 
 		foreach ( $post_ids as $post_id ) {
-			$relevance_scores[ $post_id ] = tsp_facet_relevance( $post_id );
+			$relevance_scores[ $post_id ] = str_replace( '%', '', tsp_get_search_relevance( $post_id ) );
 		}
-
 		if ( ! empty( $relevance_scores ) ) {
 			arsort( $relevance_scores );
 			$post_ids = array_keys( $relevance_scores );
