@@ -368,3 +368,124 @@ function tsp_map_meta() {
 		lsx_to_connected_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
 	}
 }
+
+
+/**
+ * Returns items tagged in the same terms for the taxonomy you select.
+ *
+ * @param		$taxonomy	| string
+ * @return		string
+ *
+ * @package 	tour-operator
+ * @subpackage	template-tags
+ * @category 	helper
+ */
+function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false ) {
+	if ( false !== $taxonomy ) {
+		$return = false;
+		$filters = array();
+
+		if ( false === $post_type ) {
+			$post_type = get_post_type();
+		}
+
+		$filters['post_type'] = $post_type;
+
+		if ( is_array( $taxonomy ) ) {
+			$filters['post__in'] = $taxonomy;
+		} else {
+			
+
+			$filters['posts_per_page'] = 15;
+			//Exclude the current post
+			$filters['post__not_in'] = array( get_the_ID() );
+			//if its set to related then we need to check by the type.
+			$filters['orderby'] = 'rand';
+			$terms = wp_get_object_terms( get_the_ID(), $taxonomy );
+
+			//only allow relation by 1 property type term
+			if ( is_array( $terms ) && ! empty( $terms ) ) {
+				$filters['tax_query'] = array(
+					array(
+						'taxonomy' => $taxonomy,
+						'field'    => 'slug',
+						'terms'    => array(),
+					),
+				);
+
+				foreach ( $terms as $term ) {
+					$filters['tax_query'][0]['terms'][] = $term->slug;
+				}
+			}
+		}
+
+		$related_query = new WP_Query( $filters );
+
+		if ( $related_query->have_posts() ) :
+			global $wp_query, $columns;
+
+			$wp_query->is_single = 0;
+			$wp_query->is_singular = 0;
+			$wp_query->is_post_type_archive = 1;
+
+			if ( null ===  $columns || empty( $columns ) || '' === $columns ) {
+				$columns = 3;
+			}
+
+			ob_start();
+
+			//Setting some carousel variables
+			$carousel_id = rand( 20, 20000 );
+			$interval = '6000';
+			$post_type = get_post_type();
+
+			$slider_atts = array(
+				'slidesToShow'   => esc_attr( $columns ),
+				'slidesToScroll' => esc_attr( $columns ),
+			);
+			$slider_atts = apply_filters( 'lsx_to_related_slider_attributes', $slider_atts );
+
+			echo '<div class="slider-container lsx-to-widget-items">';
+			echo '<div id="slider-' . esc_attr( $carousel_id ) . '" class="lsx-to-slider">';
+			echo '<div class="lsx-to-slider-wrap">';
+			
+			//echo '<div class="lsx-to-slider-inner" data-interval="' . esc_attr( $interval ) . '" data-slick=\'' . json_encode( $slider_atts ) .'\'>';
+			echo "<div class='lsx-to-slider-inner' data-interval='{$interval}' data-slick='{ \"slidesToShow\": {$columns}, \"slidesToScroll\": {$columns} }'>";
+
+			while ( $related_query->have_posts() ) :
+				$related_query->the_post();
+
+				global $disable_placeholder, $disable_text;
+
+				$disable_placeholder = apply_filters( 'lsx_to_widget_disable_placeholder', false, $post_type, false, $taxonomy );
+				$disable_text = apply_filters( 'lsx_to_widget_disable_text', false, $post_type, false, $taxonomy );
+
+				echo '<div class="lsx-to-widget-item-wrap lsx-' . esc_attr( $post_type ) . '">';
+				lsx_to_content( 'content-widget', $post_type );
+				echo '</div>';
+			endwhile;
+
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
+
+			$return = ob_get_clean();
+
+			$wp_query->is_single = 1;
+			$wp_query->is_singular = 1;
+			$wp_query->is_post_type_archive = 0;
+
+			wp_reset_postdata();
+
+			$return = $before . $return . $after;
+		endif;
+
+		if ( $echo ) {
+			echo wp_kses_post( $return );
+		} else {
+			return $return;
+		}
+	}
+}
+
