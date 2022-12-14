@@ -31,6 +31,8 @@ class Post_Connections {
 		add_filter( 'facetwp_indexer_row_data', array( $this, 'facetwp_index_row_data' ), 10, 2 );
 		add_filter( 'facetwp_index_row', array( $this, 'facetwp_index_row' ), 10, 2 );
 		add_filter( 'facetwp_facet_html', array( $this, 'destination_facet_html' ), 10, 2 );
+
+		add_filter( 'searchwp_custom_fields', array( $this, 'searchwp_custom_fields' ), 10, 3 );
 	}
 
 	/**
@@ -495,5 +497,35 @@ class Post_Connections {
         $output .= '</div>';
 
 		return $output;
+	}
+
+	/**
+	 * Undocumented function
+	 *
+	 * @param [type] $value
+	 * @param [type] $name
+	 * @param [type] $post_obj
+	 * @return void
+	 */
+	public function searchwp_custom_fields( $value, $name, $post_obj ) {
+
+		if ( 'destination_to_tour' === $name ) {
+			$value = get_the_title( $value );
+		}
+
+		if ( 'itinerary' === $name ) {
+			if ( is_array( $value ) ) {
+
+			} else {
+
+			}
+		}
+	  
+		return $value;
+	}
+
+	public function format_itinerary( $value ) {
+		
+		return $value;
 	}
 }
