@@ -511,12 +511,12 @@ class Post_Connections {
 		$return = '';
 
 		if ( 'destination_to_tour' === $args['meta_key'] ) {
-			$return = $this->format_related_types( $args['meta_value'] );
+			$return = $this->format_related_types( $args['meta_value'][0] );
 		}
 
 		if ( 'itinerary' === $args['meta_key'] ) {
 			$new_string = array();
-			$values     = maybe_unserialize( $args['meta_value'] );
+			$values     = maybe_unserialize( $args['meta_value'][0] );
 			if ( ! is_array( $values ) ) {
 				$values = array( $values );
 			}
