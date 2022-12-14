@@ -2752,7 +2752,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 
 @media (min-width: 1200px) {
-	.single-lsx-to-tour #price .tours-nav {
+	.single-lsx-to-tour #Price .tours-nav {
 		width: 80%;
 	}
 }
