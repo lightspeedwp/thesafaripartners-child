@@ -510,11 +510,15 @@ class Post_Connections {
 	public function searchwp_custom_fields( $value, $args = array() ) {
 		$return = '';
 
-		if ( 'destination_to_tour' === $args['meta_key'] ) {
-			$return = $this->format_related_types( $args['meta_value'][0] );
+		if ( 'destination_to_tour' === $args['meta_key'] || 'accommodation_to_tour' === $args['meta_key'] ) {
+			if ( is_array( $args['meta_value'][0] ) ) {
+				$return = $this->format_related_types( $args['meta_value'][0] );
+			} else {
+				$return = $this->format_related_types( $args['meta_value'] );
+			}
 		}
 
-		if ( 'itinerary' === $args['meta_key'] ) {
+		/*if ( 'itinerary' === $args['meta_key'] ) {
 			$new_string = array();
 			$values     = maybe_unserialize( $args['meta_value'][0] );
 			if ( ! is_array( $values ) ) {
@@ -527,7 +531,7 @@ class Post_Connections {
 			if ( ! empty( $new_string ) ) {
 				$return = implode( ',', $new_string );
 			}
-		}
+		}*/
 
 		if ( '' !== $return ) {
 			$value = $return;
