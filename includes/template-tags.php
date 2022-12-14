@@ -394,17 +394,30 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 		if ( is_array( $taxonomy ) ) {
 			$filters['post__in'] = $taxonomy;
 		} else {
-			
-
 			$filters['posts_per_page'] = 15;
 			//Exclude the current post
 			$filters['post__not_in'] = array( get_the_ID() );
 			//if its set to related then we need to check by the type.
 			$filters['orderby'] = 'rand';
-			$terms = wp_get_object_terms( get_the_ID(), $taxonomy );
 
+			// Destinations
+			$destinations = get_post_meta( get_the_ID(), 'destination_to_tour', true );
+			if ( false !== $destinations && is_array( $destinations ) ) {
+				$filters['meta_query'] = array(
+					array(
+						'key'     => 'destination_to_tour',
+						'compare' => 'IN',
+						'value'   => $destinations,
+					),
+				);
+			}
+			// Budget Level
+			// Traveller Type
+
+			$terms = wp_get_object_terms( get_the_ID(), $taxonomy );
+			
 			//only allow relation by 1 property type term
-			if ( is_array( $terms ) && ! empty( $terms ) ) {
+			/*if ( is_array( $terms ) && ! empty( $terms ) ) {
 				$filters['tax_query'] = array(
 					array(
 						'taxonomy' => $taxonomy,
@@ -416,7 +429,7 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 				foreach ( $terms as $term ) {
 					$filters['tax_query'][0]['terms'][] = $term->slug;
 				}
-			}
+			}*/
 		}
 
 		$related_query = new WP_Query( $filters );

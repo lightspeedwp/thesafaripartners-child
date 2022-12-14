@@ -43,7 +43,7 @@
 										}
 										global $columns;
 										$columns = 2;
-										lsx_to_related_items( $connected_tours, '', '' , true, 'tour' );
+										tsp_related_items( $connected_tours, '', '' , true, 'tour' );
 										?>
 									</div>
 								</div>
