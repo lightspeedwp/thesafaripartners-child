@@ -383,7 +383,7 @@ class Frontend {
 			$relevance_scores[ $post_id ] = str_replace( '%', '', tsp_get_search_relevance( $post_id ) );
 		}
 		if ( ! empty( $relevance_scores ) ) {
-			arsort( $relevance_scores );
+			arsort( $relevance_scores, SORT_NUMERIC );
 			$post_ids = array_keys( $relevance_scores );
 		}
 
