@@ -516,22 +516,24 @@ class Post_Connections {
 			} else {
 				$return = $this->format_related_types( $args['meta_value'] );
 			}
+			update_option( 'wetu_itinerary_relation', $return );
 		}
 
-		/*if ( 'itinerary' === $args['meta_key'] ) {
+		if ( 'itinerary' === $args['meta_key'] ) {
 			$new_string = array();
 			$values     = maybe_unserialize( $args['meta_value'][0] );
 			if ( ! is_array( $values ) ) {
 				$values = array( $values );
 			}
 			foreach( $values as $nv ) {
-				$new_string = $this->format_itinerary( $nv );
+				$new_string[] = $this->format_itinerary( $nv );
 			}
 
 			if ( ! empty( $new_string ) ) {
-				$return = implode( ',', $new_string );
+				$return = implode( ' ', $new_string );
+				update_option( 'wetu_itinerary_info', $return );
 			}
-		}*/
+		}
 
 		if ( '' !== $return ) {
 			$value = $return;
@@ -541,24 +543,24 @@ class Post_Connections {
 	}
 
 	public function format_itinerary( $values ) {
-		$string = implode( ',', $values );
+		$string = implode( ' ', $values );
 		$strings = array();
 		if ( isset( $values['title'] ) && '' !== $values['title'] ) {
-			$strings[] = $values['title'];
+			//$strings[] = $values['title'];
 		}
 		if ( isset( $values['description'] ) && '' !== $values['description'] ) {
-			$strings[] = $values['description'];
+			$strings[] = strip_tags( $values['description'] );
 		}
 
-		if ( isset( $values['accommodation_to_tour'] ) && '' !== $values['accommodation_to_tour'] ) {
+		/*if ( isset( $values['accommodation_to_tour'] ) && '' !== $values['accommodation_to_tour'] ) {
 			$strings[] = $this->format_related_types( $values['accommodation_to_tour'] );
 		}
 		if ( isset( $values['destination_to_tour'] ) && '' !== $values['destination_to_tour'] ) {
 			$strings[] = $this->format_related_types( $values['destination_to_tour'] );
-		}
+		}*/
 
 		if ( ! empty( $strings ) ) {
-			$string = implode( ',', $strings );
+			$string = implode( ' ', $strings );
 		}
 		return $string;
 	}
@@ -567,18 +569,19 @@ class Post_Connections {
 	 * Runs through a related field and grabs the info.
 	 */
 	public function format_related_types( $types ) {
-		$string = implode( ',', $types );
+		$string = implode( ' ', $types );
 		$strings = array();
 		if ( ! is_array( $types ) ) {
 			$types = array( $types );
 		}
 		if ( ! empty( $types ) ) {
+			$types = array_unique( $types );
 			foreach ( $types as $type ) {
 				$strings[] = get_the_title( $type );
 			}
 		}
 		if ( ! empty( $strings ) ) {
-			$string = implode( ',', $strings );
+			$string = implode( ' ', $strings );
 		}
 		return $string;
 	}
