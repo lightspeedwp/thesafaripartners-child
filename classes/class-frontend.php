@@ -292,7 +292,7 @@ class Frontend {
 					$relevance = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
 					$search_relevance[$result] = $relevance;
 	
-					if ( (int) $relevance < 50 ) {
+					if ( (int) $relevance < 25 ) {
 						unset( $results[ $index ] );
 					}
 				}
