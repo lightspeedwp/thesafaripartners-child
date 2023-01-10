@@ -51,7 +51,7 @@
 													$skip_row = false;
 
 													//date check
-													$start_date = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_1', true );
+													$start_date = get_post_meta( get_the_ID(), 'price_row_' . $row_counter . '_column_2', true );
 													if ( '' !== $value && false !== $value ) {
 														$now         = strtotime( 'now' );
 														$start_date2 = strtotime( $start_date );
