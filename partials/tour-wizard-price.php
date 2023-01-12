@@ -18,6 +18,18 @@
 									$prices_image = apply_filters( 'tsp_date_prices_image', false );
 									if ( false !== $prices_image ) {
 										echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $prices_image . '">' );
+									} else {
+										$next_image = apply_filters( 'lsx_get_thumbnail_post_placeholder_id', false, get_the_ID() );
+			
+										// If there is one use it.
+										if ( false !== $next_image ) {
+											$thumbnail_src    = '';
+											$temp_src_array   = wp_get_attachment_image_src( $next_image, 'large' );
+											if ( is_array( $temp_src_array ) ) {
+												$thumbnail_src = $temp_src_array[0];
+											}
+											echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumbnail_src . '">' );
+										}
 									}
 								?>
 								</picture>
