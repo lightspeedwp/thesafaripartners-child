@@ -475,7 +475,10 @@
 
 			if ( $(window).width() > 1200 && $(window).width() < 1500 ) {
 				console.log('scrollgin to the results');
-				jQuery('body').scrollTo('.mini-wizard-results');
+				jQuery('html, body').animate({
+					scrollTop: jQuery('.mini-wizard-results').offset().top - 100
+				}, 100);
+
 			}
 		  });
 	}
