@@ -76,7 +76,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 						//first delete the old data
 						$number_of_rows = get_post_meta( $_GET['post'], 'price_row', true );
 	
-						if ( false !== $number_of_rows && 0 !== $number_of_rows ) {
+						/*if ( false !== $number_of_rows && 0 !== $number_of_rows ) {
 							$counter = 0;
 							do {
 								delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_1' );
@@ -99,12 +99,17 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 							} while ( $counter < $number_of_rows );
 							delete_post_meta( $_GET['post'], 'price_row' );
 							delete_post_meta( $_GET['post'], '_price_row' );
+						}*/
+
+						if ( false !== $number_of_rows ) {
+							$counter_number = count( $number_of_rows );
+						} else {
+							$counter_number = 0;
 						}
 	
 						while ( ( $row_data = fgetcsv( $handle, 1000, ',' ) ) !== false ) {
 							//skip first row = columnheaders
-							if ( $r == 0 ) {
-								
+							if ( $r == 0 && 0 === $counter_number ) {
 								// Save the titles
 								$file_headers = $row_data;
 								foreach ( $file_headers as $f_key => $f_value ) {
@@ -133,8 +138,8 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 											$value = preg_replace("/[^A-Za-z0-9 ]/", '', $row_data[$f_key]);
 										}
 	
-										add_post_meta( $_GET['post'], 'price_row_' . ( $r-1 ) . '_column_' . $header_counter, $value, true );
-										add_post_meta( $_GET['post'], '_price_row_' . ( $r-1 ) . '_column_' . $header_counter, $field_ids[ $header_counter ], true );
+										add_post_meta( $_GET['post'], 'price_row_' . ( $counter_number-1 ) . '_column_' . $header_counter, $value, true );
+										add_post_meta( $_GET['post'], '_price_row_' . ( $counter_number-1 ) . '_column_' . $header_counter, $field_ids[ $header_counter ], true );
 	
 										$header_counter++;
 									}
@@ -142,6 +147,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 								}//end Num if
 							}//en $r if
 	
+							$counter_number++;
 							$r++;
 						}//end of the while
 	
