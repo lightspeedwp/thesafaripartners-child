@@ -78,7 +78,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 						//first delete the old data
 						$number_of_rows = get_post_meta( $_GET['post'], 'price_row', true );
 	
-						if ( false !== $append && false !== $number_of_rows && 0 !== $number_of_rows ) {
+						if ( false !== $append && '' !== $append && false !== $number_of_rows && 0 !== $number_of_rows ) {
 							$counter = 0;
 							do {
 								delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_1' );
@@ -103,7 +103,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 							delete_post_meta( $_GET['post'], '_price_row' );
 						}
 
-						if ( false !== $number_of_rows ) {
+						if ( false !== $number_of_rows && '' !== $append ) {
 							$counter_number = count( $number_of_rows );
 						} else {
 							$counter_number = 0;
