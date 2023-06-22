@@ -77,9 +77,15 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 	
 						//first delete the old data
 						$number_of_rows = get_post_meta( $_GET['post'], 'price_row', true );
-	
-						if ( false !== $append && '' !== $append && false !== $number_of_rows && 0 !== $number_of_rows ) {
+						if ( is_array( $append ) && in_array( 'yes', $append ) ) {
+							$append = true;
+						} else {
+							$append = false;
+						}
+						
+						if ( ( false === $append || '' === $append ) && false !== $number_of_rows && 0 !== $number_of_rows ) {
 							$counter = 0;
+							
 							do {
 								delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_1' );
 								delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_2' );
@@ -99,24 +105,31 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 								delete_post_meta( $_GET['post'], '_price_row_' . $counter . '_column_7' );
 								$counter++;
 							} while ( $counter < $number_of_rows );
-							delete_post_meta( $_GET['post'], 'price_row' );
-							delete_post_meta( $_GET['post'], '_price_row' );
+							
+							$number_of_rows = false;
 						}
+						
+						// We will always update the price row below.
+						delete_post_meta( $_GET['post'], 'price_row' );
+						delete_post_meta( $_GET['post'], '_price_row' );
 
-						if ( false !== $number_of_rows && '' !== $append ) {
-							$counter_number = count( $number_of_rows );
+						if ( false !== $number_of_rows && '' !== $number_of_rows ) {
+							$counter_number = (int) $number_of_rows;
 						} else {
 							$counter_number = 0;
 						}
-	
+						
 						while ( ( $row_data = fgetcsv( $handle, 1000, ',' ) ) !== false ) {
 							//skip first row = columnheaders
-							if ( $r == 0 && 0 === $counter_number ) {
+							
+							if ( $r == 0 ) {
 								// Save the titles
 								$file_headers = $row_data;
-								foreach ( $file_headers as $f_key => $f_value ) {
-									delete_post_meta( $_GET['post'], 'column_titles_column_' . ( $f_key + 1 ) );
-									add_post_meta( $_GET['post'], 'column_titles_column_' . ( $f_key + 1 ), $f_value, true );
+								if ( 0 === $counter_number ) {
+									foreach ( $file_headers as $f_key => $f_value ) {
+										delete_post_meta( $_GET['post'], 'column_titles_column_' . ( $f_key + 1 ) );
+										add_post_meta( $_GET['post'], 'column_titles_column_' . ( $f_key + 1 ), $f_value, true );
+									}
 								}
 							}
 	
@@ -153,7 +166,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 							$r++;
 						}//end of the while
 	
-						add_post_meta( $_GET['post'], 'price_row', ($r-1), true );
+						add_post_meta( $_GET['post'], 'price_row', ($counter_number-1), true );
 						add_post_meta( $_GET['post'], '_price_row', 'field_62fcebb79657b', true );
 	
 						wp_delete_attachment( $tour_schedule );
