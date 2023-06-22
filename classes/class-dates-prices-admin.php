@@ -64,6 +64,8 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 				);
 
 				$tour_schedule = get_post_meta( $_GET['post'], 'tour_schedule_upload', true );
+				$append = get_post_meta( $_GET['post'], 'append_dates_and_prices', true );
+				
 				if ( false != $tour_schedule ) {
 					$schedule = get_attached_file( $tour_schedule );
 
@@ -76,7 +78,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 						//first delete the old data
 						$number_of_rows = get_post_meta( $_GET['post'], 'price_row', true );
 	
-						/*if ( false !== $number_of_rows && 0 !== $number_of_rows ) {
+						if ( false !== $append && false !== $number_of_rows && 0 !== $number_of_rows ) {
 							$counter = 0;
 							do {
 								delete_post_meta( $_GET['post'], 'price_row_' . $counter . '_column_1' );
@@ -99,7 +101,7 @@ if ( ! class_exists( 'Dates_Prices_Admin' ) ) {
 							} while ( $counter < $number_of_rows );
 							delete_post_meta( $_GET['post'], 'price_row' );
 							delete_post_meta( $_GET['post'], '_price_row' );
-						}*/
+						}
 
 						if ( false !== $number_of_rows ) {
 							$counter_number = count( $number_of_rows );
