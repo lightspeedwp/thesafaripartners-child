@@ -2787,7 +2787,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-size:20px;
 	position:absolute;
 	right:0;
-	bottom:-8rem;
+	bottom:-4rem;
 }
 .single-lsx-to-tour #singlelink.tablinks:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
@@ -6777,7 +6777,7 @@ left: 11px!important;}
 	font-size:20px;
 	position:absolute;
 	right:12px;
-	bottom:-5rem;
+	bottom:-3rem;
 }
 .single-lsx-to-tour #singlelink.tablinks:after {
 	background-image:url('img/tsp-see-more-arrow.svg');
