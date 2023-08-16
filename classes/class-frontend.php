@@ -288,9 +288,9 @@ class Frontend {
 			$posts_relevance = wp_list_pluck( $query->get_raw_results(), 'relevance', 'id' );
 			
 			foreach( $results as $index => $result ){
-				if ( isset( $posts_relevance[$result] ) ) {
-					$relevance = round( ( $posts_relevance[$result] * 100 ) / $max_relevance );
-					$search_relevance[$result] = $relevance;
+				if ( isset( $posts_relevance[$result->ID] ) ) {
+					$relevance = round( ( $posts_relevance[$result->ID] * 100 ) / $max_relevance );
+					$search_relevance[$result->ID] = $relevance;
 	
 					if ( (int) $relevance < 25 ) {
 						unset( $results[ $index ] );
