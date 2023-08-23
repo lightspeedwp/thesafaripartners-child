@@ -229,7 +229,9 @@ function tsp_facet_relevance( $post_id, $overrides = array() ) {
 			'travel-style' => 'fwp_what',
 			'when'          => 'fwp_when',
 			'budget'          => 'fwp_budget',
+			'destination_to_tour' => 'fwp_where',
 		);
+		
 		foreach ( $taxonomies as $taxonomy => $facet ) {
 			if ( isset( $request[ $facet ] ) && '' !== $request[ $facet ] ) {
 				$string = urldecode( $request[ $facet ] );
@@ -238,11 +240,24 @@ function tsp_facet_relevance( $post_id, $overrides = array() ) {
 					$parts = array( $parts );
 				}
 	
-				foreach ( $parts as $part ) {
-					if ( has_term( $part, $taxonomy, $post_id ) ) {
-						$hits++;
+				if ( 'fwp_where' === $facet ) {
+					$destinations = get_post_meta( $post_id, $taxonomy );
+					if ( ! empty( $destinations ) ) {
+						$destinations = array_unique( $destinations );
+						$found = array_intersect( $parts, $destinations );
+						
+						if ( ! empty( $found ) ) {
+							$hits = $hits + count( $found );
+						}
 					}
-					$total++;
+					$total = $total + count( $parts );
+				} else {
+					foreach ( $parts as $part ) {
+						if ( has_term( $part, $taxonomy, $post_id ) ) {
+							$hits++;
+						}
+						$total++;
+					}	
 				}
 			}
 		}
