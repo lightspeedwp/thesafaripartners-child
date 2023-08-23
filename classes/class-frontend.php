@@ -180,7 +180,6 @@ class Frontend {
 		add_filter( 'facetwp_filtered_post_ids', array( $this, 'sort_serch_results' ) , 10, 2 );
 		add_filter( 'facetwp_query_args', array( $this, 'facetwp_filtered_query_args' ) , 10, 2 );
 		add_filter( 'megamenu_search_replacement_html', array( $this, 'search_header_html' ), 10, 1 );
-		add_filter( 'rest_post_collection_params', array( $this, 'rest_params' ) , 10, 2 );
 
 		// Rest Functions
 		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 3 );
@@ -263,7 +262,7 @@ class Frontend {
 				$query->set( 'posts_per_page', -1 );
 				$query->set( 'nopagin', true );
 				$query->set( 'post_type', 'tour' );
-				$query->set( 'orderby', 'relevance' );
+				$query->set( 'orderby', 'post__in' );
 			}
 		}
 	}
@@ -271,40 +270,59 @@ class Frontend {
 	public function get_swp_relevance( $results, $query ){
 		global $search_relevance;
 
-		if( empty( $results) ){
+		if( empty( $results ) ) {
 			return $results;
 		}
-		$search_relevance = array();
 
-		if ( class_exists( 'SearchWP' ) ) {
-			remove_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ) );
-			$max_relevance_query = new \SearchWP\Query( $query->get_keywords( true ),
-				[
-					'engine' => $query->get_engine()->get_name(),
-					'per_page' => 1
-				]
-			);
-			$max_relevance = (int)$max_relevance_query->results[0]->relevance;
-			$posts_relevance = wp_list_pluck( $query->get_raw_results(), 'relevance', 'id' );
-			
-			foreach( $results as $index => $result ){
-				if ( isset( $posts_relevance[$result->ID] ) ) {
-					$relevance = round( ( $posts_relevance[$result->ID] * 100 ) / $max_relevance );
-					$search_relevance[$result->ID] = $relevance;
-	
-					if ( (int) $relevance < 25 ) {
-						unset( $results[ $index ] );
+		$search_relevance = array();
+		
+		if ( isset( $_GET['fwp_search'] ) ) {
+			if ( class_exists( 'SearchWP' ) ) {
+				remove_filter( 'searchwp\query\results', array( $this, 'get_swp_relevance' ) );
+				$max_relevance_query = new \SearchWP\Query( $query->get_keywords( true ),
+					[
+						'engine' => $query->get_engine()->get_name(),
+						'per_page' => 500
+					]
+				);
+				$max_relevance = (int)$max_relevance_query->results[0]->relevance;
+				$posts_relevance = wp_list_pluck( $max_relevance_query->get_raw_results(), 'relevance', 'id' );
+				
+				foreach( $results as $index => $result ){
+					
+					if ( is_object( $result ) ) {
+						$ind = $result->ID;
+					} else {
+						$ind = $result;
+					}
+					
+					if ( isset( $posts_relevance[ $ind ] ) ) {
+						$relevance = round( ( $posts_relevance[$ind] * 100 ) / $max_relevance );		
+						$search_relevance[ $ind ] = $relevance;
+		
+						if ( (int) $relevance < 25 ) {
+							//unset( $results[ $index ] );
+						}
 					}
 				}
+			}
+		} else {
+
+			foreach( $results as $index => $result ){
+				if ( is_object( $result ) ) {
+					$ind = $result->ID;
+				} else {
+					$ind = $result;
+				}
+				
+				$search_relevance[ $index ] = tsp_facet_relevance( $ind, $_REQUEST );
 			}
 		}
 
 		//sort the results by the relevance.
 		if ( ! empty( $results ) ) {
-			arsort( $search_relevance );
 			$results = array_keys( $search_relevance );
 		}
-	
 		return $results;
 	}
 
@@ -380,8 +398,9 @@ class Frontend {
 		$relevance_scores = array();
 
 		foreach ( $post_ids as $post_id ) {
-			$relevance_scores[ $post_id ] = str_replace( '%', '', tsp_get_search_relevance( $post_id ) );
+			$relevance_scores[ $post_id ] = ( str_replace( '%', '', tsp_get_search_relevance( $post_id ) ) );
 		}
+
 		if ( ! empty( $relevance_scores ) ) {
 			arsort( $relevance_scores, SORT_NUMERIC );
 			$post_ids = array_keys( $relevance_scores );
@@ -490,7 +509,6 @@ class Frontend {
 	public function the_content( $content ) {
 		return $content;
 	}
-
 	public function order_currency_dropdown( $additional_currencies ) {
 		$additional_currencies = array(
 			'USD' => 'on',
@@ -503,14 +521,6 @@ class Frontend {
 			'AED' => 'on',
 		);
 		return $additional_currencies;
-	}
-
-	public function rest_params( $params, $post_type ) {
-		if ( isset( $params['per_page'] ) ) {
-			$params['per_page']['maximum'] = 100;
-			$params['per_page']['default'] = 100;
-		}
-		return $params;
 	}
 
 	/**

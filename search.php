@@ -41,10 +41,38 @@ get_header(); ?>
 
 			<div class="post-wrapper facetwp-template col-md-12 <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
 				<?php
-				while ( have_posts() ) :
-					the_post();
-					lsx_get_template_part();
-				endwhile;
+				global $wp_query, $post, $relevance_scores;
+
+				if ( isset( $wp_query->query_vars['post__in'] ) && ! empty( $wp_query->query_vars['post__in'] ) ) {
+					$temp_post = $post;
+					
+					foreach ( $wp_query->query_vars['post__in'] as $search_item ) {
+
+						if ( ! isset( $relevance_scores[ $search_item ] ) ) {
+							continue;
+						}
+						preg_match_all('/[0-9]+/', $relevance_scores[ $search_item ], $matches);
+						$score = 0;
+						if ( isset( $matches[0] ) ) {
+							$score = (int) implode( '', $matches[0] );	
+						}
+						
+						if ( 24 >= $score ) {
+							//continue;
+						}
+
+						$post = get_post( $search_item );
+						lsx_get_template_part();
+					}
+					$post = $temp_post;
+				} else {	
+					while ( have_posts() ) :
+						the_post();
+						lsx_get_template_part();
+					endwhile;
+				}
+
+				
 				?>
 			</div>
 
