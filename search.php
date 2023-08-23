@@ -43,20 +43,21 @@ get_header(); ?>
 				<?php
 				global $wp_query, $post, $relevance_scores;
 
-				if ( isset( $wp_query->query_vars['post__in'] ) && ! empty( $wp_query->query_vars['post__in'] ) ) {
+				if ( isset( $relevance_scores ) && ! empty( $relevance_scores ) ) {
 					$temp_post = $post;
-					
-					foreach ( $wp_query->query_vars['post__in'] as $search_item ) {
 
-						if ( ! isset( $relevance_scores[ $search_item ] ) ) {
-							continue;
+					if ( ! isset( $_GET['fwp_search'] ) ) {
+						foreach ( $relevance_scores as $search_item => $score ) {
+							preg_match_all('/[0-9]+/', $score, $matches);
+							$score = 0;
+							if ( isset( $matches[0] ) ) {
+								$relevance_scores[ $search_item ] = (int) implode( '', $matches[0] );	
+							}
 						}
-						preg_match_all('/[0-9]+/', $relevance_scores[ $search_item ], $matches);
-						$score = 0;
-						if ( isset( $matches[0] ) ) {
-							$score = (int) implode( '', $matches[0] );	
-						}
-						
+						arsort( $relevance_scores );
+					}
+					
+					foreach ( $relevance_scores as $search_item => $score ) {
 						if ( 24 >= $score ) {
 							//continue;
 						}

@@ -314,9 +314,9 @@ class Frontend {
 				} else {
 					$ind = $result;
 				}
-				
 				$search_relevance[ $index ] = tsp_facet_relevance( $ind, $_REQUEST );
 			}
+			arsort($search_relevance);
 		}
 
 		//sort the results by the relevance.
