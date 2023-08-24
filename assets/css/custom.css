@@ -7042,3 +7042,13 @@ left: 11px!important;}
 		width: 880px;
 	}
 }
+
+/* Upgrade Fixes Aug 2023 */
+@media screen and (min-width:1100px) {
+.slider-container .mini-wizard-results .lsx-to-widget-item-wrap.lsx-tour.col-xs-12{
+width: 1204px!important;
+    margin: 0 auto;
+    float: none!important;
+    display: block;
+    padding: 0!important;}
+}
