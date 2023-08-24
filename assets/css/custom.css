@@ -2691,6 +2691,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .itenary .lsx-to-tour-content {
 	padding-top:7vh!important;
 }
+.single-lsx-to-tour .itinerary-navigation button, .single-lsx-to-tour .itinerary-navigation .current-title{background: none;
+    color: #262423;
+    font-size: 22px;
+    border: none;
+    font-family: "moret",serif!important;
+    letter-spacing: -0.2px!important;}
 
 .single-lsx-to-tour .lsx-to-archive-wrapper {
 	padding:0;
