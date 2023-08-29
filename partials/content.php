@@ -84,10 +84,18 @@
 				<?php
 				global $search_request_vars;
 				$overrides = array();
+
 				if ( null !== $search_request_vars && false !== $search_request_vars && ! empty( $search_request_vars ) ) {
 					$overrides = $search_request_vars;
 				}
+
 				$relevance = tsp_get_search_relevance( get_the_ID(), $overrides );
+				if ( '' === $relevance ) {
+					$relevance = tsp_facet_relevance( get_the_ID(), $overrides);
+					if ( '' !== $relevance ) {
+						$relevance .= '%';
+					}
+				}
 				if ( '' !== $relevance ) {
 					echo '<div class="relevance">' . esc_attr__( 'Shaman Score', 'thesafaripartners-child' ) . ' ' . $relevance . '</div>';
 				}

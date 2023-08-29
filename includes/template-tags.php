@@ -206,14 +206,9 @@ function tsp_get_search_relevance( $post_id = 0, $overrides = array() ) {
 	return $return;
 }
 
-function tsp_facet_relevance( $post_id, $overrides = array() ) {
-	global $search_request_vars;
-	
-	$request = $_REQUEST;
-	if ( null !== $search_request_vars && false !== $search_request_vars && ! empty( $search_request_vars ) ) {
-		$request = $search_request_vars;
-	}
+function tsp_facet_relevance( $post_id, $overrides = array(), $print = false ) {
 
+	$request = $_REQUEST;
 	if ( ! empty( $overrides ) ) {
 		$request = $overrides;
 	}

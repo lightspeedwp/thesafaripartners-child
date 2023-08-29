@@ -366,7 +366,17 @@ class Frontend {
 			$response->data['search_results'] = '';
 
 			global $search_request_vars;
-			$search_request_vars = $request->get_query_params();
+			
+			$overrides = array();
+			if ( function_exists( 'FWP' ) && ! empty( FWP()->facet->query_args ) ) {
+				foreach ( FWP()->facet->facets as $key => $facet_array ) {
+					if ( isset( $facet_array['selected_values'] ) && ! empty( $facet_array['selected_values'] ) ) {
+						$new_key = 'fwp_' . $key;
+						$overrides[ $new_key ] = implode( ',', $facet_array['selected_values'] );
+					}
+				}
+			}
+			$search_request_vars = $overrides;
 
 			ob_start();
 			setup_postdata( $post );
@@ -397,8 +407,18 @@ class Frontend {
 		global $relevance_scores;
 		$relevance_scores = array();
 
+		$overrides = array();
+		if ( function_exists( 'FWP' ) && ! empty( FWP()->facet->query_args ) ) {
+			foreach ( FWP()->facet->facets as $key => $facet_array ) {
+				if ( isset( $facet_array['selected_values'] ) && ! empty( $facet_array['selected_values'] ) ) {
+					$new_key = 'fwp_' . $key;
+					$overrides[ $new_key ] = implode( ',', $facet_array['selected_values'] );
+				}
+			}
+		}
+		
 		foreach ( $post_ids as $post_id ) {
-			$relevance_scores[ $post_id ] = ( str_replace( '%', '', tsp_get_search_relevance( $post_id ) ) );
+			$relevance_scores[ $post_id ] = ( str_replace( '%', '', tsp_get_search_relevance( $post_id, $overrides ) ) );
 		}
 
 		if ( ! empty( $relevance_scores ) ) {
