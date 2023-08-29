@@ -2691,6 +2691,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .itenary .lsx-to-tour-content {
 	padding-top:7vh!important;
 }
+.single-lsx-to-tour .itinerary-navigation button, .single-lsx-to-tour .itinerary-navigation .current-title{background: none;
+    color: #262423;
+    font-size: 22px;
+    border: none;
+    font-family: "moret",serif!important;
+    letter-spacing: -0.2px!important;}
 
 .single-lsx-to-tour .lsx-to-archive-wrapper {
 	padding:0;
@@ -7041,4 +7047,14 @@ left: 11px!important;}
 	.single-lsx-to-tour #Price .lsx-to-tour-content {
 		width: 880px;
 	}
+}
+
+/* Upgrade Fixes Aug 2023 */
+@media screen and (min-width:1100px) {
+.slider-container .mini-wizard-results .lsx-to-widget-item-wrap.lsx-tour.col-xs-12{
+width: 1204px!important;
+    margin: 0 auto;
+    float: none!important;
+    display: block;
+    padding: 0!important;}
 }
