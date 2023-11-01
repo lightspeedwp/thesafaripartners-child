@@ -39,11 +39,13 @@ class WETU_Endpoints {
 	/**
 	 * Connect to the calendly API, and generate a Web Hook
 	 * @param $data \WP_REST_Request()
+	 * 
+	 * Test URL: https://thesafaripartners.local/wp-json/wetu/v1/get_tour_destinations?wetu_id=6205c52e-f2f6-46ab-a972-0abfa6ad5e1c
 	 *
 	 * @return boolean
 	 */
 	public static function get_destinations( $data ) {
-		$return = 'false';
+		$return = false;
 
 		if ( ! isset( $data['wetu_id'] ) || '' === $data['wetu_id'] ) {
 			return $return;
