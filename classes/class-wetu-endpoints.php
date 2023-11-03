@@ -202,7 +202,6 @@ class WETU_Endpoints {
 					$sorted_destinations[ $destination_title ] = array();
 				}
 			} else {
-				
 				$sorted_destinations[ $country_name ][] = $destination_title;
 			}
 		}
@@ -212,7 +211,7 @@ class WETU_Endpoints {
 			foreach ( $sorted_destinations as $country => $regions ) {
 				$to_format[] = $country . ': ' . implode( ', ', $regions );
 			}
-			$return = implode( '\n', $to_format );
+			$return = implode( "\n---------\n", $to_format );
 		}
 		return $return;
 	}
