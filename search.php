@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template Name: Search Results
+ * 
  * The main template file.
  *
  * @package lsx

@@ -241,6 +241,11 @@ class Frontend {
 
 		remove_action( 'lsx_to_map_meta', 'lsx_to_accommodation_meta' );
 		add_action( 'lsx_to_map_meta', 'tsp_map_meta' );
+		
+		global $wp_query;
+		if ( $wp_query->is_main_query() && isset( $_GET['s'] ) && empty( $wp_query->get_query_var('s') ) ) {
+			$wp_query->is_search = true;
+		}
 	}
 
 
@@ -264,7 +269,17 @@ class Frontend {
 				$query->set( 'post_type', 'tour' );
 				$query->set( 'orderby', 'post__in' );
 			}
+
+			if ( is_page( 'search-results' ) ) {
+				$query->set( 'posts_per_page', -1 );
+				$query->set( 'nopagin', true );
+				$query->set( 'post_type', 'tour' );
+				$query->set( 'pagename', '' );
+				$query->is_page = false;
+				$query->set( 'orderby', 'post__in' );
+			}
 		}
+		return $query;
 	}
 
 	public function get_swp_relevance( $results, $query ){
@@ -307,16 +322,16 @@ class Frontend {
 				}
 			}
 		} else {
-
 			foreach( $results as $index => $result ){
 				if ( is_object( $result ) ) {
 					$ind = $result->ID;
 				} else {
 					$ind = $result;
 				}
-				$search_relevance[ $index ] = tsp_facet_relevance( $ind, $_REQUEST );
+				$search_relevance[ $ind ] = tsp_facet_relevance( $ind, $_REQUEST );
 			}
 			arsort($search_relevance);
+			$results = $search_relevance;
 		}
 
 		//sort the results by the relevance.

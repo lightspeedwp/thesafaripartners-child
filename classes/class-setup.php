@@ -328,7 +328,10 @@ class Setup {
 	 */
 	public function change_post_types( $args, $post_type ) {
 		if ( 'destination' === $post_type ) {
-		   $args['has_archive'] = 'search';
+		   $args['has_archive'] = false;
+		}
+		if ( 'tour' === $post_type ) {
+			$args['has_archive'] = 'trips';
 		}
 		return $args;
 	}
