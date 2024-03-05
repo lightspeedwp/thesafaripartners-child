@@ -270,7 +270,7 @@ class Frontend {
 				$query->set( 'orderby', 'post__in' );
 			}
 
-			if ( is_page( 'search-results' ) ) {
+			if ( is_page( 'search' ) ) {
 				$query->set( 'posts_per_page', -1 );
 				$query->set( 'nopagin', true );
 				$query->set( 'post_type', 'tour' );
@@ -463,10 +463,9 @@ class Frontend {
 			$html .= '</div>';
 		} else {
 			$html = '<div class="mega-search-wrap">';
-			$html .= '<form class="mega-search expand-to-left mega-search-closed" role="search" action="' . home_url() . '" siq_id="autopick_1577">';
+			$html .= '<form class="mega-search expand-to-left mega-search-closed" role="search" action="' . home_url() . 'search/" siq_id="autopick_1577">';
 			$html .= '<span class="dashicons dashicons-search search-icon"></span>';
 			$html .= '<input type="submit" value="Search">';
-			$html .= '<input type="hidden" name="s" value="">';
 			$html .= '<input type="text" aria-label="Search..." data-placeholder="Search..." placeholder="Search..." name="fwp_search">';
 			$html .= '</form>';
 			$html .= '</div>';

@@ -3103,9 +3103,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .archive p .moretag {
 	display:none!important;
 }
-.search-results .archive-header-wrapper {
+.search-results .archive-header-wrapper,
+.search-results #lsx-banner {
 	display:none;
 }
+
 .search-results .content-area {
 	margin-top:10px!important;
 }
