@@ -32,6 +32,10 @@ if ( 1 !== $lsx_to_archive ) {
 				<?php if( get_field('page-image') ): ?>
     				<img src="<?php the_field('page-image'); ?>" />
 				<?php endif; ?>
+				<div class="extra-cta">
+				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
+				</div>
+
 				</div>
 			
 			<?php wp_reset_query(); ?>

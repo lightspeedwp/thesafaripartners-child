@@ -44,6 +44,9 @@ get_header(); ?>
 					<img alt="Placeholder" class="attachment-responsive wp-post-image lsx-responsive" src="<?php echo esc_url( lsx\legacy\Placeholders::placeholder_url( null, null, array( 750, 350 ) ) ); ?>">
 				</div>
 			<?php } ?>
+			<div class="extra-cta">
+				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
+				</div>
 			<?php wp_reset_query(); ?>
 		</div>
 	</div>
