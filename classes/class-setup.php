@@ -330,9 +330,6 @@ class Setup {
 		if ( 'destination' === $post_type ) {
 		   $args['has_archive'] = false;
 		}
-		if ( 'tour' === $post_type ) {
-			$args['has_archive'] = 'trips';
-		}
 		return $args;
 	}
 
