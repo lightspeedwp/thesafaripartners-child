@@ -14,11 +14,9 @@ function prefix_conditional_body_class( $classes ) {
 	if ( is_page_template( 'template-travel-style.php' ) ) {
 		$classes[] = 'archive';
 	}
-	if ( is_page( 'search' ) ) {
+	if ( is_page( 'search' ) || is_page_template( 'search.php' ) ) {
 		$classes[] = 'search-results';
-	}       
-
-		
+	}
 
     return $classes;
 }

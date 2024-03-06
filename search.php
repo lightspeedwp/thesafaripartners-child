@@ -19,7 +19,22 @@ get_header(); ?>
 
 		<?php lsx_content_top(); ?>
 
-		<?php if ( have_posts() ) : ?>
+		<?php 
+		
+			$search_query_args = array(
+				'post_type'     => 'tour',
+				'post_status'   => 'publish',
+				'post_per_page' => -1,
+				'nopagin'       => 'tour',
+				'orderby'       => 'post__in',
+				'facetwp'       => true,
+			);
+			if ( isset( $_GET['s'] ) ) {
+				$search_query_args['s'] = $_GET['s'];
+			}
+			$search_query = new WP_Query( $search_query_args );
+
+			if ( $search_query->have_posts() ) { ?>
 
 			<?php
 				wp_nav_menu(
@@ -69,10 +84,10 @@ get_header(); ?>
 					}
 					$post = $temp_post;
 				} else {	
-					while ( have_posts() ) :
-						the_post();
+					while ( $search_query->have_posts() ) {
+						$search_query->the_post();
 						lsx_get_template_part();
-					endwhile;
+					}
 				}
 
 				
@@ -83,11 +98,11 @@ get_header(); ?>
 				<?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
 			</div>
 
-		<?php else : ?>
+		<?php } else { ?>
 
 			<?php get_template_part( 'partials/content', 'none' ); ?>
 
-		<?php endif; ?>
+		<?php } ?>
 
 		<?php lsx_content_bottom(); ?>
 
