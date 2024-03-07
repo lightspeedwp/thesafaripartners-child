@@ -45,6 +45,9 @@
 									?>
 								</div>	
 								<?php the_content(); ?>
+								<div class="extra-cta">
+				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
+				</div>
 								<button id="singlelink" class="tablinks" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
 							</div>
 						</div>
