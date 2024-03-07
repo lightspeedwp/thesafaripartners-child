@@ -67,6 +67,8 @@ th,tr,td,table,legend,label {
 	font-family:argesta_displayregular,serif;
 	letter-spacing:-0.1px!important;
 }
+.contactmain img{text-align: center; margin:0 auto 15px;display:block;}
+.page-id-133993 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a{color:#fff!important;}
 .single-post article.post .lsx-hero-banner-block .post-meta{color:#262423!important;}
 .lsx-hero-banner-block .lsx-title-block h1 {
    color:#262423!important;}
@@ -1778,6 +1780,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	display:inline-block!important;
 	margin-top:16px;
 }
+.search-results .moretag.readmoresearch:hover{background-color: #ce9e57;}
 .search-results .moretag,.search-results .entry-meta {
 	display:none;
 }
@@ -1786,6 +1789,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     width: 100%!important;
     object-fit: none!important;
     text-align: center;
+	padding-top:8px;
 	height:86px;
 }
 .search-results .lsx-slot .entry-layout-content {
@@ -2137,7 +2141,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .page-template-template-travel-style #wizard .wizard-who .lsx-to-content {
 	font-family:"moret",serif!important;
-	font-size:19px!important;
+	font-size:18px!important;
 	text-align:center;
 }
 .page-template-template-travel-style #wizard {
@@ -2188,7 +2192,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	font-family:"moret",serif!important;
 	font-size:18px;
 	text-align:center;
-	padding-top:30px;
+	padding-top:20px;
 }
 .page-template-template-travel-style #wizard .step-content .wizard-what .col-sm-2 {
     height:230px!important;
@@ -3281,6 +3285,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     height: 159px;
     margin-top: -10px;
 }
+.wizard-who .checkbox-clear>[type="checkbox"]:checked+span::after{  margin-top: 0px!important;}
 .page-template-template-wizard .checkbox-clear>[type="checkbox"]:checked+span::after{
 	width: 145px!important;
     height: 186px!important;
