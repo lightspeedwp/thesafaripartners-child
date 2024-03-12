@@ -11,8 +11,12 @@ require get_stylesheet_directory() . '/classes/class-core.php';
 $theme_instance = \tsp_child\classes\Core::get_instance();
 
 function prefix_conditional_body_class( $classes ) {
-    if( is_page_template('template-travel-style.php') )
-        $classes[] = 'archive';
+	if ( is_page_template( 'template-travel-style.php' ) ) {
+		$classes[] = 'archive';
+	}
+	if ( is_page( 'search' ) || is_page_template( 'search.php' ) ) {
+		$classes[] = 'search-results';
+	}
 
     return $classes;
 }
