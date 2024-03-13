@@ -70,9 +70,7 @@
 																	<?php the_content(); ?>
 
 																	<?php lsx_to_entry_content_bottom(); ?>
-																	<div class="extra-cta">
-				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
-				</div>
+												
 																</div>
 																<button id="singlelink" class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates &amp; Prices</button>
 															</div>

@@ -84,13 +84,14 @@
 																					<div class="entry-content lsx-readmore">
 																						<?php lsx_to_itinerary_description(); ?>
 																					</div>
-																					<div class="extra-cta">
-				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
-				</div>
+																					
 																					<button style="display:none;" class="tablinks accommodation-tablink" id="singlelink" onclick="openCity(event, 'Accommodation')">Accommodation</button>
+																					
 																				</div>
+																				
 																			</div>
 																		</div>
+										
 																	</div>
 																</div>
 
