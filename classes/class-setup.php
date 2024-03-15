@@ -104,6 +104,8 @@ class Setup {
 		add_filter( 'facetwp_api_can_access', function( $boolean ) {
 			return true;
 		});
+
+		add_filter( 'wp_mail_smtp_tasks_admin_hide_as_menu', '__return_false' );
 	}
 
 	// Register Custom Taxonomy

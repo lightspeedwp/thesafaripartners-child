@@ -164,7 +164,7 @@ class WETU_Endpoints {
 		$query  = "SELECT `post_id`
 			FROM `{$wpdb->postmeta}`
 			WHERE `meta_key` = 'lsx_wetu_id' AND `meta_value` = '{$wetu_id}'
-			LIMIT 50";
+			LIMIT 1";
 
 		$results = $wpdb->get_var( $query );
 		if ( ! empty( $results ) ) {
