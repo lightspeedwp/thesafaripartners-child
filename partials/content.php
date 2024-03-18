@@ -135,8 +135,9 @@
 						<?php
 						if ( false === apply_filters( 'lsx_disable_content_excerpt', false ) ) {
 							if ( ! has_excerpt() ) {
+								global $post;
 								$excerpt_more = '<p><a class="moretag" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read More', 'lsx' ) . '</a></p>';
-								$content      = wp_trim_words( strip_shortcodes( get_the_content() ), 30 );
+								$content      = wp_trim_words( strip_shortcodes( $post->post_content ), 30 );
 								$content      = '<p>' . $content . '</p>';
 								echo wp_kses_post( $content );
 							} else {
@@ -148,21 +149,21 @@
 						}
 						?>
 
-<div class="lsx-to-widget-meta-data">
-				<?php
-				$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+						<div class="lsx-to-widget-meta-data">
+							<?php
+							$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-				lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span><br/>' );
-				lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span><br/>' );
-				the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key"></span> ', ', ', '</span>' );
-				
+							lsx_to_duration( '<span class="' . $meta_class . 'duration"><span class="lsx-to-meta-data-key"></span> ', '</span><br/>' );
+							lsx_to_connected_countries( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key"></span> ', '</span><br/>' );
+							the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key"></span> ', ', ', '</span>' );
+							
 
-				if ( function_exists( 'lsx_to_connected_activities' ) ) {
-					lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
-				}
-				$excerpt_more = '<p><a class="moretag readmoresearch" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'View Trip', 'lsx' ) . '</a></p>';
-							echo wp_kses_post( $excerpt_more );?>
-			</div>
+							if ( function_exists( 'lsx_to_connected_activities' ) ) {
+								lsx_to_connected_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
+							}
+							$excerpt_more = '<p><a class="moretag readmoresearch" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'View Trip', 'lsx' ) . '</a></p>';
+										echo wp_kses_post( $excerpt_more );?>
+						</div>
 
 					</div><!-- .entry-summary -->
 
