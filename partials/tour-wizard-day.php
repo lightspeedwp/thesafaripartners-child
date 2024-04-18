@@ -83,8 +83,14 @@
 																				</div>
 																					<div class="entry-content lsx-readmore">
 																						<?php lsx_to_itinerary_description(); ?>
+																						
 																					</div>
-																					
+
+																					<button class="scrollButton">Scroll Content</button>
+
+																					<div class="extra-cta">
+				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
+				</div>
 																					<button style="display:none;" class="tablinks accommodation-tablink" id="singlelink" onclick="openCity(event, 'Accommodation')">Accommodation</button>
 																					
 																				</div>
@@ -134,4 +140,32 @@
 	</div>
 	<?php get_template_part( 'partials/tour-buttons' ); ?>
 						</div>
-						
+						<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainers = document.querySelectorAll('.entry-content.lsx-readmoreday'); // All containers that might need scrolling
+
+    scrollContainers.forEach(container => {
+        const scrollButton = container.nextElementSibling; // Assumes button is directly after the container in the DOM
+
+        function checkAndToggleScrollButton() {
+			console.log(container.scrollHeight, container.clientHeight);
+            // Check if the container's content is taller than 400px
+            if (container.scrollHeight > 400) {
+                scrollButton.style.display = 'block'; // Show the scroll button
+            } else {
+                scrollButton.style.display = 'none'; // Hide the scroll button
+            }
+        }
+
+        checkAndToggleScrollButton(); // Check on initial load
+
+        // Add an event listener to the button for scrolling
+        scrollButton.addEventListener('click', function() {
+            container.scrollBy({ top: 100, behavior: 'smooth' }); // Scrolls 100px down
+        });
+
+        // Optional: Recheck when the window resizes
+        window.addEventListener('resize', checkAndToggleScrollButton);
+    });
+});
+</script>

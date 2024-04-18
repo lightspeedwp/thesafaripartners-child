@@ -60,15 +60,20 @@ if ( $has_single ) {
 		?>
 
 
-		<?php
-		ob_start();
-		lsx_to_widget_entry_content_top();
-		the_excerpt();
+<span class="tour-except"><?php
+    ob_start();
+    lsx_to_widget_entry_content_top();
+    the_excerpt();
+    $excerpt = ob_get_clean();
 
-		$excerpt = ob_get_clean();
+    // Limit excerpt to 100 characters
+    $char_limit = 120; // Set the character limit
+    if (strlen($excerpt) > $char_limit) {
+        $excerpt = substr($excerpt, 0, $char_limit) . '...'; // Trim the excerpt and add ellipsis
+    }
 
-			echo wp_kses_post( $excerpt );
-		?>
+    echo wp_kses_post($excerpt);
+?></span>
 		</div>
 			<div class="lsx-to-widget-meta-data">
 				<div class="tourmeta-height">
@@ -86,6 +91,7 @@ if ( $has_single ) {
 				?>
 				</div>
 				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
+				<a href="<?php echo esc_url( $permalink ); ?>" class="reviews-btn"><?php esc_html_e( 'VIEW REVIEWS', 'tour-operator' ); ?></a>
 			</div>
 
 
