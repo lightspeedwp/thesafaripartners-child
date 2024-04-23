@@ -165,6 +165,7 @@ class Frontend {
 		add_filter( 'lsx_to_parents_only', array( $this, 'order_tour_countries' ), 20, 2 );
 		add_filter( 'the_content', array( $this, 'the_content' ), 100 );
 		add_filter( 'lsx_currencies_nav_additional_items', array( $this, 'order_currency_dropdown' ), 10, 1 );
+		add_filter( 'the_content', array( $this, 'order_currency_dropdown' ), 10, 1 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
@@ -182,7 +183,7 @@ class Frontend {
 		add_filter( 'megamenu_search_replacement_html', array( $this, 'search_header_html' ), 10, 1 );
 
 		// Rest Functions
-		add_filter( 'rest_prepare_tour', array( $this, 'add_tour_archive_template_to_rest' ), 10, 3 );
+		add_filter( 'pum_popup_content', array( $this, 'email_a_friend_values' ), 10, 1 );
 	}
 
 	/**
@@ -573,5 +574,10 @@ class Frontend {
 			}
 		}
 		return $value;
+	}
+
+	public function email_a_friend_values( $content ) {
+		$content = str_replace( '{tour_url}', get_permalink(), $content );
+		return $content;
 	}
 }
