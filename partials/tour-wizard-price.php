@@ -105,7 +105,7 @@
 	
 														$column_titles              = array_keys( $rc_data );
 	
-														$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">Book Now</button></td>';
+														$rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title( get_the_ID() ) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">REQUEST DATE</button></td>';
 	
 														$table_data[ $row_counter ] = implode( '', $rc_data );
 													}
@@ -146,6 +146,7 @@
 																</tbody>
 															</table>
 														</article>
+														<a class="scrollDownButton"></a>
 													<?php
 												}
 											}
@@ -218,6 +219,9 @@
 											}
 										}
 									?>
+									<div class="extra-cta">
+				<a class="popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></a>
+				</div>
 									<button id="mapslink" class="tablinks" id="page-5" onclick="openCity(event, 'Maps')">Maps &amp; More</button>
 								</div>
 							</div>

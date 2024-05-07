@@ -70,8 +70,12 @@
 																	<?php the_content(); ?>
 
 																	<?php lsx_to_entry_content_bottom(); ?>
-												
+																	
 																</div>
+																<a class="scrollButton"></a>
+																<div class="extra-cta">
+				<a class="popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></a>
+				</div>
 																<button id="singlelink" class="tablinks" id="page-4" onclick="openCity(event, 'Price')">Dates &amp; Prices</button>
 															</div>
 														</div>
