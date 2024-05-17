@@ -86,6 +86,11 @@ th,tr,td,table,legend,label {
 .page-id-133993 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a{
    color:#fff!important;
 }
+
+body #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item-111162 {
+    margin-left: 0px;
+}
+
 .single-post article.post .lsx-hero-banner-block .post-meta{
    color:#262423!important;
 }
@@ -4685,6 +4690,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu>ul.mega-sub-menu {
 		padding:30px 60px 0;
    }
+   #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item-254460.mega-menu-item.mega-menu-megamenu>ul.mega-sub-menu {
+	padding:30px 30px;
+}
 	#mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu {
 		padding:0px;
    }
