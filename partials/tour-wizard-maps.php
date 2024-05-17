@@ -58,9 +58,24 @@
                         'post_type'      => 'review',
                         'posts_per_page' => 1,
                         'orderby'        => 'date',
-                        'order'          => 'DESC',
+                        'order'          => 'RAND',
                         'paged'          => $paged,
                     );
+					$destinations = get_post_meta( get_the_ID(), 'destination_to_tour' );
+					if ( ! empty( $destinations ) ) {
+						if ( ! is_array( $destinations ) ) {
+							$destinations = array( $destinations );
+						}
+						$destinations = array_unique( $destinations );
+						$reviews_args['meta_query'] = array(
+							array(
+								'key' => 'destination_to_review',
+								'value' => $destinations,
+								'compare' => 'IN',
+							)
+						);
+					}
+
                     $reviews_query = new WP_Query($reviews_args);
 
                     if ($reviews_query->have_posts()) : 
