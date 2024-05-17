@@ -26,7 +26,7 @@ if ( empty( $disable_single_link ) ) {
 								<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 												<div class="lsx-to-widget-thumb">
 										<a href="/who/romance-seekers/" tabindex="0">
-											<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/07/romance-seekers-traveller-type-1024x576.jpg">
+											<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/07/romance-seekers-traveller-type-600x600.jpg">
 										</a>			</div>
 
 							<div class="lsx-to-widget-content bottom">
@@ -41,7 +41,7 @@ if ( empty( $disable_single_link ) ) {
 						<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 										<div class="lsx-to-widget-thumb">
 										<a href="/who/seasoned-travellers/" tabindex="0">
-									<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/09/seasonded-travelers-new-e1664179916771.png">
+									<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/09/seasonded-travelers-new-e1664179916771-600x400.png">
 									</a></div>
 
 					<div class="lsx-to-widget-content bottom">
@@ -55,7 +55,7 @@ if ( empty( $disable_single_link ) ) {
 				<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 								<div class="lsx-to-widget-thumb">
 								<a href="/who/family-experiences/" tabindex="0">	
-							<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/07/family-experiences-traveller-type-1024x576.jpg">
+							<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/07/family-experiences-traveller-type-600x400.jpg">
 							</a>	</div>
 
 			<div class="lsx-to-widget-content bottom">
@@ -69,7 +69,7 @@ if ( empty( $disable_single_link ) ) {
 			<div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 						<div class="lsx-to-widget-thumb">
 						<a href="/who/group-of-friends/" tabindex="0">		
-					<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-group-of-friends-1024x576.jpg">
+					<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-group-of-friends-600x400.jpg">
 					</a>	</div>
 
 	<div class="lsx-to-widget-content bottom">
@@ -82,7 +82,7 @@ if ( empty( $disable_single_link ) ) {
 
 <div class="lsx-to-widget-item-wrap lsx-travel-style slick-slide" ><article class="term-11095 travel-style type-travel-style status-publish hentry">
 				<div class="lsx-to-widget-thumb">
-				<a href="/who/solo-traveller/" tabindex="0"><img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-solo-traveller.jpg">
+				<a href="/who/solo-traveller/" tabindex="0"><img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="/wp-content/uploads/2022/06/tsp-solo-traveller-600x400.jpg">
 				</a></div>
 
 <div class="lsx-to-widget-content bottom">
