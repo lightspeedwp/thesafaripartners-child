@@ -29,7 +29,7 @@ if ( $has_single ) {
 			if ( false !== $has_single ) {
 				?>
 <a href="<?php echo esc_url( $permalink ); ?>"><?php } ?>
-				<?php lsx_thumbnail( 'large' ); ?>
+				<?php lsx_thumbnail( 'lsx-block-post-grid-landscape' ); ?>
 			<?php
 			if ( false !== $has_single ) {
 				?>
@@ -91,7 +91,7 @@ if ( $has_single ) {
 				?>
 				</div>
 				<p class="moretag-wrapper tourslink"><a href="<?php echo esc_url( $permalink ); ?>" class="moretag"><?php esc_html_e( 'VIEW TRIP', 'tour-operator' ); ?></a></p>
-				<a href="<?php echo esc_url( $permalink ); ?>" class="reviews-btn"><?php esc_html_e( 'VIEW REVIEWS', 'tour-operator' ); ?></a>
+				<a href="/independent-reviews/" class="reviews-btn"><?php esc_html_e( 'VIEW REVIEWS', 'tour-operator' ); ?></a>
 			</div>
 
 
