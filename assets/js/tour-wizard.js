@@ -1025,7 +1025,7 @@ function checkForSliders( $next ) {
 
         function checkAndToggleScrollButtons() {
             console.log('Checking:', container.scrollHeight, 'vs', container.clientHeight);
-            if (container.scrollHeight > 400 && container.scrollHeight > container.clientHeight) {
+            if (container.scrollHeight > 300 && container.scrollHeight > container.clientHeight) {
                 console.log('Showing scroll buttons.');
                 scrollDownButton.style.display = 'block';
                 scrollUpButton.style.display = 'block';

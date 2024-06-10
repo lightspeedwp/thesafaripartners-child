@@ -82,29 +82,27 @@
                         while ($reviews_query->have_posts()) : $reviews_query->the_post();
                     ?>
                      
-					 <h4 class="lovetrip">See Tour Reviews</h4>
-                            <blockquote class="lsx-to-widget-blockquote">
-                            <?php $reviewer_name = get_post_meta( get_the_ID(), 'reviewer_name', true ); ?>
-                            <?php $date_of_visit_start = get_post_meta( get_the_ID(), 'date_of_visit_start', true ); ?>
-				
-
-                                <h5 class="lsx-to-summary-title extra"><?php the_title(); ?></h5>
-                                
-                                <div class="lsx-review-summary">
-                                    <?php echo wp_trim_words(get_the_content(), 26, '...'); ?>
-                                </div>
-                                <div class="lsx-review-full" style="display: none;">
-                                    <?php the_content(); ?>
-                                </div>
-                                <a class="lsx-review-read-more">Read More</a>
-								<div class="rating-span"><?php
-
-						lsx_to_review_rating( '<span>Rating:</span><span class="' . $meta_class . 'rating"> </span>' );
-?></div>
-								<p class="lsx-review-author"><?php echo esc_html( $reviewer_name ); ?></p>
-
-                                
-                            </blockquote>
+					 <h4 class="lovetrip">What our clients have to say</h4>
+					 <blockquote class="lsx-to-widget-blockquote">
+    <?php $reviewer_name = get_post_meta( get_the_ID(), 'reviewer_name', true ); ?>
+    <?php $date_of_visit_start = get_post_meta( get_the_ID(), 'date_of_visit_start', true ); ?>
+    
+    <h5 class="lsx-to-summary-title extra"><?php the_title(); ?></h5>
+    
+    <div class="lsx-review-summary">
+        <?php echo wp_trim_words(get_the_content(), 26, '...'); ?>
+    </div>
+    <div class="lsx-review-full" style="display: none;">
+        <?php the_content(); ?>
+    </div>
+    <a class="lsx-review-read-more" target="_blank" href="<?php the_permalink(); ?>">Read More</a>
+    <div class="rating-span">
+        <?php
+        lsx_to_review_rating( '<span>Rating:</span><span class="' . $meta_class . 'rating"> </span>' );
+        ?>
+    </div>
+    <p class="lsx-review-author"><?php echo esc_html( $reviewer_name ); ?></p>
+</blockquote>
                     
 
                     <?php
@@ -152,23 +150,3 @@ endif;
 	</div>
 	<?php get_template_part( 'partials/tour-buttons' ); ?>
 						</div>
-						<script>
-document.addEventListener('DOMContentLoaded', function () {
-    var readMoreButtons = document.querySelectorAll('.lsx-review-read-more');
-
-    readMoreButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var parentArticle = this.closest('article');
-            var fullReview = parentArticle.querySelector('.lsx-review-full');
-            var summary = parentArticle.querySelector('.lsx-review-summary');
-
-            // Toggle visibility
-            fullReview.style.display = fullReview.style.display === 'none' ? '' : 'none';
-            summary.style.display = summary.style.display === 'none' ? '' : 'none';
-
-            // Toggle button text
-            this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More';
-        });
-    });
-});
-</script>
