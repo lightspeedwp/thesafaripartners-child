@@ -31,10 +31,12 @@ get_header(); ?>
 			);
 			if ( isset( $_GET['s'] ) ) {
 				$search_query_args['s'] = $_GET['s'];
+			} else {
+				$search_query_args['s'] = '';
 			}
 			$search_query = new WP_Query( $search_query_args );
 
-			if ( $search_query->have_posts() ) { ?>
+			if ( $search_query->have_posts() && ! empty( $search_query_args['s'] ) ) { ?>
 
 			<?php
 				wp_nav_menu(
@@ -89,8 +91,6 @@ get_header(); ?>
 						lsx_get_template_part();
 					}
 				}
-
-				
 				?>
 			</div>
 
