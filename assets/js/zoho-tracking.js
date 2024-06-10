@@ -2,7 +2,7 @@ function ZFLead(){
 }
 ZFLead.utmPValObj = ZFLead.utmPValObj || {};
 
-ZFLead.utmPNameArr = new Array('utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid','gaclientid','msclkid','organic_source','organic_source_str','traffic_source','handl_original_ref','handl_landing_page','handl_ref','first_utm_source');
+ZFLead.utmPNameArr = new Array('utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid','gaclientid','msclkid','organic_source','organic_source_str','traffic_source','handl_original_ref','handl_landing_page','handl_ref');
 
 ZFLead.prototype.zfutm_getLeadVal = function(pName){
 	var qStr = '';
