@@ -29,15 +29,14 @@ get_header(); ?>
 				'orderby'       => 'post__in',
 				'facetwp'       => true,
 			);
-			if ( isset( $_GET['s'] ) ) {
-				$search_query_args['s'] = $_GET['s'];
+			if ( isset( $_GET['fwp_search'] ) ) {
+				$search_query_args['s'] = $_GET['fwp_search'];
 			} else {
 				$search_query_args['s'] = '';
 			}
 			$search_query = new WP_Query( $search_query_args );
 
 			if ( $search_query->have_posts() && ! empty( $search_query_args['s'] ) ) { ?>
-
 			<?php
 				wp_nav_menu(
 					array(

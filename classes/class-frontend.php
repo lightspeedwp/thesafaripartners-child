@@ -468,8 +468,8 @@ class Frontend {
 			$html .= '<form class="mega-search expand-to-left mega-search-closed" role="search" action="' . home_url() . '" siq_id="autopick_1577">';
 			$html .= '<span class="dashicons dashicons-search search-icon"></span>';
 			$html .= '<input type="submit" value="Search">';
-			//$html .= '<input type="hidden" name="s" value="">';
-			$html .= '<input type="text" aria-label="Search..." data-placeholder="Search..." placeholder="Search..." name="s">';
+			$html .= '<input type="hidden" name="s" value="">';
+			$html .= '<input type="text" aria-label="Search..." data-placeholder="Search..." placeholder="Search..." name="fwp_search">';
 			$html .= '</form>';
 			$html .= '</div>';
 		}
