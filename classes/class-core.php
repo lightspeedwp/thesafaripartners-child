@@ -111,6 +111,7 @@ class Core {
 		$this->multi_currency = Multi_Currency::get_instance();
 
 		require_once get_stylesheet_directory() . '/includes/template-tags.php';
+		require_once get_stylesheet_directory() . '/includes/popular-tours.php';
 	}
 
 	/**
