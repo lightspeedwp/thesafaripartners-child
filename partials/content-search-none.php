@@ -16,14 +16,14 @@
 
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php esc_html_e( 'Ready to publish your first post?', 'lsx' ); ?> <a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>"><?php esc_html_e( 'Get started here', 'lsx' ); ?></a></p>
+			<p><?php echo __( 'Ready to publish your first post?', 'lsx' ); ?> <a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>"><?php esc_html_e( 'Get started here', 'lsx' ); ?></a></p>
 
 		<?php elseif ( is_search() ) : ?>
 
 			<p>
 				<?php 
 					$african_link = home_url() . '/contact/african-safari-planner/';
-					esc_html_e( sprintf( 'We\'re sorry, but we couldn\'t find any matches for your search. Please use different keywords or explore more in-depth tour planning by visiting the <a href="%s">African Safari Planner</a>.', $african_link ), 'lsx' );
+					echo __( sprintf( 'We\'re sorry, but we couldn\'t find any matches for your search. Please use different keywords or explore more in-depth tour planning by visiting the <a href="%s">African Safari Planner</a>.', $african_link ), 'lsx' );
 				?>
 			</p>
 
