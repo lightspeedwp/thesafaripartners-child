@@ -99,7 +99,7 @@ get_header(); ?>
 
 		<?php } else { ?>
 
-			<?php get_template_part( 'partials/content', 'none' ); ?>
+			<?php get_template_part( 'partials/content', 'search-none' ); ?>
 
 		<?php } ?>
 
