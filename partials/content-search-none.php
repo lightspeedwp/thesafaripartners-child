@@ -22,7 +22,7 @@
 
 			<p>
 				<?php 
-					$african_link = home_url() . '/contact/african-safari-planner/';
+					$african_link = home_url() . '/contact/african-safari-planning-survey/';
 					echo __( sprintf( 'We\'re sorry, but we couldn\'t find any matches for your search. Please try different keywords<br /> or explore more in-depth tour planning by contacting us via the <a style="font-weight:bold;" href="%s">African Safari Planner</a>.', $african_link ), 'lsx' );
 				?>
 			</p>
