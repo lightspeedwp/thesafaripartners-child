@@ -23,7 +23,7 @@
 			<p>
 				<?php 
 					$african_link = home_url() . '/contact/african-safari-planner/';
-					echo __( sprintf( 'We\'re sorry, but we couldn\'t find any matches for your search. Please use different keywords or explore more in-depth tour planning by visiting the <a href="%s">African Safari Planner</a>.', $african_link ), 'lsx' );
+					echo __( sprintf( 'We\'re sorry, but we couldn\'t find any matches for your search. Please use different keywords or<br /> explore more in-depth tour planning by visiting the <a href="%s">African Safari Planner</a>.', $african_link ), 'lsx' );
 				?>
 			</p>
 
