@@ -4457,7 +4457,7 @@
 	.single-lsx-to-review .toptours-posts {
 	  margin-top: 82px;
 	}
-	.single-lsx-to-review .lsx-to-meta-data {
+	.single-lsx-to-review .review .lsx-to-meta-data{
 	  display: none;
 	}
   
@@ -8782,13 +8782,13 @@
 	  padding: 15px!important;
 	}
 	.single-lsx-to-tour #Overview .entry-content {
-		min-height: 105vh !important;
+		min-height: 79vh !important;
 	  }
 	  .single-lsx-to-tour #Overview .lsx-to-tour-content{
-		min-height: 100vh !important;
+		min-height: 78vh !important;
 	  }
 	.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper {
-	  min-height: 167vh !important;
+	  min-height: 151vh !important;
 	}
 	.single-lsx-to-tour #Accommodation .lsx-wizard-steps-wrapper {
 	  min-height: 92vh !important;
@@ -8798,11 +8798,11 @@
         max-height: 390px !important;
 	}
 	.single-lsx-to-tour #Day .lsx-to-tour-content {
-	  min-height: 109vh !important;
+	  min-height: 95vh !important;
 	}
 	.single-lsx-to-tour #Accommodation .lsx-to-tour-content {
 	  height: auto !important;
-	  min-height: 119vh !important;
+	  min-height: 96vh !important;
 	  margin-bottom:16px;
 	}
 	body.single-lsx-to-tour #Overview .extra-cta button, .single-lsx-to-tour #Day .extra-cta a, .single-lsx-to-tour #Accommodation .extra-cta a {
@@ -8815,7 +8815,7 @@
 	  bottom: 66px!important;
 	}
 	.single-lsx-to-tour #Accommodation .lsx-wizard-buttons-wrapper {
-	  top: 69%!important;
+	  top: 66%!important;
 	}
 	.pum-theme-133244 .pum-content+.pum-close, .pum-theme-lightbox .pum-content+.pum-close {
         right: 10px !important;
@@ -8829,11 +8829,17 @@
 	}
 	.single-lsx-to-tour #Price .lsx-to-tour-content {
 	  height: auto !important;
-	  min-height: 106vh !important;
+	  min-height: 83vh !important;
 	}
 	.single-lsx-to-tour #Maps .lsx-to-tour-content .col-md-6 {
 	  margin: 7px 0;
 	  width: 100%;
+	}
+	.single-lsx-to-tour #Maps .lsx-to-tour-content {
+		padding-top: 3vh !important;
+	}
+	.single-lsx-to-tour #Maps .lsx-to-section-inner {
+		margin-top: 1.25rem;
 	}
 	.single-lsx-to-tour #Maps .lsx-to-tour-content .btn.lsx-share-initiated {
 	  margin-right: 0 !important;
