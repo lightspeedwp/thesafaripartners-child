@@ -3285,10 +3285,12 @@
 	  */
 	background-repeat: no-repeat;
   }
-  .page-id-134004 .link134004 a {
+  .page-id-134004 .link134004 a,
+  .page-id-254467 .link254467 a {
 	color: #6a6d5b!important;
   }
-  .page-id-134309 .link134004 {
+  .page-id-134309 .link134004,
+  .page-id-254467 .link254467 {
 	background-image: url('img/fulltab.png');
 	background-size: 69px 9px;
 	background-position: 5px 21px;
