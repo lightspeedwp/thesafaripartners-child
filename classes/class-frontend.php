@@ -226,6 +226,8 @@ class Frontend {
 
 		wp_enqueue_script( 'thesafaripartners-child-scripts', get_stylesheet_directory_uri() . '/assets/js/' . $prefix . 'custom' . $suffix . '.js', array( 'jquery', 'jquery-ui-core' ) );
 
+		wp_enqueue_script( 'tsp-zoho-tracking', get_stylesheet_directory_uri() . '/assets/js/zoho-tracking.js', array() );
+
 		if ( is_singular( array( 'tour' ) ) ) {
 			wp_enqueue_script( 'thesafaripartners-child-tour-wizard', get_stylesheet_directory_uri() . '/assets/js/tour-wizard.js', array( 'jquery', 'jquery-ui-core' ), TSP_CHILD_VER, true );
 		}

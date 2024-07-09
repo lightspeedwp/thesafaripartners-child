@@ -69,6 +69,7 @@ class Setup {
 		
 		//Geo Content
 		add_action( 'after_setup_theme', array( $this, 'set_default_currency' ), 10 );
+		add_filter( 'am.last_viewed_posts.post_types', array( $this, 'last_view_tours' ), 10, 1 );
 	}
 
 	/**
@@ -466,5 +467,10 @@ class Setup {
 	public function enable_itinerary_detination_parent_images( $disable = false ) {
 		$disable = true;
 		return $disable;
+	}
+
+	public function last_view_tours( $post_types = array() ) {
+		$post_types = array( 'tour' );
+		return $post_types;
 	}
 }

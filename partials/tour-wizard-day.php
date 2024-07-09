@@ -65,7 +65,7 @@
 																							} else {
 																								$itinerary_title = esc_html__( 'On boat', 'thesafaripartners-child' );
 																							}
-																							$itinerary_title = '<span class="heading-destinations">' . lsx_to_itinerary_title( false ) . ' - ' . $itinerary_title . '</span>';
+																							$itinerary_title = '<span class="heading-destinations">'. lsx_to_itinerary_title( false ) .' - ' . $itinerary_title . '</span>';
 																						}
 
 																						echo $itinerary_title;
@@ -83,14 +83,22 @@
 																				</div>
 																					<div class="entry-content lsx-readmore">
 																						<?php lsx_to_itinerary_description(); ?>
+																						
 																					</div>
+
+																					<a class="scrollButton"></a>
+																					
+
 																					<div class="extra-cta">
-				<button class="btn btn-primary pull-right lsx-wizard-button-next lsx-btn popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></button>
+				<a class="popmake-253235 pum-trigger pum-triggercta"><span>Request more information</span></a>
 				</div>
 																					<button style="display:none;" class="tablinks accommodation-tablink" id="singlelink" onclick="openCity(event, 'Accommodation')">Accommodation</button>
+																					
 																				</div>
+																				
 																			</div>
 																		</div>
+										
 																	</div>
 																</div>
 
@@ -133,4 +141,3 @@
 	</div>
 	<?php get_template_part( 'partials/tour-buttons' ); ?>
 						</div>
-						

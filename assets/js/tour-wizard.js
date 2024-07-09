@@ -1015,4 +1015,68 @@ function checkForSliders( $next ) {
 		setReadMoreDescriptions();
 		populatePrefferedDatesField();
 	});
+	
+	document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainers = document.querySelectorAll('.entry-content.lsx-readmore');
+
+    scrollContainers.forEach(container => {
+        const scrollUpButton = container.previousElementSibling; // Assumes the scroll up button is directly before the container
+        const scrollDownButton = container.nextElementSibling; // Assumes the scroll down button is directly after the container
+
+        function checkAndToggleScrollButtons() {
+            console.log('Checking:', container.scrollHeight, 'vs', container.clientHeight);
+            if (container.scrollHeight > 300 && container.scrollHeight > container.clientHeight) {
+                console.log('Showing scroll buttons.');
+                scrollDownButton.style.display = 'block';
+                scrollUpButton.style.display = 'block';
+            } else {
+                console.log('Hiding scroll buttons.');
+                scrollDownButton.style.display = 'none';
+                scrollUpButton.style.display = 'none';
+            }
+        }
+
+        checkAndToggleScrollButtons(); // Initial check
+        setInterval(checkAndToggleScrollButtons, 1000); // Check every second to handle dynamic content changes
+
+        scrollDownButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            container.scrollBy({ top: 100, behavior: 'smooth' });
+        });
+
+        scrollUpButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            container.scrollBy({ top: -100, behavior: 'smooth' });
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainers = document.querySelectorAll('.dates-prices.hentry');
+
+    scrollContainers.forEach(container => {
+        const scrollButton = container.nextElementSibling; // Adjust this if the button isn't directly after the container
+
+        function checkAndToggleScrollButton() {
+            console.log('Checking:', container.scrollHeight, 'vs', container.clientHeight);
+            // Show the button if the content height is greater than the container height
+            if (container.scrollHeight > container.clientHeight) {
+                console.log('Showing scroll button.');
+                scrollButton.style.display = 'block'; // Ensure your button has a class or specific styling to display
+            } else {
+                console.log('Hiding scroll button.');
+                scrollButton.style.display = 'none';
+            }
+        }
+
+        checkAndToggleScrollButton(); // Initial check
+        window.addEventListener('resize', checkAndToggleScrollButton); // Check on window resize
+
+        scrollButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            container.scrollBy({ top: 100, behavior: 'smooth' }); // Scrolls down
+        });
+    });
+});
+	
 })( jQuery, window, document );

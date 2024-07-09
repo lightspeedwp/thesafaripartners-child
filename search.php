@@ -29,13 +29,14 @@ get_header(); ?>
 				'orderby'       => 'post__in',
 				'facetwp'       => true,
 			);
-			if ( isset( $_GET['s'] ) ) {
-				$search_query_args['s'] = $_GET['s'];
+			if ( isset( $_GET['fwp_search'] ) ) {
+				$search_query_args['s'] = $_GET['fwp_search'];
+			} else {
+				$search_query_args['s'] = '';
 			}
 			$search_query = new WP_Query( $search_query_args );
 
-			if ( $search_query->have_posts() ) { ?>
-
+			if ( $search_query->have_posts() && ! empty( $search_query_args['s'] ) ) { ?>
 			<?php
 				wp_nav_menu(
 					array(
@@ -89,8 +90,6 @@ get_header(); ?>
 						lsx_get_template_part();
 					}
 				}
-
-				
 				?>
 			</div>
 
@@ -100,7 +99,7 @@ get_header(); ?>
 
 		<?php } else { ?>
 
-			<?php get_template_part( 'partials/content', 'none' ); ?>
+			<?php get_template_part( 'partials/content', 'search-none' ); ?>
 
 		<?php } ?>
 

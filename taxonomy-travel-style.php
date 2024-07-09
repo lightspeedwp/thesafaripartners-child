@@ -52,6 +52,22 @@ get_header(); ?>
 	</div>
 
 	<?php 
+		
+		
+		$query_args = array(
+			'post_type' => 'tour',
+			'post_status' => 'publish',
+			'facetwp' => true,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'travel-style',
+					'field'    => 'term_id',
+					'terms'    => array( get_queried_object_id() ),
+				),
+			),
+		);
+		tsp_mini_wizard_results( $query_args, $args );
+
 		$panels = array(
 			0 => array( 'who' ),
 			1 => array( 'what' ),
@@ -70,20 +86,6 @@ get_header(); ?>
 
 		// Call the wizard
 		tsp_mini_wizard( $panels, $args );
-		
-		$query_args = array(
-			'post_type' => 'tour',
-			'post_status' => 'publish',
-			'facetwp' => true,
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'travel-style',
-					'field'    => 'term_id',
-					'terms'    => array( get_queried_object_id() ),
-				),
-			),
-		);
-		tsp_mini_wizard_results( $query_args, $args );
 	?>
 </main><!-- #main -->
 

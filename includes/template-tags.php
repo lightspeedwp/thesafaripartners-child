@@ -15,8 +15,6 @@ function tsp_init_wizard() {
 	wp_localize_script( 'thesafaripartners-child-wizard', 'tsp_wizard_params', $param_array );
 }
 
-
-
 /**
  * Calls the wizard results and the wizard js
  *
@@ -378,7 +376,6 @@ function tsp_map_meta() {
 		lsx_to_connected_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
 	}
 }
-
 
 /**
  * Returns items tagged in the same terms for the taxonomy you select.

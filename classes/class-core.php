@@ -114,6 +114,7 @@ class Core {
 		$this->wetu_endpoints = new WETU_Endpoints();
 
 		require_once get_stylesheet_directory() . '/includes/template-tags.php';
+		require_once get_stylesheet_directory() . '/includes/popular-tours.php';
 	}
 
 	/**

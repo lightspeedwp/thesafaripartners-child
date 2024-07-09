@@ -32,6 +32,22 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php
+				$current_destination = get_the_ID();
+				$tours               = get_post_meta( get_the_ID(), 'tour_to_destination', false );
+
+				if ( false !== $tours && ! empty( $tours ) && '' !== $tours ) {
+					$query_args = array(
+						'post_type' => 'tour',
+						'post_status' => 'publish',
+						'facetwp' => true,
+						'post__in' => $tours,
+						'posts_per_page' => 100,
+					);
+					tsp_mini_wizard_results( $query_args, $args );
+				}
+			?>
+
+			<?php
 				$panels = array(
 					0 => array( 'who' ),
 					1 => array( 'what' ),
@@ -52,21 +68,7 @@ get_header(); ?>
 				tsp_mini_wizard( $panels, $args );
 			?>
 
-			<?php
-				$current_destination = get_the_ID();
-				$tours               = get_post_meta( get_the_ID(), 'tour_to_destination', false );
-
-				if ( false !== $tours && ! empty( $tours ) && '' !== $tours ) {
-					$query_args = array(
-						'post_type' => 'tour',
-						'post_status' => 'publish',
-						'facetwp' => true,
-						'post__in' => $tours,
-						'posts_per_page' => 100,
-					);
-					tsp_mini_wizard_results( $query_args, $args );
-				}
-			?>
+			
 
 		</main><!-- #main -->
 
