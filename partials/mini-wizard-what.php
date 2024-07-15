@@ -15,9 +15,16 @@
 				'hide_empty' => 0,
 			);
 			$terms = get_terms( 'travel-style', $style_args );
+
+			$tsp_importer = \tsp_child\classes\WETU_Importer::get_instance();
 			?>
 
-			<?php foreach ( $terms as $term ) : ?>
+			<?php foreach ( $terms as $term ) : 
+				
+				if ( ! in_array( sanitize_title( $term->name ), $tsp_importer->what_terms ) ) {
+					continue;
+				}
+				?>
 				<!-- post -->
 				<article class="col-xs-3 col-sm-2 status-publish hentry">
 					<div class="checkbox-wrapper">

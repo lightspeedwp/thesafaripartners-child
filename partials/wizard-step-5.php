@@ -15,9 +15,14 @@
 					'hide_empty' => 0,
 				);
 				$terms = get_terms( 'budget', $args );
+				$tsp_importer = \tsp_child\classes\WETU_Importer::get_instance();
 				?>
 <article class="col-md-2 status-publish hentry"></article>
 				<?php foreach ( $terms as $term ) : 
+
+					if ( ! in_array( sanitize_title( $term->name ), $tsp_importer->budget_terms ) ) {
+						continue;
+					}
 					
 					$value = apply_filters( 'the_title', $term->slug );
 					?>
