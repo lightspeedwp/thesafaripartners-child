@@ -6,10 +6,16 @@
 		</div>
 		<div class="col-md-9">
 			<?php
-			$terms = get_terms( 'who' );
+			$terms        = get_terms( 'who' );
+			$tsp_importer = \tsp_child\classes\WETU_Importer::get_instance();
 			?>
 
-			<?php foreach ( $terms as $term ) { ?>
+			<?php foreach ( $terms as $term ) {
+				
+				if ( ! in_array( sanitize_title( $term->name ), $tsp_importer->who_terms ) ) {
+					continue;
+				}
+				?>
 				<!-- post -->
 					
 				<article class="col-md-2 status-publish hentry">

@@ -81,6 +81,36 @@ class WETU_Importer {
 		),
 	);
 
+	public $what_terms = array(
+		'beach-relaxation',
+		'cultural',
+		'epic-luxury',
+		'flying-safaris',
+		'gorillas',
+		'gorillas-trekking',
+		'group-travel',
+		'migration-experiences',
+		'rail-journeys',
+		'romantic-private',
+		'walking-safaris',
+		'water-based-safari',
+		'wildlife-safaris'
+	);
+
+	public $budget_terms = array(
+		'on-a-budget',
+		'i-am-flexible',
+		'going-all-out'
+	);
+
+	public $who_terms = array(
+		'family-experiences',
+		'group-of-friends',
+		'romance-seekers',
+		'seasoned-travellers',
+		'solo-traveller'
+	);
+
 	/**
 	 * Initialize the plugin by setting localization, filters, and administration functions.
 	 *
@@ -90,6 +120,9 @@ class WETU_Importer {
 	 */
 	private function __construct() {
 		add_filter( 'lsx_wetu_importer_tour_travel_styles', array( $this, 'filter_travel_styles' ), 10, 3 );
+
+		// Facet Display Filters.
+		add_filter( 'facetwp_facet_render_args', array( $this, 'restrict_where' ), 10, 1 );
 	}
 
 	/**
@@ -114,6 +147,7 @@ class WETU_Importer {
 	 * @return array
 	 */
 	public function filter_travel_styles( $tags = array(), $id, $importer ) {
+
 		if ( ! empty( $tags ) ) {
 			wp_set_object_terms( $id, array(), 'travel-style' );
 			wp_set_object_terms( $id, array(), 'who' );
@@ -202,5 +236,64 @@ class WETU_Importer {
 		}
 		return array();
 	}
-	
+
+	public function restrict_where( $args ) {
+		if ( 'where' == $args['facet']['name'] ) { // Change 'country' to the name of your facet
+			if ( ! empty( $args['values'] ) ) {
+				foreach ( $args['values'] as $key => $val ) {
+					$display_value = $val['facet_value'];
+					$args['values'][ $key ]['facet_display_value'] = get_the_title( $display_value );
+				}
+				return $args;
+			}
+		}
+
+		if ( 'when' == $args['facet']['name'] && isset( $this->tag_mapping['when'] ) ) { // Change 'country' to the name of your facet
+			if ( ! empty( $args['values'] ) ) {
+				foreach ( $args['values'] as $key => $val ) {
+					if ( ! in_array( $val['facet_display_value'], $this->tag_mapping['when'] ) ) {
+						unset( $args['values'][ $key ] );
+					}
+				}
+				return $args;
+			}
+		}
+
+		if ( 'budget' == $args['facet']['name'] ) { // Change 'country' to the name of your facet
+			if ( ! empty( $args['values'] ) ) {
+
+				foreach ( $args['values'] as $key => $val ) {
+					if ( ! in_array( sanitize_title( $val['facet_display_value'] ), $this->budget_terms ) ) {
+						unset( $args['values'][ $key ] );
+					}
+				}
+				return $args;
+			}
+		}
+
+		if ( 'what' == $args['facet']['name'] ) { // Change 'country' to the name of your facet
+			if ( ! empty( $args['values'] ) ) {
+				foreach ( $args['values'] as $key => $val ) {
+					if ( ! in_array( sanitize_title( $val['facet_display_value'] ), $this->what_terms ) ) {
+						unset( $args['values'][ $key ] );
+					}
+				}
+				return $args;
+			}
+		}
+
+		if ( 'who' == $args['facet']['name'] ) { // Change 'country' to the name of your facet
+			if ( ! empty( $args['values'] ) ) {
+
+				foreach ( $args['values'] as $key => $val ) {
+					if ( ! in_array( sanitize_title( $val['facet_display_value'] ), $this->who_terms ) ) {
+						unset( $args['values'][ $key ] );
+					}
+				}
+				return $args;
+			}
+		}
+
+		return $args;
+	}
 }

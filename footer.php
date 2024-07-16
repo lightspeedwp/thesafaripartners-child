@@ -7,6 +7,17 @@
  * @package lsx
  */
 
+if ( isset( $_GET['set_tour'] ) ) {
+	$action_id = as_enqueue_async_action(
+		'lsx_wetu_sync_tour', 
+		array(
+			'tour_id' => $_GET['set_tour'],
+			'overrides' => array(),
+		),
+		'lsx_wetu_sync' // . date('dmy')
+	);
+}
+
 ?>
 
 			</div><!-- .content -->
