@@ -63,7 +63,7 @@ class WETU_Automation {
 	 */
 	public function init() {
 		if ( function_exists( 'as_enqueue_async_action' ) ) {
-			$this->schedule_main_action();
+			//$this->schedule_main_action();
 			add_action( 'lsx_wetu_master_sync', array( $this, 'run_main_actions' ), 10 );
 
 			// These are the actions which sync the individual items.
@@ -79,6 +79,12 @@ class WETU_Automation {
 	 * @return void
 	 */
 	public function tester_init() {
+
+		if ( isset( $_GET['wetu_importable_debug'] ) ) {
+			$this->output_importable_tours();
+			die();
+		}
+
 		if ( isset( $_GET['wetu_main_debug'] ) ) {
 			$this->run_main_actions();
 			die();
@@ -287,7 +293,7 @@ class WETU_Automation {
 		);
 
 		foreach ( $tags as $tag ) {
-			$data = wp_remote_get( 'https://wetu.com/API/Itinerary/ROARLEMOUP5IENOE/V8/List?type=Personal&own=true&tags=' . $tag );
+			$data = wp_remote_get( 'https://wetu.com/API/Itinerary/ROARLEMOUP5IENOE/V8/List?type=Personal&results=1000&own=true&tags=' . $tag );
 
 			if ( ! is_wp_error( $data ) && ! empty( $data ) && isset( $data['response'] ) && isset( $data['response']['code'] ) && 200 === $data['response']['code'] ) {
 				$jdata  = json_decode( $data['body'], true );
@@ -503,5 +509,53 @@ class WETU_Automation {
 		$flags[] = 'special_interests';
 		$flags[] = 'spoken_languages';
 		return $flags;
+	}
+
+	/**
+	 * Grab the tours and compare them to the 
+	 *
+	 * @return void
+	 */
+	public function output_importable_tours() {
+		$tours      = $this->get_current_tours();
+		$wetu_tours = $this->get_wetu_tours();
+		$new_tours  = [];
+
+		print_r('<pre>');
+		print_r( count( $wetu_tours ) );
+		print_r('</pre>');
+
+		print_r('<pre>');
+		print_r( count( $tours ) );
+		print_r('</pre>');
+
+		if ( ! empty( $tours ) ) {
+			foreach ( $tours as $tour ) {
+				// Remove our current tours from the que.
+				$wetu_id = get_post_meta( $tour, 'lsx_wetu_id', true );
+
+				if ( isset( $wetu_tours[ $wetu_id ] ) ) {
+					unset( $wetu_tours[ $wetu_id ] );
+				}
+			}
+		}
+
+		print_r('<pre>');
+		print_r( count( $wetu_tours ) );
+		print_r('</pre>');
+
+		if ( ! empty( $wetu_tours ) ) {
+			foreach ( $wetu_tours as $key => $tour ) {
+				$new_tours[] = [
+					'title' => $tour['name'],
+					'ID' => $key,
+				];
+			}
+		}
+
+		print_r('<pre>');
+		print_r( $new_tours );
+		print_r('</pre>');
+		die();
 	}
 }
