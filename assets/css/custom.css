@@ -137,10 +137,10 @@
 	letter-spacing: -0.2px!important;
   }
   .dates-prices.hentry {
-	height: 300px;
-	max-height: 300px;
-	overflow-y: auto;
-	margin-bottom: 24px;
+	height: 32vh;
+	max-height: 32vh;
+	overflow-y: scroll;
+	margin-bottom: 2px;
   }
   .scrollButton {
 	padding: 5px;
@@ -162,7 +162,7 @@
 	background-size: 120px 50px;
     display: inline-block;
     width: 120px;
-    height: 50px;
+    height: 40px;
 	content: "";
 	left: 0px !important;
 	margin-top: 0px;
@@ -178,13 +178,13 @@
   body.single-lsx-to-tour .extra-cta {
 	margin-top: 24px;
 	position: absolute;
-	bottom: 0;
+	bottom: 10px;
 	display: block !important;
   }
   .single-lsx-to-destination .extra-cta {
 	margin-top: 24px;
 	position: relative;
-	bottom: 0;
+	bottom: 10px;
 	display: block !important;
   }
   body.single-lsx-to-tour #Overview .extra-cta button {
@@ -1227,7 +1227,7 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	height: 90vh;
+	height: 94vh;
   }
   .tour-accommodation-gallery .image-slide img {
 	object-fit: cover;
@@ -1288,7 +1288,7 @@
 	display: none!important;
   }
   .single-lsx-to-tour .lsx-map .lsx-map-preview {
-	height: 90vh!important;
+	height: 91vh!important;
   }
   .single-lsx-to-tour .lsx-to-meta-data {
 	font-family: "moret", serif!important;
@@ -2251,8 +2251,8 @@
   .single-lsx-to-tour .itenary .entry-content.lsx-readmore, .single-lsx-to-tour #accommodation .entry-content.lsx-readmore {
 	padding-top: 5%!important;
 	width: 100%;
-	height: 61%;
-    max-height: 61%;
+	height: 48%;
+    max-height: 48%;
   }
   .pum form input, .pum form input[type="email"], .pum form input[type="date"], .pum form input[type="datetime"], .pum form input[type="datetime-local"], .pum form input[type="month"], .pum form input[type="number"], .pum form input[type="password"], .pum form input[type="search"], .pum form input[type="tel"], .pum form input[type="text"], .pum form input[type="time"], .pum form input[type="week"], .pum form input[type="url"], .pum .pum-form--style-default input, .pum .pum-form--style-default input[type="email"], .pum .pum-form--style-default input[type="date"], .pum .pum-form--style-default input[type="datetime"], .pum .pum-form--style-default input[type="datetime-local"], .pum .pum-form--style-default input[type="month"], .pum .pum-form--style-default input[type="number"], .pum .pum-form--style-default input[type="password"], .pum .pum-form--style-default input[type="search"], .pum .pum-form--style-default input[type="tel"], .pum .pum-form--style-default input[type="text"], .pum .pum-form--style-default input[type="time"], .pum .pum-form--style-default input[type="week"], .pum .pum-form--style-default input[type="url"], .pum .pum-age-form input, .pum .pum-age-form input[type="email"], .pum .pum-age-form input[type="date"], .pum .pum-age-form input[type="datetime"], .pum .pum-age-form input[type="datetime-local"], .pum .pum-age-form input[type="month"], .pum .pum-age-form input[type="number"], .pum .pum-age-form input[type="password"], .pum .pum-age-form input[type="search"], .pum .pum-age-form input[type="tel"], .pum .pum-age-form input[type="text"], .pum .pum-age-form input[type="time"], .pum .pum-age-form input[type="week"], .pum .pum-age-form input[type="url"] {
 	border: none;
@@ -3460,8 +3460,8 @@
 	width: 584px;
 	padding-left: 40px;
 	position: relative;
-	max-height: 82vh;
-	height: 82vh;
+	max-height: 85vh;
+	height: 85vh;
   }
   .single-lsx-to-tour #Maps .lsx-to-tour-content {
 	max-height: auto!important;
@@ -3593,7 +3593,7 @@
 	font-size: 20px;
 	position: absolute;
 	right: 0;
-	bottom: 0rem;
+	bottom: 10px;
   }
   .single-lsx-to-tour #singlelink.tablinks:after {
 	background-image: url('img/tsp-see-more-arrow.svg');
@@ -3623,7 +3623,7 @@
   }
   .single-lsx-to-tour .lsx-tour-module-map {
 	padding: 0 !important;
-	margin-top: -14px;
+	margin-top: -1px;
   }
   .single-lsx-to-tour .lsx-contact-module-image {
 	padding: 0!important;
@@ -5026,7 +5026,7 @@
 	left: 54%!important;
 	z-index: 9;
 	position: relative;
-	margin-top: 1%;
+	margin-top: 0%;
 	right: 0;
 	margin-bottom: -30px;
 	width: 476px;
@@ -5053,7 +5053,7 @@
   }
   .single-lsx-to-tour .lsx-banner-image-wrap img {
 	object-fit: cover;
-	height: 90vh!important;
+	height: 93vh!important;
 	width: 100%;
   }
   .single-lsx-to-tour .lsx-to-slider-inner {
@@ -7911,6 +7911,20 @@
 	  margin-bottom: 0!important;
 	}
   }
+  @media screen and (min-width: 1000px), screen and (max-height: 700px){
+	.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
+        top: 50px!important;
+  }
+}
+
+@media screen and (min-width: 1100px), screen and (max-height: 850px){
+	.single-lsx-to-tour .lsx-wizard-buttons-wrapper {
+        top: 50px!important;
+  }
+  .related-tours-wrapper{margin-top:25px;}
+  .row.reviewssingle{display:none;}
+}
+
   @media (min-width:900px) and (max-width:1199px) {
 	.page-template-template-lsx-to-reviews #primary .lsx-to-widget-blockquote {
 		border: 1px solid #8E621F;
@@ -7926,8 +7940,8 @@
 	.single-lsx-to-tour .itenary .entry-content.lsx-readmore, .single-lsx-to-tour #accommodation .entry-content.lsx-readmore {
 		padding-top: 5% !important;
 		width: 100%;
-		height: 55%!important;
-		max-height: 55%!important;}
+		height: 49%!important;
+		max-height: 49%!important;}
 
 		.single-lsx-to-tour #Day .lsx-wizard-steps-wrapper {
 			min-height: 118vh !important;
@@ -8320,7 +8334,7 @@
 	  font-size: 20px;
 	  position: absolute;
 	  right: 12px;
-	  bottom: 0rem;
+	  bottom: 10px;
 	}
 	.single-lsx-to-tour #singlelink.tablinks:after {
 	  background-image: url('img/tsp-see-more-arrow.svg');
@@ -8491,7 +8505,7 @@
 	  left: 54%!important;
 	  z-index: 9;
 	  position: relative;
-	  margin-top: 1%;
+	  margin-top: 0%;
 	  right: 0;
 	  margin-bottom: -30px;
 	  width: 476px;
