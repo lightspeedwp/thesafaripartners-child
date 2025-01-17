@@ -16,6 +16,7 @@ function prefix_conditional_body_class( $classes ) {
 	}
 	if ( is_page( 'search' ) || is_page_template( 'search.php' ) ) {
 		$classes[] = 'search-results';
+		$classes[] = 'lsx-body-list-layout';
 	}
 
     return $classes;
