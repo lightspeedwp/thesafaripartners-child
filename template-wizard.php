@@ -21,8 +21,7 @@ get_header();
 
 		<div class="row">
 			<div class="outer-container">
-				<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/'); ?>" method="GET" style="display: none;">
-					<input type="hidden" name="s" value="" />
+				<form id="wizard" class="lsx-wizard insipre-wizard-form" action="<?php echo home_url('/search/'); ?>" method="GET" style="display: none;">
 					<div class="lsx-wizard-step">
 						<div class="step-content introslide">
 							<?php if ( have_posts() ) : ?>
