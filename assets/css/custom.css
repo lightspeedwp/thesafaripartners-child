@@ -963,9 +963,14 @@
 	font-size: 22px!important;
 	line-height: 26px;
   }
-  .lsx-body-half-grid-layout.search-results .post-wrapper>.lsx-slot, .lsx-body-grid-layout.search-results .post-wrapper>.lsx-slot {
+  .lsx-body-half-grid-layout.search-results .post-wrapper>.lsx-slot, .lsx-body-grid-layout.search-results .post-wrapper>.lsx-slot,body.search .post-wrapper>.lsx-slot{
 	width: 100%!important;
   }
+  
+.search-results article.lsx-slot .entry-layout{
+	justify-content: flex-end!important;
+	padding-bottom: 0;}
+
   .lsx-body-grid-layout.archive .post-wrapper, .lsx-body-grid-layout.search-results .post-wrapper {
 	display: inline-block;
 	width: 100%;
@@ -3543,6 +3548,7 @@
 	padding: 0!important;
   }
   @media (min-width: 1200px) {
+	.search-results .lsx-slot .entry-layout-content{max-width: 41%!important;;}
 	.single-lsx-to-tour #Price .tours-nav {
 	  width: 80%;
 	}
