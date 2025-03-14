@@ -963,9 +963,14 @@
 	font-size: 22px!important;
 	line-height: 26px;
   }
-  .lsx-body-half-grid-layout.search-results .post-wrapper>.lsx-slot, .lsx-body-grid-layout.search-results .post-wrapper>.lsx-slot {
+  .lsx-body-half-grid-layout.search-results .post-wrapper>.lsx-slot, .lsx-body-grid-layout.search-results .post-wrapper>.lsx-slot,body.search .post-wrapper>.lsx-slot{
 	width: 100%!important;
   }
+  
+.search-results article.lsx-slot .entry-layout{
+	justify-content: flex-end!important;
+	padding-bottom: 0;}
+
   .lsx-body-grid-layout.archive .post-wrapper, .lsx-body-grid-layout.search-results .post-wrapper {
 	display: inline-block;
 	width: 100%;
@@ -3543,6 +3548,7 @@
 	padding: 0!important;
   }
   @media (min-width: 1200px) {
+	.search-results .lsx-slot .entry-layout-content{max-width: 41%!important;;}
 	.single-lsx-to-tour #Price .tours-nav {
 	  width: 80%;
 	}
@@ -4672,7 +4678,7 @@
 	max-width: 1204px!important;
 	margin: 5px 0px 20px 0px!important;
   }
-  .search-results .content {
+  .search-results .content, .search .content {
 	width: 1204px!important;
 	margin: 0px auto!important;
   }
@@ -8747,36 +8753,57 @@
 	  float: left;
 	  margin-right: 10px;
 	}
+	.dates-prices.hentry {
+		height: 39vh!important;
+		max-height: 39vh!important;
+		overflow-y: scroll;
+		margin-bottom: 2px;
+	}
 	body.single-lsx-to-tour #Price .dates-prices thead {
 	  display: none;
 	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(1):before {
-	  content: 'Tour Start Date: ';
-	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(2):before {
-	  content: 'Tour End Date: ';
-	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(3):before {
-	  content: 'Total Sharing: ';
-	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(4) {
+	table.table-striped tr td::before {
+        content: attr(data-header) ": "; /* Insert the header name before the td content */
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+	  body.single-lsx-to-tour #Price .dates-prices .columns-8 tbody tr td:nth-child(3) {
+		display: none;
+	  }
+	body.single-lsx-to-tour #Price .dates-prices .columns-8 tbody tr td:nth-child(4) {
 	  display: none;
 	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(5) {
+	body.single-lsx-to-tour #Price .dates-prices .columns-8 tbody tr td:nth-child(5) {
 	  display: none;
 	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(6) {
+	body.single-lsx-to-tour #Price .dates-prices .columns-8 tbody tr td:nth-child(6) {
 	  display: none;
 	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(7) {
-	  display: none;
-	}
-	body.single-lsx-to-tour #Price .dates-prices tbody tr td:nth-child(8) {
+	body.single-lsx-to-tour #Price .dates-prices .columns-8 tbody tr td:nth-child(8) {
 	  width: 100%!important;
 	}
+	body.single-lsx-to-tour #Price .dates-prices .columns-8 tbody tr td:nth-child(8)::before {display:none;}
+
 	.single-lsx-to-tour #Price .table>tbody>tr>td.park-fees {
 	  width: 100%!important;
 	}
+
+	  body.single-lsx-to-tour #Price .dates-prices .columns-5 tbody tr td:nth-child(5) {
+		width: 100%!important;
+	  }
+	  body.single-lsx-to-tour #Price .dates-prices .columns-5 tbody tr td:nth-child(5)::before {display:none;}
+
+	  body.single-lsx-to-tour #Price .dates-prices .columns-6 tbody tr td:nth-child(6) {
+		width: 100%!important;
+	  }
+	  body.single-lsx-to-tour #Price .dates-prices .columns-6 tbody tr td:nth-child(6)::before {display:none;}
+
+	  body.single-lsx-to-tour #Price .dates-prices .columns-7 tbody tr td:nth-child(7) {
+		width: 100%!important;
+	  }
+	  body.single-lsx-to-tour #Price .dates-prices .columns-7 tbody tr td:nth-child(7)::before {display:none;}
+
 	#dates-prices .btn {
 	  width: 100%!important;
 	  height: 28px!important;
