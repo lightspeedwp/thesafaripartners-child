@@ -536,7 +536,7 @@
 	}
 
 	function submitInspireWizard( selectedCheckboxes, targetEle ) {
-		let urlParams = '?s=';
+		let urlParams = '?t=1';
 		let what = [];
 		let who = [];
 		let where = [];
