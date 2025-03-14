@@ -7,11 +7,13 @@
  * @package lsx
  */
 
+add_action( 'body_class', 'tsp_search_page_classes' );
+
 get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
+<div id="primary" class="content-area search-wizard-results <?php echo esc_attr( lsx_main_class() ); ?>">
 
 	<?php lsx_content_before(); ?>
 

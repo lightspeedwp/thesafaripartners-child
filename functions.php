@@ -10,6 +10,11 @@ define( 'TSP_CHILD_VER', '1.0' );
 require get_stylesheet_directory() . '/classes/class-core.php';
 $theme_instance = \tsp_child\classes\Core::get_instance();
 
+function tsp_search_page_classes( $classes ) {
+	$classes[] = 'lsx-body-list-layout lsx-body-grid-layout';
+	return $classes;
+}
+
 function prefix_conditional_body_class( $classes ) {
 	if ( is_page_template( 'template-travel-style.php' ) ) {
 		$classes[] = 'archive';
