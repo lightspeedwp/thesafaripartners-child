@@ -48,7 +48,7 @@ get_header(); ?>
 			?>
 
 			<?php
-				$panels = array(
+				/*$panels = array(
 					0 => array( 'who' ),
 					1 => array( 'what' ),
 					2 => array( 'where' ),
@@ -65,7 +65,7 @@ get_header(); ?>
 				get_template_part( 'partials/shaman', 'intro', $args );
 
 				// Call the wizard
-				tsp_mini_wizard( $panels, $args );
+				tsp_mini_wizard( $panels, $args );*/
 			?>
 
 			

@@ -55,14 +55,7 @@ $tag = get_field('tagline', $term);
 			</div>
 
 			<?php 
-				$panels = array(
-					0 => array( 'who' ),
-					1 => array( 'what' ),
-					2 => array( 'where' ),
-					3 => array( 'when' ),
-					4 => array( 'budget' ),
-				);
-				$args = array( 
+				/*$args = array( 
 					'selected' => array( get_queried_object_id() ),
 					'title'    => get_term_meta( get_queried_object_id(), 'shaman_title', true ),
 					'tagline'  => get_term_meta( get_queried_object_id(), 'shaman_tagline', true ),
@@ -72,7 +65,14 @@ $tag = get_field('tagline', $term);
 				get_template_part( 'partials/shaman', 'intro', $args );
 
 				// Call the wizard
-				tsp_mini_wizard( $panels, $args );
+				$panels = array(
+					0 => array( 'who' ),
+					1 => array( 'what' ),
+					2 => array( 'where' ),
+					3 => array( 'when' ),
+					4 => array( 'budget' ),
+				);
+				tsp_mini_wizard( $panels, $args );*/
 
 				$query_args = array(
 					'post_type' => 'tour',

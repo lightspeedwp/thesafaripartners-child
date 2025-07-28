@@ -34,14 +34,7 @@ get_header(); ?>
 		<div class="notfull">
 
 			<?php 
-				$panels = array(
-					0 => array( 'who' ),
-					1 => array( 'what' ),
-					2 => array( 'where' ),
-					3 => array( 'when' ),
-					4 => array( 'budget' ),
-				);
-				$args = array(
+				/*$args = array(
 					'title'    => get_post_meta( get_the_ID(), 'shaman_title', true ),
 					'tagline'  => get_post_meta( get_the_ID(), 'shaman_tagline', true ),
 					'selected' => array( get_queried_object_id() ),
@@ -51,7 +44,14 @@ get_header(); ?>
 				get_template_part( 'partials/shaman', 'intro', $args );
 
 				// Call the wizard
-				tsp_mini_wizard( $panels, $args );
+				$panels = array(
+					0 => array( 'who' ),
+					1 => array( 'what' ),
+					2 => array( 'where' ),
+					3 => array( 'when' ),
+					4 => array( 'budget' ),
+				);
+				tsp_mini_wizard( $panels, $args );*/
 
 
 				$query_args = array(

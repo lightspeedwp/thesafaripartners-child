@@ -23,6 +23,8 @@ function tsp_init_wizard() {
  * @return string
  */
 function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
+	return $content;
+
 	$defaults = array(
 		'taxonomy' => '',
 		'post_type' => 'tour',
@@ -45,7 +47,7 @@ function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
 	}
 
 	ob_start();
-	tsp_mini_wizard( $panels, $args );
+	//tsp_mini_wizard( $panels, $args );
 	tsp_mini_wizard_results( $args, $panel_args );
 
 	$return = ob_get_clean();
