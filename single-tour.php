@@ -39,4 +39,4 @@ get_header(); ?>
 
 <?php lsx_content_wrap_after(); ?>
 <?php
-get_footer('new');
+get_footer();
