@@ -53,7 +53,6 @@ get_header(); ?>
 				);
 				tsp_mini_wizard( $panels, $args );*/
 
-
 				$query_args = array(
 					'post_type' => 'tour',
 					'post_status' => 'publish',

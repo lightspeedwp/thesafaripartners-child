@@ -10,7 +10,7 @@ get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-	<div id="primary" class="content-area wizard-landing <?php echo esc_attr( lsx_main_class() ); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
 
 		<?php lsx_content_before(); ?>
 
@@ -18,34 +18,16 @@ get_header(); ?>
 
 			<?php lsx_content_top(); ?>
 
-			<div id="collapse-summary" class="collapse in">
-				<div class="collapse-inner">
-					<div class="row">
-						<div class="col-md-12 outer-container">
-						
-							<div class="tab">
-								<button class="tablinks tours-wizard" data-wrapper="Overview" id="tours-wizard" onclick="openCity(event, 'Overview')">Overview</button>
-								<button class="tablinks" data-wrapper="Day" id="page-1" onclick="openCity(event, 'Day')">Day by Day</button>
-								<button class="tablinks" data-wrapper="Accommodation" id="page-3" onclick="openCity(event, 'Accommodation')">Accommodation</button>
-								<button class="tablinks" data-wrapper="Price" id="page-4" onclick="openCity(event, 'Price')">Dates & Prices</button>
-								<button class="tablinks" data-wrapper="Maps" id="page-5" onclick="openCity(event, 'Maps')">Maps & More</button>
-							</div>
-						</div>
-
-						<?php get_template_part( 'partials/tour-wizard', 'overview' ); ?>
-
-						<?php get_template_part( 'partials/tour-wizard', 'day' ); ?>
-
-						<?php get_template_part( 'partials/tour-wizard', 'accommodation' ); ?>
-
-						<?php get_template_part( 'partials/tour-wizard', 'price' ); ?>
-
-						<?php get_template_part( 'partials/tour-wizard', 'maps' ); ?>
-										
-						
-					</div>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
+					
+				<div class="content-area col-sm-12 col-sm-12">
+					<?php lsx_to_content( 'content', 'tour' ); ?>
 				</div>
-			</div>
+					
+			<?php endwhile; ?>
 
 			<?php lsx_content_bottom(); ?>
 

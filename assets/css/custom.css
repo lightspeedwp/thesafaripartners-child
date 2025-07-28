@@ -3865,7 +3865,7 @@
   #masthead .navbar-header {
 	width: 215px;
   }
-  .wizard-landing .entry-content, .contact .lsx-container-content {
+  /*.wizard-landing .entry-content, .contact .lsx-container-content {
 	padding-top: 0!important;
   }
   .wizard-landing .lsx-container-content, .contact .lsx-container-content {
@@ -3873,7 +3873,7 @@
   }
   .wizard-landing .lsx-banner-column {
 	padding: 30% 0px 0!important;
-  }
+  }*/
   .contact .lsx-banner-column {
 	padding: 54% 0px 0!important;
   }

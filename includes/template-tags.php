@@ -25,6 +25,8 @@ function tsp_init_wizard() {
 function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
 	return $content;
 
+	tsp_init_wizard();
+
 	$defaults = array(
 		'taxonomy' => '',
 		'post_type' => 'tour',
