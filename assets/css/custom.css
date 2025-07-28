@@ -4122,7 +4122,7 @@
 	margin: 5px 0px 20px 0px!important;
 	max-width: 1204px!important;
   }
-  .archive #primary, .single-lsx-to-destination #primary {
+  .archive #primary, .single-lsx-to-destination #primary, .single-lsx-to-tour #primary  {
 	width: 1204px!important;
 	margin: 0 auto;
 	float: none!important;
