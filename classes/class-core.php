@@ -20,6 +20,12 @@ use stdClass;
  */
 class Core {
 
+    public $dates_prices;
+    public $wetu_importer;
+    public $wetu_automation;
+    public $multi_currency;
+    public $wetu_endpoints;
+
 	/**
 	 * Holds class instance
 	 *

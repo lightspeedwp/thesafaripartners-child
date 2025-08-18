@@ -17,6 +17,7 @@ namespace tsp_child\classes;
  * @package tsp_child\classes
  */
 class Setup {
+    public $menu_position; // Declare the property
 
 	/**
 	 * Holds class instance
