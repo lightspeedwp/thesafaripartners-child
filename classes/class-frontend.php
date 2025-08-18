@@ -165,7 +165,6 @@ class Frontend {
 		add_filter( 'lsx_to_parents_only', array( $this, 'order_tour_countries' ), 20, 2 );
 		add_filter( 'the_content', array( $this, 'the_content' ), 100 );
 		add_filter( 'lsx_currencies_nav_additional_items', array( $this, 'order_currency_dropdown' ), 10, 1 );
-		add_filter( 'the_content', array( $this, 'order_currency_dropdown' ), 10, 1 );
 
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
