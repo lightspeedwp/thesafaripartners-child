@@ -29,7 +29,12 @@ if ( 1 !== $lsx_to_archive ) {
 			<?php the_content(); ?>
 			<?php lsx_to_sharing(); ?>
 		</div>
+        <div class="col-sm-12 col-md-5 tsp-tour-fast-facts">
+            <?php tsp_tour_fast_facts(); ?>
+            <?php tsp_best_time_to_visit( '<h3 class="tsp-title">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</h3>' ); ?>
 
+            <a class="tsp-button text-center popup-inquire" href="#">Request more information <i class="icon-see-more"></i></a>
+        </div>
 	<?php } elseif ( is_search() || empty( tour_operator()->options[ get_post_type() ]['disable_entry_text'] ) ) { ?>
 
 		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
@@ -42,9 +47,6 @@ if ( 1 !== $lsx_to_archive ) {
 
 	<?php } ?>
 
-	<?php lsx_to_best_time_to_visit( '<section id="when-to-go" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-when-to-go' ) . '>' . esc_html__( 'When to Go', 'tour-operator' ) . '</h2><div id="collapse-when-to-go" class="collapse in"><div class="collapse-inner clearfix">', '</div></div></section>' ); ?>
-
-	<?php lsx_entry_bottom(); ?>
 
 </article>
 

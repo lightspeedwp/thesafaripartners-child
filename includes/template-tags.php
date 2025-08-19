@@ -137,7 +137,7 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
 		<div class="tsp-seperator"></div>
 
 		<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
-			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>">
+			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 			<div class="lsx-to-slider-wrap">
 				<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 					<?php
@@ -524,3 +524,66 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 	}
 }
 
+function tsp_best_time_to_visit( $echo = true ) {
+    $best_time_to_visit = get_post_meta( get_the_ID(), 'best_time_to_visit', true );
+    if ( false !== $best_time_to_visit && '' !== $best_time_to_visit && is_array( $best_time_to_visit ) && ! empty( $best_time_to_visit ) ) {
+        $this_year = array(
+                'january' => esc_html__( 'January', 'tour-operator' ),
+                'february' => esc_html__( 'February', 'tour-operator' ),
+                'march' => esc_html__( 'March', 'tour-operator' ),
+                'april' => esc_html__( 'April', 'tour-operator' ),
+                'may' => esc_html__( 'May', 'tour-operator' ),
+                'june' => esc_html__( 'June', 'tour-operator' ),
+                'july' => esc_html__( 'July', 'tour-operator' ),
+                'august' => esc_html__( 'August', 'tour-operator' ),
+                'september' => esc_html__( 'September', 'tour-operator' ),
+                'october' => esc_html__( 'October', 'tour-operator' ),
+                'november' => esc_html__( 'November', 'tour-operator' ),
+                'december' => esc_html__( 'December', 'tour-operator ' ),
+        );
+
+        foreach ( $this_year as $month => $label ) {
+            $checked_class = '';
+
+            if ( in_array( $month, $best_time_to_visit ) ) {
+                $checked_class = 'tsp-month-check';
+            }
+
+            $best_times[] = '<div class="tsp-month ' . $checked_class . '"><small>' . $label . '</small></div>';
+        };
+
+        $return = '<div class="row"><div class="col-xs-12 d-flex tsp-time-to-visit"><i class="tsp-icon tsp-icon-calendar"></i>' .
+            '<span><span class="tsp-fast-facts-type">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</span>' .
+            '<span class="tsp-best-time-to-visit">' . implode( '', $best_times ) . '</span></span></div></div>';
+
+        if ( $echo ) {
+            echo wp_kses_post( $return );
+        } else {
+            return $return;
+        }
+    }
+}
+
+function tsp_tour_fast_facts()
+{
+        ?>
+        <div class="row">
+            <?php
+            $meta_class = 'tsp-fast-facts-type';
+
+            $tour_types = get_the_terms(get_the_ID(), 'tour-type');
+            if ($tour_types && !is_wp_error($tour_types)) {
+                $tour_type_names = array();
+                foreach ($tour_types as $tour_type) {
+                    $tour_type_names[] = $tour_type->name;
+                }
+                $tour_type_display = implode(', ', $tour_type_names);
+                echo '<div class="col-xs-6 d-flex"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '">' . esc_html__('Type Of Tour', 'tour-operator') . '</span><span>' . esc_html($tour_type_display) . '</span></span></div>';
+            }
+
+            lsx_to_duration('<div class="col-xs-6 d-flex"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator') . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
+            lsx_to_connected_countries('<div class="col-xs-12 d-flex"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator') . '</span><span> ', '</span></span></div>');
+            ?>
+        </div>
+    <?php
+}

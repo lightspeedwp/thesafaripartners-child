@@ -15,7 +15,6 @@ get_header(); ?>
 		<?php lsx_content_before(); ?>
 
 		<main id="main" class="site-main" role="main">
-
 			<?php lsx_content_top(); ?>
 
 			<?php
@@ -23,8 +22,8 @@ get_header(); ?>
 				the_post();
 				?>
 					
-				<div class="content-area col-sm-12 col-sm-12">
-					<?php lsx_to_content( 'content', 'tour' ); ?>
+				<div class="content-area col-sm-12">
+                    <?php get_template_part( 'content', 'tour' ); ?>
 				</div>
 					
 			<?php endwhile; ?>
