@@ -587,3 +587,125 @@ function tsp_tour_fast_facts()
         </div>
     <?php
 }
+
+function tsp_to_itinerary_meals( $before = '', $after = '' ) {
+    $meals = get_post_meta( get_the_ID(), 'meals', true );
+    if ( ! empty( $meals ) && is_array( $meals ) ) {
+        $meals = array_map( 'trim', $meals );
+        $meals = array_filter( $meals );
+
+        if ( ! empty( $meals ) ) {
+            echo wp_kses_post( $before . implode( ', ', $meals ) . $after );
+        }
+    }
+}
+
+function tsp_itinerary_title( $echo = true ) {
+    global $tour_itinerary;
+
+    if ( $tour_itinerary && $tour_itinerary->has_itinerary && ! empty( $tour_itinerary->itinerary ) ) {
+        if ( ! empty( $tour_itinerary->itinerary['title'] ) ) {
+            $title = apply_filters( 'the_title', $tour_itinerary->itinerary['title'] );
+
+            // Get destinations for this itinerary item
+            $destinations = '';
+            if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) ) {
+                $destination_ids = $tour_itinerary->itinerary['destination_to_tour'];
+                if ( ! is_array( $destination_ids ) ) {
+                    $destination_ids = array( $destination_ids );
+                }
+
+                $destination_names = array();
+                foreach ( $destination_ids as $destination_id ) {
+                    $destination_name = get_the_title( $destination_id );
+                    if ( $destination_name ) {
+                        $destination_names[] = $destination_name;
+                    }
+                }
+
+                if ( ! empty( $destination_names ) ) {
+                    $destinations = ' : ' . '<span class="destinations">'.implode( ', ', $destination_names ) . '</span>';
+                }
+            }
+
+            $title_with_destination = $title . $destinations;
+            $title_with_destination = apply_filters( 'lsx_to_itinerary_title', $title_with_destination, $tour_itinerary );
+
+            if ( true === $echo ) {
+                echo wp_kses_post( $title_with_destination );
+            } else {
+                return $title_with_destination;
+            }
+        }
+    }
+}
+
+function tsp_itinerary_description() {
+    global $tour_itinerary;
+
+    if ( $tour_itinerary && $tour_itinerary->has_itinerary && ! empty( $tour_itinerary->itinerary ) ) {
+        if ( ! empty( $tour_itinerary->itinerary['description'] ) ) {
+            $full_description = apply_filters( 'the_content', $tour_itinerary->itinerary['description'] );
+            $full_description = wp_strip_all_tags( $full_description );
+
+            // Check if description needs trimming (more than 75 words or 500 characters)
+            $word_count = str_word_count( $full_description );
+            $char_count = strlen( $full_description );
+
+            if ( $word_count > 75 || $char_count > 500 ) {
+                // Trim to 75 words, but respect word boundaries
+                $words = explode( ' ', $full_description );
+                $trimmed_words = array_slice( $words, 0, 75 );
+                $trimmed_description = implode( ' ', $trimmed_words );
+
+                // If still over 500 chars, trim by characters
+                if ( strlen( $trimmed_description ) > 500 ) {
+                    $trimmed_description = substr( $trimmed_description, 0, 500 );
+                    $trimmed_description = substr( $trimmed_description, 0, strrpos( $trimmed_description, ' ' ) );
+                }
+
+                $unique_id = 'desc-' . uniqid();
+
+                echo '<div class="tsp-itinerary-description-wrapper">';
+                echo '<div class="tsp-itinerary-description-short" id="' . esc_attr( $unique_id ) . '-short">';
+                echo wp_kses_post( $trimmed_description . '...' );
+                echo ' <button type="button" class="tsp-toggle-btn tsp-expand-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Expand Description', 'tour-operator' ) . ' +</button>';
+                echo '</div>';
+
+                echo '<div class="tsp-itinerary-description-full" id="' . esc_attr( $unique_id ) . '-full" style="display: none;">';
+                echo wp_kses_post( $full_description );
+                echo ' <button type="button" class="tsp-toggle-btn tsp-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Collapse Description', 'tour-operator' ) . ' -</button>';
+                echo '</div>';
+                echo '</div>';
+
+                // Add inline JavaScript for functionality
+                ?>
+                <script>
+
+                </script>
+                <?php
+            } else {
+                // Description is short enough, display as-is
+                echo wp_kses_post( $full_description );
+            }
+        }
+    }
+}
+
+/**
+ * Change Summary to Overview in single tour scrollspy navigation
+ */
+function tsp_modify_tour_page_navigation( $page_links ) {
+    if ( is_single() && get_post_type() === 'tour' ) {
+        if ( isset( $page_links['summary'] ) ) {
+            // Replace Summary with Overview
+            unset( $page_links['summary'] );
+            $page_links = array_merge(
+                    array( 'overview' => esc_html__( 'Overview', 'thesafaripartners-child' ) ),
+                    $page_links
+            );
+        }
+    }
+    return $page_links;
+}
+add_filter( 'lsx_to_page_navigation', 'tsp_modify_tour_page_navigation', 20 );

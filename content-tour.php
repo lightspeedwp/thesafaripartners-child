@@ -19,21 +19,21 @@ if ( 1 !== $lsx_to_archive ) {
 	<?php lsx_entry_top(); ?>
 
 	<?php if ( is_single() && false === $lsx_to_archive ) { ?>
+        <div class="row">
+            <div <?php lsx_to_entry_class( 'entry-content' ); ?>>
+                <div class="lsx-to-summary">
+                    <h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
+                </div>
 
-		<div <?php lsx_to_entry_class( 'entry-content' ); ?>>
-			<div class="lsx-to-summary">
-				<h2 class="lsx-to-summary-title"><?php the_title(); ?></h2>
-			</div>
+                <?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
+                <?php the_content(); ?>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 tsp-tour-fast-facts">
+                <?php tsp_tour_fast_facts(); ?>
+                <?php tsp_best_time_to_visit( '<h3 class="tsp-title">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</h3>' ); ?>
 
-			<?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
-			<?php the_content(); ?>
-			<?php lsx_to_sharing(); ?>
-		</div>
-        <div class="col-sm-12 col-md-5 tsp-tour-fast-facts">
-            <?php tsp_tour_fast_facts(); ?>
-            <?php tsp_best_time_to_visit( '<h3 class="tsp-title">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</h3>' ); ?>
-
-            <a class="tsp-button text-center popup-inquire" href="#">Request more information <i class="icon-see-more"></i></a>
+                <a class="tsp-button text-center popup-inquire" href="#">Request more information <i class="icon-see-more"></i></a>
+            </div>
         </div>
 	<?php } elseif ( is_search() || empty( tour_operator()->options[ get_post_type() ]['disable_entry_text'] ) ) { ?>
 

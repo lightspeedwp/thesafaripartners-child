@@ -57,4 +57,25 @@
 		});
 	});
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const expandBtns = document.querySelectorAll('.tsp-expand-btn');
+        const collapseBtns = document.querySelectorAll('.tsp-collapse-btn');
+
+        expandBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                document.getElementById(target + '-short').style.display = 'none';
+                document.getElementById(target + '-full').style.display = 'block';
+            });
+        });
+
+        collapseBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                document.getElementById(target + '-full').style.display = 'none';
+                document.getElementById(target + '-short').style.display = 'block';
+            });
+        });
+    });
+
 })( jQuery, window, document );

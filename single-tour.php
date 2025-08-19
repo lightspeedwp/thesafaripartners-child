@@ -21,16 +21,34 @@ get_header(); ?>
 			while ( have_posts() ) :
 				the_post();
 				?>
-					
-				<div class="content-area col-sm-12">
+
+				<section id="overview" class="content-area clearfix <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                    <h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-overview' ); ?>><?php esc_html_e( 'Overview', 'tour-operator' ); ?>></h2>
+                    <div id="collapse-overview" class="collapse in">
                     <?php get_template_part( 'content', 'tour' ); ?>
-				</div>
-					
+                    </div>
+				</section>
+
 			<?php endwhile; ?>
 
 			<?php lsx_content_bottom(); ?>
-			
-			<?php
+
+            <?php
+            // Maps
+            if ( function_exists( 'lsx_to_has_map' ) && lsx_to_has_map() ) {
+            ?>
+            <section id="tour-map" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                <h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title text-center" <?php lsx_to_collapsible_attributes_not_post( 'collapse-tour-map' ); ?>><?php esc_html_e( 'Map', 'tour-operator' ); ?></h2>
+
+                <div id="collapse-tour-map" class="collapse in">
+                    <div class="collapse-inner">
+                        <?php lsx_to_map(); ?>
+                    </div>
+                </div>
+            </section>
+            <?php
+			}
+
 			// Gallery
 			lsx_to_gallery( '<section id="gallery" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-gallery' ) . '>' . esc_html__( 'Gallery', 'tour-operator' ) . '</h2><div id="collapse-gallery" class="collapse in"><div class="collapse-inner">', '</div></div></section>' );
 
@@ -45,48 +63,32 @@ get_header(); ?>
 				$itinerary_count = 1;
 				?>
 				<section id="itinerary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" data-toggle="collapse" data-target="#collapse-itinerary" aria-expanded="false"><?php esc_html_e( 'Full Day by Day Itinerary', 'tour-operator' ); ?></h2>
+					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title" data-toggle="collapse" data-target="#collapse-itinerary" aria-expanded="false"><?php esc_html_e( 'Day-by-Day Itinerary', 'tour-operator' ); ?></h2>
 
 					<div id="collapse-itinerary" class="collapse in">
 						<div class="collapse-inner">
-							<div class="row lsx-to-archive-items lsx-to-archive-template-list lsx-to-archive-template-image-<?php echo esc_attr( tour_operator()->archive_list_layout_image_style ); ?> itinerary-list">
+							<div class="tsp-itinerary-list">
 								<?php while ( lsx_to_itinerary_loop() ) { ?>
 									<?php
 										lsx_to_itinerary_loop_item();
 										$thumb = lsx_to_itinerary_thumbnail();
 									?>
 
-									<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'lsx-to-archive-item itinerary-item col-xs-12' ); ?>>
-										<div class="lsx-to-archive-container">
-											<div class="lsx-to-archive-thumb">
-												<div class="lsx-to-thumb-slot" style="background-image: url('<?php echo esc_url( $thumb ); ?>');">
-													<?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
-												</div>
-											</div>
+									<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'tsp-itinerary-day' ); ?>>
+                                            <div class="tsp-itinerary-content">
+                                                <h3><?php tsp_itinerary_title(); ?></h3>
+                                                <?php
+                                                lsx_to_itinerary_accommodation( '<div><i class="tsp-icon tsp-icon-accommodation"></i><span class="tsp-meta-key">' . esc_html__( 'Accommodation', 'tour-operator' ) . ': </span> ', '</div>' );
+                                                lsx_to_itinerary_room_basis( '<div><i class="tsp-icon tsp-icon-room-basis"></i><span class="tsp-meta-key">' . esc_html__( 'Room basis', 'tour-operator' ) . ': </span> ', '</div>' );
+                                                ?>
+                                                <div class="entry-content">
+                                                    <?php tsp_itinerary_description(); ?>
+                                                </div>
+                                            </div>
 
-											<div class="lsx-to-archive-wrapper">
-												<div class="lsx-to-archive-content">
-													<h3 class="lsx-to-archive-content-title"><?php lsx_to_itinerary_title(); ?></h3>
-													<p class="lsx-to-archive-content-tagline"><?php lsx_to_itinerary_tagline(); ?></p>
-
-													<div class="entry-content">
-														<?php lsx_to_itinerary_description(); ?>
-													</div>
-												</div>
-
-												<div class="lsx-to-archive-meta-data">
-													<?php
-														$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
-
-														lsx_to_itinerary_destinations( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Destination', 'tour-operator' ) . ':</span> ', '</span>' );
-														lsx_to_itinerary_accommodation( '<span class="' . $meta_class . 'accommodations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Accommodation', 'tour-operator' ) . ':</span> ', '</span>' );
-														lsx_to_itinerary_activities( '<span class="' . $meta_class . 'activities"><span class="lsx-to-meta-data-key">' . esc_html__( 'Activities', 'tour-operator' ) . ':</span> ', '</span>' );
-														lsx_to_itinerary_includes( '<span class="' . $meta_class . 'day-includes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Included', 'tour-operator' ) . ':</span> ', '</span>' );
-														lsx_to_itinerary_excludes( '<span class="' . $meta_class . 'day-excludes"><span class="lsx-to-meta-data-key">' . esc_html__( 'Excluded', 'tour-operator' ) . ':</span> ', '</span>' );
-													?>
-												</div>
-											</div>
-										</div>
+                                        <div class="tsp-itinerary-thumb">
+                                            <?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+                                        </div>
 									</div>
 									<?php
 									$itinerary_count++;
@@ -106,20 +108,6 @@ get_header(); ?>
 			// WHats included
 			lsx_to_included_block();
 
-			// Maps
-			if ( function_exists( 'lsx_to_has_map' ) && lsx_to_has_map() ) { 
-			?>
-				<section id="tour-map" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-					<h2 class="lsx-to-section-title lsx-to-collapse-title lsx-title hidden-lg" <?php lsx_to_collapsible_attributes_not_post( 'collapse-tour-map' ); ?>><?php esc_html_e( 'Map', 'tour-operator' ); ?></h2>
-
-					<div id="collapse-tour-map" class="collapse in">
-						<div class="collapse-inner">
-							<?php lsx_to_map(); ?>
-						</div>
-					</div>
-				</section>
-			<?php 
-			}
 
 			if ( function_exists( 'lsx_to_tour_specials' ) ) {
 				lsx_to_tour_specials();
