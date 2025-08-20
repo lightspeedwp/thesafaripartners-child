@@ -7795,6 +7795,29 @@ section#dates-prices {
     padding-top: 0;
 }
 
+.lsx-to-widget-items {
+    margin-top: -2.625rem;
+}
+
+.toptours-posts .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow {
+    top: 8.75rem;
+}
+
+.lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow, .slick-lightbox-inner .slick-arrow {
+    margin-top: 3px; /* Adjust arrow position */
+}
+
+.lsx-to-slider-inner .slick-arrow.slick-prev:before, .gallery .slick-arrow.slick-prev:before, .slick-lightbox-inner .slick-arrow.slick-prev:before {
+    left: 20px;
+}
+.lsx-to-slider-inner .slick-arrow.slick-next:before, .gallery .slick-arrow.slick-next:before, .slick-lightbox-inner .slick-arrow.slick-next:before {
+    left: 15px;
+}
+
+.content-area h1, .content-area h2, .content-area h3, .content-area h4, .content-area h5, .content-area h6, .content-area .widget-title, .widget-area h1, .widget-area h2, .widget-area h3, .widget-area h4, .widget-area h5, .widget-area h6, .widget-area .widget-title {
+    margin-bottom: 1.5rem;
+}
+
 /* Keep sections expanded on mobile and prevent height jumping */
 @media (min-width: 767px) and (max-width: 1199px) {
     .lsx-to-collapse-section .collapse {
