@@ -7603,6 +7603,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     gap: 2.5rem;
 }
 
+.tsp-itinerary-day .lsx-to-meta-data {
+    display: none;
+}
+
 .tsp-itinerary-day .tsp-itinerary-thumb {
     flex: 27.5rem 0 0;
     position: relative;
