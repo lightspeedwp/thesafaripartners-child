@@ -845,18 +845,61 @@ function tsp_has_prices()
     return false;
 }
 
-function tsp_tour_reviews() {
+function tsp_tour_reviews()
+{
     global $lsx_archive;
 
-    if ( post_type_exists( 'review' ) && is_singular( 'tour' ) ) {
+    if (post_type_exists('review') && is_singular('tour')) {
         $args = array(
-                'from'		=> 'review',
-                'to'		=> 'tour',
-                'column'	=> '2',
-                'before'	=> '',
-                'after'		=> '',
+                'from' => 'review',
+                'to' => 'tour',
+                'column' => '2',
+                'before' => '',
+                'after' => '',
         );
 
-        lsx_to_connected_panel_query( $args );
+        lsx_to_connected_panel_query($args);
     }
+}
+
+function tsp_has_tour_reviews() {
+    if ( ! post_type_exists( 'review' ) || ! is_singular( 'tour' ) ) {
+        return false;
+    }
+
+    // Check if there are connected reviews
+    $connected_reviews = get_post_meta( get_the_ID(), 'review_to_tour', false );
+
+    if ( ! empty( $connected_reviews ) ) {
+        // Filter out empty values
+        $connected_reviews = array_filter( $connected_reviews );
+
+        if ( ! empty( $connected_reviews ) ) {
+            // Verify that at least one review actually exists and is published
+            foreach ( $connected_reviews as $review_id ) {
+                if ( get_post_status( $review_id ) === 'publish' ) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    // Alternative check using WP_Query for connected reviews
+    $review_query = new WP_Query( array(
+            'post_type' => 'review',
+            'post_status' => 'publish',
+            'meta_query' => array(
+                    array(
+                            'key' => 'tour_to_review',
+                            'value' => get_the_ID(),
+                            'compare' => '='
+                    )
+            ),
+            'posts_per_page' => 1,
+            'fields' => 'ids'
+    ) );
+
+    wp_reset_postdata();
+
+    return $review_query->have_posts();
 }

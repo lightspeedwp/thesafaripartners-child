@@ -263,7 +263,7 @@ get_header(); ?>
 				lsx_to_tour_specials();
 			}
 
-			if ( function_exists( 'tsp_tour_reviews' ) ) { ?>
+			if ( function_exists( 'tsp_tour_reviews' ) && tsp_has_tour_reviews() ) { ?>
                 <section id="reviews" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                     <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-reviews' ); ?>><?php esc_html_e( 'Customer Reviews', 'tour-operator' ); ?></div>
 
