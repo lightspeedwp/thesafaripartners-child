@@ -716,8 +716,8 @@ function tsp_modify_tour_page_navigation( $page_links ) {
             $ordered_links['dates-prices'] = esc_html__( 'Dates & Prices', 'thesafaripartners-child' );
         }
 
-        if ( isset( $page_links['reviews'] ) ) {
-            $ordered_links['reviews'] = $page_links['reviews'];
+        if ( isset( $page_links['review'] ) ) {
+            $ordered_links['review'] = $page_links['review'];
         }
         if ( isset( $page_links['related-tours'] ) ) {
             $ordered_links['related-tours'] = $page_links['related-tours'];
