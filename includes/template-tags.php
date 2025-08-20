@@ -677,12 +677,7 @@ function tsp_itinerary_description() {
                 echo ' <button type="button" class="tsp-toggle-btn tsp-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Collapse Description', 'tour-operator' ) . ' -</button>';
                 echo '</div>';
                 echo '</div>';
-
-                // Add inline JavaScript for functionality
                 ?>
-                <script>
-
-                </script>
                 <?php
             } else {
                 // Description is short enough, display as-is
@@ -709,3 +704,45 @@ function tsp_modify_tour_page_navigation( $page_links ) {
     return $page_links;
 }
 add_filter( 'lsx_to_page_navigation', 'tsp_modify_tour_page_navigation', 20 );
+
+/**
+ * Outputs the tours included / not included block
+ *
+ * @package     tour-operator
+ * @subpackage  template-tags
+ * @category    tour
+ */
+function tsp_included_block() {
+    $tour_included = lsx_to_included( '', '', false );
+    $tour_not_included = lsx_to_not_included( '', '', false );
+
+    if ( null !== $tour_included || null !== $tour_not_included ) {
+        $class = 'col-xs-12 col-md-6';
+
+        if ( ( null === $tour_included && null !== $tour_not_included ) || ( null !== $tour_included && null === $tour_not_included ) ) {
+            $class = 'col-xs-12';
+        }
+        ?>
+        <div id="included-excluded" class="row">
+            <?php if ( null !== $tour_included ) { ?>
+                <div class="<?php echo esc_attr( $class ); ?> included">
+                    <h3><?php esc_html_e( 'What\'s Included', 'tour-operator' ); ?></h3>
+                    <div class="entry-content">
+                        <?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
+                    </div>
+                </div>
+                <?php
+            }
+            if ( null !== $tour_not_included ) {
+                ?>
+                <div class="<?php echo esc_attr( $class ); ?> not-included">
+                    <h3><?php esc_html_e( 'What\'s Excluded', 'tour-operator' ); ?></h3>
+                    <div class="entry-content">
+                        <?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+        <?php
+    }
+}

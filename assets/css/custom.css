@@ -7475,18 +7475,36 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     display: flex;
 }
 
+.tsp-tour-overview {
+    display: flex;
+    gap: 3.75rem;
+    align-items: flex-start;
+}
+
 .tsp-tour-fast-facts {
     padding: 1.25rem;
     background:#F6F3F1;
     color: #090909;
-    font-size: 16px;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 .tsp-tour-fast-facts .d-flex {
     align-items: center;
 }
 
+.tsp-tour-fast-facts .d-flex:not(:last-of-type) {
+    margin-bottom: 1.25rem;
+}
+
 .tsp-tour-fast-facts .tsp-button {
     margin-top: 1.25rem;
+}
+
+.tsp-tour-fast-facts a:not(.tsp-button) {
+    color: #090909!important;
+}
+.tsp-tour-fast-facts a:not(.tsp-button):hover {
+    color: #565B3D!important;
 }
 
 .entry-content p {
@@ -7583,7 +7601,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-tour-operator .lsx-to-section#accommodation-map,
 .single-tour-operator .lsx-to-section#destination-map,
 .single-tour-operator .lsx-to-section#itinerary,
-.single-tour-operator .lsx-to-section#tour-map {
+.single-tour-operator .lsx-to-section#tour-map,
+.single-tour-operator .lsx-to-section#dates-prices,
+.single-tour-operator .lsx-to-section#included-excluded {
     width: auto!important;
     margin: 0!important;
     padding: 3.75rem 0!important;
@@ -7602,7 +7622,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 
 .tsp-itinerary-day .tsp-itinerary-thumb {
-    flex: 350px 0 0;
+    flex: 27.5rem 0 0;
     position: relative;
 }
 
@@ -7617,8 +7637,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     grid-auto-rows: min-content;
 }
 
-.tsp-itinerary-content h3 {
-    margin: 0;
+.single-tour-operator .tsp-itinerary-content h3 {
+    margin: 0!important;
     color: #8D621F!important;
     font-size: 2rem!important;
 }
@@ -7655,8 +7675,307 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     min-height: 30vh;
 }
 
+.single-tour-operator #included-excluded .entry-content ul {
+    list-style: disc;
+}
+
+.single-tour-operator #included-excluded .entry-content ul li:before {
+    content: '';
+    display: none;
+}
+.single-tour-operator #included-excluded .entry-content ul li + li, #highlights .entry-content ul li + li {
+    margin-top: 0;
+}
+.single-tour-operator h1 {
+    font-size: 3.375rem!important;
+    line-height: 5.06rem!important;
+    margin-bottom: 1.25rem!important;
+    color: #090909!important;
+}
+.single-tour-operator h2 {
+    font-size: 2rem!important;
+    line-height: 2.7rem!important;
+    margin-bottom: 3.75rem;
+    color: #090909!important;
+}
+
+.single-tour-operator h3 {
+    font-size: 1.625rem!important;
+    margin-bottom: 1.75rem!important;
+    line-height: 2.19rem!important;
+    color: #090909!important;
+}
+
+.single-tour-operator .table>thead>tr>th,
+.single-tour-operator .table>thead>tr>td,
+.single-tour-operator .table>tbody>tr>th,
+.single-tour-operator .table>tbody>tr>td,
+.single-tour-operator .table>tfoot>tr>th,
+.single-tour-operator .table>tfoot>tr>td {
+    border-top: none;
+    text-wrap: nowrap;
+    line-height: 3rem;
+    padding: 0 0.6rem;
+    color: #040404;
+}
+
+.single-tour-operator .table>thead>tr>th {
+    border-bottom: none;
+}
+
+.single-tour-operator #dates-prices .btn {
+    padding: 0.5rem 0.75rem!important;
+    font-size: 1rem;
+    border-radius: 0.125rem!important;
+    height: auto!important;
+    line-height: 150%;
+}
+.single-tour-operator #dates-prices .btn:after {
+    display: inline-block;
+    content: '';
+    background-image: url(img/tsp-see-more-arrow-white.svg);
+    width: 0.9375rem;
+    height: 0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0.5rem;
+}
+
+.single-tour-operator .book-now-wrapper {
+    vertical-align:middle;
+}
+
+section#dates-prices {
+    color: #040404;
+}
+
+.single-lsx-to-tour #primary {
+    padding: 0 2.5rem!important;
+}
+
+.single-tour-operator .page-header {
+    display: none;
+}
+
+.tsp-collapse-title {
+    font-family: "moret", serif;
+    background: #8D621F;
+    color: #fff!important;
+    text-align: left;
+    padding: 1.25rem;
+    position: relative;
+    margin-bottom: 0;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+}
+
+.tsp-collapse-title:after {
+    content: '';
+    display: block;
+    background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-arrow-collapse-up.svg');
+    background-color: transparent!important;
+    width: 1.11rem;
+    height: 0.625rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 1.25rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.tsp-collapse-title.collapsed:after {
+    rotate: 180deg;
+}
+
+.lsx-to-section.lsx-to-collapse-section .collapse-inner {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* Keep sections expanded on mobile and prevent height jumping */
+@media (min-width: 767px) and (max-width: 1199px) {
+    .lsx-to-collapse-section .collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        transition: none !important;
+    }
+
+    .lsx-to-collapse-section .collapse.in {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .lsx-to-collapse-section .collapsing {
+        height: auto !important;
+        transition: none !important;
+    }
+
+    /* Remove Bootstrap collapse transitions */
+    .lsx-to-collapse-section .collapse,
+    .lsx-to-collapse-section .collapsing {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+    }
+
+    /* Optionally hide the toggle button functionality on mobile */
+    .lsx-to-collapse-title[data-toggle="collapse"] {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .lsx-to-collapse-title[data-toggle="collapse"]:after {
+        display: none;
+    }
+}
 @media (min-width: 1200px) {
     .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
+    }
+
+    .single-lsx-to-tour #primary {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
+@media (min-width: 767px) and (max-width: 1200px) {
+    .single-tour-operator .row {
+         margin-left: -15px !important;
+         margin-right: -15px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .tsp-tour-overview {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: unset;
+    }
+
+    .tsp-tour-overview .tsp-tour-content p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .single-tour-operator .content-area {
+        padding: 2.5rem 0;
+    }
+
+    .single-tour-operator .lsx-to-section#activity-map,
+    .single-tour-operator .lsx-to-section#special-map,
+    .single-tour-operator .lsx-to-section#accommodation-map,
+    .single-tour-operator .lsx-to-section#destination-map,
+    .single-tour-operator .lsx-to-section#itinerary,
+    .single-tour-operator .lsx-to-section#tour-map,
+    .single-tour-operator .lsx-to-section#dates-prices,
+    .single-tour-operator .lsx-to-section#included-excluded {
+        padding: 2.5rem 0 !important;
+    }
+
+    .single-tour-operator h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    .single-tour-operator h3 {
+        margin: 1.75rem 0 !important;
+    }
+
+    .tsp-itinerary-content h3 {
+        margin-bottom: 2.5rem;
+    }
+
+    .tsp-itinerary-day {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .tsp-itinerary-day .tsp-itinerary-thumb {
+        flex: 1 0 0;
+    }
+    .tsp-itinerary-day .tsp-itinerary-thumb img {
+        width: 100%;
+    }
+
+    .tsp-collapse-btn, .tsp-itinerary-description-short {
+        display: none!important;
+    }
+
+    .tsp-itinerary-description-full {
+        display: block!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .single-lsx-to-tour #primary {
+        padding: 0 1.25rem !important;
+    }
+
+    .single-tour-operator .content-area {
+        padding: 0;
+    }
+
+    .single-tour-operator .lsx-to-section#activity-map, .single-tour-operator .lsx-to-section#special-map, .single-tour-operator .lsx-to-section#accommodation-map, .single-tour-operator .lsx-to-section#destination-map, .single-tour-operator .lsx-to-section#itinerary, .single-tour-operator .lsx-to-section#tour-map, .single-tour-operator .lsx-to-section#dates-prices, .single-tour-operator .lsx-to-section#included-excluded {
+        padding: 0 !important;
+    }
+
+    .single-tour-operator section {
+        border-top: none;
+    }
+
+    .single-tour-operator section .collapse-inner {
+        margin: 1.25rem 0;
+    }
+
+    .single-tour-operator h1 {
+        font-size: 2.25rem !important;
+        line-height: 2.75rem !important;
+        letter-spacing: 0.045rem !important;
+    }
+
+    .tsp-tour-fast-facts {
+        padding: 0.6325rem;
+    }
+
+    .tsp-button {
+        font-size: 1rem;
+    }
+
+    section#dates-prices .table {
+        display: block;
+    }
+
+    section#dates-prices .table thead {
+        display: none;
+    }
+
+    section#dates-prices .table tbody {
+        display: flex;
+        flex-direction: column;
+    }
+    section#dates-prices .table tr {
+        display: flex;
+        flex-direction: column;
+        background: #F6F3F1!important;
+        margin-bottom: 1.25rem;
+    }
+    section#dates-prices .table td {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section#dates-prices td.book-now-wrapper {
+        grid-template-columns: 1fr;
+        padding: 0.6325rem 0;
+    }
+    section#dates-prices .book-now-wrapper:before {
+        display: none;
+    }
+
+    .single-tour-operator .included + .not-included {
+        margin-top: 0;
     }
 }
