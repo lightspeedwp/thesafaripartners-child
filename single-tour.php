@@ -42,7 +42,7 @@ get_header(); ?>
             <section id="tour-map" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                 <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-tour-map' ); ?>><?php esc_html_e( 'Map', 'tour-operator' ); ?></div>
 
-                <div id="collapse-tour-map" class="collapse">
+                <div id="collapse-tour-map" class="collapse in">
                     <div class="collapse-inner">
                         <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Map', 'tour-operator' ); ?></h2>
                         <?php lsx_to_map(); ?>

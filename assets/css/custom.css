@@ -7843,6 +7843,10 @@ section#dates-prices {
         max-width: 1200px;
         width: 100%;
     }
+
+    .tsp-tour-fast-facts {
+        max-width: 32rem;
+    }
 }
 @media (min-width: 767px) and (max-width: 1200px) {
     .single-tour-operator .row {
