@@ -700,6 +700,17 @@ function tsp_modify_tour_page_navigation( $page_links ) {
                     $page_links
             );
         }
+        if ( isset( $page_links['included-excluded'] ) ) {
+            //get array index of Included/Excluded
+            $included_excluded_index = array_search( 'included-excluded', array_keys( $page_links ) );
+            unset( $page_links['included-excluded'] );
+            $page_links = array_merge(
+                array_slice( $page_links, 0, $included_excluded_index, true ),
+                array( 'dates-prices' => esc_html__( 'Dates & Prices', 'thesafaripartners-child' ) ),
+                array_slice( $page_links, $included_excluded_index, null, true )
+            );
+        }
+
     }
     return $page_links;
 }
