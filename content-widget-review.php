@@ -34,7 +34,7 @@ if ( $has_single ) {
 		<?php
 						$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-						lsx_to_review_rating( '<span class="' . $meta_class . 'rating"> </span>' );
+						lsx_to_review_rating( '<p>Rating:' , '</p>' );
 ?>
 		<p class="lsx-review"><?php
 // Get the post content and apply the_content filters to it.

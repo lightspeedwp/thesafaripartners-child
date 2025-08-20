@@ -7439,12 +7439,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .tsp-icon {
     width: 3.25rem;
     height: 3.25rem;
+    flex: 3.25rem 0 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     margin-right: 0.62rem;
-    vertical-align: middle;
 }
 
 .tsp-icon-tour-type {
@@ -7487,17 +7487,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     color: #090909;
     font-size: 1rem;
     flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
 }
-.tsp-tour-fast-facts .d-flex {
-    align-items: center;
-}
-
-.tsp-tour-fast-facts .d-flex:not(:last-of-type) {
-    margin-bottom: 1.25rem;
-}
-
-.tsp-tour-fast-facts .tsp-button {
-    margin-top: 1.25rem;
+.tsp-tour-fast-facts .tsp-meta {
+    display: flex;
+    align-items: flex-start;
 }
 
 .tsp-tour-fast-facts a:not(.tsp-button) {
@@ -7505,6 +7501,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .tsp-tour-fast-facts a:not(.tsp-button):hover {
     color: #565B3D!important;
+}
+
+.tsp-tour-fast-facts .tsp-time-to-visit,
+.tsp-tour-fast-facts .tsp-button {
+    grid-column: span 2;
 }
 
 .single-tour-operator .entry-content p {
@@ -7534,18 +7535,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .lsx-to-navigation .lsx-to-content-spy:not(.dropdown-menu) > li.active > a{
     background: linear-gradient(0deg, rgba(9, 9, 9, 0.25) 0%, rgba(9, 9, 9, 0.25) 100%), #8D621F!important;
     color: #fff!important;
-}
-
-.tsp-time-to-visit {
-    margin-top: 1.25rem;
-}
-
-.tsp-time-to-visit.d-flex {
-    align-items: flex-start;
-}
-
-.tsp-time-to-visit .tsp-icon {
-    flex: 3.25rem 0 0;
 }
 
 .tsp-time-to-visit .tsp-fast-facts-type {
@@ -7596,14 +7585,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     border-top: 1px solid #565B3D;
 }
 
-.single-tour-operator .lsx-to-section#activity-map,
-.single-tour-operator .lsx-to-section#special-map,
-.single-tour-operator .lsx-to-section#accommodation-map,
-.single-tour-operator .lsx-to-section#destination-map,
-.single-tour-operator .lsx-to-section#itinerary,
-.single-tour-operator .lsx-to-section#tour-map,
-.single-tour-operator .lsx-to-section#dates-prices,
-.single-tour-operator .lsx-to-section#included-excluded {
+.single-tour-operator .lsx-to-section {
     width: auto!important;
     margin: 0!important;
     padding: 3.75rem 0!important;
@@ -7695,7 +7677,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-tour-operator h2 {
     font-size: 2rem!important;
     line-height: 2.7rem!important;
-    margin-bottom: 3.75rem;
+    margin-bottom: 3.75rem!important;
     color: #090909!important;
 }
 
@@ -7768,6 +7750,13 @@ section#dates-prices {
     margin-bottom: 0;
     margin-left: -1.25rem;
     margin-right: -1.25rem;
+    cursor: pointer;
+}
+
+.tsp-collapse-title:hover,
+.tsp-collapse-title:focus {
+    background: #8D621F;
+    color: #fff!important;
 }
 
 .tsp-collapse-title:after {
@@ -7816,6 +7805,58 @@ section#dates-prices {
 
 .content-area h1, .content-area h2, .content-area h3, .content-area h4, .content-area h5, .content-area h6, .content-area .widget-title, .widget-area h1, .widget-area h2, .widget-area h3, .widget-area h4, .widget-area h5, .widget-area h6, .widget-area .widget-title {
     margin-bottom: 1.5rem;
+}
+
+.single-tour-operator .slick-slide {
+    height: auto!important;
+}
+
+#reviews .slick-slide {
+    margin: 0 2.5rem;
+}
+#reviews .lsx-to-widget-blockquote {
+    border: 1px solid #8D621F;
+    border-radius: 0;
+    background: #F6F3F1;
+    text-align: left;
+    padding: 1.25rem;
+    font-style: normal;
+}
+
+#reviews .lsx-to-widget-blockquote a {
+    display: block;
+    color: #8D621F;
+    margin-top: 0.625rem;
+}
+
+#reviews .lsx-to-widget-blockquote a:hover {
+    color: #565B3D;
+}
+
+#reviews .lsx-to-widget-blockquote p {
+    font-style: normal;
+    line-height: 1.5rem;
+    color: #000;
+    margin-bottom: 0.625rem;
+}
+
+#reviews .lsx-to-widget-blockquote h4 {
+    display: block;
+    position: static;
+    color: #090909;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.025rem;
+    letter-spacing: 0.015rem;
+    margin-bottom: 0.625rem;
+}
+
+#reviews .lsx-to-widget-blockquote .fa-star {
+    margin-left: 0.31rem;
+}
+#reviews .lsx-to-widget-blockquote .fa-star:first-of-type {
+    margin-left: 0.625rem;
 }
 
 /* Keep sections expanded on mobile and prevent height jumping */
@@ -7893,19 +7934,12 @@ section#dates-prices {
         padding: 2.5rem 0;
     }
 
-    .single-tour-operator .lsx-to-section#activity-map,
-    .single-tour-operator .lsx-to-section#special-map,
-    .single-tour-operator .lsx-to-section#accommodation-map,
-    .single-tour-operator .lsx-to-section#destination-map,
-    .single-tour-operator .lsx-to-section#itinerary,
-    .single-tour-operator .lsx-to-section#tour-map,
-    .single-tour-operator .lsx-to-section#dates-prices,
-    .single-tour-operator .lsx-to-section#included-excluded {
+    .single-tour-operator .lsx-to-section {
         padding: 2.5rem 0 !important;
     }
 
     .single-tour-operator h2 {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.5rem!important;
     }
 
     .single-tour-operator h3 {
@@ -7945,7 +7979,7 @@ section#dates-prices {
         padding: 0;
     }
 
-    .single-tour-operator .lsx-to-section#activity-map, .single-tour-operator .lsx-to-section#special-map, .single-tour-operator .lsx-to-section#accommodation-map, .single-tour-operator .lsx-to-section#destination-map, .single-tour-operator .lsx-to-section#itinerary, .single-tour-operator .lsx-to-section#tour-map, .single-tour-operator .lsx-to-section#dates-prices, .single-tour-operator .lsx-to-section#included-excluded {
+    .single-tour-operator .lsx-to-section {
         padding: 0 !important;
     }
 
@@ -7996,7 +8030,7 @@ section#dates-prices {
 
     section#dates-prices td.book-now-wrapper {
         grid-template-columns: 1fr;
-        padding: 0.6325rem 0;
+        padding: 0.6325rem;
     }
     section#dates-prices .book-now-wrapper:before {
         display: none;
@@ -8004,5 +8038,16 @@ section#dates-prices {
 
     .single-tour-operator .included + .not-included {
         margin-top: 0;
+    }
+
+    #reviews .slick-slide {
+        margin: 0 1.25rem;
+    }
+
+    table.table-striped tr td::before {
+        content: attr(data-header) ": ";
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
     }
 }

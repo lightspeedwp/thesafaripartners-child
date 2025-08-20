@@ -52,8 +52,18 @@ get_header(); ?>
             <?php
 			}
 
-			// Gallery
-			lsx_to_gallery( '<section id="gallery" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-gallery' ) . '>' . esc_html__( 'Gallery', 'tour-operator' ) . '</h2><div id="collapse-gallery" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
+            if( tsp_has_gallery()) { ?>
+                <section id="gallery" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                    <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-gallery' ); ?>><?php esc_html_e( 'Gallery', 'tour-operator' ); ?></div>
+
+                    <div id="collapse-gallery" class="collapse in">
+                        <div class="collapse-inner">
+                            <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Gallery', 'tour-operator' ); ?></h2>
+                            <?php lsx_to_gallery(); ?>
+                        </div>
+                    </div>
+                </section>
+            <?php }
 
 			if ( function_exists( 'lsx_to_videos' ) ) {
 				lsx_to_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
@@ -107,7 +117,9 @@ get_header(); ?>
 				</section>
 			<?php
 			}
-            ?>
+
+
+            if (tsp_has_prices()) { ?>
             <section id="dates-prices" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                 <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-dates-prices' ); ?>><?php esc_html_e( 'Dates & Prices', 'tour-operator' ); ?></div>
 
@@ -244,24 +256,29 @@ get_header(); ?>
                     ?></div>
                 </div>
             </section>
-            <?php
+            <?php }
+
+
 			if ( function_exists( 'lsx_to_tour_specials' ) ) {
 				lsx_to_tour_specials();
 			}
 
-			if ( function_exists( 'lsx_to_tour_reviews' ) ) {
-				lsx_to_tour_reviews();
-			}
+			if ( function_exists( 'tsp_tour_reviews' ) ) { ?>
+                <section id="reviews" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                    <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-reviews' ); ?>><?php esc_html_e( 'Customer Reviews', 'tour-operator' ); ?></div>
 
-			//lsx_to_related_items( 'travel-style', '<section id="related-items" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-related-items' ) . '>' . lsx_to_get_post_type_section_title( 'tour', 'related', esc_html__( 'Related Tours', 'tour-operator' ) ) . '</h2><div id="collapse-related-items" class="collapse in"><div class="collapse-inner">', '</div></div></section>' );
-			?>
+                    <div id="collapse-reviews" class="collapse in">
+                        <div class="collapse-inner">
+                            <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Customer Reviews', 'tour-operator' ); ?></h2>
+                            <?php tsp_tour_reviews(); ?>
+                        </div>
+                    </div>
+                </section>
 
+			<?php } ?>
 		</main><!-- #main -->
-
 		<?php lsx_content_after(); ?>
-
 	</div><!-- #primary -->
-
 <?php lsx_content_wrap_after(); ?>
 <?php
 get_footer();

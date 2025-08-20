@@ -552,9 +552,9 @@ function tsp_best_time_to_visit( $echo = true ) {
             $best_times[] = '<div class="tsp-month ' . $checked_class . '"><small>' . $label . '</small></div>';
         };
 
-        $return = '<div class="row"><div class="col-xs-12 d-flex tsp-time-to-visit"><i class="tsp-icon tsp-icon-calendar"></i>' .
+        $return = '<div class="tsp-meta tsp-time-to-visit"><i class="tsp-icon tsp-icon-calendar"></i>' .
             '<span><span class="tsp-fast-facts-type">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</span>' .
-            '<span class="tsp-best-time-to-visit">' . implode( '', $best_times ) . '</span></span></div></div>';
+            '<span class="tsp-best-time-to-visit">' . implode( '', $best_times ) . '</span></span></div>';
 
         if ( $echo ) {
             echo wp_kses_post( $return );
@@ -566,26 +566,20 @@ function tsp_best_time_to_visit( $echo = true ) {
 
 function tsp_tour_fast_facts()
 {
-        ?>
-        <div class="row">
-            <?php
-            $meta_class = 'tsp-fast-facts-type';
+    $meta_class = 'tsp-fast-facts-type';
 
-            $tour_types = get_the_terms(get_the_ID(), 'tour-type');
-            if ($tour_types && !is_wp_error($tour_types)) {
-                $tour_type_names = array();
-                foreach ($tour_types as $tour_type) {
-                    $tour_type_names[] = $tour_type->name;
-                }
-                $tour_type_display = implode(', ', $tour_type_names);
-                echo '<div class="col-xs-6 d-flex"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '">' . esc_html__('Type Of Tour', 'tour-operator') . '</span><span>' . esc_html($tour_type_display) . '</span></span></div>';
-            }
+    $tour_types = get_the_terms(get_the_ID(), 'tour-type');
+    if ($tour_types && !is_wp_error($tour_types)) {
+        $tour_type_names = array();
+        foreach ($tour_types as $tour_type) {
+            $tour_type_names[] = $tour_type->name;
+        }
+        $tour_type_display = implode(', ', $tour_type_names);
+        echo '<div class="tsp-meta tsp-tourtype"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '">' . esc_html__('Type Of Tour', 'tour-operator') . '</span><span>' . esc_html($tour_type_display) . '</span></span></div>';
+    }
 
-            lsx_to_duration('<div class="col-xs-6 d-flex"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator') . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
-            lsx_to_connected_countries('<div class="col-xs-12 d-flex"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator') . '</span><span> ', '</span></span></div>');
-            ?>
-        </div>
-    <?php
+    lsx_to_duration('<div class="tsp-meta tsp-duration"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator') . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
+    lsx_to_connected_countries('<div class="tsp-meta tsp-countries"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator') . '</span><span> ', '</span></span></div>');
 }
 
 function tsp_to_itinerary_meals( $before = '', $after = '' ) {
@@ -692,25 +686,44 @@ function tsp_itinerary_description() {
  */
 function tsp_modify_tour_page_navigation( $page_links ) {
     if ( is_single() && get_post_type() === 'tour' ) {
+        if ( isset( $page_links['itinerary'] ) ) {
+            $page_links['itinerary'] = esc_html__('Day by Day', 'thesafaripartners-child' );
+        }
+        if ( isset( $page_links['when-to-go'] ) ) {
+            unset( $page_links['when-to-go'] );
+        }
         if ( isset( $page_links['summary'] ) ) {
-            // Replace Summary with Overview
             unset( $page_links['summary'] );
-            $page_links = array_merge(
-                    array( 'overview' => esc_html__( 'Overview', 'thesafaripartners-child' ) ),
-                    $page_links
-            );
         }
         if ( isset( $page_links['included-excluded'] ) ) {
-            //get array index of Included/Excluded
-            $included_excluded_index = array_search( 'included-excluded', array_keys( $page_links ) );
             unset( $page_links['included-excluded'] );
-            $page_links = array_merge(
-                array_slice( $page_links, 0, $included_excluded_index, true ),
-                array( 'dates-prices' => esc_html__( 'Dates & Prices', 'thesafaripartners-child' ) ),
-                array_slice( $page_links, $included_excluded_index, null, true )
-            );
         }
 
+        $ordered_links = array();
+
+        $ordered_links['overview'] = esc_html__('Overview', 'thesafaripartners-child');
+
+        if ( isset( $page_links['tour-map'] ) ) {
+            $ordered_links['tour-map'] = esc_html__('Map', 'thesafaripartners-child');
+        }
+        if ( isset( $page_links['gallery'] ) ) {
+            $ordered_links['gallery'] = $page_links['gallery'];
+        }
+        if ( isset( $page_links['itinerary'] ) ) {
+            $ordered_links['itinerary'] = esc_html__('Day by Day', 'thesafaripartners-child');
+        }
+        if ( isset( $page_links['dates-prices'] ) || tsp_has_prices() ) {
+            $ordered_links['dates-prices'] = esc_html__( 'Dates & Prices', 'thesafaripartners-child' );
+        }
+
+        if ( isset( $page_links['reviews'] ) ) {
+            $ordered_links['reviews'] = $page_links['reviews'];
+        }
+        if ( isset( $page_links['related-tours'] ) ) {
+            $ordered_links['related-tours'] = $page_links['related-tours'];
+        }
+
+        $page_links = $ordered_links;
     }
     return $page_links;
 }
@@ -755,5 +768,95 @@ function tsp_included_block() {
             <?php } ?>
         </div>
         <?php
+    }
+}
+
+function tsp_has_gallery()
+{
+    $gallery = get_post_meta(get_the_ID(), 'gallery', false); // Use false to get all values
+    $envira_gallery = get_post_meta(get_the_ID(), 'envira_gallery', true);
+
+    // Check envira gallery first
+    if (!empty($envira_gallery)) {
+        if (is_array($envira_gallery) && count($envira_gallery) > 0) {
+            return true;
+        }
+        if (is_string($envira_gallery) && $envira_gallery !== '') {
+            return true;
+        }
+    }
+
+    // Check regular gallery
+    if (!empty($gallery)) {
+        if (is_array($gallery) && count($gallery) > 0) {
+            return true;
+        }
+        if (is_string($gallery) && $gallery !== '') {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function tsp_has_prices()
+{
+    $price_row_amount = get_post_meta(get_the_ID(), 'price_row', true);
+
+    if (false !== $price_row_amount && 0 !== $price_row_amount) {
+        $row_counter = 0;
+
+        do {
+            $skip_row = false;
+
+            // Date check - same logic as in single-tour.php
+            $start_date = get_post_meta(get_the_ID(), 'price_row_' . $row_counter . '_column_2', true);
+            if ('' !== $start_date && false !== $start_date) {
+                $now = strtotime('now');
+                $start_date2 = strtotime($start_date);
+                if ($start_date2 < $now) {
+                    $skip_row = true;
+                }
+            }
+
+            // If we have a valid (non-expired) row, check if it has data
+            if (false === $skip_row) {
+                $rc_num = 1;
+                $has_data = false;
+
+                do {
+                    $value = get_post_meta(get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true);
+                    if ('' !== $value && false !== $value) {
+                        $has_data = true;
+                        break;
+                    }
+                    $rc_num++;
+                } while (8 > $rc_num);
+
+                if ($has_data) {
+                    return true;
+                }
+            }
+
+            $row_counter++;
+        } while ($row_counter < $price_row_amount);
+    }
+
+    return false;
+}
+
+function tsp_tour_reviews() {
+    global $lsx_archive;
+
+    if ( post_type_exists( 'review' ) && is_singular( 'tour' ) ) {
+        $args = array(
+                'from'		=> 'review',
+                'to'		=> 'tour',
+                'column'	=> '2',
+                'before'	=> '',
+                'after'		=> '',
+        );
+
+        lsx_to_connected_panel_query( $args );
     }
 }
