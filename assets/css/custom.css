@@ -8161,4 +8161,8 @@ body.single-tour-operator .modal-body article .entry-content .moretag.btn:hover 
     .single-tour-operator .tsp-itinerary-content h3 {
         font-size: 1.375rem!important;
     }
+
+    .single-tour-operator h2 {
+        margin-bottom: 1.25rem!important;
+    }
 }
