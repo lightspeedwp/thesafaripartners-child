@@ -2736,11 +2736,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 #dates-prices #menu-currency-selector:before {
     content: "Currency Selector ";
-    font-size: 10px;
+    font-size: 1rem;
     color: #000;
-}
-#menu-currency-selector {
-    border-radius: none!important;
+    margin-bottom: 0.3rem;
+    display: block;
 }
 .submenu-currency {
     z-index: 999;
@@ -2755,8 +2754,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 #menu-currency-selector .menu-item-currency .current.symbol-right {
     display: flex;
     width: 100%;
-    padding-left: 3px;
-    padding-right: 3px;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem;
+}
+
+#menu-currency-selector .menu-item-currency a {
+    color: #090909;
+    font-size: 1rem;
 }
 #menu-currency-selector .menu-item-currency .current.symbol-right .currency-icon {
     flex-grow: 1;
@@ -7623,6 +7627,22 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     grid-auto-rows: min-content;
 }
 
+.tsp-itinerary-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tsp-itinerary-meta .tsp-icon {
+    flex: 1.25rem 0 0;
+    margin-right: 0.31rem;
+}
+
+.tsp-itinerary-meta .tsp-meta-key {
+    margin-right: 0.31rem;
+    font-family: "moret", serif;
+}
+
 .single-tour-operator .tsp-itinerary-content h3 {
     margin: 0!important;
     color: #8D621F!important;
@@ -7639,7 +7659,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     color: #8D621F;
     font-size: 1.25rem;
     font-weight: 300;
-    line-size: 1.875rem;
+    line-height: 1.875rem;
     display: block;
     margin-top: 0.675rem;
     padding: 0;
@@ -7705,8 +7725,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     color: #040404;
 }
 
+.single-tour-operator .table>thead>tr {
+    font-size: 1rem;
+}
+
 .single-tour-operator .table>thead>tr>th {
     border-bottom: none;
+    padding-bottom: 1.25rem;
 }
 
 .single-tour-operator #dates-prices .btn {
@@ -7730,6 +7755,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 .single-tour-operator .book-now-wrapper {
     vertical-align:middle;
+    padding: 0.3rem 0!important;
+    text-align: right;
+}
+
+.currency-selector-table {
+    padding-right: 0!important;
+    width: 6rem;
 }
 
 section#dates-prices {
@@ -7863,6 +7895,56 @@ section#dates-prices {
     margin-left: 0.625rem;
 }
 
+.lsx-modal.modal .content-area {
+    padding: 0;
+}
+.lsx-modal.modal .modal-content {
+    padding: 1.88rem 1.66rem;
+    border: 2px solid #8D621F;
+    background: #F6F3F1;
+}
+
+.lsx-modal.modal .close {
+    border: 2px solid #8D621F;
+    font-size: 0;
+    text-indent: -9999px;
+    width: 3rem;
+    height: 3rem;
+    background: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-x.svg') center no-repeat;
+    background-color: #fff;
+    box-shadow: none;
+    top: -1.5rem;
+}
+
+.lsx-modal.modal .close:hover {
+    background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-x-white.svg');
+    background-color: #8D621F;
+}
+
+.lsx-to-modal-title a {
+    font-size: 2rem;
+    color: #000!important;
+}
+
+.lsx-modal .entry-content p {
+    font-size: 1rem;
+}
+
+body.single-tour-operator .modal-body article .entry-content .moretag.btn {
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    box-shadow: none;
+    text-align: left;
+    color: #8D621F;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 10px 0!important;
+}
+
+body.single-tour-operator .modal-body article .entry-content .moretag.btn:hover {
+    color: #565B3D;
+}
 /* Keep sections expanded on mobile and prevent height jumping */
 @media (min-width: 767px) and (max-width: 1199px) {
     .lsx-to-collapse-section .collapse {
@@ -8014,7 +8096,16 @@ section#dates-prices {
     }
 
     section#dates-prices .table thead {
+        background: transparent;
+        display: block;
+    }
+    section#dates-prices .table thead th {
         display: none;
+    }
+    section#dates-prices .table thead th.currency-selector-table {
+        width: 100%;
+        padding: 0;
+        display: block;
     }
 
     section#dates-prices .table tbody {
@@ -8053,5 +8144,21 @@ section#dates-prices {
         font-weight: bold;
         display: block;
         margin-bottom: 5px;
+    }
+
+    .tsp-itinerary-meta .tsp-meta-value {
+        flex: 100% 0 0;
+    }
+
+    .tsp-itinerary-content {
+        font-size: 1.25rem;
+    }
+
+    .tsp-itinerary-content .tsp-itinerary-meta {
+        font-size: 1rem;
+    }
+
+    .single-tour-operator .tsp-itinerary-content h3 {
+        font-size: 1.375rem!important;
     }
 }

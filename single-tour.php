@@ -93,8 +93,8 @@ get_header(); ?>
                                             <div class="tsp-itinerary-content">
                                                 <h3><?php tsp_itinerary_title(); ?></h3>
                                                 <?php
-                                                lsx_to_itinerary_accommodation( '<div><i class="tsp-icon tsp-icon-accommodation"></i><span class="tsp-meta-key">' . esc_html__( 'Accommodation', 'tour-operator' ) . ': </span> ', '</div>' );
-                                                lsx_to_itinerary_room_basis( '<div><i class="tsp-icon tsp-icon-room-basis"></i><span class="tsp-meta-key">' . esc_html__( 'Room basis', 'tour-operator' ) . ': </span> ', '</div>' );
+                                                lsx_to_itinerary_accommodation( '<div class="tsp-itinerary-meta"><i class="tsp-icon tsp-icon-accommodation"></i><span class="tsp-meta-key">' . esc_html__( 'Accommodation', 'tour-operator' ) . ': </span><span class="tsp-meta-value"> ', '</span></div>' );
+                                                lsx_to_itinerary_room_basis( '<div class="tsp-itinerary-meta"><i class="tsp-icon tsp-icon-room-basis"></i><span class="tsp-meta-key">' . esc_html__( 'Room basis', 'tour-operator' ) . ': </span><span class="tsp-meta-value"> ', '</span></div>' );
                                                 ?>
                                                 <div class="entry-content">
                                                     <?php tsp_itinerary_description(); ?>
@@ -215,7 +215,7 @@ get_header(); ?>
                                                 $counter++;
                                             }
 
-                                            echo '<th class="whitebg" style="min-width: 100px;">' . wp_nav_menu(
+                                            echo '<th class="currency-selector-table">' . wp_nav_menu(
                                                             array(
                                                                     'theme_location' => 'currency-selector',
                                                                     'echo' => false,
