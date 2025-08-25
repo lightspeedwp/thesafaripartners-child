@@ -7506,7 +7506,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .tsp-tour-fast-facts a:not(.tsp-button):hover {
     color: #565B3D!important;
 }
-
+.tsp-tour-fast-facts .tsp-countries,
 .tsp-tour-fast-facts .tsp-time-to-visit,
 .tsp-tour-fast-facts .tsp-button {
     grid-column: span 2;
@@ -7613,9 +7613,34 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     display: none;
 }
 
-.tsp-itinerary-day .tsp-itinerary-thumb {
+.tsp-itinerary-thumb {
     flex: 27.5rem 0 0;
     position: relative;
+    width: 100%;
+    aspect-ratio: 11 / 7; /* 440:280 ratio */
+    overflow: hidden;
+}
+
+.tsp-itinerary-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Fallback for older browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 11 / 7) {
+    .tsp-itinerary-thumb {
+        position: relative;
+        padding-bottom: 63.64%; /* (280/440) * 100 = 63.64% */
+        height: 0;
+    }
+
+    .tsp-itinerary-thumb img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 .tsp-itinerary-list .tsp-icon {
@@ -7712,6 +7737,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     margin-bottom: 1.75rem!important;
     line-height: 2.19rem!important;
     color: #090909!important;
+}
+
+.single-lsx-to-tour #footer-widgets h3.widget-title {
+    color: #fff!important;
 }
 
 .single-lsx-to-tour .table>thead>tr>th,
@@ -7928,6 +7957,10 @@ section#dates-prices {
     margin-left: 0.625rem;
 }
 
+.single-lsx-to-tour #dates-prices p {
+    margin-bottom: 0.625rem;
+}
+
 .lsx-modal.modal .modal-dialog {
     margin: 0 auto;
     padding: 1.5rem;
@@ -7936,7 +7969,7 @@ section#dates-prices {
     padding: 0;
 }
 .lsx-modal.modal .modal-content {
-    padding: 1.88rem 1.66rem;
+    padding: 1.88rem;
     border: 2px solid #8D621F;
     background: #F6F3F1;
 }
@@ -7954,6 +7987,14 @@ section#dates-prices {
 
 .lsx-to-meta-data-key {
     margin-right: 0.31rem;
+}
+
+.lsx-to-modal-content-area .entry-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.lsx-to-modal-content-area .entry-content p:empty {
+    margin: 0;
 }
 
 .lsx-to-modal-content-area .lsx-to-modal-meta-data {
