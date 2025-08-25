@@ -7725,6 +7725,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     line-height: 3rem;
     padding: 0 0.6rem;
     color: #040404;
+    vertical-align: middle;
 }
 
 .single-lsx-to-tour .table>thead>tr {
@@ -7841,20 +7842,21 @@ section#dates-prices {
     left: 15px;
 }
 
-.single-lsx-to-tour .content-area h1,
-.single-lsx-to-tour .content-area h2,
-.single-lsx-to-tour .content-area h3,
-.single-lsx-to-tour .content-area h4,
-.single-lsx-to-tour .content-area h5,
-.single-lsx-to-tour .content-area h6,
-.single-lsx-to-tour .content-area .widget-title,
-.single-lsx-to-tour .widget-area h1,
-.single-lsx-to-tour .widget-area h2,
-.single-lsx-to-tour .widget-area h3,
-.single-lsx-to-tour .widget-area h4,
-.single-lsx-to-tour .widget-area h5,
-.single-lsx-to-tour .widget-area h6,
-.single-lsx-to-tour .widget-area .widget-title {
+.content-area h1,
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6,
+.content-area .widget-title,
+.widget-area h1,
+.widget-area h2,
+.widget-area h3,
+.widget-area h4,
+.widget-area h5,
+.widget-area h6,
+.widget-area .widget-title,
+.content-area p{
     margin-bottom: 1.5rem;
 }
 
@@ -7923,8 +7925,18 @@ section#dates-prices {
     background: #F6F3F1;
 }
 
-.lsx-modal.modal .lsx-to-modal-meta-data {
+.lsx-to-modal-meta-data {
     display: none;
+}
+
+.lsx-to-meta-data.lsx-to-meta-data-rooms, .lsx-to-meta-data.lsx-to-meta-data-destinations {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.lsx-to-meta-data-key {
+    margin-right: 0.31rem;
 }
 
 .lsx-modal.modal .close {
@@ -7968,6 +7980,15 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn {
 
 body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     color: #565B3D;
+}
+
+#lsx-banner .btn-scroll-to {
+    margin-top: 1.25rem;
+}
+
+.content-area, .widget-area {
+    margin-bottom: 5.3125rem;
+    margin-top: 5.3125rem;
 }
 /* Keep sections expanded on mobile and prevent height jumping */
 @media (min-width: 767px) and (max-width: 1199px) {
