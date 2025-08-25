@@ -8052,6 +8052,22 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     margin-bottom: 5.3125rem;
     margin-top: 5.3125rem;
 }
+
+#footer-widgets .lsx-to-widget-view-all {
+    margin-top: -10px;
+}
+
+#footer-widgets .lsx-to-slider-inner .slick-arrow.slick-next:before,
+#footer-widgets .lsx-to-slider-inner .slick-arrow.slick-next:before {
+    position: static;
+}
+#footer-widgets .lsx-testimonials-slider .slick-arrow.slick-next {
+    right: 0;
+}
+
+#footer-widgets .lsx-to-slider-inner .slick-arrow {
+    margin-top: 40px;
+}
 /* Keep sections expanded on mobile and prevent height jumping */
 @media (min-width: 767px) and (max-width: 1199px) {
     .single-lsx-to-tour .lsx-to-collapse-section .collapse {
