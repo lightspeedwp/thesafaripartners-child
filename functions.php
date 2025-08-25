@@ -79,18 +79,9 @@ function tsp_custom_accommodation_meta() {
     if ( 'accommodation' === get_post_type() ) {
         $meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-        lsx_to_price( '<span class="' . $meta_class . 'price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</span>' );
-        lsx_to_accommodation_room_total( '<span class="' . $meta_class . 'rooms"><span class="lsx-to-meta-data-key">' . esc_html__( 'Rooms', 'tour-operator' ) . ':</span> ', '</span>' );
-        lsx_to_accommodation_rating( '<span class="' . $meta_class . 'rating"><span class="lsx-to-meta-data-key">' . esc_html__( 'Rating', 'tour-operator' ) . ':</span> ', '</span>' );
-        the_terms( get_the_ID(), 'travel-style', '<span class="' . $meta_class . 'style"><span class="lsx-to-meta-data-key">' . esc_html__( 'Style', 'tour-operator' ) . ':</span> ', ', ', '</span>' );
-        the_terms( get_the_ID(), 'accommodation-brand', '<span class="' . $meta_class . 'brand"><span class="lsx-to-meta-data-key">' . esc_html__( 'Brand', 'tour-operator' ) . ':</span> ', ', ', '</span>' );
-        the_terms( get_the_ID(), 'accommodation-type', '<span class="' . $meta_class . 'type"><span class="lsx-to-meta-data-key">' . esc_html__( 'Type', 'tour-operator' ) . ':</span> ', ', ', '</span>' );
-        lsx_to_accommodation_spoken_languages( '<span class="' . $meta_class . 'languages"><span class="lsx-to-meta-data-key">' . esc_html__( 'Spoken Languages', 'tour-operator' ) . ':</span> ', '</span>' );
-        lsx_to_accommodation_activity_friendly( '<span class="' . $meta_class . 'friendly"><span class="lsx-to-meta-data-key">' . esc_html__( 'Friendly', 'tour-operator' ) . ':</span> ', '</span>' );
-        lsx_to_accommodation_special_interests( '<span class="' . $meta_class . 'special"><span class="lsx-to-meta-data-key">' . esc_html__( 'Special Interests', 'tour-operator' ) . ':</span> ', '</span>' );
-
-        // Use your custom function instead of lsx_to_connected_countries
         tsp_custom_connected_countries_inline( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
+        lsx_to_accommodation_room_total( '<span class="' . $meta_class . 'rooms"><span class="lsx-to-meta-data-key">' . esc_html__( 'Rooms', 'tour-operator' ) . ':</span> ', '</span>' );
+        lsx_to_accommodation_spoken_languages( '<span class="' . $meta_class . 'languages"><span class="lsx-to-meta-data-key">' . esc_html__( 'Spoken Languages', 'tour-operator' ) . ':</span> ', '</span>' );
     }
 }
 

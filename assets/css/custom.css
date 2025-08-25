@@ -7942,10 +7942,6 @@ section#dates-prices {
 }
 
 .lsx-to-modal-meta-data .lsx-to-meta-data {
-    display: none;
-}
-
-.lsx-to-modal-meta-data .lsx-to-meta-data.lsx-to-meta-data-rooms, .lsx-to-modal-meta-data .lsx-to-meta-data.lsx-to-meta-data-destinations {
     display: flex;
     align-items: center;
     font-size: 1rem;
