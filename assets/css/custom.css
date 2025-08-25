@@ -8037,7 +8037,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn {
     font-size: 1.25rem;
     font-weight: 300;
     padding: 10px 0!important;
-    display: none;
+}
+
+.modal-post-type-accommodation .moretag.btn {
+    display: none!important;
 }
 
 body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
