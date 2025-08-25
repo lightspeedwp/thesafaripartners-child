@@ -7860,6 +7860,22 @@ section#dates-prices {
     margin-bottom: 1.5rem;
 }
 
+.gutenberg-compatible-template.using-gutenberg figcaption {
+    padding: 1.125rem;
+}
+
+#footer-widgets {
+    padding: 15px 0 2.65rem;
+}
+
+#footer-widgets .widget {
+    margin-top: 1.875rem;
+}
+
+#footer-widgets .widget-title {
+    margin-bottom: 1.5rem;
+}
+
 .single-lsx-to-tour .slick-slide {
     height: auto!important;
 }
