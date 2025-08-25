@@ -3711,7 +3711,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     color: #ce9e57!important;
 }
 .lsx-to-widget-view-all {
-    margin-top: -38px!important;
+    margin-top: -10px;
 }
 .lsx-testimonials-slider .slick-arrow {
     top: 96%!important;
@@ -8051,10 +8051,6 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 .content-area, .widget-area {
     margin-bottom: 5.3125rem;
     margin-top: 5.3125rem;
-}
-
-#footer-widgets .lsx-to-widget-view-all {
-    margin-top: -10px;
 }
 
 #footer-widgets .lsx-to-slider-inner .slick-arrow.slick-next:before,
