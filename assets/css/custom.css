@@ -7941,18 +7941,27 @@ section#dates-prices {
     background: #F6F3F1;
 }
 
-.lsx-to-modal-meta-data {
+.lsx-to-modal-meta-data .lsx-to-meta-data {
     display: none;
 }
 
-.lsx-to-meta-data.lsx-to-meta-data-rooms, .lsx-to-meta-data.lsx-to-meta-data-destinations {
+.lsx-to-modal-meta-data .lsx-to-meta-data.lsx-to-meta-data-rooms, .lsx-to-modal-meta-data .lsx-to-meta-data.lsx-to-meta-data-destinations {
     display: flex;
     align-items: center;
     font-size: 1rem;
+    color: #6A6D5B;
+}
+
+.lsx-to-modal-meta-data .lsx-to-meta-data .lsx-to-meta-data-key{
+    color: #6A6D5B;
 }
 
 .lsx-to-meta-data-key {
     margin-right: 0.31rem;
+}
+
+.lsx-to-modal-content-area .lsx-to-modal-meta-data {
+    margin-bottom: 1.25rem;
 }
 
 .lsx-modal.modal .close {
@@ -7992,6 +8001,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn {
     font-size: 1.25rem;
     font-weight: 300;
     padding: 10px 0!important;
+    display: none;
 }
 
 body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
