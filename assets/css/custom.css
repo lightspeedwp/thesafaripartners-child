@@ -8203,10 +8203,6 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     min-height: 4rem;
 }
 
-.tsp-meta.tsp-countries {
-    min-height: 3rem;
-}
-
 .tsp-related-tour-content .tour-excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;
