@@ -8000,6 +8000,15 @@ section#dates-prices {
     margin-bottom: 1.25rem;
 }
 
+.lsx-to-modal-content-area .lsx-to-modal-thumb {
+    margin-bottom: 1.25rem;
+}
+
+.lsx-to-modal-content-area .lsx-to-modal-title,
+.lsx-to-modal-content-area p {
+    margin-bottom: 0.62rem;
+}
+
 .lsx-modal.modal .close {
     border: 2px solid #8D621F;
     font-size: 0;
