@@ -7912,7 +7912,7 @@ section#dates-prices {
 .single-lsx-to-tour #reviews .slick-slide {
     margin: 0 2.5rem;
 }
-.single-lsx-to-tour#reviews .lsx-to-widget-blockquote {
+.single-lsx-to-tour #reviews .lsx-to-widget-blockquote {
     border: 1px solid #8D621F;
     border-radius: 0;
     background: #F6F3F1;
@@ -7959,6 +7959,35 @@ section#dates-prices {
 
 .single-lsx-to-tour #dates-prices p {
     margin-bottom: 0.625rem;
+}
+
+.single-lsx-to-tour .lsx-to-slider-inner.slick-has-arrows {
+    margin: 0;
+}
+
+.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev {
+    left: 0;
+    width: 2.5rem!important;
+    height: 2.5rem!important;
+}
+
+.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-next {
+    right: 0;
+    width: 2.5rem!important;
+    height: 2.5rem!important;
+}
+
+.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev:before {
+    left: 0.7rem;
+}
+
+.single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev:after {
+    left: auto;
+    right: 0.7rem;
+}
+
+.single-lsx-to-tour .slick-list {
+    padding: 0 0.625rem;
 }
 
 .lsx-modal.modal .modal-dialog {
@@ -8130,10 +8159,14 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
         max-width: 32rem;
     }
 }
-@media (min-width: 767px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .single-lsx-to-tour .row {
          margin-left: -15px !important;
          margin-right: -15px !important;
+    }
+
+    .single-lsx-to-tour .content-area blockquote {
+        max-width: 100%;
     }
 }
 
