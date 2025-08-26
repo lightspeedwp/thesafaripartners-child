@@ -1066,10 +1066,6 @@ article.dates-prices table tr th {
 }
 #masthead.scroll-to-fixed-fixed {
     background: #fff!important;
-    animation: fadeEffect 2s;
-    /* Fading effect takes 1 second */
-    transition-timing-function: ease-in;
-    transition: 1s;
 }
 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item h4 {
     font-family: "moret", serif!important;
