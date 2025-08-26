@@ -391,7 +391,7 @@ function tsp_map_meta() {
  * @subpackage	template-tags
  * @category 	helper
  */
-function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false ) {
+function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false, $post_template = false ) {
 	if ( false !== $taxonomy ) {
 		$return     = false;
 		$filters    = array();
@@ -496,7 +496,12 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 				$disable_text = apply_filters( 'lsx_to_widget_disable_text', false, $post_type, false, $taxonomy );
 
 				echo '<div class="lsx-to-widget-item-wrap lsx-' . esc_attr( $post_type ) . '">';
-				lsx_to_content( 'content-widget', $post_type );
+                if ($post_template) {
+                    lsx_to_content('content-widget', $post_template);
+                } else {
+                    lsx_to_content('content-widget', $post_type);
+                }
+
 				echo '</div>';
 			endwhile;
 
@@ -719,8 +724,9 @@ function tsp_modify_tour_page_navigation( $page_links ) {
         if ( isset( $page_links['review'] ) ) {
             $ordered_links['review'] = $page_links['review'];
         }
-        if ( isset( $page_links['related-tours'] ) ) {
-            $ordered_links['related-tours'] = $page_links['related-tours'];
+        if ( isset( $page_links['related-items'] ) ) {
+            $ordered_links['related-tours'] = 'Related Tours';
+            unset( $page_links['related-items'] );
         }
 
         $page_links = $ordered_links;
@@ -902,4 +908,60 @@ function tsp_has_tour_reviews() {
     wp_reset_postdata();
 
     return $review_query->have_posts();
+}
+
+function tsp_has_related_tours() {
+    $post_id = get_the_ID();
+    if ( ! $post_id ) {
+        return false;
+    }
+
+    $args = array(
+            'post_type'      => 'tour',
+            'posts_per_page' => 1,
+            'post__not_in'   => array( $post_id ),
+            'fields'         => 'ids',
+    );
+
+    // Destinations
+    $destinations = get_post_meta( $post_id, 'destination_to_tour', true );
+    if ( ! empty( $destinations ) ) {
+        if ( ! is_array( $destinations ) ) {
+            $destinations = array( $destinations );
+        }
+        $args['meta_query'] = array(
+                array(
+                        'key'     => 'destination_to_tour',
+                        'compare' => 'IN',
+                        'value'   => $destinations,
+                ),
+        );
+    }
+
+    // Taxonomies: budget, who
+    $terms = wp_get_object_terms( $post_id, array( 'budget', 'who' ) );
+    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+        $tax_query = array();
+        $query_terms = array();
+        foreach ( $terms as $term ) {
+            $query_terms[ $term->taxonomy ][] = $term->slug;
+        }
+        if ( count( $query_terms ) > 1 ) {
+            $tax_query['relation'] = 'OR';
+        }
+        foreach ( $query_terms as $taxonomy => $slugs ) {
+            $tax_query[] = array(
+                    'taxonomy' => $taxonomy,
+                    'field'    => 'slug',
+                    'terms'    => $slugs,
+            );
+        }
+        $args['tax_query'] = $tax_query;
+    }
+
+    $query = new WP_Query( $args );
+    $has_related = $query->have_posts();
+    wp_reset_postdata();
+
+    return $has_related;
 }

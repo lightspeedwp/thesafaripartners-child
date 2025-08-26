@@ -7515,6 +7515,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .lsx-to-navigation {
     background: #8D621F;
 }
+
+
+.single-lsx-to-tour .lsx-to-navigation .lsx-to-content-spy a {
+    font-family: "moret",  serif;
+}
+
 .single-lsx-to-tour .lsx-to-navigation .lsx-to-content-spy:not(.dropdown-menu) {
     background: transparent!important;
     margin: 0 auto;
@@ -7574,6 +7580,29 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 .tsp-button:hover, .tsp-button:focus {
     background: #8D621F;
+    color: #fff!important;
+}
+
+.tsp-tour-button {
+    border-radius: 0.125rem;
+    background: #8D621F;
+    color: #fff!important;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    font-family: "moret", serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.01rem;
+    margin-top: 0.625rem;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.tsp-tour-button:hover, .tsp-tour-button:focus {
+    background: #565B3D;
     color: #fff!important;
 }
 
@@ -7919,6 +7948,7 @@ section#dates-prices {
     text-align: left;
     padding: 1.25rem;
     font-style: normal;
+    margin: 0;
 }
 
 .single-lsx-to-tour #reviews .lsx-to-widget-blockquote a {
@@ -7938,7 +7968,8 @@ section#dates-prices {
     margin-bottom: 0.625rem;
 }
 
-.single-lsx-to-tour #reviews .lsx-to-widget-blockquote h4 {
+.single-lsx-to-tour #reviews .lsx-to-widget-blockquote h4,
+.single-lsx-to-tour #related-tours .tsp-related-tour-content h4 {
     display: block;
     position: static;
     color: #090909;
@@ -7948,6 +7979,17 @@ section#dates-prices {
     line-height: 2.025rem;
     letter-spacing: 0.015rem;
     margin-bottom: 0.625rem;
+    text-align: left;
+}
+
+.single-lsx-to-tour #reviews .lsx-to-widget-blockquote h4 a,
+.single-lsx-to-tour #related-tours .tsp-related-tour-content h4 a {
+    color: #090909!important;
+}
+
+.single-lsx-to-tour #related-tours .lsx-to-widget-meta-data {
+    display: flex;
+    flex-direction: column;
 }
 
 .single-lsx-to-tour #reviews .lsx-to-widget-blockquote .fa-star {
@@ -7987,9 +8029,25 @@ section#dates-prices {
 }
 
 .single-lsx-to-tour .slick-list {
-    padding: 0 0.625rem;
+    padding: 0;
 }
 
+.single-lsx-to-tour .lsx-to-slider-inner {
+    padding: 0 2.75rem;
+}
+
+.single-lsx-to-tour #reviews .lsx-to-slider-inner {
+    padding: 0 1rem;
+}
+
+.single-lsx-to-tour .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
+    aspect-ratio: 3/2;
+    max-height: fit-content;
+}
+
+.single-lsx-to-tour .lsx-to-widget-items {
+    margin-top: 0;
+}
 .lsx-modal.modal .modal-dialog {
     margin: 0 auto;
     padding: 1.5rem;
@@ -8106,6 +8164,61 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 #footer-widgets .lsx-to-slider-inner .slick-arrow {
     margin-top: 40px;
 }
+.tsp-related-tour-meta {
+    margin-bottom: 0.625rem;
+}
+.tsp-related-tour-meta .tsp-icon {
+    width: 1rem;
+    height: 1rem;
+    flex: 1rem 0 0;
+    margin-top: 0.2rem;
+}
+
+.tsp-related-tour-meta .tsp-meta {
+    display: flex;
+    align-items: flex-start;
+    color: #565B3D;
+    font-family: "moret", serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+}
+
+.tsp-related-tour-meta .tsp-meta a {
+    color: #565B3D!important;
+    pointer-events: none;
+}
+.tsp-related-tour-content {
+    padding: 0.63rem;
+}
+
+.tsp-related-tour-content p {
+    color: #090909;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.tsp-related-tour-content h4 {
+    min-height: 4rem;
+}
+
+.tsp-meta.tsp-countries {
+    min-height: 3rem;
+}
+
+.tsp-related-tour-content .tour-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    margin-bottom: 0.625rem;
+}
+
+#related-tours .lsx-to-widget-item-wrap.lsx-tour {
+    margin: 0 0.3125rem;
+}
+
 /* Keep sections expanded on mobile and prevent height jumping */
 @media (min-width: 767px) and (max-width: 1199px) {
     .single-lsx-to-tour .lsx-to-collapse-section .collapse {

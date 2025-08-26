@@ -258,11 +258,6 @@ get_header(); ?>
             </section>
             <?php }
 
-
-			if ( function_exists( 'lsx_to_tour_specials' ) ) {
-				lsx_to_tour_specials();
-			}
-
 			if ( function_exists( 'tsp_tour_reviews' ) && tsp_has_tour_reviews() ) { ?>
                 <section id="reviews" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                     <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-reviews' ); ?>><?php esc_html_e( 'Customer Reviews', 'tour-operator' ); ?></div>
@@ -276,6 +271,30 @@ get_header(); ?>
                 </section>
 
 			<?php } ?>
+
+            <?php
+            $connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
+
+            global $columns;
+            $columns = 4;
+
+            if (tsp_has_related_tours()) {
+            ?>
+
+            <section id="related-tours" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-related-tours' ); ?>><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></div>
+
+                <div id="collapse-related-tours" class="collapse in">
+                    <div class="collapse-inner">
+                        <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></h2>
+                            <?php
+
+                            tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour' );
+                            ?>
+                    </div>
+                </div>
+            </section>
+                <?php } ?>
 		</main><!-- #main -->
 		<?php lsx_content_after(); ?>
 	</div><!-- #primary -->
