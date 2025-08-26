@@ -7782,8 +7782,12 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 .single-lsx-to-tour .book-now-wrapper {
     vertical-align:middle;
-    padding: 0.3rem 0!important;
+    padding: 0.3rem!important;
     text-align: right;
+}
+
+.single-lsx-to-tour #included-excluded {
+    margin-top: 2.5rem;
 }
 
 .currency-selector-table {
@@ -8292,5 +8296,9 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
     .single-lsx-to-tour h2 {
         margin-bottom: 1.25rem!important;
+    }
+
+    .single-lsx-to-tour #included-excluded {
+        margin-top: 1.25rem;
     }
 }
