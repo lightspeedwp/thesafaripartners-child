@@ -7789,6 +7789,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .currency-selector-table {
     padding-right: 0!important;
     width: 6rem;
+    display: none;
 }
 
 section#dates-prices {
