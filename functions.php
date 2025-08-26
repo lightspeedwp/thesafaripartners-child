@@ -81,7 +81,6 @@ function tsp_custom_accommodation_meta() {
 
         tsp_custom_connected_countries_inline( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
         lsx_to_accommodation_room_total( '<span class="' . $meta_class . 'rooms"><span class="lsx-to-meta-data-key">' . esc_html__( 'Rooms', 'tour-operator' ) . ':</span> ', '</span>' );
-        lsx_to_accommodation_spoken_languages( '<span class="' . $meta_class . 'languages"><span class="lsx-to-meta-data-key">' . esc_html__( 'Spoken Languages', 'tour-operator' ) . ':</span> ', '</span>' );
     }
 }
 
