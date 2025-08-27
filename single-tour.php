@@ -211,7 +211,7 @@ get_header(); ?>
                                                 if (1 === $counter || 2 === $counter) {
                                                     $style = 'style="min-width:120px"';
                                                 }
-                                                echo '<th colspan="2" ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
+                                                echo '<th ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
                                                 $counter++;
                                             }
                                             ?>
@@ -282,7 +282,7 @@ get_header(); ?>
                         <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></h2>
                             <?php
 
-                            tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour', 4 );
+                            tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour', 8 );
                             ?>
                     </div>
                 </div>
