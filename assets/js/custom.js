@@ -113,7 +113,7 @@
             });
         });
 
-        const galleries = document.querySelectorAll('.tour-accommodation-gallery .slider-content');
+        const galleries = document.querySelectorAll('.tour-accommodation-gallery .accomodation-slider');
 
         galleries.forEach(function(gallery) {
             if (!$(gallery).hasClass('slick-initialized')) {
