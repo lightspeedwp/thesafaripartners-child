@@ -31,11 +31,7 @@ if ( $has_single ) {
 
 		<blockquote class="lsx-to-widget-blockquote">
 		<h4 class="lsx-to-summary-title extra"><a href="<?php echo esc_url( $permalink ); ?>"><?php the_title(); ?></a></h4>
-		<?php
-						$meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
 
-						lsx_to_review_rating( '<p>Rating:' , '</p>' );
-?>
 		<p class="lsx-review"><?php
 // Get the post content and apply the_content filters to it.
 $content = apply_filters('the_content', get_the_content());
