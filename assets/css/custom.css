@@ -1054,7 +1054,7 @@ article.dates-prices table tr th {
     background-image: url("https://www.thesafaripartners.com/wp-content/uploads/2022/06/tsp-footer.jpg");
     background-color: #000;
     min-height: 720px;
-    background-position: center bottom+100px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -4022,7 +4022,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     }
     #footer-widgets blockquote {
         text-align: left!important;
-        min-height: 172px;
+        /*min-height: 172px;*/
     }
     .lsx-testimonials-slot {
         margin-top: 3rem!important;
@@ -5100,7 +5100,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     #travel-footer {
         background-image: url("https://www.thesafaripartners.com/wp-content/uploads/2022/06/tsp-footer.jpg");
         height: auto;
-        background-position: center;
+        background-position: center bottom+100px;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -6168,7 +6168,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         background-image: url("https://www.thesafaripartners.com/wp-content/uploads/2022/06/tsp-footer.jpg");
         background-color: #262423;
         height: auto;
-        background-position: center;
+        background-position: center bottom+100px;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -8278,6 +8278,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
 .tour-accommodation-gallery {
     margin-bottom: 0.63rem;
+}
+
+.tour-accommodation-gallery .slick-list {
+    aspect-ratio: 4/3;
 }
 
 .tour-accommodation-gallery h4.modal-title {
