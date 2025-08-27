@@ -3873,7 +3873,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 @media screen and (min-width:1200px) {
     #masthead>.container {
-        width: 1204px;
+        /*width: 1204px;*/
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0!important;
     }
@@ -3921,7 +3922,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         margin-top: 26px;
     }
     .page-template-template-travel-style .notfull {
-        width: 1204px!important;
+        /*width: 1204px!important;*/
+        max-width: 1200px;
         margin: 0 auto;
         float: none!important;
         display: flex;
@@ -3972,7 +3974,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         padding-top: 6px;
     }
     .single-lsx-to-review .content-area {
-        width: 1204px;
+        /*width: 1204px;*/
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0!important;
         float: none;
@@ -4019,7 +4022,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         margin-left: 85px;
     }
     .blog:not(.has-sidebar).blog:not(.lsx-body-full-width) .site-main {
-        width: 1204px;
+        /*width: 1204px;*/
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0!important;
     }
@@ -4033,7 +4037,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         padding: 0!important;
     }
     .blog .content-area {
-        width: 1204px;
+        max-width: 1200px;
+        /*width: 1204px;*/
         margin: 30px auto!important;
         float: none;
         padding: 0!important;
@@ -4051,7 +4056,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         padding: 30px 0 30px 30px!important;
     }
     .special-template-default .content-area {
-        width: 1204px!important;
+        /*width: 1204px!important;*/
+        max-width: 1200px;
         margin: 0 auto!important;
         float: none;
         padding: 0!important;
@@ -4070,11 +4076,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     .archive .archive-intro {
         padding-bottom: 80px!important;
         margin: 60px 0px 40px 0px!important;
-        width: 1204px!important;
+        /*width: 1204px!important;*/
+        max-width: 1200px;
         border-bottom: 1px solid #262423;
     }
     .gutenberg-compatible-template.using-gutenberg.page-template-default:not(.has-block-banner):not(.has-block-media-text):not(.has-block-cover).lsx-disabled-hidden-title .entry-content, .gutenberg-compatible-template.using-gutenberg.page-template-template-cover:not(.has-block-banner):not(.has-block-media-text):not(.has-block-cover).lsx-disabled-hidden-title .entry-content {
-        width: 1204px;
+        max-width: 1204px;
+        /*width: 1204px;*/
         margin: 0 auto;
         float: none;
     }
@@ -4082,12 +4090,14 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         padding-top: 80px!important;
     }
     #colophon .container, #footer-sub .footer-sub-area {
-        width: 1204px;
+        max-width: 1204px;
+        /*width: 1204px;*/
         margin: auto;
         padding: 0;
     }
     #footer-widgets .container {
-        width: 1204px;
+        /*width: 1204px;*/
+        max-width: 1200px;
         margin: auto;
         padding: 0;
     }
@@ -4098,18 +4108,21 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         margin: 0!important;
     }
     .page .entry-content>div:not(:first-of-type) {
-        width: 1204px;
+        /*width: 1204px;*/
+        max-width: 1200px;
         padding: 0;
     }
     .page-id-133119 #primary .notfull {
-        width: 1204px!important;
+        max-width: 1204px;
+        /*width: 1204px!important;*/
         padding: 0!important;
     }
     .page-id-133119 .socialresponce {
         gap: 0em!important;
     }
     .page-id-133119 .entry-content>div:not(:first-of-type) {
-        width: 1204px;
+        /*width: 1204px;*/
+        max-width: 1200px;
         margin: 0 auto;
         float: none;
     }
@@ -4118,19 +4131,21 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         margin: 0 auto;
     }
     .toptours-posts .lsx-to-slider-inner {
-        width: 1204px!important;
+        max-width: 1204px;
+        /*width: 1204px!important;*/
         margin: 5px 0px 20px 0px!important;
-        max-width: 1204px!important;
     }
     .archive #primary, .single-lsx-to-destination #primary, .single-lsx-to-tour #primary  {
-        width: 1204px!important;
+        max-width: 1204px;
+        /*width: 1204px!important;*/
         margin: 0 auto;
         float: none!important;
         display: flex;
         padding: 0!important;
     }
     .page-template-template-travel-style .notfull {
-        width: 1204px!important;
+        /*width: 1204px!important;*/
+        max-width: 1200px;
         margin: 0 auto;
         float: none!important;
         display: block;
@@ -4150,9 +4165,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         color: #262423!important;
     }
     .page-template-template-travel-style .toptours-posts .lsx-to-slider-inner {
-        width: 1204px!important;
+        max-width: 1200px;
+        /*width: 1204px!important;*/
         margin: 5px 0px 20px 0px!important;
-        max-width: 1204px!important;
     }
     .page-template-template-travel-style .entry-content {
         padding-bottom: 80px!important;
@@ -4171,32 +4186,35 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         margin-bottom: 40px!important;
     }
     .tours-posts .lsx-to-slider-inner {
-        max-width: 1204px!important;
+        max-width: 1200px!important;
         margin: 20px 0px 10px 0px!important;
     }
     .who-posts .lsx-to-slider-inner {
         width: 100%!important;
-        max-width: 1204px!important;
+        max-width: 1200px!important;
     }
     .style-posts .lsx-to-slider-inner {
-        max-width: 1204px!important;
+        max-width: 1200px!important;
         margin: 5px 0px 20px 0px!important;
     }
     .search-results .content, .search .content {
-        width: 1204px!important;
+        /*width: 1204px!important;*/
+        max-width: 1200px;
         margin: 0px auto!important;
     }
     .single-lsx-to-destination .archive-intro {
         padding-bottom: 80px!important;
         margin: 0px 0px 40px 0px!important;
-        width: 1204px!important;
+        max-width: 1200px!important;
+        /*width: 1204px!important;*/
         border-bottom: 1px solid #262423;
     }
     .tsp-seperator {
         padding: 0px;
         height: 2px;
         border-bottom: 1px solid #262423;
-        width: 1204px;
+        max-width: 1200px;
+        /*width: 1204px;*/
         margin-left: 10px!important;
         margin: 0 auto;
     }
@@ -4209,7 +4227,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     .archive .archive-intro {
         padding-bottom: 80px!important;
         margin: 60px 0px 40px 0px!important;
-        width: 1204px!important;
+        /*width: 1204px!important;*/
+        max-width: 1200px;
         border-bottom: 1px solid #262423;
     }
     .lsx-wizard-progress-buttons-wrapper {
@@ -4275,7 +4294,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     }
     .lsx-wizard-buttons-wrapper {
         margin: 0 auto;
-        width: 1204px;
+        max-width: 1200px;
+        /*width: 1204px;*/
         padding: 0px;
     }
     .lsx-wizard-buttons-wrapper .col-md-12 {
@@ -4283,7 +4303,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     }
     .post-template-default .content {
         margin: 0 auto;
-        width: 1204px;
+        max-width: 1200px;
+        /*width: 1204px;*/
         padding: 0px;
     }
     #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu>ul.mega-sub-menu {
@@ -4504,7 +4525,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         height: 32px;
     }
     .gutenberg-compatible-template.using-gutenberg .entry-content figure.wp-block-embed, .gutenberg-compatible-template.using-gutenberg .entry-content .navbar, .gutenberg-compatible-template.using-gutenberg .entry-content p, .gutenberg-compatible-template.using-gutenberg .entry-content .envira-gallery-wrap, .gutenberg-compatible-template.using-gutenberg .entry-content form, .gutenberg-compatible-template.using-gutenberg .entry-content blockquote, .gutenberg-compatible-template.using-gutenberg .entry-content h1, .gutenberg-compatible-template.using-gutenberg .entry-content h2, .gutenberg-compatible-template.using-gutenberg .entry-content h3, .gutenberg-compatible-template.using-gutenberg .entry-content h4, .gutenberg-compatible-template.using-gutenberg .entry-content h5, .gutenberg-compatible-template.using-gutenberg .entry-content h6, .gutenberg-compatible-template.using-gutenberg .entry-content ul, .gutenberg-compatible-template.using-gutenberg .entry-content pre, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-image:not(.alignfull), .gutenberg-compatible-template.using-gutenberg .entry-content ol, .gutenberg-compatible-template.using-gutenberg .entry-content table, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-button, .gutenberg-compatible-template.using-gutenberg .entry-content .wp-block-buttons:not(.alignfull), .gutenberg-compatible-template.using-gutenberg .entry-content .slick-slider, .gutenberg-compatible-template.using-gutenberg .entry-content #lsx-projects-slider.slick-slider, .gutenberg-compatible-template.using-gutenberg .entry-content #lsx-team-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content figure.wp-block-embed, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .navbar, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content p, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .envira-gallery-wrap, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content form, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content blockquote, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h1, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h2, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h3, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h4, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h5, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content h6, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content ul, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content pre, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-image:not(.alignfull), .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content ol, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content table, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-button, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .wp-block-buttons:not(.alignfull), .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content .slick-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content #lsx-projects-slider.slick-slider, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .entry-content #lsx-team-slider {
-        max-width: 1204px!important;
+        max-width: 1200px!important;
     }
     .page-template-template-wizard .body-wrap {
         height: 97vh!important;
@@ -4523,7 +4544,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         /*border-top: 4px solid #fff;*/
     }
     .single-lsx-to-destination .content {
-        width: 1204px!important;
+        max-width: 1200px;
+        /*width: 1204px!important;*/
         margin: 20px auto!important;
     }
     .wizard-what .col-md-2, .wizard-who .col-md-2, .wizard-where .col-md-2 {
@@ -4750,7 +4772,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         display: none;
     }
     .lsx-to-content-spy {
-        max-width: 1204px!important;
+        max-width: 1200px!important;
     }
 }
 
@@ -7145,7 +7167,8 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 @media screen and (min-width:1100px) {
     .slider-container .mini-wizard-results .lsx-to-widget-item-wrap.lsx-tour.col-xs-12 {
-        width: 1204px!important;
+        max-width: 1100px;
+        /*width: 1204px!important;*/
         margin: 0 auto;
         float: none!important;
         display: block;
@@ -8230,6 +8253,28 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     margin: 0 0.3125rem;
 }
 
+.tour-accommodation-gallery {
+    margin-bottom: 0.63rem;
+}
+
+.tour-accommodation-gallery h4.modal-title {
+    color: #000;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.single-lsx-to-tour .tour-accommodation-galery .lsx-to-slider-inner {
+    padding: 0;
+    margin: 0;
+}
+
+.single-lsx-to-tour .tour-accommodation-galery .lsx-to-slider-inner .slick-arrow.slick-prev {
+    left: -1.25rem;
+}
+
+.single-lsx-to-tour .tour-accommodation-galery .lsx-to-slider-inner .slick-arrow.slick-next {
+    right: -1.25rem;
+}
+
 /* Keep sections expanded on mobile and prevent height jumping */
 /*@media (min-width: 767px) and (max-width: 1199px) {*/
 /*    .single-lsx-to-tour .lsx-to-collapse-section .collapse {*/
@@ -8373,6 +8418,8 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
     .tsp-tour-fast-facts {
         padding: 0.6325rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .tsp-button {
