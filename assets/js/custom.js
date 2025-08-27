@@ -137,6 +137,10 @@
                 });
             }
         });
+
+        $('.lsx-modal').on('shown.bs.modal', function () {
+            $(this).find('.accomodation-slider').slick('setPosition');
+        });
     });
 
 })( jQuery, window, document );
