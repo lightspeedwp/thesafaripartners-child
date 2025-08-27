@@ -7,13 +7,20 @@
  */
 global $post;
 setup_postdata( $post );
+
+// check if post type is accommodation
+if($post->post_type === 'accommodation') {
+
+};
 ?>
 <article class="lsx-to-modal-content-area content-area">
-    <div class="lsx-to-modal-thumb text-center">
-        <a href="<?php the_permalink(); ?>">
+    <?php if ($post->post_type === 'accommodation') {
+        tsp_accommodation_gallery( $post->ID);
+    } else { ?>
+        <div class="lsx-to-modal-thumb text-center">
             <?php lsx_thumbnail( 'lsx-thumbnail-single' ); ?>
-        </a>
-    </div>
+        </div>
+    <?php } ?>
 
     <h4 class="lsx-to-modal-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 
