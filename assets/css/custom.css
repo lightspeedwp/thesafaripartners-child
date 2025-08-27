@@ -508,9 +508,10 @@ body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item
     width: 186px;
     height: 27px;
     content: "";
-    left: 56px !important;
-    bottom: -26px;
-    margin-top: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -36px;
     position: absolute;
 }
 #footer-widgets .lsx-to-widget-blockquote .fa-star, #footer-widgets .lsx-to-widget-blockquote .lsx-review-author, #footer-widgets .lsx-to-meta-data, #footer-widgets .lsx-to-widget-blockquote .read-more {
@@ -1051,9 +1052,9 @@ article.dates-prices table tr th {
 }
 #travel-footer {
     background-image: url("https://www.thesafaripartners.com/wp-content/uploads/2022/06/tsp-footer.jpg");
-    background-color: #fff;
+    background-color: #000;
     min-height: 720px;
-    background-position: center;
+    background-position: center bottom+100px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -3709,7 +3710,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     color: #ce9e57!important;
 }
 .lsx-to-widget-view-all {
-    margin: 0;
+    margin-top: 10px;
 }
 .lsx-testimonials-slider .slick-arrow {
     top: 96%!important;
@@ -5728,7 +5729,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         content: counter(my-awesome-counter) ". ";
     }
     #footer-sub {
-        padding: 70px 5% 150px!important;
+        padding: 70px 5% 100px!important;
     }
     #footer-sub .gform_heading {
         width: 100%;
@@ -6252,7 +6253,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     }
     #masthead {
         height: 72px;
-        /*margin-top: 30px;*/
+        margin-top: 30px;
     }
     h1 {
         font-size: 46px!important;
@@ -6485,7 +6486,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
         background: #A31700!important;
     }
     #footer-sub {
-        padding: 24px 30px 150px!important;
+        padding: 24px 1.25rem 100px!important;
     }
     #footer-sub form {
         width: 100%!important;
@@ -6718,6 +6719,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     .footer-navigation>ul {
         width: 100%;
         margin: 0 auto;
+        justify-content: center;
     }
     .tour-accommodation-gallery .slick-arrow.slick-prev {
         /*left: 0px!important;*/
@@ -7225,9 +7227,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     #footer-widgets .lsx-to-slider-inner.slick-has-arrows {
         max-width: 100%;
         margin: 0 auto;
-    }
-    .lsx-to-widget-view-all {
-        margin-top: -2px !important;
     }
     .homebanner {
         min-height: 76vh !important;
@@ -7935,7 +7934,7 @@ section#dates-prices {
 }
 
 .lsx-to-widget-items {
-    margin-top: -2.625rem;
+    margin-top: -30px;
 }
 
 .toptours-posts .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow {
@@ -8302,7 +8301,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 .type-lsx-to-review p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -8575,7 +8574,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
         margin-bottom: 1rem;
     }
 
-    .tsp-itinerary-day .entry-content {
-        margin-top: 1rem;
+    #date-prices .content-area table {
+        margin-bottom: 0;
     }
 }
