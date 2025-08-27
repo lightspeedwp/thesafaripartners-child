@@ -7775,8 +7775,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .table>tfoot>tr>td {
     border-top: none;
     text-wrap: nowrap;
-    line-height: 3rem;
-    padding: 0 0.6rem;
+    padding: 0.6rem;
     color: #040404;
     vertical-align: middle;
 }
@@ -8040,7 +8039,7 @@ section#dates-prices {
     padding: 0 1rem;
 }
 
-.single-lsx-to-tour .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
+.single-lsx-to-tour #related-tours .lsx-to-widget-item-wrap .lsx-to-widget-thumb img {
     aspect-ratio: 3/2;
     max-height: fit-content;
 }
