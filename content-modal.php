@@ -14,7 +14,7 @@ setup_postdata( $post );
         echo '<h4 class="lsx-to-modal-title">' . get_the_title() . '</h4>';
     } else { ?>
         <div class="lsx-to-modal-thumb text-center">
-            <?php lsx_thumbnail( 'lsx-thumbnail-single' ); ?>
+            <?php tsp_thumbnail( 'lsx-thumbnail-single' ); ?>
         </div>
         <h4 class="lsx-to-modal-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     <?php } ?>

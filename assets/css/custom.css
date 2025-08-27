@@ -8585,4 +8585,18 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     #date-prices .content-area table {
         margin-bottom: 0;
     }
+
+    .tour-accommodation-gallery .lsx-to-slider-inner .slick-arrow.slick-prev:before,
+    .tour-accommodation-gallery .lsx-to-slider-inner .slick-arrow.slick-next:before {
+        left: 8px !important;
+        top: 18px;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }
+
+    .tour-accommodation-gallery .lsx-to-slider-inner .slick-arrow.slick-next:before {
+        left: 10px !important;
+    }
 }

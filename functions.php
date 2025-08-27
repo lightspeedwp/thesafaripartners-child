@@ -94,3 +94,10 @@ function tsp_custom_connected_countries_inline( $before = '', $after = '' ) {
 
     echo $stripped_output;
 }
+
+function tsp_thumbnail($size = 'thumbnail', $image_src = false) {
+    $img_html = lsx_thumbnail($size, $image_src);
+    // Add loading="lazy" to the <img> tag
+    $img_html = preg_replace('/<img(.*?)>/i', '<img$1 loading="lazy">', $img_html);
+    echo $img_html;
+}
