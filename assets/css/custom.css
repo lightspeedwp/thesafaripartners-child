@@ -7638,6 +7638,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     display: none;
 }
 
+.single-lsx-to-tour .tsp-itinerary-day .entry-content p {
+    font-size: 1rem;
+}
+
 .tsp-itinerary-thumb {
     flex: 27.5rem 0 0;
     position: relative;
@@ -8079,12 +8083,16 @@ section#dates-prices {
     margin-bottom: 0;
 }
 
+.lsx-to-modal-content-area .entry-content .tsp-modal-description-short p:last-of-type {
+    margin-bottom: 0.31rem;
+}
+
 .lsx-to-modal-content-area .entry-content p:empty {
     margin: 0;
 }
 
 .lsx-to-modal-content-area .lsx-to-modal-meta-data {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.63rem;
 }
 
 .lsx-to-modal-content-area .lsx-to-modal-thumb {
@@ -8134,10 +8142,6 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn {
     font-weight: 300;
     padding: 10px 0!important;
     margin-bottom: -10px;
-}
-
-.modal-post-type-accommodation .moretag.btn {
-    display: none!important;
 }
 
 body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {

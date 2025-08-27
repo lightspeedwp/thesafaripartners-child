@@ -76,6 +76,43 @@
                 document.getElementById(target + '-short').style.display = 'block';
             });
         });
+
+        document.querySelectorAll('.tsp-modal-expand-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const targetId = btn.dataset.target;
+                const fullEl   = document.getElementById(targetId);
+                const wrapper  = btn.closest('.tsp-modal-description-wrapper');
+                const shortEl  = wrapper.querySelector('.tsp-modal-description-short');
+                const collapseBtn = wrapper.querySelector('.tsp-modal-collapse-btn');
+
+                if (!fullEl || !shortEl || !collapseBtn) return;
+
+                // Expand
+                fullEl.style.display  = 'block';
+                shortEl.style.display = 'none';
+                btn.style.display     = 'none';
+                collapseBtn.style.display = 'inline-block';
+            });
+        });
+
+        document.querySelectorAll('.tsp-modal-collapse-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const targetId = btn.dataset.target;
+                const fullEl   = document.getElementById(targetId);
+                const wrapper  = btn.closest('.tsp-modal-description-wrapper');
+                const shortEl  = wrapper.querySelector('.tsp-modal-description-short');
+                const expandBtn = wrapper.querySelector('.tsp-modal-expand-btn');
+
+                if (!fullEl || !shortEl || !expandBtn) return;
+
+                // Collapse
+                fullEl.style.display  = 'none';
+                shortEl.style.display = 'block';
+                btn.style.display     = 'none';
+                expandBtn.style.display = 'inline-block';
+            });
+        });
+
     });
 
 })( jQuery, window, document );

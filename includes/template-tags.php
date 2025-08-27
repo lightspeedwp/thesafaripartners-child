@@ -645,46 +645,66 @@ function tsp_itinerary_description() {
     if ( $tour_itinerary && $tour_itinerary->has_itinerary && ! empty( $tour_itinerary->itinerary ) ) {
         if ( ! empty( $tour_itinerary->itinerary['description'] ) ) {
             $full_description = apply_filters( 'the_content', $tour_itinerary->itinerary['description'] );
-            $full_description = wp_strip_all_tags( $full_description );
+            $full_description = trim( strip_shortcodes( $full_description ) );
 
-            // Check if description needs trimming (more than 75 words or 500 characters)
-            $word_count = str_word_count( $full_description );
-            $char_count = strlen( $full_description );
+            // Clean plain text for counting
+            $plain_description = wp_strip_all_tags( $full_description );
+            $word_count = str_word_count( $plain_description );
+            $char_count = strlen( $plain_description );
 
+            // Extract first paragraph (before closing </p>)
+            $first_paragraph = '';
+            if ( preg_match( '/<p>(.*?)<\/p>/is', $full_description, $matches ) ) {
+                $first_paragraph = trim( $matches[1] );
+            }
+
+            // Decide whether trimming is needed
             if ( $word_count > 75 || $char_count > 500 ) {
-                // Trim to 75 words, but respect word boundaries
-                $words = explode( ' ', $full_description );
-                $trimmed_words = array_slice( $words, 0, 75 );
-                $trimmed_description = implode( ' ', $trimmed_words );
+                $trimmed_description = '';
 
-                // If still over 500 chars, trim by characters
-                if ( strlen( $trimmed_description ) > 500 ) {
-                    $trimmed_description = substr( $trimmed_description, 0, 500 );
-                    $trimmed_description = substr( $trimmed_description, 0, strrpos( $trimmed_description, ' ' ) );
+                // Case 1: use first paragraph if it’s shorter than limits
+                if ( ! empty( $first_paragraph ) ) {
+                    $first_para_word_count = str_word_count( wp_strip_all_tags( $first_paragraph ) );
+                    $first_para_char_count = strlen( wp_strip_all_tags( $first_paragraph ) );
+
+                    if ( $first_para_word_count <= 75 && $first_para_char_count <= 500 ) {
+                        $trimmed_description = $first_paragraph;
+                    }
+                }
+
+                // Case 2: fallback to word/char trimming if no suitable first paragraph
+                if ( empty( $trimmed_description ) ) {
+                    $words = explode( ' ', $full_description );
+                    $trimmed_words = array_slice( $words, 0, 75 );
+                    $trimmed_description = implode( ' ', $trimmed_words );
+
+                    if ( strlen( wp_strip_all_tags( $trimmed_description ) ) > 500 ) {
+                        $trimmed_description = substr( $trimmed_description, 0, 500 );
+                        $trimmed_description = substr( $trimmed_description, 0, strrpos( $trimmed_description, ' ' ) );
+                    }
                 }
 
                 $unique_id = 'desc-' . uniqid();
 
                 echo '<div class="tsp-itinerary-description-wrapper">';
                 echo '<div class="tsp-itinerary-description-short" id="' . esc_attr( $unique_id ) . '-short">';
-                echo wp_kses_post( $trimmed_description . '...' );
+                echo wp_kses_post( wpautop( $trimmed_description . '...' ) );
                 echo ' <button type="button" class="tsp-toggle-btn tsp-expand-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Expand Description', 'tour-operator' ) . ' +</button>';
                 echo '</div>';
 
                 echo '<div class="tsp-itinerary-description-full" id="' . esc_attr( $unique_id ) . '-full" style="display: none;">';
-                echo wp_kses_post( $full_description );
+                echo wp_kses_post( wpautop( $full_description ) );
                 echo ' <button type="button" class="tsp-toggle-btn tsp-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Collapse Description', 'tour-operator' ) . ' -</button>';
                 echo '</div>';
                 echo '</div>';
-                ?>
-                <?php
             } else {
                 // Description is short enough, display as-is
-                echo wp_kses_post( $full_description );
+                echo wp_kses_post( wpautop( $full_description ) );
             }
         }
     }
 }
+
 
 /**
  * Change Summary to Overview in single tour scrollspy navigation
@@ -964,4 +984,83 @@ function tsp_has_related_tours() {
     wp_reset_postdata();
 
     return $has_related;
+}
+function tsp_modal_trimmed_content( $content ) {
+    if ( empty( $content ) ) {
+        return;
+    }
+
+    $full_content = apply_filters( 'the_content', $content );
+    $full_content = trim( strip_shortcodes( $full_content ) );
+
+    // Split into paragraphs
+    $paragraphs = preg_split( '/(<\/p>)/i', $full_content, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+    $first_paragraph = '';
+    $other_paragraphs = '';
+
+    if ( ! empty( $paragraphs ) ) {
+        $first_paragraph = $paragraphs[0];
+        if ( isset( $paragraphs[1] ) ) {
+            $first_paragraph .= $paragraphs[1];
+        }
+        $other_paragraphs = implode( '', array_slice( $paragraphs, 2 ) );
+    } else {
+        $first_paragraph = $full_content;
+    }
+
+    // Plain text for counts
+    $plain_first = wp_strip_all_tags( $first_paragraph );
+    $plain_full  = wp_strip_all_tags( $full_content );
+
+    $word_count       = str_word_count( $plain_full );
+    $char_count       = strlen( $plain_full );
+    $first_word_count = str_word_count( $plain_first );
+    $first_char_count = strlen( $plain_first );
+
+    $unique_id = 'modal-desc-' . uniqid();
+
+    // Initialize short and full
+    $content_short = '';
+    $content_full  = $full_content;
+
+    // Case 1: First paragraph too long → trim inside it
+    if ( $first_word_count > 75 || $first_char_count > 500 ) {
+        $words         = preg_split( '/(\s+)/u', $plain_first, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $trimmed_words = array_slice( $words, 0, 150 ); // 75 words + spaces
+        $trimmed_text  = implode( '', $trimmed_words );
+
+        if ( strlen( $trimmed_text ) > 500 ) {
+            $trimmed_text = mb_substr( $trimmed_text, 0, 500 );
+            $trimmed_text = mb_substr( $trimmed_text, 0, mb_strrpos( $trimmed_text, ' ' ) );
+        }
+
+        // Try to locate in original HTML
+        $pos = mb_strpos( wp_strip_all_tags( $first_paragraph ), trim( $trimmed_text ) );
+        if ( $pos !== false ) {
+            $trimmed_html   = mb_substr( $first_paragraph, 0, $pos + strlen( trim( $trimmed_text ) ) );
+            $content_short  = $trimmed_html . '...';
+            $content_full   = $first_paragraph . $other_paragraphs;
+        } else {
+            $content_short = $first_paragraph . '...';
+        }
+    }
+    // Case 2: First paragraph is fine, but total is long → use it as short
+    elseif ( $word_count > 75 || $char_count > 500 ) {
+        $content_short = $first_paragraph;
+        $content_full  = $first_paragraph . $other_paragraphs;
+    }
+
+    // Case 3: Content already short → no toggle
+    else {
+        echo '<div class="tsp-modal-description-full">' . wp_kses_post( wpautop( $full_content ) ) . '</div>';
+        return;
+    }
+
+    // Render wrapper (short + expand + full)
+    echo '<div class="tsp-modal-description-wrapper">';
+    echo '<div class="tsp-modal-description-short">' . wp_kses_post(  $content_short     ) . '</div>';
+    echo ' <button type="button" class="tsp-toggle-btn tsp-modal-expand-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Read More', 'tour-operator' ) . '</button>';
+    echo '<div class="tsp-modal-description-full" id="' . esc_attr( $unique_id ) . '" style="display:none;">' . wp_kses_post(  $content_full  ) . '</div>';
+    echo ' <button type="button" style="display: none" class="tsp-toggle-btn tsp-modal-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Read Less', 'tour-operator' ) . '</button>';
+    echo '</div>';
 }

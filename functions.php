@@ -94,31 +94,3 @@ function tsp_custom_connected_countries_inline( $before = '', $after = '' ) {
 
     echo $stripped_output;
 }
-
-add_action( 'wp_footer', 'childtheme_modify_lsx_modals', 9 ); // Before plugin's output_modals
-add_action( 'wp_footer', 'childtheme_modify_lsx_modals_end', 11 ); // After plugin's output_modals
-
-function childtheme_modify_lsx_modals() {
-    ob_start();
-}
-
-function childtheme_modify_lsx_modals_end() {
-    $output = ob_get_clean();
-
-    // Add post type class to each modal
-    $output = preg_replace_callback(
-        '/(<div class="lsx-modal modal fade" id="lsx-modal-(\d+)"[^>]*>)/',
-        function( $matches ) {
-            $post_id = $matches[2];
-            $post = get_post( $post_id );
-            if ( $post && isset( $post->post_type ) ) {
-                $class = ' modal-post-type-' . sanitize_html_class( $post->post_type );
-                return str_replace('lsx-modal modal fade', 'lsx-modal modal fade' . $class, $matches[1]);
-            }
-            return $matches[1];
-        },
-        $output
-    );
-
-    echo $output;
-}
