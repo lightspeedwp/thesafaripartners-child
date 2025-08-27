@@ -7516,7 +7516,6 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     background: #8D621F;
 }
 
-
 .single-lsx-to-tour .lsx-to-navigation .lsx-to-content-spy a {
     font-family: "moret",  serif;
 }
@@ -7543,6 +7542,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .single-lsx-to-tour .lsx-to-navigation .lsx-to-content-spy:not(.dropdown-menu) > li.active > a {
     background: linear-gradient(0deg, rgba(9, 9, 9, 0.25) 0%, rgba(9, 9, 9, 0.25) 100%), #8D621F!important;
     color: #fff!important;
+}
+
+.lsx-to-content-spy li a{
+    border-left: 1px solid #432d0d;
+}
+.lsx-to-content-spy li:last-of-type a{
+    border-right: 1px solid #432d0d;
 }
 
 .tsp-time-to-visit .tsp-fast-facts-type {
@@ -7680,6 +7686,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     display: grid;
     grid-gap: 0.675rem;
     grid-auto-rows: min-content;
+    width: 100%;
 }
 
 .tsp-itinerary-meta {
@@ -7696,6 +7703,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .tsp-itinerary-meta .tsp-meta-key {
     margin-right: 0.31rem;
     font-family: "moret", serif;
+    font-size: 1.25rem;
 }
 
 .single-lsx-to-tour .tsp-itinerary-content h3 {
@@ -7734,6 +7742,15 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 .single-lsx-to-tour .page-banner-wrap .page-banner {
     min-height: 30vh;
+}
+
+.included-excluded {
+    display: grid;
+    grid-gap: 1.25rem;
+}
+
+.included-excluded.two-col {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .single-lsx-to-tour #included-excluded .entry-content ul {
@@ -7814,18 +7831,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 
 .single-lsx-to-tour .book-now-wrapper {
     vertical-align:middle;
-    padding: 0.3rem!important;
     text-align: right;
 }
 
 .single-lsx-to-tour #included-excluded {
     margin-top: 2.5rem;
-}
-
-.currency-selector-table {
-    padding-right: 0!important;
-    width: 6rem;
-    display: none;
 }
 
 section#dates-prices {
@@ -7851,6 +7861,7 @@ section#dates-prices {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
     cursor: pointer;
+    border-bottom: 1px solid #432d0d;
 }
 
 .tsp-collapse-title:hover,
@@ -8220,44 +8231,44 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 }
 
 /* Keep sections expanded on mobile and prevent height jumping */
-@media (min-width: 767px) and (max-width: 1199px) {
-    .single-lsx-to-tour .lsx-to-collapse-section .collapse {
-        display: block !important;
-        height: auto !important;
-        overflow: visible !important;
-        transition: none !important;
-    }
+/*@media (min-width: 767px) and (max-width: 1199px) {*/
+/*    .single-lsx-to-tour .lsx-to-collapse-section .collapse {*/
+/*        display: block !important;*/
+/*        height: auto !important;*/
+/*        overflow: visible !important;*/
+/*        transition: none !important;*/
+/*    }*/
 
-    .single-lsx-to-tour .lsx-to-collapse-section .collapse.in {
-        display: block !important;
-        height: auto !important;
-    }
+/*    .single-lsx-to-tour .lsx-to-collapse-section .collapse.in {*/
+/*        display: block !important;*/
+/*        height: auto !important;*/
+/*    }*/
 
-    .single-lsx-to-tour .lsx-to-collapse-section .collapsing {
-        height: auto !important;
-        transition: none !important;
-    }
+/*    .single-lsx-to-tour .lsx-to-collapse-section .collapsing {*/
+/*        height: auto !important;*/
+/*        transition: none !important;*/
+/*    }*/
 
-    /* Remove Bootstrap collapse transitions */
-    .single-lsx-to-tour .lsx-to-collapse-section .collapse,
-    .single-lsx-to-tour .lsx-to-collapse-section .collapsing {
-        -webkit-transition: none !important;
-        -moz-transition: none !important;
-        -ms-transition: none !important;
-        -o-transition: none !important;
-        transition: none !important;
-    }
+/*    !* Remove Bootstrap collapse transitions *!*/
+/*    .single-lsx-to-tour .lsx-to-collapse-section .collapse,*/
+/*    .single-lsx-to-tour .lsx-to-collapse-section .collapsing {*/
+/*        -webkit-transition: none !important;*/
+/*        -moz-transition: none !important;*/
+/*        -ms-transition: none !important;*/
+/*        -o-transition: none !important;*/
+/*        transition: none !important;*/
+/*    }*/
 
-    /* Optionally hide the toggle button functionality on mobile */
-    .single-lsx-to-tour .lsx-to-collapse-title[data-toggle="collapse"] {
-        pointer-events: none;
-        cursor: default;
-    }
+/*    !* Optionally hide the toggle button functionality on mobile *!*/
+/*    .single-lsx-to-tour .lsx-to-collapse-title[data-toggle="collapse"] {*/
+/*        pointer-events: none;*/
+/*        cursor: default;*/
+/*    }*/
 
-    .single-lsx-to-tour .lsx-to-collapse-title[data-toggle="collapse"]:after {
-        display: none;
-    }
-}
+/*    .single-lsx-to-tour .lsx-to-collapse-title[data-toggle="collapse"]:after {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
 @media (min-width: 1200px) {
     .single-lsx-to-tour .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
@@ -8315,23 +8326,22 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     }
 
     .tsp-itinerary-day {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 1.25rem;
     }
     .tsp-itinerary-day .tsp-itinerary-thumb {
-        flex: 1 0 0;
+        flex: auto;
     }
     .tsp-itinerary-day .tsp-itinerary-thumb img {
         width: 100%;
     }
+    /*.tsp-collapse-btn, .tsp-itinerary-description-short {*/
+    /*    display: none!important;*/
+    /*}*/
 
-    .tsp-collapse-btn, .tsp-itinerary-description-short {
-        display: none!important;
-    }
-
-    .tsp-itinerary-description-full {
-        display: block!important;
-    }
+    /*.tsp-itinerary-description-full {*/
+    /*    display: block!important;*/
+    /*}*/
 }
 
 @media (max-width: 767px) {
@@ -8446,5 +8456,39 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
     .single-lsx-to-tour #included-excluded {
         margin-top: 1.25rem;
+    }
+    .single-lsx-to-tour #included-excluded h3 {
+        margin: 0 0 0.63rem!important;
+    }
+    .tsp-best-time-to-visit {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tsp-button {
+        padding: 1rem 0.5rem;
+    }
+    .included-excluded.two-col {
+        grid-template-columns: 1fr;
+        grid-gap: 0.625rem;
+    }
+
+    #collapse-reviews .lsx-to-slider-inner .slick-dots,
+    #related-tours .lsx-to-slider-inner .slick-dots {
+        display: flex!important;
+        margin-top: 1rem;
+    }
+
+    #collapse-reviews .lsx-to-slider-inner .slick-arrow,
+    #related-tours .lsx-to-slider-inner .slick-arrow {
+        display: none!important;
+    }
+    .single-lsx-to-tour .lsx-to-slider-inner,
+    .single-lsx-to-tour #reviews .lsx-to-slider-inner {
+        padding: 0;
+    }
+    .lsx-to-slider-inner .slick-dots:not(.dropdown-menu) > li > button, .gallery .slick-dots:not(.dropdown-menu) > li > button {
+        width: 3rem;
+    }
+    .single-lsx-to-tour #reviews .slick-slide {
+        margin: 0;
     }
 }

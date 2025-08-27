@@ -113,6 +113,30 @@
             });
         });
 
+        const galleries = document.querySelectorAll('.tour-accommodation-gallery .slider-content');
+
+        galleries.forEach(function(gallery) {
+            if (!$(gallery).hasClass('slick-initialized')) {
+                $(gallery).slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: true,
+                    dots: false,
+                    responsive: [
+                        {
+                            breakpoint: 1280,
+                            settings: {
+                                arrows: true,
+                                dots: false,
+                                prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
+                                nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
+                            }
+                        }
+                    ]
+                });
+            }
+        });
     });
 
 })( jQuery, window, document );

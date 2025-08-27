@@ -384,7 +384,7 @@ function tsp_map_meta() {
  * @subpackage	template-tags
  * @category 	helper
  */
-function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false, $post_template = false ) {
+function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false, $post_template = false, $max_items = 15 ) {
 	if ( false !== $taxonomy ) {
 		$return     = false;
 		$filters    = array();
@@ -399,7 +399,7 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 		if ( is_array( $taxonomy ) ) {
 			$filters['post__in'] = $taxonomy;
 		} else {
-			$filters['posts_per_page'] = 15;
+			$filters['posts_per_page'] = $max_items;
 			//Exclude the current post
 			$filters['post__not_in'] = array( get_the_ID() );
 			//if its set to related then we need to check by the type.
@@ -477,7 +477,6 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 			echo '<div id="slider-' . esc_attr( $carousel_id ) . '" class="lsx-to-slider">';
 			echo '<div class="lsx-to-slider-wrap">';
 			
-			//echo '<div class="lsx-to-slider-inner" data-interval="' . esc_attr( $interval ) . '" data-slick=\'' . json_encode( $slider_atts ) .'\'>';
 			echo "<div class='lsx-to-slider-inner' data-interval='{$interval}' data-slick='{ \"slidesToShow\": {$columns}, \"slidesToScroll\": {$columns} }'>";
 
 			while ( $related_query->have_posts() ) :
@@ -759,16 +758,11 @@ function tsp_included_block() {
     $tour_included = lsx_to_included( '', '', false );
     $tour_not_included = lsx_to_not_included( '', '', false );
 
-    if ( null !== $tour_included || null !== $tour_not_included ) {
-        $class = 'col-xs-12 col-md-6';
-
-        if ( ( null === $tour_included && null !== $tour_not_included ) || ( null !== $tour_included && null === $tour_not_included ) ) {
-            $class = 'col-xs-12';
-        }
+    $class = null !== $tour_included && null !== $tour_not_included ? 'two-col' : '';
         ?>
-        <div id="included-excluded" class="row">
+        <div id="included-excluded" class="included-excluded <?php echo esc_attr( $class ); ?>">
             <?php if ( null !== $tour_included ) { ?>
-                <div class="<?php echo esc_attr( $class ); ?> included">
+                <div class="included">
                     <h3><?php esc_html_e( 'What\'s Included', 'tour-operator' ); ?></h3>
                     <div class="entry-content">
                         <?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
@@ -778,7 +772,7 @@ function tsp_included_block() {
             }
             if ( null !== $tour_not_included ) {
                 ?>
-                <div class="<?php echo esc_attr( $class ); ?> not-included">
+                <div class="not-included">
                     <h3><?php esc_html_e( 'What\'s Excluded', 'tour-operator' ); ?></h3>
                     <div class="entry-content">
                         <?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
@@ -787,7 +781,6 @@ function tsp_included_block() {
             <?php } ?>
         </div>
         <?php
-    }
 }
 
 function tsp_has_gallery()

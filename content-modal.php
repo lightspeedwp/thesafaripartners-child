@@ -7,11 +7,6 @@
  */
 global $post;
 setup_postdata( $post );
-
-// check if post type is accommodation
-if($post->post_type === 'accommodation') {
-
-};
 ?>
 <article class="lsx-to-modal-content-area content-area">
     <?php if ($post->post_type === 'accommodation') {

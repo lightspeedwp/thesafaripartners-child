@@ -211,16 +211,9 @@ get_header(); ?>
                                                 if (1 === $counter || 2 === $counter) {
                                                     $style = 'style="min-width:120px"';
                                                 }
-                                                echo '<th ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
+                                                echo '<th colspan="2" ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
                                                 $counter++;
                                             }
-
-                                            echo '<th class="currency-selector-table">' . wp_nav_menu(
-                                                            array(
-                                                                    'theme_location' => 'currency-selector',
-                                                                    'echo' => false,
-                                                            ),
-                                                    ) . '</th>';
                                             ?>
                                         </tr>
                                         </thead>
@@ -289,12 +282,12 @@ get_header(); ?>
                         <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></h2>
                             <?php
 
-                            tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour' );
+                            tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour', 4 );
                             ?>
                     </div>
                 </div>
             </section>
-                <?php } ?>
+            <?php } ?>
 		</main><!-- #main -->
 		<?php lsx_content_after(); ?>
 	</div><!-- #primary -->
