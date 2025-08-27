@@ -457,12 +457,14 @@ body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item
 }
 #cookie-law-info-bar {
     position: fixed!important;
-    bottom: 0;
-    width: 800px!important;
+    bottom: 2.5vw;
+    width: 800px;
+    max-width: 95vw;
     display: flex;
     justify-content: center!important;
-    left: 50%!important;
-    margin-left: -400px!important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     background-color: #F2EDEB!important;
     border: 1px solid #262423;
 }
@@ -3707,11 +3709,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     color: #ce9e57!important;
 }
 .lsx-to-widget-view-all {
-    margin-top: -10px;
+    margin: 0;
 }
 .lsx-testimonials-slider .slick-arrow {
     top: 96%!important;
 }
+
+.single-lsx-to-tour .lsx-testimonials-slider .lsx-to-slider-inner {
+    padding: 0;
+}
+
+.lsx-to-slider-inner .slick-arrow:before, .gallery .slick-arrow:before, .slick-lightbox-inner .slick-arrow:before
 .lsx-testimonials-slider .slick-arrow.slick-next {
     right: 2rem;
 }
@@ -3765,7 +3773,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 }
 .lsx-testimonials-slider .slick-arrow.slick-prev:before {
     content: "\f104"!important;
-    left: 1.1rem!important;
+    left: 0;
     font-family: FontAwesome;
     background-image: none!important;
     font-size: 16px!important;
@@ -3849,6 +3857,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
 .archive .lsx-wizard-progress-buttons-wrapper, .single-lsx-to-destination .lsx-wizard-progress-buttons-wrapper {
     bottom: 0px!important;
     right: 16%!important;
+}
+
+#footer-widgets .container {
+    padding: 0 1rem;
 }
 @media (max-width:1199px) {
     #masthead .navbar-header {
@@ -6240,7 +6252,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     }
     #masthead {
         height: 72px;
-        margin-top: 30px;
+        /*margin-top: 30px;*/
     }
     h1 {
         font-size: 46px!important;
@@ -7729,6 +7741,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body>[aria-hidden] {
     font-size: 1.25rem;
 }
 
+.tsp-itinerary-meta .tsp-meta-value {
+    font-size: 1.25rem;
+}
+
 .single-lsx-to-tour .tsp-itinerary-content h3 {
     margin: 0!important;
     color: #8D621F!important;
@@ -8054,6 +8070,7 @@ section#dates-prices {
     right: 0;
     width: 2.5rem!important;
     height: 2.5rem!important;
+    text-align: right;
 }
 
 .single-lsx-to-tour .lsx-to-slider-inner .slick-arrow.slick-prev:before {
@@ -8096,6 +8113,11 @@ section#dates-prices {
     padding: 1.88rem;
     border: 2px solid #8D621F;
     background: #F6F3F1;
+}
+
+.lsx-modal.modal ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .lsx-to-modal-meta-data .lsx-to-meta-data {
@@ -8182,6 +8204,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     color: #565B3D;
 }
 
+
+#lsx-banner {
+    margin-top: 0!important;
+}
 #lsx-banner .btn-scroll-to {
     margin-top: 1.25rem;
 }
@@ -8191,12 +8217,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     margin-top: 5.3125rem;
 }
 
-#footer-widgets .lsx-to-slider-inner .slick-arrow.slick-next:before,
+#footer-widgets .lsx-to-slider-inner .slick-arrow.slick-prev:before,
 #footer-widgets .lsx-to-slider-inner .slick-arrow.slick-next:before {
     position: static;
-}
-#footer-widgets .lsx-testimonials-slider .slick-arrow.slick-next {
-    right: 0;
+    transform: none;
 }
 
 #footer-widgets .lsx-to-slider-inner .slick-arrow {
@@ -8262,17 +8286,25 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     font-size: 2rem;
     line-height: 1.5;
 }
-.single-lsx-to-tour .tour-accommodation-galery .lsx-to-slider-inner {
+.single-lsx-to-tour .tour-accommodation-gallery .lsx-to-slider-inner {
     padding: 0;
     margin: 0;
 }
 
-.single-lsx-to-tour .tour-accommodation-galery .lsx-to-slider-inner .slick-arrow.slick-prev {
+.single-lsx-to-tour .tour-accommodation-gallery .lsx-to-slider-inner .slick-arrow.slick-prev {
     left: -1.25rem;
 }
 
-.single-lsx-to-tour .tour-accommodation-galery .lsx-to-slider-inner .slick-arrow.slick-next {
+.single-lsx-to-tour .tour-accommodation-gallery .lsx-to-slider-inner .slick-arrow.slick-next {
     right: -1.25rem;
+}
+
+.type-lsx-to-review p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
 /* Keep sections expanded on mobile and prevent height jumping */
@@ -8537,5 +8569,13 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     }
     .single-lsx-to-tour #reviews .slick-slide {
         margin: 0;
+    }
+
+    .tsp-itinerary-day .entry-content p {
+        margin-bottom: 1rem;
+    }
+
+    .tsp-itinerary-day .entry-content {
+        margin-top: 1rem;
     }
 }
