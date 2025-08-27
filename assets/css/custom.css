@@ -8306,6 +8306,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     margin-bottom: 0;
 }
 
+.single.single-lsx-to-tour .modal .modal-body {
+    overflow-x: visible;
+}
+
 /* Keep sections expanded on mobile and prevent height jumping */
 /*@media (min-width: 767px) and (max-width: 1199px) {*/
 /*    .single-lsx-to-tour .lsx-to-collapse-section .collapse {*/
