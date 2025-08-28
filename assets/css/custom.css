@@ -6835,6 +6835,16 @@ footer .col-sm-12 {
         width: 70%;
         float: none;
     }
+
+    .footer-navigation > ul {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #colophon p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 767px) {
