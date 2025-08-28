@@ -7301,7 +7301,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
 
     #travel-footer {
         background-image: url("https://www.thesafaripartners.com/wp-content/uploads/2022/06/tsp-footer.jpg");
-        background-color: #262423;
+        background-color: #000;
         height: auto;
         background-position: center bottom+100px;
         background-repeat: no-repeat;
@@ -9181,6 +9181,10 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
 
 .included-excluded.two-col {
     grid-template-columns: repeat(2, 1fr);
+}
+
+.single-lsx-to-tour .included-excluded h3 {
+    margin-bottom: 1.25rem
 }
 
 .single-lsx-to-tour #included-excluded .entry-content ul {
