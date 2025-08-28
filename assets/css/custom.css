@@ -4592,8 +4592,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
     right: 16% !important;
 }
 
+footer .container,
 #footer-widgets .container {
     padding: 0 1rem;
+}
+
+footer .col-sm-12 {
+    padding: 0 15px!important;
 }
 
 @media (max-width: 1199px) {
@@ -6827,7 +6832,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
 
     #footer-sub .gform_footer {
         margin: 0 auto;
-        width: 20%;
+        width: 70%;
         float: none;
     }
 }
