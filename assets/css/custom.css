@@ -629,6 +629,7 @@ body.search-results #mega-menu-wrap-primary #mega-menu-primary li#mega-menu-item
     margin: auto;
     bottom: -36px;
     position: absolute;
+    display: none;
 }
 
 #footer-widgets .lsx-to-widget-blockquote .fa-star, #footer-widgets .lsx-to-widget-blockquote .lsx-review-author, #footer-widgets .lsx-to-meta-data, #footer-widgets .lsx-to-widget-blockquote .read-more {
@@ -4689,6 +4690,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
         margin-left: -36% !important;
         width: 72% !important;
         margin-top: 20px !important;
+        top: 0!important;
     }
 
     .mobileonly {
@@ -5374,6 +5376,11 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
         margin-left: 6%;
         margin-right: 8%;
         width: 45%;
+        padding-top: 0;
+    }
+
+    .page-id-133965 .search-results .lsx-to-widget-item-wrap {
+        margin-top: 2.5rem;
     }
 
     #primary .tab {
@@ -6020,6 +6027,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
         padding: 0px !important;
     }
 
+    footer .row,
     #footer-widgets .row {
         display: block;
         width: 96%;
@@ -6821,7 +6829,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
 }
 
 @media (max-width: 767px) {
-    .row {
+    main .row {
         margin: 0 !important;
     }
 
@@ -6935,7 +6943,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
     }
 
     .pum-theme-133244 .pum-container, .pum-theme-lightbox .pum-container {
-        padding-top: 80px;
+        padding-top: 10px;
         margin-bottom: 40px;
     }
 
@@ -9335,7 +9343,7 @@ section#dates-prices {
 }
 
 .lsx-to-widget-items {
-    margin-top: -30px;
+    margin-top: -2.5rem;
 }
 
 .toptours-posts .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow {
@@ -9377,7 +9385,7 @@ section#dates-prices {
 }
 
 #footer-widgets {
-    padding: 15px 0 2.65rem;
+    padding: 15px 0;
 }
 
 #footer-widgets .widget {
@@ -9632,7 +9640,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 }
 
 #footer-widgets .lsx-to-slider-inner .slick-arrow {
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .tsp-related-tour-meta {
@@ -9721,6 +9729,15 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
 .single.single-lsx-to-tour .modal .modal-body {
     overflow-x: visible;
+}
+
+.gutenberg-compatible-template.using-gutenberg .alignwide, .gutenberg-compatible-template.using-gutenberg.single-post .alignwide, .gutenberg-compatible-template.using-gutenberg.page-template-default .alignwide, .gutenberg-compatible-template.using-gutenberg.page-template-template-cover .alignwide, .gutenberg-compatible-template.using-gutenberg.page-template-template-no-sidebar .alignwide {
+    max-width: 1200px;
+    width: calc(100vw - 5rem);
+}
+
+.gform_wrapper.gravity-theme .gform_validation_errors>h2 {
+    margin: 0!important;
 }
 
 @media (min-width: 1200px) {

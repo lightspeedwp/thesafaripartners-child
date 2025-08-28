@@ -10,30 +10,30 @@ get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
+    <div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
 
-		<?php lsx_content_before(); ?>
+        <?php lsx_content_before(); ?>
 
-		<main id="main" class="site-main" role="main">
-			<?php lsx_content_top(); ?>
+        <main id="main" class="site-main" role="main">
+            <?php lsx_content_top(); ?>
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				?>
+            <?php
+            while ( have_posts() ) :
+                the_post();
+                ?>
 
-				<section id="overview" class="content-area clearfix <?php lsx_to_collapsible_class( 'tour', true ); ?>">
+                <section id="overview" class="content-area clearfix <?php lsx_to_collapsible_class( 'tour', true ); ?>">
                     <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-overview' ); ?>><?php esc_html_e( 'Overview', 'tour-operator' ); ?></div>
                     <div id="collapse-overview" class="collapse in">
                         <div class="collapse-inner">
                             <?php get_template_part( 'content', 'tour' ); ?>
                         </div>
                     </div>
-				</section>
+                </section>
 
-			<?php endwhile; ?>
+            <?php endwhile; ?>
 
-			<?php lsx_content_bottom(); ?>
+            <?php lsx_content_bottom(); ?>
 
             <?php
             // Maps
@@ -50,7 +50,7 @@ get_header(); ?>
                 </div>
             </section>
             <?php
-			}
+            }
 
             if( tsp_has_gallery()) { ?>
                 <section id="gallery" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
@@ -65,31 +65,31 @@ get_header(); ?>
                 </section>
             <?php }
 
-			if ( function_exists( 'lsx_to_videos' ) ) {
-				lsx_to_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
-			} elseif ( class_exists( 'Envira_Videos' ) ) {
-				lsx_to_envira_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
-			}
+            if ( function_exists( 'lsx_to_videos' ) ) {
+                lsx_to_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
+            } elseif ( class_exists( 'Envira_Videos' ) ) {
+                lsx_to_envira_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
+            }
 
-			// Itinerary
-			if ( lsx_to_has_itinerary() ) {
-				$itinerary_count = 1;
-				?>
-				<section id="itinerary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+            // Itinerary
+            if ( lsx_to_has_itinerary() ) {
+                $itinerary_count = 1;
+                ?>
+                <section id="itinerary" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                     <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-itinerary' ); ?>><?php esc_html_e( 'Day-by-Day Itinerary', 'tour-operator' ); ?></div>
 
-					<div id="collapse-itinerary" class="collapse in">
-						<div class="collapse-inner">
+                    <div id="collapse-itinerary" class="collapse in">
+                        <div class="collapse-inner">
                             <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Day-by-Day Itinerary', 'tour-operator' ); ?></h2>
 
-							<div class="tsp-itinerary-list">
-								<?php while ( lsx_to_itinerary_loop() ) { ?>
-									<?php
-										lsx_to_itinerary_loop_item();
-										$thumb = lsx_to_itinerary_thumbnail('lsx-block-post-grid-landscape');
-									?>
+                            <div class="tsp-itinerary-list">
+                                <?php while ( lsx_to_itinerary_loop() ) { ?>
+                                    <?php
+                                        lsx_to_itinerary_loop_item();
+                                        $thumb = lsx_to_itinerary_thumbnail('lsx-block-post-grid-landscape');
+                                    ?>
 
-									<div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'tsp-itinerary-day' ); ?>>
+                                    <div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'tsp-itinerary-day' ); ?>>
                                             <div class="tsp-itinerary-content">
                                                 <h3><?php tsp_itinerary_title(); ?></h3>
                                                 <?php
@@ -104,19 +104,19 @@ get_header(); ?>
                                         <div class="tsp-itinerary-thumb">
                                             <?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
                                         </div>
-									</div>
-									<?php
-									$itinerary_count++;
-								}
-								?>
-							</div>
-						</div>
-					</div>
+                                    </div>
+                                    <?php
+                                    $itinerary_count++;
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
 
-					<?php lsx_to_itinerary_read_more(); ?>
-				</section>
-			<?php
-			}
+                    <?php lsx_to_itinerary_read_more(); ?>
+                </section>
+            <?php
+            }
 
 
             if (tsp_has_prices()) { ?>
@@ -251,7 +251,7 @@ get_header(); ?>
             </section>
             <?php }
 
-			if ( function_exists( 'tsp_tour_reviews' ) && tsp_has_tour_reviews() ) { ?>
+            if ( function_exists( 'tsp_tour_reviews' ) && tsp_has_tour_reviews() ) { ?>
                 <section id="reviews" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                     <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-reviews' ); ?>><?php esc_html_e( 'Customer Reviews', 'tour-operator' ); ?></div>
 
@@ -262,8 +262,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </section>
-
-			<?php } ?>
+            <?php } ?>
 
             <?php
             $connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
@@ -271,26 +270,22 @@ get_header(); ?>
             global $columns;
             $columns = 3;
 
-            if (tsp_has_related_tours()) {
+            if ( tsp_has_related_tours() ) {
             ?>
+                <section id="related-tours" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                    <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-related-tours' ); ?>><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></div>
 
-            <section id="related-tours" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-                <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-related-tours' ); ?>><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></div>
-
-                <div id="collapse-related-tours" class="collapse in">
-                    <div class="collapse-inner">
-                        <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></h2>
-                            <?php
-
-                            tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour', 8 );
-                            ?>
+                    <div id="collapse-related-tours" class="collapse in">
+                        <div class="collapse-inner">
+                            <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Related Tours', 'tour-operator' ); ?></h2>
+                            <?php tsp_related_items( $connected_tours, '', '' , true, 'tour', 'related-tour', 8 ); ?>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             <?php } ?>
-		</main><!-- #main -->
-		<?php lsx_content_after(); ?>
-	</div><!-- #primary -->
+        </main><!-- #main -->
+        <?php lsx_content_after(); ?>
+    </div><!-- #primary -->
 <?php lsx_content_wrap_after(); ?>
 <?php
 get_footer();
