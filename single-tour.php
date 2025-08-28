@@ -102,7 +102,7 @@ get_header(); ?>
                                             </div>
 
                                         <div class="tsp-itinerary-thumb">
-                                            <?php echo wp_kses_post( '<img alt="thumbnail" loading="lazy" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
+                                            <?php echo wp_kses_post( '<img alt="thumbnail" class="attachment-responsive wp-post-image lsx-responsive" src="' . $thumb . '">' ); ?>
                                         </div>
 									</div>
 									<?php
