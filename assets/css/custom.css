@@ -5677,7 +5677,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
     }
 }
 
-@media (min-width: 767px) and (max-width: 1200px) {
+@media (min-width: 767px) and (max-width: 1280px) {
     #footer-widgets .lsx-to-meta-data.lsx-to-meta-data-rating {
         display: none;
     }
@@ -9745,7 +9745,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 }
 
 #menu-connect-footer li a {
-    display: inline-flex;
+    display: inline-flex!important;
     align-items: center;
 }
 
