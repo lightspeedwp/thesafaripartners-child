@@ -830,6 +830,10 @@ body .wp-block-tour-operator-block-post-types .lsx-to-widget-content .tourslink 
     background: #fff;
 }
 
+.pum.pum-theme-lightbox h2, .pum.pum-theme-lightbox h3 {
+    padding: 0 30px!important;
+}
+
 @media (min-width: 641px) {
     .gform_wrapper.gravity-theme .gfield.tsp-width-third {
         grid-column: span 4;
@@ -9740,6 +9744,11 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     margin: 0!important;
 }
 
+#menu-connect-footer li a {
+    display: inline-flex;
+    align-items: center;
+}
+
 @media (min-width: 1200px) {
     .single-lsx-to-tour .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
@@ -9993,5 +10002,26 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
     .tour-accommodation-gallery .lsx-to-slider-inner .slick-arrow.slick-next:before {
         left: 10px !important;
+    }
+
+    .lsx-to-widget-items {
+        margin-top: -1.7rem;
+    }
+
+    .toptours-posts .lsx-to-slider-inner .slick-arrow, .gallery .slick-arrow {
+        top: 5.5rem;
+    }
+
+    #footer-widgets .row {
+        margin-left: -15px!important;
+        margin-right: -15px!important;
+    }
+
+    .archive-intro {
+        padding-bottom: 0;
+    }
+
+    .mega-sub-menu .lsx-to-widget-items {
+        margin-top: -1.5rem;
     }
 }
