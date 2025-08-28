@@ -8261,10 +8261,6 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     margin-bottom: 0;
 }
 
-.tsp-related-tour-content h4 {
-    min-height: 4rem;
-}
-
 .tsp-related-tour-content .tour-excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;

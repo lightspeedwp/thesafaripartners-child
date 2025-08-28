@@ -269,7 +269,7 @@ get_header(); ?>
             $connected_tours = get_post_meta( get_the_ID(), 'related_tours', true );
 
             global $columns;
-            $columns = 4;
+            $columns = 3;
 
             if (tsp_has_related_tours()) {
             ?>
