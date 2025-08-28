@@ -5996,10 +5996,6 @@ footer .col-sm-12 {
         text-align: center;
     }
 
-    .cta-home .wp-block-buttons {
-        display: block !important;
-    }
-
     .whyus .wp-block-column {
         width: 49% !important;
         float: left;
@@ -6834,6 +6830,7 @@ footer .col-sm-12 {
         margin: 0 auto;
         width: 70%;
         float: none;
+        justify-content: center;
     }
 
     .footer-navigation > ul {
@@ -9762,6 +9759,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 #menu-connect-footer li a {
     display: inline-flex!important;
     align-items: center;
+}
+
+.clear-left {
+    clear: left;
 }
 
 @media (min-width: 1200px) {
