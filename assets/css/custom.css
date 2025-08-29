@@ -4872,7 +4872,7 @@ footer .col-sm-12 {
     }
 
     .gutenberg-compatible-template.using-gutenberg.page-template-default:not(.has-block-banner):not(.has-block-media-text):not(.has-block-cover).lsx-disabled-hidden-title .entry-content, .gutenberg-compatible-template.using-gutenberg.page-template-template-cover:not(.has-block-banner):not(.has-block-media-text):not(.has-block-cover).lsx-disabled-hidden-title .entry-content {
-        max-width: 1204px;
+        max-width: 1200px;
         margin: 0 auto;
         float: none;
     }
@@ -4882,7 +4882,7 @@ footer .col-sm-12 {
     }
 
     #colophon .container, #footer-sub .footer-sub-area {
-        max-width: 1204px;
+        max-width: 1200px;
         margin: auto;
         padding: 0;
     }
@@ -4906,7 +4906,7 @@ footer .col-sm-12 {
     }
 
     .page-id-133119 #primary .notfull {
-        max-width: 1204px;
+        max-width: 1200px;
         padding: 0 !important;
     }
 
@@ -4926,12 +4926,12 @@ footer .col-sm-12 {
     }
 
     .toptours-posts .lsx-to-slider-inner {
-        max-width: 1204px;
+        max-width: 1200px;
         margin: 5px 0px 20px 0px !important;
     }
 
     .archive #primary, .single-lsx-to-destination #primary, .single-lsx-to-tour #primary {
-        max-width: 1204px;
+        max-width: 1200px;
 
         margin: 0 auto;
         float: none !important;
@@ -6806,7 +6806,7 @@ footer .col-sm-12 {
     }
 
     #footer-sub {
-        padding: 70px 5% 100px !important;
+        padding: 70px 30px 100px !important;
     }
 
     #footer-sub .gform_heading {
