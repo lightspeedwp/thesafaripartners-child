@@ -214,6 +214,13 @@ get_header(); ?>
                                                 echo '<th ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
                                                 $counter++;
                                             }
+
+                                            echo '<th class="currency-selector-table">' . wp_nav_menu(
+                                                            array(
+                                                                    'theme_location' => 'currency-selector',
+                                                                    'echo' => false,
+                                                            ),
+                                                    ) . '</th>';
                                             ?>
                                         </tr>
                                         </thead>
