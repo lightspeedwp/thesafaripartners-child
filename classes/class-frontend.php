@@ -595,7 +595,10 @@ class Frontend {
 	 */
 	public function banner_image_placeholder( $image ) {
 		if ( is_singular( 'tour' ) && ( false === $image || empty( $image ) ) ) {
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+			$temp_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+			if ( is_array( $temp_image ) && isset( $temp_image[0] ) ) {
+				$image = $temp_image[0];
+			}
 		}
 		return $image;
 	}
