@@ -167,6 +167,9 @@ class Frontend {
 		add_filter( 'lsx_currencies_nav_additional_items', array( $this, 'order_currency_dropdown' ), 10, 1 );
 		add_filter( 'the_content', array( $this, 'order_currency_dropdown' ), 10, 1 );
 
+		// Tour Operator
+		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
+
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
@@ -581,5 +584,18 @@ class Frontend {
 	public function email_a_friend_values( $content ) {
 		$content = str_replace( '{tour_url}', get_permalink(), $content );
 		return $content;
+	}
+
+	/**
+	 * Adds the featured image as the banner placeholder.
+	 *
+	 * @param boolean|string $image
+	 * @return string
+	 */
+	public function banner_image_placeholder( $image ) {
+		if ( is_singular( 'tour' ) && ( false === $image || empty( $image ) ) ) {
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+		}
+		return $image;
 	}
 }
