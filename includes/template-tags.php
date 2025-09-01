@@ -619,6 +619,13 @@ function tsp_itinerary_title( $echo = true ) {
                 }
             }
 
+			if ( '' === $destinations ) {
+				$ends_in = get_post_meta( get_the_ID(), 'ends_in', true );
+				if ( ! empty( $ends_in ) ) {
+					$destinations = ' : ' . '<span class="destinations">' . esc_html( get_the_title( $ends_in ) ) . '</span>';
+				}
+			}
+
             $title_with_destination = $title . $destinations;
             $title_with_destination = apply_filters( 'lsx_to_itinerary_title', $title_with_destination, $tour_itinerary );
 
