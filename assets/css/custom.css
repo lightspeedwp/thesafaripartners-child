@@ -4601,10 +4601,6 @@ footer .col-sm-12 {
     padding: 0 15px!important;
 }
 
-body.single-tour-operator #gallery .gallery .gallery-caption {
-    
-}
-
 @media (max-width: 1199px) {
     #masthead .navbar-header {
         width: 215px;
@@ -9424,6 +9420,7 @@ section#dates-prices {
 #footer-widgets .widget-title {
     margin-bottom: 1.5rem;
 }
+
 #reviews .single-lsx-to-tour .slick-slide {
     height: auto !important;
 }
@@ -9785,6 +9782,28 @@ body.single-tour-operator #gallery .gallery .gallery-caption {
     display: none;
 }
 
+.gallery .gallery-item {
+    padding: 5px;
+    
+}
+
+.gallery-icon.landscape a {
+    position: relative;
+    display: block;
+    padding-top: 75%;
+    height: 0;
+}
+
+body.single-tour-operator #gallery .gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
 @media (min-width: 1200px) {
     .single-lsx-to-tour .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
@@ -9927,7 +9946,7 @@ body.single-tour-operator #gallery .gallery .gallery-caption {
     section#dates-prices .table td {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        white-space: normal;
+        white-space: normal
     }
 
     section#dates-prices td.book-now-wrapper {
