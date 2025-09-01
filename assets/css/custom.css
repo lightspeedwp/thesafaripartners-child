@@ -4601,6 +4601,10 @@ footer .col-sm-12 {
     padding: 0 15px!important;
 }
 
+body.single-tour-operator #gallery .gallery .gallery-caption {
+    
+}
+
 @media (max-width: 1199px) {
     #masthead .navbar-header {
         width: 215px;
@@ -9068,6 +9072,10 @@ footer .col-sm-12 {
     border-top: 0;
 }
 
+.lsx-to-map-marker .lsx-to-map-marker-content.content-area {
+    padding: 0;
+}
+
 .single-lsx-to-tour section {
     border-top: 1px solid #565B3D;
 }
@@ -9916,7 +9924,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     section#dates-prices .table td {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        white-space: normal
+        white-space: normal;
     }
 
     section#dates-prices td.book-now-wrapper {
