@@ -9461,6 +9461,10 @@ section#dates-prices {
     text-align: left;
 }
 
+.single-lsx-to-tour #related-tours .tsp-related-tour-content h4 {
+    height: 4rem;
+}
+
 .single-lsx-to-tour #reviews .lsx-to-widget-blockquote h4 a,
 .single-lsx-to-tour #related-tours .tsp-related-tour-content h4 a {
     color: #090909 !important;

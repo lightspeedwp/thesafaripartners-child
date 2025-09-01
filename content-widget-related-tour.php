@@ -58,7 +58,6 @@ if ( $has_single ) {
             echo '<div class="tsp-meta tsp-countries">';
             lsx_to_connected_countries('<i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '"></span><span> ', '</span></span>');
             echo '</div>';
-            the_terms( get_the_ID(), 'travel-style', '<div class="tsp-meta tsp-type"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '"></span><span> ', ', ', '</span></span></div>' );
             ?>
         </div>
 
