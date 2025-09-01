@@ -206,12 +206,18 @@ get_header(); ?>
                                             <?php
                                             // Format the column Titles
                                             $counter = 1;
+                                            // get number of columns
+                                            $column_count = count($column_titles);
                                             foreach ($column_titles as $column_index) {
+                                                $width = round(100 / ($column_count), 2);
                                                 $style = '';
                                                 if (1 === $counter || 2 === $counter) {
-                                                    $style = 'style="min-width:120px"';
+                                                    $style = 'style="width:' . $width . '%;min-width:120px"';
+                                                } else {
+                                                    $style = 'style="width:' . $width . '%"';
                                                 }
-                                                echo '<th ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
+
+                                                echo '<th " ' . $style . '>' . get_post_meta(get_the_ID(), 'column_titles_column_' . $counter, true) . '</th>';
                                                 $counter++;
                                             }
 

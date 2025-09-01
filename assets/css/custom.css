@@ -9262,6 +9262,11 @@ footer .col-sm-12 {
     vertical-align: middle;
 }
 
+.single-lsx-to-tour .table > thead > tr > th {
+    vertical-align: top;
+    white-space: normal;
+}
+
 .single-lsx-to-tour .table > thead > tr {
     font-size: 1rem;
 }
@@ -9277,6 +9282,7 @@ footer .col-sm-12 {
     border-radius: 0.125rem !important;
     height: auto !important;
     line-height: 150%;
+    width: 100%;
 }
 
 .single-lsx-to-tour #dates-prices .btn:after {
@@ -9293,7 +9299,6 @@ footer .col-sm-12 {
 
 .single-lsx-to-tour .book-now-wrapper {
     vertical-align: middle;
-    text-align: right;
 }
 
 .single-lsx-to-tour #included-excluded {
@@ -9911,6 +9916,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     section#dates-prices .table td {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        white-space: normal
     }
 
     section#dates-prices td.book-now-wrapper {
