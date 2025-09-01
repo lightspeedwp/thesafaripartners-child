@@ -9424,8 +9424,7 @@ section#dates-prices {
 #footer-widgets .widget-title {
     margin-bottom: 1.5rem;
 }
-
-.single-lsx-to-tour .slick-slide {
+#reviews .single-lsx-to-tour .slick-slide {
     height: auto !important;
 }
 
@@ -9780,6 +9779,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 
 .clear-left {
     clear: left;
+}
+
+body.single-tour-operator #gallery .gallery .gallery-caption {
+    display: none;
 }
 
 @media (min-width: 1200px) {
