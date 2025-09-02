@@ -3262,6 +3262,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden] {
     color: #000;
     margin-bottom: 0.3rem;
     display: block;
+    white-space: nowrap;
 }
 
 .submenu-currency {
@@ -9784,14 +9785,13 @@ body.single-tour-operator #gallery .gallery .gallery-caption {
 
 .gallery .gallery-item {
     padding: 5px;
-    
 }
 
 .gallery-icon.landscape a {
-    position: relative;
-    display: block;
-    padding-top: 75%;
     height: 0;
+    display: block;
+    position: relative;
+    padding-top: 75%;
 }
 
 body.single-tour-operator #gallery .gallery img {

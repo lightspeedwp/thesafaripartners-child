@@ -129,6 +129,12 @@ get_header(); ?>
 
                         <?php
                         $price_row_amount = get_post_meta(get_the_ID(), 'price_row', true);
+                        $button_text = 'REQUEST DATE';
+
+                        // if tour type = tailored tour, then change button text
+                        if ( has_term( 'tailored-tour', 'tour-type' ) ) {
+                            $button_text = 'INQUIRE';
+                        }
                         if (false !== $price_row_amount && 0 !== $price_row_amount) {
 
                             $column_titles = array();
@@ -189,7 +195,7 @@ get_header(); ?>
 
                                     $column_titles = array_keys($rc_data);
 
-                                    $rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title(get_the_ID()) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">REQUEST DATE</button></td>';
+                                    $rc_data[] = '<td class="book-now-wrapper"><button data-toggle="modal" data-gform-value="' . $btn_val . '" data-target="#tour-request-modal" data-title="' . get_the_title(get_the_ID()) . '" class="btn btn-default dates-prices-book-now popup-inquire row-' . $row_counter . '">'.$button_text.'</button></td>';
 
                                     $table_data[$row_counter] = implode('', $rc_data);
                                 }
