@@ -94,3 +94,14 @@ function tsp_custom_connected_countries_inline( $before = '', $after = '' ) {
 
     echo $stripped_output;
 }
+
+add_action( 'lsx_banner_inner_top', function() {
+    if ( is_singular( 'tour' ) ) {
+        // Get the banner image URL using the same filter as the main banner
+        $banner_image = apply_filters( 'lsx_banner_image', false );
+        if ( ! empty( $banner_image ) ) {
+            echo '<div class="page-banner-image banner-blur" style="background-image:url(' . esc_url( $banner_image ) . ');"></div>';
+        }
+    }
+});
+

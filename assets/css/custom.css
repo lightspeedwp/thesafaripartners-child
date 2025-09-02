@@ -9804,6 +9804,21 @@ body.single-tour-operator #gallery .gallery img {
     object-fit: cover;
 }
 
+.single.single-lsx-to-tour .page-banner-wrap .page-banner>.page-banner-image {
+    background-size: contain;
+    background-color: transparent;
+}
+
+.single.single-lsx-to-tour .page-banner-wrap .page-banner>.page-banner-image.banner-bg {
+    background-size: cover;
+    left: -10%;
+    right: -10%;
+    top: -10%;
+    bottom: -10%;
+    background-position: center;
+    filter: blur(10px);
+}
+
 @media (min-width: 1200px) {
     .single-lsx-to-tour .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
