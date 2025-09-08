@@ -9758,12 +9758,17 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     right: -1.25rem;
 }
 
-#footer-widgets .type-lsx-to-review p {
+#footer-widgets .lsx-review-excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
     margin-bottom: 0;
+}
+
+#footer-widgets .type-lsx-to-review .lsx-review-full
+#footer-widgets .type-lsx-to-review a {
+    display: none;
 }
 
 #footer-widgets .lsx-to-widget-items {
@@ -9889,11 +9894,6 @@ body.single-tour-operator #gallery .gallery img {
 body.modal-open div.modal-backdrop {
     opacity: 1;
     background: rgba(0,0,0,0.8);
-}
-
-.lsx-review-readmore {
-    background: transparent;
-    border: none;
 }
 
 @media (min-width: 1200px) {
