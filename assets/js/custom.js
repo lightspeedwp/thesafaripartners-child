@@ -141,6 +141,29 @@
         $('.lsx-modal').on('shown.bs.modal', function () {
             $(this).find('.accomodation-slider').slick('setPosition');
         });
+
+
+        const tourGallery = document.querySelector('#gallery .gallery');
+        console.log('hello 2');
+        if (!$(tourGallery).hasClass('slick-initialized')) {
+            console.log('hello');
+            $(tourGallery).slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+        }
     });
 
 })( jQuery, window, document );

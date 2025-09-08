@@ -823,12 +823,33 @@ function tsp_tour_gallery() {
         return '';
     }
 
-    $gallery_shortcode = '[gallery ids="' . implode( ',', $attachment_ids ) . '" size="large" columns="3" link="file"]';
+    echo '<div class="lsx-to-slider-wrap"><div id="gallery" class="lsx-to-slider-inner gallery gallery-columns-3 gallery-size-large tour-destinations-gallery">';
 
-    echo do_shortcode( $gallery_shortcode );
+    foreach ( $attachment_ids as $index => $attachment_id ) {
+        $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+        $full_url = wp_get_attachment_url( $attachment_id );
+
+        echo '<figure class="gallery-item gallery-item-' . esc_attr( $index + 1 ) . '">';
+        echo '<div class="gallery-icon landscape">';
+        echo '<a href="' . esc_url( $full_url ) . '" data-fancybox="tour-gallery">';
+
+        echo wp_get_attachment_image( $attachment_id, 'large', false, array(
+                'class' => 'attachment-large',
+                'loading' => 'lazy',
+                'alt' => $alt ? $alt : '',
+        ) );
+
+        echo '</a>';
+        echo '</div>';
+
+
+        echo '</figure>';
+    }
+
+    echo '</div></div><div class="clear"></div>';
 }
-function tsp_has_prices()
-{
+
+function tsp_has_prices() {
     $price_row_amount = get_post_meta(get_the_ID(), 'price_row', true);
 
     if (false !== $price_row_amount && 0 !== $price_row_amount) {
@@ -873,8 +894,7 @@ function tsp_has_prices()
     return false;
 }
 
-function tsp_tour_reviews()
-{
+function tsp_tour_reviews() {
     global $lsx_archive;
 
     if (post_type_exists('review') && is_singular('tour')) {
