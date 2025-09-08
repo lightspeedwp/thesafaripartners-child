@@ -575,8 +575,8 @@ function tsp_tour_fast_facts()
         echo '<div class="tsp-meta tsp-tourtype"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '">' . esc_html__('Type Of Tour', 'tour-operator') . '</span><span>' . esc_html($tour_type_display) . '</span></span></div>';
     }
 
-    lsx_to_duration('<div class="tsp-meta tsp-duration"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator') . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
-    lsx_to_connected_countries('<div class="tsp-meta tsp-countries"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator') . '</span><span> ', '</span></span></div>');
+    lsx_to_duration('<div class="tsp-meta tsp-duration"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator' ) . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
+    lsx_to_connected_countries('<div class="tsp-meta tsp-countries"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator' ) . '</span><span> ', '</span></span></div>');
 }
 
 function tsp_to_itinerary_meals( $before = '', $after = '' ) {
@@ -1057,3 +1057,119 @@ function tsp_modal_trimmed_content( $content ) {
     echo ' <button type="button" style="display: none" class="tsp-toggle-btn tsp-modal-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Read Less', 'tour-operator' ) . '</button>';
     echo '</div>';
 }
+
+/**
+ * Display tour search results with FacetWP integration and preselected facets
+ *
+ * @param array $preselected_facets Array of facet values to preselect (e.g., ['fwp_where' => 'kenya'])
+ * @param bool $show_filters Whether to show the filter sidebar (default: true)
+ * @param string $wrapper_class Additional CSS class for the wrapper
+ * @return void
+ */
+function tsp_tour_search( $preselected_facets = array(), $show_filters = true, $wrapper_class = '' ) {
+    if ( ! empty( $preselected_facets ) ) {
+        $facetwp_preselect = array();
+        foreach ( $preselected_facets as $facet_name => $facet_value ) {
+            $_GET[ $facet_name ] = $facet_value;
+            // Remove 'fwp_' prefix if needed for FacetWP facet name
+            $facet_key = str_replace( 'fwp_', '', $facet_name );
+            $facetwp_preselect[ $facet_key ] = (array) $facet_value;
+        }
+        $GLOBALS['tsp_facetwp_preselect'] = $facetwp_preselect;
+    }
+
+
+
+    // Create basic query args that FacetWP will modify
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page' => 6,
+        'facetwp'       => true,
+    );
+
+    // Remove the orderby to let FacetWP handle it
+    $search_query = new WP_Query( $search_query_args );
+
+    ?>
+    <div class="search-main <?php echo esc_attr( $wrapper_class ); ?>">
+        <?php if ( $show_filters ) : ?>
+        <div class="search-sidebar">
+            <h2><?php esc_html_e( 'Filters', 'tour-operator' ); ?></h2>
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'filter-menu',
+                )
+            );
+            ?>
+        </div>
+        <?php endif; ?>
+
+        <div class="search-content">
+            <div class="search-header">
+                <div class="col-md-6">
+                    <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?>
+                </div>
+                <div class="col-md-6">
+                    <?php echo do_shortcode( '[facetwp facet="sort_"]' ); ?>
+                    <?php echo do_shortcode( '[facetwp selections="true"]' ); ?>
+                </div>
+            </div>
+
+            <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
+                <?php
+                if ( $search_query->have_posts() ) {
+                    while ( $search_query->have_posts() ) {
+                        $search_query->the_post();
+                        get_template_part( 'partials/content', 'search' );
+                    }
+                } else {
+                    ?>
+                    <div class="no-results">
+                        <p><?php esc_html_e( 'No tours found matching your criteria.', 'tour-operator' ); ?></p>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+
+            <div class="lsx-pagination">
+                <?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
+            </div>
+        </div>
+    </div>
+
+    <?php
+    wp_reset_postdata();
+}
+
+/**
+ * Display tour search results for current destination with preselected destination filter
+ * This is a convenience function for single destination pages
+ *
+ * @param bool $show_filters Whether to show the filter sidebar
+ * @return void
+ */
+function tsp_destination_tour_search( $show_filters = true ) {
+    if ( ! is_singular( 'destination' ) ) {
+        return;
+    }
+
+    $current_destination_id = get_the_ID();
+    $destination = get_post( $current_destination_id );
+    $destination_slug = $destination ? $destination->post_name : '';
+
+    if ( empty( $destination_slug ) ) {
+        return;
+    }
+
+    // Preselect the current destination in the where facet
+    $preselected_facets = array(
+        'fwp_where' => $destination_slug,
+    );
+
+    // Add a wrapper class specific to destination tour search
+    tsp_tour_search( $preselected_facets, $show_filters, 'destination-tour-search' );
+}
+

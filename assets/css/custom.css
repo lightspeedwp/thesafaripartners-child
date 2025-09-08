@@ -2265,12 +2265,8 @@ th {
     margin: 0 auto;
 }
 
-.search-results .tax-title {
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-}
 
+/* TODO: clean this */
 .search-results .tax-title span {
     visibility: visible;
     position: absolute;
@@ -8918,6 +8914,18 @@ footer .col-sm-12 {
     background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-icon-accommodation.svg');
 }
 
+.tsp-icon-location {
+    background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-icon-location.svg');
+}
+
+.tsp-icon-africa {
+    background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-icon-africa.svg');
+}
+
+.tsp-icon-clock {
+    background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-icon-clock.svg');
+}
+
 .d-flex {
     display: flex;
 }
@@ -9049,7 +9057,7 @@ footer .col-sm-12 {
     font-family: "moret", serif;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 150%;
     letter-spacing: 0.01rem;
     margin-top: 0.625rem;
@@ -9821,6 +9829,145 @@ body.single-tour-operator #gallery .gallery img {
     bottom: -10%;
     background-position: center;
     filter: blur(10px);
+}
+
+.search-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    clear: both;
+}
+
+.search-main .search-content .post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1rem;
+    max-width: calc(17rem * 3 + 2rem);
+    margin: 0 auto;
+    clear: both;
+}
+
+.search-result-thumb {
+    aspect-ratio: 3/2;
+    display: block;
+}
+
+.search-sidebar .facetwp-facet {
+    margin-bottom: 0;
+}
+
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu.mega-menu {
+    display: flex;
+    flex-direction: column;
+}
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu.mega-menu > li {
+    border-bottom: 1px solid #565B3D;
+}
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu.mega-menu > li a {
+    padding: 1rem 0;
+    height: auto;
+    line-height: 2rem;
+    font-family: "moret", serif;
+    font-size: 1.5rem;
+}
+
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu.mega-menu li > .mega-sub-menu {
+    position: static;
+    display: none;
+}
+
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu.mega-menu li.mega-toggle-on > .mega-sub-menu {
+    display: block;
+}
+
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item,
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column-standard,
+.search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item{
+    padding: 0;
+    color: #000;
+}
+
+.search-tour-excerpt {
+    /* limit to 4 lines */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.search-result-content {
+    display: grid;
+    grid-gap: 0.625rem;
+    padding: 0.625rem;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.search-result-content:hover {
+    background: #F6F3F1;
+    border-color: #8D621F;
+}
+
+.search-result-content:hover h4 a {
+    color: #8D621F!important;
+}
+
+.search-result-content h4 {
+    margin-bottom: 0;
+    line-height: 2rem;
+}
+
+.search-main .tax-title {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    background: #CE9E57;
+    font-size: 1rem;
+    font-family: "moret", serif;
+    font-weight: 300;
+}
+
+.search-sidebar #mega-menu-filter-menu img {
+    display: none;
+}
+
+.search-sidebar .facetwp-checkbox {
+    background: none!important;
+    font-size: 1.25rem;
+    color: #090909;
+    margin-bottom: 1.25rem;
+    padding-left: 0;
+}
+
+.search-sidebar .facetwp-checkbox:before {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    content: "";
+    margin-right: 0.625rem;
+    vertical-align: middle;
+    border: 3px solid #090909;
+    border-radius: 0.25rem;
+}
+
+.search-sidebar .facetwp-checkbox:hover {
+    color: #8D621F;
+}
+
+.search-sidebar .facetwp-checkbox:hover:before {
+    border-color: #8D621F;
+}
+
+.search-sidebar .facetwp-checkbox.checked {
+    color: #8D621F;
+}
+
+.search-sidebar .facetwp-checkbox.checked:before {
+    border-color: #8D621F;
+    background-image: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.75rem;
 }
 
 @media (min-width: 1200px) {

@@ -17,23 +17,26 @@ get_header(); ?>
 
 	<?php lsx_content_before(); ?>
 
-	<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main search-main" role="main">
 
 		<?php lsx_content_top(); ?>
+        <div class="search-sidebar">
+            <h2>Filters</h2>
+		<?php
 
-		<?php 
-		
 			$search_query_args = array(
 				'post_type'     => 'tour',
 				'post_status'   => 'publish',
-				'post_per_page' => -1,
-				'nopagin'       => 'tour',
-				'orderby'       => 'post__in',
+				'posts_per_page' => -1,
 				'facetwp'       => true,
 			);
-			if ( isset( $_GET['fwp_search'] ) ) {
+
+
+//			// Handle search query
+			if ( isset( $_GET['fwp_search'] ) && !empty( $_GET['fwp_search'] ) ) {
 				$search_query_args['s'] = $_GET['fwp_search'];
 			}
+
 			$search_query = new WP_Query( $search_query_args );
 
 			if ( $search_query->have_posts() ) { ?>
@@ -44,58 +47,61 @@ get_header(); ?>
 					)
 				);
 			?>
-			<div class="search-header col-md-12">
-			
-			<p>Click above to change your answers and show different results.</p>
-			
-			<div class="col-md-6">
-				<h3>The Shaman Says...</h3>
-			</div>
-			<div class="col-md-6">
-			<div class="right-align"> <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?> </div>
-				</div>
-			<div class="clear"></div>
-				</div>
+        </div>
+        <div class="search-content">
+            <div class="search-header">
+                <div class="col-md-6">
+                    <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?>
+                </div>
+                <div class="col-md-6">
+                    <?php echo do_shortcode( '[facetwp facet="sort_"]' ); ?>
+                    <?php echo do_shortcode( '[facetwp selections="true"]' ); ?>
+                </div>
 
-			<div class="post-wrapper facetwp-template col-md-12 <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
-				<?php
-				global $wp_query, $post, $relevance_scores;
+            </div>
 
-				if ( isset( $relevance_scores ) && ! empty( $relevance_scores ) ) {
-					$temp_post = $post;
+            <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
+                <?php
+                global $wp_query, $post, $relevance_scores;
 
-					if ( ! isset( $_GET['fwp_search'] ) ) {
-						foreach ( $relevance_scores as $search_item => $score ) {
-							preg_match_all('/[0-9]+/', $score, $matches);
-							$score = 0;
-							if ( isset( $matches[0] ) ) {
-								$relevance_scores[ $search_item ] = (int) implode( '', $matches[0] );	
-							}
-						}
-						arsort( $relevance_scores );
-					}
-					
-					foreach ( $relevance_scores as $search_item => $score ) {
-						if ( 24 >= $score ) {
-							//continue;
-						}
+                if ( isset( $relevance_scores ) && ! empty( $relevance_scores ) ) {
+                    $temp_post = $post;
 
-						$post = get_post( $search_item );
-						lsx_get_template_part();
-					}
-					$post = $temp_post;
-				} else {	
-					while ( $search_query->have_posts() ) {
-						$search_query->the_post();
-						lsx_get_template_part();
-					}
-				}
-				?>
-			</div>
+                    if ( ! isset( $_GET['fwp_search'] ) ) {
+                        foreach ( $relevance_scores as $search_item => $score ) {
+                            preg_match_all('/[0-9]+/', $score, $matches);
+                            $score = 0;
+                            if ( isset( $matches[0] ) ) {
+                                $relevance_scores[ $search_item ] = (int) implode( '', $matches[0] );
+                            }
+                        }
+                        arsort( $relevance_scores );
+                    }
 
-			<div class="lsx-pagination">
-				<?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
-			</div>
+
+                    foreach ( $relevance_scores as $search_item => $score ) {
+                        if ( 24 >= $score ) {
+                            //continue;
+                        }
+
+                        $post = get_post( $search_item );
+                        get_template_part('partials/content', 'search');
+                    }
+                    $post = $temp_post;
+                } else {
+                    while ( $search_query->have_posts() ) {
+                        $search_query->the_post();
+                        get_template_part('partials/content', 'search');
+                    }
+                }
+                ?>
+            </div>
+
+            <div class="lsx-pagination">
+                <?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
+            </div>
+        </div>
+
 
 		<?php } else { ?>
 

@@ -28,6 +28,22 @@ function prefix_conditional_body_class( $classes ) {
 }
 add_filter( 'body_class', 'prefix_conditional_body_class' );
 
+/**
+ * Modify search query to only show tours and make it compatible with FacetWP
+ */
+function tsp_modify_search_query( $query ) {
+    // Only modify the main query on search pages in frontend
+    if ( ! is_admin() && $query->is_main_query() && is_search() ) {
+        print_r('modified query');
+        // Set post type to only tours
+        $query->set( 'post_type', array( 'tour' ) );
+
+        // Ensure FacetWP can hook into this query
+        $query->set( 'facetwp', true );
+    }
+}
+add_action( 'pre_get_posts', 'tsp_modify_search_query' );
+
 if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
 		return false;
 	}
@@ -105,3 +121,15 @@ add_action( 'lsx_banner_inner_top', function() {
     }
 });
 
+add_filter( 'facetwp_preload_url_vars', function( $url_vars ) {
+    $uri = FWP()->helper->get_uri();
+    if ( strpos( $uri, 'destination/' ) === 0 ) {
+        $slug = basename( $uri );
+        $post = get_page_by_path( $slug, OBJECT, 'destination' );
+        if ( $post ) {
+            $url_vars['where'] = array( $post->ID );
+        }
+    }
+
+    return $url_vars;
+});

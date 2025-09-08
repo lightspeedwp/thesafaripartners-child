@@ -122,13 +122,13 @@
                     slidesToScroll: 1,
                     arrows: true,
                     fade: true,
-                    dots: false,
+                    dots: true,
                     responsive: [
                         {
                             breakpoint: 1280,
                             settings: {
                                 arrows: true,
-                                dots: false,
+                                dots: true,
                                 prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
                                 nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
                             }
