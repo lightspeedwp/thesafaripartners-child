@@ -51,25 +51,9 @@ get_header(); ?>
             </section>
             <?php
             }
+?>
 
-            if( tsp_has_gallery()) { ?>
-                <section id="gallery" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
-                    <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-gallery' ); ?>><?php esc_html_e( 'Gallery', 'tour-operator' ); ?></div>
-
-                    <div id="collapse-gallery" class="collapse in">
-                        <div class="collapse-inner">
-                            <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Gallery', 'tour-operator' ); ?></h2>
-                            <?php lsx_to_gallery(); ?>
-                        </div>
-                    </div>
-                </section>
-            <?php }
-
-            if ( function_exists( 'lsx_to_videos' ) ) {
-                lsx_to_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
-            } elseif ( class_exists( 'Envira_Videos' ) ) {
-                lsx_to_envira_videos( '<section id="videos" class="lsx-to-section ' . lsx_to_collapsible_class() . '"><h2 class="tsp-section-title lsx-to-collapse-title lsx-title" ' . lsx_to_collapsible_attributes( 'collapse-videos' ) . '>' . esc_html__( 'Videos', 'tour-operator' ) . '</h2><div id="collapse-videos" class="collapse"><div class="collapse-inner">', '</div></div></section>' );
-            }
+            <?php
 
             // Itinerary
             if ( lsx_to_has_itinerary() ) {
@@ -118,7 +102,7 @@ get_header(); ?>
             <?php
             }
 
-
+            // Prices
             if (tsp_has_prices()) { ?>
             <section id="dates-prices" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
                 <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-dates-prices' ); ?>><?php esc_html_e( 'Dates & Prices', 'tour-operator' ); ?></div>
@@ -269,6 +253,23 @@ get_header(); ?>
                 </div>
             </section>
             <?php }
+
+            // Gallery
+            if ( lsx_to_has_itinerary() ) {
+            ?>
+            <section id="gallery" style="display:block" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">
+                <div class="tsp-collapse-title lsx-to-collapse-title lsx-title text-center visible-xs" <?php lsx_to_collapsible_attributes_not_post( 'collapse-gallery' ); ?>><?php esc_html_e( 'Gallery', 'tour-operator' ); ?></div>
+
+                <div id="collapse-gallery" class="collapse in">
+                    <div class="collapse-inner">
+                        <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Gallery', 'tour-operator' ); ?></h2>
+                        <?php tsp_tour_gallery(); ?>
+                    </div>
+                </div>
+            </section>
+            <?php
+            }
+
 
             if ( function_exists( 'tsp_tour_reviews' ) && tsp_has_tour_reviews() ) { ?>
                 <section id="reviews" class="lsx-to-section <?php lsx_to_collapsible_class( 'tour', false ); ?>">

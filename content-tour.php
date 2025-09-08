@@ -19,9 +19,9 @@ if ( 1 !== $lsx_to_archive ) {
 	<?php lsx_entry_top(); ?>
 
 	<?php if ( is_single() && false === $lsx_to_archive ) { ?>
+        <h1 class="lsx-to-summary-title"><?php the_title(); ?></h1>
         <div class="tsp-tour-overview">
             <div class="tsp-tour-content">
-                <h1 class="lsx-to-summary-title"><?php the_title(); ?></h1>
 
                 <?php lsx_to_price( '<p class="lsx-to-meta-data lsx-to-meta-data-big lsx-to-meta-data-price"><span class="lsx-to-meta-data-key">' . esc_html__( 'From price', 'tour-operator' ) . ':</span> ', '</p>' ); ?>
                 <?php the_content(); ?>

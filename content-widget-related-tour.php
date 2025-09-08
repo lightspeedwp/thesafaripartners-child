@@ -67,12 +67,6 @@ if ( $has_single ) {
             the_excerpt();
             $excerpt = ob_get_clean();
 
-            // Limit excerpt to 100 characters
-            $char_limit = 120; // Set the character limit
-            if (strlen($excerpt) > $char_limit) {
-                $excerpt = substr($excerpt, 0, $char_limit) . '...'; // Trim the excerpt and add ellipsis
-            }
-
             echo wp_kses_post($excerpt);
             ?>
         </div>

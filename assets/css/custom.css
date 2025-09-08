@@ -9200,7 +9200,9 @@ footer .col-sm-12 {
 }
 
 .single-lsx-to-tour .page-banner-wrap .page-banner {
-    min-height: 30vh;
+    min-height: 0;
+    aspect-ratio: 2.5;
+    max-height: 500px;
 }
 
 .included-excluded {
@@ -9268,7 +9270,7 @@ footer .col-sm-12 {
 }
 
 .single-lsx-to-tour .table > thead > tr > th {
-    vertical-align: top;
+    vertical-align: bottom;
     white-space: normal;
 }
 
@@ -9704,6 +9706,10 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
     pointer-events: none;
 }
 
+.tsp-meta.tsp-countries {
+    height: 3rem;
+}
+
 .tsp-related-tour-content {
     padding: 0.63rem;
 }
@@ -9717,7 +9723,7 @@ body.single-lsx-to-tour .modal-body article .entry-content .moretag.btn:hover {
 .tsp-related-tour-content .tour-excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     margin-bottom: 0.625rem;
 }
