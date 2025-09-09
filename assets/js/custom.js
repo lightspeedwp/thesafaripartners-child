@@ -145,7 +145,7 @@
 
         const tourGallery = document.querySelector('#gallery .gallery');
         if (!$(tourGallery).hasClass('slick-initialized')) {
-            console.log('hello');
+            
             $(tourGallery).slick({
                 slidesToShow: 3,
                 slidesToScroll: 3,
