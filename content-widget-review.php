@@ -63,24 +63,3 @@ if (strlen($excerpt) > $char_limit) {
 
 
 </article>
-<script>
-(function($){
-  $(document).on('click', '.lsx-review-readmore', function(e) {
-    e.preventDefault();
-    var $btn = $(this);
-    var $excerpt = $btn.closest('.lsx-review-excerpt');
-    var $full = $excerpt.siblings('.lsx-review-full');
-    $excerpt.hide();
-    $full.show();
-  });
-
-  $(document).on('click', '.lsx-review-readless', function(e) {
-    e.preventDefault();
-    var $btn = $(this);
-    var $full = $btn.closest('.lsx-review-full');
-    var $excerpt = $full.prev('.lsx-review-excerpt');
-    $excerpt.show();
-    $full.hide();
-  });
-})(jQuery);
-</script>
