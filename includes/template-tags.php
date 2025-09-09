@@ -743,7 +743,9 @@ function tsp_modify_tour_page_navigation( $page_links ) {
             $ordered_links['review'] = $page_links['review'];
         }
         if ( isset( $page_links['related-items'] ) ) {
-            $ordered_links['related-tours'] = 'Related Tours';
+            if( tsp_has_related_tours() ) {
+                $ordered_links['related-tours'] = 'Related Tours';
+            }
             unset( $page_links['related-items'] );
         }
 
