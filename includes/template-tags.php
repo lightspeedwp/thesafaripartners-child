@@ -536,7 +536,7 @@ function tsp_best_time_to_visit( $echo = true ) {
                 'september' => esc_html__( 'September', 'tour-operator' ),
                 'october' => esc_html__( 'October', 'tour-operator' ),
                 'november' => esc_html__( 'November', 'tour-operator' ),
-                'december' => esc_html__( 'December', 'tour-operator ' ),
+                'december' => esc_html__( 'December', 'tour-operator' ),
         );
 
         foreach ( $this_year as $month => $label ) {
