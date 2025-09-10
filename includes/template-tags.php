@@ -575,8 +575,8 @@ function tsp_tour_fast_facts()
         echo '<div class="tsp-meta tsp-tourtype"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '">' . esc_html__('Type Of Tour', 'tour-operator') . '</span><span>' . esc_html($tour_type_display) . '</span></span></div>';
     }
 
-    lsx_to_duration('<div class="tsp-meta tsp-duration"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator') . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
-    lsx_to_connected_countries('<div class="tsp-meta tsp-countries"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator') . '</span><span> ', '</span></span></div>');
+    lsx_to_duration('<div class="tsp-meta tsp-duration"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator' ) . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
+    lsx_to_connected_countries('<div class="tsp-meta tsp-countries"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator' ) . '</span><span> ', '</span></span></div>');
 }
 
 function tsp_to_itinerary_meals( $before = '', $after = '' ) {
@@ -1087,4 +1087,141 @@ function tsp_modal_trimmed_content( $content ) {
     echo '<div class="tsp-modal-description-full" id="' . esc_attr( $unique_id ) . '" style="display:none;">' . wp_kses_post(  $content_full  ) . '</div>';
     echo ' <button type="button" style="display: none" class="tsp-toggle-btn tsp-modal-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Read Less', 'tour-operator' ) . '</button>';
     echo '</div>';
+}
+
+/**
+ * Display tour search results with FacetWP integration and preselected facets
+ *
+ * @param array $preselected_facets Array of facet values to preselect (e.g., ['fwp_where' => 'kenya'])
+ * @param bool $show_filters Whether to show the filter sidebar (default: true)
+ * @param string $wrapper_class Additional CSS class for the wrapper
+ * @return void
+ */
+function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $wrapper_class = '', $initial_query_args = array() ) {
+
+    if ( ! empty( $initial_query_args ) ) {
+        $search_query_args = $initial_query_args;
+    } else {
+        $search_query_args = array(
+            'post_type'     => 'tour',
+            'post_status'   => 'publish',
+            'posts_per_page' => 6,
+            'facetwp'       => true,
+        );
+    }
+
+    $search_query = new WP_Query( $search_query_args );
+
+    ?>
+    <div class="search-main search-wizard-results <?php echo esc_attr( $wrapper_class ); ?>">
+        
+        <div class="search-sidebar">
+        <button id="hide-search-filters" class="hide-search-filters">X</button>
+            <div class="search-trip-finder">
+                <div class="search-trip-finder-header">
+                    <span class="tsp-icon tsp-icon-shaman" aria-hidden="true"></span>
+                    <h2 class="tsp-trip-finder-title"><?php esc_html_e( 'Trip Finder', 'thesafaripartners-child' ); ?></h2>
+                </div>
+                <h3><?php esc_html_e('Find your dream trip!', 'thesafaripartners-child'); ?></h3>
+                <p>Select from the options below and hit search.</p>
+            </div>
+
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'filter-menu',
+                )
+            );
+        
+            ?>
+            <button id="apply-search-filters" class="apply-search-filters">Apply Filters</button>
+        </div>
+        
+    
+
+        <div class="search-content">
+            <button id="show-search-filters" class="show-search-filters"><i class="tsp-icon tsp-icon-menu"></i><?php esc_html_e( 'Trip finder', 'tour-operator' ); ?></button>
+            <?php if ( $show_search_meta ) : ?>
+            <?php // echo do_shortcode( '[facetwp selections="true"]' ); ?>
+            <div class="search-widget-header">
+                <div class="search-widget-results">
+                    <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?>
+                </div>
+                <div class="search-widget-sort">
+                    <?php echo do_shortcode( '[facetwp facet="sort_"]' ); ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
+                <?php
+                if ( $search_query->have_posts() ) {
+                    while ( $search_query->have_posts() ) {
+                        $search_query->the_post();
+                        get_template_part( 'partials/content', 'search' );
+                    }
+                } else {
+                    ?>
+                    <div class="no-results">
+                        <p><?php esc_html_e( 'No tours found matching your criteria.', 'tour-operator' ); ?></p>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+
+            <div class="tsp-pagination">
+                <!-- <?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?> -->
+                 <?php echo do_shortcode( '[facetwp facet="pagination"]' ); ?>
+            </div>
+        </div>
+    </div>
+
+    <?php
+    wp_reset_postdata();
+}
+
+/**
+ * Display tour search results for current destination with preselected destination filter
+ * This is a convenience function for single destination pages
+ *
+ * @param bool $show_filters Whether to show the filter sidebar
+ * @return void
+ */
+function tsp_destination_tour_search( $show_filters = true ) {
+    if ( ! is_singular( 'destination' ) ) {
+        return;
+    }
+
+    // Add a wrapper class specific to destination tour search
+    tsp_tour_search( $show_filters, false, 'destination-tour-search' );
+}
+
+function tsp_safari_style_tour_search( $show_filters = true ) {
+    if ( ! is_tax('travel-style') ) {
+        return;
+    }
+
+    $term = get_queried_object();
+    if ( ! $term || empty( $term->term_id ) ) {
+        return;
+    }
+
+    // Filter initial query by current travel-style term
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'tax_query'     => array(
+            array(
+                'taxonomy' => 'travel-style',
+                'field'    => 'term_id',
+                'terms'    => array( $term->term_id ),
+            ),
+        ),
+    );
+
+    // Add a wrapper class specific to travel style tour search
+    tsp_tour_search( $show_filters, false, 'travel-style-search', $search_query_args );
 }

@@ -122,13 +122,13 @@
                     slidesToScroll: 1,
                     arrows: true,
                     fade: true,
-                    dots: false,
+                    dots: true,
                     responsive: [
                         {
                             breakpoint: 1280,
                             settings: {
                                 arrows: true,
-                                dots: false,
+                                dots: true,
                                 prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
                                 nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
                             }
@@ -142,6 +142,77 @@
             $(this).find('.accomodation-slider').slick('setPosition');
         });
 
+        $('#hide-search-filters, #apply-search-filters').on('click', function() {
+            $('.search-sidebar').removeClass('active');
+        });
+    
+        $('#show-search-filters').on('click', function() {
+            $('.search-sidebar').addClass('active');
+        });
+    });
+
+    $(document).on('facetwp-loaded', function() {
+  
+        var url = window.location.href;
+        // Match either /safari-style/{value} 
+        var facetRegex = /\/(?:safari-style)\/([^\/?#]+)/i;
+        var match = url.match(facetRegex);
+        if (match && match[1]) {
+            var selectedValue = decodeURIComponent(match[1]).toLowerCase();
+            $('.facetwp-checkbox').each(function() {
+                var checkbox = $(this);
+                var value = checkbox.data('value');
+                if (value === selectedValue) {
+                    checkbox.addClass('checked');
+                    var parentLi = checkbox.closest('li');
+
+                    while (parentLi.parent().closest('li').length && parentLi.parent().closest('li').parents('#mega-menu-filter-menu').length) {
+                        parentLi = parentLi.parent().closest('li');
+                    }
+                    parentLi.addClass('mega-toggle-on');
+
+                }
+            });
+        }
+
+        // Match either /destination/{value} 
+        var destRegex = /\/(?:destination)\/([^\/?#]+)/i;
+        var destMatch = url.match(destRegex);
+        if (destMatch && destMatch[1]) {
+            var selectedValue = decodeURIComponent(destMatch[1]).toLowerCase();
+            $('.facetwp-checkbox').each(function() {
+                var checkbox = $(this);
+                var value = checkbox.html().toLowerCase();
+                // strip any html tags
+                value = value.replace(/<[^>]*>/g, '').trim();
+                // strip any number like (123) from facets
+                value = value.replace(/\s*\(\d+\)\s*/g, ' ');
+                value = value.trim();
+                value = value.replace(/\s+/g, '-');
+                if (value === selectedValue) {
+                    checkbox.addClass('checked');
+                    var parentLi = checkbox.closest('li');
+
+                    while (parentLi.parent().closest('li').length && parentLi.parent().closest('li').parents('#mega-menu-filter-menu').length) {
+                        parentLi = parentLi.parent().closest('li');
+                    }
+                    parentLi.addClass('mega-toggle-on');
+
+                }
+            });
+        }
+    });
+    
+
+    $(document).on('facetwp-refresh', function() {
+        var searchVal = FWP.facets.search || '';
+        if (searchVal.length > 0) {
+            searchVal = '"' + searchVal + '"';
+        } else {
+            searchVal = '';
+        }
+        $('#search-header-term').text(searchVal);
+    });
 
         const tourGallery = document.querySelector('#gallery .gallery');
         if (!$(tourGallery).hasClass('slick-initialized')) {
@@ -182,6 +253,4 @@
             $full.hide();
         });
     });
-
-
 })( jQuery, window, document );
