@@ -215,8 +215,7 @@
     });
 
         const tourGallery = document.querySelector('#gallery .gallery');
-        if (!$(tourGallery).hasClass('slick-initialized')) {
-            
+        if (tourGallery && !$(tourGallery).hasClass('slick-initialized')) {
             $(tourGallery).slick({
                 slidesToShow: 3,
                 slidesToScroll: 3,
@@ -252,5 +251,5 @@
             $excerpt.show();
             $full.hide();
         });
-    });
+
 })( jQuery, window, document );
