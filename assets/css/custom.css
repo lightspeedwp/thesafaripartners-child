@@ -10612,7 +10612,6 @@ body.single-tour-operator #gallery .gallery img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    anim
 }
 
 .search-sidebar #mega-menu-wrap-filter-menu #mega-menu-filter-menu li.mega-menu-item-has-children > a.mega-menu-link {
@@ -11044,7 +11043,7 @@ body.single-tour-operator #gallery .gallery img {
     line-height: 150%; /* 1.5rem */
     letter-spacing: 0.01rem;
     text-transform: none;
-    cursor: pointer; 
+    cursor: pointer;
     background: #A31700;
     color: #fff;
     width: 40vw;
@@ -11078,6 +11077,7 @@ body.single-tour-operator #gallery .gallery img {
     border: none;
     cursor: pointer;
     margin-right: 0;
+}
 
 .single-lsx-to-tour .slick-lightbox-inner .slick-arrow {
     border: 1px solid #ce9e57;
@@ -11245,7 +11245,7 @@ body.modal-open div.modal-backdrop {
     .search-header .facetwp-facet {
         width: 100%;
     }
-    
+
     .search-header .mega-search.expand-to-left {
         width: 100%;
     }
@@ -11573,7 +11573,7 @@ body.modal-open div.modal-backdrop {
         padding: 1.25rem 0;
     }
 
-    .search-trip-finder h3, 
+    .search-trip-finder h3,
     .search-trip-finder p {
         display: none;
     }
@@ -11585,6 +11585,7 @@ body.modal-open div.modal-backdrop {
 
     .single .hide-search-filters {
         top: 3rem;
+    }
 
     .single-lsx-to-tour .page-banner-wrap .page-banner {
         aspect-ratio: 1.5;
