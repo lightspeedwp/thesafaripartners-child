@@ -104,28 +104,6 @@ add_action( 'lsx_banner_inner_top', function() {
     }
 });
 
-// add_filter( 'facetwp_preload_url_vars', function( $url_vars ) {
-//     $uri = FWP()->helper->get_uri();
-//     if ( strpos( $uri, 'destination/' ) === 0 ) {
-//         $slug = basename( $uri );
-//         $post = get_page_by_path( $slug, OBJECT, 'destination' );
-//         if ( $post ) {
-//             $url_vars['where'] = array( $post->ID );
-//         }
-//     }
-
-//     if ( strpos( $uri, 'safari-style/' ) === 0 ) {
-//         $slug = trim( str_replace( 'safari-style/', '', $uri ), '/' );
-//         if($slug) {
-//             $url_vars['what'] = $slug;
-//         }
-//     }
-
-//     return $url_vars;
-// });
-
-
-
 add_filter( 'facetwp_is_main_query', function( $is_main_query, $query ) {
     // Identify your custom query, e.g. by checking a variable or query args
     if ( isset( $query->query_vars['facetwp'] ) && $query->query_vars['facetwp'] ) {
@@ -138,25 +116,4 @@ add_filter( 'facetwp_search_query_args', function( $search_args, $params ) {
     $search_args['posts_per_page'] = 6; // Default: 200. Set to -1 to show all search results.
     return $search_args;
   }, 10, 2 );
-
-
-// TODO: DO NOT COMMIT THIS
-// Replace URLs in post content, thumbnails, and widgets
-function tsp_replace_uploads_url($content) {
-    return str_replace(
-        'https://tsp-local.local/wp-content/uploads/',
-        'https://thesafaripartners.lightspeedwp.dev/wp-content/uploads/',
-        $content
-    );
-}
-add_filter('the_content', 'tsp_replace_uploads_url', 99);
-add_filter('post_thumbnail_html', 'tsp_replace_uploads_url', 99);
-add_filter('widget_text', 'tsp_replace_uploads_url', 99);
-
-// Output buffer for global replacement
-function tsp_buffer_start() {
-    ob_start('tsp_replace_uploads_url');
-}
-add_action('template_redirect', 'tsp_buffer_start');
-// TODO: DO NOT COMMIT THIS
 
