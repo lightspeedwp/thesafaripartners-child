@@ -536,7 +536,7 @@ function tsp_best_time_to_visit( $echo = true ) {
                 'september' => esc_html__( 'September', 'tour-operator' ),
                 'october' => esc_html__( 'October', 'tour-operator' ),
                 'november' => esc_html__( 'November', 'tour-operator' ),
-                'december' => esc_html__( 'December', 'tour-operator ' ),
+                'december' => esc_html__( 'December', 'tour-operator' ),
         );
 
         foreach ( $this_year as $month => $label ) {
@@ -730,21 +730,22 @@ function tsp_modify_tour_page_navigation( $page_links ) {
         if ( isset( $page_links['tour-map'] ) ) {
             $ordered_links['tour-map'] = esc_html__('Map', 'thesafaripartners-child');
         }
-        if ( isset( $page_links['gallery'] ) ) {
-            $ordered_links['gallery'] = $page_links['gallery'];
-        }
         if ( isset( $page_links['itinerary'] ) ) {
             $ordered_links['itinerary'] = esc_html__('Day by Day', 'thesafaripartners-child');
         }
         if ( isset( $page_links['dates-prices'] ) || tsp_has_prices() ) {
             $ordered_links['dates-prices'] = esc_html__( 'Dates & Prices', 'thesafaripartners-child' );
         }
-
+        if ( isset( $page_links['itinerary'] ) ) {
+            $ordered_links['gallery'] = esc_html__('Gallery', 'thesafaripartners-child');
+        }
         if ( isset( $page_links['review'] ) ) {
             $ordered_links['review'] = $page_links['review'];
         }
         if ( isset( $page_links['related-items'] ) ) {
-            $ordered_links['related-tours'] = 'Related Tours';
+            if( tsp_has_related_tours() ) {
+                $ordered_links['related-tours'] = 'Related Tours';
+            }
             unset( $page_links['related-items'] );
         }
 
@@ -790,36 +791,67 @@ function tsp_included_block() {
         <?php
 }
 
-function tsp_has_gallery()
-{
-    $gallery = get_post_meta(get_the_ID(), 'gallery', false); // Use false to get all values
-    $envira_gallery = get_post_meta(get_the_ID(), 'envira_gallery', true);
+function tsp_tour_gallery() {
+    $tour_itinerary = new \lsx\legacy\Itinerary_Query();
 
-    // Check envira gallery first
-    if (!empty($envira_gallery)) {
-        if (is_array($envira_gallery) && count($envira_gallery) > 0) {
-            return true;
-        }
-        if (is_string($envira_gallery) && $envira_gallery !== '') {
-            return true;
+    $d_ids     = array();
+
+    if ( $tour_itinerary->has_itinerary() ) {
+        while ( $tour_itinerary->while_itinerary() ) {
+            $tour_itinerary->current_itinerary_item();
+
+            if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) && '' !== $tour_itinerary->itinerary['destination_to_tour'] ) {
+                $day_dest = $tour_itinerary->itinerary['destination_to_tour'];
+                if ( ! is_array( $day_dest ) ) {
+                    $day_dest = array( $day_dest );
+                }
+                $d_ids = array_merge( $d_ids, $day_dest );
+            }
         }
     }
 
-    // Check regular gallery
-    if (!empty($gallery)) {
-        if (is_array($gallery) && count($gallery) > 0) {
-            return true;
-        }
-        if (is_string($gallery) && $gallery !== '') {
-            return true;
+    $d_ids = array_unique( $d_ids );
+
+    $attachment_ids = array();
+
+    foreach ( $d_ids as $post_id ) {
+        $featured_image_id = get_post_thumbnail_id( $post_id );
+        if ( $featured_image_id ) {
+            $attachment_ids[] = $featured_image_id;
         }
     }
 
-    return false;
+    if ( empty( $attachment_ids ) ) {
+        return '';
+    }
+
+    echo '<div class="lsx-to-slider-wrap"><div id="gallery" class="lsx-to-slider-inner gallery gallery-columns-3 gallery-size-large tour-destinations-gallery">';
+
+    foreach ( $attachment_ids as $index => $attachment_id ) {
+        $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+        $full_url = wp_get_attachment_url( $attachment_id );
+
+        echo '<figure class="gallery-item gallery-item-' . esc_attr( $index + 1 ) . '">';
+        echo '<div class="gallery-icon landscape">';
+        echo '<a href="' . esc_url( $full_url ) . '" data-fancybox="tour-gallery">';
+
+        echo wp_get_attachment_image( $attachment_id, 'large', false, array(
+                'class' => 'attachment-large',
+                'loading' => 'lazy',
+                'alt' => $alt ? $alt : '',
+        ) );
+
+        echo '</a>';
+        echo '</div>';
+
+
+        echo '</figure>';
+    }
+
+    echo '</div></div><div class="clear"></div>';
 }
 
-function tsp_has_prices()
-{
+function tsp_has_prices() {
     $price_row_amount = get_post_meta(get_the_ID(), 'price_row', true);
 
     if (false !== $price_row_amount && 0 !== $price_row_amount) {
@@ -864,8 +896,7 @@ function tsp_has_prices()
     return false;
 }
 
-function tsp_tour_reviews()
-{
+function tsp_tour_reviews() {
     global $lsx_archive;
 
     if (post_type_exists('review') && is_singular('tour')) {

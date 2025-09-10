@@ -49,6 +49,7 @@ if ( isset( $_GET['set_tour'] ) ) {
 								echo 'credit-float';}
 							?>
 							">
+                                Developed by <a href="https://lightspeedwp.agency/" rel="noreferrer noopener" title="LightSpeed – WordPress & WooCommerce Development" target="_blank">LightSpeed</a><br>
 								<?php
 									printf(
 										/* Translators: 1: current year, 2: blog name */

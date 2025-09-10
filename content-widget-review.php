@@ -31,26 +31,30 @@ if ( $has_single ) {
 
 		<blockquote class="lsx-to-widget-blockquote">
 		<h4 class="lsx-to-summary-title extra"><a href="<?php echo esc_url( $permalink ); ?>"><?php the_title(); ?></a></h4>
-
-		<p class="lsx-review"><?php
+<?php
 // Get the post content and apply the_content filters to it.
-$content = apply_filters('the_content', get_the_content());
+$full_content = apply_filters('the_content', get_the_content());
 
-// Strip all HTML tags from the content.
-$content = strip_tags($content);
+// Set the character limit for the excerpt.
+$char_limit = 260;
 
-// Define the Read More link.
-$read_more_link = sprintf('<a href="%1$s" class="read-more">Read More</a>', esc_url(get_permalink()));
+// Strip all HTML tags for the excerpt only, but keep HTML in the full content.
+$excerpt = strip_tags($full_content);
 
-// Check if the content is longer than the limit.
-if (strlen($content) > 260) {
-    // Trim the content to 200 characters.
-    $content = substr($content, 0, 260) . '... ' . $read_more_link;
+if (strlen($excerpt) > $char_limit) {
+    $trimmed = substr($excerpt, 0, $char_limit);
+    // Output the excerpt and the Read More button
+    echo '<span class="lsx-review-excerpt">' . esc_html($trimmed) . '... ';
+    echo '<a href="javascript:void(0)" class="lsx-review-readmore" aria-expanded="false">Read More</a></span>';
+    // Output the full content, hidden by default, with HTML preserved
+    echo '<span class="lsx-review-full" style="display:none;">' . $full_content;
+    echo '<a href="javascript:void(0)" class="lsx-review-readless" aria-expanded="true">Read Less</a></span>';
+} else {
+    // If content is short, just show it all (with HTML)
+    echo $full_content;
 }
+?>
 
-// Display the trimmed content.
-echo wp_kses_post(wpautop($content));
-?></p>
 	<?php $reviewer_name = get_post_meta( get_the_ID(), 'reviewer_name', true ); ?>
 				<p class="lsx-review-author"><?php echo esc_html( $reviewer_name ); ?></p>
 
