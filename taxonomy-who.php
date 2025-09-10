@@ -86,7 +86,7 @@ $tag = get_field('tagline', $term);
 						),
 					),
 				);
-				tsp_mini_wizard_results( $query_args, $args );
+				// tsp_mini_wizard_results( $query_args, $args );
 			?>
 		</main><!-- #main -->
 

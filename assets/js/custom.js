@@ -201,6 +201,9 @@
                 }
             });
         }
+
+        
+        
     });
     
 
@@ -214,42 +217,42 @@
         $('#search-header-term').text(searchVal);
     });
 
-        const tourGallery = document.querySelector('#gallery .gallery');
-        if (tourGallery && !$(tourGallery).hasClass('slick-initialized')) {
-            $(tourGallery).slick({
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                arrows: true,
-                dots: false,
-                infinite: true,
-                responsive: [
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }
+    const tourGallery = document.querySelector('#gallery .gallery');
+    if (tourGallery && !$(tourGallery).hasClass('slick-initialized')) {
+        $(tourGallery).slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: true,
+            dots: false,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                     }
-                ]
-            });
-        }
-
-        $(document).on('click', '.lsx-review-readmore', function(e) {
-            e.preventDefault();
-            var $btn = $(this);
-            var $excerpt = $btn.closest('.lsx-review-excerpt');
-            var $full = $excerpt.siblings('.lsx-review-full');
-            $excerpt.hide();
-            $full.show();
+                }
+            ]
         });
+    }
 
-        $(document).on('click', '.lsx-review-readless', function(e) {
-            e.preventDefault();
-            var $btn = $(this);
-            var $full = $btn.closest('.lsx-review-full');
-            var $excerpt = $full.prev('.lsx-review-excerpt');
-            $excerpt.show();
-            $full.hide();
-        });
+    $(document).on('click', '.lsx-review-readmore', function(e) {
+        e.preventDefault();
+        var $btn = $(this);
+        var $excerpt = $btn.closest('.lsx-review-excerpt');
+        var $full = $excerpt.siblings('.lsx-review-full');
+        $excerpt.hide();
+        $full.show();
+    });
+
+    $(document).on('click', '.lsx-review-readless', function(e) {
+        e.preventDefault();
+        var $btn = $(this);
+        var $full = $btn.closest('.lsx-review-full');
+        var $excerpt = $full.prev('.lsx-review-excerpt');
+        $excerpt.show();
+        $full.hide();
+    });
 
 })( jQuery, window, document );

@@ -11507,12 +11507,17 @@ body.modal-open div.modal-backdrop {
         right: 1.25rem;
         width: 2rem;
         height: 2rem;
-        background: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-x.svg') no-repeat center center;
+        background: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-x-black.svg') no-repeat center center;
         background-size: contain;
         border: none;
         text-indent: -9999px;
         cursor: pointer;
         z-index: 1001;
+    }
+
+    .hide-search-filters:focus,
+    .hide-search-filters:hover {
+        background: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-x.svg') no-repeat center center;
     }
 
     .search-content {

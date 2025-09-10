@@ -51,7 +51,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<?php tsp_safari_style_tour_search(); ?>
+	<?php tsp_who_tour_search(); ?>
 
 	<?php 
 		

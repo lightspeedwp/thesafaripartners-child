@@ -1137,10 +1137,8 @@ function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $
             <button id="apply-search-filters" class="apply-search-filters">Apply Filters</button>
         </div>
         
-    
-
         <div class="search-content">
-            <button id="show-search-filters" class="show-search-filters"><i class="tsp-icon tsp-icon-menu"></i><?php esc_html_e( 'Trip finder', 'tour-operator' ); ?></button>
+            <div id="show-search-filters" class="show-trip-finder"><i class="tsp-icon tsp-icon-menu"></i><?php esc_html_e( 'Trip finder', 'tour-operator' ); ?></div>
             <?php if ( $show_search_meta ) : ?>
             <?php // echo do_shortcode( '[facetwp selections="true"]' ); ?>
             <div class="search-widget-header">
@@ -1192,7 +1190,6 @@ function tsp_destination_tour_search( $show_filters = true ) {
     if ( ! is_singular( 'destination' ) ) {
         return;
     }
-
     // Add a wrapper class specific to destination tour search
     tsp_tour_search( $show_filters, false, 'destination-tour-search' );
 }
