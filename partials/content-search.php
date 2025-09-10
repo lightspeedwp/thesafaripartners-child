@@ -15,7 +15,6 @@ setup_postdata( $post );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'search-result' ); ?>>
-	<?php lsx_entry_top(); ?>
 	<div class="search-result-content">
         <div class="search-result-thumb" href="<?php the_permalink(); ?>">
             <?php lsx_thumbnail( 'lsx-block-post-grid-landscape' ); ?>
@@ -50,8 +49,6 @@ setup_postdata( $post );
 		}
         ?></span>
 	</div>
-
-	<?php lsx_entry_bottom(); ?>
 </article>
 
 <?php

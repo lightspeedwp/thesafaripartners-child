@@ -51,6 +51,8 @@ get_header(); ?>
 		</div>
 	</div>
 
+	<?php tsp_safari_style_tour_search(); ?>
+
 	<?php 
 		
 		
@@ -66,7 +68,7 @@ get_header(); ?>
 				),
 			),
 		);
-		tsp_mini_wizard_results( $query_args, $args );
+		// tsp_mini_wizard_results( $query_args, $args );
 
 		/*$panels = array(
 			0 => array( 'who' ),

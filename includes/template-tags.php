@@ -1066,56 +1066,61 @@ function tsp_modal_trimmed_content( $content ) {
  * @param string $wrapper_class Additional CSS class for the wrapper
  * @return void
  */
-function tsp_tour_search( $preselected_facets = array(), $show_filters = true, $wrapper_class = '' ) {
-    if ( ! empty( $preselected_facets ) ) {
-        $facetwp_preselect = array();
-        foreach ( $preselected_facets as $facet_name => $facet_value ) {
-            $_GET[ $facet_name ] = $facet_value;
-            // Remove 'fwp_' prefix if needed for FacetWP facet name
-            $facet_key = str_replace( 'fwp_', '', $facet_name );
-            $facetwp_preselect[ $facet_key ] = (array) $facet_value;
-        }
-        $GLOBALS['tsp_facetwp_preselect'] = $facetwp_preselect;
+function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $wrapper_class = '', $initial_query_args = array() ) {
+
+    if ( ! empty( $initial_query_args ) ) {
+        $search_query_args = $initial_query_args;
+    } else {
+        $search_query_args = array(
+            'post_type'     => 'tour',
+            'post_status'   => 'publish',
+            'posts_per_page' => 6,
+            'facetwp'       => true,
+        );
     }
 
-
-
-    // Create basic query args that FacetWP will modify
-    $search_query_args = array(
-        'post_type'     => 'tour',
-        'post_status'   => 'publish',
-        'posts_per_page' => 6,
-        'facetwp'       => true,
-    );
-
-    // Remove the orderby to let FacetWP handle it
     $search_query = new WP_Query( $search_query_args );
 
     ?>
-    <div class="search-main <?php echo esc_attr( $wrapper_class ); ?>">
-        <?php if ( $show_filters ) : ?>
+    <div class="search-main search-wizard-results <?php echo esc_attr( $wrapper_class ); ?>">
+        
         <div class="search-sidebar">
-            <h2><?php esc_html_e( 'Filters', 'tour-operator' ); ?></h2>
+        <button id="hide-search-filters" class="hide-search-filters">X</button>
+            <div class="search-trip-finder">
+                <div class="search-trip-finder-header">
+                    <span class="tsp-icon tsp-icon-shaman" aria-hidden="true"></span>
+                    <h2 class="tsp-trip-finder-title"><?php esc_html_e( 'Trip Finder', 'thesafaripartners-child' ); ?></h2>
+                </div>
+                <h3><?php esc_html_e('Find your dream trip!', 'thesafaripartners-child'); ?></h3>
+                <p>Select from the options below and hit search.</p>
+            </div>
+
             <?php
             wp_nav_menu(
                 array(
                     'theme_location' => 'filter-menu',
                 )
             );
+        
             ?>
+            <button id="apply-search-filters" class="apply-search-filters">Apply Filters</button>
         </div>
-        <?php endif; ?>
+        
+    
 
         <div class="search-content">
-            <div class="search-header">
-                <div class="col-md-6">
+            <button id="show-search-filters" class="show-search-filters"><i class="tsp-icon tsp-icon-menu"></i><?php esc_html_e( 'Trip finder', 'tour-operator' ); ?></button>
+            <?php if ( $show_search_meta ) : ?>
+            <?php // echo do_shortcode( '[facetwp selections="true"]' ); ?>
+            <div class="search-widget-header">
+                <div class="search-widget-results">
                     <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?>
                 </div>
-                <div class="col-md-6">
+                <div class="search-widget-sort">
                     <?php echo do_shortcode( '[facetwp facet="sort_"]' ); ?>
-                    <?php echo do_shortcode( '[facetwp selections="true"]' ); ?>
                 </div>
             </div>
+            <?php endif; ?>
 
             <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
                 <?php
@@ -1134,8 +1139,9 @@ function tsp_tour_search( $preselected_facets = array(), $show_filters = true, $
                 ?>
             </div>
 
-            <div class="lsx-pagination">
-                <?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
+            <div class="tsp-pagination">
+                <!-- <?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?> -->
+                 <?php echo do_shortcode( '[facetwp facet="pagination"]' ); ?>
             </div>
         </div>
     </div>
@@ -1156,20 +1162,35 @@ function tsp_destination_tour_search( $show_filters = true ) {
         return;
     }
 
-    $current_destination_id = get_the_ID();
-    $destination = get_post( $current_destination_id );
-    $destination_slug = $destination ? $destination->post_name : '';
+    // Add a wrapper class specific to destination tour search
+    tsp_tour_search( $show_filters, false, 'destination-tour-search' );
+}
 
-    if ( empty( $destination_slug ) ) {
+function tsp_safari_style_tour_search( $show_filters = true ) {
+    if ( ! is_tax('travel-style') ) {
         return;
     }
 
-    // Preselect the current destination in the where facet
-    $preselected_facets = array(
-        'fwp_where' => $destination_slug,
+    $term = get_queried_object();
+    if ( ! $term || empty( $term->term_id ) ) {
+        return;
+    }
+
+    // Filter initial query by current travel-style term
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'tax_query'     => array(
+            array(
+                'taxonomy' => 'travel-style',
+                'field'    => 'term_id',
+                'terms'    => array( $term->term_id ),
+            ),
+        ),
     );
 
-    // Add a wrapper class specific to destination tour search
-    tsp_tour_search( $preselected_facets, $show_filters, 'destination-tour-search' );
+    // Add a wrapper class specific to travel style tour search
+    tsp_tour_search( $show_filters, false, 'travel-style-search', $search_query_args );
 }
-
