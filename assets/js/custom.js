@@ -148,9 +148,9 @@
         });
 
         $('#reset-search-filters').on('click', function() {
-            FPW.reset ();
-            bodyScrollUnlock();
             $('.search-sidebar').removeClass('active');
+            bodyScrollUnlock();
+            FPW.reset();
         });
     
         $('#show-search-filters').on('click', function() {
@@ -253,17 +253,13 @@
 
     $(document).on('facetwp-loaded', function() {
         setTimeout(function() {
-            console.log('Checking for no results...');
             var $main = $('#main.search-main');
             var $postWrapper = $('.post-wrapper.facetwp-template');
             
-            // Check if there are any posts in the results
             if ($postWrapper.find('.post, article, .search-result-item').length === 0) {
                 $main.addClass('no-results');
-                console.log('No results found, added no-results class.');
             } else {
                 $main.removeClass('no-results');
-                console.log('Results found, removed no-results class if it existed.');
             }
         }, 100); // Small delay to ensure DOM is updated
     });
