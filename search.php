@@ -59,12 +59,10 @@ get_header(); ?>
             <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
                 <?php
                 global $wp_query, $post, $relevance_scores;
-
-                
-										while ( have_posts() ) {
-											the_post();
-											get_template_part('partials/content', 'search');
-										}
+                while ( have_posts() ) {
+                    the_post();
+                    get_template_part('partials/content', 'search');
+                }
                 
                 ?>
             </div>

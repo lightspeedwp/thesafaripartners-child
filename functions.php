@@ -112,7 +112,7 @@ add_filter( 'facetwp_is_main_query', function( $is_main_query, $query ) {
     return $is_main_query;
 }, 10, 2 );
 
-add_filter( 'facetwp_search_query_args', function( $search_args, $params ) {
+add_filter( 'facetwp_query_args', function( $search_args, $params ) {
     $search_args['posts_per_page'] = 6; // Default: 200. Set to -1 to show all search results.
     return $search_args;
   }, 10, 2 );

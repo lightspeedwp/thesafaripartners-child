@@ -52,43 +52,6 @@ get_header(); ?>
 	</div>
 
 	<?php tsp_safari_style_tour_search(); ?>
-
-	<?php 
-		
-		
-		$query_args = array(
-			'post_type' => 'tour',
-			'post_status' => 'publish',
-			'facetwp' => true,
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'travel-style',
-					'field'    => 'term_id',
-					'terms'    => array( get_queried_object_id() ),
-				),
-			),
-		);
-		// tsp_mini_wizard_results( $query_args, $args );
-
-		/*$panels = array(
-			0 => array( 'who' ),
-			1 => array( 'what' ),
-			2 => array( 'where' ),
-			3 => array( 'when' ),
-			4 => array( 'budget' ),
-		);
-		$args = array( 
-			'selected' => array( get_queried_object_id() ),
-			'title'    => get_term_meta( get_queried_object_id(), 'shaman_title', true ),
-			'tagline'  => get_term_meta( get_queried_object_id(), 'shaman_tagline', true ),
-		);
-
-		// Call the intro
-		get_template_part( 'partials/shaman', 'intro', $args );
-
-		// Call the wizard
-		tsp_mini_wizard( $panels, $args );*/
-	?>
 </main><!-- #main -->
 
 <?php lsx_content_after(); ?>
