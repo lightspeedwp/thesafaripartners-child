@@ -157,149 +157,152 @@
             bodyScrollLock();
             $('.search-sidebar').addClass('active');
         });
-    });
 
-    function bodyScrollLock() {
-        const body = document.body;
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
-        body.style.position = 'fixed';
-        body.style.top = `-${scrollY}px`;
-        body.style.left = '0';
-        body.style.right = '0';
-        body.style.width = '100vw';
-        body.dataset.scrollY = scrollY;
-        body.classList.add('sidebar-open');
-    }
-    
-    function bodyScrollUnlock() {
-        const body = document.body;
-        const scrollY = body.dataset.scrollY ? parseInt(body.dataset.scrollY, 10) : 0;
-        body.style.position = '';
-        body.style.top = '';
-        body.style.left = '';
-        body.style.right = '';
-        body.style.width = '';
-        body.classList.remove('sidebar-open');
-        window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' }); // Instant scroll
-        delete body.dataset.scrollY;
-    }
-
-    var initialLoad = true;
-
-    $(document).on('facetwp-loaded', function() {
-        if (!initialLoad) {
-            return; // Skip the first load
-        }
-        var url = window.location.href;
-        // Match either /safari-style/{value} 
-        var facetRegex = /\/(?:safari-style|who)\/([^\/?#]+)/i;
-        var match = url.match(facetRegex);
-        if (match && match[1]) {
-            var selectedValue = decodeURIComponent(match[1]).toLowerCase();
-            $('.facetwp-checkbox').each(function() {
-                var checkbox = $(this);
-                var value = checkbox.data('value');
-                if (value === selectedValue) {
-                    checkbox.addClass('checked');
-                    var parentLi = checkbox.closest('li');
-
-                    while (parentLi.parent().closest('li').length && parentLi.parent().closest('li').parents('#mega-menu-filter-menu').length) {
-                        parentLi = parentLi.parent().closest('li');
+        const tourGallery = document.querySelector('#gallery .gallery');
+        if (tourGallery && !$(tourGallery).hasClass('slick-initialized')) {
+            $(tourGallery).slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
                     }
-                    parentLi.addClass('mega-toggle-on');
-
-                }
+                ]
             });
         }
 
-        if (window.location.pathname === '/safari-styles/') {
-            $('.search-sidebar a.mega-menu-link').each(function() {
-                if ($(this).text().trim() === 'Safari Style') {
-                    $(this).parent('li').addClass('mega-toggle-on');
-                }
-            });
+
+        function bodyScrollLock() {
+            const body = document.body;
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            body.style.position = 'fixed';
+            body.style.top = `-${scrollY}px`;
+            body.style.left = '0';
+            body.style.right = '0';
+            body.style.width = '100vw';
+            body.dataset.scrollY = scrollY;
+            body.classList.add('sidebar-open');
         }
-
-        // Match either /destination/{value} 
-        var destRegex = /\/(?:destination)\/([^\/?#]+)/i;
-        var destMatch = url.match(destRegex);
-        if (destMatch && destMatch[1]) {
-            var selectedValue = decodeURIComponent(destMatch[1]).toLowerCase();
-            $('.facetwp-checkbox').each(function() {
-                var checkbox = $(this);
-                var value = checkbox.html().toLowerCase();
-                // strip any html tags
-                value = value.replace(/<[^>]*>/g, '').trim();
-                // strip any number like (123) from facets
-                value = value.replace(/\s*\(\d+\)\s*/g, ' ');
-                value = value.trim();
-                value = value.replace(/\s+/g, '-');
-                if (value === selectedValue) {
-                    checkbox.addClass('checked');
-                    var parentLi = checkbox.closest('li');
-
-                    while (parentLi.parent().closest('li').length && parentLi.parent().closest('li').parents('#mega-menu-filter-menu').length) {
-                        parentLi = parentLi.parent().closest('li');
-                    }
-                    parentLi.addClass('mega-toggle-on');
-
-                }
-            });
+        
+        function bodyScrollUnlock() {
+            const body = document.body;
+            const scrollY = body.dataset.scrollY ? parseInt(body.dataset.scrollY, 10) : 0;
+            body.style.position = '';
+            body.style.top = '';
+            body.style.left = '';
+            body.style.right = '';
+            body.style.width = '';
+            body.classList.remove('sidebar-open');
+            window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' }); // Instant scroll
+            delete body.dataset.scrollY;
         }
-
-        initialLoad = false;
-    });
     
-
-    $(document).on('facetwp-loaded', function() {
-        setTimeout(function() {
-            var $main = $('#main.search-main');
-            var $postWrapper = $('.post-wrapper.facetwp-template');
-            
-            if ($postWrapper.find('.post, article, .search-result-item').length === 0) {
-                $main.addClass('no-results');
-            } else {
-                $main.removeClass('no-results');
+        var initialLoad = true;
+    
+        $(document).on('facetwp-loaded', function() {
+            if (!initialLoad) {
+                return; // Skip the first load
             }
-        }, 100); // Small delay to ensure DOM is updated
-    });
-
-    const tourGallery = document.querySelector('#gallery .gallery');
-    if (tourGallery && !$(tourGallery).hasClass('slick-initialized')) {
-        $(tourGallery).slick({
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            arrows: true,
-            dots: false,
-            infinite: true,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
+            var url = window.location.href;
+            // Match either /safari-style/{value} 
+            var facetRegex = /\/(?:safari-style|who)\/([^\/?#]+)/i;
+            var match = url.match(facetRegex);
+            if (match && match[1]) {
+                var selectedValue = decodeURIComponent(match[1]).toLowerCase();
+                $('.facetwp-checkbox').each(function() {
+                    var checkbox = $(this);
+                    var value = checkbox.data('value');
+                    if (value === selectedValue) {
+                        checkbox.addClass('checked');
+                        var parentLi = checkbox.closest('li');
+    
+                        while (parentLi.parent().closest('li').length && parentLi.parent().closest('li').parents('#mega-menu-filter-menu').length) {
+                            parentLi = parentLi.parent().closest('li');
+                        }
+                        parentLi.addClass('mega-toggle-on');
+    
                     }
-                }
-            ]
+                });
+            }
+    
+            if (window.location.pathname === '/safari-styles/') {
+                $('.search-sidebar a.mega-menu-link').each(function() {
+                    if ($(this).text().trim() === 'Safari Style') {
+                        $(this).parent('li').addClass('mega-toggle-on');
+                    }
+                });
+            }
+    
+            // Match either /destination/{value} 
+            var destRegex = /\/(?:destination)\/([^\/?#]+)/i;
+            var destMatch = url.match(destRegex);
+            if (destMatch && destMatch[1]) {
+                var selectedValue = decodeURIComponent(destMatch[1]).toLowerCase();
+                $('.facetwp-checkbox').each(function() {
+                    var checkbox = $(this);
+                    var value = checkbox.html().toLowerCase();
+                    // strip any html tags
+                    value = value.replace(/<[^>]*>/g, '').trim();
+                    // strip any number like (123) from facets
+                    value = value.replace(/\s*\(\d+\)\s*/g, ' ');
+                    value = value.trim();
+                    value = value.replace(/\s+/g, '-');
+                    if (value === selectedValue) {
+                        checkbox.addClass('checked');
+                        var parentLi = checkbox.closest('li');
+    
+                        while (parentLi.parent().closest('li').length && parentLi.parent().closest('li').parents('#mega-menu-filter-menu').length) {
+                            parentLi = parentLi.parent().closest('li');
+                        }
+                        parentLi.addClass('mega-toggle-on');
+    
+                    }
+                });
+            }
+    
+            initialLoad = false;
         });
-    }
-
-    $(document).on('click', '.lsx-review-readmore', function(e) {
-        e.preventDefault();
-        var $btn = $(this);
-        var $excerpt = $btn.closest('.lsx-review-excerpt');
-        var $full = $excerpt.siblings('.lsx-review-full');
-        $excerpt.hide();
-        $full.show();
+        
+    
+        $(document).on('facetwp-loaded', function() {
+            setTimeout(function() {
+                var $main = $('#main.search-main');
+                var $postWrapper = $('.post-wrapper.facetwp-template');
+                
+                if ($postWrapper.find('.post, article, .search-result-item').length === 0) {
+                    $main.addClass('no-results');
+                } else {
+                    $main.removeClass('no-results');
+                }
+            }, 100); // Small delay to ensure DOM is updated
+        });
+    
+        $(document).on('click', '.lsx-review-readmore', function(e) {
+            e.preventDefault();
+            var $btn = $(this);
+            var $excerpt = $btn.closest('.lsx-review-excerpt');
+            var $full = $excerpt.siblings('.lsx-review-full');
+            $excerpt.hide();
+            $full.show();
+        });
+    
+        $(document).on('click', '.lsx-review-readless', function(e) {
+            e.preventDefault();
+            var $btn = $(this);
+            var $full = $btn.closest('.lsx-review-full');
+            var $excerpt = $full.prev('.lsx-review-excerpt');
+            $excerpt.show();
+            $full.hide();
+        });
     });
 
-    $(document).on('click', '.lsx-review-readless', function(e) {
-        e.preventDefault();
-        var $btn = $(this);
-        var $full = $btn.closest('.lsx-review-full');
-        var $excerpt = $full.prev('.lsx-review-excerpt');
-        $excerpt.show();
-        $full.hide();
-    });
+    
 
 })( jQuery, window, document );
