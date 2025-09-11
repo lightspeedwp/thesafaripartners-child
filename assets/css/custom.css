@@ -229,7 +229,8 @@ button {
 }
 
 .single-lsx-to-destination .extra-cta,
-.tax-travel-style .extra-cta {
+.tax-travel-style .extra-cta,
+.tax-who .extra-cta {
     margin-top: 24px;
     position: relative;
     bottom: 10px;
@@ -11613,22 +11614,26 @@ body.modal-open div.modal-backdrop {
     }
 
     .single-lsx-to-destination .search-content,
-    .tax-travel-style .search-content {
+    .tax-travel-style .search-content,
+    .tax-who .search-content {
         padding: 0;
     }
 
     .single-lsx-to-destination .search-result-content,
-    .tax-travel-style .search-result-content {
+    .tax-travel-style .search-result-content,
+    .tax-who .search-result-content {
         padding: 0 0.625rem;
     }
 
     .single-lsx-to-destination .search-result-thumb,
-    .tax-travel-style .search-result-thumb {
+    .tax-travel-style .search-result-thumb,
+    .tax-who .search-result-thumb {
         margin: 0 -0.625rem;
     }
 
     .single-lsx-to-destination .tsp-tour-button,
-    .tax-travel-style .tsp-tour-button {
+    .tax-travel-style .tsp-tour-button,
+    .tax-who .tsp-tour-button {
         margin: 0 0 0.625rem;
     }
 
