@@ -11579,7 +11579,11 @@ body.modal-open div.modal-backdrop {
     }
 
     .single-lsx-to-destination .search-result-thumb {
-        margin: -0.625rem -0.625rem 0;
+        margin: 0 -0.625rem;
+    }
+
+    .single-lsx-to-destination .tsp-tour-button {
+        margin: 0 0 0.625rem;
     }
 
     .show-trip-finder {
