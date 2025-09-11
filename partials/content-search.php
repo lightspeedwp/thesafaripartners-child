@@ -37,7 +37,11 @@ $permalink = get_permalink();
         </div>
 
         <div class="search-tour-excerpt"><?php
+        if ( has_excerpt() ) {
             the_excerpt();
+        } else {
+            the_content();
+        }
             ?>
         </div>
 
