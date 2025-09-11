@@ -180,7 +180,7 @@
         body.style.right = '';
         body.style.width = '';
         body.classList.remove('sidebar-open');
-        window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' }); // Instant scroll
+        window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' }); // Instant scroll
         delete body.dataset.scrollY;
     }
 

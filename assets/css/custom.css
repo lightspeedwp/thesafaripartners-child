@@ -11562,7 +11562,11 @@ body.modal-open div.modal-backdrop {
     }
 
     .search-result-content {
-        padding: 0;
+        /* padding: 0; */
+    }
+
+    .search-result-content .search-result-thumb {
+        margin: -0.625rem -0.625rem 0;
     }
 
     .facetwp-reset {
@@ -11585,7 +11589,7 @@ body.modal-open div.modal-backdrop {
         z-index: 1002;
     }
 
-    .mega-menu-wrap-filter-menu {
+    #mega-menu-wrap-filter-menu {
         max-height: calc(100vh - 10rem);
         overflow-y: auto;
     }
