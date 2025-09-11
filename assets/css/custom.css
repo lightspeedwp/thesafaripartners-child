@@ -10658,6 +10658,10 @@ body.single-tour-operator #gallery .gallery img {
     line-height: 2rem;
 }
 
+.search-result-content .tsp-meta.tsp-countries {
+    height: auto;
+}
+
 .search-main .tax-title {
     position: absolute;
     top: 1.25rem;
@@ -10859,7 +10863,7 @@ body.single-tour-operator #gallery .gallery img {
     margin-bottom: 2.5rem;
     grid-template-areas:
         "title search"
-        "query search-results";
+        "search-results search-results";
 }
 
 .search-header .facetwp-facet {
@@ -11237,7 +11241,6 @@ body.modal-open div.modal-backdrop {
         grid-template-columns: 1fr;
         grid-template-areas:
             "title"
-            "query"
             "search"
             "search-results";
         grid-gap: 1.25rem;
@@ -11484,7 +11487,10 @@ body.modal-open div.modal-backdrop {
 
     body.sidebar-open {
         overflow: hidden;
-        width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100vw;
     }
 
     body.sidebar-open .header-wrap {
@@ -11498,16 +11504,27 @@ body.modal-open div.modal-backdrop {
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 1.25rem;
+        padding: 1.25rem 1.25rem 5rem;
         background: #fff;
         z-index: 1000;
-        overflow-y: auto;
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out;
     }
 
     .search-sidebar.active {
         transform: translateY(0);
+    }
+
+    .search-sidebar.active:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom:0;
+        left: 0;
+        right: 0;
+        height: 5rem;
+        z-index: 1000;
+        background: #fff;
     }
 
     .hide-search-filters {
@@ -11553,6 +11570,7 @@ body.modal-open div.modal-backdrop {
         bottom: 1.25rem;
         left: 1.25rem;
         width: 40vw;
+        z-index: 1002;
     }
 
     .show-search-filters {
@@ -11564,6 +11582,12 @@ body.modal-open div.modal-backdrop {
         position: absolute;
         bottom: 1.25rem;
         right: 1.25rem;
+        z-index: 1002;
+    }
+
+    .mega-menu-wrap-filter-menu {
+        max-height: calc(100vh - 10rem);
+        overflow-y: auto;
     }
 
     .single-lsx-to-destination #main {

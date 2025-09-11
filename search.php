@@ -8,11 +8,7 @@
  */
 
 add_action( 'body_class', 'tsp_search_page_classes' );
-// get search term from fwp_search param
-$fwp_search = isset( $_GET['fwp_search'] ) ? sanitize_text_field( $_GET['fwp_search'] ) : '';
-if($fwp_search){
-    $fwp_search = '"'.$fwp_search.'"';
-}
+
 get_header(); ?>
 
 <?php lsx_content_wrap_before(); ?>
@@ -23,7 +19,6 @@ get_header(); ?>
 	<?php lsx_content_before(); ?>
     <div class="search-header">
         <div class="search-header-title"><?php echo esc_html__( 'Search Results', 'thesafaripartners-child' ); ?></div>
-        <div class="search-header-term" id="search-header-term"><?php echo esc_html( $fwp_search ); ?></div>
         <?php echo do_shortcode( '[facetwp facet="search"]' ); ?>
         <?php echo do_shortcode( '[facetwp selections="true"]' ); ?>
     </div>
@@ -41,8 +36,9 @@ get_header(); ?>
 					)
 				);
 
-                echo do_shortcode( '[facetwp facet="reset"]' );
+                // echo do_shortcode( '[facetwp facet="reset"]' );
 			?>
+            <button id="reset-search-filters" class="facetwp-reset">Reset Filters</button>
             <button id="apply-search-filters" class="apply-search-filters">Apply Filters</button>
         </div>
         <div class="search-content">

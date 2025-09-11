@@ -143,15 +143,46 @@
         });
 
         $('#hide-search-filters, #apply-search-filters').on('click', function() {
-            $('body').removeClass('sidebar-open');
+            bodyScrollUnlock();
+            $('.search-sidebar').removeClass('active');
+        });
+
+        $('#reset-search-filters').on('click', function() {
+            FPW.reset ();
+            bodyScrollUnlock();
             $('.search-sidebar').removeClass('active');
         });
     
         $('#show-search-filters').on('click', function() {
-            $('body').addClass('sidebar-open');
+            bodyScrollLock();
             $('.search-sidebar').addClass('active');
         });
     });
+
+    function bodyScrollLock() {
+        const body = document.body;
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        body.style.position = 'fixed';
+        body.style.top = `-${scrollY}px`;
+        body.style.left = '0';
+        body.style.right = '0';
+        body.style.width = '100vw';
+        body.dataset.scrollY = scrollY;
+        body.classList.add('sidebar-open');
+    }
+    
+    function bodyScrollUnlock() {
+        const body = document.body;
+        const scrollY = body.dataset.scrollY ? parseInt(body.dataset.scrollY, 10) : 0;
+        body.style.position = '';
+        body.style.top = '';
+        body.style.left = '';
+        body.style.right = '';
+        body.style.width = '';
+        body.classList.remove('sidebar-open');
+        window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' }); // Instant scroll
+        delete body.dataset.scrollY;
+    }
 
     $(document).on('facetwp-loaded', function() {
         var url = window.location.href;
