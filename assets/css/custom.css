@@ -11661,7 +11661,9 @@ body.modal-open div.modal-backdrop {
         align-items: center;
     }
 
-    .single .hide-search-filters {
+    .single .hide-search-filters,
+    .archive .hide-search-filters,
+    .page-template-template-travel-style .hide-search-filters {
         top: 3rem;
     }
 
