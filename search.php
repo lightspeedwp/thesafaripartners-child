@@ -28,15 +28,12 @@ get_header(); ?>
         <div class="search-sidebar">
             <button id="hide-search-filters" class="hide-search-filters">X</button>
             <h2>Filters</h2>
-		    <?php if ( have_posts() ) { ?>
 			<?php
 				wp_nav_menu(
 					array(
 						'theme_location' => 'filter-menu',
 					)
 				);
-
-                // echo do_shortcode( '[facetwp facet="reset"]' );
 			?>
             <button id="reset-search-filters" class="facetwp-reset">Reset Filters</button>
             <button id="apply-search-filters" class="apply-search-filters">Apply Filters</button>
@@ -55,25 +52,24 @@ get_header(); ?>
             <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
                 <?php
                 global $wp_query, $post, $relevance_scores;
+                if( have_posts() ) {
                 while ( have_posts() ) {
                     the_post();
                     get_template_part('partials/content', 'search');
                 }
-                
+                ?>
+                <?php
+                } else {
+                    get_template_part( 'partials/content', 'search-none' );
+                }
                 ?>
             </div>
-
             <div class="tsp-pagination">
                 <?php echo do_shortcode( '[facetwp facet="pagination"]' ); ?>
             </div>
+
+            
         </div>
-
-
-		<?php } else { ?>
-
-			<?php get_template_part( 'partials/content', 'search-none' ); ?>
-
-		<?php } ?>
 
 		<?php lsx_content_bottom(); ?>
 

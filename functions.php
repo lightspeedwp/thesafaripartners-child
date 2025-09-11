@@ -113,6 +113,19 @@ add_filter( 'facetwp_is_main_query', function( $is_main_query, $query ) {
 }, 10, 2 );
 
 add_filter( 'facetwp_query_args', function( $search_args, $params ) {
-    $search_args['posts_per_page'] = 6; // Default: 200. Set to -1 to show all search results.
+    $search_args['posts_per_page'] = 6;
     return $search_args;
   }, 10, 2 );
+
+add_filter( 'facetwp_shortcode_html', function( $output, $atts ) {
+    if ( isset( $atts['template'] ) && 'travel_types' === $atts['template'] ) {
+        // Add .post-wrapper to the topmost div, preserving existing classes and attributes
+        $output = preg_replace(
+            '/<div([^>]*)class="([^"]*)facetwp-template([^"]*)"([^>]*)>/',
+            '<div$1class="post-wrapper $2facetwp-template$3"$4>',
+            $output,
+            1 // Only replace the first/topmost div
+        );
+    }
+    return $output;
+}, 10, 2 );

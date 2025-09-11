@@ -10547,11 +10547,24 @@ body.single-tour-operator #gallery .gallery img {
     padding-bottom: 2.5rem;
 }
 
+.search-main.no-results {
+    grid-template-columns: 1fr;
+}
+
+.search-main.no-results .search-sidebar,
+.search-main.no-results .search-widget-header,
+.search-main.no-results .facetwp-template >h2 {
+    display: none;
+}
+
+.search-main.no-results .search-content .post-wrapper {
+    grid-template-columns: 1fr;
+}
+
 .search-main .search-content .post-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    max-width: calc(17rem * 3 + 2rem);
     margin: 0 auto;
     clear: both;
     padding-bottom: 3.75rem;

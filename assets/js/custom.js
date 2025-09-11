@@ -184,7 +184,12 @@
         delete body.dataset.scrollY;
     }
 
+    var initialLoad = true;
+
     $(document).on('facetwp-loaded', function() {
+        if (!initialLoad) {
+            return; // Skip the first load
+        }
         var url = window.location.href;
         // Match either /safari-style/{value} 
         var facetRegex = /\/(?:safari-style|who)\/([^\/?#]+)/i;
@@ -242,19 +247,25 @@
             });
         }
 
-        
-        
+        initialLoad = false;
     });
     
 
-    $(document).on('facetwp-refresh', function() {
-        var searchVal = FWP.facets.search || '';
-        if (searchVal.length > 0) {
-            searchVal = '"' + searchVal + '"';
-        } else {
-            searchVal = '';
-        }
-        $('#search-header-term').text(searchVal);
+    $(document).on('facetwp-loaded', function() {
+        setTimeout(function() {
+            console.log('Checking for no results...');
+            var $main = $('#main.search-main');
+            var $postWrapper = $('.post-wrapper.facetwp-template');
+            
+            // Check if there are any posts in the results
+            if ($postWrapper.find('.post, article, .search-result-item').length === 0) {
+                $main.addClass('no-results');
+                console.log('No results found, added no-results class.');
+            } else {
+                $main.removeClass('no-results');
+                console.log('Results found, removed no-results class if it existed.');
+            }
+        }, 100); // Small delay to ensure DOM is updated
     });
 
     const tourGallery = document.querySelector('#gallery .gallery');

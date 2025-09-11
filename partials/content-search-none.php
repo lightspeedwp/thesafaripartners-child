@@ -27,18 +27,6 @@
 				?>
 			</p>
 
-			<form role="search" method="get" class="search-form form-inline" id="searchform" action="<?php echo home_url(); ?>">
-				<div class="input-group">
-					<input type="hidden" name="s" class="" placeholder="" />
-					<input type="text" value="<?php echo $keyword; ?>" name="fwp_search" class="search-field form-control" placeholder="Search The Safari Partners" />
-					<label for="fwp_search" class="hide">Search for:</label>
-
-					<span class="input-group-btn">
-						<button type="submit" class="search-submit btn btn-default"><span class="fa fa-search"></span></button>
-					</span>
-				</div>
-			</form>
-
 		<?php else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lsx' ); ?></p>

@@ -1140,7 +1140,6 @@ function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $
         <div class="search-content">
             <div id="show-search-filters" class="show-trip-finder"><i class="tsp-icon tsp-icon-menu"></i><?php esc_html_e( 'Trip finder', 'tour-operator' ); ?></div>
             <?php if ( $show_search_meta ) : ?>
-            <?php // echo do_shortcode( '[facetwp selections="true"]' ); ?>
             <div class="search-widget-header">
                 <div class="search-widget-results">
                     <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?>
@@ -1151,22 +1150,9 @@ function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $
             </div>
             <?php endif; ?>
 
-            <div class="post-wrapper facetwp-template <?php echo esc_attr( lsx_post_wrapper_class() ); ?>">
                 <?php
-                if ( $search_query->have_posts() ) {
-                    while ( $search_query->have_posts() ) {
-                        $search_query->the_post();
-                        get_template_part( 'partials/content', 'search' );
-                    }
-                } else {
-                    ?>
-                    <div class="no-results">
-                        <p><?php esc_html_e( 'No tours found matching your criteria.', 'tour-operator' ); ?></p>
-                    </div>
-                    <?php
-                }
+                echo do_shortcode( '[facetwp template="travel_types"]' );
                 ?>
-            </div>
 
             <div class="tsp-pagination">
                  <?php echo do_shortcode( '[facetwp facet="pagination"]' ); ?>
