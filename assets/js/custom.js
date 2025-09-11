@@ -143,10 +143,12 @@
         });
 
         $('#hide-search-filters, #apply-search-filters').on('click', function() {
+            $('body').removeClass('sidebar-open');
             $('.search-sidebar').removeClass('active');
         });
     
         $('#show-search-filters').on('click', function() {
+            $('body').addClass('sidebar-open');
             $('.search-sidebar').addClass('active');
         });
     });

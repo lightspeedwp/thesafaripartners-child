@@ -10835,6 +10835,7 @@ body.single-tour-operator #gallery .gallery img {
     justify-content: center;
     position: relative;
     padding-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .search-header-title {
@@ -11481,6 +11482,15 @@ body.modal-open div.modal-backdrop {
         grid-template-columns: 1fr;
     }
 
+    body.sidebar-open {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    body.sidebar-open .header-wrap {
+        opacity: 0;
+    }
+
     .search-sidebar {
         display: block;
         position: fixed;
@@ -11564,6 +11574,14 @@ body.modal-open div.modal-backdrop {
         padding: 0;
     }
 
+    .single-lsx-to-destination .search-result-content {
+        padding: 0 0.625rem;
+    }
+
+    .single-lsx-to-destination .search-result-thumb {
+        margin: -0.625rem -0.625rem 0;
+    }
+
     .show-trip-finder {
         display: flex;
     }
@@ -11616,5 +11634,9 @@ body.modal-open div.modal-backdrop {
 
     .gallery.slick-slider .gallery-item {
         padding: 0 10px;
+    }
+
+    .tsp-meta:empty {
+        display: none;
     }
 }
