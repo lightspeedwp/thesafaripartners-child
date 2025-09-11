@@ -5425,8 +5425,7 @@ footer .col-sm-12 {
     .archive #primary,
     .single-lsx-to-destination #primary,
     .single-lsx-to-tour #primary {
-        max-width: 1200px;
-
+        width: 1200px;
         margin: 0 auto;
         float: none !important;
         display: flex;
@@ -10546,6 +10545,8 @@ body.single-tour-operator #gallery .gallery img {
     clear: both;
     grid-gap: 2.5rem;
     padding-bottom: 2.5rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .search-main.no-results {
