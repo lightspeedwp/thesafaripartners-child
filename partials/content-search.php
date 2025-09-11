@@ -12,6 +12,7 @@
 <?php
 global $post;
 setup_postdata( $post );
+$permalink = get_permalink();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'search-result' ); ?>>
@@ -21,7 +22,7 @@ setup_postdata( $post );
         </div>
 
         <h4 class="entry-title">
-            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+            <a href="<?php echo $permalink; ?>" rel="bookmark"><?php the_title(); ?></a>
         </h4>
         <div class="tsp-related-tour-meta">
             <?php

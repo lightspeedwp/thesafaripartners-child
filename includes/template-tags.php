@@ -1169,7 +1169,6 @@ function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $
             </div>
 
             <div class="tsp-pagination">
-                <!-- <?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?> -->
                  <?php echo do_shortcode( '[facetwp facet="pagination"]' ); ?>
             </div>
         </div>
@@ -1190,8 +1189,23 @@ function tsp_destination_tour_search( $show_filters = true ) {
     if ( ! is_singular( 'destination' ) ) {
         return;
     }
+
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'meta_query'    => array(
+            array(
+                'key'     => 'destination_to_tour',
+                'value'   => get_the_ID(),
+                'compare' => '=',
+            ),
+        ),
+    );
+
     // Add a wrapper class specific to destination tour search
-    tsp_tour_search( $show_filters, false, 'destination-tour-search' );
+    tsp_tour_search( $show_filters, true, 'destination-tour-search', $search_query_args );
 }
 
 function tsp_safari_style_tour_search( $show_filters = true ) {
@@ -1220,5 +1234,34 @@ function tsp_safari_style_tour_search( $show_filters = true ) {
     );
 
     // Add a wrapper class specific to travel style tour search
-    tsp_tour_search( $show_filters, false, 'travel-style-search', $search_query_args );
+    tsp_tour_search( $show_filters, true, 'travel-style-search', $search_query_args );
+}
+
+function tsp_who_tour_search( $show_filters = true ) {
+    if ( ! is_tax('who') ) {
+        return;
+    }
+
+    $term = get_queried_object();
+    if ( ! $term || empty( $term->term_id ) ) {
+        return;
+    }
+
+    // Filter initial query by current travel-style term
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'tax_query'     => array(
+            array(
+                'taxonomy' => 'who',
+                'field'    => 'term_id',
+                'terms'    => array( $term->term_id ),
+            ),
+        ),
+    );
+
+    // Add a wrapper class specific to travel style tour search
+    tsp_tour_search( $show_filters, true, 'who-search', $search_query_args );
 }

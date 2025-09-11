@@ -54,6 +54,8 @@ $tag = get_field('tagline', $term);
 		</div>
 			</div>
 
+			<?php tsp_who_tour_search(); ?>
+
 			<?php 
 				/*$args = array( 
 					'selected' => array( get_queried_object_id() ),

@@ -152,10 +152,9 @@
     });
 
     $(document).on('facetwp-loaded', function() {
-  
         var url = window.location.href;
         // Match either /safari-style/{value} 
-        var facetRegex = /\/(?:safari-style)\/([^\/?#]+)/i;
+        var facetRegex = /\/(?:safari-style|who)\/([^\/?#]+)/i;
         var match = url.match(facetRegex);
         if (match && match[1]) {
             var selectedValue = decodeURIComponent(match[1]).toLowerCase();
@@ -171,6 +170,14 @@
                     }
                     parentLi.addClass('mega-toggle-on');
 
+                }
+            });
+        }
+
+        if (window.location.pathname === '/safari-styles/') {
+            $('.search-sidebar a.mega-menu-link').each(function() {
+                if ($(this).text().trim() === 'Safari Style') {
+                    $(this).parent('li').addClass('mega-toggle-on');
                 }
             });
         }

@@ -31,6 +31,7 @@ get_header(); ?>
 		<?php endif; ?>
 		<?php wp_reset_query(); ?>
 
+		<?php tsp_tour_search( $true, true ); ?>
 		<div class="notfull">
 
 			<?php 
@@ -59,7 +60,7 @@ get_header(); ?>
 					'facetwp' => true,
 					'posts_per_page' => -1,
 				);
-				tsp_mini_wizard_results( $query_args, $args ); ?>
+				// tsp_mini_wizard_results( $query_args, $args ); ?>
 
 			<?php lsx_content_bottom(); ?>
 			</div>
