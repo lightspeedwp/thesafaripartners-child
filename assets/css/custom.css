@@ -228,7 +228,8 @@ button {
     font-size: 18px;
 }
 
-.single-lsx-to-destination .extra-cta {
+.single-lsx-to-destination .extra-cta,
+.tax-travel-style .extra-cta {
     margin-top: 24px;
     position: relative;
     bottom: 10px;
@@ -2534,8 +2535,6 @@ th {
     margin: 0 auto;
 }
 
-
-/* TODO: clean this */
 .search-results .tax-title span {
     visibility: visible;
     position: absolute;
@@ -10545,6 +10544,7 @@ body.single-tour-operator #gallery .gallery img {
     grid-template-columns: 1fr 3fr;
     clear: both;
     grid-gap: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .search-main .search-content .post-wrapper {
@@ -11483,6 +11483,7 @@ body.modal-open div.modal-backdrop {
 
     .search-main {
         grid-template-columns: 1fr;
+        padding-bottom: 0;
     }
 
     body.sidebar-open {
@@ -11495,6 +11496,10 @@ body.modal-open div.modal-backdrop {
 
     body.sidebar-open .header-wrap {
         opacity: 0;
+    }
+
+    body.sidebar-open .zsiq_theme1.zsiq_floatmain {
+        display: none!important;
     }
 
     .search-sidebar {
@@ -11561,10 +11566,6 @@ body.modal-open div.modal-backdrop {
         min-height: 0!important;
     }
 
-    .search-result-content {
-        /* padding: 0; */
-    }
-
     .search-result-content .search-result-thumb {
         margin: -0.625rem -0.625rem 0;
     }
@@ -11598,19 +11599,23 @@ body.modal-open div.modal-backdrop {
         padding: 0;
     }
 
-    .single-lsx-to-destination .search-content {
+    .single-lsx-to-destination .search-content,
+    .tax-travel-style .search-content {
         padding: 0;
     }
 
-    .single-lsx-to-destination .search-result-content {
+    .single-lsx-to-destination .search-result-content,
+    .tax-travel-style .search-result-content {
         padding: 0 0.625rem;
     }
 
-    .single-lsx-to-destination .search-result-thumb {
+    .single-lsx-to-destination .search-result-thumb,
+    .tax-travel-style .search-result-thumb {
         margin: 0 -0.625rem;
     }
 
-    .single-lsx-to-destination .tsp-tour-button {
+    .single-lsx-to-destination .tsp-tour-button,
+    .tax-travel-style .tsp-tour-button {
         margin: 0 0 0.625rem;
     }
 
