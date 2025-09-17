@@ -35,7 +35,7 @@ class Admin {
 	 * @access private
 	 */
 	private function __construct() {
-		add_filter( 'lsx_wetu_tour_refresh_url', array( $this, 'set_importer_defaults' ), 10, 1 );
+		
 	}
 
 	/**
@@ -51,17 +51,5 @@ class Admin {
 			self::$instance = new self();
 		}
 		return self::$instance;
-	}
-
-	/**
-	 * The tour URL to ping.
-	 *
-	 * @param string $url
-	 * @return string
-	 */
-	public function set_importer_defaults( $url ) {
-		$url = str_replace( '&type=Sample', '&type=personal', $url );
-		$url = str_replace( '&type', '&operatorid=3487&type', $url );
-		return $url;
 	}
 }
