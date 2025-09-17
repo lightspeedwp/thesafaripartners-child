@@ -27,7 +27,6 @@ function prefix_conditional_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'prefix_conditional_body_class' );
-
 if ( apply_filters( 'lsx_to_page_navigation_disable', false, get_post_type() ) ) {
 		return false;
 	}
@@ -69,3 +68,64 @@ function alter_search_classes($classes) {
     }
 
 }
+function tsp_replace_accommodation_meta() {
+    remove_action('lsx_to_modal_meta', 'lsx_to_accommodation_meta');
+    add_action('lsx_to_modal_meta', 'tsp_custom_accommodation_meta');
+}
+add_action('wp_loaded', 'tsp_replace_accommodation_meta');
+
+function tsp_custom_accommodation_meta() {
+    if ( 'accommodation' === get_post_type() ) {
+        $meta_class = 'lsx-to-meta-data lsx-to-meta-data-';
+
+        tsp_custom_connected_countries_inline( '<span class="' . $meta_class . 'destinations"><span class="lsx-to-meta-data-key">' . esc_html__( 'Location', 'tour-operator' ) . ':</span> ', '</span>' );
+        lsx_to_accommodation_room_total( '<span class="' . $meta_class . 'rooms"><span class="lsx-to-meta-data-key">' . esc_html__( 'Rooms', 'tour-operator' ) . ':</span> ', '</span>' );
+    }
+}
+
+function tsp_custom_connected_countries_inline( $before = '', $after = '' ) {
+    ob_start();
+    lsx_to_connected_countries( $before, $after );
+    $original_output = ob_get_clean();
+
+    // Strip all anchor tags but keep the content inside them
+    $stripped_output = preg_replace('/<a[^>]*>(.*?)<\/a>/is', '$1', $original_output);
+
+    echo $stripped_output;
+}
+
+add_action( 'lsx_banner_inner_top', function() {
+    if ( is_singular( 'tour' ) ) {
+        // Get the banner image URL using the same filter as the main banner
+        $banner_image = apply_filters( 'lsx_banner_image', false );
+        if ( ! empty( $banner_image ) ) {
+            echo '<div class="page-banner-image banner-blur" style="background-image:url(' . esc_url( $banner_image ) . ');"></div>';
+        }
+    }
+});
+
+add_filter( 'facetwp_is_main_query', function( $is_main_query, $query ) {
+    // Identify your custom query, e.g. by checking a variable or query args
+    if ( isset( $query->query_vars['facetwp'] ) && $query->query_vars['facetwp'] ) {
+        $is_main_query = true;
+    }
+    return $is_main_query;
+}, 10, 2 );
+
+add_filter( 'facetwp_query_args', function( $search_args, $params ) {
+    $search_args['posts_per_page'] = 6;
+    return $search_args;
+  }, 10, 2 );
+
+add_filter( 'facetwp_shortcode_html', function( $output, $atts ) {
+    if ( isset( $atts['template'] ) && 'travel_types' === $atts['template'] ) {
+        // Add .post-wrapper to the topmost div, preserving existing classes and attributes
+        $output = preg_replace(
+            '/<div([^>]*)class="([^"]*)facetwp-template([^"]*)"([^>]*)>/',
+            '<div$1class="post-wrapper $2facetwp-template$3"$4>',
+            $output,
+            1 // Only replace the first/topmost div
+        );
+    }
+    return $output;
+}, 10, 2 );

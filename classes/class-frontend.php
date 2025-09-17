@@ -165,7 +165,9 @@ class Frontend {
 		add_filter( 'lsx_to_parents_only', array( $this, 'order_tour_countries' ), 20, 2 );
 		add_filter( 'the_content', array( $this, 'the_content' ), 100 );
 		add_filter( 'lsx_currencies_nav_additional_items', array( $this, 'order_currency_dropdown' ), 10, 1 );
-		add_filter( 'the_content', array( $this, 'order_currency_dropdown' ), 10, 1 );
+
+		// Tour Operator
+		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
 
 		// Tour Operator
 		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
@@ -237,11 +239,13 @@ class Frontend {
 	}
 
 	public function wp_head() {
-		remove_action( 'lsx_content_wrap_before', 'lsx_to_single_content_top', 110 );
+		if ( ! is_singular( [ 'tour' ] ) ) {
+			remove_action( 'lsx_content_wrap_before', 'lsx_to_single_content_top', 110 );
+		}
 		remove_action( 'lsx_content_bottom', 'lsx_to_destination_single_content_bottom' );
 		remove_action( 'lsx_content_bottom', 'lsx_to_tour_single_content_bottom' );
 		remove_action( 'lsx_to_fast_facts', 'lsx_to_destination_single_fast_facts' );
-		remove_action( 'lsx_to_fast_facts', 'lsx_to_tour_single_fast_facts' );
+		//remove_action( 'lsx_to_fast_facts', 'lsx_to_tour_single_fast_facts' );
 		add_action( 'lsx_content_bottom', 'lsx_to_destination_tours_tsp' );
 		add_action( 'lsx-thumbnail-single', 'lsx_to_destination_single_fast_facts' );
 
@@ -594,7 +598,10 @@ class Frontend {
 	 */
 	public function banner_image_placeholder( $image ) {
 		if ( is_singular( 'tour' ) && ( false === $image || empty( $image ) ) ) {
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+			$temp_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+			if ( is_array( $temp_image ) && isset( $temp_image[0] ) ) {
+				$image = $temp_image[0];
+			}
 		}
 		return $image;
 	}

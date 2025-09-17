@@ -19,7 +19,7 @@ get_header(); ?>
 			<?php lsx_content_top(); ?>
 
 			<?php 
-				$panels = array(
+				/*$panels = array(
 					0 => array( 'who' ),
 					1 => array( 'what' ),
 					2 => array( 'where' ),
@@ -27,7 +27,7 @@ get_header(); ?>
 					4 => array( 'budget' ),
 				);
 				$args = array();
-				tsp_mini_wizard( $panels, $args );
+				tsp_mini_wizard( $panels, $args );*/
 			?>
 
 			<?php

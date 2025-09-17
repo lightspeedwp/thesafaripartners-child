@@ -143,7 +143,7 @@ class Itinerary_Images {
 
 			global $tour_itinerary;
 			// Then look for a second use image.
-			if ( false === $next_image && 0 !== $tour_itinerary->last_item_id && '' !== $tour_itinerary->last_item_id ) {
+			if ( false === $next_image && isset( $tour_itinerary->last_item_id ) && 0 !== $tour_itinerary->last_item_id && '' !== $tour_itinerary->last_item_id ) {
 				$next_image = $this->find_next_image( $tour_itinerary->last_item_id, $tour_itinerary );
 				if ( false !== $next_image ) {
 					$tour_itinerary->save_used_image( $next_image );

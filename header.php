@@ -48,6 +48,17 @@
 
 		<?php lsx_header_wrap_after(); ?>
 
+		<?php
+		if ( is_search() ) : ?>
+			<div id="lsx-banner" class="tsp-banner-search">
+				<div class="page-banner-wrap">
+					<div class="page-banner rotating" style="">
+						<div class="page-banner-image" style="background-position: center center; background-image:url(https://thesafaripartners.lightspeedwp.dev/wp-content/uploads/2022/09/wildlife-safaris-holiday-style.jpg);"></div>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
+
 		<div class="wrap container" role="document" tabindex="-1">
 			<div class="content role row">
 

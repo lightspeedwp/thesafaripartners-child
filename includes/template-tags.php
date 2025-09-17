@@ -23,6 +23,10 @@ function tsp_init_wizard() {
  * @return string
  */
 function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
+	return $content;
+
+	tsp_init_wizard();
+
 	$defaults = array(
 		'taxonomy' => '',
 		'post_type' => 'tour',
@@ -45,7 +49,7 @@ function tsp_mini_wizard_shortcode( $args = array(), $content = '' ) {
 	}
 
 	ob_start();
-	tsp_mini_wizard( $panels, $args );
+	//tsp_mini_wizard( $panels, $args );
 	tsp_mini_wizard_results( $args, $panel_args );
 
 	$return = ob_get_clean();
@@ -133,7 +137,7 @@ function tsp_mini_wizard_results( $query_args = array(), $panel_args = array() )
 		<div class="tsp-seperator"></div>
 
 		<div class="slider-container mini-wizard-results lsx-to-widget-items lsx-to-archive-template-grid toptours-posts" >
-			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>">
+			<div id="slider-<?php echo esc_attr( rand( 20, 20000 ) ); ?>" class="lsx-to-slider">
 			<div class="lsx-to-slider-wrap">
 				<div class="lsx-to-slider-inner slick-slider" data-interval="6000" data-slick='{ "slidesToShow": 4, "slidesToScroll": 4 }'>
 					<?php
@@ -273,26 +277,19 @@ function tsp_accommodation_gallery( $post_id = 0 ) {
 	if ( 0 !== $post_id ) {
 		?>
 		<div class="tour-accommodation-gallery" data-slider-id="<?php echo esc_attr( $post_id ); ?>">
-			<div class="lsx-banner-image-wrap placeholder-image">
-				<?php //echo get_the_post_thumbnail( $post_id, 'full' ); ?>
-			</div>
-			<div class="slider-content accom-slider-<?php echo esc_attr( $post_id ); ?>" style="display:none;">
+			<div class="slider-content accom-slider-<?php echo esc_attr( $post_id ); ?>">
 				<?php
 					$gallery_images = get_post_meta( $post_id, 'gallery', false );
 					if ( ! empty( $gallery_images ) ) {
 						$slider_content = array( '<div class="accomodation-slider lsx-to-slider-inner">' );
-						//$slider_nav     = array( '<div class="accomodation-nav lsx-to-slider-inner">' );
 
 						foreach ( $gallery_images as $gallery_image ) {
 							$slider_content[] = '<div class="image-slide">' . wp_get_attachment_image( $gallery_image, 'large' ) . '</div>';
-							//$slider_nav[]     = '<div class="nav-slide">' . wp_get_attachment_image( $gallery_image, 'thumbnail-wide' ) . '</div>';
 						}
 
 						$slider_content[] = '</div>';
-						//$slider_nav[]     = '</div>';
 
 						echo wp_kses_post( implode( '', $slider_content ) );
-						//echo wp_kses_post( implode( '', $slider_nav ) );
 					}
 				?>
 			</div>
@@ -387,7 +384,7 @@ function tsp_map_meta() {
  * @subpackage	template-tags
  * @category 	helper
  */
-function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false ) {
+function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo = true, $post_type = false, $post_template = false, $max_items = 15 ) {
 	if ( false !== $taxonomy ) {
 		$return     = false;
 		$filters    = array();
@@ -402,7 +399,7 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 		if ( is_array( $taxonomy ) ) {
 			$filters['post__in'] = $taxonomy;
 		} else {
-			$filters['posts_per_page'] = 15;
+			$filters['posts_per_page'] = $max_items;
 			//Exclude the current post
 			$filters['post__not_in'] = array( get_the_ID() );
 			//if its set to related then we need to check by the type.
@@ -480,7 +477,6 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 			echo '<div id="slider-' . esc_attr( $carousel_id ) . '" class="lsx-to-slider">';
 			echo '<div class="lsx-to-slider-wrap">';
 			
-			//echo '<div class="lsx-to-slider-inner" data-interval="' . esc_attr( $interval ) . '" data-slick=\'' . json_encode( $slider_atts ) .'\'>';
 			echo "<div class='lsx-to-slider-inner' data-interval='{$interval}' data-slick='{ \"slidesToShow\": {$columns}, \"slidesToScroll\": {$columns} }'>";
 
 			while ( $related_query->have_posts() ) :
@@ -492,7 +488,12 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 				$disable_text = apply_filters( 'lsx_to_widget_disable_text', false, $post_type, false, $taxonomy );
 
 				echo '<div class="lsx-to-widget-item-wrap lsx-' . esc_attr( $post_type ) . '">';
-				lsx_to_content( 'content-widget', $post_type );
+                if ($post_template) {
+                    lsx_to_content('content-widget', $post_template);
+                } else {
+                    lsx_to_content('content-widget', $post_type);
+                }
+
 				echo '</div>';
 			endwhile;
 
@@ -520,3 +521,733 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 	}
 }
 
+function tsp_best_time_to_visit( $echo = true ) {
+    $best_time_to_visit = get_post_meta( get_the_ID(), 'best_time_to_visit', true );
+    if ( false !== $best_time_to_visit && '' !== $best_time_to_visit && is_array( $best_time_to_visit ) && ! empty( $best_time_to_visit ) ) {
+        $this_year = array(
+                'january' => esc_html__( 'January', 'tour-operator' ),
+                'february' => esc_html__( 'February', 'tour-operator' ),
+                'march' => esc_html__( 'March', 'tour-operator' ),
+                'april' => esc_html__( 'April', 'tour-operator' ),
+                'may' => esc_html__( 'May', 'tour-operator' ),
+                'june' => esc_html__( 'June', 'tour-operator' ),
+                'july' => esc_html__( 'July', 'tour-operator' ),
+                'august' => esc_html__( 'August', 'tour-operator' ),
+                'september' => esc_html__( 'September', 'tour-operator' ),
+                'october' => esc_html__( 'October', 'tour-operator' ),
+                'november' => esc_html__( 'November', 'tour-operator' ),
+                'december' => esc_html__( 'December', 'tour-operator' ),
+        );
+
+        foreach ( $this_year as $month => $label ) {
+            $checked_class = '';
+
+            if ( in_array( $month, $best_time_to_visit ) ) {
+                $checked_class = 'tsp-month-check';
+            }
+
+            $best_times[] = '<div class="tsp-month ' . $checked_class . '"><small>' . $label . '</small></div>';
+        };
+
+        $return = '<div class="tsp-meta tsp-time-to-visit"><i class="tsp-icon tsp-icon-calendar"></i>' .
+            '<span><span class="tsp-fast-facts-type">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</span>' .
+            '<span class="tsp-best-time-to-visit">' . implode( '', $best_times ) . '</span></span></div>';
+
+        if ( $echo ) {
+            echo wp_kses_post( $return );
+        } else {
+            return $return;
+        }
+    }
+}
+
+function tsp_tour_fast_facts()
+{
+    $meta_class = 'tsp-fast-facts-type';
+
+    $tour_types = get_the_terms(get_the_ID(), 'tour-type');
+    if ($tour_types && !is_wp_error($tour_types)) {
+        $tour_type_names = array();
+        foreach ($tour_types as $tour_type) {
+            $tour_type_names[] = $tour_type->name;
+        }
+        $tour_type_display = implode(', ', $tour_type_names);
+        echo '<div class="tsp-meta tsp-tourtype"><i class="tsp-icon tsp-icon-tour-type"></i><span><span class="' . $meta_class . '">' . esc_html__('Type Of Tour', 'tour-operator') . '</span><span>' . esc_html($tour_type_display) . '</span></span></div>';
+    }
+
+    lsx_to_duration('<div class="tsp-meta tsp-duration"><i class="tsp-icon tsp-icon-duration"></i><span><span class="' . $meta_class . '">' . esc_html__('Duration', 'tour-operator' ) . '</span><span> ',  esc_html__(' Days', 'tour-operator') . '</span></span></div>');
+    lsx_to_connected_countries('<div class="tsp-meta tsp-countries"><i class="tsp-icon tsp-icon-countries"></i><span><span class="' . $meta_class . '">' . esc_html__('Countries', 'tour-operator' ) . '</span><span> ', '</span></span></div>');
+}
+
+function tsp_to_itinerary_meals( $before = '', $after = '' ) {
+    $meals = get_post_meta( get_the_ID(), 'meals', true );
+    if ( ! empty( $meals ) && is_array( $meals ) ) {
+        $meals = array_map( 'trim', $meals );
+        $meals = array_filter( $meals );
+
+        if ( ! empty( $meals ) ) {
+            echo wp_kses_post( $before . implode( ', ', $meals ) . $after );
+        }
+    }
+}
+
+function tsp_itinerary_title( $echo = true ) {
+    global $tour_itinerary;
+
+    if ( $tour_itinerary && $tour_itinerary->has_itinerary && ! empty( $tour_itinerary->itinerary ) ) {
+        if ( ! empty( $tour_itinerary->itinerary['title'] ) ) {
+            $title = apply_filters( 'the_title', $tour_itinerary->itinerary['title'] );
+
+            // Get destinations for this itinerary item
+            $destinations = '';
+            if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) ) {
+                $destination_ids = $tour_itinerary->itinerary['destination_to_tour'];
+                if ( ! is_array( $destination_ids ) ) {
+                    $destination_ids = array( $destination_ids );
+                }
+
+                $destination_names = array();
+                foreach ( $destination_ids as $destination_id ) {
+                    $destination_name = get_the_title( $destination_id );
+                    if ( $destination_name ) {
+                        $destination_names[] = $destination_name;
+                    }
+                }
+
+                if ( ! empty( $destination_names ) ) {
+                    $destinations = ' : ' . '<span class="destinations">'.implode( ', ', $destination_names ) . '</span>';
+                }
+            }
+
+			if ( '' === $destinations ) {
+				$ends_in = get_post_meta( get_the_ID(), 'ends_in', true );
+				if ( ! empty( $ends_in ) ) {
+					$destinations = ' : ' . '<span class="destinations">' . esc_html( get_the_title( $ends_in ) ) . '</span>';
+				}
+			}
+
+            $title_with_destination = $title . $destinations;
+            $title_with_destination = apply_filters( 'lsx_to_itinerary_title', $title_with_destination, $tour_itinerary );
+
+            if ( true === $echo ) {
+                echo wp_kses_post( $title_with_destination );
+            } else {
+                return $title_with_destination;
+            }
+        }
+    }
+}
+
+function tsp_itinerary_description() {
+    global $tour_itinerary;
+
+    if ( $tour_itinerary && $tour_itinerary->has_itinerary && ! empty( $tour_itinerary->itinerary ) ) {
+        if ( ! empty( $tour_itinerary->itinerary['description'] ) ) {
+            $full_description = apply_filters( 'the_content', $tour_itinerary->itinerary['description'] );
+            $full_description = trim( strip_shortcodes( $full_description ) );
+
+            // Clean plain text for counting
+            $plain_description = wp_strip_all_tags( $full_description );
+            $word_count = str_word_count( $plain_description );
+            $char_count = strlen( $plain_description );
+
+            // Extract first paragraph (before closing </p>)
+            $first_paragraph = '';
+            if ( preg_match( '/<p>(.*?)<\/p>/is', $full_description, $matches ) ) {
+                $first_paragraph = trim( $matches[1] );
+            }
+
+            // Decide whether trimming is needed
+            if ( $word_count > 75 || $char_count > 500 ) {
+                $trimmed_description = '';
+
+                // Case 1: use first paragraph if it’s shorter than limits
+                if ( ! empty( $first_paragraph ) ) {
+                    $first_para_word_count = str_word_count( wp_strip_all_tags( $first_paragraph ) );
+                    $first_para_char_count = strlen( wp_strip_all_tags( $first_paragraph ) );
+
+                    if ( $first_para_word_count <= 75 && $first_para_char_count <= 500 ) {
+                        $trimmed_description = $first_paragraph;
+                    }
+                }
+
+                // Case 2: fallback to word/char trimming if no suitable first paragraph
+                if ( empty( $trimmed_description ) ) {
+                    $words = explode( ' ', $full_description );
+                    $trimmed_words = array_slice( $words, 0, 75 );
+                    $trimmed_description = implode( ' ', $trimmed_words );
+
+                    if ( strlen( wp_strip_all_tags( $trimmed_description ) ) > 500 ) {
+                        $trimmed_description = substr( $trimmed_description, 0, 500 );
+                        $trimmed_description = substr( $trimmed_description, 0, strrpos( $trimmed_description, ' ' ) );
+                    }
+                }
+
+                $unique_id = 'desc-' . uniqid();
+
+                echo '<div class="tsp-itinerary-description-wrapper">';
+                echo '<div class="tsp-itinerary-description-short" id="' . esc_attr( $unique_id ) . '-short">';
+                echo wp_kses_post( wpautop( $trimmed_description . '...' ) );
+                echo ' <button type="button" class="tsp-toggle-btn tsp-expand-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Expand Description', 'tour-operator' ) . ' +</button>';
+                echo '</div>';
+
+                echo '<div class="tsp-itinerary-description-full" id="' . esc_attr( $unique_id ) . '-full" style="display: none;">';
+                echo wp_kses_post( wpautop( $full_description ) );
+                echo ' <button type="button" class="tsp-toggle-btn tsp-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Collapse Description', 'tour-operator' ) . ' -</button>';
+                echo '</div>';
+                echo '</div>';
+            } else {
+                // Description is short enough, display as-is
+                echo wp_kses_post( wpautop( $full_description ) );
+            }
+        }
+    }
+}
+
+
+/**
+ * Change Summary to Overview in single tour scrollspy navigation
+ */
+function tsp_modify_tour_page_navigation( $page_links ) {
+    if ( is_single() && get_post_type() === 'tour' ) {
+        if ( isset( $page_links['itinerary'] ) ) {
+            $page_links['itinerary'] = esc_html__('Day by Day', 'thesafaripartners-child' );
+        }
+        if ( isset( $page_links['when-to-go'] ) ) {
+            unset( $page_links['when-to-go'] );
+        }
+        if ( isset( $page_links['summary'] ) ) {
+            unset( $page_links['summary'] );
+        }
+        if ( isset( $page_links['included-excluded'] ) ) {
+            unset( $page_links['included-excluded'] );
+        }
+
+        $ordered_links = array();
+
+        $ordered_links['overview'] = esc_html__('Overview', 'thesafaripartners-child');
+
+        if ( isset( $page_links['tour-map'] ) ) {
+            $ordered_links['tour-map'] = esc_html__('Map', 'thesafaripartners-child');
+        }
+        if ( isset( $page_links['itinerary'] ) ) {
+            $ordered_links['itinerary'] = esc_html__('Day by Day', 'thesafaripartners-child');
+        }
+        if ( isset( $page_links['dates-prices'] ) || tsp_has_prices() ) {
+            $ordered_links['dates-prices'] = esc_html__( 'Dates & Prices', 'thesafaripartners-child' );
+        }
+        if ( isset( $page_links['itinerary'] ) ) {
+            $ordered_links['gallery'] = esc_html__('Gallery', 'thesafaripartners-child');
+        }
+        if ( isset( $page_links['review'] ) ) {
+            $ordered_links['review'] = $page_links['review'];
+        }
+        if ( isset( $page_links['related-items'] ) ) {
+            if( tsp_has_related_tours() ) {
+                $ordered_links['related-tours'] = 'Related Tours';
+            }
+            unset( $page_links['related-items'] );
+        }
+
+        $page_links = $ordered_links;
+    }
+    return $page_links;
+}
+add_filter( 'lsx_to_page_navigation', 'tsp_modify_tour_page_navigation', 20 );
+
+/**
+ * Outputs the tours included / not included block
+ *
+ * @package     tour-operator
+ * @subpackage  template-tags
+ * @category    tour
+ */
+function tsp_included_block() {
+    $tour_included = lsx_to_included( '', '', false );
+    $tour_not_included = lsx_to_not_included( '', '', false );
+
+    $class = null !== $tour_included && null !== $tour_not_included ? 'two-col' : '';
+        ?>
+        <div id="included-excluded" class="included-excluded <?php echo esc_attr( $class ); ?>">
+            <?php if ( null !== $tour_included ) { ?>
+                <div class="included">
+                    <h3><?php esc_html_e( 'What\'s Included', 'tour-operator' ); ?></h3>
+                    <div class="entry-content">
+                        <?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_included ) ) ); ?>
+                    </div>
+                </div>
+                <?php
+            }
+            if ( null !== $tour_not_included ) {
+                ?>
+                <div class="not-included">
+                    <h3><?php esc_html_e( 'What\'s Excluded', 'tour-operator' ); ?></h3>
+                    <div class="entry-content">
+                        <?php echo wp_kses_post( apply_filters( 'the_content', wpautop( $tour_not_included ) ) ); ?>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+        <?php
+}
+
+function tsp_tour_gallery() {
+    $tour_itinerary = new \lsx\legacy\Itinerary_Query();
+
+    $d_ids     = array();
+
+    if ( $tour_itinerary->has_itinerary() ) {
+        while ( $tour_itinerary->while_itinerary() ) {
+            $tour_itinerary->current_itinerary_item();
+
+            if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) && '' !== $tour_itinerary->itinerary['destination_to_tour'] ) {
+                $day_dest = $tour_itinerary->itinerary['destination_to_tour'];
+                if ( ! is_array( $day_dest ) ) {
+                    $day_dest = array( $day_dest );
+                }
+                $d_ids = array_merge( $d_ids, $day_dest );
+            }
+        }
+    }
+
+    $d_ids = array_unique( $d_ids );
+
+    $attachment_ids = array();
+
+    foreach ( $d_ids as $post_id ) {
+        $featured_image_id = get_post_thumbnail_id( $post_id );
+        if ( $featured_image_id ) {
+            $attachment_ids[] = $featured_image_id;
+        }
+    }
+
+    if ( empty( $attachment_ids ) ) {
+        return '';
+    }
+
+    echo '<div class="lsx-to-slider-wrap"><div id="gallery" class="lsx-to-slider-inner gallery gallery-columns-3 gallery-size-large tour-destinations-gallery">';
+
+    foreach ( $attachment_ids as $index => $attachment_id ) {
+        $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+        $full_url = wp_get_attachment_url( $attachment_id );
+
+        echo '<figure class="gallery-item gallery-item-' . esc_attr( $index + 1 ) . '">';
+        echo '<div class="gallery-icon landscape">';
+        echo '<a href="' . esc_url( $full_url ) . '" data-fancybox="tour-gallery">';
+
+        echo wp_get_attachment_image( $attachment_id, 'large', false, array(
+                'class' => 'attachment-large',
+                'loading' => 'lazy',
+                'alt' => $alt ? $alt : '',
+        ) );
+
+        echo '</a>';
+        echo '</div>';
+
+
+        echo '</figure>';
+    }
+
+    echo '</div></div><div class="clear"></div>';
+}
+
+function tsp_has_prices() {
+    $price_row_amount = get_post_meta(get_the_ID(), 'price_row', true);
+
+    if (false !== $price_row_amount && 0 !== $price_row_amount) {
+        $row_counter = 0;
+
+        do {
+            $skip_row = false;
+
+            // Date check - same logic as in single-tour.php
+            $start_date = get_post_meta(get_the_ID(), 'price_row_' . $row_counter . '_column_2', true);
+            if ('' !== $start_date && false !== $start_date) {
+                $now = strtotime('now');
+                $start_date2 = strtotime($start_date);
+                if ($start_date2 < $now) {
+                    $skip_row = true;
+                }
+            }
+
+            // If we have a valid (non-expired) row, check if it has data
+            if (false === $skip_row) {
+                $rc_num = 1;
+                $has_data = false;
+
+                do {
+                    $value = get_post_meta(get_the_ID(), 'price_row_' . $row_counter . '_column_' . $rc_num, true);
+                    if ('' !== $value && false !== $value) {
+                        $has_data = true;
+                        break;
+                    }
+                    $rc_num++;
+                } while (8 > $rc_num);
+
+                if ($has_data) {
+                    return true;
+                }
+            }
+
+            $row_counter++;
+        } while ($row_counter < $price_row_amount);
+    }
+
+    return false;
+}
+
+function tsp_tour_reviews() {
+    global $lsx_archive;
+
+    if (post_type_exists('review') && is_singular('tour')) {
+        $args = array(
+                'from' => 'review',
+                'to' => 'tour',
+                'column' => '2',
+                'before' => '',
+                'after' => '',
+        );
+
+        lsx_to_connected_panel_query($args);
+    }
+}
+
+function tsp_has_tour_reviews() {
+    if ( ! post_type_exists( 'review' ) || ! is_singular( 'tour' ) ) {
+        return false;
+    }
+
+    // Check if there are connected reviews
+    $connected_reviews = get_post_meta( get_the_ID(), 'review_to_tour', false );
+
+    if ( ! empty( $connected_reviews ) ) {
+        // Filter out empty values
+        $connected_reviews = array_filter( $connected_reviews );
+
+        if ( ! empty( $connected_reviews ) ) {
+            // Verify that at least one review actually exists and is published
+            foreach ( $connected_reviews as $review_id ) {
+                if ( get_post_status( $review_id ) === 'publish' ) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    // Alternative check using WP_Query for connected reviews
+    $review_query = new WP_Query( array(
+            'post_type' => 'review',
+            'post_status' => 'publish',
+            'meta_query' => array(
+                    array(
+                            'key' => 'tour_to_review',
+                            'value' => get_the_ID(),
+                            'compare' => '='
+                    )
+            ),
+            'posts_per_page' => 1,
+            'fields' => 'ids'
+    ) );
+
+    wp_reset_postdata();
+
+    return $review_query->have_posts();
+}
+
+function tsp_has_related_tours() {
+    $post_id = get_the_ID();
+    if ( ! $post_id ) {
+        return false;
+    }
+
+    $args = array(
+            'post_type'      => 'tour',
+            'posts_per_page' => 1,
+            'post__not_in'   => array( $post_id ),
+            'fields'         => 'ids',
+    );
+
+    // Destinations
+    $destinations = get_post_meta( $post_id, 'destination_to_tour', true );
+    if ( ! empty( $destinations ) ) {
+        if ( ! is_array( $destinations ) ) {
+            $destinations = array( $destinations );
+        }
+        $args['meta_query'] = array(
+                array(
+                        'key'     => 'destination_to_tour',
+                        'compare' => 'IN',
+                        'value'   => $destinations,
+                ),
+        );
+    }
+
+    // Taxonomies: budget, who
+    $terms = wp_get_object_terms( $post_id, array( 'budget', 'who' ) );
+    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+        $tax_query = array();
+        $query_terms = array();
+        foreach ( $terms as $term ) {
+            $query_terms[ $term->taxonomy ][] = $term->slug;
+        }
+        if ( count( $query_terms ) > 1 ) {
+            $tax_query['relation'] = 'OR';
+        }
+        foreach ( $query_terms as $taxonomy => $slugs ) {
+            $tax_query[] = array(
+                    'taxonomy' => $taxonomy,
+                    'field'    => 'slug',
+                    'terms'    => $slugs,
+            );
+        }
+        $args['tax_query'] = $tax_query;
+    }
+
+    $query = new WP_Query( $args );
+    $has_related = $query->have_posts();
+    wp_reset_postdata();
+
+    return $has_related;
+}
+function tsp_modal_trimmed_content( $content ) {
+    if ( empty( $content ) ) {
+        return;
+    }
+
+    $full_content = apply_filters( 'the_content', $content );
+    $full_content = trim( strip_shortcodes( $full_content ) );
+
+    // Split into paragraphs
+    $paragraphs = preg_split( '/(<\/p>)/i', $full_content, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+    $first_paragraph = '';
+    $other_paragraphs = '';
+
+    if ( ! empty( $paragraphs ) ) {
+        $first_paragraph = $paragraphs[0];
+        if ( isset( $paragraphs[1] ) ) {
+            $first_paragraph .= $paragraphs[1];
+        }
+        $other_paragraphs = implode( '', array_slice( $paragraphs, 2 ) );
+    } else {
+        $first_paragraph = $full_content;
+    }
+
+    // Plain text for counts
+    $plain_first = wp_strip_all_tags( $first_paragraph );
+    $plain_full  = wp_strip_all_tags( $full_content );
+
+    $word_count       = str_word_count( $plain_full );
+    $char_count       = strlen( $plain_full );
+    $first_word_count = str_word_count( $plain_first );
+    $first_char_count = strlen( $plain_first );
+
+    $unique_id = 'modal-desc-' . uniqid();
+
+    // Initialize short and full
+    $content_short = '';
+    $content_full  = $full_content;
+
+    // Case 1: First paragraph too long → trim inside it
+    if ( $first_word_count > 75 || $first_char_count > 500 ) {
+        $words         = preg_split( '/(\s+)/u', $plain_first, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $trimmed_words = array_slice( $words, 0, 150 ); // 75 words + spaces
+        $trimmed_text  = implode( '', $trimmed_words );
+
+        if ( strlen( $trimmed_text ) > 500 ) {
+            $trimmed_text = mb_substr( $trimmed_text, 0, 500 );
+            $trimmed_text = mb_substr( $trimmed_text, 0, mb_strrpos( $trimmed_text, ' ' ) );
+        }
+
+        // Try to locate in original HTML
+        $pos = mb_strpos( wp_strip_all_tags( $first_paragraph ), trim( $trimmed_text ) );
+        if ( $pos !== false ) {
+            $trimmed_html   = mb_substr( $first_paragraph, 0, $pos + strlen( trim( $trimmed_text ) ) );
+            $content_short  = $trimmed_html . '...';
+            $content_full   = $first_paragraph . $other_paragraphs;
+        } else {
+            $content_short = $first_paragraph . '...';
+        }
+    }
+    // Case 2: First paragraph is fine, but total is long → use it as short
+    elseif ( $word_count > 75 || $char_count > 500 ) {
+        $content_short = $first_paragraph;
+        $content_full  = $first_paragraph . $other_paragraphs;
+    }
+
+    // Case 3: Content already short → no toggle
+    else {
+        echo '<div class="tsp-modal-description-full">' . wp_kses_post( wpautop( $full_content ) ) . '</div>';
+        return;
+    }
+
+    // Render wrapper (short + expand + full)
+    echo '<div class="tsp-modal-description-wrapper">';
+    echo '<div class="tsp-modal-description-short">' . wp_kses_post(  $content_short     ) . '</div>';
+    echo ' <button type="button" class="tsp-toggle-btn tsp-modal-expand-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Read More', 'tour-operator' ) . '</button>';
+    echo '<div class="tsp-modal-description-full" id="' . esc_attr( $unique_id ) . '" style="display:none;">' . wp_kses_post(  $content_full  ) . '</div>';
+    echo ' <button type="button" style="display: none" class="tsp-toggle-btn tsp-modal-collapse-btn" data-target="' . esc_attr( $unique_id ) . '">' . esc_html__( 'Read Less', 'tour-operator' ) . '</button>';
+    echo '</div>';
+}
+
+/**
+ * Display tour search results with FacetWP integration and preselected facets
+ *
+ * @param array $preselected_facets Array of facet values to preselect (e.g., ['fwp_where' => 'kenya'])
+ * @param bool $show_filters Whether to show the filter sidebar (default: true)
+ * @param string $wrapper_class Additional CSS class for the wrapper
+ * @return void
+ */
+function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $wrapper_class = '', $initial_query_args = array() ) {
+
+    if ( ! empty( $initial_query_args ) ) {
+        $search_query_args = $initial_query_args;
+    } else {
+        $search_query_args = array(
+            'post_type'     => 'tour',
+            'post_status'   => 'publish',
+            'posts_per_page' => 6,
+            'facetwp'       => true,
+        );
+    }
+
+    $search_query = new WP_Query( $search_query_args );
+
+    ?>
+    <div class="search-main search-wizard-results <?php echo esc_attr( $wrapper_class ); ?>">
+        
+        <div class="search-sidebar">
+        <button id="hide-search-filters" class="hide-search-filters">X</button>
+            <div class="search-trip-finder">
+                <div class="search-trip-finder-header">
+                    <span class="tsp-icon tsp-icon-shaman" aria-hidden="true"></span>
+                    <h2 class="tsp-trip-finder-title"><?php esc_html_e( 'Trip Finder', 'thesafaripartners-child' ); ?></h2>
+                </div>
+                <h3><?php esc_html_e('Find your dream trip!', 'thesafaripartners-child'); ?></h3>
+                <p>Select from the options below and hit search.</p>
+            </div>
+
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'filter-menu',
+                )
+            );
+        
+            ?>
+            <button id="apply-search-filters" class="apply-search-filters">Apply Filters</button>
+        </div>
+        
+        <div class="search-content">
+            <div id="show-search-filters" class="show-trip-finder"><i class="tsp-icon tsp-icon-menu"></i><?php esc_html_e( 'Trip finder', 'tour-operator' ); ?></div>
+            <?php if ( $show_search_meta ) : ?>
+            <div class="search-widget-header">
+                <div class="search-widget-results">
+                    <?php echo do_shortcode( '[facetwp facet="results_count"]' ); ?>
+                </div>
+                <div class="search-widget-sort">
+                    <?php echo do_shortcode( '[facetwp facet="sort_"]' ); ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+                <?php
+                echo do_shortcode( '[facetwp template="travel_types"]' );
+                ?>
+
+            <div class="tsp-pagination">
+                 <?php echo do_shortcode( '[facetwp facet="pagination"]' ); ?>
+            </div>
+        </div>
+    </div>
+
+    <?php
+    wp_reset_postdata();
+}
+
+/**
+ * Display tour search results for current destination with preselected destination filter
+ * This is a convenience function for single destination pages
+ *
+ * @param bool $show_filters Whether to show the filter sidebar
+ * @return void
+ */
+function tsp_destination_tour_search( $show_filters = true ) {
+    if ( ! is_singular( 'destination' ) ) {
+        return;
+    }
+
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'meta_query'    => array(
+            array(
+                'key'     => 'destination_to_tour',
+                'value'   => get_the_ID(),
+                'compare' => '=',
+            ),
+        ),
+    );
+
+    // Add a wrapper class specific to destination tour search
+    tsp_tour_search( $show_filters, true, 'destination-tour-search', $search_query_args );
+}
+
+function tsp_safari_style_tour_search( $show_filters = true ) {
+    if ( ! is_tax('travel-style') ) {
+        return;
+    }
+
+    $term = get_queried_object();
+    if ( ! $term || empty( $term->term_id ) ) {
+        return;
+    }
+
+    // Filter initial query by current travel-style term
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'tax_query'     => array(
+            array(
+                'taxonomy' => 'travel-style',
+                'field'    => 'term_id',
+                'terms'    => array( $term->term_id ),
+            ),
+        ),
+    );
+
+    // Add a wrapper class specific to travel style tour search
+    tsp_tour_search( $show_filters, true, 'travel-style-search', $search_query_args );
+}
+
+function tsp_who_tour_search( $show_filters = true ) {
+    if ( ! is_tax('who') ) {
+        return;
+    }
+
+    $term = get_queried_object();
+    if ( ! $term || empty( $term->term_id ) ) {
+        return;
+    }
+
+    // Filter initial query by current travel-style term
+    $search_query_args = array(
+        'post_type'     => 'tour',
+        'post_status'   => 'publish',
+        'posts_per_page'=> 6,
+        'facetwp'       => true,
+        'tax_query'     => array(
+            array(
+                'taxonomy' => 'who',
+                'field'    => 'term_id',
+                'terms'    => array( $term->term_id ),
+            ),
+        ),
+    );
+
+    // Add a wrapper class specific to travel style tour search
+    tsp_tour_search( $show_filters, true, 'who-search', $search_query_args );
+}

@@ -53,41 +53,7 @@ $tag = get_field('tagline', $term);
 			<?php wp_reset_query(); ?>
 		</div>
 			</div>
-
-			<?php 
-				$panels = array(
-					0 => array( 'who' ),
-					1 => array( 'what' ),
-					2 => array( 'where' ),
-					3 => array( 'when' ),
-					4 => array( 'budget' ),
-				);
-				$args = array( 
-					'selected' => array( get_queried_object_id() ),
-					'title'    => get_term_meta( get_queried_object_id(), 'shaman_title', true ),
-					'tagline'  => get_term_meta( get_queried_object_id(), 'shaman_tagline', true ),
-				);
-
-				// Call the intro
-				get_template_part( 'partials/shaman', 'intro', $args );
-
-				// Call the wizard
-				tsp_mini_wizard( $panels, $args );
-
-				$query_args = array(
-					'post_type' => 'tour',
-					'post_status' => 'publish',
-					'facetwp' => true,
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'who',
-							'field'    => 'term_id',
-							'terms'    => array( get_queried_object_id() ),
-						),
-					),
-				);
-				tsp_mini_wizard_results( $query_args, $args );
-			?>
+			<?php tsp_who_tour_search(); ?>
 		</main><!-- #main -->
 
 		<?php lsx_content_after(); ?>
