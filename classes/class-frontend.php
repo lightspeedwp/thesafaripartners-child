@@ -169,6 +169,9 @@ class Frontend {
 		// Tour Operator
 		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
 
+		// Tour Operator
+		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
+
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
