@@ -1123,7 +1123,7 @@ function tsp_tour_search( $show_trip_finder = true, $show_search_meta = false, $
                     <h2 class="tsp-trip-finder-title"><?php esc_html_e( 'Trip Finder', 'thesafaripartners-child' ); ?></h2>
                 </div>
                 <h3><?php esc_html_e('Find your dream trip!', 'thesafaripartners-child'); ?></h3>
-                <p>Select from the options below and hit search.</p>
+                <p><?php esc_html_e('Use the filters below to find your safari.', 'thesafaripartners-child'); ?></p>
             </div>
 
             <?php
