@@ -168,10 +168,8 @@ class Frontend {
 
 		// Tour Operator
 		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
-
-		// Tour Operator
-		add_filter( 'lsx_banner_image', [ $this, 'banner_image_placeholder' ], 10, 1 );
-
+		add_filter( 'lsx_to_room_basis_label', [ $this, 'room_basis_label' ], 10, 1 );
+		
 		// Gravity Forms Functions
 		add_filter( 'gform_pre_render_4', array( $this, 'populate_prices_dropdown' ) );
 		add_filter( 'gform_pre_validation_4', array( $this, 'populate_prices_dropdown' ) );
@@ -604,5 +602,23 @@ class Frontend {
 			}
 		}
 		return $image;
+	}
+
+	/**
+	 * Replace the labels for room basis
+	 *
+	 * @param string $label
+	 * @return string
+	 */
+	public function room_basis_label( $label ) {
+
+		$label = str_replace( 'B&amp;B: Bed and Breakfast', 'Bed and Breakfast', $label );
+
+		$label = str_replace( 'Half Board - Dinner, Bed and Breakfast', 'Half Board', $label );
+		$label = str_replace( 'Half Board Plus - Dinner, Bed, Breakfast and Activities', 'Half Board Plus', $label );	
+
+		$label = str_replace( 'Full Board - Dinner, Bed, Breakfast and Lunch', 'Full Board', $label );
+		$label = str_replace( 'Full Board Plus -  Dinner, Bed, Breakfast, Lunch and Activities', 'Full Board Plus', $label );
+		return $label;
 	}
 }

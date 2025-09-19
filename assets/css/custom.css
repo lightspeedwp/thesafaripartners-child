@@ -11698,3 +11698,7 @@ body.modal-open div.modal-backdrop {
         display: none;
     }
 }
+
+.single-lsx-to-tour .lsx-to-map-marker-title a {
+	pointer-events: none;
+}

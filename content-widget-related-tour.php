@@ -40,7 +40,7 @@ if ( $has_single ) {
 	<div class="tsp-related-tour-content">
 		<?php lsx_widget_entry_content_top(); ?>
 
-        <h4 class="tsp-widget-title text-center">
+        <h4 class="tsp-widget-title">
             <?php if ( false !== $has_single ) { ?>
                 <a href="<?php echo esc_url( $permalink ); ?>">
             <?php } ?>
