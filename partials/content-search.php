@@ -32,7 +32,6 @@ $permalink = get_permalink();
             echo '<div class="tsp-meta tsp-countries">';
             lsx_to_connected_countries('<i class="tsp-icon tsp-icon-africa"></i><span><span class="' . $meta_class . '"></span><span> ', '</span></span>');
             echo '</div>';
-            the_terms( get_the_ID(), 'travel-style', '<div class="' . $meta_class . 'style"><i class="tsp-icon tsp-icon-location"></i><span> ', ', ', '</span></div>' );
             ?>
         </div>
 
