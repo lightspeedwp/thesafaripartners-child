@@ -10582,7 +10582,7 @@ body.single-tour-operator #gallery .gallery img {
     margin-bottom: 0;
 }
 
-.search-content .facet-box .lsx-to-widget-thumb {
+.search-content .facet-box .lsx-to-widget-thumb img {
     aspect-ratio: 3/2;
 }
 
@@ -11710,7 +11710,7 @@ body.modal-open div.modal-backdrop {
     .search-result-content h4 {
         min-height: auto;
     }
-    
+
     .tsp-meta.tsp-countries {
         min-height: auto;
     }
