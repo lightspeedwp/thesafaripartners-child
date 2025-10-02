@@ -10573,8 +10573,11 @@ body.single-tour-operator #gallery .gallery img {
 }
 
 .search-result-thumb {
-    aspect-ratio: 3/2;
     display: block;
+}
+
+.search-result-thumb img {
+    aspect-ratio: 3/2;
 }
 
 .search-sidebar .facetwp-facet,
