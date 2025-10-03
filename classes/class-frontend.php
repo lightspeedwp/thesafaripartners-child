@@ -619,6 +619,8 @@ class Frontend {
 
 		$label = str_replace( 'Full Board - Dinner, Bed, Breakfast and Lunch', 'Full Board', $label );
 		$label = str_replace( 'Full Board Plus -  Dinner, Bed, Breakfast, Lunch and Activities', 'Full Board Plus', $label );
+
+		$label = str_replace( 'Fully Inclusive - Bed, All Meals, Fees and Activities', 'Fully Inclusive', $label );
 		return $label;
 	}
 }

@@ -812,9 +812,20 @@ function tsp_tour_gallery() {
     $attachment_ids = array();
 
     foreach ( $d_ids as $post_id ) {
-        $featured_image_id = get_post_thumbnail_id( $post_id );
-        if ( $featured_image_id ) {
-            $attachment_ids[] = $featured_image_id;
+        // Get all gallery images for this destination
+        $gallery_images = get_post_meta( $post_id, 'gallery', false );
+        if ( ! empty( $gallery_images ) ) {
+            foreach ( $gallery_images as $img_id ) {
+                if ( wp_attachment_is_image( $img_id ) ) {
+                    $attachment_ids[] = $img_id;
+                }
+            }
+        } else {
+            // Fallback to featured image if no gallery
+            $featured_image_id = get_post_thumbnail_id( $post_id );
+            if ( $featured_image_id ) {
+                $attachment_ids[] = $featured_image_id;
+            }
         }
     }
 
