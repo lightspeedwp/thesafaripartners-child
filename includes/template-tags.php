@@ -619,7 +619,7 @@ function tsp_itinerary_title( $echo = true ) {
                 }
             }
 
-			if ( '' === $destinations ) {
+			if ( '' === $destinations && $tour_itinerary->index === $tour_itinerary->count ) {
 				$destinations = ' : ' . '<span class="destinations">Depart</span>';
 			}
 
