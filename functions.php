@@ -113,7 +113,7 @@ add_filter( 'facetwp_is_main_query', function( $is_main_query, $query ) {
 }, 10, 2 );
 
 add_filter( 'facetwp_query_args', function( $search_args, $params ) {
-    $search_args['posts_per_page'] = 6;
+    $search_args['posts_per_page'] = 12;
     return $search_args;
   }, 10, 2 );
 
