@@ -129,3 +129,40 @@ add_filter( 'facetwp_shortcode_html', function( $output, $atts ) {
     }
     return $output;
 }, 10, 2 );
+
+add_filter( 'facetwp_facet_render_args', 'tsp_sort_when_facet_chronologically' );
+function tsp_sort_when_facet_chronologically( $args ) {
+    // Only apply to the 'when' facet
+    if ( 'when' === $args['facet']['name'] ) {
+        if ( ! empty( $args['values'] ) ) {
+            // Define month order for sorting
+            $month_order = array(
+                'january' => 1,
+                'february' => 2,
+                'march' => 3,
+                'april' => 4,
+                'may' => 5,
+                'june' => 6,
+                'july' => 7,
+                'august' => 8,
+                'september' => 9,
+                'october' => 10,
+                'november' => 11,
+                'december' => 12
+            );
+            
+            // Sort the values array by month order
+            usort( $args['values'], function( $a, $b ) use ( $month_order ) {
+                $month_a = strtolower( $a['facet_value'] );
+                $month_b = strtolower( $b['facet_value'] );
+                
+                $order_a = isset( $month_order[ $month_a ] ) ? $month_order[ $month_a ] : 999;
+                $order_b = isset( $month_order[ $month_b ] ) ? $month_order[ $month_b ] : 999;
+                
+                return $order_a - $order_b;
+            });
+        }
+    }
+    
+    return $args;
+}
