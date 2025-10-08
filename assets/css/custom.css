@@ -11170,6 +11170,11 @@ body.modal-open div.modal-backdrop {
     background: rgba(0,0,0,0.8);
 }
 
+a.lsx-review-readmore {
+    display: block;
+    margin-top: 0.625rem;
+}
+
 @media (min-width: 1200px) {
     .single-lsx-to-tour .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
