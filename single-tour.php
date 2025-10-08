@@ -71,6 +71,11 @@ get_header(); ?>
                                     <?php
                                         lsx_to_itinerary_loop_item();
                                         $thumb = lsx_to_itinerary_thumbnail('lsx-block-post-grid-landscape', 'destination_to_tour');
+                                        // check if thumb contains 'placeholder'
+                                        if ( strpos( $thumb, 'placeholder' ) !== false ) {
+                                            $thumb = lsx_to_itinerary_thumbnail('lsx-block-post-grid-landscape', 'accommodation_to_tour');
+                                        }
+                                        
                                     ?>
 
                                     <div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'tsp-itinerary-day' ); ?>>
