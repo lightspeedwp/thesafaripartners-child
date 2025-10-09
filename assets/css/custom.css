@@ -11175,6 +11175,46 @@ a.lsx-review-readmore {
     margin-top: 0.625rem;
 }
 
+.home form[role="search"] {
+    margin-bottom: 2rem;
+}
+
+.home form[role="search"] > div {
+    justify-content: center;
+    align-items: center;
+}
+
+.home form[role="search"] input[type="search"] {
+    font-size: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid #8D621F;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    color: #000;
+    margin: 0;
+    height: 3.125rem;
+}
+
+.home form[role="search"] button {
+    background: url('/wp-content/themes/thesafaripartners-child/assets/css/img/tsp-search-btn.svg') no-repeat center center;
+    background-color: #8D621F;
+    border: none;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-left: -3.125rem;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    border: 1px solid #8D621F
+}
+
+.home form[role="search"] button:hover {
+    background-color: #262423;
+}
+
 @media (min-width: 1200px) {
     .single-lsx-to-tour .type-lsx-to-tour .entry-content {
         padding-right: 3.75rem;
@@ -11721,6 +11761,11 @@ a.lsx-review-readmore {
 
     .tsp-meta.tsp-countries {
         min-height: auto;
+    }
+
+    .home form[role="search"] input[type="search"] {
+        padding: 0.625rem;
+        font-size: 1rem;
     }
 }
 
