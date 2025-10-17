@@ -166,3 +166,104 @@ function tsp_sort_when_facet_chronologically( $args ) {
     
     return $args;
 }
+
+if ( ! function_exists( 'tsp_map' ) ) {
+	/**
+	 * Outputs the current post type map.
+	 *
+	 * @param string  $before
+	 * @param string  $after
+	 * @param boolean $echo
+	 * @return void
+	 */
+	function tsp_map( $before = '', $after = '', $echo = true ) {
+		global $wp_query, $post;
+		$location = get_transient( get_the_ID() . '_location' );
+		
+		if ( false !== $location ) {
+			$map = '';
+			$map_override = apply_filters( 'lsx_to_map_override', false );
+			if ( false === $map_override ) {
+				$zoom = 15;
+				if ( is_array( $location ) && isset( $location['zoom'] ) ) {
+					$zoom = $location['zoom'];
+				}
+
+				$zoom = apply_filters( 'lsx_to_map_zoom', $zoom );
+				$map_type = 'default';
+				$parent_id = false;
+				$connections = false;
+
+				$args = array(
+                    'zoom' => $zoom,
+                    'width' => '100%',
+                    'height' => '500px',
+                    'type' => 'route',
+                );
+
+                if ( isset( $location['kml'] ) ) {
+                    $args['kml'] = $location['kml'];
+                } elseif ( isset( $location['connections'] ) ) {
+                    // Check if we have duplicate accommodations (train tours)
+                    $unique_connections = array_unique( $location['connections'] );
+                    // If we only have one unique accommodation or all are the same
+                    if ( count( $unique_connections ) <= 1 ) {
+                        // Get itinerary locations instead
+                        $itinerary_connections = tsp_get_itinerary_locations( get_the_ID() );
+                        if ( ! empty( $itinerary_connections ) ) {
+                            $args['connections'] = $itinerary_connections;
+                        } else {
+                            $args['connections'] = $location['connections'];
+                        }
+                    } else {
+                        $args['connections'] = $location['connections'];
+                    }
+                }
+
+				$args = apply_filters( 'lsx_to_maps_args', $args, get_the_ID() );
+				$map  = tour_operator()->frontend->maps->map_output( get_the_ID(), $args );
+			} else {
+				$map = $map_override;
+			}
+
+			// @codingStandardsIgnoreLine
+			echo $map;
+		}
+	}
+}
+
+/**
+ * Get locations from tour itinerary days for mapping
+ *
+ * @return array Array of destination IDs from itinerary days
+ */
+function tsp_get_itinerary_locations() {
+    global $tour_itinerary;
+    $connections = array();
+
+    if ( ! empty( $tour_itinerary->itineraries ) && is_array( $tour_itinerary->itineraries ) ) {
+        foreach ( $tour_itinerary->itineraries as $day ) {
+            // Check for destination connection in the day
+            if ( isset( $day['destination_to_tour'] ) && ! empty( $day['destination_to_tour'] ) ) {
+                
+                if ( is_array( $day['destination_to_tour'] ) ) {
+                    // Handle CMB2 field structure (e.g., ['cmb-field-0' => '136260'])
+                    foreach ( $day['destination_to_tour'] as $key => $value ) {
+                        if ( strpos( $key, 'cmb-field-' ) === 0 && ! empty( $value ) ) {
+                            $connections[] = $value;
+                        } elseif ( is_numeric( $value ) ) {
+                            // Handle direct numeric values in array
+                            $connections[] = $value;
+                        }
+                    }
+                } else {
+                    // Handle direct value (string or number)
+                    $connections[] = $day['destination_to_tour'];
+                }
+            }
+        }
+    }
+    
+    // Remove duplicates and return unique destination IDs
+    return array_unique( array_filter( $connections ) );
+}

@@ -45,7 +45,7 @@ get_header(); ?>
                 <div id="collapse-tour-map" class="collapse in">
                     <div class="collapse-inner">
                         <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Map', 'tour-operator' ); ?></h2>
-                        <?php lsx_to_map(); ?>
+                        <?php tsp_map(); ?>
                     </div>
                 </div>
             </section>
