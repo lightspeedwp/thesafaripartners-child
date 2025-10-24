@@ -796,18 +796,30 @@ function tsp_tour_gallery() {
     if ( $tour_itinerary->has_itinerary() ) {
         while ( $tour_itinerary->while_itinerary() ) {
             $tour_itinerary->current_itinerary_item();
-
-            if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) && '' !== $tour_itinerary->itinerary['destination_to_tour'] ) {
+    
+            if ( ! empty( $tour_itinerary->itinerary['destination_to_tour'] ) ) {
                 $day_dest = $tour_itinerary->itinerary['destination_to_tour'];
+    
+                // Ensure $day_dest is an array
                 if ( ! is_array( $day_dest ) ) {
                     $day_dest = array( $day_dest );
                 }
-                $d_ids = array_merge( $d_ids, $day_dest );
+    
+                // Append values to $d_ids
+                foreach ( $day_dest as $key => $value ) {
+                    if ( strpos( $key, 'cmb-field-' ) === 0 && ! empty( $value ) ) {
+                        $d_ids[] = $value;
+                    } elseif ( is_numeric( $value ) ) {
+                        // Handle direct numeric values in array
+                        $d_ids[] = $value;
+                    }
+                }
             }
         }
     }
-
-    $d_ids = array_unique( $d_ids );
+    
+    // Optionally remove duplicates from $d_ids
+    $d_ids = array_unique( $d_ids );    
 
     $attachment_ids = array();
 
