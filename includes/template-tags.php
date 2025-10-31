@@ -792,6 +792,7 @@ function tsp_tour_gallery() {
     $tour_itinerary = new \lsx\legacy\Itinerary_Query();
 
     $d_ids     = array();
+    $a_ids     = array();
 
     if ( $tour_itinerary->has_itinerary() ) {
         while ( $tour_itinerary->while_itinerary() ) {
@@ -815,11 +816,31 @@ function tsp_tour_gallery() {
                     }
                 }
             }
+
+            if ( ! empty( $tour_itinerary->itinerary['accommodation_to_tour'] ) ) {
+                $day_accom = $tour_itinerary->itinerary['accommodation_to_tour'];
+    
+                // Ensure $day_accom is an array
+                if ( ! is_array( $day_accom ) ) {
+                    $day_accom = array( $day_accom );
+                }
+    
+                // Append values to $a_ids
+                foreach ( $day_accom as $key => $value ) {
+                    if ( strpos( $key, 'cmb-field-' ) === 0 && ! empty( $value ) ) {
+                        $a_ids[] = $value;
+                    } elseif ( is_numeric( $value ) ) {
+                        // Handle direct numeric values in array
+                        $a_ids[] = $value;
+                    }
+                }
+            }
         }
     }
     
     // Optionally remove duplicates from $d_ids
-    $d_ids = array_unique( $d_ids );    
+    $d_ids = array_unique( $d_ids );
+    $a_ids = array_unique( $a_ids );
 
     $attachment_ids = array();
 
@@ -827,30 +848,56 @@ function tsp_tour_gallery() {
         // Get all gallery images for this destination
         $gallery_images = get_post_meta( $post_id, 'gallery', false );
         if ( ! empty( $gallery_images ) ) {
+            $count = 0;
             foreach ( $gallery_images as $img_id ) {
-                if ( wp_attachment_is_image( $img_id ) ) {
-                    $attachment_ids[] = $img_id;
-                }
+            if ( wp_attachment_is_image( $img_id ) && $count < 3 ) {
+                $attachment_ids[] = $img_id;
+                $count++;
+            }
             }
         } else {
             // Fallback to featured image if no gallery
             $featured_image_id = get_post_thumbnail_id( $post_id );
             if ( $featured_image_id ) {
-                $attachment_ids[] = $featured_image_id;
+            $attachment_ids[] = $featured_image_id;
             }
         }
     }
 
     if ( empty( $attachment_ids ) ) {
-        return '';
+        foreach ( $a_ids as $post_id ) {    
+            // Get all gallery images for this accommodation
+            $gallery_images = get_post_meta( $post_id, 'gallery', false );
+            if ( ! empty( $gallery_images ) ) {
+                $count = 0;
+                foreach ( $gallery_images as $img_id ) {
+                    if ( wp_attachment_is_image( $img_id ) && $count < 3 ) {
+                        $attachment_ids[] = $img_id;
+                        $count++;
+                    }
+                }
+            } else {
+                // Fallback to featured image if no gallery
+                $featured_image_id = get_post_thumbnail_id( $post_id );
+                if ( $featured_image_id ) {
+                    $attachment_ids[] = $featured_image_id;
+                }
+            }
+        }
     }
 
+    if ( empty( $attachment_ids ) ) {
+        return;
+    }
+    
     echo '<div class="lsx-to-slider-wrap"><div id="gallery" class="lsx-to-slider-inner gallery gallery-columns-3 gallery-size-large tour-destinations-gallery">';
+
+    $attachment_ids = array_slice( $attachment_ids, 0, 36 );
 
     foreach ( $attachment_ids as $index => $attachment_id ) {
         $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
         $full_url = wp_get_attachment_url( $attachment_id );
-
+        
         echo '<figure class="gallery-item gallery-item-' . esc_attr( $index + 1 ) . '">';
         echo '<div class="gallery-icon landscape">';
         echo '<a href="' . esc_url( $full_url ) . '" data-fancybox="tour-gallery">';
