@@ -522,41 +522,51 @@ function tsp_related_items( $taxonomy = false, $before = '', $after = '', $echo 
 }
 
 function tsp_best_time_to_visit( $echo = true ) {
-    $best_time_to_visit = get_post_meta( get_the_ID(), 'best_time_to_visit', true );
-    if ( false !== $best_time_to_visit && '' !== $best_time_to_visit && is_array( $best_time_to_visit ) && ! empty( $best_time_to_visit ) ) {
-        $this_year = array(
-                'january' => esc_html__( 'January', 'tour-operator' ),
-                'february' => esc_html__( 'February', 'tour-operator' ),
-                'march' => esc_html__( 'March', 'tour-operator' ),
-                'april' => esc_html__( 'April', 'tour-operator' ),
-                'may' => esc_html__( 'May', 'tour-operator' ),
-                'june' => esc_html__( 'June', 'tour-operator' ),
-                'july' => esc_html__( 'July', 'tour-operator' ),
-                'august' => esc_html__( 'August', 'tour-operator' ),
-                'september' => esc_html__( 'September', 'tour-operator' ),
-                'october' => esc_html__( 'October', 'tour-operator' ),
-                'november' => esc_html__( 'November', 'tour-operator' ),
-                'december' => esc_html__( 'December', 'tour-operator' ),
-        );
+    // Get terms from the 'who' taxonomy
+    $who_terms = wp_get_object_terms( get_the_ID(), 'when' );
+    
+    if ( ! empty( $who_terms ) && ! is_wp_error( $who_terms ) ) {
+        // Extract slugs from the taxonomy terms to use as month identifiers
+        $best_time_to_visit = array();
+        foreach ( $who_terms as $term ) {
+            $best_time_to_visit[] = $term->slug;
+        }
+        
+        if ( ! empty( $best_time_to_visit ) ) {
+            $this_year = array(
+                    'january' => esc_html__( 'January', 'tour-operator' ),
+                    'february' => esc_html__( 'February', 'tour-operator' ),
+                    'march' => esc_html__( 'March', 'tour-operator' ),
+                    'april' => esc_html__( 'April', 'tour-operator' ),
+                    'may' => esc_html__( 'May', 'tour-operator' ),
+                    'june' => esc_html__( 'June', 'tour-operator' ),
+                    'july' => esc_html__( 'July', 'tour-operator' ),
+                    'august' => esc_html__( 'August', 'tour-operator' ),
+                    'september' => esc_html__( 'September', 'tour-operator' ),
+                    'october' => esc_html__( 'October', 'tour-operator' ),
+                    'november' => esc_html__( 'November', 'tour-operator' ),
+                    'december' => esc_html__( 'December', 'tour-operator' ),
+            );
 
-        foreach ( $this_year as $month => $label ) {
-            $checked_class = '';
+            foreach ( $this_year as $month => $label ) {
+                $checked_class = '';
 
-            if ( in_array( $month, $best_time_to_visit ) ) {
-                $checked_class = 'tsp-month-check';
+                if ( in_array( $month, $best_time_to_visit ) ) {
+                    $checked_class = 'tsp-month-check';
+                }
+
+                $best_times[] = '<div class="tsp-month ' . $checked_class . '"><small>' . $label . '</small></div>';
+            };
+
+            $return = '<div class="tsp-meta tsp-time-to-visit"><i class="tsp-icon tsp-icon-calendar"></i>' .
+                '<span><span class="tsp-fast-facts-type">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</span>' .
+                '<span class="tsp-best-time-to-visit">' . implode( '', $best_times ) . '</span></span></div>';
+
+            if ( $echo ) {
+                echo wp_kses_post( $return );
+            } else {
+                return $return;
             }
-
-            $best_times[] = '<div class="tsp-month ' . $checked_class . '"><small>' . $label . '</small></div>';
-        };
-
-        $return = '<div class="tsp-meta tsp-time-to-visit"><i class="tsp-icon tsp-icon-calendar"></i>' .
-            '<span><span class="tsp-fast-facts-type">' . esc_html__( 'Best Months For Travel', 'tour-operator' ) . '</span>' .
-            '<span class="tsp-best-time-to-visit">' . implode( '', $best_times ) . '</span></span></div>';
-
-        if ( $echo ) {
-            echo wp_kses_post( $return );
-        } else {
-            return $return;
         }
     }
 }
