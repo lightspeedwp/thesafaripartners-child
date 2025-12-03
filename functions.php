@@ -113,7 +113,7 @@ add_filter( 'facetwp_is_main_query', function( $is_main_query, $query ) {
 }, 10, 2 );
 
 add_filter( 'facetwp_query_args', function( $search_args, $params ) {
-    $search_args['posts_per_page'] = 6;
+    $search_args['posts_per_page'] = 12;
     return $search_args;
   }, 10, 2 );
 
@@ -129,3 +129,141 @@ add_filter( 'facetwp_shortcode_html', function( $output, $atts ) {
     }
     return $output;
 }, 10, 2 );
+
+add_filter( 'facetwp_facet_render_args', 'tsp_sort_when_facet_chronologically' );
+function tsp_sort_when_facet_chronologically( $args ) {
+    // Only apply to the 'when' facet
+    if ( 'when' === $args['facet']['name'] ) {
+        if ( ! empty( $args['values'] ) ) {
+            // Define month order for sorting
+            $month_order = array(
+                'january' => 1,
+                'february' => 2,
+                'march' => 3,
+                'april' => 4,
+                'may' => 5,
+                'june' => 6,
+                'july' => 7,
+                'august' => 8,
+                'september' => 9,
+                'october' => 10,
+                'november' => 11,
+                'december' => 12
+            );
+            
+            // Sort the values array by month order
+            usort( $args['values'], function( $a, $b ) use ( $month_order ) {
+                $month_a = strtolower( $a['facet_value'] );
+                $month_b = strtolower( $b['facet_value'] );
+                
+                $order_a = isset( $month_order[ $month_a ] ) ? $month_order[ $month_a ] : 999;
+                $order_b = isset( $month_order[ $month_b ] ) ? $month_order[ $month_b ] : 999;
+                
+                return $order_a - $order_b;
+            });
+        }
+    }
+    
+    return $args;
+}
+
+if ( ! function_exists( 'tsp_map' ) ) {
+	/**
+	 * Outputs the current post type map.
+	 *
+	 * @param string  $before
+	 * @param string  $after
+	 * @param boolean $echo
+	 * @return void
+	 */
+	function tsp_map( $before = '', $after = '', $echo = true ) {
+		global $wp_query, $post;
+		$location = get_transient( get_the_ID() . '_location' );
+		
+		if ( false !== $location ) {
+			$map = '';
+			$map_override = apply_filters( 'lsx_to_map_override', false );
+			if ( false === $map_override ) {
+				$zoom = 15;
+				if ( is_array( $location ) && isset( $location['zoom'] ) ) {
+					$zoom = $location['zoom'];
+				}
+
+				$zoom = apply_filters( 'lsx_to_map_zoom', $zoom );
+				$map_type = 'default';
+				$parent_id = false;
+				$connections = false;
+
+				$args = array(
+                    'zoom' => $zoom,
+                    'width' => '100%',
+                    'height' => '500px',
+                    'type' => 'route',
+                );
+
+                if ( isset( $location['kml'] ) ) {
+                    $args['kml'] = $location['kml'];
+                } elseif ( isset( $location['connections'] ) ) {
+                    // Check if we have duplicate accommodations (train tours)
+                    $unique_connections = array_unique( $location['connections'] );
+                    // If we only have one unique accommodation or all are the same
+                    if ( count( $unique_connections ) <= 1 ) {
+                        // Get itinerary locations instead
+                        $itinerary_connections = tsp_get_itinerary_locations( get_the_ID() );
+                        if ( ! empty( $itinerary_connections ) ) {
+                            $args['connections'] = $itinerary_connections;
+                        } else {
+                            $args['connections'] = $location['connections'];
+                        }
+                    } else {
+                        $args['connections'] = $location['connections'];
+                    }
+                }
+
+				$args = apply_filters( 'lsx_to_maps_args', $args, get_the_ID() );
+				$map  = tour_operator()->frontend->maps->map_output( get_the_ID(), $args );
+			} else {
+				$map = $map_override;
+			}
+
+			// @codingStandardsIgnoreLine
+			echo $map;
+		}
+	}
+}
+
+/**
+ * Get locations from tour itinerary days for mapping
+ *
+ * @return array Array of destination IDs from itinerary days
+ */
+function tsp_get_itinerary_locations() {
+    global $tour_itinerary;
+    $connections = array();
+
+    if ( ! empty( $tour_itinerary->itineraries ) && is_array( $tour_itinerary->itineraries ) ) {
+        foreach ( $tour_itinerary->itineraries as $day ) {
+            // Check for destination connection in the day
+            if ( isset( $day['destination_to_tour'] ) && ! empty( $day['destination_to_tour'] ) ) {
+                
+                if ( is_array( $day['destination_to_tour'] ) ) {
+                    // Handle CMB2 field structure (e.g., ['cmb-field-0' => '136260'])
+                    foreach ( $day['destination_to_tour'] as $key => $value ) {
+                        if ( strpos( $key, 'cmb-field-' ) === 0 && ! empty( $value ) ) {
+                            $connections[] = $value;
+                        } elseif ( is_numeric( $value ) ) {
+                            // Handle direct numeric values in array
+                            $connections[] = $value;
+                        }
+                    }
+                } else {
+                    // Handle direct value (string or number)
+                    $connections[] = $day['destination_to_tour'];
+                }
+            }
+        }
+    }
+    
+    // Remove duplicates and return unique destination IDs
+    return array_unique( array_filter( $connections ) );
+}

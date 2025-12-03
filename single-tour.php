@@ -45,7 +45,7 @@ get_header(); ?>
                 <div id="collapse-tour-map" class="collapse in">
                     <div class="collapse-inner">
                         <h2 class="tsp-section-title text-center"><?php esc_html_e( 'Map', 'tour-operator' ); ?></h2>
-                        <?php lsx_to_map(); ?>
+                        <?php tsp_map(); ?>
                     </div>
                 </div>
             </section>
@@ -71,6 +71,11 @@ get_header(); ?>
                                     <?php
                                         lsx_to_itinerary_loop_item();
                                         $thumb = lsx_to_itinerary_thumbnail('lsx-block-post-grid-landscape', 'destination_to_tour');
+                                        // check if thumb contains 'placeholder'
+                                        if ( strpos( $thumb, 'placeholder' ) !== false ) {
+                                            $thumb = lsx_to_itinerary_thumbnail('lsx-block-post-grid-landscape', 'accommodation_to_tour');
+                                        }
+                                        
                                     ?>
 
                                     <div id="day-<?php echo esc_attr( $itinerary_count ); ?>" <?php lsx_to_itinerary_class( 'tsp-itinerary-day' ); ?>>

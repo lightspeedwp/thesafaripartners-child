@@ -301,8 +301,23 @@
             $excerpt.show();
             $full.hide();
         });
-    });
 
+        const searchForms = document.querySelectorAll('form[role="search"].wp-block-search');
     
+        searchForms.forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const searchInput = form.querySelector('.wp-block-search input[type="search"]');
+                const searchTerm = searchInput.value.trim();
+                
+                if (searchTerm) {
+                    // Redirect to your search page with FacetWP parameter
+                    window.location.href = '?s=&fwp_search=' + encodeURIComponent(searchTerm);
+                }
+            });
+        });
+        
+    });
 
 })( jQuery, window, document );
