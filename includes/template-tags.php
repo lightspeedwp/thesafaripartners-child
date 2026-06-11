@@ -12,9 +12,7 @@ function tsp_salesiq_chat_trigger() {
 	wp_add_inline_script( 'jquery-core', "
 		jQuery( document ).on( 'click', '.request-more-info-trigger', function( e ) {
 			e.preventDefault();
-			if ( typeof \$zoho !== 'undefined' && \$zoho.salesiq && \$zoho.salesiq.floatwindow ) {
-				\$zoho.salesiq.floatwindow.visible( 'show' );
-			}
+			jQuery('#chatbase-bubble-button').click();
 		} );
 	" );
 }
