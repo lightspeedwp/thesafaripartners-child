@@ -5,6 +5,19 @@
  * @package thesafaripartners-child
  */
 
+/**
+ * Enqueues inline JS to open Zoho SalesIQ chat when .request-more-info-trigger is clicked.
+ */
+function tsp_salesiq_chat_trigger() {
+	wp_add_inline_script( 'jquery-core', "
+		jQuery( document ).on( 'click', '.request-more-info-trigger', function( e ) {
+			e.preventDefault();
+			jQuery('#chatbase-bubble-button').click();
+		} );
+	" );
+}
+add_action( 'wp_enqueue_scripts', 'tsp_salesiq_chat_trigger' );
+
 
 function tsp_init_wizard() {
 	wp_enqueue_script( 'thesafaripartners-child-wizard', get_stylesheet_directory_uri() . '/assets/js/wizard.js', array( 'jquery', 'jquery-ui-core' ), TSP_CHILD_VER, true );
