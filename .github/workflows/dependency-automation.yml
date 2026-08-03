@@ -9,7 +9,7 @@ name: dependency automation
 
 on:
   schedule:
-    - cron: '37 5 * * *'      # merge sweep, daily
+    - cron: '1 7 * * *'      # merge sweep, daily
     - cron: '23 4 * * 0'      # stale branch cleanup, Sundays
   workflow_dispatch:
     inputs:
