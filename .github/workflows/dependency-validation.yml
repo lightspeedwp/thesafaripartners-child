@@ -35,6 +35,7 @@ jobs:
     env:
       GITLEAKS_VERSION: '8.30.1'
       GITLEAKS_SHA256: '551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb'
+      BASE_REF: ${{ github.base_ref }}
     steps:
       - name: Confirm disposable container
         run: |
@@ -71,7 +72,11 @@ jobs:
           set -euo pipefail
           # A lockfile change with no manifest change, or vice versa, is a
           # signal the trusted stage should not merge on. Report, do not judge.
-          changed="$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD || true)"
+          if [ -z "${BASE_REF}" ]; then
+            echo "BASE_REF is empty - refusing to diff against an unbounded ref" >&2
+            exit 1
+          fi
+          changed="$(git diff --name-only "origin/${BASE_REF}"...HEAD || true)"
           echo "changed files:"; printf '%s\n' "${changed}"
           for pair in "composer.json:composer.lock" "package.json:package-lock.json"; do
             m="${pair%%:*}"; l="${pair##*:}"
