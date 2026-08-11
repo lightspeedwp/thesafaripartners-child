@@ -4,6 +4,17 @@ name: dependency automation
 # key, no organisation-wide credential. Never checks out or executes
 # pull-request code; every fact is read back from the API.
 #
+# KNOWN CONSEQUENCE of using GITHUB_TOKEN: GitHub does not start workflow runs
+# for events created with it. A pull request merged here therefore lands on the
+# default branch with NO post-merge CI run and NO deploy run. Verified on
+# lightspeedwp/grounded-docs-infra 2026-08-10: #30 merged as 616d2eb and neither
+# CI nor Deploy fired; the host stayed on the previous commit until the deploy
+# was dispatched by hand.
+#
+# If a repository deploys from its default branch, an auto-merge here is a
+# change that is committed but not shipped. Either dispatch that repository's
+# deploy manually, or resolve it centrally - see the tracking issue.
+#
 # Managed centrally by lightspeedwp/dependency-merge-controller. Local edits
 # will be reverted by the daily reconciliation job.
 
@@ -87,7 +98,10 @@ jobs:
             # Free plan: no branch protection, so the gate is this repository's
             # own Actions check runs. Advisory third-party checks are not gates.
             BAD="$(gh api "repos/$REPO/commits/$SHA/check-runs" \
-              --jq '[.check_runs[]|select(.app.slug=="github-actions")|select(.conclusion!="success" and .conclusion!="neutral" and .conclusion!="skipped")]|length')"
+              --jq '[.check_runs[]
+                     | select(.app.slug=="github-actions")
+                     | select(.conclusion!="success" and .conclusion!="neutral" and .conclusion!="skipped")]
+                     | length')"
             [ "$BAD" = "0" ] || { skip "$BAD Actions check(s) not successful"; continue; }
 
             CR="$(gh api "repos/$REPO/pulls/$N/reviews" --jq '[.[]|select(.state=="CHANGES_REQUESTED")]|length')"
