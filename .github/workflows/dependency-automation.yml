@@ -65,7 +65,7 @@ jobs:
             echo "public repository - refusing"; exit 0; }
 
           DEFAULT="$(gh api "repos/$REPO" --jq .default_branch)"
-          ACTORS='dependabot[bot] renovate[bot]'
+          ACTORS='dependabot[bot] lightspeed-renovate[bot]'
 
           gh api "repos/$REPO/pulls?state=open&per_page=100" --paginate \
             --jq '.[]|[.number,.user.login,.draft,.base.ref,.head.ref,.title]|@tsv' |
